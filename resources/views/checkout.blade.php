@@ -1,0 +1,558 @@
+@extends('layouts.app')
+
+@section('title', __('Finalização de Compra'))
+
+@section('content')
+    @include('layouts.partials.navbar.public-show')
+
+    <div id="tbay-main-content" class="mm-page mm-slideout lv-checkout">
+        <div class="lv-checkout__intro">
+            <div class="lv-container">
+                <h1 class="lv-checkout__intro-title">Finalização de compra</h1>
+            </div>
+        </div>
+
+        <div class="lv-container lv-checkout__body">
+
+            @if (session('success'))
+                <div class="lv-alert lv-alert--success">{{ session('success') }}</div>
+            @endif
+
+            @if (session('error'))
+                <div class="lv-alert lv-alert--error">{{ session('error') }}</div>
+            @endif
+
+            @if ($errors->any())
+                <div class="lv-alert lv-alert--error">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
+
+            @if ($isEmpty)
+                <div class="lv-checkout__empty">
+                    <h2>Seu carrinho está vazio</h2>
+                    <p>Adicione produtos ao seu carrinho antes de finalizar a compra.</p>
+                    <a href="{{ route('home') }}" class="lv-btn lv-btn--primary">Continuar a comprar</a>
+                </div>
+            @else
+                <form method="POST" action="{{ route('checkout.store') }}" id="checkout-form"
+                    class="lv-checkout__grid" aria-label="Finalizar compras">
+                    @csrf
+
+                    <input type="hidden" name="shipping_method" id="shipping_method" value="free_shipping:3">
+                    <input type="hidden" name="payment_method" id="payment_method" value="bacs">
+                    <input type="hidden" name="order_notes" id="order_notes">
+
+                    <div class="lv-checkout__main">
+
+                        <section class="lv-card" id="contact-fields">
+                            <h2 class="lv-card__title"><span class="lv-step-num">1</span> Informação de contacto</h2>
+                            <p class="lv-card__desc">Usaremos este email para lhe enviar detalhes e atualizações da
+                                sua encomenda.</p>
+                            <div class="lv-field">
+                                <label for="email">Endereço de email</label>
+                                <input type="email" id="email" name="email" autocomplete="email"
+                                    class="lv-input @error('email') is-invalid @enderror"
+                                    value="{{ old('email') }}" required>
+                                @error('email')
+                                    <span class="lv-field-error">{{ $message }}</span>
+                                @enderror
+                            </div>
+                            <p class="lv-card__note">Está a finalizar a encomenda como convidado.</p>
+                        </section>
+
+                        <section class="lv-card" id="shipping-fields">
+                            <h2 class="lv-card__title"><span class="lv-step-num">2</span> Morada de envio</h2>
+                            <p class="lv-card__desc">Introduza a morada onde deseja que a encomenda seja entregue.</p>
+
+                            <div class="lv-field-grid">
+                                <div class="lv-field lv-field--full">
+                                    <label for="shipping-country">País/Região</label>
+                                    <select id="shipping-country" name="shipping-country" autocomplete="country"
+                                        class="lv-input lv-select @error('shipping-country') is-invalid @enderror"
+                                        required>
+                                        <option value="" disabled {{ old('shipping-country') ? '' : 'selected' }}>
+                                            Selecione um país/região</option>
+                                        @foreach ($pays as $code => $nom)
+                                            <option value="{{ $code }}"
+                                                {{ old('shipping-country') == $code ? 'selected' : '' }}>{{ $nom }}
+                                            </option>
+                                        @endforeach
+                                    </select>
+                                    @error('shipping-country')
+                                        <span class="lv-field-error">{{ $message }}</span>
+                                    @enderror
+                                </div>
+
+                                <div class="lv-field">
+                                    <label for="shipping-first_name">Nome</label>
+                                    <input type="text" id="shipping-first_name" name="shipping-first_name"
+                                        autocomplete="given-name"
+                                        class="lv-input @error('shipping-first_name') is-invalid @enderror"
+                                        value="{{ old('shipping-first_name') }}" required>
+                                    @error('shipping-first_name')
+                                        <span class="lv-field-error">{{ $message }}</span>
+                                    @enderror
+                                </div>
+
+                                <div class="lv-field">
+                                    <label for="shipping-last_name">Apelido</label>
+                                    <input type="text" id="shipping-last_name" name="shipping-last_name"
+                                        autocomplete="family-name"
+                                        class="lv-input @error('shipping-last_name') is-invalid @enderror"
+                                        value="{{ old('shipping-last_name') }}" required>
+                                    @error('shipping-last_name')
+                                        <span class="lv-field-error">{{ $message }}</span>
+                                    @enderror
+                                </div>
+
+                                <div class="lv-field lv-field--full">
+                                    <label for="shipping-address_1">Endereço</label>
+                                    <input type="text" id="shipping-address_1" name="shipping-address_1"
+                                        autocomplete="address-line1"
+                                        class="lv-input @error('shipping-address_1') is-invalid @enderror"
+                                        value="{{ old('shipping-address_1') }}" required>
+                                    @error('shipping-address_1')
+                                        <span class="lv-field-error">{{ $message }}</span>
+                                    @enderror
+                                </div>
+
+                                <div class="lv-field lv-field--full">
+                                    <label for="shipping-address_2">Morada (linha 2, opcional)</label>
+                                    <input type="text" id="shipping-address_2" name="shipping-address_2"
+                                        autocomplete="address-line2" class="lv-input"
+                                        value="{{ old('shipping-address_2') }}">
+                                </div>
+
+                                <div class="lv-field">
+                                    <label for="shipping-city">Cidade</label>
+                                    <input type="text" id="shipping-city" name="shipping-city"
+                                        autocomplete="address-level2"
+                                        class="lv-input @error('shipping-city') is-invalid @enderror"
+                                        value="{{ old('shipping-city') }}" required>
+                                    @error('shipping-city')
+                                        <span class="lv-field-error">{{ $message }}</span>
+                                    @enderror
+                                </div>
+
+                                <div class="lv-field">
+                                    <label for="shipping-postcode">Código postal</label>
+                                    <input type="text" id="shipping-postcode" name="shipping-postcode"
+                                        autocomplete="postal-code"
+                                        class="lv-input @error('shipping-postcode') is-invalid @enderror"
+                                        value="{{ old('shipping-postcode') }}" required>
+                                    @error('shipping-postcode')
+                                        <span class="lv-field-error">{{ $message }}</span>
+                                    @enderror
+                                </div>
+
+                                <div class="lv-field lv-field--full">
+                                    <label for="shipping-phone">Telefone (opcional)</label>
+                                    <input type="tel" id="shipping-phone" name="shipping-phone" autocomplete="tel"
+                                        class="lv-input" value="{{ old('shipping-phone') }}">
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="lv-card" id="billing-fields">
+                            <h2 class="lv-card__title"><span class="lv-step-num">3</span> Morada de faturação</h2>
+
+                            <label class="lv-checkbox">
+                                <input type="checkbox" id="same-address-checkbox" checked>
+                                <span>Usar o mesmo endereço para faturação</span>
+                            </label>
+
+                            <div class="lv-field-grid" id="billing-address-wrapper" style="display:none;">
+                                <div class="lv-field lv-field--full">
+                                    <label for="billing-country">País/Região</label>
+                                    <select id="billing-country" name="billing-country" autocomplete="country"
+                                        class="lv-input lv-select @error('billing-country') is-invalid @enderror">
+                                        <option value="" disabled {{ old('billing-country') ? '' : 'selected' }}>
+                                            Selecione um país/região</option>
+                                        @foreach ($pays as $code => $nom)
+                                            <option value="{{ $code }}"
+                                                {{ old('billing-country') == $code ? 'selected' : '' }}>{{ $nom }}
+                                            </option>
+                                        @endforeach
+                                    </select>
+                                    @error('billing-country')
+                                        <span class="lv-field-error">{{ $message }}</span>
+                                    @enderror
+                                </div>
+
+                                <div class="lv-field">
+                                    <label for="billing-first_name">Nome</label>
+                                    <input type="text" id="billing-first_name" name="billing-first_name"
+                                        autocomplete="given-name"
+                                        class="lv-input @error('billing-first_name') is-invalid @enderror"
+                                        value="{{ old('billing-first_name') }}">
+                                    @error('billing-first_name')
+                                        <span class="lv-field-error">{{ $message }}</span>
+                                    @enderror
+                                </div>
+
+                                <div class="lv-field">
+                                    <label for="billing-last_name">Apelido</label>
+                                    <input type="text" id="billing-last_name" name="billing-last_name"
+                                        autocomplete="family-name"
+                                        class="lv-input @error('billing-last_name') is-invalid @enderror"
+                                        value="{{ old('billing-last_name') }}">
+                                    @error('billing-last_name')
+                                        <span class="lv-field-error">{{ $message }}</span>
+                                    @enderror
+                                </div>
+
+                                <div class="lv-field lv-field--full">
+                                    <label for="billing-address_1">Endereço</label>
+                                    <input type="text" id="billing-address_1" name="billing-address_1"
+                                        autocomplete="address-line1"
+                                        class="lv-input @error('billing-address_1') is-invalid @enderror"
+                                        value="{{ old('billing-address_1') }}">
+                                    @error('billing-address_1')
+                                        <span class="lv-field-error">{{ $message }}</span>
+                                    @enderror
+                                </div>
+
+                                <div class="lv-field lv-field--full">
+                                    <label for="billing-address_2">Morada (linha 2, opcional)</label>
+                                    <input type="text" id="billing-address_2" name="billing-address_2"
+                                        autocomplete="address-line2" class="lv-input"
+                                        value="{{ old('billing-address_2') }}">
+                                </div>
+
+                                <div class="lv-field">
+                                    <label for="billing-city">Cidade</label>
+                                    <input type="text" id="billing-city" name="billing-city"
+                                        autocomplete="address-level2"
+                                        class="lv-input @error('billing-city') is-invalid @enderror"
+                                        value="{{ old('billing-city') }}">
+                                    @error('billing-city')
+                                        <span class="lv-field-error">{{ $message }}</span>
+                                    @enderror
+                                </div>
+
+                                <div class="lv-field">
+                                    <label for="billing-postcode">Código postal</label>
+                                    <input type="text" id="billing-postcode" name="billing-postcode"
+                                        autocomplete="postal-code"
+                                        class="lv-input @error('billing-postcode') is-invalid @enderror"
+                                        value="{{ old('billing-postcode') }}">
+                                    @error('billing-postcode')
+                                        <span class="lv-field-error">{{ $message }}</span>
+                                    @enderror
+                                </div>
+
+                                <div class="lv-field lv-field--full">
+                                    <label for="billing-phone">Telefone (opcional)</label>
+                                    <input type="tel" id="billing-phone" name="billing-phone" autocomplete="tel"
+                                        class="lv-input" value="{{ old('billing-phone') }}">
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="lv-card">
+                            <h2 class="lv-card__title"><span class="lv-step-num">4</span> Envio e pagamento</h2>
+
+                            <div class="lv-readonly-option">
+                                <span>Envio grátis</span>
+                                <strong>Grátis</strong>
+                            </div>
+
+                            <div class="lv-readonly-option lv-readonly-option--stacked">
+                                <span>Transferência bancária</span>
+                                <p>Efetue o pagamento diretamente da sua conta bancária. Utilize o seu NIF como
+                                    referência do pagamento. O seu pedido não será enviado até que os fundos sejam
+                                    recebidos.</p>
+                            </div>
+                        </section>
+
+                        <section class="lv-card">
+                            <label class="lv-checkbox">
+                                <input type="checkbox" id="add-note-checkbox">
+                                <span>Adicionar uma nota à sua encomenda</span>
+                            </label>
+                            <textarea id="order-notes-textarea" class="lv-textarea" style="display:none;" rows="3"
+                                placeholder="Notas sobre a sua encomenda (por exemplo, informações especiais sobre a entrega).">{{ old('order_notes') }}</textarea>
+                        </section>
+
+                        <section class="lv-card">
+                            <label class="lv-checkbox">
+                                <input type="checkbox" id="terms-checkbox" name="terms_checkbox"
+                                    {{ old('terms_checkbox') ? 'checked' : '' }}>
+                                <span>
+                                    Ao continuar com a compra concorda com os nossos
+                                    <a href="{{ route('condicoes-gerais-de-venda-cgv') }}" target="_blank">Termos e
+                                        condições</a>
+                                    e
+                                    <a href="{{ route('politica-de-privacidade') }}" target="_blank">Política de
+                                        privacidade</a>
+                                </span>
+                            </label>
+                            @error('terms')
+                                <span class="lv-field-error">{{ $message }}</span>
+                            @enderror
+                        </section>
+                    </div>
+
+                    <aside class="lv-checkout__summary">
+                        <div class="lv-card lv-summary-card">
+                            <h2 class="lv-card__title">Resumo da encomenda</h2>
+
+                            <ul class="lv-summary-items">
+                                @foreach ($cart as $productId => $item)
+                                    @php
+                                        $itemPrice = $item['price'] ?? 0;
+                                        $itemQuantity = (int) ($item['quantity'] ?? 0);
+                                        $itemTotal = $itemPrice * $itemQuantity;
+                                    @endphp
+                                    <li class="lv-summary-item">
+                                        <div class="lv-summary-item__image">
+                                            @if (!empty($item['image']))
+                                                <img src="{{ asset($item['image']) }}"
+                                                    alt="{{ $item['title'] }}" width="56" height="56">
+                                            @endif
+                                            <span class="lv-summary-item__qty">{{ $itemQuantity }}</span>
+                                        </div>
+                                        <div class="lv-summary-item__body">
+                                            <p class="lv-summary-item__title">{{ $item['title'] }}</p>
+                                            <p class="lv-summary-item__desc">
+                                                {{ Str::limit($item['short_description'] ?? '', 70) }}</p>
+                                        </div>
+                                        <div class="lv-summary-item__total">
+                                            {{ number_format($itemTotal, 2, ',', ' ') }} €
+                                        </div>
+                                    </li>
+                                @endforeach
+                            </ul>
+
+                            <div class="lv-summary-totals">
+                                <div class="lv-summary-totals__row">
+                                    <span>Subtotal</span>
+                                    <span>{{ $formattedTotalPrice }} €</span>
+                                </div>
+                                <div class="lv-summary-totals__row">
+                                    <span>Envio</span>
+                                    <span class="lv-summary-totals__free">Grátis</span>
+                                </div>
+                                <div class="lv-summary-totals__row lv-summary-totals__row--total">
+                                    <span>Total</span>
+                                    <span>{{ $formattedTotalPrice }} €</span>
+                                </div>
+                            </div>
+
+                            <button type="submit" id="submit-order" class="lv-btn lv-btn--primary lv-btn--block">
+                                <span class="lv-btn__text">Finalizar encomenda</span>
+                            </button>
+                            <a href="{{ route('carrinho') }}" class="lv-btn lv-btn--ghost lv-btn--block">Voltar ao
+                                carrinho</a>
+                        </div>
+                    </aside>
+                </form>
+            @endif
+        </div>
+    </div>
+
+    @include('layouts.partials.footer.public')
+@endsection
+
+@push('scripts')
+    <script>
+        $(document).ready(function() {
+            const $form = $('#checkout-form');
+            if (!$form.length) {
+                return;
+            }
+
+            const $sameAddress = $('#same-address-checkbox');
+            const $billingWrapper = $('#billing-address-wrapper');
+            const $addNote = $('#add-note-checkbox');
+            const $notesTextarea = $('#order-notes-textarea');
+            const $submitBtn = $('#submit-order');
+
+            // Show/hide the billing address block based on the "same address" checkbox
+            function toggleBillingAddress() {
+                if ($sameAddress.is(':checked')) {
+                    $billingWrapper.slideUp(150);
+                    copyShippingToBilling();
+                } else {
+                    $billingWrapper.slideDown(150);
+                }
+            }
+
+            function copyShippingToBilling() {
+                const fields = ['first_name', 'last_name', 'address_1', 'address_2', 'city', 'postcode',
+                    'country', 'phone'
+                ];
+                fields.forEach(field => {
+                    $(`#billing-${field}`).val($(`#shipping-${field}`).val());
+                });
+            }
+
+            $sameAddress.on('change', toggleBillingAddress);
+            toggleBillingAddress();
+
+            // Show/hide the order-notes textarea
+            $addNote.on('change', function() {
+                $notesTextarea.slideToggle(150, function() {
+                    if (!$notesTextarea.is(':visible')) {
+                        return;
+                    }
+                    $notesTextarea.trigger('focus');
+                });
+            });
+
+            if ($notesTextarea.val().trim() !== '') {
+                $addNote.prop('checked', true);
+                $notesTextarea.show();
+            }
+
+            // Field validation on submit
+            $form.on('submit', function(e) {
+                $submitBtn.prop('disabled', true);
+                $submitBtn.find('.lv-btn__text').text('Processando...');
+
+                let isValid = true;
+                const requiredFields = [
+                    'email', 'shipping-first_name', 'shipping-last_name', 'shipping-address_1',
+                    'shipping-city', 'shipping-postcode', 'shipping-country',
+                ];
+
+                if (!$sameAddress.is(':checked')) {
+                    requiredFields.push('billing-first_name', 'billing-last_name',
+                        'billing-address_1', 'billing-city', 'billing-postcode', 'billing-country');
+                }
+
+                $('.lv-field-error').remove();
+                $('.is-invalid').removeClass('is-invalid');
+
+                requiredFields.forEach(field => {
+                    const $el = $(`[name="${field}"]`);
+                    if ($el.length && !$el.val().trim()) {
+                        isValid = false;
+                        $el.addClass('is-invalid');
+                        $el.closest('.lv-field').append(
+                            '<span class="lv-field-error">Este campo é obrigatório</span>');
+                    }
+                });
+
+                const email = $('#email').val();
+                if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                    isValid = false;
+                    $('#email').addClass('is-invalid');
+                    if (!$('#email').closest('.lv-field').find('.lv-field-error').length) {
+                        $('#email').closest('.lv-field').append(
+                            '<span class="lv-field-error">Por favor, insira um email válido</span>');
+                    }
+                }
+
+                if (!$('#terms-checkbox').is(':checked')) {
+                    isValid = false;
+                    $('#terms-checkbox').addClass('is-invalid');
+                    if (!$('#terms-checkbox').closest('.lv-checkbox').next('.lv-field-error').length) {
+                        $('#terms-checkbox').closest('.lv-checkbox').after(
+                            '<span class="lv-field-error">Você deve aceitar os termos e condições</span>'
+                        );
+                    }
+                }
+
+                if (!isValid) {
+                    e.preventDefault();
+                    $submitBtn.prop('disabled', false);
+                    $submitBtn.find('.lv-btn__text').text('Finalizar encomenda');
+
+                    const $firstError = $('.is-invalid').first();
+                    if ($firstError.length) {
+                        $('html, body').animate({
+                            scrollTop: $firstError.offset().top - 120
+                        }, 400);
+                    }
+                    return false;
+                }
+
+                if ($sameAddress.is(':checked')) {
+                    copyShippingToBilling();
+                }
+                $('#order_notes').val($addNote.is(':checked') ? $notesTextarea.val() : '');
+
+                localStorage.removeItem('checkout_form_data');
+            });
+
+            // Persist form input locally so users don't lose their progress
+            function saveFormData() {
+                const formData = {};
+                const excluded = ['_token'];
+                $form.find('input, select, textarea').each(function() {
+                    const name = $(this).attr('name');
+                    if (!name || excluded.includes(name)) {
+                        return;
+                    }
+                    if ($(this).attr('type') === 'checkbox') {
+                        formData[name] = $(this).is(':checked') ? '1' : '0';
+                    } else {
+                        const value = $(this).val();
+                        if (value && value.trim() !== '') {
+                            formData[name] = value;
+                        }
+                    }
+                });
+                if (Object.keys(formData).length > 0) {
+                    localStorage.setItem('checkout_form_data', JSON.stringify(formData));
+                }
+            }
+
+            function loadSavedData() {
+                const saved = localStorage.getItem('checkout_form_data');
+                if (!saved) {
+                    return;
+                }
+                try {
+                    const data = JSON.parse(saved);
+                    const hasOldData = @json(old() ? true : false);
+                    if (hasOldData) {
+                        return;
+                    }
+                    Object.keys(data).forEach(key => {
+                        const $el = $(`[name="${key}"]`);
+                        if (!$el.length) {
+                            return;
+                        }
+                        if ($el.attr('type') === 'checkbox') {
+                            $el.prop('checked', data[key] === '1').trigger('change');
+                        } else if (!$el.val()) {
+                            $el.val(data[key]);
+                        }
+                    });
+                } catch (e) {
+                    localStorage.removeItem('checkout_form_data');
+                }
+            }
+
+            loadSavedData();
+
+            let saveTimeout;
+            $form.on('input change', 'input, select, textarea', function() {
+                clearTimeout(saveTimeout);
+                saveTimeout = setTimeout(saveFormData, 500);
+            });
+
+            @if (session('success'))
+                localStorage.removeItem('checkout_form_data');
+            @endif
+
+            // Refresh the CSRF token periodically in case the checkout page is left open for a while
+            setInterval(function() {
+                if ($submitBtn.prop('disabled')) {
+                    return;
+                }
+                $.get('{{ route('refresh') }}', function(data) {
+                    $('input[name="_token"]').val(data.token);
+                    $('meta[name="csrf-token"]').attr('content', data.token);
+                });
+            }, 15 * 60 * 1000);
+        });
+    </script>
+@endpush
