@@ -1,7 +1,7 @@
 <div class="lv-navbar__topbar">
     <div class="lv-container lv-navbar__topbar-inner">
-        <span class="lv-navbar__topbar-item">🚚 Envio grátis para Espanha e Europa</span>
-        <a href="tel:+351912649344" class="lv-navbar__topbar-item lv-navbar__topbar-link">📞 +351 912 649 344</a>
+        <span class="lv-navbar__topbar-item">🚚 Envío gratis a España y Europa</span>
+        <a href="tel:+34683573516" class="lv-navbar__topbar-item lv-navbar__topbar-link">📞 +34 683 5735 16</a>
     </div>
 </div>
 
@@ -104,9 +104,9 @@
             <div id="cart-SCe7K" class="cart-dropdown dropdown">
                 <a class="dropdown-toggle mini-cart v2" data-bs-toggle="offcanvas"
                     data-bs-target="#cart-offcanvas-mobile" aria-controls="cart-offcanvas-mobile"
-                    href="javascript:void(0);">
+                    href="javascript:void(0);" style="background: transparent !important; border: none !important; box-shadow: none !important;">
                     <i class="tb-icon tb-icon-cart"></i>
-                    <span class="mini-cart-items">
+                    <span class="mini-cart-items" style="background: var(--lv-primary) !important; border: none !important; box-shadow: none !important;">
                         0 </span>
                     <span>Carrinho</span>
                 </a>

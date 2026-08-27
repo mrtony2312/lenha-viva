@@ -57,9 +57,9 @@
                                 <label for="email">Dirección de email</label>
                                 <input type="email" id="email" name="email" autocomplete="email"
                                     class="lv-input @error('email') is-invalid @enderror"
-                                    value="{{ old('email') }}" required>
+                                    value="{{ old('email') }}" @error('email') aria-describedby="email-error" @enderror required>
                                 @error('email')
-                                    <span class="lv-field-error">{{ $message }}</span>
+                                    <span class="lv-field-error" id="email-error">{{ $message }}</span>
                                 @enderror
                             </div>
                             <p class="lv-card__note">Estás finalizando el pedido como invitado.</p>
@@ -74,6 +74,7 @@
                                     <label for="shipping-country">País/Región</label>
                                     <select id="shipping-country" name="shipping-country" autocomplete="country"
                                         class="lv-input lv-select @error('shipping-country') is-invalid @enderror"
+                                        @error('shipping-country') aria-describedby="shipping-country-error" @enderror
                                         required>
                                         <option value="" disabled {{ old('shipping-country') ? '' : 'selected' }}>
                                             Selecciona un país/región</option>
@@ -84,7 +85,7 @@
                                         @endforeach
                                     </select>
                                     @error('shipping-country')
-                                        <span class="lv-field-error">{{ $message }}</span>
+                                        <span class="lv-field-error" id="shipping-country-error">{{ $message }}</span>
                                     @enderror
                                 </div>
 
@@ -93,9 +94,9 @@
                                     <input type="text" id="shipping-first_name" name="shipping-first_name"
                                         autocomplete="given-name"
                                         class="lv-input @error('shipping-first_name') is-invalid @enderror"
-                                        value="{{ old('shipping-first_name') }}" required>
+                                        value="{{ old('shipping-first_name') }}" @error('shipping-first_name') aria-describedby="shipping-first_name-error" @enderror required>
                                     @error('shipping-first_name')
-                                        <span class="lv-field-error">{{ $message }}</span>
+                                        <span class="lv-field-error" id="shipping-first_name-error">{{ $message }}</span>
                                     @enderror
                                 </div>
 
@@ -104,9 +105,9 @@
                                     <input type="text" id="shipping-last_name" name="shipping-last_name"
                                         autocomplete="family-name"
                                         class="lv-input @error('shipping-last_name') is-invalid @enderror"
-                                        value="{{ old('shipping-last_name') }}" required>
+                                        value="{{ old('shipping-last_name') }}" @error('shipping-last_name') aria-describedby="shipping-last_name-error" @enderror required>
                                     @error('shipping-last_name')
-                                        <span class="lv-field-error">{{ $message }}</span>
+                                        <span class="lv-field-error" id="shipping-last_name-error">{{ $message }}</span>
                                     @enderror
                                 </div>
 
@@ -115,9 +116,9 @@
                                     <input type="text" id="shipping-address_1" name="shipping-address_1"
                                         autocomplete="address-line1"
                                         class="lv-input @error('shipping-address_1') is-invalid @enderror"
-                                        value="{{ old('shipping-address_1') }}" required>
+                                        value="{{ old('shipping-address_1') }}" @error('shipping-address_1') aria-describedby="shipping-address_1-error" @enderror required>
                                     @error('shipping-address_1')
-                                        <span class="lv-field-error">{{ $message }}</span>
+                                        <span class="lv-field-error" id="shipping-address_1-error">{{ $message }}</span>
                                     @enderror
                                 </div>
 
@@ -133,9 +134,9 @@
                                     <input type="text" id="shipping-city" name="shipping-city"
                                         autocomplete="address-level2"
                                         class="lv-input @error('shipping-city') is-invalid @enderror"
-                                        value="{{ old('shipping-city') }}" required>
+                                        value="{{ old('shipping-city') }}" @error('shipping-city') aria-describedby="shipping-city-error" @enderror required>
                                     @error('shipping-city')
-                                        <span class="lv-field-error">{{ $message }}</span>
+                                        <span class="lv-field-error" id="shipping-city-error">{{ $message }}</span>
                                     @enderror
                                 </div>
 
@@ -144,9 +145,9 @@
                                     <input type="text" id="shipping-postcode" name="shipping-postcode"
                                         autocomplete="postal-code"
                                         class="lv-input @error('shipping-postcode') is-invalid @enderror"
-                                        value="{{ old('shipping-postcode') }}" required>
+                                        value="{{ old('shipping-postcode') }}" @error('shipping-postcode') aria-describedby="shipping-postcode-error" @enderror required>
                                     @error('shipping-postcode')
-                                        <span class="lv-field-error">{{ $message }}</span>
+                                        <span class="lv-field-error" id="shipping-postcode-error">{{ $message }}</span>
                                     @enderror
                                 </div>
 
@@ -170,7 +171,8 @@
                                 <div class="lv-field lv-field--full">
                                     <label for="billing-country">País/Región</label>
                                     <select id="billing-country" name="billing-country" autocomplete="country"
-                                        class="lv-input lv-select @error('billing-country') is-invalid @enderror">
+                                        class="lv-input lv-select @error('billing-country') is-invalid @enderror"
+                                        @error('billing-country') aria-describedby="billing-country-error" @enderror>
                                         <option value="" disabled {{ old('billing-country') ? '' : 'selected' }}>
                                             Selecciona un país/región</option>
                                         @foreach ($pays as $code => $nom)
@@ -180,7 +182,7 @@
                                         @endforeach
                                     </select>
                                     @error('billing-country')
-                                        <span class="lv-field-error">{{ $message }}</span>
+                                        <span class="lv-field-error" id="billing-country-error">{{ $message }}</span>
                                     @enderror
                                 </div>
 
@@ -189,9 +191,9 @@
                                     <input type="text" id="billing-first_name" name="billing-first_name"
                                         autocomplete="given-name"
                                         class="lv-input @error('billing-first_name') is-invalid @enderror"
-                                        value="{{ old('billing-first_name') }}">
+                                        value="{{ old('billing-first_name') }}" @error('billing-first_name') aria-describedby="billing-first_name-error" @enderror>
                                     @error('billing-first_name')
-                                        <span class="lv-field-error">{{ $message }}</span>
+                                        <span class="lv-field-error" id="billing-first_name-error">{{ $message }}</span>
                                     @enderror
                                 </div>
 
@@ -200,9 +202,9 @@
                                     <input type="text" id="billing-last_name" name="billing-last_name"
                                         autocomplete="family-name"
                                         class="lv-input @error('billing-last_name') is-invalid @enderror"
-                                        value="{{ old('billing-last_name') }}">
+                                        value="{{ old('billing-last_name') }}" @error('billing-last_name') aria-describedby="billing-last_name-error" @enderror>
                                     @error('billing-last_name')
-                                        <span class="lv-field-error">{{ $message }}</span>
+                                        <span class="lv-field-error" id="billing-last_name-error">{{ $message }}</span>
                                     @enderror
                                 </div>
 
@@ -211,9 +213,9 @@
                                     <input type="text" id="billing-address_1" name="billing-address_1"
                                         autocomplete="address-line1"
                                         class="lv-input @error('billing-address_1') is-invalid @enderror"
-                                        value="{{ old('billing-address_1') }}">
+                                        value="{{ old('billing-address_1') }}" @error('billing-address_1') aria-describedby="billing-address_1-error" @enderror>
                                     @error('billing-address_1')
-                                        <span class="lv-field-error">{{ $message }}</span>
+                                        <span class="lv-field-error" id="billing-address_1-error">{{ $message }}</span>
                                     @enderror
                                 </div>
 
@@ -229,9 +231,9 @@
                                     <input type="text" id="billing-city" name="billing-city"
                                         autocomplete="address-level2"
                                         class="lv-input @error('billing-city') is-invalid @enderror"
-                                        value="{{ old('billing-city') }}">
+                                        value="{{ old('billing-city') }}" @error('billing-city') aria-describedby="billing-city-error" @enderror>
                                     @error('billing-city')
-                                        <span class="lv-field-error">{{ $message }}</span>
+                                        <span class="lv-field-error" id="billing-city-error">{{ $message }}</span>
                                     @enderror
                                 </div>
 
@@ -240,9 +242,9 @@
                                     <input type="text" id="billing-postcode" name="billing-postcode"
                                         autocomplete="postal-code"
                                         class="lv-input @error('billing-postcode') is-invalid @enderror"
-                                        value="{{ old('billing-postcode') }}">
+                                        value="{{ old('billing-postcode') }}" @error('billing-postcode') aria-describedby="billing-postcode-error" @enderror>
                                     @error('billing-postcode')
-                                        <span class="lv-field-error">{{ $message }}</span>
+                                        <span class="lv-field-error" id="billing-postcode-error">{{ $message }}</span>
                                     @enderror
                                 </div>
 

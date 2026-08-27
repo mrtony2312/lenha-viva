@@ -19,7 +19,7 @@ class OrderConfirmation extends Mailable
 
     public function build()
     {
-        return $this->subject('Confirmação da sua encomenda #' . $this->order['order_number'])
+        return $this->subject('Confirmación de tu pedido #' . $this->order['order_number'])
             ->view('emails.order_confirmation')
             ->with([
                 'order' => $this->order

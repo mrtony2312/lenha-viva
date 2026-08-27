@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', __('Política de pagamento'))
+@section('title', __('Política de pago'))
 
 @push('styles')
 
@@ -15,7 +15,7 @@
             <div class="container">
                 <div class="breadscrumb-inner">
                     <ol class="breadcrumb">
-                        <li><a href="{{ route('home') }}" class="active">Casa</a> </li>
+                        <li><a href="{{ route('home') }}" class="active">Inicio</a> </li>
                         <li class="active">Página</li>
                     </ol>
                 </div>
@@ -23,7 +23,7 @@
         </section>
         <div class="title-not-breadcrumbs">
             <div class="container">
-                <h1 class="page-title">Política de pagamento</h1>
+                <h1 class="page-title">Política de pago</h1>
             </div>
         </div>
         <section id="main-container" class="container">
@@ -31,42 +31,42 @@
                 <div id="main-content" class="main-page col-12">
                     <div id="main" class="site-main">
 
-                        <p>1 – ALOJAMENTO NUMA PLATAFORMA SÓLIDA E PROFISSIONAL<br>O <a
-                                href="{{ route('home') }}">https://lenhaviva.com</a> está alojado num servidor
-                            profissional mantido por uma empresa especializada. Os servidores também são atualizados
-                            regularmente.</p>
+                        <p>1 – ALOJAMIENTO EN UNA PLATAFORMA SÓLIDA Y PROFESIONAL<br>El <a
+                                href="{{ route('home') }}">https://lenhaviva.com</a> está alojado en un servidor
+                            profesional mantenido por una empresa especializada. Los servidores también se actualizan
+                            con regularidad.</p>
 
 
 
-                        <p>2 – UTILIZAÇÃO DE UM CERTIFICADO SSL PARA PROTEGER OS SEUS DADOS
-                            PESSOAIS<br>opensea-container.com utiliza um certificado SSL para proteger as
-                            informações transmitidas entre si e o website. Com este certificado, as informações são
-                            encriptadas e não podem ser intercetadas.</p>
+                        <p>2 – USO DE UN CERTIFICADO SSL PARA PROTEGER SUS DATOS
+                            PERSONALES<br>opensea-container.com utiliza un certificado SSL para proteger la
+                            información transmitida entre usted y el sitio web. Con este certificado, la información se
+                            cifra y no puede ser interceptada.</p>
 
 
 
-                        <p>Um cadeado (ou ícone equivalente) na barra de endereço do seu browser indica isso mesmo,
-                            assim como o S no endereço do site: <a href="{{ route('home') }}">https://lenhaviva.com</a>
+                        <p>Un candado (o icono equivalente) en la barra de direcciones de su navegador indica esto
+                            mismo, así como la S en la dirección del sitio: <a href="{{ route('home') }}">https://lenhaviva.com</a>
                         </p>
 
 
 
-                        <p>3 – TOTAL RESPONSABILIDADE PELO PAGAMENTO E SEU PROCESSAMENTO PELO BANCO (CONTROLO E
-                            DÉBITO DE CONTAS BANCÁRIAS).</p>
+                        <p>3 – RESPONSABILIDAD TOTAL POR EL PAGO Y SU PROCESAMIENTO POR EL BANCO (CONTROL Y
+                            CARGO EN CUENTAS BANCARIAS).</p>
 
 
 
-                        <p>4 – PAGAMENTO POR TRANSFERÊNCIA BANCÁRIA (IMEDIATA)</p>
+                        <p>4 – PAGO POR TRANSFERENCIA BANCARIA (INMEDIATA)</p>
 
 
 
-                        <p>O cliente deverá certificar-se junto do seu banco de que o valor total da encomenda foi
-                            creditado na conta fornecida pela LENHA VIVA e que o seu nome e número de encomenda
-                            foram introduzidos corretamente na transferência.</p>
+                        <p>El cliente deberá comprobar con su banco que el importe total del pedido se ha
+                            abonado en la cuenta facilitada por LENHA VIVA y que su nombre y número de pedido
+                            se han introducido correctamente en la transferencia.</p>
 
 
 
-                        <p>Quaisquer taxas bancárias cobradas pelo banco do cliente são da sua responsabilidade.</p>
+                        <p>Cualquier comisión bancaria cobrada por el banco del cliente correrá por su cuenta.</p>
 
 
 

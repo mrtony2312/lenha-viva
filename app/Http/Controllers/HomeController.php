@@ -59,7 +59,7 @@ class HomeController extends Controller
         if (!$product) {
             return response()->json([
                 'success' => false,
-                'message' => 'Produit non trouvé'
+                'message' => 'Producto no encontrado'
             ], 404);
         }
 
@@ -279,7 +279,7 @@ class HomeController extends Controller
             if (!$productId) {
                 return response()->json([
                     'success' => false,
-                    'message' => 'ID du produit manquant.'
+                    'message' => 'Falta el ID del producto.'
                 ], 400);
             }
 
@@ -295,7 +295,7 @@ class HomeController extends Controller
             if ($allProducts->isEmpty()) {
                 return response()->json([
                     'success' => false,
-                    'message' => 'Aucun produit disponible.'
+                    'message' => 'No hay ningún producto disponible.'
                 ], 404);
             }
 
@@ -311,7 +311,7 @@ class HomeController extends Controller
             if (!$product) {
                 return response()->json([
                     'success' => false,
-                    'message' => 'Produit non trouvé avec ID: ' . $productId
+                    'message' => 'Producto no encontrado con ID: ' . $productId
                 ], 404);
             }
 
@@ -321,11 +321,11 @@ class HomeController extends Controller
             // Préparer les données du produit
             $productData = [
                 'id' => $productId,
-                'title' => $product['title'] ?? 'Produit sans nom',
+                'title' => $product['title'] ?? 'Producto sin nombre',
                 'price' => $price,
                 'quantity' => $quantity,
                 'image' => $product['images'][0] ?? ($product['image'] ?? null),
-                'slug' => $product['slug'] ?? 'produit-' . $productId,
+                'slug' => $product['slug'] ?? 'producto-' . $productId,
                 'old_price' => $product['old_price'],
                 'short_description' => $product['short_description'],
 
@@ -359,7 +359,7 @@ class HomeController extends Controller
 
             return response()->json([
                 'success' => true,
-                'message' => 'Produit ajouté au panier!',
+                'message' => '¡Producto añadido al carrito!',
                 'cart' => $cart,
                 'totalItems' => $totalItems,
                 'totalPrice' => number_format($totalPrice, 2, '.', ''),
@@ -372,7 +372,7 @@ class HomeController extends Controller
 
             return response()->json([
                 'success' => false,
-                'message' => 'Une erreur est survenue lors de l\'ajout au panier.'
+                'message' => 'Se ha producido un error al añadir el producto al carrito.'
             ], 500);
         }
     }
@@ -469,7 +469,7 @@ class HomeController extends Controller
                 ]);
             }
 
-            return response()->json(['success' => false, 'message' => 'Produit non trouvé'], 404);
+            return response()->json(['success' => false, 'message' => 'Producto no encontrado'], 404);
 
         } catch (\Exception $e) {
             \Log::error('Erreur updateCart: ' . $e->getMessage());
@@ -500,7 +500,7 @@ class HomeController extends Controller
 
                 return response()->json([
                     'success' => true,
-                    'message' => 'Produit retiré du panier',
+                    'message' => 'Producto eliminado del carrito',
                     'cart' => $cart,
                     'totalItems' => $totalItems,
                     'totalPrice' => $totalPrice,
@@ -508,7 +508,7 @@ class HomeController extends Controller
                 ]);
             }
 
-            return response()->json(['success' => false, 'message' => 'Produit non trouvé'], 404);
+            return response()->json(['success' => false, 'message' => 'Producto no encontrado'], 404);
 
         } catch (\Exception $e) {
             \Log::error('Erreur removeFromCart: ' . $e->getMessage());
@@ -553,7 +553,7 @@ class HomeController extends Controller
         $product = $allProducts->firstWhere('id', $productId);
 
         if (!$product) {
-            return redirect()->back()->with('error', 'Produit non trouvé.');
+            return redirect()->back()->with('error', 'Producto no encontrado.');
         }
 
         // Logique pour ajouter à la liste de souhaits
@@ -563,10 +563,10 @@ class HomeController extends Controller
             $wishlist[] = $productId;
             session()->put('wishlist', $wishlist);
 
-            return redirect()->back()->with('success', 'Produit ajouté à votre liste de souhaits!');
+            return redirect()->back()->with('success', '¡Producto añadido a tu lista de deseos!');
         }
 
-        return redirect()->back()->with('info', 'Produit déjà dans votre liste de souhaits.');
+        return redirect()->back()->with('info', 'El producto ya está en tu lista de deseos.');
     }
 
 
@@ -597,10 +597,10 @@ class HomeController extends Controller
                 $desktopHtml = '
             <div class="mcart-border">
                 <ul class="cart_empty">
-                    <li><span>Seu carrinho está vazio</span></li>
+                    <li><span>Tu carrito está vacío</span></li>
                     <li class="total">
                         <a class="button wc-continue" href="' . route('loja') . '">
-                            Continuar A Comprar
+                            Seguir comprando
                             <i class="tb-icon tb-icon-angle-right"></i>
                         </a>
                     </li>
@@ -612,10 +612,10 @@ class HomeController extends Controller
                 $mobileHtml = '
             <div class="mcart-border">
                 <ul class="cart_empty">
-                    <li><span>Seu carrinho está vazio</span></li>
+                    <li><span>Tu carrito está vacío</span></li>
                     <li class="total">
                         <a class="button wc-continue" href="' . route('loja') . '">
-                            Continuar A Comprar
+                            Seguir comprando
                             <i class="tb-icon tb-icon-angle-right"></i>
                         </a>
                     </li>
@@ -639,19 +639,19 @@ class HomeController extends Controller
                             <img width="100" height="100"
                                  src="' . (!empty($item['image']) ? asset($item['image']) : 'https://via.placeholder.com/100') . '"
                                  class="attachment-woocommerce_gallery_thumbnail size-woocommerce_gallery_thumbnail"
-                                 alt="' . htmlspecialchars($item['title'] ?? 'Produit') . '"
+                                 alt="' . htmlspecialchars($item['title'] ?? 'Producto') . '"
                                  decoding="async">
                         </a>
                     </div>
                     <div class="product-details">
                         <a class="product-name" href="' . route('product.show', ['slug' => $item['slug'] ?? '']) . '">
-                            <span>' . htmlspecialchars($item['title'] ?? 'Produit') . '</span>
+                            <span>' . htmlspecialchars($item['title'] ?? 'Producto') . '</span>
                         </a>
                         <div class="group">
                             <div class="quantity-wrap">
                                 <div class="quantity">
                                     <label class="screen-reader-text" for="quantity_desktop_' . $productId . '">
-                                        Quantidade de ' . htmlspecialchars($item['title'] ?? 'Produit') . '
+                                        Cantidad de ' . htmlspecialchars($item['title'] ?? 'Producto') . '
                                     </label>
                                     <span class="box">
                                         <div class="quantity-selector">
@@ -660,7 +660,7 @@ class HomeController extends Controller
                                             <input type="number" class="quantity-input"
                                                data-product-id="' . $productId . '"
                                                value="' . $itemQuantity . '"
-                                                aria-label="Quantidade do produto"
+                                                aria-label="Cantidad del producto"
                                               >
 
                                             <button type="button" class="quantity-plus" data-product-id="' . $productId . '">＋
@@ -678,7 +678,7 @@ class HomeController extends Controller
                            class="remove mini-cart-remove"
                            data-product-id="' . $productId . '"
                            data-cart-type="desktop"
-                           aria-label="Remover ' . htmlspecialchars($item['title'] ?? 'Produit') . ' do carrinho">
+                           aria-label="Eliminar ' . htmlspecialchars($item['title'] ?? 'Producto') . ' del carrito">
                             <i class="tb-icon tb-icon-trash"></i>
                         </a>
                     </div>
@@ -697,8 +697,8 @@ class HomeController extends Controller
                         </span>
                     </p>
                     <p class="buttons">
-                        <a href="' . route('carrinho') . '" class="button view-cart">Ver Carrinho</a>
-                        <a href="'. route('checkout'). '" class="button checkout">Checkout</a>
+                        <a href="' . route('carrinho') . '" class="button view-cart">Ver carrito</a>
+                        <a href="'. route('checkout'). '" class="button checkout">Finalizar compra</a>
                     </p>
                 </div>
                 <div class="clearfix"></div>
@@ -720,19 +720,19 @@ class HomeController extends Controller
                             <img width="100" height="100"
                                  src="' . (!empty($item['image']) ? asset($item['image']) : 'https://via.placeholder.com/100') . '"
                                  class="attachment-woocommerce_gallery_thumbnail size-woocommerce_gallery_thumbnail"
-                                 alt="' . htmlspecialchars($item['title'] ?? 'Produit') . '"
+                                 alt="' . htmlspecialchars($item['title'] ?? 'Producto') . '"
                                  decoding="async">
                         </a>
                     </div>
                     <div class="product-details">
                         <a class="product-name" href="' . route('product.show', ['slug' => $item['slug'] ?? '']) . '">
-                            <span>' . htmlspecialchars($item['title'] ?? 'Produit') . '</span>
+                            <span>' . htmlspecialchars($item['title'] ?? 'Producto') . '</span>
                         </a>
                         <div class="group">
                             <div class="quantity-wrap">
                                 <div class="quantity">
                                     <label class="screen-reader-text" for="quantity_mobile_' . $productId . '">
-                                        Quantidade de ' . htmlspecialchars($item['title'] ?? 'Produit') . '
+                                        Cantidad de ' . htmlspecialchars($item['title'] ?? 'Producto') . '
                                     </label>
                                     <span class="box">
                                          <div class="quantity-selector">
@@ -741,7 +741,7 @@ class HomeController extends Controller
                                             <input type="number" class="quantity-input"
                                                data-product-id="' . $productId . '"
                                                value="' . $itemQuantity . '"
-                                                aria-label="Quantidade do produto"
+                                                aria-label="Cantidad del producto"
                                               >
 
                                             <button type="button" class="quantity-plus" data-product-id="' . $productId . '">＋
@@ -759,7 +759,7 @@ class HomeController extends Controller
                            class="remove mini-cart-remove"
                            data-product-id="' . $productId . '"
                            data-cart-type="mobile"
-                           aria-label="Remover ' . htmlspecialchars($item['title'] ?? 'Produit') . ' do carrinho">
+                           aria-label="Eliminar ' . htmlspecialchars($item['title'] ?? 'Producto') . ' del carrito">
                             <i class="tb-icon tb-icon-trash"></i>
                         </a>
                     </div>
@@ -778,8 +778,8 @@ class HomeController extends Controller
                         </span>
                     </p>
                     <p class="buttons">
-                        <a href="' . route('carrinho') . '" class="button view-cart">Ver Carrinho</a>
-                        <a href="'. route('checkout'). '" class="button checkout">Checkout</a>
+                        <a href="' . route('carrinho') . '" class="button view-cart">Ver carrito</a>
+                        <a href="'. route('checkout'). '" class="button checkout">Finalizar compra</a>
                     </p>
                 </div>
                 <div class="clearfix"></div>
@@ -807,7 +807,20 @@ class HomeController extends Controller
     }
     public function listaDeDesejos()
     {
-        return view('lista-de-desejos');
+        $wishlist = session()->get('wishlist', []);
+        $allProducts = collect(config('loja_products', []));
+
+        $wishlistProducts = [];
+        foreach (array_keys($wishlist) as $productId) {
+            $product = $allProducts->firstWhere('id', $productId);
+            if ($product) {
+                $wishlistProducts[] = $product;
+            }
+        }
+
+        return view('lista-de-desejos', [
+            'wishlistProducts' => $wishlistProducts,
+        ]);
     }
 
 

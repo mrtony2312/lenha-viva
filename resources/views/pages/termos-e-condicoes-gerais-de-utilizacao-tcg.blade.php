@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', __('Termos e condições gerais de utilização TCG'))
+@section('title', __('Términos y condiciones generales de uso TCG'))
 
 @push('styles')
 @endpush
@@ -13,7 +13,7 @@
             <div class="container">
                 <div class="breadscrumb-inner">
                     <ol class="breadcrumb">
-                        <li><a href="{{ route('home') }}" class="active">Casa</a> </li>
+                        <li><a href="{{ route('home') }}" class="active">Inicio</a> </li>
                         <li class="active">Página</li>
                     </ol>
                 </div>
@@ -21,7 +21,7 @@
         </section>
         <div class="title-not-breadcrumbs">
             <div class="container">
-                <h1 class="page-title">Termos e condições gerais de utilização TCG</h1>
+                <h1 class="page-title">Términos y condiciones generales de uso TCG</h1>
             </div>
         </div>
         <section id="main-container" class="container">
@@ -29,24 +29,24 @@
                 <div id="main-content" class="main-page col-12">
                     <div id="main" class="site-main">
 
-                        <h2 class="wp-block-heading">Finalidade</h2>
+                        <h2 class="wp-block-heading">Finalidad</h2>
 
 
 
-                        <p>Os presentes Termos Gerais de Utilização (doravante &#8220;TCG&#8221;) definem os termos
-                            e condições de acesso e utilização do website <a
-                                href="{{ route('home') }}">https://lenhaviva.com</a>, operado pela LENHA VIVA, bem como
-                            os direitos e obrigações dos utilizadores.</p>
+                        <p>Los presentes Términos Generales de Uso (en adelante &#8220;TCG&#8221;) definen los
+                            términos y condiciones de acceso y uso del sitio web <a
+                                href="{{ route('home') }}">https://lenhaviva.com</a>, operado por LENHA VIVA, así como
+                            los derechos y obligaciones de los usuarios.</p>
 
 
 
                         <ol start="2" class="wp-block-list">
-                            <li>Avisos Legais</li>
+                            <li>Avisos Legales</li>
                         </ol>
 
 
 
-                        <p><strong>Denominação:&nbsp;</strong>Lenha Viva, Unipessoal Lda</p>
+                        <p><strong>Denominación:&nbsp;</strong>Lenha Viva, Unipessoal Lda</p>
 
 
 
@@ -58,146 +58,147 @@
 
 
 
-                        <p>Morada: Rua Da Graça Nr. 19 Corga 3550-243 PINDO Portugal</p>
+                        <p>Dirección: Rua Da Graça Nr. 19 Corga 3550-243 PINDO Portugal</p>
 
 
 
-                        <p>E-mail: contactlehnaviva@gmail.com </p>
+                        <p>Correo electrónico: contactlehnaviva@gmail.com </p>
 
 
 
                         <ol start="3" class="wp-block-list">
-                            <li>Acesso ao Site</li>
+                            <li>Acceso al Sitio</li>
                         </ol>
 
 
 
-                        <p>O site é acessível gratuitamente a qualquer utilizador com acesso à Internet. O
-                            utilizador é o único responsável pelo seu equipamento informático e pela ligação
-                            necessária para utilizar o site.</p>
+                        <p>El sitio es accesible gratuitamente a cualquier usuario con acceso a Internet. El
+                            usuario es el único responsable de su equipo informático y de la conexión
+                            necesaria para utilizar el sitio.</p>
 
 
 
-                        <p>A LENHA VIVA reserva-se o direito de suspender, limitar ou interromper o acesso ao site
-                            por motivos técnicos, de manutenção ou de segurança.</p>
+                        <p>LENHA VIVA se reserva el derecho de suspender, limitar o interrumpir el acceso al sitio
+                            por motivos técnicos, de mantenimiento o de seguridad.</p>
 
 
 
                         <ol start="4" class="wp-block-list">
-                            <li>Utilização do Site</li>
+                            <li>Uso del Sitio</li>
                         </ol>
 
 
 
-                        <p>O utilizador concorda em utilizar o site de acordo com a legislação aplicável e com os
-                            presentes Termos e Condições.<br>Em particular, o utilizador está proibido de:</p>
+                        <p>El usuario se compromete a utilizar el sitio de acuerdo con la legislación aplicable y
+                            con las presentes Condiciones.<br>En particular, el usuario tiene prohibido:</p>
 
 
 
-                        <p>Utilizar o site para fins ilícitos ou fraudulentos,</p>
+                        <p>Utilizar el sitio con fines ilícitos o fraudulentos,</p>
 
 
 
-                        <p>Prejudicar o bom funcionamento do site,</p>
+                        <p>Perjudicar el buen funcionamiento del sitio,</p>
 
 
 
-                        <p>Prejudicar os direitos de propriedade intelectual ou a imagem da LENHA VIVA.</p>
+                        <p>Perjudicar los derechos de propiedad intelectual o la imagen de LENHA VIVA.</p>
 
 
 
                         <ol start="5" class="wp-block-list">
-                            <li>Produtos e Serviços</li>
+                            <li>Productos y Servicios</li>
                         </ol>
 
 
 
-                        <p>O site <a href="{{ route('home') }}">https://lenhaviva.com</a> apresenta e oferece joias e
-                            acessórios para venda. As condições de compra, entrega e devolução estão especificadas
-                            nos Termos e Condições Gerais de Venda (TCG) disponíveis no site.</p>
+                        <p>El sitio <a href="{{ route('home') }}">https://lenhaviva.com</a> presenta y ofrece joyas y
+                            accesorios a la venta. Las condiciones de compra, entrega y devolución se especifican
+                            en las Condiciones Generales de Venta (CGV) disponibles en el sitio.</p>
 
 
 
                         <ol start="6" class="wp-block-list">
-                            <li>Propriedade Intelectual</li>
+                            <li>Propiedad Intelectual</li>
                         </ol>
 
 
 
-                        <p>Todo o conteúdo do site (textos, imagens, logótipos, vídeos, gráficos, etc.) é
-                            propriedade exclusiva da LENHA VIVA, salvo indicação em contrário.<br>Qualquer
-                            reprodução, distribuição, exploração ou modificação, mesmo que parcial, sem autorização
-                            prévia por escrito é estritamente proibida.</p>
+                        <p>Todo el contenido del sitio (textos, imágenes, logotipos, vídeos, gráficos, etc.) es
+                            propiedad exclusiva de LENHA VIVA, salvo indicación en contrario.<br>Cualquier
+                            reproducción, distribución, explotación o modificación, incluso parcial, sin autorización
+                            previa por escrito, está estrictamente prohibida.</p>
 
 
 
                         <ol start="7" class="wp-block-list">
-                            <li>Dados Pessoais</li>
+                            <li>Datos Personales</li>
                         </ol>
 
 
 
-                        <p>Os dados recolhidos no website são tratados em conformidade com o Regulamento Geral sobre
-                            a Proteção de Dados (RGPD).<br>Para mais informações, consulte a nossa Política de
-                            Privacidade.</p>
+                        <p>Los datos recogidos en el sitio web se tratan de conformidad con el Reglamento General de
+                            Protección de Datos (RGPD).<br>Para más información, consulte nuestra Política de
+                            Privacidad.</p>
 
 
 
                         <ol start="8" class="wp-block-list">
-                            <li>Responsabilidade</li>
+                            <li>Responsabilidad</li>
                         </ol>
 
 
 
-                        <p>A LENHA VIVA envida todos os esforços para garantir a exatidão e a atualização das
-                            informações publicadas no site. No entanto, a empresa não pode ser responsabilizada por:
+                        <p>LENHA VIVA hace todo lo posible para garantizar la exactitud y la actualización de la
+                            información publicada en el sitio. No obstante, la empresa no puede ser responsabilizada
+                            por:
                         </p>
 
 
 
-                        <p>Interrupções, indisponibilidades ou avarias do site;</p>
+                        <p>Interrupciones, indisponibilidades o averías del sitio;</p>
 
 
 
-                        <p>Danos diretos ou indiretos relacionados com a utilização do site;</p>
+                        <p>Daños directos o indirectos relacionados con el uso del sitio;</p>
 
 
 
-                        <p>Exatidão das informações fornecidas por terceiros (parceiros, fornecedores, etc.).</p>
+                        <p>La exactitud de la información facilitada por terceros (socios, proveedores, etc.).</p>
 
 
 
                         <ol start="9" class="wp-block-list">
-                            <li>Hiperligações</li>
+                            <li>Hiperenlaces</li>
                         </ol>
 
 
 
-                        <p>O site pode conter links para outros sites. A LENHA VIVA declina qualquer
-                            responsabilidade pelo conteúdo e disponibilidade destes sites externos.</p>
+                        <p>El sitio puede contener enlaces a otros sitios. LENHA VIVA declina cualquier
+                            responsabilidad por el contenido y la disponibilidad de estos sitios externos.</p>
 
 
 
                         <ol start="10" class="wp-block-list">
-                            <li>Modificação dos Termos e Condições</li>
+                            <li>Modificación de las Condiciones</li>
                         </ol>
 
 
 
-                        <p>A LENHA VIVA reserva-se o direito de modificar os presentes Termos e Condições a
-                            qualquer momento, de forma a adaptá-los às evoluções legais, técnicas ou funcionais do
-                            site.<br>A versão aplicável é a que está em vigor na data em que o utilizador navega no
-                            site.</p>
+                        <p>LENHA VIVA se reserva el derecho de modificar las presentes Condiciones en
+                            cualquier momento, con el fin de adaptarlas a la evolución legal, técnica o funcional del
+                            sitio.<br>La versión aplicable es la que esté en vigor en la fecha en que el usuario
+                            navegue por el sitio.</p>
 
 
 
-                        <p>11.º Lei Aplicável e Jurisdição</p>
+                        <p>11.º Ley Aplicable y Jurisdicción</p>
 
 
 
-                        <p>Estes Termos e Condições estão sujeitos à lei Portugues. Em caso de litígio, e na
-                            ausência de uma solução amigável, os tribunais competentes serão os da jurisdição do
-                            Tribunal da Relação de Lisboa (Portugal).</p>
+                        <p>Estas Condiciones están sujetas a la legislación portuguesa. En caso de litigio, y en
+                            ausencia de una solución amistosa, los tribunales competentes serán los de la
+                            jurisdicción del Tribunal da Relação de Lisboa (Portugal).</p>
 
 
 

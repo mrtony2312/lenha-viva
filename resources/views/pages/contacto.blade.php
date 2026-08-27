@@ -1332,7 +1332,7 @@
                 <div class="breadscrumb-inner">
                     <h1 class="page-title">Contacto</h1>
                     <ol class="breadcrumb">
-                        <li><a href="{{ route('home') }}" class="active">Casa</a> </li>
+                        <li><a href="{{ route('home') }}" class="active">Inicio</a> </li>
                         <li class="active">Página</li>
                     </ol>
                 </div>
@@ -1426,12 +1426,12 @@
                                                                 data-id="ec1cfc1" data-element_type="widget"
                                                                 data-widget_type="heading.default">
                                                                 <h2 class="elementor-heading-title elementor-size-default">
-                                                                    Endereço</h2>
+                                                                    Dirección</h2>
                                                             </div>
                                                             <div class="elementor-element elementor-element-d8b4bb1 elementor-widget elementor-widget-text-editor"
                                                                 data-id="d8b4bb1" data-element_type="widget"
                                                                 data-widget_type="text-editor.default">
-                                                                <p><strong>Endereço:</strong> Rua Da Graça Nr. 19
+                                                                <p><strong>Dirección:</strong> Rua Da Graça Nr. 19
                                                                     Corga 3550-243 PINDO Portugal</p>
                                                             </div>
                                                         </div>
@@ -1470,7 +1470,7 @@
                                                                 data-id="05631fc" data-element_type="widget"
                                                                 data-widget_type="heading.default">
                                                                 <h2 class="elementor-heading-title elementor-size-default">
-                                                                    Contact</h2>
+                                                                    Contacto</h2>
                                                             </div>
                                                             <div class="elementor-element elementor-element-ed2335c elementor-widget elementor-widget-text-editor"
                                                                 data-id="ed2335c" data-element_type="widget"
@@ -1526,7 +1526,7 @@
                                                             <div class="elementor-element elementor-element-6ba2899 elementor-widget elementor-widget-text-editor"
                                                                 data-id="6ba2899" data-element_type="widget"
                                                                 data-widget_type="text-editor.default">
-                                                                <p><strong>+351 912 649 344 </strong></p>
+                                                                <p><strong>+34 683 5735 16 </strong></p>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -1558,13 +1558,13 @@
                                                                 data-id="169d020" data-element_type="widget"
                                                                 data-widget_type="heading.default">
                                                                 <h2 class="elementor-heading-title elementor-size-default">
-                                                                    Entrega</h2>
+                                                                    Envío</h2>
                                                             </div>
                                                             <div class="elementor-element elementor-element-1f04b7f elementor-widget elementor-widget-text-editor"
                                                                 data-id="1f04b7f" data-element_type="widget"
                                                                 data-widget_type="text-editor.default">
-                                                                <p><strong>🚚 Entrega gratuita: 3 a 5 dias
-                                                                        úteis</strong></p>
+                                                                <p><strong>🚚 Envío gratuito: 3 a 5 días
+                                                                        laborables</strong></p>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -1595,10 +1595,10 @@
                                                     <div class="tbay-element tbay-element-heading">
                                                         <h3 class="heading-tbay-title style-1">
 
-                                                            <span class="subtitle">Contate-nos</span>
+                                                            <span class="subtitle">Contáctanos</span>
 
 
-                                                            <span class="title">Enviar uma mensagem</span>
+                                                            <span class="title">Enviar un mensaje</span>
 
 
 
@@ -1623,7 +1623,7 @@
                                                                     class="wpforms-field wpforms-field-name"
                                                                     data-field-id="1">
                                                                     <fieldset>
-                                                                        <legend class="wpforms-field-label">Nome
+                                                                        <legend class="wpforms-field-label">Nombre
                                                                             <span class="wpforms-required-label"
                                                                                 aria-hidden="true">*</span>
                                                                         </legend>
@@ -1635,7 +1635,7 @@
                                                                                     id="wpforms-5449-field_1"
                                                                                     class="wpforms-field-name-first wpforms-field-required"
                                                                                     name="wpforms[fields][1][first]"
-                                                                                    placeholder="Nomes próprios"
+                                                                                    placeholder="Nombre"
                                                                                     aria-errormessage="wpforms-5449-field_1-error"
                                                                                     required><label
                                                                                     for="wpforms-5449-field_1"
@@ -1647,7 +1647,7 @@
                                                                                     id="wpforms-5449-field_1-last"
                                                                                     class="wpforms-field-name-last wpforms-field-required"
                                                                                     name="wpforms[fields][1][last]"
-                                                                                    placeholder="Sobrenome"
+                                                                                    placeholder="Apellidos"
                                                                                     aria-errormessage="wpforms-5449-field_1-last-error"
                                                                                     required><label
                                                                                     for="wpforms-5449-field_1-last"
@@ -1660,8 +1660,8 @@
                                                                     class="wpforms-field wpforms-field-text"
                                                                     data-field-type="text" data-field-id="5">
                                                                     <label class="wpforms-field-label"
-                                                                        for="wpforms-5449-field_5">E-mail ou
-                                                                        Nome</label>
+                                                                        for="wpforms-5449-field_5">Email o
+                                                                        nombre</label>
                                                                     <input type="text" id="wpforms-5449-field_5"
                                                                         class="wpforms-field-medium"
                                                                         name="wpforms[fields][5]">
@@ -1680,7 +1680,7 @@
                                                                 <div id="wpforms-5449-field_4-container"
                                                                     class="wpforms-field wpforms-field-text"
                                                                     data-field-id="4"><label class="wpforms-field-label"
-                                                                        for="wpforms-5449-field_4">Assunto</label><input
+                                                                        for="wpforms-5449-field_4">Asunto</label><input
                                                                         type="text" id="wpforms-5449-field_4"
                                                                         class="wpforms-field-medium"
                                                                         name="wpforms[fields][4]"
@@ -1689,8 +1689,8 @@
                                                                 <div id="wpforms-5449-field_3-container"
                                                                     class="wpforms-field wpforms-field-textarea"
                                                                     data-field-id="3"><label class="wpforms-field-label"
-                                                                        for="wpforms-5449-field_3">Comentário ou
-                                                                        mensagem</label>
+                                                                        for="wpforms-5449-field_3">Comentario o
+                                                                        mensaje</label>
                                                                     <textarea id="wpforms-5449-field_3" rows="5" class="wpforms-field-medium" name="wpforms[fields][3]"
                                                                         aria-errormessage="wpforms-5449-field_3-error"></textarea>
                                                                 </div>
@@ -1699,7 +1699,7 @@
                                                             <div class="wpforms-submit-container">
                                                                 <button type="submit" name="wpforms[submit]"
                                                                     id="wpforms-submit-5449" class="wpforms-submit"
-                                                                    data-alt-text="Envio..." data-submit-text="Enviar"
+                                                                    data-alt-text="Enviando..." data-submit-text="Enviar"
                                                                     aria-live="assertive"
                                                                     value="wpforms-submit">Enviar</button>
                                                             </div>

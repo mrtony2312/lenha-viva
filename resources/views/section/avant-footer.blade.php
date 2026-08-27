@@ -17,7 +17,9 @@
                             <h3 class="heading-tbay-title style-1">
 
 
-                                <span class="title">Avaliações de clientes</span>
+                                <span class="subtitle">Lo que dicen de nosotros</span>
+
+                                <span class="title">Valoraciones de clientes</span>
 
 
                                 <i aria-hidden="true"
@@ -41,27 +43,31 @@
                                         <!-- Témoignage 1 -->
                                         <div class="swiper-slide">
                                             <div class="testimonials-body">
+                                                <span class="testimonial-quote-mark" aria-hidden="true">&ldquo;</span>
                                                 <div class="testimonial-meta">
                                                     <div
                                                         class="testimonials-info-wrapper d-flex">
-                                                        <div class="flex-shrink-0">
-                                                        </div>
-                                                        <div class="testimonial-rating"></div>
+                                                        <div class="testimonial-rating" aria-label="5 de 5 estrellas">★★★★★</div>
                                                     </div>
 
-                                                    <div class="excerpt">Estou muito satisfeito
-                                                        com minha compra na LENHA VIVA. A
-                                                        madeira de aquecimento é de excelente
-                                                        qualidade e tem um ótimo desempenho
-                                                        térmico. O site é fácil de navegar e a
-                                                        entrega foi rápida. Recomendo fortemente
-                                                        para quem procura um fornecedor
-                                                        confiável e de confiança para suas
-                                                        necessidades de aquecimento.
+                                                    <div class="excerpt">Estoy muy satisfecha
+                                                        con mi compra en LENHA VIVA. La
+                                                        leña de calefacción es de excelente
+                                                        calidad y tiene un gran rendimiento
+                                                        térmico. La web es fácil de navegar y la
+                                                        entrega fue rápida. Recomiendo totalmente
+                                                        a quien busque un proveedor
+                                                        fiable y de confianza para sus
+                                                        necesidades de calefacción.
                                                     </div>
                                                     <div class="testimonials-info">
+                                                        <div class="testimonial-avatar" aria-hidden="true">IR</div>
                                                         <div class="testimonials-info-right">
                                                             <span class="name">Isabelle R.</span>
+                                                            <span class="testimonial-verified">
+                                                                <i aria-hidden="true" class="tb-icon tb-icon-check-circle"></i>
+                                                                Compra verificada
+                                                            </span>
                                                         </div>
                                                     </div>
 
@@ -73,28 +79,32 @@
                                         <!-- Témoignage 2 -->
                                         <div class="swiper-slide">
                                             <div class="testimonials-body">
+                                                <span class="testimonial-quote-mark" aria-hidden="true">&ldquo;</span>
                                                 <div class="testimonial-meta">
                                                     <div
                                                         class="testimonials-info-wrapper d-flex">
-                                                        <div class="flex-shrink-0">
-                                                        </div>
-                                                        <div class="testimonial-rating"></div>
+                                                        <div class="testimonial-rating" aria-label="5 de 5 estrellas">★★★★★</div>
                                                     </div>
 
-                                                    <div class="excerpt">Como cliente regular,
-                                                        posso afirmar que a LENHA VIVA é um dos
-                                                        melhores sites para comprar madeira de
-                                                        aquecimento e pellets. A qualidade da
-                                                        madeira está sempre garantida e gosto
-                                                        especialmente do atendimento ao cliente,
-                                                        que é atencioso e rápido. A grande
-                                                        variedade de fogões a lenha também é um
-                                                        grande diferencial. Sou um cliente fiel
-                                                        e recomendo o site sem hesitar.
+                                                    <div class="excerpt">Como clienta habitual,
+                                                        puedo afirmar que LENHA VIVA es una de
+                                                        las mejores webs para comprar leña
+                                                        de calefacción y pellets. La calidad de
+                                                        la madera está siempre garantizada y me gusta
+                                                        especialmente la atención al cliente,
+                                                        atenta y rápida. La gran
+                                                        variedad de estufas de leña también es un
+                                                        gran diferencial. Soy clienta fiel
+                                                        y recomiendo la web sin dudarlo.
                                                     </div>
                                                     <div class="testimonials-info">
+                                                        <div class="testimonial-avatar" aria-hidden="true">SL</div>
                                                         <div class="testimonials-info-right">
                                                             <span class="name">Sophie L.</span>
+                                                            <span class="testimonial-verified">
+                                                                <i aria-hidden="true" class="tb-icon tb-icon-check-circle"></i>
+                                                                Compra verificada
+                                                            </span>
                                                         </div>
                                                     </div>
 
@@ -106,29 +116,33 @@
                                         <!-- Témoignage 3 -->
                                         <div class="swiper-slide">
                                             <div class="testimonials-body">
+                                                <span class="testimonial-quote-mark" aria-hidden="true">&ldquo;</span>
                                                 <div class="testimonial-meta">
                                                     <div
                                                         class="testimonials-info-wrapper d-flex">
-                                                        <div class="flex-shrink-0">
-                                                        </div>
-                                                        <div class="testimonial-rating"></div>
+                                                        <div class="testimonial-rating" aria-label="5 de 5 estrellas">★★★★★</div>
                                                     </div>
 
-                                                    <div class="excerpt">Comprei pellets de
-                                                        madeira e um fogão a lenha na TUGAS
-                                                        LENHA para minha nova instalação. Tudo
-                                                        chegou bem embalado e em perfeito
-                                                        estado. O fogão é muito eficiente e os
-                                                        pellets de madeira têm uma queima limpa
-                                                        e constante. Os preços são competitivos
-                                                        em relação a outros fornecedores, e a
-                                                        entrega foi rápida. Estou muito
-                                                        satisfeito com a minha compra e
-                                                        certamente farei novas compras com eles.
+                                                    <div class="excerpt">Compré pellets de
+                                                        madera y una estufa de leña en LENHA
+                                                        VIVA para mi nueva instalación. Todo
+                                                        llegó bien embalado y en perfecto
+                                                        estado. La estufa es muy eficiente y los
+                                                        pellets de madera tienen una combustión limpia
+                                                        y constante. Los precios son competitivos
+                                                        respecto a otros proveedores, y la
+                                                        entrega fue rápida. Estoy muy
+                                                        satisfecho con mi compra y
+                                                        sin duda volveré a comprar con ellos.
                                                     </div>
                                                     <div class="testimonials-info">
+                                                        <div class="testimonial-avatar" aria-hidden="true">MD</div>
                                                         <div class="testimonials-info-right">
                                                             <span class="name">Marc D.</span>
+                                                            <span class="testimonial-verified">
+                                                                <i aria-hidden="true" class="tb-icon tb-icon-check-circle"></i>
+                                                                Compra verificada
+                                                            </span>
                                                         </div>
                                                     </div>
 
@@ -155,6 +169,9 @@
 
 <style>
 
+    .testimonials-swiper-container {
+        padding: 8px 4px 4px;
+    }
 
     .testimonials-swiper {
         width: 100%;
@@ -162,84 +179,172 @@
         overflow: visible;
     }
 
+    .testimonials-swiper .swiper-slide {
+        height: auto;
+    }
 
+    .testimonials-body {
+        position: relative;
+        height: 100%;
+        background: var(--lv-surface, #fff);
+        border: 1px solid var(--lv-border, #e7e1db);
+        border-radius: 16px;
+        padding: 36px 30px 28px;
+        box-shadow: var(--lv-shadow, 0 4px 16px rgba(32, 26, 23, 0.06));
+        transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+        overflow: hidden;
+    }
 
-    .testimonials-swiper .swiper-slide:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+    .testimonials-swiper .swiper-slide:hover .testimonials-body {
+        transform: translateY(-6px);
+        box-shadow: var(--lv-shadow-lg, 0 12px 32px rgba(32, 26, 23, 0.12));
+        border-color: transparent;
+    }
+
+    .testimonial-quote-mark {
+        position: absolute;
+        top: 6px;
+        right: 20px;
+        font-family: Georgia, 'Times New Roman', serif;
+        font-size: 84px;
+        line-height: 1;
+        color: var(--lv-primary, #c2542a);
+        opacity: 0.1;
+        pointer-events: none;
+        user-select: none;
     }
 
     .testimonial-meta {
         display: flex;
         flex-direction: column;
         height: 100%;
+        position: relative;
     }
 
+    .testimonial-rating {
+        color: var(--lv-primary, #c2542a);
+        font-size: 15px;
+        letter-spacing: 3px;
+        margin-bottom: 14px;
+    }
+
+    .excerpt {
+        color: var(--lv-ink-soft, #5b5450);
+        font-size: 15.5px;
+        line-height: 1.7;
+    }
 
     .testimonials-info {
-        margin-top: auto;
+        margin-top: 22px;
+        padding-top: 18px;
+        border-top: 1px solid var(--lv-border, #e7e1db);
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .testimonial-avatar {
+        flex: 0 0 auto;
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(135deg, var(--lv-primary, #c2542a), var(--lv-primary-dark, #9c4220));
+        color: #fff;
+        font-weight: 700;
+        font-size: 14px;
+        letter-spacing: 0.5px;
+    }
+
+    .testimonials-info-right {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
     }
 
     .name {
-        font-weight: 600;
-        color: #333;
-        font-size: 16px;
+        font-weight: 700;
+        color: var(--lv-ink, #201a17);
+        font-size: 15.5px;
+        line-height: 1.3;
     }
 
-    /* Navigation Swiper - Fond noir transparent */
+    .testimonial-verified {
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+        color: var(--lv-ink-soft, #5b5450);
+        font-size: 12.5px;
+    }
+
+    .testimonial-verified i {
+        color: var(--lv-success-ink, #1e7a34);
+        font-size: 13px;
+    }
+
+    /* Navigation Swiper */
     .testimonials-next,
     .testimonials-prev {
-        background: rgba(0, 0, 0, 0.7);
-        width: 60px !important;
-        height: 60px !important;
+        background: var(--lv-surface, #fff);
+        width: 48px !important;
+        height: 48px !important;
         border-radius: 50%;
-        transition: all 0.3s ease;
-        border: none;
+        transition: all 0.25s ease;
+        border: 1px solid var(--lv-border, #e7e1db);
+        box-shadow: var(--lv-shadow, 0 4px 16px rgba(32, 26, 23, 0.06));
         top: 50% !important;
         transform: translateY(-50%);
-        opacity: 0.2 !important;
+        opacity: 0.95 !important;
     }
 
     .testimonials-next:after,
     .testimonials-prev:after {
-        font-size: 18px !important;
-        color: #ffffff;
+        font-size: 16px !important;
+        color: var(--lv-ink, #201a17);
         font-weight: bold;
     }
 
     .testimonials-next:hover,
     .testimonials-prev:hover {
-        background: rgba(0, 0, 0, 0.9);
-        transform: translateY(-50%) scale(1.1);
-        opacity: 1;
+        background: var(--lv-primary, #c2542a);
+        border-color: var(--lv-primary, #c2542a);
+        transform: translateY(-50%) scale(1.08);
+        opacity: 1 !important;
+    }
+
+    .testimonials-next:hover:after,
+    .testimonials-prev:hover:after {
+        color: #fff;
     }
 
     .testimonials-prev {
-        left: 10px;
+        left: -6px;
     }
 
     .testimonials-next {
-        right: 10px;
+        right: -6px;
     }
 
     /* Pagination */
     .testimonials-pagination {
         position: relative;
-        margin-top: 30px;
+        margin-top: 34px;
         bottom: 0 !important;
     }
 
     .testimonials-pagination .swiper-pagination-bullet {
-        width: 10px;
-        height: 10px;
-        background: rgba(0, 0, 0, 0.3);
+        width: 9px;
+        height: 9px;
+        background: var(--lv-border, #e7e1db);
         opacity: 1;
         transition: all 0.3s ease;
     }
 
     .testimonials-pagination .swiper-pagination-bullet-active {
-        background: #8b4513;
-        width: 30px;
+        background: var(--lv-primary, #c2542a);
+        width: 28px;
         border-radius: 10px;
     }
 
@@ -269,7 +374,10 @@
 
         .testimonials-swiper .swiper-slide {
             margin: 0 10px;
-            padding: 25px 20px;
+        }
+
+        .testimonials-body {
+            padding: 28px 22px 24px;
         }
 
         .testimonials-swiper {
@@ -315,8 +423,15 @@
 
     @media (max-width: 480px) {
         .testimonials-swiper .swiper-slide {
-            padding: 20px 15px;
             margin: 0 5px;
+        }
+
+        .testimonials-body {
+            padding: 24px 18px 20px;
+        }
+
+        .testimonial-quote-mark {
+            font-size: 64px;
         }
 
         .excerpt {
@@ -627,11 +742,11 @@
 
                             <h3 class="elementor-icon-box-title">
 						<span>
-							Entrega						</span>
+							Envío						</span>
                             </h3>
 
                             <p class="elementor-icon-box-description">
-                                🚚 Entrega gratuita: 3 a 5 dias úteis </p>
+                                🚚 Envío gratuito: 3 a 5 días laborables </p>
 
                         </div>
 
@@ -662,7 +777,7 @@
                             </h3>
 
                             <p class="elementor-icon-box-description">
-                                🔒 Pagamento 100% seguro </p>
+                                🔒 Pago 100% seguro </p>
 
                         </div>
 
@@ -689,11 +804,11 @@
 
                             <h3 class="elementor-icon-box-title">
 						<span>
-							Suporte						</span>
+							Soporte						</span>
                             </h3>
 
                             <p class="elementor-icon-box-description">
-                                Suporte 7 dias por semana </p>
+                                Soporte 7 días a la semana </p>
 
                         </div>
 

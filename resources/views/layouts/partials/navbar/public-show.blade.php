@@ -1,7 +1,7 @@
 <div class="lv-navbar__topbar">
     <div class="lv-container lv-navbar__topbar-inner">
-        <span class="lv-navbar__topbar-item">🚚 Envio grátis para Espanha e Europa</span>
-        <a href="tel:+351912649344" class="lv-navbar__topbar-item lv-navbar__topbar-link">📞 +351 912 649 344</a>
+        <span class="lv-navbar__topbar-item">🚚 Envío gratis a España y Europa</span>
+        <a href="tel:+34683573516" class="lv-navbar__topbar-item lv-navbar__topbar-link">📞 +34 683 5735 16</a>
     </div>
 </div>
 

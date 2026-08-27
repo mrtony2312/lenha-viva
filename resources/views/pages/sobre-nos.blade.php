@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', __('Sobre nós'))
+@section('title', __('Sobre nosotros'))
 
 @push('styles')
 
@@ -16,9 +16,9 @@
                 alt="breadcrumb">
             <div class="container">
                 <div class="breadscrumb-inner">
-                    <h1 class="page-title">Sobre nós</h1>
+                    <h1 class="page-title">Sobre nosotros</h1>
                     <ol class="breadcrumb">
-                        <li><a href="{{ route('home') }}" class="active">Casa</a> </li>
+                        <li><a href="{{ route('home') }}" class="active">Inicio</a> </li>
                         <li class="active">Página</li>
                     </ol>
                 </div>
@@ -72,13 +72,13 @@
                                             <div class="elementor-element elementor-element-5363a05 elementor-widget elementor-widget-text-editor"
                                                  data-id="5363a05" data-element_type="widget"
                                                  data-widget_type="text-editor.default">
-                                                <p>A LENHA VIVA é um grossista a nível europeu, especializado na
-                                                    Biomassa, Granulados de Produção Agrícola e Soluções de
-                                                    Bioenergia para uso doméstico, industrial e animal.</p>
-                                                <p>Com acordos de produção com as principais fábricas em vários
-                                                    países, disponibilizamos o fornecimento imediato e programado de
-                                                    Pellets, Carvão Vegetal e Biomassa de diversos tipos, com
-                                                    entrega em toda a Europa.</p>
+                                                <p>LENHA VIVA es un mayorista a nivel europeo, especializado en
+                                                    Biomasa, Granulados de Producción Agrícola y Soluciones de
+                                                    Bioenergía para uso doméstico, industrial y animal.</p>
+                                                <p>Con acuerdos de producción con las principales fábricas de varios
+                                                    países, ofrecemos el suministro inmediato y programado de
+                                                    Pellets, Carbón Vegetal y Biomasa de diversos tipos, con
+                                                    entrega en toda Europa.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -144,15 +144,15 @@
                                             <div class="elementor-element elementor-element-7696931 elementor-widget elementor-widget-text-editor"
                                                  data-id="7696931" data-element_type="widget"
                                                  data-widget_type="text-editor.default">
-                                                <p>No período atual de forte desregulação no abastecimento de
-                                                    Energia, em resultado do aumento exponencial da procura devido
-                                                    ao aumento dos preços do gás e da eletricidade e do bloqueio das
-                                                    importações de países produtores, a LENHA VIVA apresenta-se
-                                                    como uma solução diferenciadora para o abastecimento de Produtos
-                                                    de Biomassa e Energia.</p>
-                                                <p>A LENHA VIVA tem centros de distribuição localizados em França e
-                                                    Portugal, sendo a comercialização em toda a Europa efetuada a
-                                                    partir de ambos os países.</p>
+                                                <p>En el actual período de fuerte desregulación en el suministro de
+                                                    Energía, como resultado del aumento exponencial de la demanda debido
+                                                    al incremento de los precios del gas y la electricidad y al bloqueo de las
+                                                    importaciones de países productores, LENHA VIVA se presenta
+                                                    como una solución diferenciadora para el suministro de Productos
+                                                    de Biomasa y Energía.</p>
+                                                <p>LENHA VIVA cuenta con centros de distribución ubicados en Francia y
+                                                    Portugal, realizándose la comercialización en toda Europa
+                                                    desde ambos países.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -181,7 +181,7 @@
 
 
 
-                                                            <span class="title">Disponível com LENHA VIVA</span>
+                                                            <span class="title">Disponible con LENHA VIVA</span>
 
 
 
@@ -193,14 +193,14 @@
                                             <div class="elementor-element elementor-element-e8ba1df elementor-widget elementor-widget-text-editor"
                                                  data-id="e8ba1df" data-element_type="widget"
                                                  data-widget_type="text-editor.default">
-                                                <p>PELLETS DE MADEIRA ENplus A1<br />São fabricados à base de
-                                                    madeira de pinho, garantindo uma elevada qualidade na queima e
-                                                    um poder calorífico superior, sendo o ideal para o aquecimento
-                                                    doméstico em lareiras, salamandras, recuperadores e caldeiras.
+                                                <p>PELLETS DE MADERA ENplus A1<br />Están fabricados a base de
+                                                    madera de pino, lo que garantiza una elevada calidad de combustión y
+                                                    un poder calorífico superior, siendo ideales para la calefacción
+                                                    doméstica en chimeneas, estufas, recuperadores y calderas.
                                                 </p>
-                                                <p>BRIQUETES DE MADEIRA DE FAIA<br />Os Briquetes são produzidos à
-                                                    base de madeira de Faia, obtidos a partir resíduos da indústria
-                                                    de mobiliário. Ideal para fornos, lareiras, salamandras e
+                                                <p>BRIQUETAS DE MADERA DE HAYA<br />Las briquetas se producen a
+                                                    partir de madera de haya, obtenida de residuos de la industria
+                                                    del mueble. Ideales para hornos, chimeneas, estufas y
                                                     recuperadores.</p>
                                             </div>
                                         </div>
@@ -259,24 +259,24 @@
                                                      data-id="14f9aff" data-element_type="widget"
                                                      data-widget_type="text-editor.default">
                                                     <div class="elementor-widget-container">
-                                                        <p><strong>A qualidade dos nossos combustíveis, Gra nossa
-                                                                garantia de confiança.</strong></p>
+                                                        <p><strong>La calidad de nuestros combustibles es nuestra
+                                                                garantía de confianza.</strong></p>
                                                     </div>
                                                 </div>
                                                 <div class="elementor-element elementor-element-1199289 elementor-widget elementor-widget-text-editor"
                                                      data-id="1199289" data-element_type="widget"
                                                      data-widget_type="text-editor.default">
                                                     <div class="elementor-widget-container">
-                                                        <p>Os tipos de lenha que propomos são essencialmente
-                                                            constituídos por madeiras nobres de carvalho, faia,
-                                                            carvalho e freixo.</p>
-                                                        <p>Todos os nossos produtos são secos numa estufa natural ou
-                                                            num forno, o que garante uma melhor combustão.</p>
-                                                        <p>Toda a nossa madeira é seca, pelo que podemos entregar
-                                                            madeira pronta a arder durante todo o ano.</p>
-                                                        <p>Os nossos pellets de madeira são 100% de madeira macia,
-                                                            sem aglutinantes nem aditivos.<br />São aprovados pela
-                                                            DIN Plus, EN Plus ou PEFC.</p>
+                                                        <p>Los tipos de leña que ofrecemos están compuestos
+                                                            esencialmente por maderas nobles de roble, haya,
+                                                            roble y fresno.</p>
+                                                        <p>Todos nuestros productos se secan en un secadero natural o
+                                                            en un horno, lo que garantiza una mejor combustión.</p>
+                                                        <p>Toda nuestra madera está seca, por lo que podemos entregar
+                                                            madera lista para arder durante todo el año.</p>
+                                                        <p>Nuestros pellets de madera son 100% de madera blanda,
+                                                            sin aglutinantes ni aditivos.<br />Están aprobados por
+                                                            DIN Plus, EN Plus o PEFC.</p>
                                                     </div>
                                                 </div>
                                             </div>

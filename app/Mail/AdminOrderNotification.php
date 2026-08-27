@@ -19,7 +19,7 @@ class AdminOrderNotification extends Mailable
 
     public function build()
     {
-        return $this->subject('Nova encomenda recebida #' . $this->order['order_number'])
+        return $this->subject('Nouvelle commande reçue #' . $this->order['order_number'])
             ->view('emails.admin_order_notification')
             ->with([
                 'order' => $this->order

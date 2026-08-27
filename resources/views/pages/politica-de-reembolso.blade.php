@@ -13,7 +13,7 @@
             <div class="container">
                 <div class="breadscrumb-inner">
                     <ol class="breadcrumb">
-                        <li><a href="{{ route('home') }}" class="active">Casa</a> </li>
+                        <li><a href="{{ route('home') }}" class="active">Inicio</a> </li>
                         <li class="active">Página</li>
                     </ol>
                 </div>
@@ -29,98 +29,98 @@
                 <div id="main-content" class="main-page col-12">
                     <div id="main" class="site-main">
 
-                        <p>Na LENHA VIVA, a sua satisfação é a nossa prioridade. Se não estiver completamente
-                            satisfeito com a sua compra, aqui estão as condições de reembolso:</p>
+                        <p>En LENHA VIVA, su satisfacción es nuestra prioridad. Si no está completamente
+                            satisfecho con su compra, estas son las condiciones de reembolso:</p>
 
 
 
                         <ol class="wp-block-list">
-                            <li>Condições de Reembolso</li>
+                            <li>Condiciones de Reembolso</li>
                         </ol>
 
 
 
-                        <p>Pode solicitar um reembolso se:</p>
+                        <p>Puede solicitar un reembolso si:</p>
 
 
 
-                        <p>O produto estiver com defeito ou danificado na entrega</p>
+                        <p>El producto llega defectuoso o dañado en la entrega</p>
 
 
 
-                        <p>O produto recebido não corresponder ao seu pedido</p>
+                        <p>El producto recibido no corresponde a su pedido</p>
 
 
 
-                        <p>Exercer o seu direito de rescisão dentro do prazo legal de 14 dias (excluindo joias
-                            personalizadas ou gravadas)</p>
+                        <p>Ejerce su derecho de desistimiento dentro del plazo legal de 14 días (excluyendo joyas
+                            personalizadas o grabadas)</p>
 
 
 
-                        <p>O produto deve ser devolvido em perfeitas condições e na embalagem original.</p>
+                        <p>El producto debe devolverse en perfectas condiciones y en su embalaje original.</p>
 
 
 
                         <ol start="2" class="wp-block-list">
-                            <li>Prazo de Reembolso</li>
+                            <li>Plazo de Reembolso</li>
                         </ol>
 
 
 
-                        <p>Após a receção e inspeção do produto pela nossa equipa:</p>
+                        <p>Tras la recepción e inspección del producto por nuestro equipo:</p>
 
 
 
-                        <p>O reembolso será emitido no prazo de 7 a 14 dias</p>
+                        <p>El reembolso se emitirá en un plazo de 7 a 14 días</p>
 
 
 
-                        <p>O reembolso será efetuado através do mesmo método de pagamento utilizado na compra.</p>
+                        <p>El reembolso se realizará mediante el mismo método de pago utilizado en la compra.</p>
 
 
 
                         <ol start="3" class="wp-block-list">
-                            <li>Custos de Devolução</li>
+                            <li>Costes de Devolución</li>
                         </ol>
 
 
 
-                        <p>Os custos de devolução são da responsabilidade do cliente, a menos que o produto esteja
-                            com defeito ou não corresponda ao pedido.</p>
+                        <p>Los costes de devolución corren a cargo del cliente, salvo que el producto esté
+                            defectuoso o no corresponda al pedido.</p>
 
 
 
                         <ol start="4" class="wp-block-list">
-                            <li>Joias Personalizadas</li>
+                            <li>Joyas Personalizadas</li>
                         </ol>
 
 
 
-                        <p>As joias personalizadas (gravadas ou personalizadas) não são reembolsáveis, exceto em
-                            caso de defeito ou erro de fabrico verificado no momento da entrega.</p>
+                        <p>Las joyas personalizadas (grabadas o a medida) no son reembolsables, excepto en
+                            caso de defecto o error de fabricación comprobado en el momento de la entrega.</p>
 
 
 
                         <ol start="5" class="wp-block-list">
-                            <li>Procedimento de Reembolso</li>
+                            <li>Procedimiento de Reembolso</li>
                         </ol>
 
 
 
-                        <p>Para iniciar um reembolso:</p>
+                        <p>Para iniciar un reembolso:</p>
 
 
 
-                        <p>Entre em contacto com o nosso serviço de apoio ao cliente pelo e-mail
+                        <p>Póngase en contacto con nuestro servicio de atención al cliente por correo electrónico a
                             contactlehnaviva@gmail.com </p>
 
 
 
-                        <p>Forneça o número do seu pedido e fotografias se o produto estiver com defeito.</p>
+                        <p>Facilite el número de su pedido y fotografías si el producto presenta algún defecto.</p>
 
 
 
-                        <p>Informaremos o procedimento de devolução e reembolso.</p>
+                        <p>Le informaremos del procedimiento de devolución y reembolso.</p>
 
 
 

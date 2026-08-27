@@ -14,8 +14,8 @@
                             <div class="elementor-icon-box-wrapper">
 
                                 <div class="elementor-icon-box-icon">
-                                    <a href="tel:+351925048074" class="elementor-icon" tabindex="-1"
-                                        aria-label="Precisa de ajuda? Whatsapp:">
+                                    <a href="tel:+34683573516" class="elementor-icon" tabindex="-1"
+                                        aria-label="¿Necesitas ayuda? Whatsapp:">
                                         <svg aria-hidden="true" class="e-font-icon-svg e-fab-whatsapp-square"
                                             viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
                                             <path
@@ -28,12 +28,12 @@
                                 <div class="elementor-icon-box-content">
 
                                     <h3 class="elementor-icon-box-title">
-                                        <a href="tel:+351 925 048 074">
-                                            Precisa de ajuda? Whatsapp: </a>
+                                        <a href="tel:+34 683 5735 16">
+                                            ¿Necesitas ayuda? Whatsapp: </a>
                                     </h3>
 
                                     <p class="elementor-icon-box-description">
-                                        +351 925 048 074 </p>
+                                        +34 683 5735 16 </p>
 
                                 </div>
 
@@ -106,7 +106,7 @@
                                     <h3 class="heading-tbay-title style-1">
 
 
-                                        <span class="title">Informações legais</span>
+                                        <span class="title">Información legal</span>
 
 
                                     </h3>
@@ -115,7 +115,7 @@
                         </div>
                         <div class="elementor-element elementor-element-28eaac98 elementor-widget elementor-widget-text-editor"
                             data-id="28eaac98" data-element_type="widget" data-widget_type="text-editor.default">
-                            <p><strong>Endereço:</strong> Rua Da Graça Nr. 19 Corga 3550-243 PINDO Portugal</p>
+                            <p><strong>Dirección:</strong> Rua Da Graça Nr. 19 Corga 3550-243 PINDO Portugal</p>
                         </div>
                         <div class="elementor-element elementor-element-4d89dafe elementor-widget elementor-widget-text-editor"
                             data-id="4d89dafe" data-element_type="widget" data-widget_type="text-editor.default">
@@ -124,7 +124,7 @@
                         </div>
                         <div class="elementor-element elementor-element-4cf5ce6 elementor-widget elementor-widget-text-editor"
                             data-id="4cf5ce6" data-element_type="widget" data-widget_type="text-editor.default">
-                            <p><span style="color: #191919;"><strong>Denominação: </strong></span>Lenha Viva,
+                            <p><span style="color: #191919;"><strong>Denominación: </strong></span>Lenha Viva,
                                 Unipessoal Lda</p>
                         </div>
                         <div class="elementor-element elementor-element-99b9b26 elementor-widget elementor-widget-text-editor"
@@ -148,7 +148,7 @@
                                     <h3 class="heading-tbay-title style-1">
 
 
-                                        <span class="title">Informações legais</span>
+                                        <span class="title">Información legal</span>
 
 
                                     </h3>
@@ -163,11 +163,11 @@
                                     <div class="menu-vertical-container">
                                         <ul id="our-company-RZxxE" class="menu-vertical nav">
                                             <li class="menu-item">
-                                                <a href="{{ route('sobre-nos') }}">Sobre nós</a>
+                                                <a href="{{ route('sobre-nos') }}">Sobre nosotros</a>
                                             </li>
 
                                             <li class="menu-item">
-                                                <a href="{{ route('loja') }}">Loja</a>
+                                                <a href="{{ route('loja') }}">Tienda</a>
                                             </li>
 
                                             <li class="menu-item">
@@ -202,7 +202,7 @@
                                     <h3 class="heading-tbay-title style-1">
 
 
-                                        <span class="title">Categorias de produtos</span>
+                                        <span class="title">Categorías de productos</span>
 
 
                                     </h3>
@@ -246,7 +246,7 @@
                                     <h3 class="heading-tbay-title style-1">
 
 
-                                        <span class="title">As nossas políticas</span>
+                                        <span class="title">Nuestras políticas</span>
 
 
                                     </h3>
@@ -262,19 +262,19 @@
                                         <ul id="nos-politiques-PFZ5t" class="menu-vertical nav">
                                             <li class="menu-item">
                                                 <a href="{{ route('politica-de-privacidade') }}">
-                                                    Política de Privacidade
+                                                    Política de privacidad
                                                 </a>
                                             </li>
 
                                             <li class="menu-item">
                                                 <a href="{{ route('condicoes-gerais-de-venda-cgv') }}">
-                                                    Condições gerais de venda CGV
+                                                    Condiciones generales de venta CGV
                                                 </a>
                                             </li>
 
                                             <li class="menu-item">
                                                 <a href="{{ route('termos-e-condicoes-gerais-de-utilizacao-tcg') }}">
-                                                    Termos e condições gerais de utilização TCG
+                                                    Términos y condiciones generales de uso TCG
                                                 </a>
                                             </li>
 
@@ -292,7 +292,7 @@
 
                                             <li class="menu-item">
                                                 <a href="{{ route('politicaDePagamento') }}">
-                                                    Política de pagamento
+                                                    Política de pago
                                                 </a>
                                             </li>
                                         </ul>
@@ -316,7 +316,7 @@
                         <div class="elementor-element elementor-element-429a145d elementor-widget elementor-widget-text-editor"
                             data-id="429a145d" data-element_type="widget" data-widget_type="text-editor.default">
                             <p>Copyright © <strong><span style="color: #191919;">LENHA VIVA</span></strong>.
-                                Todos os direitos reservados.</p>
+                                Todos los derechos reservados.</p>
                         </div>
                     </div>
                 </div>
@@ -351,7 +351,7 @@
             <div class="chaty-channel-list" id="csaas-channels-0">
                 <div class="chaty-channel Whatsapp-channel-link" id="Whatsapp-0-channel" data-id="Whatsapp-0"
                     data-widget="0" data-channel="Whatsapp">
-                    <a href="https://wa.me/351925048074?text=Olá,%20gostaria%20de%20mais%20informações"
+                    <a href="https://wa.me/34683573516?text=Hola,%20me%20gustar%C3%ADa%20m%C3%A1s%20informaci%C3%B3n"
                         target="_blank" rel="nofollow noopener" aria-label="WhatsApp"
                         class="chaty-tooltip Whatsapp-channel chaty-link chaty-whatsapp-channel pos-left"
                         data-form="chaty-form-0-Whatsapp" data-hover="WhatsApp">
@@ -378,7 +378,7 @@
 
                 <div class="chaty-channel Email-channel-link" id="Email-0-channel" data-id="Email-0" data-widget="0"
                     data-channel="Email">
-                    <a href="mailto:contactlehnaviva@gmail.com?subject=Pedido%20de%20Informa%C3%A7%C3%A3o&body=Ol%C3%A1%2C%0D%0A%0D%0AGostaria%20de%20obter%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20vossos%20servi%C3%A7os%20ou%20produtos.%0D%0A%0D%0AAtenciosamente%2C"
+                    <a href="mailto:contactlehnaviva@gmail.com?subject=Solicitud%20de%20informaci%C3%B3n&body=Hola%2C%0D%0A%0D%0AMe%20gustar%C3%ADa%20obtener%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20servicios%20o%20productos.%0D%0A%0D%0AAtentamente%2C"
                         target="_blank" rel="nofollow noopener" aria-label="Enviar email"
                         class="chaty-tooltip Email-channel chaty-link chaty-email-channel pos-left"
                         data-form="chaty-form-0-Email" data-hover="Enviar email">

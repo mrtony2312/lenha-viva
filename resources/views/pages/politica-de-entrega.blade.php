@@ -13,7 +13,7 @@
             <div class="container">
                 <div class="breadscrumb-inner">
                     <ol class="breadcrumb">
-                        <li><a href="{{ route('home') }}" class="active">Casa</a> </li>
+                        <li><a href="{{ route('home') }}" class="active">Inicio</a> </li>
                         <li class="active">Página</li>
                     </ol>
                 </div>
@@ -29,19 +29,19 @@
                 <div id="main-content" class="main-page col-12">
                     <div id="main" class="site-main">
 
-                        <p>Na LENHA VIVA, fazemos todos os esforços para garantir que os seus produtos de
-                            aquecimento são entregues de forma rápida e segura. Entregamos em sua casa após
-                            pré-pagamento.</p>
+                        <p>En LENHA VIVA, hacemos todo lo posible para garantizar que sus productos de
+                            calefacción se entreguen de forma rápida y segura. Entregamos en su domicilio tras el
+                            prepago.</p>
 
 
 
                         <ol class="wp-block-list">
-                            <li>Áreas de Entrega</li>
+                            <li>Zonas de Entrega</li>
                         </ol>
 
 
 
-                        <p>Entregamos para:</p>
+                        <p>Realizamos entregas en:</p>
 
 
 
@@ -49,103 +49,103 @@
 
 
 
-                        <p>Europa (áreas disponíveis indicadas no momento da encomenda)</p>
+                        <p>Europa (zonas disponibles indicadas en el momento del pedido)</p>
 
 
 
                         <ol start="2" class="wp-block-list">
-                            <li>Prazos de Entrega</li>
+                            <li>Plazos de Entrega</li>
                         </ol>
 
 
 
-                        <p><strong>Portugal</strong>: 3 a 5 dias úteis após confirmação da encomenda</p>
+                        <p><strong>Portugal</strong>: de 3 a 5 días hábiles tras la confirmación del pedido</p>
 
 
 
-                        <p><strong>Europa</strong>: 5 a 10 dias úteis</p>
+                        <p><strong>Europa</strong>: de 5 a 10 días hábiles</p>
 
 
 
-                        <p>Estes prazos são fornecidos como referência e podem variar em função do transportador e
-                            dos períodos de maior movimento.</p>
+                        <p>Estos plazos se ofrecen como referencia y pueden variar en función del transportista y
+                            de los periodos de mayor volumen.</p>
 
 
 
-                        <p>Prazo de Processamento: Processamos as encomendas no prazo de 24 horas (1 dia). As
-                            encomendas efetuadas antes das 17:00 serão processadas no próprio dia. As encomendas
-                            efetuadas após as 17:00 serão processadas no dia seguinte.</p>
+                        <p>Plazo de Procesamiento: Procesamos los pedidos en un plazo de 24 horas (1 día). Los
+                            pedidos realizados antes de las 17:00 se procesarán el mismo día. Los pedidos
+                            realizados después de las 17:00 se procesarán al día siguiente.</p>
 
 
 
                         <ol start="3" class="wp-block-list">
-                            <li>Custos de Entrega</li>
+                            <li>Costes de Entrega</li>
                         </ol>
 
 
 
-                        <p>Em https://lenhaviva.com, a entrega de todos os produtos adquiridos é gratuita em
-                            Portugal e na Europa.</p>
+                        <p>En https://lenhaviva.com, la entrega de todos los productos adquiridos es gratuita en
+                            Portugal y en Europa.</p>
 
 
 
-                        <p>É também importante indicar a morada correta ao efetuar a compra no nosso site.</p>
+                        <p>También es importante indicar la dirección correcta al realizar la compra en nuestro sitio.</p>
 
 
 
                         <ol start="4" class="wp-block-list">
-                            <li>Rastreamento do Pedido</li>
+                            <li>Seguimiento del Pedido</li>
                         </ol>
 
 
 
-                        <p>Assim que o seu pacote for enviado, receberá um e-mail de confirmação com um número de
-                            seguimento, permitindo-lhe acompanhar a sua entrega em tempo real.</p>
+                        <p>En cuanto se envíe su paquete, recibirá un correo electrónico de confirmación con un
+                            número de seguimiento que le permitirá seguir su entrega en tiempo real.</p>
 
 
 
                         <ol start="5" class="wp-block-list">
-                            <li>Embalagem</li>
+                            <li>Embalaje</li>
                         </ol>
 
 
 
-                        <p>Os seus produtos de aquecimento são cuidadosamente embalados para garantir a sua proteção
-                            durante o transporte e para oferecer uma apresentação ideal como presente.</p>
+                        <p>Sus productos de calefacción se embalan cuidadosamente para garantizar su protección
+                            durante el transporte y ofrecer una presentación ideal como regalo.</p>
 
 
 
                         <ol start="6" class="wp-block-list">
-                            <li>Pacote Danificado ou Perdido</li>
+                            <li>Paquete Dañado o Perdido</li>
                         </ol>
 
 
 
-                        <p>Se o seu pacote chegar danificado ou não chegar até si:</p>
+                        <p>Si su paquete llega dañado o no llega a su destino:</p>
 
 
 
-                        <p>Contacte o nosso serviço de apoio ao cliente através do e-mail contactlehnaviva@gmail.com
-                            até 48 horas após a entrega.</p>
+                        <p>Contacte con nuestro servicio de atención al cliente a través del correo electrónico
+                            contactlehnaviva@gmail.com en un plazo de 48 horas tras la entrega.</p>
 
 
 
-                        <p>Forneça fotografias da embalagem e dos produtos (se danificados).</p>
+                        <p>Facilite fotografías del embalaje y de los productos (si están dañados).</p>
 
 
 
-                        <p>Tomaremos as medidas necessárias para reenviar ou reembolsar o seu pedido.</p>
+                        <p>Tomaremos las medidas necesarias para reenviar o reembolsar su pedido.</p>
 
 
 
                         <ol start="7" class="wp-block-list">
-                            <li>Devoluções e Trocas</li>
+                            <li>Devoluciones y Cambios</li>
                         </ol>
 
 
 
-                        <p>Para todas as devoluções ou trocas, consulte a nossa Política de Devoluções, acessível na
-                            página dedicada no nosso website.</p>
+                        <p>Para cualquier devolución o cambio, consulte nuestra Política de Devoluciones, disponible
+                            en la página dedicada de nuestro sitio web.</p>
 
 
 

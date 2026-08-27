@@ -24,7 +24,7 @@ class CheckoutController extends Controller
         $cart = session()->get('cart', []);
 
         if (empty($cart)) {
-            return redirect()->route('carrinho')->with('error', 'Seu carrinho está vazio.');
+            return redirect()->route('carrinho')->with('error', 'Tu carrito está vacío.');
         }
 
         // Calculer les totaux
@@ -95,7 +95,7 @@ class CheckoutController extends Controller
         $cart = session()->get('cart', []);
 
         if (empty($cart)) {
-            return redirect()->route('carrinho')->with('error', 'Seu carrinho está vazio.');
+            return redirect()->route('carrinho')->with('error', 'Tu carrito está vacío.');
         }
 
         // Calculer les totaux
@@ -118,7 +118,7 @@ class CheckoutController extends Controller
             'order_number' => $orderNumber,
             'date' => now()->format('F d, Y'),
             'shipping_method' => $validated['shipping_method'],
-            'payment_method' => 'Transferência bancária',
+            'payment_method' => 'Transferencia bancaria',
             'customer' => [
                 'email' => $validated['email'],
                 'first_name' => $validated['shipping-first_name'],
@@ -167,13 +167,13 @@ class CheckoutController extends Controller
             // Rediriger vers la page de confirmation
             return redirect()->route('checkout.confirmation')->with([
                 'order_data' => $orderData,
-                'success' => 'Sua encomenda foi recebida com sucesso!',
+                'success' => '¡Tu pedido se ha recibido correctamente!',
             ]);
 
         } catch (\Exception $e) {
             \Log::error('Erro no checkout: '.$e->getMessage());
 
-            return back()->with('error', 'Ocorreu um erro ao processar sua encomenda. Por favor, tente novamente.')->withInput();
+            return back()->with('error', 'Se ha producido un error al procesar tu pedido. Por favor, inténtalo de nuevo.')->withInput();
         }
     }
 

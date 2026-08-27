@@ -36,7 +36,7 @@
                                                                 <div class="banner-image">
                                                                     <img loading="lazy" decoding="async" width="1248"
                                                                         height="832"
-                                                                        src="{{ asset('wp-content/uploads/2025/10/765424359870807610.jpg') }}"
+                                                                        src="{{ asset('wp-content/uploads/2025/10/765424359870807610.jpeg') }}"
                                                                         class="attachment-full size-full wp-image-5734"
                                                                         alt="" />
                                                                 </div>
@@ -155,7 +155,7 @@
                                                                                                             width="480"
                                                                                                             height="480"
                                                                                                             src="{{ asset($product['images'][0]) }}"
-                                                                                                            class="attachment-shop_catalog {image-effect"
+                                                                                                            class="@if(empty($product['hover_image'])) image-no-effect @else image-effect attachment-shop_catalog @endif"
                                                                                                             alt="" />
                                                                                                         @if ($product['hover_image'])
                                                                                                             <img loading="lazy"
@@ -222,13 +222,13 @@
                                                                                                         class="tbay-quick-view">
                                                                                                         <a href="#"
                                                                                                             class="qview-button"
-                                                                                                            title="Visualização Rápida"
+                                                                                                            title="Vista rápida"
                                                                                                             data-effect="mfp-move-from-top"
                                                                                                             data-product-id="{{ $product['id'] }}">
                                                                                                             <i
                                                                                                                 class="tb-icon tb-icon-eye"></i>
-                                                                                                            <span>Visualização
-                                                                                                                Rápida</span>
+                                                                                                            <span>Vista
+                                                                                                                rápida</span>
                                                                                                         </a>
                                                                                                     </div>
                                                                                                 </div>
@@ -249,8 +249,8 @@
                                                                                                         </span>
                                                                                                     </del>
                                                                                                     <span
-                                                                                                        class="screen-reader-text">O
-                                                                                                        preço original era:
+                                                                                                        class="screen-reader-text">El
+                                                                                                        precio original era:
                                                                                                         {{ $product['old_price'] }}&nbsp;&euro;.</span>
                                                                                                     <ins
                                                                                                         aria-hidden="true">
@@ -261,12 +261,12 @@
                                                                                                         </span>
                                                                                                     </ins>
                                                                                                     <span
-                                                                                                        class="screen-reader-text">O
-                                                                                                        preço atual é:
+                                                                                                        class="screen-reader-text">El
+                                                                                                        precio actual es:
                                                                                                         {{ $product['price'] }}&nbsp;&euro;.</span>
                                                                                                     <small
                                                                                                         class="woocommerce-price-suffix">IVA
-                                                                                                        incluído</small>
+                                                                                                        incluido</small>
                                                                                                 </span>
 
                                                                                                 <h3 class="name">
@@ -424,13 +424,13 @@
                                                                                                         class="tbay-quick-view">
                                                                                                         <a href="#"
                                                                                                             class="qview-button"
-                                                                                                            title="Visualização Rápida"
+                                                                                                            title="Vista rápida"
                                                                                                             data-effect="mfp-move-from-top"
                                                                                                             data-product-id="{{ $product['id'] }}">
                                                                                                             <i
                                                                                                                 class="tb-icon tb-icon-eye"></i>
-                                                                                                            <span>Visualização
-                                                                                                                Rápida</span>
+                                                                                                            <span>Vista
+                                                                                                                rápida</span>
                                                                                                         </a>
                                                                                                     </div>
                                                                                                 </div>
@@ -450,8 +450,8 @@
                                                                                                         </span>
                                                                                                     </del>
                                                                                                     <span
-                                                                                                        class="screen-reader-text">O
-                                                                                                        preço original era:
+                                                                                                        class="screen-reader-text">El
+                                                                                                        precio original era:
                                                                                                         {{ $product['old_price'] }}&nbsp;&euro;.</span>
                                                                                                     <ins
                                                                                                         aria-hidden="true">
@@ -462,12 +462,12 @@
                                                                                                         </span>
                                                                                                     </ins>
                                                                                                     <span
-                                                                                                        class="screen-reader-text">O
-                                                                                                        preço atual é:
+                                                                                                        class="screen-reader-text">El
+                                                                                                        precio actual es:
                                                                                                         {{ $product['price'] }}&nbsp;&euro;.</span>
                                                                                                     <small
                                                                                                         class="woocommerce-price-suffix">IVA
-                                                                                                        incluído</small>
+                                                                                                        incluido</small>
                                                                                                 </span>
 
                                                                                                 <h3 class="name">
@@ -520,7 +520,7 @@
                                                     <a class="elementor-button elementor-button-link elementor-size-sm"
                                                         href="{{ route('loja') }}">
                                                         <span class="elementor-button-content-wrapper">
-                                                            <span class="elementor-button-text">Loja</span>
+                                                            <span class="elementor-button-text">Tienda</span>
                                                         </span>
                                                     </a>
                                                 </div>
@@ -582,7 +582,7 @@
                                                                                                             width="480"
                                                                                                             height="480"
                                                                                                             src="{{ asset($product['images'][0]) }}"
-                                                                                                            class="attachment-shop_catalog {image-effect"
+                                                                                                            class="@if(empty($product['hover_image'])) image-no-effect @else image-effect attachment-shop_catalog @endif"
                                                                                                             alt="" />
                                                                                                         @if ($product['hover_image'])
                                                                                                             <img loading="lazy"
@@ -649,13 +649,13 @@
                                                                                                         class="tbay-quick-view">
                                                                                                         <a href="#"
                                                                                                             class="qview-button"
-                                                                                                            title="Visualização Rápida"
+                                                                                                            title="Vista rápida"
                                                                                                             data-effect="mfp-move-from-top"
                                                                                                             data-product-id="{{ $product['id'] }}">
                                                                                                             <i
                                                                                                                 class="tb-icon tb-icon-eye"></i>
-                                                                                                            <span>Visualização
-                                                                                                                Rápida</span>
+                                                                                                            <span>Vista
+                                                                                                                rápida</span>
                                                                                                         </a>
                                                                                                     </div>
                                                                                                 </div>
@@ -675,8 +675,8 @@
                                                                                                         </span>
                                                                                                     </del>
                                                                                                     <span
-                                                                                                        class="screen-reader-text">O
-                                                                                                        preço original era:
+                                                                                                        class="screen-reader-text">El
+                                                                                                        precio original era:
                                                                                                         {{ $product['old_price'] }}&nbsp;&euro;.</span>
                                                                                                     <ins
                                                                                                         aria-hidden="true">
@@ -687,12 +687,12 @@
                                                                                                         </span>
                                                                                                     </ins>
                                                                                                     <span
-                                                                                                        class="screen-reader-text">O
-                                                                                                        preço atual é:
+                                                                                                        class="screen-reader-text">El
+                                                                                                        precio actual es:
                                                                                                         {{ $product['price'] }}&nbsp;&euro;.</span>
                                                                                                     <small
                                                                                                         class="woocommerce-price-suffix">IVA
-                                                                                                        incluído</small>
+                                                                                                        incluido</small>
                                                                                                 </span>
 
                                                                                                 <h3 class="name">
@@ -862,7 +862,7 @@
                                                                                                             width="480"
                                                                                                             height="480"
                                                                                                             src="{{ asset($product['images'][0]) }}"
-                                                                                                            class="attachment-shop_catalog {image-effect"
+                                                                                                            class="@if(empty($product['hover_image'])) image-no-effect @else image-effect attachment-shop_catalog @endif"
                                                                                                             alt="" />
                                                                                                         @if ($product['hover_image'])
                                                                                                             <img loading="lazy"
@@ -929,13 +929,13 @@
                                                                                                         class="tbay-quick-view">
                                                                                                         <a href="#"
                                                                                                             class="qview-button"
-                                                                                                            title="Visualização Rápida"
+                                                                                                            title="Vista rápida"
                                                                                                             data-effect="mfp-move-from-top"
                                                                                                             data-product-id="{{ $product['id'] }}">
                                                                                                             <i
                                                                                                                 class="tb-icon tb-icon-eye"></i>
-                                                                                                            <span>Visualização
-                                                                                                                Rápida</span>
+                                                                                                            <span>Vista
+                                                                                                                rápida</span>
                                                                                                         </a>
                                                                                                     </div>
                                                                                                 </div>
@@ -955,8 +955,8 @@
                                                                                                         </span>
                                                                                                     </del>
                                                                                                     <span
-                                                                                                        class="screen-reader-text">O
-                                                                                                        preço original era:
+                                                                                                        class="screen-reader-text">El
+                                                                                                        precio original era:
                                                                                                         {{ $product['old_price'] }}&nbsp;&euro;.</span>
                                                                                                     <ins
                                                                                                         aria-hidden="true">
@@ -967,12 +967,12 @@
                                                                                                         </span>
                                                                                                     </ins>
                                                                                                     <span
-                                                                                                        class="screen-reader-text">O
-                                                                                                        preço atual é:
+                                                                                                        class="screen-reader-text">El
+                                                                                                        precio actual es:
                                                                                                         {{ $product['price'] }}&nbsp;&euro;.</span>
                                                                                                     <small
                                                                                                         class="woocommerce-price-suffix">IVA
-                                                                                                        incluído</small>
+                                                                                                        incluido</small>
                                                                                                 </span>
 
                                                                                                 <h3 class="name">
@@ -1063,7 +1063,7 @@
                                                                                                             width="480"
                                                                                                             height="480"
                                                                                                             src="{{ asset($product['images'][0]) }}"
-                                                                                                            class="attachment-shop_catalog {image-effect"
+                                                                                                            class="@if(empty($product['hover_image'])) image-no-effect @else image-effect attachment-shop_catalog @endif"
                                                                                                             alt="" />
                                                                                                         @if ($product['hover_image'])
                                                                                                             <img loading="lazy"
@@ -1130,13 +1130,13 @@
                                                                                                         class="tbay-quick-view">
                                                                                                         <a href="#"
                                                                                                             class="qview-button"
-                                                                                                            title="Visualização Rápida"
+                                                                                                            title="Vista rápida"
                                                                                                             data-effect="mfp-move-from-top"
                                                                                                             data-product-id="{{ $product['id'] }}">
                                                                                                             <i
                                                                                                                 class="tb-icon tb-icon-eye"></i>
-                                                                                                            <span>Visualização
-                                                                                                                Rápida</span>
+                                                                                                            <span>Vista
+                                                                                                                rápida</span>
                                                                                                         </a>
                                                                                                     </div>
                                                                                                 </div>
@@ -1156,8 +1156,8 @@
                                                                                                         </span>
                                                                                                     </del>
                                                                                                     <span
-                                                                                                        class="screen-reader-text">O
-                                                                                                        preço original era:
+                                                                                                        class="screen-reader-text">El
+                                                                                                        precio original era:
                                                                                                         {{ $product['old_price'] }}&nbsp;&euro;.</span>
                                                                                                     <ins
                                                                                                         aria-hidden="true">
@@ -1168,12 +1168,12 @@
                                                                                                         </span>
                                                                                                     </ins>
                                                                                                     <span
-                                                                                                        class="screen-reader-text">O
-                                                                                                        preço atual é:
+                                                                                                        class="screen-reader-text">El
+                                                                                                        precio actual es:
                                                                                                         {{ $product['price'] }}&nbsp;&euro;.</span>
                                                                                                     <small
                                                                                                         class="woocommerce-price-suffix">IVA
-                                                                                                        incluído</small>
+                                                                                                        incluido</small>
                                                                                                 </span>
 
                                                                                                 <h3 class="name">
@@ -1264,7 +1264,7 @@
                                                                                                             width="480"
                                                                                                             height="480"
                                                                                                             src="{{ asset($product['images'][0]) }}"
-                                                                                                            class="attachment-shop_catalog {image-effect"
+                                                                                                            class="@if(empty($product['hover_image'])) image-no-effect @else image-effect attachment-shop_catalog @endif"
                                                                                                             alt="" />
                                                                                                         @if ($product['hover_image'])
                                                                                                             <img loading="lazy"
@@ -1331,13 +1331,13 @@
                                                                                                         class="tbay-quick-view">
                                                                                                         <a href="#"
                                                                                                             class="qview-button"
-                                                                                                            title="Visualização Rápida"
+                                                                                                            title="Vista rápida"
                                                                                                             data-effect="mfp-move-from-top"
                                                                                                             data-product-id="{{ $product['id'] }}">
                                                                                                             <i
                                                                                                                 class="tb-icon tb-icon-eye"></i>
-                                                                                                            <span>Visualização
-                                                                                                                Rápida</span>
+                                                                                                            <span>Vista
+                                                                                                                rápida</span>
                                                                                                         </a>
                                                                                                     </div>
                                                                                                 </div>
@@ -1357,8 +1357,8 @@
                                                                                                         </span>
                                                                                                     </del>
                                                                                                     <span
-                                                                                                        class="screen-reader-text">O
-                                                                                                        preço original era:
+                                                                                                        class="screen-reader-text">El
+                                                                                                        precio original era:
                                                                                                         {{ $product['old_price'] }}&nbsp;&euro;.</span>
                                                                                                     <ins
                                                                                                         aria-hidden="true">
@@ -1369,12 +1369,12 @@
                                                                                                         </span>
                                                                                                     </ins>
                                                                                                     <span
-                                                                                                        class="screen-reader-text">O
-                                                                                                        preço atual é:
+                                                                                                        class="screen-reader-text">El
+                                                                                                        precio actual es:
                                                                                                         {{ $product['price'] }}&nbsp;&euro;.</span>
                                                                                                     <small
                                                                                                         class="woocommerce-price-suffix">IVA
-                                                                                                        incluído</small>
+                                                                                                        incluido</small>
                                                                                                 </span>
 
                                                                                                 <h3 class="name">
@@ -1466,7 +1466,7 @@
                                                                                                             width="480"
                                                                                                             height="480"
                                                                                                             src="{{ asset($product['images'][0]) }}"
-                                                                                                            class="attachment-shop_catalog {image-effect"
+                                                                                                            class="@if(empty($product['hover_image'])) image-no-effect @else image-effect attachment-shop_catalog @endif"
                                                                                                             alt="" />
                                                                                                         @if ($product['hover_image'])
                                                                                                             <img loading="lazy"
@@ -1533,13 +1533,13 @@
                                                                                                         class="tbay-quick-view">
                                                                                                         <a href="#"
                                                                                                             class="qview-button"
-                                                                                                            title="Visualização Rápida"
+                                                                                                            title="Vista rápida"
                                                                                                             data-effect="mfp-move-from-top"
                                                                                                             data-product-id="{{ $product['id'] }}">
                                                                                                             <i
                                                                                                                 class="tb-icon tb-icon-eye"></i>
-                                                                                                            <span>Visualização
-                                                                                                                Rápida</span>
+                                                                                                            <span>Vista
+                                                                                                                rápida</span>
                                                                                                         </a>
                                                                                                     </div>
                                                                                                 </div>
@@ -1559,8 +1559,8 @@
                                                                                                         </span>
                                                                                                     </del>
                                                                                                     <span
-                                                                                                        class="screen-reader-text">O
-                                                                                                        preço original era:
+                                                                                                        class="screen-reader-text">El
+                                                                                                        precio original era:
                                                                                                         {{ $product['old_price'] }}&nbsp;&euro;.</span>
                                                                                                     <ins
                                                                                                         aria-hidden="true">
@@ -1571,12 +1571,12 @@
                                                                                                         </span>
                                                                                                     </ins>
                                                                                                     <span
-                                                                                                        class="screen-reader-text">O
-                                                                                                        preço atual é:
+                                                                                                        class="screen-reader-text">El
+                                                                                                        precio actual es:
                                                                                                         {{ $product['price'] }}&nbsp;&euro;.</span>
                                                                                                     <small
                                                                                                         class="woocommerce-price-suffix">IVA
-                                                                                                        incluído</small>
+                                                                                                        incluido</small>
                                                                                                 </span>
 
                                                                                                 <h3 class="name">

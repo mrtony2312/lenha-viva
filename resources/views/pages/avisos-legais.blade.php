@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', __('Avisos legais'))
+@section('title', __('Avisos legales'))
 
 @push('styles')
 @endpush
@@ -12,7 +12,7 @@
             <div class="container">
                 <div class="breadscrumb-inner">
                     <ol class="breadcrumb">
-                        <li><a href="{{ route('home') }}" class="active">Casa</a> </li>
+                        <li><a href="{{ route('home') }}" class="active">Inicio</a> </li>
                         <li class="active">Página</li>
                     </ol>
                 </div>
@@ -20,7 +20,7 @@
         </section>
         <div class="title-not-breadcrumbs">
             <div class="container">
-                <h1 class="page-title">Avisos legais</h1>
+                <h1 class="page-title">Avisos legales</h1>
             </div>
         </div>
         <section id="main-container" class="container">
@@ -28,16 +28,16 @@
                 <div id="main-content" class="main-page col-12">
                     <div id="main" class="site-main">
 
-                        <p>Divulgação de acordo com a Secção 5 da Lei do Comércio Eletrónico</p>
+                        <p>Divulgación de acuerdo con la Sección 5 de la Ley de Comercio Electrónico</p>
 
 
 
-                        <p>Lenha Viva, Unipessoal Lda<br>Grossista de Madeira<br><strong>Endereço:</strong> Rua Da
+                        <p>Lenha Viva, Unipessoal Lda<br>Mayorista de Madera<br><strong>Dirección:</strong> Rua Da
                             Graça Nr. 19 Corga 3550-243 PINDO Portugal</p>
 
 
 
-                        <p><strong>E-mail:</strong> contactlehnaviva@gmail.com <br>WhatsApp: +351 912 649 344</p>
+                        <p><strong>Correo electrónico:</strong> contactlehnaviva@gmail.com <br>WhatsApp: +34 683 5735 16</p>
 
 
 
@@ -49,73 +49,73 @@
 
 
 
-                        <p>A empresa <strong>LENHA VIVA UNIPESSOAL LDA</strong> é uma Sociedade por Quotas de
-                            Responsabilidade Limitada, <strong>constituída</strong> em <strong>quarta-feira, 28 de
-                                abril de 2021</strong>, com sede no concelho de PENALVA DO CASTELO.<br>Objeto
-                            Comercial: Comércio, Exploração florestal<br>Ramo Profissional: Comércio de Madeira<br>
+                        <p>La empresa <strong>LENHA VIVA UNIPESSOAL LDA</strong> es una Sociedad Limitada
+                            Unipersonal, <strong>constituida</strong> el <strong>miércoles, 28 de
+                                abril de 2021</strong>, con domicilio social en el municipio de PENALVA DO CASTELO.<br>Objeto
+                            Comercial: Comercio, explotación forestal<br>Rama Profesional: Comercio de madera<br>
                         </p>
 
 
 
-                        <p>O conteúdo destas páginas foi criado com o máximo cuidado. No entanto, não assumimos
-                            qualquer responsabilidade pela exatidão, integralidade ou atualidade deste conteúdo.</p>
+                        <p>El contenido de estas páginas ha sido elaborado con el máximo cuidado. No obstante, no
+                            asumimos responsabilidad alguna por la exactitud, integridad o actualidad de este contenido.</p>
 
 
 
-                        <p>Direitos Autorais</p>
+                        <p>Derechos de Autor</p>
 
 
 
-                        <p>O conteúdo deste site (texto e imagens) é disponibilizado aos internautas exclusivamente
-                            para seu uso privado. Qualquer utilização comercial do conteúdo requer a autorização por
-                            escrito da Lenha Viva, Unipessoal Lda. O operador deste site reserva-se o direito
-                            exclusivo de utilização do texto e das imagens. As imagens não modificadas e isentas de
-                            royalties estão excluídas.</p>
+                        <p>El contenido de este sitio (texto e imágenes) se pone a disposición de los internautas
+                            exclusivamente para su uso privado. Cualquier uso comercial del contenido requiere la
+                            autorización por escrito de Lenha Viva, Unipessoal Lda. El operador de este sitio se
+                            reserva el derecho exclusivo de utilización del texto y de las imágenes. Quedan
+                            excluidas las imágenes no modificadas y libres de derechos.</p>
 
 
 
-                        <p>Propriedade Intelectual:</p>
+                        <p>Propiedad Intelectual:</p>
 
 
 
-                        <p>Todo o conteúdo deste site, incluindo, entre outros, textos, imagens, gráficos,
-                            logótipos, vídeos e todos os outros elementos nele contidos, está protegido pelas leis
-                            de propriedade intelectual e pertence exclusivamente à LENHA VIVA, salvo indicação em
-                            contrário.</p>
+                        <p>Todo el contenido de este sitio, incluyendo, entre otros, textos, imágenes, gráficos,
+                            logotipos, vídeos y todos los demás elementos que contiene, está protegido por las leyes
+                            de propiedad intelectual y pertenece exclusivamente a LENHA VIVA, salvo indicación en
+                            contrario.</p>
 
 
 
-                        <p>Qualquer reprodução, representação, modificação, publicação ou adaptação de todos ou
-                            parte dos elementos do site, por qualquer meio ou processo, é proibida sem a autorização
-                            prévia por escrito da LENHA VIVA. Qualquer utilização não autorizada do site ou dos
-                            seus elementos constitui uma infração e será processada de acordo com as leis
-                            aplicáveis.</p>
+                        <p>Cualquier reproducción, representación, modificación, publicación o adaptación de la
+                            totalidad o parte de los elementos del sitio, por cualquier medio o procedimiento, está
+                            prohibida sin la autorización previa por escrito de LENHA VIVA. Cualquier uso no
+                            autorizado del sitio o de sus elementos constituye una infracción y será perseguido de
+                            acuerdo con la legislación aplicable.</p>
 
 
 
-                        <p>Hiperligações:</p>
+                        <p>Hiperenlaces:</p>
 
 
 
-                        <p>O site pode conter hiperligações para sites de terceiros. A LENHA VIVA não tem qualquer
-                            controlo sobre estes sites e isenta-se de qualquer responsabilidade pelo seu conteúdo e
-                            políticas de privacidade.</p>
+                        <p>El sitio puede contener hiperenlaces a sitios de terceros. LENHA VIVA no tiene ningún
+                            control sobre estos sitios y declina cualquier responsabilidad por su contenido y
+                            políticas de privacidad.</p>
 
 
 
-                        <p>Dados de contacto:</p>
+                        <p>Datos de contacto:</p>
 
 
 
-                        <p>Endereço postal: LENHA VIVA Niederlassung im Lenha Viva, Unipessoal Lda</p>
+                        <p>Dirección postal: LENHA VIVA Niederlassung im Lenha Viva, Unipessoal Lda</p>
 
 
 
-                        <p>E-mail: contactlehnaviva@gmail.com </p>
+                        <p>Correo electrónico: contactlehnaviva@gmail.com </p>
 
 
 
-                        <p>WhatsApp: +351 912 649 344</p>
+                        <p>WhatsApp: +34 683 5735 16</p>
 
 
 

@@ -23,7 +23,7 @@
     <div class="lv-navbar__topbar">
         <div class="lv-container lv-navbar__topbar-inner">
             <span class="lv-navbar__topbar-item">🚚 Envio grátis para Espanha e Europa</span>
-            <a href="tel:+351912649344" class="lv-navbar__topbar-item lv-navbar__topbar-link">📞 +351 912 649 344</a>
+            <a href="tel:+34683573516" class="lv-navbar__topbar-item lv-navbar__topbar-link">📞 +34 683 5735 16</a>
         </div>
     </div>
 
@@ -42,14 +42,21 @@
 
             <nav class="lv-navbar__nav">
                 <a href="{{ route('home') }}"
-                    class="lv-navbar__link {{ request()->routeIs('home') ? 'is-active' : '' }}">Início</a>
+                    class="lv-navbar__link {{ request()->routeIs('home') ? 'is-active' : '' }}">
+                    <i class="tb-icon tb-icon-home3"></i>
+                    <span>Início</span>
+                </a>
                 <a href="{{ route('loja') }}"
-                    class="lv-navbar__link {{ request()->routeIs('loja') ? 'is-active' : '' }}">Loja</a>
+                    class="lv-navbar__link {{ request()->routeIs('loja') ? 'is-active' : '' }}">
+                    <i class="tb-icon tb-icon-store"></i>
+                    <span>Loja</span>
+                </a>
 
                 <div class="lv-navbar__dropdown dropdown">
                     <button type="button" class="lv-navbar__link lv-navbar__dropdown-toggle"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        Categorias
+                        data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">
+                        <i class="tb-icon tb-icon-grid"></i>
+                        <span>Categorias</span>
                         <svg class="lv-navbar__chevron" width="10" height="6" viewBox="0 0 10 6" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
@@ -70,9 +77,15 @@
                 </div>
 
                 <a href="{{ route('sobre-nos') }}"
-                    class="lv-navbar__link {{ request()->routeIs('sobre-nos') ? 'is-active' : '' }}">Sobre nós</a>
+                    class="lv-navbar__link {{ request()->routeIs('sobre-nos') ? 'is-active' : '' }}">
+                    <i class="tb-icon tb-icon-info"></i>
+                    <span>Sobre nós</span>
+                </a>
                 <a href="{{ route('contacto') }}"
-                    class="lv-navbar__link {{ request()->routeIs('contacto') ? 'is-active' : '' }}">Contacto</a>
+                    class="lv-navbar__link {{ request()->routeIs('contacto') ? 'is-active' : '' }}">
+                    <i class="tb-icon tb-icon-envelope"></i>
+                    <span>Contacto</span>
+                </a>
             </nav>
 
             <form action="{{ route('loja') }}" method="get" class="lv-navbar__search">
@@ -123,10 +136,10 @@
                     <span class="lv-badge wishlist-count">0</span>
                 </a>
 
-                <button type="button" class="lv-navbar__icon-btn" title="Carrinho" aria-label="Carrinho"
+                <button type="button" class="lv-navbar__icon-btn lv-navbar__cart-btn" title="Carrinho" aria-label="Carrinho"
                     data-bs-toggle="offcanvas" data-bs-target="#cart-offcanvas-mobile"
                     aria-controls="cart-offcanvas-mobile">
-                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M6 8H18L17 21H7L6 8Z" stroke="currentColor" stroke-width="1.5"
                             stroke-linejoin="round" />
                         <path d="M9 8V6C9 4.34315 10.3431 3 12 3C13.6569 3 15 4.34315 15 6V8" stroke="currentColor"

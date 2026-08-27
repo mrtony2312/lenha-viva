@@ -28,6 +28,11 @@
     <link rel='stylesheet' id='maia-theme-fonts-css'
         href='https://fonts.googleapis.com/css?family=Lato%3A400%2C500%2C600%2C700%7CCormorant%20Garamond%3A400%2C500%2C600%2C700&amp;subset=latin%2Clatin-ext&amp;display=swap'
         type='text/css' media='all' />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel='stylesheet' id='lv-artisan-fonts-css'
+        href='https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap'
+        type='text/css' media='all' />
     <link rel='stylesheet' id='woocommerce-general-css'
         href='{{ asset('wp-content/plugins/woocommerce/assets/css/woocommerce-layoutd3a6.css') }}' type='text/css'
         media='all' />
@@ -403,7 +408,7 @@
                                 <div class="mini_cart_inner">
                                     <div class="mcart-border">
                                         <div class="alert alert-danger m-2">
-                                            Erro ao carregar o carrinho
+                                            Error al cargar el carrito
                                         </div>
                                     </div>
                                 </div>
@@ -489,7 +494,7 @@
                     e.preventDefault();
                     e.stopPropagation();
 
-                    if (!confirm('Tem certeza que deseja remover este item do carrinho?')) {
+                    if (!confirm('¿Seguro que quieres eliminar este artículo del carrito?')) {
                         return;
                     }
 
@@ -511,12 +516,12 @@
                                     updateAllMiniCarts();
                                     // Mettre à jour le compteur
                                     updateCartCount(response);
-                                    showNotification('Item removido do carrinho',
+                                    showNotification('Artículo eliminado del carrito',
                                         'success');
                                 }
                             },
                             error: function() {
-                                showNotification('Erro de conexão', 'error');
+                                showNotification('Error de conexión', 'error');
                                 itemElement.show();
                             }
                         });
@@ -605,7 +610,7 @@
                             updateCartCount(response);
                             // Mettre à jour tous les mini-paniers
                             updateAllMiniCarts();
-                            showNotification('Quantidade atualizada', 'success');
+                            showNotification('Cantidad actualizada', 'success');
 
                             // Si on est sur la page du panier, recharger
                             if (window.location.pathname === '/carrinho') {
@@ -614,12 +619,12 @@
                                 }, 500);
                             }
                         } else {
-                            showNotification('Erro ao atualizar quantidade', 'error');
+                            showNotification('Error al actualizar la cantidad', 'error');
                             updateAllMiniCarts(); // Recharger pour resynchroniser
                         }
                     },
                     error: function() {
-                        showNotification('Erro de conexão', 'error');
+                        showNotification('Error de conexión', 'error');
                         updateAllMiniCarts(); // Recharger pour resynchroniser
                     }
                 });
@@ -867,7 +872,7 @@
                 var productId = button.data('product-id');
 
                 if (!productId) {
-                    showNotification('ID do produto inválido', 'error');
+                    showNotification('ID de producto no válido', 'error');
                     return;
                 }
 
@@ -918,11 +923,11 @@
                             }
                         } else {
                             showNotification(response.message ||
-                                'Erro ao adicionar ao carrinho', 'error');
+                                'Error al añadir el producto al carrito', 'error');
                         }
                     },
                     error: function(xhr) {
-                        showNotification('Erro de conexão', 'error');
+                        showNotification('Error de conexión', 'error');
                         console.error('AJAX Error:', xhr.responseText);
                     }
                 });
@@ -972,14 +977,14 @@
                     success: function(response) {
                         if (response.success) {
                             updateCartDisplay(response);
-                            showNotification('Quantidade atualizada');
+                            showNotification('Cantidad actualizada');
                         } else {
-                            showNotification('Erro ao atualizar quantidade', 'error');
+                            showNotification('Error al actualizar la cantidad', 'error');
                             window.location.reload();
                         }
                     },
                     error: function() {
-                        showNotification('Erro de conexão', 'error');
+                        showNotification('Error de conexión', 'error');
                         window.location.reload();
                     }
                 });
@@ -987,7 +992,7 @@
 
             // Supprimer un article
             $(document).on('click', '.remove-item', function() {
-                if (!confirm('Tem certeza que deseja remover este item do carrinho?')) {
+                if (!confirm('¿Seguro que quieres eliminar este artículo del carrito?')) {
                     return;
                 }
 
@@ -1010,11 +1015,11 @@
                                     row.remove();
                                     updateCartDisplay(response);
                                 }
-                                showNotification('Item removido do carrinho');
+                                showNotification('Artículo eliminado del carrito');
                             }
                         },
                         error: function() {
-                            showNotification('Erro de conexão', 'error');
+                            showNotification('Error de conexión', 'error');
                             row.show();
                         }
                     });
@@ -1033,7 +1038,7 @@
                         }
                     },
                     error: function() {
-                        console.log('Não foi possível carregar o carrinho');
+                        console.log('No se ha podido cargar el carrito');
                     }
                 });
             }
@@ -1090,18 +1095,18 @@
                             button.classList.add('wishlist-added');
                             button.querySelector('svg').setAttribute('fill', 'red');
                             button.querySelector('.yith-wcwl-add-to-wishlist-button__label').textContent =
-                                'Dans la liste';
+                                'En la lista';
 
                             // Mettre à jour le compteur si présent
                             updateWishlistCount(data.count);
 
                             // Afficher une notification
-                            showNotification('Produit ajouté à la liste de souhaits', 'success');
+                            showNotification('Producto añadido a la lista de deseos', 'success');
                         }
                     })
                     .catch(error => {
                         console.error('Error:', error);
-                        showNotification('Une erreur est survenue', 'error');
+                        showNotification('Se ha producido un error', 'error');
                     });
             }
 
@@ -1123,7 +1128,7 @@
                             button.classList.remove('wishlist-added');
                             button.querySelector('svg').setAttribute('fill', 'none');
                             button.querySelector('.yith-wcwl-add-to-wishlist-button__label').textContent =
-                                'Add to wishlist';
+                                'Añadir a la lista de deseos';
 
                             // Mettre à jour le compteur si présent
                             updateWishlistCount(data.count);
@@ -1141,12 +1146,12 @@
                                 }
                             }
 
-                            showNotification('Produit retiré de la liste de souhaits', 'success');
+                            showNotification('Producto eliminado de la lista de deseos', 'success');
                         }
                     })
                     .catch(error => {
                         console.error('Error:', error);
-                        showNotification('Une erreur est survenue', 'error');
+                        showNotification('Se ha producido un error', 'error');
                     });
             }
 

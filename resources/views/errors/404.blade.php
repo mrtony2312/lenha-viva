@@ -13,13 +13,13 @@
                     </div>
                     <section class="error-404 col-md-6">
 
-                        <h1 class="title-404">OPS!</h1>
-                        <h2 class="subtitle-404">Erro 404: Página Não Encontrada</h2>
+                        <h1 class="title-404">¡VAYA!</h1>
+                        <h2 class="subtitle-404">Error 404: Página no encontrada</h2>
 
                         <div class="maia-content-404">
-                            <p class="sub-title">Lamentamos mas a página que você procura não existe, ou foi movida. Por
-                                favor, volta para <a href="{{ route('home') }}" class="back">página inicial</a> se
-                                É engano.</p>
+                            <p class="sub-title">Lo sentimos, pero la página que buscas no existe o ha sido movida. Por
+                                favor, vuelve a la <a href="{{ route('home') }}" class="back">página de inicio</a> si
+                                se trata de un error.</p>
                         </div>
                     </section>
                 </div>
