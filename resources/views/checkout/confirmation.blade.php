@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', __('Accueil'))
+@section('title', __('Pedido confirmado'))
 
 @push('styles')
 @endpush
@@ -11,7 +11,7 @@
     <div id="tbay-main-content" class="mm-page mm-slideout">
         <div class="title-not-breadcrumbs">
             <div class="container">
-                <h1 class="page-title">Finalização de compra</h1>
+                <h1 class="page-title">Finalización de compra</h1>
             </div>
         </div>
         <section id="main-container" class="container">
@@ -24,17 +24,17 @@
 
                                 <p style="margin: 0;line-height: 31px;border: 1px solid var(--tb-border-color);border-bottom: 0;padding: 20px 26px;font-size: 17px;font-weight: 700;color: var(--button-color); display: flex;justify-content:space-between;"
                                     class="woocommerce-notice woocommerce-notice--success woocommerce-thankyou-order-received">
-                                    ✅ Obrigado. A sua encomenda foi recebida.</p>
+                                    ✅ Gracias. Hemos recibido tu pedido.</p>
 
                                 <ul style="border: 1px solid var(--tb-border-color);border-top: 0;padding: 18px 24px 26px;display: flex;justify-content: space-between;"
                                     class="woocommerce-order-overview woocommerce-thankyou-order-details order_details">
 
                                     <li class="woocommerce-order-overview__order order">
-                                        Número de encomenda: <strong>{{ $order['order_number'] }}</strong>
+                                        Número de pedido: <strong>{{ $order['order_number'] }}</strong>
                                     </li>
 
                                     <li class="woocommerce-order-overview__date date">
-                                        Data: <strong>{{ $order['date'] }}</strong>
+                                        Fecha: <strong>{{ $order['date'] }}</strong>
                                     </li>
 
 
@@ -45,7 +45,7 @@
                                     </li>
 
                                     <li class="woocommerce-order-overview__payment-method method">
-                                        Método de pagamento: <strong>{{ $order['payment_method'] }}</strong>
+                                        Método de pago: <strong>{{ $order['payment_method'] }}</strong>
                                     </li>
 
                                 </ul>
@@ -71,7 +71,7 @@
                             </section> --}}
                             <section class="woocommerce-order-details">
 
-                                <h2 class="woocommerce-order-details__title">Detalhes da encomenda</h2>
+                                <h2 class="woocommerce-order-details__title">Detalles del pedido</h2>
 
                                 <table class="woocommerce-table woocommerce-table--order-details shop_table order_details">
 
@@ -82,7 +82,7 @@
                                     </style>
                                     <thead>
                                         <tr>
-                                            <th class="woocommerce-table__product-name product-name">Produto</th>
+                                            <th class="woocommerce-table__product-name product-name">Producto</th>
                                             <th class="woocommerce-table__product-table product-total" id="textr">Total
                                             </th>
                                         </tr>
@@ -93,7 +93,7 @@
                                             <tr class="woocommerce-table__line-item order_item">
 
                                                 <td class="woocommerce-table__product-name product-name ">
-                                                    {{ $item['title'] ?? ($item['name'] ?? 'Produto') }} <strong
+                                                    {{ $item['title'] ?? ($item['name'] ?? 'Producto') }} <strong
                                                         class="product-quantity">×&nbsp;{{ $item['quantity'] }}</strong>
                                                 </td>
 
@@ -115,8 +115,8 @@
                                                         class="woocommerce-Price-currencySymbol">€</span></span></td>
                                         </tr>
                                         <tr>
-                                            <th scope="row">Envio:</th>
-                                            <td id="textr">Envio grátis</td>
+                                            <th scope="row">Envío:</th>
+                                            <td id="textr">Envío gratis</td>
                                         </tr>
                                         <tr>
                                             <th scope="row">Total:</th>
@@ -125,7 +125,7 @@
                                                         class="woocommerce-Price-currencySymbol">€</span></span></td>
                                         </tr>
                                         <tr>
-                                            <th scope="row">Método de pagamento:</th>
+                                            <th scope="row">Método de pago:</th>
                                             <td id="textr">{{ $order['payment_method'] }}</td>
                                         </tr>
                                         @if (!empty($order['order_comments']))
@@ -149,7 +149,7 @@
                                         class="woocommerce-column woocommerce-column--1 woocommerce-column--billing-address col-1">
 
 
-                                        <h2 class="woocommerce-column__title">Morada de facturação</h2>
+                                        <h2 class="woocommerce-column__title">Dirección de facturación</h2>
 
                                         <address>
                                             {{ $order['billing']['first_name'] }} {{ $order['billing']['last_name'] }}
@@ -175,7 +175,7 @@
 
                                     <div
                                         class="woocommerce-column woocommerce-column--2 woocommerce-column--shipping-address col-2">
-                                        <h2 class="woocommerce-column__title">Morada de envio</h2>
+                                        <h2 class="woocommerce-column__title">Dirección de envío</h2>
                                         <address>
                                             {{ $order['customer']['first_name'] }} {{ $order['customer']['last_name'] }}
                                             <br>{{ $order['customer']['address_1'] }}<br>

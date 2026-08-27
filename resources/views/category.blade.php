@@ -72,7 +72,7 @@
                     <div class="container ">
                         <div class="breadscrumb-inner">
                             <ol class="tbay-woocommerce-breadcrumb breadcrumb">
-                                <li><a href="{{ route('home') }}">Início</a></li>
+                                <li><a href="{{ route('home') }}">Inicio</a></li>
                                 <li>{{ $categoryName }}</li>
                             </ol>
                         </div>
@@ -99,10 +99,10 @@
 
                             <p class="woocommerce-result-count" role="alert" aria-relevant="all">
                                 @if ($totalProducts > 0)
-                                    A mostrar {{ $start }}&ndash;{{ $end }} de {{ $totalProducts }}
+                                    Mostrando {{ $start }}&ndash;{{ $end }} de {{ $totalProducts }}
                                     resultados
                                 @else
-                                    Nenhum resultado encontrado
+                                    No se han encontrado resultados
                                 @endif
                             </p>
                             <div class="filter-btn-wrapper d-xl-none">
@@ -114,22 +114,22 @@
                             <div class="tbay-ordering" style="display: flex; align-items: center; gap: 10px;">
                                 <span style="white-space: nowrap;">Ordenar por:</span>
                                 <form class="woocommerce-ordering" id="woof_form" method="get" style="margin: 0;">
-                                    <select name="orderby" class="orderby" aria-label="Ordem da loja"
+                                    <select name="orderby" class="orderby" aria-label="Orden de la tienda"
                                         onchange="document.getElementById('woof_form').submit()"
                                         style="border: none; background: transparent; cursor: pointer; padding: 0; margin: 0; font: inherit; color: inherit;">
                                         <option value="menu_order"
                                             {{ request('orderby', 'menu_order') == 'menu_order' ? 'selected' : '' }}>
-                                            Ordenação padrão
+                                            Orden predeterminado
                                         </option>
                                         <option value="title" {{ request('orderby') == 'title' ? 'selected' : '' }}>
-                                            Ordenar por nome
+                                            Ordenar por nombre
                                         </option>
                                         <option value="price" {{ request('orderby') == 'price' ? 'selected' : '' }}>
-                                            Ordenar por preço: menor para maior
+                                            Ordenar por precio: menor a mayor
                                         </option>
                                         <option value="price-desc"
                                             {{ request('orderby') == 'price-desc' ? 'selected' : '' }}>
-                                            Ordenar por preço: maior para menor
+                                            Ordenar por precio: mayor a menor
                                         </option>
                                     </select>
                                 </form>
@@ -138,7 +138,7 @@
                                 <a href="javascript:void(0);" id="display-mode-list" class="display-mode-btn list "
                                     title="Lista"><i class="tb-icon tb-icon-task-square"></i></a>
                                 <a href="javascript:void(0);" id="display-mode-grid" class="display-mode-btn active"
-                                    title="Grade"><i class="tb-icon tb-icon-grid-2"></i></a>
+                                    title="Cuadrícula"><i class="tb-icon tb-icon-grid-2"></i></a>
                             </div>
 
                         </div>
@@ -203,7 +203,7 @@
 
 
 
-                                                            <div class="add-cart mobile-visible" title="Adicionar">
+                                                            <div class="add-cart mobile-visible" title="Añadir">
                                                                 <a href="javascript:void(0);"
                                                                     data-product-id="{{ $product['id'] }}"
                                                                     data-product-title="{{ $product['title'] }}"
@@ -211,8 +211,8 @@
                                                                     data-product-image="{{ asset($product['images'][0]) }}"
                                                                     data-product-slug="{{ $product['slug'] }}"
                                                                     class="button product_type_simple add_to_cart_button ajax_add_to_cart"
-                                                                    aria-label="Adiciona ao carrinho: &ldquo;{{ $product['title'] }}&rdquo;">
-                                                                    <span class="title-cart">Adicionar</span>
+                                                                    aria-label="Añadir al carrito: &ldquo;{{ $product['title'] }}&rdquo;">
+                                                                    <span class="title-cart">Añadir</span>
                                                                     <i class="tb-icon tb-icon-bag-2"></i>
                                                                 </a>
                                                             </div>
@@ -220,12 +220,12 @@
 
 
                                                             <div class="button-wishlist shown-mobile"
-                                                                title="Lista de desejos">
+                                                                title="Lista de deseos">
                                                                 <div class="yith-add-to-wishlist-button-block yith-add-to-wishlist-button-block--initialized"
                                                                     data-attributes="{&quot;kind&quot;:&quot;button&quot;}">
                                                                     <a class="yith-wcwl-add-to-wishlist-button yith-wcwl-add-to-wishlist-button--anchor wishlist-button
             {{ in_array($product['id'], array_keys(Session::get('wishlist', []))) ? 'wishlist-added' : '' }}"
-                                                                        aria-label="Add To Wishlist: &ldquo;{{ $product['title'] }}&rdquo;"
+                                                                        aria-label="Añadir a la lista de deseos: &ldquo;{{ $product['title'] }}&rdquo;"
                                                                         data-product-id="{{ $product['id'] }}"
                                                                         data-product-title="{{ $product['title'] }}"
                                                                         data-product-price="{{ $product['price'] }}"
@@ -245,24 +245,24 @@
                                                                         </svg>
                                                                         <span
                                                                             class="yith-wcwl-add-to-wishlist-button__label">
-                                                                            {{ in_array($product['id'], array_keys(Session::get('wishlist', []))) ? 'Dans la liste' : 'Add to wishlist' }}
+                                                                            {{ in_array($product['id'], array_keys(Session::get('wishlist', []))) ? 'En la lista' : 'Añadir a la lista de deseos' }}
                                                                         </span>
                                                                     </a>
                                                                 </div>
                                                             </div>
                                                             <div class="tbay-quick-view">
                                                                 <a href="#" class="qview-button"
-                                                                    title="Visualização Rápida"
+                                                                    title="Vista rápida"
                                                                     data-effect="mfp-move-from-top"
                                                                     data-product-id="{{ $product['id'] }}">
                                                                     <i class="tb-icon tb-icon-eye"></i>
-                                                                    <span>Visualização Rápida</span>
+                                                                    <span>Vista rápida</span>
                                                                 </a>
                                                             </div>
                                                         </div>
                                                     </div>
 
-                                                    <span class="onsale"><span class="saled">Sale</span></span>
+                                                    <span class="onsale"><span class="saled">Oferta</span></span>
 
                                                     <div class="caption">
                                                         <span class="price">
@@ -272,7 +272,7 @@
                                                                             class="woocommerce-Price-currencySymbol">&euro;</span></bdi>
                                                                 </span>
                                                             </del>
-                                                            <span class="screen-reader-text">O preço original era:
+                                                            <span class="screen-reader-text">El precio original era:
                                                                 {{ $product['old_price'] }}&nbsp;&euro;.</span>
                                                             <ins aria-hidden="true">
                                                                 <span class="woocommerce-Price-amount amount">
@@ -280,9 +280,9 @@
                                                                             class="woocommerce-Price-currencySymbol">&euro;</span></bdi>
                                                                 </span>
                                                             </ins>
-                                                            <span class="screen-reader-text">O preço atual é:
+                                                            <span class="screen-reader-text">El precio actual es:
                                                                 {{ $product['price'] }}&nbsp;&euro;.</span>
-                                                            <small class="woocommerce-price-suffix">IVA incluído</small>
+                                                            <small class="woocommerce-price-suffix">IVA incluido</small>
                                                         </span>
 
                                                         <h3 class="name">
@@ -305,7 +305,7 @@
 
                             <div style="margin-bottom: 50px">
                                 @if ($lojaProducts->hasPages())
-                                    <div class="tbay-pagination woocommerce-pagination" aria-label="Produto De Paginação">
+                                    <div class="tbay-pagination woocommerce-pagination" aria-label="Paginación de productos">
                                         {{ $lojaProducts->appends(request()->except('page'))->links('vendor.pagination.custom') }}
                                     </div>
                                 @endif

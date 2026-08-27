@@ -264,7 +264,7 @@ class HomeController extends Controller
             's' => $filters['search']
         ];
 
-        $categoryName = strtoupper(str_replace('-', ' ', $category));
+        $categoryName = \App\Support\CategoryLabels::label($category);
 
         return view('category', compact('lojaProducts', 'filters', 'currentFilters','categoryName'));
     }

@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', __('Carrinho'))
+@section('title', __('Carrito'))
 
 @push('styles')
     <link rel='stylesheet' id='wc-blocks-style-css'
@@ -21,7 +21,7 @@
     <div id="wrapper-container" class="wrapper-container">
         <div id="tbay-main-content">
             <div class="title-not-breadcrumbs">
-                <div class="container"><h1 class="page-title">Carrinho</h1></div>
+                <div class="container"><h1 class="page-title">Carrito</h1></div>
             </div>
 
             {{-- Section panier vide --}}
@@ -33,12 +33,12 @@
                             <div data-block-name="woocommerce/cart" class="wp-block-woocommerce-cart alignwide">
                                 <div class="wp-block-woocommerce-empty-cart-block">
                                     <h2 class="wp-block-heading has-text-align-center with-empty-cart-icon wc-block-cart__empty-cart__title">
-                                        Seu carrinho está vazio!
+                                        ¡Tu carrito está vacío!
                                     </h2>
 
                                     <hr class="wp-block-separator has-alpha-channel-opacity is-style-dots">
 
-                                    <h2 class="wp-block-heading has-text-align-center">Novidades na loja</h2>
+                                    <h2 class="wp-block-heading has-text-align-center">Novedades de la tienda</h2>
 
                                     <div data-block-name="woocommerce/product-new" data-columns="4" data-rows="1"
                                          class="wc-block-grid wp-block-product-new wp-block-woocommerce-product-new wc-block-product-new has-4-columns">
@@ -59,9 +59,9 @@
                                                            class="wc-block-grid__product-link">
                                                             @if($oldPrice && $oldPrice > $price)
                                                                 <div class="wc-block-grid__product-onsale">
-                                                                    <span aria-hidden="true">Promoção</span>
+                                                                    <span aria-hidden="true">Oferta</span>
                                                                     <span
-                                                                        class="screen-reader-text">Produto em promoção</span>
+                                                                        class="screen-reader-text">Producto en oferta</span>
                                                                 </div>
                                                             @endif
                                                             <div class="wc-block-grid__product-image">
@@ -69,10 +69,10 @@
                                                                      height="480"
                                                                      src="{{ asset($product['images'][0] ?? ($product['image'] ?? '')) }}"
                                                                      class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
-                                                                     alt="{{ $product['title'] ?? 'Produit' }}">
+                                                                     alt="{{ $product['title'] ?? 'Producto' }}">
                                                             </div>
                                                             <div
-                                                                class="wc-block-grid__product-title">{{ $product['title'] ?? 'Produit' }}</div>
+                                                                class="wc-block-grid__product-title">{{ $product['title'] ?? 'Producto' }}</div>
                                                         </a>
                                                         <div class="wc-block-grid__product-price price">
                                                             @if($oldPrice && $oldPrice > $price)
@@ -88,24 +88,24 @@
                                                                 </span>
                                                             </ins>
                                                             <span class="screen-reader-text">
-                                                                O preço atual é: {{ $formattedPrice }}&nbsp;€.
+                                                                El precio actual es: {{ $formattedPrice }}&nbsp;€.
                                                             </span>
-                                                            <small class="woocommerce-price-suffix">IVA incluído</small>
+                                                            <small class="woocommerce-price-suffix">IVA incluido</small>
                                                         </div>
 
                                                         <div class="wp-block-button wc-block-grid__product-add-to-cart">
                                                             <a href="javascript:void(0);"
                                                                data-product-id="{{ $product['id'] ?? '' }}"
                                                                class="wp-block-button__link add_to_cart_button ajax_add_to_cart"
-                                                               aria-label="Adiciona ao carrinho: &ldquo;{{ $product['title'] ?? 'Produit' }}&rdquo;">
-                                                                Adicionar
+                                                               aria-label="Añadir al carrito: &ldquo;{{ $product['title'] ?? 'Producto' }}&rdquo;">
+                                                                Añadir
                                                             </a>
                                                         </div>
                                                     </li>
                                                 @endforeach
                                             @else
                                                 <li class="wc-block-grid__product">
-                                                    <p>Nenhum produto disponível no momento.</p>
+                                                    <p>No hay ningún producto disponible en este momento.</p>
                                                 </li>
                                             @endif
                                         </ul>
@@ -145,7 +145,7 @@
 
                                             <thead>
                                             <tr class="wc-block-cart-items__header">
-                                                <th class="wc-block-cart-items__header-image"><span>Produto</span></th>
+                                                <th class="wc-block-cart-items__header-image"><span>Producto</span></th>
                                                 <th class="wc-block-cart-items__header-total"><span>Total</span></th>
                                             </tr>
                                             </thead>
@@ -169,7 +169,7 @@
                                                                tabindex="-1">
                                                                 <img
                                                                     src="{{ !empty($item['image']) ? asset($item['image']) : 'https://via.placeholder.com/100' }}"
-                                                                    alt="{{ $item['title'] ?? 'Produit' }}"
+                                                                    alt="{{ $item['title'] ?? 'Producto' }}"
                                                                     class="cart-product-image">
                                                             </a>
                                                         </td>
@@ -177,14 +177,14 @@
                                                             <div class="wc-block-cart-item__wrap">
                                                                 <a class="wc-block-components-product-name"
                                                                    href="{{ route('product.show', ['slug' => $item['slug'] ?? '']) }}">
-                                                                    {{ $item['title'] ?? 'Produit sans nom' }}
+                                                                    {{ $item['title'] ?? 'Producto sin nombre' }}
                                                                 </a>
 
                                                                 <div class="wc-block-cart-item__prices"><span
                                                                         class="price wc-block-components-product-price"><span
-                                                                            class="screen-reader-text">Preço anterior:</span><del
+                                                                            class="screen-reader-text">Precio anterior:</span><del
                                                                             class="wc-block-components-product-price__regular">{{$item['old_price'] }} €</del><span
-                                                                            class="screen-reader-text">Preço com desconto:</span><ins
+                                                                            class="screen-reader-text">Precio con descuento:</span><ins
                                                                             class="wc-block-components-product-price__value is-discounted">{{$formattedItemPrice}} €</ins></span>
                                                                 </div>
 
@@ -208,7 +208,7 @@
                                                                     <button
                                                                         class="wc-block-cart-item__remove-link remove-item mt-3" style="display: block !important; "
                                                                         data-product-id="{{ $productId }}">
-                                                                        Remover este item
+                                                                        Eliminar este artículo
                                                                     </button>
                                                                 </div>
                                                             </div>
@@ -230,7 +230,7 @@
                                             @else
                                                 <tr>
                                                     <td colspan="3" style="text-align: center; padding: 20px;">
-                                                        O carrinho está vazio.
+                                                        El carrito está vacío.
                                                     </td>
                                                 </tr>
                                             @endif
@@ -244,7 +244,7 @@
                                             class="wc-block-components-sidebar wc-block-cart__sidebar wp-block-woocommerce-cart-totals-block">
                                             <div class="wp-block-woocommerce-cart-order-summary-block">
                                                 <h2 class="wp-block-woocommerce-cart-order-summary-heading-block wc-block-cart__totals-title">
-                                                    Total no carrinho
+                                                    Total del carrito
                                                 </h2>
                                                 <div class="wp-block-woocommerce-cart-order-summary-totals-block">
                                                     <div
@@ -252,9 +252,9 @@
                                                         <div class="wc-block-components-totals-shipping">
                                                             <div class="wc-block-components-totals-item"
                                                                  style="display: flex; justify-content: space-between">
-                                                                <span class="wc-block-components-totals-item__label">Envio grátis</span>
+                                                                <span class="wc-block-components-totals-item__label">Envío gratis</span>
                                                                 <span class="wc-block-components-totals-item__value">
-                                                                    <strong>Grátis</strong>
+                                                                    <strong>Gratis</strong>
                                                                 </span>
                                                             </div>
                                                         </div>
@@ -289,7 +289,7 @@
                                                     <a href="{{ route('checkout') }}"
                                                        class="wc-block-components-button wp-element-button wc-block-cart__submit-button contained">
                                                         <div class="wc-block-components-button__text">Finalizar
-                                                            compras
+                                                            compra
                                                         </div>
                                                     </a>
                                                 </div>

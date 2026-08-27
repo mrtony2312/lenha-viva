@@ -179,7 +179,7 @@
                                                         <div class="woocommerce-product-rating">
                                                             <div class="star-rating"></div>
                                                             <a href="#reviews" class="woocommerce-review-link">
-                                                                <span class="count">0</span> comentários de clientes
+                                                                <span class="count">0</span> comentarios de clientes
                                                             </a>
                                                         </div>
                                                     </div>
@@ -193,7 +193,7 @@
                                                                 <bdi>${product.old_price}&nbsp;<span class="woocommerce-Price-currencySymbol">€</span></bdi>
                                                             </span>
                                                         </del>
-                                                        <span class="screen-reader-text">O preço original era: ${product.old_price}&nbsp;€.</span>
+                                                        <span class="screen-reader-text">El precio original era: ${product.old_price}&nbsp;€.</span>
                                                     ` : ''}
                                                     <ins aria-hidden="true">
                                                         <span class="woocommerce-Price-amount amount">
@@ -201,11 +201,11 @@
                                                         </span>
                                                     </ins>
                                                     ${product.old_price ? `
-                                                        <span class="screen-reader-text">O preço atual é: ${product.price}&nbsp;€.</span>
+                                                        <span class="screen-reader-text">El precio actual es: ${product.price}&nbsp;€.</span>
                                                     ` : ''}
-                                                    <small class="woocommerce-price-suffix">IVA incluído</small>
+                                                    <small class="woocommerce-price-suffix">IVA incluido</small>
                                                 </p>
-                                                <a id="sticky-custom-add-to-cart" href="javascript:void(0);" data-product-id="${product.id}">Adicionar</a>
+                                                <a id="sticky-custom-add-to-cart" href="javascript:void(0);" data-product-id="${product.id}">Añadir</a>
                                             </div>
                                         </div>
                                     </div>
@@ -215,7 +215,7 @@
                                     <div class="row">
                                         <div class="image-mains col-lg-6">
                                             ${product.old_price ? `
-                                                <span class="onsale"><span class="saled">Sale</span></span>
+                                                <span class="onsale"><span class="saled">Oferta</span></span>
                                             ` : ''}
 
                                             <div class="woocommerce-product-gallery woocommerce-product-gallery--with-images woocommerce-product-gallery--columns-4 images has-gallery"
@@ -240,7 +240,7 @@
                                                 </div>
 
                                                 <div class="details-btn-wrapper">
-                                                    <a class="view-details-btn" href="/product/${product.slug}">Ver detalhes</a>
+                                                    <a class="view-details-btn" href="/product/${product.slug}">Ver detalles</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -255,7 +255,7 @@
                                                                     <bdi>${product.old_price}&nbsp;<span class="woocommerce-Price-currencySymbol">€</span></bdi>
                                                                 </span>
                                                             </del>
-                                                            <span class="screen-reader-text">O preço original era: ${product.old_price}&nbsp;€.</span>
+                                                            <span class="screen-reader-text">El precio original era: ${product.old_price}&nbsp;€.</span>
                                                         ` : ''}
                                                         <ins aria-hidden="true">
                                                             <span class="woocommerce-Price-amount amount">
@@ -263,15 +263,15 @@
                                                             </span>
                                                         </ins>
                                                         ${product.old_price ? `
-                                                            <span class="screen-reader-text">O preço atual é: ${product.price}&nbsp;€.</span>
+                                                            <span class="screen-reader-text">El precio actual es: ${product.price}&nbsp;€.</span>
                                                         ` : ''}
-                                                        <small class="woocommerce-price-suffix">IVA incluído</small>
+                                                        <small class="woocommerce-price-suffix">IVA incluido</small>
                                                     </p>
                                                     <h1 class="product_title entry-title">${product.title}</h1>
                                                     <div class="woocommerce-product-rating">
                                                         <div class="star-rating"></div>
                                                         <a href="#reviews" class="woocommerce-review-link">
-                                                            <span class="count">0</span> comentários de clientes
+                                                            <span class="count">0</span> comentarios de clientes
                                                         </a>
                                                     </div>
                                                 </div>
@@ -281,7 +281,7 @@
                                                         <p>${truncatedDescription}</p>
                                                         ${product.description && product.description.length > 400 ? `
                                                             <a href="/products/${product.slug}" class="read-more-link" style="color: #F55F1E; font-weight: 500; text-decoration: none;">
-                                                                Ler mais...
+                                                                Leer más...
                                                             </a>
                                                         ` : ''}
                                                     </div>
@@ -304,7 +304,7 @@
                                                                                     <bdi>${product.old_price}&nbsp;<span class="woocommerce-Price-currencySymbol">€</span></bdi>
                                                                                 </span>
                                                                             </del>
-                                                                            <span class="screen-reader-text">O preço original era: ${product.old_price}&nbsp;€.</span>
+                                                                            <span class="screen-reader-text">El precio original era: ${product.old_price}&nbsp;€.</span>
                                                                         ` : ''}
                                                                         <ins aria-hidden="true">
                                                                             <span class="woocommerce-Price-amount amount">
@@ -312,9 +312,9 @@
                                                                             </span>
                                                                         </ins>
                                                                         ${product.old_price ? `
-                                                                            <span class="screen-reader-text">O preço atual é: ${product.price}&nbsp;€.</span>
+                                                                            <span class="screen-reader-text">El precio actual es: ${product.price}&nbsp;€.</span>
                                                                         ` : ''}
-                                                                        <small class="woocommerce-price-suffix">IVA incluído</small>
+                                                                        <small class="woocommerce-price-suffix">IVA incluido</small>
                                                                     </p>
                                                                 </div>
                                                             </div>
@@ -328,7 +328,7 @@
                                                                     </button>
                                                                     <input type="number" class="quantity-add"
                                                                            value="1"
-                                                                           aria-label="Quantidade do produto">
+                                                                           aria-label="Cantidad del producto">
                                                                     <button type="button" class="quantity-p">＋
                                                                     </button>
                                                                 </div>
@@ -337,12 +337,12 @@
                                                         <a href="javascript:void(0);"
                                                          data-product-id="${product.id}"
                                                                 class="single_add_to_cart_button button alt add-to-cart-quickview ajax_add_to_cart"
-                                                                 aria-label="Adiciona ao carrinho: &ldquo;${product.title}&rdquo;">
-                                                            Adicionar
+                                                                 aria-label="Añadir al carrito: &ldquo;${product.title}&rdquo;">
+                                                            Añadir
                                                         </a>
 
                                                         <a class="tbay-buy-now button buy-now-quickview" href="{{ route('carrinho') }}">
-                                                            Comprar Agora
+                                                            Comprar ahora
                                                         </a>
                                                         <input type="hidden" value="0" name="maia_buy_now">
 
@@ -359,7 +359,7 @@
                                                         <span class="sku_wrapper">REF: <span class="sku">${product.ref}</span></span>
                                                     ` : ''}
                                                     ${product.category ? `
-                                                        <span class="posted_in">Categoria:
+                                                        <span class="posted_in">Categoría:
                                                             <a href="#" rel="tag">${product.category.toUpperCase()}</a>
                                                         </span>
                                                     ` : ''}
@@ -373,7 +373,7 @@
                                                                     <div class="elementor-element elementor-element-7114f96 elementor-align-center elementor-widget elementor-widget-button" data-id="7114f96" data-element_type="widget" data-widget_type="button.default">
                                                                         <a class="elementor-button elementor-size-sm" role="button">
                                                                             <span class="elementor-button-content-wrapper">
-                                                                                <span class="elementor-button-text">Pagamento SEGURO garantido</span>
+                                                                                <span class="elementor-button-text">Pago SEGURO garantizado</span>
                                                                             </span>
                                                                         </a>
                                                                     </div>
@@ -385,10 +385,10 @@
                                                                                         <div class="elementor-icon-box-wrapper">
                                                                                             <div class="elementor-icon-box-content">
                                                                                                 <h3 class="elementor-icon-box-title">
-                                                                                                    <span>Livraison</span>
+                                                                                                    <span>Envío</span>
                                                                                                 </h3>
                                                                                                 <p class="elementor-icon-box-description">
-                                                                                                    🚚 Entrega gratuita: 3 a 5 dias úteis
+                                                                                                    🚚 Entrega gratuita: 3 a 5 días laborables
                                                                                                 </p>
                                                                                             </div>
                                                                                         </div>
@@ -404,7 +404,7 @@
                                                                                                     <span>100%</span>
                                                                                                 </h3>
                                                                                                 <p class="elementor-icon-box-description">
-                                                                                                    🔒 Pagamento 100% seguro
+                                                                                                    🔒 Pago 100% seguro
                                                                                                 </p>
                                                                                             </div>
                                                                                         </div>
@@ -420,7 +420,7 @@
                                                                                                     <span>Pedido seguro</span>
                                                                                                 </h3>
                                                                                                 <p class="elementor-icon-box-description">
-                                                                                                    📦 Produto em stock
+                                                                                                    📦 Producto en stock
                                                                                                 </p>
                                                                                             </div>
                                                                                         </div>

@@ -33,17 +33,17 @@
                         <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat">
                             <a class="elementor-item"
                                 href="{{ route('category', ['category' => 'pellets-de-madeira']) }}">
-                                <span class="menu-title">PELLETS DE MADEIRA</span>
+                                <span class="menu-title">PELLETS DE MADERA</span>
                             </a>
                         </li>
                         <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat">
                             <a class="elementor-item" href="{{ route('category', ['category' => 'chef-de-madeira']) }}">
-                                <span class="menu-title">CHEF DE MADEIRA</span>
+                                <span class="menu-title">COCINAS DE LEÑA</span>
                             </a>
                         </li>
                         <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat">
                             <a class="elementor-item" href="{{ route('category', ['category' => 'fogao-a-lenha']) }}">
-                                <span class="menu-title">FOGÃO A LENHA</span>
+                                <span class="menu-title">ESTUFAS DE LEÑA</span>
                             </a>
                         </li>
                     @endif
@@ -79,7 +79,7 @@
         <div class="tbay-offcanvas-cart sidebar-right offcanvas offcanvas-end" id="cart-offcanvas-mobile">
             <div class="offcanvas-header widget-header-cart">
                 <div class="header-cart-content">
-                    <h3 class="widget-title heading-title">Carrinho de compras</h3>
+                    <h3 class="widget-title heading-title">Carrito de compra</h3>
                     <a href="javascript:" class="offcanvas-close" data-bs-dismiss="offcanvas" aria-label="Close"><i
                             class="tb-icon tb-icon-cross"></i></a>
                 </div>
@@ -89,9 +89,9 @@
                     <div class="mini_cart_inner">
                         <div class="mcart-border">
                             <ul class="cart_empty ">
-                                <li><span>Seu carrinho está vazio</span></li>
-                                <li class="total"><a class="button wc-continue" href="{{ route('home') }}">Continuar A
-                                        Comprar<i class="tb-icon tb-icon-angle-right"></i></a></li>
+                                <li><span>Tu carrito está vacío</span></li>
+                                <li class="total"><a class="button wc-continue" href="{{ route('home') }}">Seguir
+                                        comprando<i class="tb-icon tb-icon-angle-right"></i></a></li>
                             </ul>
 
                             <div class="clearfix"></div>
@@ -119,20 +119,20 @@
 <div class="footer-device-mobile d-xl-none clearfix">
     <div class="list-menu-icon">
         <div class="menu-icon">
-            <a title="Início" class="home {{ request()->routeIs('home') ? 'active' : '' }}" href="{{ route('home') }}">
+            <a title="Inicio" class="home {{ request()->routeIs('home') ? 'active' : '' }}" href="{{ route('home') }}">
                 <span class="menu-icon-child">
                     <i class="tb-icon tb-icon-home3"></i>
-                    <span>Início</span>
+                    <span>Inicio</span>
                 </span>
             </a>
         </div>
 
         <div class="menu-icon">
-            <a title="Loja" class="shop {{ request()->routeIs('loja') ? 'active' : '' }}"
+            <a title="Tienda" class="shop {{ request()->routeIs('loja') ? 'active' : '' }}"
                 href="{{ route('loja') }}">
                 <span class="menu-icon-child">
                     <i class="tb-icon tb-icon-store"></i>
-                    <span>Loja</span>
+                    <span>Tienda</span>
                 </span>
             </a>
         </div>
@@ -148,18 +148,18 @@
         </div>
 
         <div class="menu-icon">
-            <a title="Lista de desejos" class="wishlist {{ request()->routeIs('wishlist.*') ? 'active' : '' }}"
+            <a title="Lista de deseos" class="wishlist {{ request()->routeIs('wishlist.*') ? 'active' : '' }}"
                 href="{{ route('wishlist.index') }}">
                 <span class="menu-icon-child">
                     <i class="icon- icon-heart"></i>
                     <span class="count count_wishlist"><span>0</span></span>
-                    <span>Lista de desejos</span>
+                    <span>Lista de deseos</span>
                 </span>
             </a>
         </div>
 
         <div class="menu-icon">
-            <a title="Conta" class="account {{ request()->routeIs('contacto') ? 'active' : '' }}"
+            <a title="Contacto" class="account {{ request()->routeIs('contacto') ? 'active' : '' }}"
                 href="{{ route('contacto') }}">
                 <span class="menu-icon-child">
                     <i class="tb-icon tb-icon-account"></i>
@@ -425,7 +425,7 @@
                                     data-wrapper="{&quot;layout&quot;:&quot;vertical&quot;,&quot;type_menu&quot;:&quot;toggle&quot;}">
                                     <h3 class="toggle-menu-title category-inside-title"><a href="javascript:void(0);"
                                             class="click-show-menu menu-click"><i
-                                                class="tb-icon tb-icon-justifyleft"></i><span>Categorias</span></a>
+                                                class="tb-icon tb-icon-justifyleft"></i><span>Categorías</span></a>
                                     </h3>
 
                                     <div class="category-inside-content">
@@ -450,21 +450,21 @@
                                                         class="menu-item menu-item-type-taxonomy menu-item-object-product_cat">
                                                         <a class="elementor-item"
                                                             href="{{ route('category', ['category' => 'pellets-de-madeira']) }}">
-                                                            <span class="menu-title">PELLETS DE MADEIRA</span>
+                                                            <span class="menu-title">PELLETS DE MADERA</span>
                                                         </a>
                                                     </li>
                                                     <li
                                                         class="menu-item menu-item-type-taxonomy menu-item-object-product_cat">
                                                         <a class="elementor-item"
                                                             href="{{ route('category', ['category' => 'chef-de-madeira']) }}">
-                                                            <span class="menu-title">CHEF DE MADEIRA</span>
+                                                            <span class="menu-title">COCINAS DE LEÑA</span>
                                                         </a>
                                                     </li>
                                                     <li
                                                         class="menu-item menu-item-type-taxonomy menu-item-object-product_cat">
                                                         <a class="elementor-item"
                                                             href="{{ route('category', ['category' => 'fogao-a-lenha']) }}">
-                                                            <span class="menu-title">FOGÃO A LENHA</span>
+                                                            <span class="menu-title">ESTUFAS DE LEÑA</span>
                                                         </a>
                                                     </li>
                                                 @endif
@@ -527,7 +527,7 @@
                                                             class='dropdown_product_cat form-control'>
                                                             <option value=''
                                                                 {{ !request('product_cat') ? 'selected' : '' }}>
-                                                                Todas as categorias
+                                                                Todas las categorías
                                                             </option>
 
                                                             @foreach ($categories as $categorySlug => $categoryData)
@@ -540,9 +540,9 @@
                                                     </div>
 
                                                     <input data-style="right" type="text"
-                                                        placeholder="Para pesquisar" name="s"
+                                                        placeholder="Buscar productos" name="s"
                                                         value="{{ request('s') }}" required minlength="2"
-                                                        oninvalid="this.setCustomValidity('Introduza pelo menos 2 caracteres')"
+                                                        oninvalid="this.setCustomValidity('Introduce al menos 2 caracteres')"
                                                         oninput="this.setCustomValidity('')"
                                                         class="tbay-search form-control input-sm" />
 
@@ -669,20 +669,20 @@
 
                                             <li class="menu-item {{ request()->routeIs('home') ? 'active' : '' }}">
                                                 <a class="elementor-item" href="{{ route('home') }}">
-                                                    <span class="menu-title">Início</span>
+                                                    <span class="menu-title">Inicio</span>
                                                 </a>
                                             </li>
 
                                             <li class="menu-item {{ request()->routeIs('loja') ? 'active' : '' }}">
                                                 <a class="elementor-item" href="{{ route('loja') }}">
-                                                    <span class="menu-title">Loja</span>
+                                                    <span class="menu-title">Tienda</span>
                                                 </a>
                                             </li>
 
                                             <li
                                                 class="menu-item {{ request()->routeIs('sobre-nos') ? 'active' : '' }}">
                                                 <a class="elementor-item" href="{{ route('sobre-nos') }}">
-                                                    <span class="menu-title">Sobre nós</span>
+                                                    <span class="menu-title">Sobre nosotros</span>
                                                 </a>
                                             </li>
 
@@ -715,16 +715,16 @@
 
 
                                     <h3 class="header-title">
-                                        Visualizados recentemente </h3>
+                                        Vistos recientemente </h3>
                                     <div class="content-view ">
                                         <div class="list-recent">
                                             <div class="product-item">
-                                                <a title="Estufa a Lenha Moravia 9112 EX com Caldeira" href="#"
+                                                <a title="Estufa de Leña Moravia 9112 EX con Caldera" href="#"
                                                     class="product-image">
                                                     <img width="480" height="480"
                                                         src="../wp-content/uploads/2025/10/cuisiniere-a-bois-moravia-9112-ex-avec-bouilleur-1-1-1-480x480.webp"
                                                         class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
-                                                        alt="Estufa a Lenha Moravia 9112 EX com Caldeira"
+                                                        alt="Estufa de Leña Moravia 9112 EX con Caldera"
                                                         decoding="async" /> </a>
                                             </div>
                                         </div>
