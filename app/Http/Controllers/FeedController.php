@@ -19,7 +19,8 @@ class FeedController extends Controller
         $channel = $xml->addChild('channel');
         $channel->addChild('title', htmlspecialchars(config('app.name', 'Lenha Viva')));
         $channel->addChild('link', route('home'));
-        $channel->addChild('description', 'Catálogo de produtos Lenha Viva — pellets de madeira, lenha e equipamentos de aquecimento.');
+        $channel->addChild('description', 'Catálogo de productos Lenha Viva — pellets de madera, leña y equipos de calefacción.');
+        $channel->addChild('language', 'es');
 
         foreach ($products as $product) {
             $this->addItem($channel, $product);
@@ -69,12 +70,12 @@ class FeedController extends Controller
         $item->addChild('g:identifier_exists', 'no', 'http://base.google.com/ns/1.0');
 
         if (! empty($product['category'])) {
-            $item->addChild('g:product_type', htmlspecialchars(ucwords(str_replace('-', ' ', $product['category']))), 'http://base.google.com/ns/1.0');
+            $item->addChild('g:product_type', htmlspecialchars(\App\Support\CategoryLabels::label($product['category'])), 'http://base.google.com/ns/1.0');
         }
 
         $shipping = $item->addChild('g:shipping', null, 'http://base.google.com/ns/1.0');
-        $shipping->addChild('g:country', 'PT', 'http://base.google.com/ns/1.0');
-        $shipping->addChild('g:service', 'Standard', 'http://base.google.com/ns/1.0');
+        $shipping->addChild('g:country', 'ES', 'http://base.google.com/ns/1.0');
+        $shipping->addChild('g:service', 'Estándar', 'http://base.google.com/ns/1.0');
         $shipping->addChild('g:price', '0.00 EUR', 'http://base.google.com/ns/1.0');
     }
 
