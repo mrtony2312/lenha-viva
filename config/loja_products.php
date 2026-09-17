@@ -3,7 +3,7 @@
 return [
     [
         'id' => 5625,
-        'title' => 'Ardenforest Pellets – Palets de 70 sacos de 15 kg',
+        'title' => 'Ardenforest Pellets – Paletes de 70 sacos de 15 kg',
 
         'hover_image' => '',
         'old_price' => '565.00',
@@ -17,44 +17,46 @@ return [
 
         'in_stock' => true,
         'color' => '',
-        'short_description' => 'Nuestros pellets ARDENFOREST de madera están certificados DINPlus y fabricados en la región de Champaña Ardenas. Estos pellets están hechos con 70% de madera blanda y 30% de madera dura, para proporcionar un calor constante y una buena combustión',
-        'description' => 'Ardenforest Pellet – Palet de 70 sacos de 15 kg
-Los pellets Ardenforest son pellets de alta calidad, ideales para quienes buscan una calefacción eficiente, ecológica y económica. Este palet de 70 sacos de 15 kg está compuesto por pellets fabricados con madera 100% natural y renovable. Gracias a su bajo contenido de humedad y alto poder calorífico, ofrecen una combustión limpia y eficiente, siendo perfectos para estufas, calderas y otros sistemas de calefacción a biomasa.
+        'short_description' => 'Os nossos pellets ARDENFOREST de madeira são certificados DINplus e fabricados na região de Champanhe Ardenas. Estes pellets são feitos com 70% de madeira macia e 30% de madeira dura, para proporcionar um calor constante e uma boa combustão',
+        'description' => 'Ardenforest Pellet – Palete de 70 sacos de 15 kg
+Os pellets Ardenforest são pellets de alta qualidade, ideais para quem procura um aquecimento eficiente, ecológico e económico. Este palete de 70 sacos de 15 kg é composto por pellets fabricados com madeira 100% natural e renovável. Graças ao seu baixo teor de humidade e alto poder calorífico, oferecem uma combustão limpa e eficiente, siendo perfeitos para salamandras, caldeiras e outros sistemas de aquecimento a biomassa.
 Características:
 
-Cantidad: 70 sacos de 15 kg por palet
+Quantidade: 70 sacos de 15 kg por palete
 
-Composición: 100% madera natural y renovable
+Composição: 100% madeira natural e renovável
 
-Bajo contenido de humedad, garantizando una combustión eficiente y limpia
+Baixo teor de humidade, garantindo uma combustão eficiente e limpa
 
-Alto poder calorífico, proporcionando calor constante y duradero
+Alto poder calorífico, proporcionando calor constante e duradouro
 
-Bajo nivel de cenizas, facilitando la limpieza y mantenimiento
+Baixo nível de cinzas, facilitando a limpeza e manutenção
 
-Ideal para estufas, calderas y sistemas de calefacción a biomasa
+Ideal para salamandras, caldeiras e sistemas de aquecimento a biomassa
 
-Beneficios:
+Benefícios:
 
-Eficiencia energética, ayudando a reducir los costes de calefacción
+Eficiência energética, ajudando a reduzir os custos de aquecimento
 
-Ecológicos y sostenibles, fabricados con madera de fuentes responsables
+Ecológicos e sustentáveis, fabricados com madeira de fontes responsáveis
 
-Fácil de almacenar y manejar, gracias al embalaje en sacos de 15 kg
+Fácil de armazenar e manusear, graças à embalagem em sacos de 15 kg
 
-Bajas emisiones de CO2, respetando el medio ambiente
+Baixas emissões de CO2, respeitando o ambiente
 
-Combustión limpia, con mínima producción de residuos y humo
+Combustão limpa, com mínima produção de resíduos e fumo
 
-Con los pellets Ardenforest, podrá disfrutar de una calefacción eficiente, económica y respetuosa con el medio ambiente durante todo el invierno.',
+Com os pellets Ardenforest, poderá desfrutar de um aquecimento eficiente, económico e respeitador do ambiente durante todo o inverno.',
         'ref' => '53745625',
 
 
-        'slug' => 'ardenforest-pellets-paletes-de-70-sacos-de-15-kg'
+        'slug' => 'ardenforest-pellets-paletes-de-70-sacos-de-15-kg',
+        'seo_title' => 'Ardenforest Pellets – Paletes de 70 sacos de 15 kg',
+        'seo_description' => 'Ardenforest Pellets – Paletes de 70 sacos de 15 kg. Pellets de alto poder calorífico e baixa cinza. Envio grátis em Portugal Continental.'
     ],
     [
         'id' => 5522,
-        'title' => 'Caldera de Leña Maciza 40 kW',
+        'title' => 'Caldeira a Lenha Maciça 40 kW',
 
         'hover_image' => '',
 
@@ -67,49 +69,51 @@ Con los pellets Ardenforest, podrá disfrutar de una calefacción eficiente, eco
 
 
         'in_stock' => true, 'color' => '',
-        'short_description' => 'Calidad
-Cada modelo Solid de 40 kW es probado con una presión de 6 bar para garantizar un funcionamiento eficiente del sistema de calefacción central. Garantía
-El cuerpo de la caldera tiene una garantía de 2 años.',
-        'description' => 'Caldera de Leña Maciza de 40 kW
-La Caldera de Leña Maciza de 40 kW es la solución ideal para quienes buscan una fuente de calefacción potente, eficiente y ecológica para grandes espacios. Con una potencia de 40 kW, esta caldera es perfecta para sistemas de calefacción central en casas amplias, chalets, almacenes o pequeños establecimientos comerciales.
-Su diseño robusto y el sistema de combustión avanzado garantizan un rendimiento óptimo, maximizando la eficiencia energética y minimizando las emisiones de CO₂.
-Fabricada con materiales resistentes de alta calidad, esta caldera aprovecha al máximo el potencial de la leña, proporcionando una combustión limpia y eficaz, con calor constante y duradero. Además, su estructura sólida garantiza larga durabilidad y mantenimiento simplificado.
+        'short_description' => 'Qualidade
+Cada modelo Solid de 40 kW é ensaiada com uma pressão de 6 bar para garantir um funcionamento eficiente do sistema de aquecimento central. Garantia
+O corpo da caldeira tem uma garantia de 2 anos.',
+        'description' => 'Caldeira a Lenha Maciça de 40 kW
+A Caldeira a Lenha Maciça de 40 kW é a solução ideal para quem procura uma fonte de aquecimento potente, eficiente e ecológica para grandes espaços. Com uma potência de 40 kW, esta caldeira é perfeita para sistemas de aquecimento central em casas amplas, chalés, armazéns ou pequenos estabelecimentos comerciais.
+O seu design robusto e o sistema de combustão avançado garantem um rendimento ótimo, maximizando a eficiência energética e minimizando as emissões de CO₂.
+Fabricada com materiais resistentes de alta qualidade, esta caldeira aproveita ao máximo o potencial da lenha, proporcionando uma combustão limpa e eficaz, com calor constante e duradouro. Além disso, a sua estrutura sólida garante longa durabilidade e manutenção simplificada.
 
 Características:
 
-Potencia térmica: 40 kW – ideal para calentar grandes áreas y proporcionar agua caliente sanitaria
+Potência térmica: 40 kW – ideal para aquecer grandes áreas e proporcionar água quente sanitária
 
-Construcción resistente, con materiales de alta durabilidad
+Construção resistente, com materiais de alta durabilidade
 
-Sistema de combustión avanzado, que mejora el aprovechamiento de la leña y reduce el consumo
+Sistema de combustão avançado, que melhora o aproveitamento da lenha e reduz o consumo
 
-Bajas emisiones de CO₂, contribuyendo a la preservación del medio ambiente
+Bajas emissões de CO₂, contribuindo para a preservação do ambiente
 
-Control de temperatura ajustable, adaptándose a las necesidades del usuario
+Controlo de temperatura ajustável, adaptando-se às necessidades do utilizador
 
-Mantenimiento facilitado, con diseño accesible para limpieza y monitoreo
+Mantenimiento facilitado, com design acessível para limpeza e monitorização
 
-Beneficios:
+Benefícios:
 
-Alta eficiencia energética, reduciendo el consumo de leña y los costes de calefacción
+Alta eficiência energética, reduzindo o consumo de lenha e os custos de aquecimento
 
-Ecológica y sostenible, utilizando un combustible renovable: la leña
+Ecológica e sustentável, utilizando um combustível renovável: a lenha
 
-Ideal para calefacción centralizada, garantizando calor constante en todo el espacio
+Ideal para aquecimento centralizado, garantindo calor constante em todo o espaço
 
-Bajo impacto ambiental, con emisiones minimizadas gracias al sistema moderno de combustión
+Baixo impacto ambiental, com emissões minimizadas graças ao sistema moderno de combustão
 
-Durabilidad y resistencia, gracias a la construcción robusta en materiales de alta calidad
+Durabilidade e resistência, graças à construção robusta em materiais de alta qualidade
 
-Con la Caldera de Leña Maciza de 40 kW, podrá disfrutar de una calefacción eficiente, económica y ecológica, manteniendo su casa cálida y confortable durante todo el año.',
+Com a Caldeira a Lenha Maciça de 40 kW, poderá desfrutar de um aquecimento eficiente, económica e ecológica, mantendo a sua casa quente e confortável durante todo o ano.',
         'ref' => '53745522',
 
 
-        'slug' => 'caldeira-a-lenha-macica-40-kw'
+        'slug' => 'caldeira-a-lenha-macica-40-kw',
+        'seo_title' => 'Caldeira a Lenha Maciça 40 kW',
+        'seo_description' => 'Caldeira a Lenha Maciça 40 kW. Caldeira a lenha de alto rendimento para aquecimento central e água quente. Envio grátis em Portugal Continental.'
     ],
     [
         'id' => 5519,
-        'title' => 'Caldera de Leña Sólida 25 kW',
+        'title' => 'Caldeira a Lenha Sólida 25 kW',
 
         'hover_image' => '',
 
@@ -122,47 +126,49 @@ Con la Caldera de Leña Maciza de 40 kW, podrá disfrutar de una calefacción ef
 
 
         'in_stock' => true, 'color' => '',
-        'short_description' => 'Garantía
-El cuerpo de la caldera tiene una garantía de 2 años. Características Potencia de la caldera: 25 kW Rendimiento: 75% Área de calefacción*: hasta 150 m² Para troncos: hasta 50 cm Diámetro del tubo de salida (boquilla): 160 mm Volumen de la caldera: 97 L Peso: 291 kg Temperatura máxima de trabajo: 90°C Presión máxima de trabajo: 3 bar Altura: 1210 mm Longitud: 525 mm Profundidad: 1080 mm * El área de calefacción puede variar según el aislamiento térmico del lugar.',
-        'description' => 'Caldera de Leña 25 kW Sólida
-La Caldera de Leña 25 kW Sólida es la opción ideal para quienes buscan una calefacción eficiente, económica y ambientalmente sostenible. Con una potencia de 25 kW, esta caldera es perfecta para calentar grandes espacios y proporcionar agua caliente sanitaria de forma continua. Su diseño robusto y sistema de combustión optimizado garantizan alta eficiencia energética, reduciendo el consumo de leña y las emisiones de contaminantes.
-Fabricada con materiales de alta calidad y con diseño funcional, la Caldera de Leña 25 kW Sólida está indicada para sistemas de calefacción central en residencias, chalets y pequeños negocios. El uso de la leña, una fuente renovable de energía, hace de esta caldera una elección ecológica que contribuye a la economía de energía y reducción de la huella de carbono.
+        'short_description' => 'Garantia
+O corpo da caldeira tem uma garantia de 2 anos. Características Potência da caldeira: 25 kW Rendimento: 75% Área de aquecimento*: até 150 m² Para troncos: até 50 cm Diâmetro do tubo de saída (bocal): 160 mm Volume da caldeira: 97 L Peso: 291 kg Temperatura máxima de trabalho: 90°C Pressão máxima de trabalho: 3 bar Altura: 1210 mm Comprimento: 525 mm Profundidade: 1080 mm * A área de aquecimento pode variar segundo o isolamento térmico do local.',
+        'description' => 'Caldeira a Lenha 25 kW Sólida
+A Caldeira a Lenha 25 kW Sólida é a opção ideal para quem procura um aquecimento eficiente, económica e ambientalmente sustentável. Com uma potência de 25 kW, esta caldeira é perfeita para aquecer grandes espaços e proporcionar água quente sanitária de forma contínua. O seu design robusto e sistema de combustão otimizado garantem alta eficiência energética, reduzindo o consumo de lenha e as emissões de poluentes.
+Fabricada com materiais de alta qualidade e com design funcional, a Caldeira a Lenha 25 kW Sólida está indicada para sistemas de aquecimento central em residências, chalés e pequenos negócios. O uso da lenha, uma fonte renovável de energia, faz de esta caldeira uma escolha ecológica que contribui para a economia de energia e redução da pegada de carbono.
 
 Características:
 
-Potencia: 25 kW, ideal para calefacción central y agua caliente sanitaria en espacios medianos y grandes
+Potência: 25 kW, ideal para aquecimento central e água quente sanitária em espaços médios e grandes
 
-Materiales de alta calidad, garantizando durabilidad y resistencia
+Materiales de alta qualidade, garantindo durabilidade e resistência
 
-Eficiencia energética optimizada, con bajo consumo de leña y emisiones mínimas
+Eficiência energética optimizada, com baixo consumo de lenha e emissões mínimas
 
-Sistema avanzado de combustión, asegurando una combustión limpia y eficaz
+Sistema avançado de combustão, assegurando uma combustão limpa e eficaz
 
-Diseño robusto y compacto, adecuado para instalaciones residenciales y comerciales
+Design robusto e compacto, adequado para instalações residenciais e comerciais
 
-Baja necesidad de mantenimiento, con fácil acceso para limpieza y control
+Baixa necessidade de manutenção, com fácil acesso para limpeza e controlo
 
-Beneficios:
+Benefícios:
 
-Eficiencia térmica, proporcionando calefacción constante y agua caliente de forma económica
+Eficiência térmica, proporcionando aquecimento constante e água quente de forma económica
 
-Ecológica, utilizando leña como fuente renovable de energía y respetando el medio ambiente
+Ecológica, utilizando lenha como fonte renovável de energia e respeitando o ambiente
 
-Fácil operación, con sistema de control intuitivo y simple
+Fácil operação, com sistema de controlo intuitivo e simples
 
-Bajas emisiones de CO₂, reduciendo el impacto ambiental
+Bajas emissões de CO₂, reduzindo o impacto ambiental
 
-Ideal para residencias, chalets y pequeños negocios, con capacidad para calentar grandes ambientes
+Ideal para residências, chalés e pequenos negócios, com capacidade para aquecer grandes ambientes
 
-Con la Caldera de Leña 25 kW Sólida, disfrutará de un sistema de calefacción de alto rendimiento, económico y sostenible, ideal para mantener su casa cálida y confortable durante todo el año.',
+Com a Caldeira a Lenha 25 kW Sólida, desfrutará de um sistema de aquecimento de alto rendimento, económico e sustentável, ideal para manter a sua casa quente e confortável durante todo o ano.',
         'ref' => '53745519',
 
 
-        'slug' => 'caldeira-a-lenha-solida-25-kw'
+        'slug' => 'caldeira-a-lenha-solida-25-kw',
+        'seo_title' => 'Caldeira a Lenha Sólida 25 kW',
+        'seo_description' => 'Caldeira a Lenha Sólida 25 kW. Caldeira a lenha de alto rendimento para aquecimento central e água quente. Envio grátis em Portugal Continental.'
     ],
     [
         'id' => 5521,
-        'title' => 'Caldera de Leña Sólida 35 kW',
+        'title' => 'Caldeira a Lenha Sólida 35 kW',
 
         'hover_image' => '',
 
@@ -175,66 +181,68 @@ Con la Caldera de Leña 25 kW Sólida, disfrutará de un sistema de calefacción
 
 
         'in_stock' => true, 'color' => '',
-        'short_description' => 'Garantía y Calidad
-El período de garantía es de 2 años para el cuerpo de calefacción. Cada unidad sólida de 35 kW es probada individualmente con una presión de 6 bar, garantizando máxima seguridad y rendimiento. Características Técnicas Potencia de la caldera: 35 kW Rendimiento: 75% Superficie de calefacción*: hasta 210 m² Longitud máxima de los troncos: hasta 55 cm Diámetro de la chimenea: 160 mm Volumen de agua de la caldera: 113 L Peso: 336 kg Temperatura máxima de funcionamiento: 90°C Presión máxima de funcionamiento: 3 bar Altura: 1210 mm Ancho: 620 mm Profundidad: 1120 mm * La superficie de calefacción puede variar según el aislamiento térmico del lugar.',
-        'description' => 'Caldera de Leña Sólida 35 kW
-Potencia, eficiencia y durabilidad para su sistema de calefacción central
-La Caldera de Leña Sólida de 35 kW es una solución robusta y ecológica, ideal para la calefacción de espacios residenciales, comerciales o rurales de mediano a gran tamaño. Con su estructura reforzada y sistema de combustión eficiente, esta caldera ofrece un rendimiento térmico excelente con bajo consumo de leña y reducidas emisiones de CO₂.
-Diseñada para integrarse a sistemas de calefacción central y producción de agua caliente, garantiza confort durante todo el invierno, incluso en las regiones más frías.
+        'short_description' => 'Garantia e Qualidade
+O período de garantia é de 2 anos para o corpo de aquecimento. Cada unidade sólida de 35 kW é ensaiada individualmente com uma pressão de 6 bar, garantindo máxima seguridad e rendimento. Características Técnicas Potência da caldeira: 35 kW Rendimento: 75% Superfície de aquecimento*: até 210 m² Comprimento máximo dos troncos: até 55 cm Diâmetro da chaminé: 160 mm Volume de água da caldeira: 113 L Peso: 336 kg Temperatura máxima de funcionamento: 90°C Pressão máxima de funcionamento: 3 bar Altura: 1210 mm Largura: 620 mm Profundidade: 1120 mm * A superfície de aquecimento pode variar segundo o isolamento térmico do local.',
+        'description' => 'Caldeira a Lenha Sólida 35 kW
+Potência, eficiência e durabilidade parao seu sistema de aquecimento central
+A Caldeira a Lenha Sólida de 35 kW é uma solução robusta e ecológica, ideal para a aquecimento de espaços residenciais, comerciais ou rurais de média a grande dimensão. Com a sua estrutura reforzada e sistema de combustão eficiente, esta caldeira oferece um rendimento térmico excelente com baixo consumo de lenha e reducidas emissões de CO₂.
+Concebida para integrarse a sistemas de aquecimento central e produção de água quente, garante conforto durante todo o inverno, mesmo em as regiões mais frias.
 
 Características Técnicas:
 
-Potencia térmica nominal: 35 kW
+Potência térmica nominal: 35 kW
 
-Rendimiento energético: hasta 75%
+Rendimento energético: até 75%
 
-Superficie de calefacción recomendada: hasta 200–220 m²*
+Superfície de aquecimento recomendada: até 200–220 m²*
 
-Volumen de agua de la caldera: aproximadamente 105 litros
+Volume de água da caldeira: aproximadamente 105 litros
 
-Longitud máxima de la leña: hasta 50 cm
+Comprimento máximo da lenha: até 50 cm
 
-Diámetro de la chimenea: 180 mm
+Diâmetro da chaminé: 180 mm
 
-Temperatura máxima de funcionamiento: 90°C
+Temperatura máxima de funcionamento: 90°C
 
-Presión máxima de trabajo: 3 bar
+Pressão máxima de trabalho: 3 bar
 
-Dimensiones (A x L x P): aprox. 1180 x 640 x 1050 mm
+Dimensões (A x L x P): aprox. 1180 x 640 x 1050 mm
 
 Peso: aproximadamente 330 kg
 
-* Puede variar según el aislamiento térmico del edificio.
+* Pode variar segundo o isolamento térmico do edifício.
 
-Ventajas:
+Vantagens:
 
-Alto rendimiento térmico, con distribución uniforme del calor
+Alto rendimento térmico, com distribuição uniforme do calor
 
-Construcción en acero resistente, garantizando durabilidad y seguridad
+Construção em aço resistente, garantindo durabilidade e seguridad
 
-Bajo consumo de leña, con excelente aprovechamiento energético
+Baixo consumo de lenha, com excelente aproveitamento energético
 
-Ideal para sistemas de calefacción centralizados, radiadores o suelo radiante
+Ideal para sistemas de aquecimento centralizados, radiadores o piso radiante
 
-Combustión limpia, con bajas emisiones de gases contaminantes
+Combustão limpa, com baixas emissões de gases poluentes
 
-Fácil mantenimiento y operación sencilla, con acceso frontal práctico
+Fácil manutenção e operação simples, com acesso frontal prático
 
-Garantía de Calidad:
+Garantia de Qualidade:
 
-Cada unidad es probada bajo presión antes de la entrega
+Cada unidade é probada sob pressão antes da entrega
 
-Garantía de 2 años sobre el cuerpo de la caldera
+Garantia de 2 anos sobre o corpo da caldeira
 
-Con la Caldera de Leña Sólida 35 kW, disfrute de un ambiente cálido, confortable y sostenible, reduciendo costos de energía y utilizando una fuente de combustible renovable: la leña.',
+Com a Caldeira a Lenha Sólida 35 kW, desfrute de um ambiente quente, confortável e sustentável, reduzindo custos de energia e utilizando uma fuente de combustível renovável: a lenha.',
         'ref' => '53745521',
 
 
-        'slug' => 'caldeira-a-lenha-solida-35-kw'
+        'slug' => 'caldeira-a-lenha-solida-35-kw',
+        'seo_title' => 'Caldeira a Lenha Sólida 35 kW',
+        'seo_description' => 'Caldeira a Lenha Sólida 35 kW. Caldeira a lenha de alto rendimento para aquecimento central e água quente. Envio grátis em Portugal Continental.'
     ],
     [
         'id' => 5512,
-        'title' => 'Caldera de esteatita Thermo Magnum',
+        'title' => 'Caldeira de esteatite (pedra-sabão) Thermo Magnum',
 
         'hover_image' => 'wp-content/uploads/2025/10/cuisiniere-bouilleur-thermo-magnum-pierre-1-1-480x480.webp',
         'old_price' => '2,699.00',
@@ -247,51 +255,53 @@ Con la Caldera de Leña Sólida 35 kW, disfrute de un ambiente cálido, conforta
 
 
         'in_stock' => true, 'color' => '',
-        'short_description' => 'Dimensiones de la estufa
-Conjunto: Ancho 1070 mm x Fondo 655 mm x Alto 850 mm
-Horno: Ancho 350 mm x Fondo 450 mm x Alto 270 mm
-Chimenea: Ancho 270 mm x Fondo 400 mm x Alto 400 mm
+        'short_description' => 'Dimensões da salamandra
+Conjunto: Largura 1070 mm x Profundidade 655 mm x Altura 850 mm
+Forno: Largura 350 mm x Profundidade 450 mm x Altura 270 mm
+Chaminé: Largura 270 mm x Profundidade 400 mm x Altura 400 mm
 Características
-Peso 213 kilos
-Diámetro de salida de humos 150 mm trasera o superior
-Contiene 11L de agua en la caldera.
-Puede alimentar hasta 8 radiadores
-El nivel de eficiencia es del 76,4%.
-Potencia térmica de la caldera 9 KW y potencia de radiación de 5 KW.
-Combustible recomendado: madera y carbón.
-Cumple con la norma europea EN 12815
-2 años de garantía',
-        'description' => 'Caldera de Esteatita Thermo Magnum
-La Caldera de Esteatita Thermo Magnum es una solución de calefacción avanzada y eficiente, diseñada para quienes buscan un sistema robusto y de alto rendimiento para calentar su hogar. Fabricada con esteatita, un material conocido por sus excepcionales propiedades térmicas, esta caldera ofrece una acumulación de calor superior y un rendimiento energético óptimo. La esteatita es ideal para la calefacción a base de leña, ya que permite que el calor se libere de manera gradual, incluso después de que el fuego se haya apagado.
-Con una alta potencia térmica, la Thermo Magnum es perfecta para viviendas de tamaño grande o para sistemas de calefacción centralizada, y puede proporcionar agua caliente sanitaria de manera constante. Además, su sistema de combustión avanzado asegura una eficiencia excepcional, minimizando el consumo de leña y las emisiones, lo que la convierte en una opción ecológica y económica.
+Peso 213 quilos
+Diâmetro de saída de fumos 150 mm traseira ou superior
+Contém 11L de agua na caldeira.
+Pode alimentar até 8 radiadores
+O nível de eficiência é do 76,4%.
+Potência térmica da caldeira 9 KW e potência de radiação de 5 KW.
+Combustível recomendado: madeira e carvão.
+Cumpre a norma europeia EN 12815
+2 anos de garantia',
+        'description' => 'Caldeira de Esteatite (pedra-sabão) Thermo Magnum
+A Caldeira de Esteatite (pedra-sabão) Thermo Magnum é uma solução de aquecimento avançada e eficiente, concebida para quem procuram um sistema robusto e de alto rendimento para aquecer a sua casa. Fabricada com esteatite (pedra-sabão), um material conhecido por os seus excecionais propriedades térmicas, esta caldeira oferece uma acumulação de calor superior e um rendimento energético ótimo. A esteatite (pedra-sabão) é ideal para o aquecimento a lenha, já que permite que o calor se liberte de forma gradual, mesmo depois do fogo se ter apagado.
+Com uma alta potência térmica, a Thermo Magnum é perfeita para habitações de grande dimensão o para sistemas de aquecimento centralizada, e pode proporcionar água quente sanitária de forma constante. Além disso, o seu sistema de combustão avançado assegura uma eficiência excecional, minimizando o consumo de lenha e as emissões, o que a torna em uma opção ecológica e económica.
 Características:
 
-Material Esteatita de alta calidad, que almacena el calor de manera eficiente y lo distribuye de forma gradual
-Sistema de combustión optimizado, que reduce el consumo de leña y las emisiones de CO2
-Alta potencia térmica, ideal para calefacción de grandes espacios y agua caliente sanitaria
-Eficiencia energética superior, proporcionando calefacción constante con un menor consumo
-Diseño robusto y duradero, hecho para ofrecer una larga vida útil y resistencia a las condiciones de uso intensivo
-Control de temperatura ajustable, para una gestión precisa del calor y el agua caliente
-Bajas emisiones, contribuyendo a la protección del medio ambiente
+Material esteatite (pedra-sabão) de alta qualidade, que armazena o calor de forma eficiente e o distribui de forma gradual
+Sistema de combustão otimizado, que reduz o consumo de lenha e as emissões de CO2
+Alta potência térmica, ideal para aquecimento de grandes espaços e água quente sanitária
+Eficiência energética superior, proporcionando aquecimento constante com um menor consumo
+Design robusto e duradouro, feito para oferecer uma longa vida útil e resistência às condições de uso intensivo
+Controlo de temperatura ajustável, para uma gestão precisa do calor e da água quente
+Baixas emissões, contribuindo para a proteção do ambiente
 
-Beneficios:
+Benefícios:
 
-Ecológica y sostenible, al utilizar leña como fuente de energía renovable y mantener las emisiones a niveles mínimos
-Eficiencia energética excepcional, garantizando una calefacción eficaz con un consumo de combustible optimizado
-Calor constante y duradero, gracias a las propiedades de acumulación térmica de la esteatita
-Ahorro de costos, al reducir la necesidad de recargar constantemente la caldera gracias a su capacidad para retener el calor
-Ideal para calefacción centralizada, proporcionando calor a varias habitaciones o zonas de la vivienda
-Fácil mantenimiento, con un diseño accesible que facilita las tareas de limpieza y control
+Ecológica e sustentável, ao utilizar lenha como fonte de energia renovável e manter as emissões em níveis mínimos
+Eficiência energética excecional, garantindo um aquecimento eficaz com um consumo de combustível otimizado
+Calor constante e duradouro, graças às propriedades de acumulação térmica da esteatite (pedra-sabão)
+Poupança de custos, ao reduzir a necessidade de recarregar constantemente a caldeira graças à sua capacidade de reter o calor
+Ideal para aquecimento centralizado, proporcionando calor a várias divisões ou zonas da habitação
+Fácil manutenção, com um design acessível que facilita as tarefas de limpeza e controlo
 
-Con la Caldera de Esteatita Thermo Magnum, podrá disfrutar de una calefacción eficiente, económica y respetuosa con el medio ambiente, manteniendo su hogar cálido y cómodo durante todo el año.',
+Com a Caldeira de Esteatite (pedra-sabão) Thermo Magnum, poderá desfrutar de um aquecimento eficiente, económico e respeitador do ambiente, mantendo a sua casa quente e confortável durante todo o ano.',
         'ref' => '53745512',
 
 
-        'slug' => 'caldera-de-esteatita-thermo-magnum'
+        'slug' => 'caldeira-de-esteatite-thermo-magnum',
+        'seo_title' => 'Caldeira de esteatite (pedra-sabão) Thermo Magnum',
+        'seo_description' => 'Caldeira de esteatite (pedra-sabão) Thermo Magnum. Caldeira a lenha de alto rendimento para aquecimento central e água quente. Envio grátis em Portugal Continental.'
     ],
     [
         'id' => 5523,
-        'title' => 'Caldera de leña 50 kW Sólida',
+        'title' => 'Caldeira a lenha 50 kW Sólida',
 
         'hover_image' => '',
 
@@ -304,57 +314,59 @@ Con la Caldera de Esteatita Thermo Magnum, podrá disfrutar de una calefacción 
 
 
         'in_stock' => true, 'color' => '',
-        'short_description' => 'Caldera de leña maciza de 50 kW.
-El modelo Solid 50 kW es una caldera de leña para leña de hasta 50 cm de longitud. Su eficiencia del 75% le permite calentar grandes superficies (hasta 300 m²*).
-3 deflectores horizontales para mayor eficiencia
-Situados encima de la chimenea, aportan mayor eficiencia a la caldera. Retrasan la evacuación de gases, se aprovechan así un máximo de calorías, optimizando el rendimiento de la caldera sin aumentar el consumo de leña.
-Los cuerpos de acero de 5 mm de espesor para la cámara de combustión garantizan una excelente resistencia a las altas temperaturas y una mayor longevidad.
-Calidad y Garantía
-Las calderas de sólidos de 50 kW se prueban unidad por unidad a una presión de 6 bar.
-El período de garantía es de 2 años para el cuerpo calefactor.
+        'short_description' => 'Caldeira a lenha maciça de 50 kW.
+O modelo Solid 50 kW é uma caldeira a lenha para lenha de até 50 cm de comprimento. O seu eficiência do 75% lhe permite aquecer grandes superficies (até 300 m²*).
+3 defletores horizontais para maior eficiência
+Situados por cima da câmara, conferem maior eficiência à caldeira. Atrasam a evacuação de gases, aproveitam-se assim o máximo de calorias, optimizando o rendimento da caldeira sem aumentar o consumo de lenha.
+Os cuerpos de aço de 5 mm de espessura para a câmara de combustão garantem uma excelente resistência às altas temperaturas e uma maior longevidade.
+Qualidade e Garantia
+As caldeiras de sólidos de 50 kW são ensaiadas unidada unidada uma pressão de 6 bar.
+O período de garantia é de 2 anos para o cuerpo calefactor.
 Características
-Potencia de la caldera: 50 kW
-Rendimiento: 75%
-Superficie de calefacción*: hasta 300 m²
-Para troncos: hasta 55 cm
-Diámetro de la boquilla: 180 mm
-Volumen de la caldera: 122 L
+Potência da caldeira: 50 kW
+Rendimento: 75%
+Superfície de aquecimento*: até 300 m²
+Para troncos: até 55 cm
+Diâmetro do bocal: 180 mm
+Volume da caldeira: 122 L
 Peso: 384kg
-Temperatura máxima de trabajo en °C: 90
-Presión máxima de trabajo en bar: 3
+Temperatura máxima de trabalho em °C: 90
+Pressão máxima de trabalho em bar: 3
 Altura: 1210 mm
-Longitud: 670 mm
-Profundidad: 1120 mm',
-        'description' => 'Caldera de Leña 50 kW Sólida
-La Caldera de Leña 50 kW Sólida es la opción ideal para aquellos que buscan una solución potente, eficiente y ecológica para calefacción en espacios grandes. Con una potencia de 50 kW, esta caldera está diseñada para proporcionar calefacción centralizada en viviendas de gran tamaño, instalaciones comerciales, o incluso naves industriales, así como agua caliente sanitaria de manera constante.
-Gracias a su sistema de combustión avanzada, la Caldera de Leña 50 kW Sólida optimiza el uso de la leña, garantizando un alto rendimiento energético y reduciendo el consumo de combustible. Su construcción robusta y duradera, junto con su diseño eficiente, asegura una larga vida útil y un funcionamiento fiable. Además, su bajo nivel de emisiones de CO2 la convierte en una opción respetuosa con el medio ambiente, contribuyendo a un entorno más limpio.
+Comprimento: 670 mm
+Profundidade: 1120 mm',
+        'description' => 'Caldeira a Lenha 50 kW Sólida
+A Caldeira a Lenha 50 kW Sólida é a opção ideal para quem procura uma solução potente, eficiente e ecológica para aquecimento em espaços grandes. Com uma potência de 50 kW, esta caldeira está concebida para proporcionar aquecimento centralizado em habitações de grande dimensão, instalações comerciais, ou mesmo pavilhões industriais, assim como água quente sanitária de forma constante.
+Graças ao seu sistema de combustão avançada, a Caldeira a Lenha 50 kW Sólida otimiza o uso da lenha, garantindo um alto rendimento energético e reduzindo o consumo de combustível. O seu construção robusta e duradoura, juntamente com o seu design eficiente, assegura uma longa vida útil e um funcionamento fiável. Além disso, o seu baixo nível de emissões de CO2 a converte em uma opção respeitadora do ambiente, contribuindo para um ambiente mais limpo.
 Características:
 
-Potencia: 50 kW, perfecta para calefacción centralizada de grandes espacios y producción de agua caliente
-Sistema de combustión eficiente, que maximiza el rendimiento de la leña y reduce el consumo
-Bajas emisiones de CO2, contribuyendo a un ambiente más limpio
-Construcción robusta, fabricada con materiales de alta calidad que garantizan una larga durabilidad
-Fácil mantenimiento, con acceso fácil para la limpieza y el control
-Control de temperatura ajustable, lo que permite adaptar la calefacción según las necesidades del espacio
+Potência: 50 kW, perfeita para aquecimento centralizado de grandes espaços e produção de água quente
+Sistema de combustão eficiente, que maximiza o rendimento da lenha e reduz o consumo
+Baixas emissões de CO2, contribuindo para um ambiente mais limpo
+Construção robusta, fabricada com materiais de alta qualidade que garantem uma longa durabilidade
+Fácil manutenção, com acesso fácil para a limpeza e o controlo
+Controlo de temperatura ajustável, o que permite adaptar a aquecimento segundo as necessidades do espaço
 
-Beneficios:
+Benefícios:
 
-Eficiencia energética alta, optimizando el uso de la leña y reduciendo los costos de calefacción
-Ideal para calefacción de grandes espacios, proporcionando calor constante y agua caliente de manera eficiente
-Ecológica, al utilizar leña como fuente de energía renovable y minimizar las emisiones
-Ahorro a largo plazo, gracias a su gran eficiencia en el uso de combustible
-Durabilidad garantizada, con una construcción de alta resistencia para un uso intensivo y prolongado
-Confort constante, con una distribución de calor uniforme que mantiene los espacios cálidos durante todo el día
+Eficiência energética alta, optimizando o uso da lenha e reduzindo os custos de aquecimento
+Ideal para aquecimento de grandes espaços, proporcionando calor constante e água quente de forma eficiente
+Ecológica, ao utilizar lenha como fonte de energia renovável e minimizar as emissões
+Poupança a longo prazo, graças ao seu gran eficiência no uso de combustível
+Durabilidade garantizada, com uma construção de alta resistência para um uso intensivo e prolongado
+Conforto constante, com uma distribuição de calor uniforme que mantém os espaços cálidos durante todo o dia
 
-La Caldera de Leña 50 kW Sólida es la solución perfecta para aquellos que requieren un sistema de calefacción potente, eficiente y sostenible, manteniendo su hogar o establecimiento cálido y confortable durante los meses más fríos.',
+A Caldeira a Lenha 50 kW Sólida é a solução perfeita para quem necessita um sistema de aquecimento potente, eficiente e sustentável, mantendo a sua casa o estabelecimento quente e confortável durante os meses mais frios.',
         'ref' => '53745523',
 
 
-        'slug' => 'caldera-de-lena-50-kw-solida'
+        'slug' => 'caldeira-a-lenha-50-kw-solida',
+        'seo_title' => 'Caldeira a lenha 50 kW Sólida',
+        'seo_description' => 'Caldeira a lenha 50 kW Sólida. Caldeira a lenha de alto rendimento para aquecimento central e água quente. Envio grátis em Portugal Continental.'
     ],
     [
         'id' => 5518,
-        'title' => 'Caldera de leña maciza de 20 kW',
+        'title' => 'Caldeira a lenha maciça de 20 kW',
 
         'hover_image' => '',
 
@@ -367,49 +379,51 @@ La Caldera de Leña 50 kW Sólida es la solución perfecta para aquellos que req
 
 
         'in_stock' => true, 'color' => '',
-        'short_description' => 'Prueba de Calidad
-Cada caldera Solid de 20 kW es probada con una presión de 6 bar.
-Garantía
-El elemento calefactor tiene una garantía de 2 años. Características Técnicas Potencia de la caldera: 20 kW Rendimiento: 75% Superficie de calefacción*: hasta 120 m² Longitud máxima de los troncos: hasta 50 cm Diámetro de la salida (boquilla): 160 mm Volumen de la caldera: 95 L Peso: 282 kg Temperatura máxima de trabajo: 90°C Presión máxima de trabajo: 3 bar Altura: 1210 mm Longitud: 525 mm Profundidad: 1080 mm * La superficie de calefacción puede variar según el aislamiento térmico del ambiente.',
-        'description' => 'Silla de Madera Maciza con Calefacción de 20 kW
-La Silla de Madera Maciza con Calefacción de 20 kW es una opción innovadora y confortable para quienes desean disfrutar de un calor agradable mientras se relajan. Con una potencia de 20 kW, esta silla combina el confort del mobiliario en madera maciza con un sistema de calefacción eficiente, proporcionando una experiencia de calor constante y envolvente.
-Su diseño elegante y robusto en madera maciza ofrece no solo resistencia y durabilidad, sino también un estilo único que se adapta perfectamente a cualquier ambiente. Ideal para espacios como salas de estar, lounges o incluso áreas exteriores cubiertas, esta silla calefactada es perfecta para disfrutar de un calor suave durante los meses fríos.
+        'short_description' => 'Ensaio de Qualidade
+Cada caldeira Solid de 20 kW é ensaiada com uma pressão de 6 bar.
+Garantia
+O elemento calefactor tem uma garantia de 2 anos. Características Técnicas Potência da caldeira: 20 kW Rendimento: 75% Superfície de aquecimento*: até 120 m² Comprimento máximo dos troncos: até 50 cm Diâmetro da salida (bocal): 160 mm Volume da caldeira: 95 L Peso: 282 kg Temperatura máxima de trabalho: 90°C Pressão máxima de trabalho: 3 bar Altura: 1210 mm Comprimento: 525 mm Profundidade: 1080 mm * A superfície de aquecimento pode variar segundo o isolamento térmico do ambiente.',
+        'description' => 'Caldeira a Lenha Maciça de 20 kW
+A Caldeira a Lenha Maciça de 20 kW é uma opção inovadora e confortável para quem deseja desfrutar de um calor agradável enquanto relaxam. Com uma potência de 20 kW, esta caldeira combina o conforto do mobiliário em madeira maciça com um sistema de aquecimento eficiente, proporcionando uma experiência de calor constante e envolvente.
+O seu design elegante e robusto em madeira maciça oferece não só resistência e durabilidade, mas sim também um estilo único que adapta-se perfeitamente a qualquer ambiente. Ideal para espaços como salas de estar, lounges ou mesmo áreas exteriores cobertas, esta cadeira aquecida é perfeita para desfrutar de um calor suave durante os meses frios.
 
 Características:
 
-Potencia de calefacción: 20 kW, proporcionando calor intenso y eficiente
+Potência de aquecimento: 20 kW, proporcionando calor intenso e eficiente
 
-Material: Madera maciza de alta calidad, garantizando durabilidad y resistencia
+Material: Madeira maciça de alta qualidade, garantindo durabilidade e resistência
 
-Sistema de calefacción integrado, que distribuye el calor uniformemente para mayor confort
+Sistema de aquecimento integrado, que distribui o calor uniformemente para maior conforto
 
-Diseño elegante y moderno, adaptándose a diversos estilos de decoración
+Design elegante e moderno, adaptando-se a diversos estilos de decoração
 
-Control de temperatura ajustable, para regular el nivel de calor según sus preferencias
+Controlo de temperatura ajustável, para regular o nível de calor segundo as suas preferências
 
-Bajo consumo energético, aprovechando al máximo la potencia de 20 kW
+Baixo consumo energético, aproveitando ao máximo a potência de 20 kW
 
-Beneficios:
+Benefícios:
 
-Confort térmico personalizado, ideal para descansar y relajarse en invierno
+Conforto térmico personalizado, ideal para descansar e relaxar em inverno
 
-Eficiencia energética, gracias al sistema de calefacción de alto rendimiento
+Eficiência energética, graças ao sistema de aquecimento de alto rendimento
 
-Ecológica y sostenible, utilizando madera maciza proveniente de fuentes responsables
+Ecológica e sustentável, utilizando madeira maciça proveniente de fontes responsáveis
 
-Fácil de usar, con controles simples para ajustar la temperatura
+Fácil de usar, com controlos simples para ajustar a temperatura
 
-Diseño atractivo y funcional, uniendo elegancia y tecnología avanzada de calefacción
+Design atrativo e funcional, unindo elegância e tecnologia avançada de aquecimento
 
-Con la Silla de Madera Maciza con Calefacción de 20 kW, podrá disfrutar de calor y confort en cualquier momento, garantizando una experiencia relajante y eficiente durante todo el año.',
+Com a Caldeira a Lenha Maciça de 20 kW, poderá desfrutar de calor e conforto em qualquer momento, garantindo uma experiência relaxante e eficiente durante todo o ano.',
         'ref' => '53745518',
 
 
-        'slug' => 'caldera-de-lena-maciza-de-20-kw'
+        'slug' => 'caldeira-a-lenha-macica-de-20-kw',
+        'seo_title' => 'Caldeira a lenha maciça de 20 kW',
+        'seo_description' => 'Caldeira a lenha maciça de 20 kW. Caldeira a lenha de alto rendimento para aquecimento central e água quente. Envio grátis em Portugal Continental.'
     ],
     [
         'id' => 5520,
-        'title' => 'Caldera de leña maciza de 30 kW',
+        'title' => 'Caldeira a lenha maciça de 30 kW',
 
         'hover_image' => '',
 
@@ -422,61 +436,63 @@ Con la Silla de Madera Maciza con Calefacción de 20 kW, podrá disfrutar de cal
 
 
         'in_stock' => true, 'color' => '',
-        'short_description' => 'Caldera de Leña Sólida 30 kW
-Potencia y eficiencia para calentar grandes espacios con economía y durabilidad
-La Caldera de Leña Solid de 30 kW es adecuada para calentar, con leña, una casa unifamiliar de gran tamaño o cualquier otro tipo de edificio de hasta 180 m² *. Su sistema inteligente con tres deflectores horizontales sobre la cámara de combustión ofrece una eficiencia térmica excepcional. Este sistema retrasa la evacuación de los gases calientes, aprovechando al máximo el calor generado, aumentando el rendimiento de la caldera sin incrementar el consumo de combustible.
-La estructura de la cámara de combustión está hecha de acero de 5 mm de espesor, proporcionando mayor resistencia a las altas temperaturas y garantizando una vida útil prolongada del cuerpo de calefacción. Garantía
-El período de garantía es de 2 años para el cuerpo de la caldera.',
-        'description' => 'Caldera de Leña Maciza 30 kW
-Potencia, eficiencia y sostenibilidad para su confort térmico
-La Caldera de Leña Maciza de 30 kW es la elección ideal para quienes buscan un sistema de calefacción central eficaz, duradero y ecológico. Fabricada con materiales de alta calidad y estructura robusta, esta caldera ofrece una solución confiable para calentar casas de mediano a gran tamaño, así como espacios comerciales o rurales.
+        'short_description' => 'Caldeira a Lenha Sólida 30 kW
+Potência e eficiência para aquecer grandes espaços com economía e durabilidade
+A Caldeira a Lenha Solid de 30 kW é adequada para aquecer, com lenha, uma casa unifamiliar de grande dimensão o qualquer outro tipo de edifício de até 180 m² *. O seu sistema inteligente com tres defletores horizontais sobre a câmara de combustão oferece uma eficiência térmica excecional. Este sistema retrasa a evacuação dos gases quentes, aproveitando ao máximo o calor generado, aumentando o rendimento da caldeira sem aumentar o consumo de combustível.
+A estrutura da câmara de combustão é feita de aço de 5 mm de espessura, proporcionando maior resistência às altas temperaturas e garantindo uma vida útil prolongada do corpo de aquecimento. Garantia
+O período de garantia é de 2 anos para o corpo da caldeira.',
+        'description' => 'Caldeira a Lenha Maciça 30 kW
+Potência, eficiência e sostenibilidad parao seu conforto térmico
+A Caldeira a Lenha Maciça de 30 kW é a escolha ideal para quem procura um sistema de aquecimento central eficaz, duradouro e ecológico. Fabricada com materiais de alta qualidade e estrutura robusta, esta caldeira oferece uma solução fiável para aquecer casas de média a grande dimensão, assim como espaços comerciais ou rurais.
 
-Características principales:
+Características principais:
 
-Potencia térmica nominal: 30 kW
+Potência térmica nominal: 30 kW
 
-Rendimiento energético: hasta 75%
+Rendimento energético: até 75%
 
-Superficie de calefacción recomendada: hasta 180 m²*
+Superfície de aquecimento recomendada: até 180 m²*
 
-Volumen de agua de la caldera: aprox. 100 litros
+Volume de água da caldeira: aprox. 100 litros
 
-Longitud máxima de los troncos: hasta 50 cm
+Comprimento máximo dos troncos: até 50 cm
 
-Chimenea: diámetro de 160 mm
+Chaminé: diâmetro de 160 mm
 
 Temperatura máxima: 90 °C
 
-Presión máxima de operación: 3 bar
+Pressão máxima de operação: 3 bar
 
 Peso estimado: 310 kg
 
-Construcción en acero de alta resistencia, con puerta de hierro fundido
+Construção em aço de alta resistência, com porta de ferro fundido
 
-*Puede variar según el aislamiento del edificio.
+*Pode variar segundo o isolamento do edifício.
 
-Ventajas:
+Vantagens:
 
-Combustión limpia y eficiente, con bajas emisiones
+Combustão limpa e eficiente, com baixas emissões
 
-Alta durabilidad y fácil mantenimiento
+Alta durabilidade e fácil manutenção
 
-Compatible con sistemas de radiadores o suelo radiante
+Compatible com sistemas de radiadores o piso radiante
 
-Ahorro de combustible gracias al uso optimizado de la leña
+Poupança de combustível graças ao uso otimizado da lenha
 
-Confort continuo incluso en las temperaturas más bajas
+Conforto contínuo mesmo em as temperaturas mais baixas
 
 
 ',
         'ref' => '53745520',
 
 
-        'slug' => 'caldera-de-lena-maciza-de-30-kw'
+        'slug' => 'caldeira-a-lenha-macica-de-30-kw',
+        'seo_title' => 'Caldeira a lenha maciça de 30 kW',
+        'seo_description' => 'Caldeira a lenha maciça de 30 kW. Caldeira a lenha de alto rendimento para aquecimento central e água quente. Envio grátis em Portugal Continental.'
     ],
     [
         'id' => 5510,
-        'title' => 'Caldera termomagnum',
+        'title' => 'Caldeira termomagnum',
 
         'hover_image' => '',
 
@@ -489,51 +505,53 @@ Confort continuo incluso en las temperaturas más bajas
 
 
         'in_stock' => true, 'color' => '',
-        'short_description' => 'Dimensiones de la estufa
-Conjunto: Ancho 1070 mm x Fondo 655 mm x Alto 850 mm
-Horno: Ancho 350 mm x Fondo 470 mm x Alto 270 mm
-Chimenea: Ancho 330 mm x Fondo 400 mm x Alto 430 mm
+        'short_description' => 'Dimensões da salamandra
+Conjunto: Largura 1070 mm x Profundidade 655 mm x Altura 850 mm
+Forno: Largura 350 mm x Profundidade 470 mm x Altura 270 mm
+Chaminé: Largura 330 mm x Profundidade 400 mm x Altura 430 mm
 Características
 Peso: 178kg
-Diámetro de salida de humos: 150 mm trasera y superior (derecha o izquierda)
-Contiene 11L de agua en la caldera.
-Puede alimentar hasta 8 radiadores de tamaño nominal
-El nivel de eficiencia es del 76,4%.
-Potencia térmica de la caldera 9 KW y potencia de radiación de 5 KW.
-Combustible recomendado: madera y carbón.
-Cumple con la norma europea EN 12815
-Colores: negro / burdeos / crema
-2 años de garantía',
-        'description' => 'Caldera Termomagnum
-La Caldera Termomagnum es una solución de calefacción de alto rendimiento, diseñada para ofrecer una experiencia de calefacción eficiente, duradera y ecológica. Con un diseño robusto y tecnología avanzada, la Termomagnum está preparada para satisfacer las necesidades de calefacción de grandes espacios, ofreciendo una excelente capacidad para calentar viviendas, chalets, naves industriales o instalaciones comerciales.
-Gracias a su sistema de combustión optimizado, esta caldera maximiza la eficiencia en la quema de combustible, lo que reduce el consumo de leña y las emisiones de CO2, contribuyendo así a un entorno más limpio. Su acumulación de calor garantiza un rendimiento duradero, manteniendo el calor en el ambiente incluso después de que el fuego se haya apagado.
+Diâmetro de saída de fumos: 150 mm traseira e superior (direita ou esquerda)
+Contém 11L de agua na caldeira.
+Pode alimentar até 8 radiadores de tamanho nominal
+O nível de eficiência é do 76,4%.
+Potência térmica da caldeira 9 KW e potência de radiação de 5 KW.
+Combustível recomendado: madeira e carvão.
+Cumpre a norma europeia EN 12815
+Cores: preto / bordeaux / creme
+2 anos de garantia',
+        'description' => 'Caldeira Termomagnum
+A Caldeira Termomagnum é uma solução de aquecimento de alto rendimento, concebida para oferecer uma experiência de aquecimento eficiente, duradoura e ecológica. Com um design robusto e tecnologia avançada, a Termomagnum está preparada para satisfazer as necessidades de aquecimento de grandes espaços, oferecendo uma excelente capacidade para aquecer habitaçãos, chalés, pavilhões industriais o instalações comerciais.
+Graças ao seu sistema de combustão otimizado, esta caldeira maximiza a eficiência na queima de combustível, o que reduz o consumo de lenha e as emissões de CO2, contribuindo parasí a um ambiente mais limpo. O seu acumulação de calor garante um rendimento duradouro, mantendo o calor no ambiente mesmo depois do fogo se ter apagado.
 Características:
 
-Alta potencia térmica, ideal para calefacción centralizada de grandes espacios
-Eficiencia energética mejorada, optimizando el uso de la leña y reduciendo el consumo
-Sistema de combustión avanzado, que garantiza una quema más limpia y eficiente
-Diseño robusto y duradero, hecho con materiales de alta calidad para una larga vida útil
-Control de temperatura ajustable, lo que permite adaptarse a las necesidades de calefacción en cualquier momento
-Fácil mantenimiento, con acceso sencillo para la limpieza y control de la caldera
+Alta potência térmica, ideal para aquecimento centralizado de grandes espaços
+Eficiência energética melhorada, optimizando o uso da lenha e reduzindo o consumo
+Sistema de combustão avançado, que garante uma queima mais limpa e eficiente
+Design robusto e duradouro, feito com materiais de alta qualidade para uma longa vida útil
+Controlo de temperatura ajustável, o que permite adaptar-se às necessidades de aquecimento em qualquer momento
+Fácil manutenção, com acesso simples para a limpeza e controlo da caldeira
 
-Beneficios:
+Benefícios:
 
-Eficiencia y ahorro, con un consumo de leña optimizado para obtener más calor con menos combustible
-Ecológica y respetuosa con el medio ambiente, gracias a las bajas emisiones de CO2
-Ideal para calefacción centralizada, ofreciendo calor constante a varias zonas del hogar o espacio comercial
-Calor duradero, con un rendimiento térmico excepcional que mantiene la temperatura durante largo tiempo
-Durabilidad garantizada, con una construcción resistente para un uso prolongado
-Fácil de operar, con controles intuitivos que permiten una gestión eficiente del sistema de calefacción
+Eficiência e poupança, com um consumo de lenha otimizado para obter mais calor com menos combustível
+Ecológica e respeitadora do ambiente, graças às baixas emissões de CO2
+Ideal para aquecimento centralizado, oferecendo calor constante a várias zonas do casa o espaço comercial
+Calor duradouro, com um rendimento térmico excecional que mantém a temperatura durante largo tiempo
+Durabilidade garantizada, com uma construção resistente para um uso prolongado
+Fácil de operar, com controlos intuitivos que permitem uma gestão eficiente do sistema de aquecimento
 
-La Caldera Termomagnum es la solución perfecta para quienes buscan una caldera eficiente, ecológica y económica, capaz de ofrecer un rendimiento de alto nivel y comodidad durante todo el año.',
+A Caldeira Termomagnum é a solução perfeita para quem procura uma caldeira eficiente, ecológica e económica, capaz de oferecer um rendimento de alto nível e conforto durante todo o ano.',
         'ref' => '53745510',
 
 
-        'slug' => 'aldera-termomagnum'
+        'slug' => 'caldeira-termomagnum',
+        'seo_title' => 'Caldeira termomagnum',
+        'seo_description' => 'Caldeira termomagnum. Caldeira a lenha de alto rendimento para aquecimento central e água quente. Envio grátis em Portugal Continental.'
     ],
     [
         'id' => 5507,
-        'title' => 'Estufa de Leña Moravia 9112 EX con Caldera',
+        'title' => 'Salamandra a Lenha Moravia 9112 EX com Caldeira',
 
         'hover_image' => '',
 
@@ -546,46 +564,48 @@ La Caldera Termomagnum es la solución perfecta para quienes buscan una caldera 
 
 
         'in_stock' => true, 'color' => '',
-        'short_description' => 'Características: Peso: aproximadamente 190 kg Potencia de la caldera: 6 kW Potencia irradiada: 5,4 kW con eficiencia del 81,7% Salida de humos de 120 mm en la parte superior, trasera o lateral Salida de la caldera: 1 pulgada Rejilla de hierro fundido, con fricción Tamaño del compartimento de carga: 45 cm Prioridad de calefacción para el horno o para la placa superior Carga superior o frontal Volumen de agua de la caldera: 9 litros Conforme y certificado según la norma europea EN 12815 Garantía de 2 años',
-        'description' => 'Estufa de Leña Moravia 9112 EX con Caldera
-La Estufa de Leña Moravia 9112 EX con Caldera es una solución completa y eficiente de calefacción, ideal para quienes buscan un sistema que combine confort térmico con la posibilidad de calentar agua para calefacción central o uso doméstico. Esta estufa de leña de alta calidad está diseñada con una caldera integrada, convirtiéndose en una opción perfecta para residencias que necesitan tanto calefacción ambiental como agua caliente para radiadores o consumo diario.
-Gracias a su caldera de alta eficiencia, la Moravia 9112 EX no solo proporciona un ambiente cálido, sino que también optimiza el consumo de leña al aprovechar al máximo la energía generada durante la combustión. Su construcción robusta y diseño moderno permiten una fácil integración en diferentes estilos de interiores, mientras que la tecnología avanzada garantiza un rendimiento térmico superior y una combustión limpia y eficiente.
+        'short_description' => 'Características: Peso: aproximadamente 190 kg Potência da caldeira: 6 kW Potência irradiada: 5,4 kW com eficiência do 81,7% Salida de humos de 120 mm na parte superior, traseira o lateral Salida da caldeira: 1 pulgada Rejilla de ferro fundido, com fricción Tamanho do compartimento de carga: 45 cm Prioridad de aquecimento para o forno o para a placa superior Carga superior ouu frontal Volume de água da caldeira: 9 litros Conforme e certificado segundo a norma europeia EN 12815 Garantia de 2 anos',
+        'description' => 'Salamandra a Lenha Moravia 9112 EX com Caldeira
+A Salamandra a Lenha Moravia 9112 EX com Caldeira é uma solução completa e eficiente de aquecimento, ideal para quem procura um sistema que combine conforto térmico com a possibilidade de aquecer agua para aquecimento central ou uso doméstico. Esta salamandra a lenha de alta qualidade está concebida com uma caldeira integrada, convertendo-se em uma opção perfeita para residências que necessitam tanto aquecimento ambiental como água quente para radiadores ou consumo diário.
+Graças ao seu caldeira de alta eficiência, a Moravia 9112 EX não só proporciona um ambiente quente, mas também optimiza o consumo de lenha ao aproveitar ao máximo a energia gerada durante a combustão. O seu construção robusta e design moderno permitem uma fácil integração em diferentes estilos de interiores, enquanto que a tecnologia avançada garante um rendimento térmico superior e uma combustão limpa e eficiente.
 
 Características:
 
-Estufa con caldera integrada para calentamiento de agua para sistemas centrales y uso sanitario
+Salamandra com caldeira integrada para calentamiento de agua para sistemas centrales e uso sanitario
 
-Alta eficiencia de combustión, maximizando el rendimiento de la leña y reduciendo el consumo
+Alta eficiência de combustão, maximizando o rendimento da lenha e reduzindo o consumo
 
-Bajas emisiones de CO₂, contribuyendo a un ambiente más limpio y sostenible
+Bajas emissões de CO₂, contribuindo para um ambiente mais limpo e sustentável
 
-Caldera de acero de alta calidad, diseñada para optimizar la transferencia de calor
+Caldeira de aço de alta qualidade, concebida para optimizar a transferencia de calor
 
-Diseño moderno y elegante, que se adapta a diversos estilos de decoración
+Design moderno e elegante, que se adapta a diversos estilos de decoração
 
-Fácil operación y mantenimiento, con control intuitivo y acceso facilitado para la limpieza
+Fácil operação e manutenção, com controlo intuitivo e acceso facilitado para a limpeza
 
-Beneficios:
+Benefícios:
 
-Confort térmico completo, ofreciendo calor tanto al ambiente como al agua para calefacción y uso doméstico
+Conforto térmico completo, oferecendo calor tanto ao ambiente como ao agua para aquecimento e uso doméstico
 
-Ahorro de energía y costos, gracias a la alta eficiencia y bajo consumo de leña
+Poupança de energia e custos, graças à alta eficiência e baixo consumo de lenha
 
-Solución ecológica, con sistema que reduce emisiones y aprovecha mejor los recursos naturales
+Solução ecológica, com sistema que reduz emissões e aproveita melhor os recursos naturais
 
-Construcción robusta y duradera, con materiales de alta calidad para una larga vida útil
+Construção robusta e duradoura, com materiais de alta qualidade para uma longa vida útil
 
-Ideal para residencias de todos los tamaños, garantizando calefacción eficiente y suministro continuo de agua caliente
+Ideal para residências de todos os tamanhos, garantindo aquecimento eficiente e fornecimento contínuo de água quente
 
-La Estufa de Leña Moravia 9112 EX con Caldera es la elección perfecta para quienes desean una estufa de leña de alta eficiencia, que combine calefacción ambiental y producción de agua caliente en un único equipo. Disfrute de un calor constante y agradable durante todo el año, optimizando el consumo de energía y cuidando el medio ambiente.',
+A Salamandra a Lenha Moravia 9112 EX com Caldeira é a escolha perfeita para quem deseja uma salamandra a lenha de alta eficiência, que combine aquecimento ambiental e produção de água quente em um único equipo. Desfrute de um calor constante e agradável durante todo o ano, optimizando o consumo de energia e cuidando o ambiente.',
         'ref' => '53745507',
 
 
-        'slug' => 'estufa-a-lenha-moravia-9112-ex-com-caldeira'
+        'slug' => 'estufa-a-lenha-moravia-9112-ex-com-caldeira',
+        'seo_title' => 'Salamandra a Lenha Moravia 9112 EX com Caldeira',
+        'seo_description' => 'Salamandra a Lenha Moravia 9112 EX com Caldeira. Caldeira a lenha de alto rendimento para aquecimento central e água quente. Envio grátis em Portugal Continental.'
     ],
     [
         'id' => 5508,
-        'title' => 'Estufa de Leña Moravia 9114',
+        'title' => 'Salamandra a Lenha Moravia 9114',
 
         'hover_image' => '',
         'old_price' => '1,580.00',
@@ -598,51 +618,53 @@ La Estufa de Leña Moravia 9112 EX con Caldera es la elección perfecta para qui
 
 
         'in_stock' => true, 'color' => '',
-        'short_description' => 'Una estufa de leña para espacios pequeños
-Moravia 9114: rendimiento y personalidad
-¡Esta estufa le permite admirar las llamas mientras prepara sus comidas, gracias al calor acogedor del fuego de leña! Diseñada para espacios reducidos, la Moravia 9114 posee una amplia cámara de combustión (revestida con ladrillos refractarios, ofreciendo un rendimiento excelente para su categoría) y una elegante placa de acero cepillado.',
-        'description' => 'Estufa de Leña Moravia 9114
-La Estufa de Leña Moravia 9114 es un equipo de alto rendimiento, diseñado para ofrecer una calefacción eficiente, ecológica y económica. Con su potente sistema de combustión y diseño moderno, esta estufa proporciona una distribución uniforme del calor, creando un ambiente cálido y confortable en su casa durante los meses más fríos del año.
-Fabricada con materiales de alta calidad, la Moravia 9114 destaca por su durabilidad y resistencia. Su avanzada tecnología de combustión optimiza el uso de la leña, reduciendo el consumo y minimizando las emisiones de CO₂, contribuyendo a un ambiente más limpio y saludable.
-El diseño compacto y elegante de la Estufa Moravia 9114 se adapta a diversos estilos de decoración, mientras que su gran capacidad de calefacción la convierte en la opción ideal para calentar espacios medianos y grandes de forma constante y eficiente.
+        'short_description' => 'Uma salamandra a lenha para espaços pequenos
+Moravia 9114: rendimento e personalidad
+¡Esta salamandra lhe permite admirar as chamas enquanto prepara os seus comidas, graças ao calor acolhedor do fogo de lenha! Concebida para espaços reducidos, a Moravia 9114 posee uma amplia câmara de combustão (revestida com ladrillos refractarios, oferecendo um rendimento excelente parao seu categoría) e uma elegante placa de aço cepillado.',
+        'description' => 'Salamandra a Lenha Moravia 9114
+A Salamandra a Lenha Moravia 9114 é um equipo de alto rendimento, concebido para oferecer um aquecimento eficiente, ecológico e económico. Com o seu potente sistema de combustão e design moderno, esta salamandra proporciona uma distribuição uniforme do calor, criando um ambiente quente e confortável na sua casa durante os meses mais frios do ano.
+Fabricada com materiais de alta qualidade, a Moravia 9114 destaca-se por a sua durabilidade e resistência. O seu avançada tecnologia de combustão otimiza o uso da lenha, reduzindo o consumo e minimizando as emissões de CO₂, contribuindo para um ambiente mais limpo e saludable.
+O design compacto e elegante da Salamandra Moravia 9114 se adapta a diversos estilos de decoração, enquanto que o seu grande capacidade de aquecimento a converte na opção ideal para aquecer espaços médios e grandes de forma constante e eficiente.
 
 Características:
 
-Potente sistema de combustión que maximiza la eficiencia térmica y reduce el consumo de leña
+Potente sistema de combustão que maximiza a eficiência térmica e reduz o consumo de lenha
 
-Diseño moderno y compacto, ideal para diferentes estilos de interiores
+Design moderno e compacto, ideal para diferentes estilos de interiores
 
-Materiales de alta calidad, garantizando durabilidad y resistencia
+Materiales de alta qualidade, garantindo durabilidade e resistência
 
-Gran capacidad de calefacción, perfecta para espacios medianos y grandes
+Grande capacidade de aquecimento, perfeita para espaços médios e grandes
 
-Bajas emisiones de CO₂, contribuyendo a un ambiente más limpio y sostenible
+Bajas emissões de CO₂, contribuindo para um ambiente mais limpo e sustentável
 
-Fácil mantenimiento, con acceso sencillo para limpieza y control de la estufa
+Fácil manutenção, com acesso simples para limpeza e controlo da salamandra
 
-Beneficios:
+Benefícios:
 
-Alta eficiencia energética, con calor constante y duradero, optimizando el uso de la leña
+Alta eficiência energética, com calor constante e duradouro, optimizando o uso da lenha
 
-Ecológica y económica, gracias al bajo consumo y a las bajas emisiones
+Ecológica e económica, graças ao baixo consumo e às baixas emissões
 
-Diseño elegante y funcional, que se integra perfectamente en cualquier ambiente de la casa
+Design elegante e funcional, que se integra perfeitamente em qualquer ambiente da casa
 
-Durabilidad y resistencia, asegurando una larga vida útil
+Durabilidade e resistência, assegurando uma longa vida útil
 
-Confort constante, con distribución uniforme del calor para mantener una temperatura agradable
+Conforto constante, com distribuição uniforme do calor para manter uma temperatura agradável
 
-Fácil operación y mantenimiento, con controles intuitivos y accesibles
+Fácil operação e manutenção, com controlos intuitivos e accesibles
 
-La Estufa de Leña Moravia 9114 es la elección ideal para quienes buscan una solución de calefacción eficiente, sostenible y elegante, proporcionando calor y confort a su hogar durante todo el invierno.',
+A Salamandra a Lenha Moravia 9114 é a escolha ideal para quem procura uma solução de aquecimento eficiente, sustentável e elegante, proporcionando calor e conforto a sua casa durante todo o inverno.',
         'ref' => '53745508',
 
 
-        'slug' => 'estufa-a-lenha-moravia-9114'
+        'slug' => 'estufa-a-lenha-moravia-9114',
+        'seo_title' => 'Salamandra a Lenha Moravia 9114',
+        'seo_description' => 'Salamandra a Lenha Moravia 9114. Salamandra a lenha de alto rendimento, calor constante e baixo consumo. Envio grátis em Portugal Continental.'
     ],
     [
         'id' => 5514,
-        'title' => 'Estufa de Leña Olimpia',
+        'title' => 'Salamandra a Lenha Olimpia',
 
         'hover_image' => 'wp-content/uploads/2025/10/poele-cuisiniere-olympia-1-1-480x480.webp',
         'old_price' => '1,699.00',
@@ -655,46 +677,48 @@ La Estufa de Leña Moravia 9114 es la elección ideal para quienes buscan una so
 
 
         'in_stock' => true, 'color' => '',
-        'short_description' => 'La Estufa de Leña Olimpia es una solución eficiente y económica para calefacción residencial, ideal para quienes buscan confort térmico durante los meses más fríos. Con diseño clásico y robusto, esta estufa ofrece una combustión optimizada de la leña, garantizando alto rendimiento y distribución uniforme del calor.',
-        'description' => 'Estufa de Leña Olimpia
-La Estufa de Leña Olimpia es una solución de calefacción de alta eficiencia, diseñada para ofrecer un calor constante y agradable en su casa. Con un diseño moderno y funcional, esta estufa es ideal para quienes buscan un producto duradero, fácil de usar y que proporcione una combustión limpia y eficiente. Su estructura robusta y tecnología avanzada garantizan un rendimiento térmico superior, manteniendo su hogar cálido durante todo el invierno.
-La Estufa Olimpia está fabricada con materiales de alta calidad que aseguran una larga vida útil. Su eficiente sistema de combustión aprovecha al máximo la energía de la leña, reduciendo emisiones y consumo de combustible. Además, su gran capacidad de calefacción la hace excelente para casas de mediano a gran tamaño.
+        'short_description' => 'A Salamandra a Lenha Olimpia é uma solução eficiente e económica para aquecimento residencial, ideal para quem procura conforto térmico durante os meses mais frios. Com design clásico e robusto, esta salamandra oferece uma combustão optimizada da lenha, garantindo alto rendimento e distribuição uniforme do calor.',
+        'description' => 'Salamandra a Lenha Olimpia
+A Salamandra a Lenha Olimpia é uma solução de aquecimento de alta eficiência, concebida para oferecer um calor constante e agradável na sua casa. Com um design moderno e funcional, esta salamandra é ideal para quem procura um produto duradouro, fácil de usar e que proporcione uma combustão limpa e eficiente. O seu estrutura robusta e tecnologia avançada garantem um rendimento térmico superior, mantendo a sua casa quente durante todo o inverno.
+A Salamandra Olimpia está fabricada com materiais de alta qualidade que asseguram uma longa vida útil. O seu eficiente sistema de combustão aproveita ao máximo a energia da lenha, reduzindo emissões e consumo de combustível. Além disso, o seu grande capacidade de aquecimento a faz excelente para casas de média a grande dimensão.
 
 Características:
 
-Diseño moderno y elegante que se adapta a cualquier estilo de decoración
+Design moderno e elegante que se adapta a qualquer estilo de decoração
 
-Alta eficiencia energética con combustión optimizada y liberación prolongada de calor
+Alta eficiência energética com combustão optimizada e libertação prolongada de calor
 
-Bajas emisiones, contribuyendo a un ambiente más limpio y sostenible
+Baixas emissões, contribuindo para um ambiente mais limpo e sustentável
 
-Construcción robusta y duradera, fabricada con materiales de alta calidad
+Construção robusta e duradoura, fabricada com materiais de alta qualidade
 
-Fácil mantenimiento, con sistema de limpieza simple y accesible
+Fácil manutenção, com sistema de limpeza simples e acessível
 
-Gran capacidad térmica, ideal para calentar habitaciones grandes o espacios abiertos
+Grande capacidade térmica, ideal para aquecer divisões grandes ou espaços abiertos
 
-Beneficios:
+Benefícios:
 
-Ahorro de energía gracias al sistema eficiente que maximiza el aprovechamiento de la leña
+Poupança de energia graças ao sistema eficiente que maximiza o aproveitamento da lenha
 
-Confort térmico constante, con calor agradable durante todo el día
+Conforto térmico constante, com calor agradável durante todo o dia
 
-Sostenible y ecológica, con bajas emisiones de CO₂ y combustión limpia
+Sostenible e ecológica, com baixas emissões de CO₂ e combustão limpa
 
-Durabilidad y confiabilidad garantizadas por la construcción robusta
+Durabilidade e confiabilidad garantizadas por a construção robusta
 
-Fácil de usar y mantener, con controles intuitivos y diseño que facilita la limpieza
+Fácil de usar e manter, com controlos intuitivos e design que facilita a limpeza
 
-La Estufa de Leña Olimpia es la elección perfecta para quienes desean una calefacción eficiente, ecológica y económica, ofreciendo una fuente confiable y duradera de calor para mantener la casa acogedora durante todo el invierno.',
+A Salamandra a Lenha Olimpia é a escolha perfeita para quem deseja um aquecimento eficiente, ecológico e económico, oferecendo uma fuente fiável e duradoura de calor para manter a casa acolhedora durante todo o inverno.',
         'ref' => '53745514',
 
 
-        'slug' => 'estufa-a-lenha-olimpia'
+        'slug' => 'estufa-a-lenha-olimpia',
+        'seo_title' => 'Salamandra a Lenha Olimpia',
+        'seo_description' => 'Salamandra a Lenha Olimpia. Salamandra a lenha de alto rendimento, calor constante e baixo consumo. Envio grátis em Portugal Continental.'
     ],
     [
         'id' => 5506,
-        'title' => 'Estufa de Leña Temy Plus P 20 + Caldera',
+        'title' => 'Salamandra a Lenha Temy Plus P 20 + Caldeira',
 
         'hover_image' => 'wp-content/uploads/2025/10/cuisiniere-bois-bouilleur-termomont-temy-plus-1-480x480.webp',
         'old_price' => '3,499.00',
@@ -708,51 +732,53 @@ La Estufa de Leña Olimpia es la elección perfecta para quienes desean una cale
 
 
         'in_stock' => true, 'color' => '',
-        'short_description' => 'Estufa de Leña Temy Plus P 20 – El Modelo Más Reciente de Termomont
-La estufa de leña Temy Plus P 20 es el modelo más reciente de la marca Termomont. Innovadora tanto en su estructura interna como en su diseño exterior, esta estufa combina rendimiento y estética de forma ejemplar.
-Diseñada para la preparación de alimentos y para la calefacción central (función caldera), es extremadamente fácil de utilizar, tanto en verano como en invierno.',
-        'description' => 'Estufa de Leña Temy Plus P 20 + Caldera
-La Estufa de Leña Temy Plus P 20 + Caldera es una solución completa para quienes buscan un sistema de calefacción eficiente y ecológico para su casa. Con una potencia de 20 kW, esta estufa está equipada con una caldera integrada que permite calentar tanto el aire como el agua, garantizando un confort térmico constante durante todo el invierno. Su diseño moderno y elegante se adapta perfectamente a cualquier espacio, ofreciendo funcionalidad y estética al mismo tiempo.
-El sistema de combustión avanzado de la Temy Plus P 20 maximiza la eficiencia energética, reduciendo el consumo de leña y las emisiones de CO₂. Ideal para viviendas de mediano y gran tamaño, esta estufa es perfecta para quienes desean un sistema de calefacción completo y sostenible. Además, su caldera integrada es ideal para sistemas de calefacción central, proporcionando agua caliente sanitaria de forma continua y eficiente.
+        'short_description' => 'Salamandra a Lenha Temy Plus P 20 – O Modelo Mais Reciente de Termomont
+A salamandra a lenha Temy Plus P 20 é o modelo mais reciente da marca Termomont. Innovadora tanto na sua estrutura interna como no seu design exterior, esta salamandra combina rendimento e estética de forma ejemplar.
+Concebida para a preparación de alimentos e para a aquecimento central (función caldeira), é extremadamente fácil de utilizar, tanto em verano como em inverno.',
+        'description' => 'Salamandra a Lenha Temy Plus P 20 + Caldeira
+A Salamandra a Lenha Temy Plus P 20 + Caldeira é uma solução completa para quem procura um sistema de aquecimento eficiente e ecológico para sua casa. Com uma potência de 20 kW, esta salamandra está equipada com uma caldeira integrada que permite aquecer tanto o ar como a água, garantindo um conforto térmico constante durante todo o inverno. O seu design moderno e elegante adapta-se perfeitamente a qualquer espaço, oferecendo funcionalidade e estética ao mesmo tempo.
+O sistema de combustão avançado da Temy Plus P 20 maximiza a eficiência energética, reduzindo o consumo de lenha e as emissões de CO₂. Ideal para habitaçãos de médio e grande dimensão, esta salamandra é perfeita para quem deseja um sistema de aquecimento completo e sustentável. Além disso, o seu caldeira integrada é ideal para sistemas de aquecimento central, proporcionando água quente sanitária de forma contínua e eficiente.
 
 Características:
 
-Potencia total: 20 kW – ideal para calefacción central y producción de agua caliente sanitaria
+Potência total: 20 kW – ideal para aquecimento central e produção de água quente sanitária
 
-Sistema de combustión eficiente, que optimiza el uso de la leña y reduce el consumo
+Sistema de combustão eficiente, que otimiza o uso da lenha e reduz o consumo
 
-Caldera integrada, para calentamiento de agua y calefacción doméstica
+Caldeira integrada, para calentamiento de agua e aquecimento doméstica
 
-Diseño moderno y elegante, compatible con varios estilos de decoración
+Design moderno e elegante, compatível com vários estilos de decoração
 
-Bajas emisiones de CO₂, contribuyendo a un ambiente más limpio
+Bajas emissões de CO₂, contribuindo para um ambiente mais limpo
 
-Materiales de alta calidad, garantizando resistencia y durabilidad
+Materiales de alta qualidade, garantindo resistência e durabilidade
 
-Fácil mantenimiento, con acceso práctico para limpieza y control
+Fácil manutenção, com acceso prático para limpeza e controlo
 
-Beneficios:
+Benefícios:
 
-Alta eficiencia energética, reduciendo costos de calefacción y consumo de combustible
+Alta eficiência energética, reduzindo custos de aquecimento e consumo de combustível
 
-Ecológica y sostenible, utilizando leña como fuente de energía renovable
+Ecológica e sustentável, utilizando lenha como fonte de energia renovável
 
-Ideal para casas medianas o grandes, proporcionando calefacción central y agua caliente
+Ideal para casas medianas o grandes, proporcionando aquecimento central e água quente
 
-Bajas emisiones, ayudando a mejorar la calidad del aire
+Baixas emissões, ajudando a melhorar a qualidade do ar
 
-Confort durante todo el invierno, gracias a la capacidad de calentar el aire y el agua simultáneamente
+Conforto durante todo o inverno, graças à capacidade de aquecer o aire e o agua simultáneamente
 
-Fácil de operar y mantener, con controles simples y accesibles
+Fácil de operar e manter, com controlos simples e accesibles
 
-Con la Estufa de Leña Temy Plus P 20 + Caldera, disfrutará de un sistema de calefacción eficiente, económico y respetuoso con el medio ambiente, manteniendo su casa cálida y confortable durante todo el año.',
+Com a Salamandra a Lenha Temy Plus P 20 + Caldeira, desfrutará de um sistema de aquecimento eficiente, económico e respetuoso com o ambiente, mantendo a sua casa quente e confortável durante todo o ano.',
         'ref' => '53745506',
 
-        'slug' => 'estufa-a-lenha-temy-plus-p-20-caldeira'
+        'slug' => 'estufa-a-lenha-temy-plus-p-20-caldeira',
+        'seo_title' => 'Salamandra a Lenha Temy Plus P 20 + Caldeira',
+        'seo_description' => 'Salamandra a Lenha Temy Plus P 20 + Caldeira. Caldeira a lenha de alto rendimento para aquecimento central e água quente. Envio grátis em Portugal Continental.'
     ],
     [
         'id' => 5527,
-        'title' => 'Estufa de Leña Vulkan 14kW',
+        'title' => 'Salamandra a Lenha Vulkan 14kW',
 
 
         'hover_image' => '',
@@ -766,48 +792,50 @@ Con la Estufa de Leña Temy Plus P 20 + Caldera, disfrutará de un sistema de ca
 
 
         'in_stock' => true, 'color' => '',
-        'short_description' => 'Estufa de leña muy potente. La MBS Vulkan 14 kW queda simplemente magnífica cuando está revestida con esteatita, lo que también le confiere una autonomía importante. Su precio está muy bien posicionado para este tipo de producto.
-Dimensiones de la estufa de leña: General: Ancho 650 mm x Profundidad 595 mm x Altura 735 mm. Chimenea: Ancho 390 mm x Profundidad 400 mm x Altura 265 mm',
-        'description' => 'Estufa de Leña Vulkan 14kW
-La Estufa de Leña Vulkan 14kW es una excelente opción para quienes buscan una calefacción potente y eficiente. Con su diseño robusto y moderno, esta estufa de leña ofrece una excelente capacidad de calefacción, ideal para ambientes medianos y grandes. Su sistema avanzado de combustión optimiza la quema de la leña, garantizando alta eficiencia energética y distribución uniforme del calor por todo el ambiente.
-Gracias a su tecnología de combustión limpia, la Vulkan 14kW no solo ofrece un rendimiento superior, sino que también minimiza las emisiones de CO2, convirtiéndose en una opción respetuosa con el medio ambiente. Además, su construcción de alta calidad asegura durabilidad y resistencia, garantizando años de uso continuo.
+        'short_description' => 'Salamandra a lenha muito potente. A MBS Vulkan 14 kW queda simplesmente magnífica quando está revestida com esteatite (pedra-sabão), o que também lhe confiere uma autonomía importante. O seu preço está muito bem posicionado para este tipo de produto.
+Dimensões da salamandra a lenha: General: Largura 650 mm x Profundidade 595 mm x Altura 735 mm. Chaminé: Largura 390 mm x Profundidade 400 mm x Altura 265 mm',
+        'description' => 'Salamandra a Lenha Vulkan 14kW
+A Salamandra a Lenha Vulkan 14kW é uma excelente opção para quem procura um aquecimento potente e eficiente. Com o seu design robusto e moderno, esta salamandra a lenha oferece uma excelente capacidade de aquecimento, ideal para ambientes médios e grandes. O seu sistema avançado de combustão optimiza a queima da lenha, garantindo alta eficiência energética e distribuição uniforme do calor por todo o ambiente.
+Graças à sua tecnologia de combustão limpa, a Vulkan 14kW não só oferece um rendimento superior, mas também minimiza as emissões de CO2, convertendo-se em uma opção respeitadora do ambiente. Além disso, a sua construção de alta qualidade assegura durabilidade e resistência, garantindo anos de uso contínuo.
 Características:
 
-Potencia térmica de 14 kW, ideal para calefacción de ambientes medianos y grandes
+Potência térmica de 14 kW, ideal para aquecimento de ambientes médios e grandes
 
-Sistema de combustión eficiente, que maximiza el rendimiento de la leña y reduce el consumo
+Sistema de combustão eficiente, que maximiza o rendimento da lenha e reduz o consumo
 
-Diseño moderno y robusto, fabricada con materiales de alta calidad para garantizar resistencia y durabilidad
+Design moderno e robusto, fabricada com materiais de alta qualidade para garantir resistência e durabilidade
 
-Bajas emisiones de CO2, contribuyendo a un ambiente más limpio y ecológico
+Baixas emissões de CO2, contribuindo para um ambiente mais limpo e ecológico
 
-Gran capacidad de calefacción, proporcionando calor constante durante todo el día
+Grande capacidade de aquecimento, proporcionando calor constante durante todo o dia
 
-Fácil mantenimiento, con diseño accesible para limpieza y control
+Fácil manutenção, com design acessível para limpeza e controlo
 
-Beneficios:
+Benefícios:
 
-Eficiencia energética superior, garantizando menor consumo de leña con excelente rendimiento térmico
+Eficiência energética superior, garantindo menor consumo de lenha com excelente rendimento térmico
 
-Confort térmico constante, manteniendo su casa cálida de forma uniforme y prolongada
+Conforto térmico constante, mantendo a sua casa quente de forma uniforme e prolongada
 
-Ecológica y amigable con el medio ambiente, gracias al bajo impacto ambiental y bajas emisiones
+Ecológica e amigable com o ambiente, graças ao baixo impacto ambiental e baixas emissões
 
-Durabilidad a largo plazo, fabricada con materiales robustos que garantizan una larga vida útil
+Durabilidade a longo prazo, fabricada com materiais robustos que garantem uma longa vida útil
 
-Diseño elegante y funcional, que se adapta a diferentes estilos de decoración
+Design elegante e funcional, que se adapta a diferentes estilos de decoração
 
-Fácil operación y mantenimiento, con controles intuitivos y accesibles
+Fácil operação e manutenção, com controlos intuitivos e accesibles
 
-La Estufa de Leña Vulkan 14kW es la solución perfecta para quienes buscan una estufa potente, eficiente y ambientalmente responsable, manteniendo su hogar cálido y confortable durante todo el invierno.',
+A Salamandra a Lenha Vulkan 14kW é a solução perfeita para quem procura uma salamandra potente, eficiente e ambientalmente responsable, mantendo a sua casa quente e confortável durante todo o inverno.',
         'ref' => '53745527',
 
 
-        'slug' => 'estufa-a-lenha-vulkan-14kw'
+        'slug' => 'estufa-a-lenha-vulkan-14kw',
+        'seo_title' => 'Salamandra a Lenha Vulkan 14kW',
+        'seo_description' => 'Salamandra a Lenha Vulkan 14kW. Salamandra a lenha de alto rendimento, calor constante e baixo consumo. Envio grátis em Portugal Continental.'
     ],
     [
         'id' => 5516,
-        'title' => 'Estufa Caldera Super Thermo Magnum',
+        'title' => 'Salamandra-caldeira Super Thermo Magnum',
 
 
         'hover_image' => '',
@@ -822,49 +850,51 @@ La Estufa de Leña Vulkan 14kW es la solución perfecta para quienes buscan una 
 
         'in_stock' => true, 'color' => '',
         'short_description' => 'MBS Super Termo Magnum
-¡Enciende hasta 10 radiadores!
-La estufa de leña con caldera MBS Super Termo Magnum está equipada con una chimenea de vidrio muy grande. Con una potencia nominal de 16,3 kW, ofrece una excelente relación calidad-precio. Dimensiones de la estufa: Conjunto: Ancho 1070 mm x Profundidad 655 mm x Altura 850 mm. Horno: Ancho 270 mm x Profundidad 420 mm x Altura 280 mm. Chimenea: Ancho 400 mm x Profundidad 400 mm x Altura 280 mm',
-        'description' => 'Estufa Caldera Super Thermo Magnum
-La Estufa Caldera Super Thermo Magnum es una solución completa de calefacción que combina la eficiencia de una cocina de leña con la capacidad de generar agua caliente para sistemas de calefacción central. Ideal para quienes buscan una opción potente y versátil, la Super Thermo Magnum es capaz de calentar grandes espacios y proporcionar agua caliente para radiadores o suelo radiante, utilizando leña, una fuente de energía natural y económica.
-Gracias a su sistema avanzado de combustión y caldera integrada, esta estufa asegura una quema limpia y eficiente, reduciendo el consumo de leña y las emisiones de CO₂. Su diseño robusto y fácil mantenimiento hacen de la Super Thermo Magnum una opción duradera y de bajo costo operativo, perfecta para residencias o negocios que necesitan una fuente constante de calor con alto rendimiento.
+¡Enciende até 10 radiadores!
+A salamandra a lenha com caldeira MBS Super Termo Magnum está equipada com uma chaminé de vidrio muito grande. Com uma potência nominal de 16,3 kW, oferece uma excelente relación qualidade-preço. Dimensões da salamandra: Conjunto: Largura 1070 mm x Profundidade 655 mm x Altura 850 mm. Forno: Largura 270 mm x Profundidade 420 mm x Altura 280 mm. Chaminé: Largura 400 mm x Profundidade 400 mm x Altura 280 mm',
+        'description' => 'Salamandra-caldeira Super Thermo Magnum
+A Salamandra-caldeira Super Thermo Magnum é uma solução completa de aquecimento que combina a eficiência de uma fogão a lenha com a capacidade de generar água quente para sistemas de aquecimento central. Ideal para quem procura uma opção potente e versátil, a Super Thermo Magnum é capaz de aquecer grandes espaços e proporcionar água quente para radiadores o piso radiante, utilizando lenha, uma fuente de energia natural e económica.
+Graças ao seu sistema avançado de combustão e caldeira integrada, esta salamandra assegura uma queima limpa e eficiente, reduzindo o consumo de lenha e as emissões de CO₂. O seu design robusto e fácil manutenção hacen da Super Thermo Magnum uma opção duradoura e de baixo custo operativo, perfeita para residências o negócios que necessitam uma fuente constante de calor com alto rendimento.
 
 Características:
 
-Sistema de calefacción doble, que calienta tanto el aire del ambiente como el agua para calefacción central
+Sistema de aquecimento doble, que aquece tanto o aire do ambiente como o agua para aquecimento central
 
-Alta potencia térmica, capaz de calentar grandes espacios y abastecer sistemas de calefacción con agua caliente
+Alta potência térmica, capaz de aquecer grandes espaços e abastecer sistemas de aquecimento com água quente
 
-Tecnología avanzada de combustión, que optimiza el uso de la leña, reduciendo el consumo de combustible
+Tecnología avançada de combustão, que otimiza o uso da lenha, reduzindo o consumo de combustível
 
-Bajas emisiones de CO₂, convirtiéndola en una opción ecológica
+Bajas emissões de CO₂, tornando-a uma opção ecológica
 
-Fácil de usar y mantener, con controles intuitivos y acceso directo a las partes principales para limpieza
+Fácil de usar e manter, com controlos intuitivos e acceso directo às partes principales para limpeza
 
-Diseño robusto y eficiente, fabricada con materiales de alta calidad para garantizar durabilidad
+Design robusto e eficiente, fabricada com materiais de alta qualidade para garantir durabilidade
 
-Beneficios:
+Benefícios:
 
-Elevada eficiencia energética, maximizando el uso de la leña y reduciendo el consumo
+Elevada eficiência energética, maximizando o uso da lenha e reduzindo o consumo
 
-Ahorro a largo plazo, ya que la leña es una fuente de energía accesible y abundante
+Poupança a longo prazo, já que a lenha é uma fuente de energia acessível e abundante
 
-Confort térmico constante, proporcionando calor uniforme en el ambiente y en los sistemas de calefacción
+Conforto térmico constante, proporcionando calor uniforme no ambiente e em os sistemas de aquecimento
 
-Solución ecológica, con baja emisión de CO₂ y sistema de combustión limpio
+Solução ecológica, com baixa emisión de CO₂ e sistema de combustão limpo
 
-Durabilidad y resistencia, construida con materiales de alta calidad para una larga vida útil
+Durabilidade e resistência, construida com materiais de alta qualidade para uma longa vida útil
 
-Fácil mantenimiento y operación, con funcionamiento simple y mantenimiento accesible
+Fácil manutenção e operação, com funcionamento simples e manutenção acessível
 
-La Estufa Caldera Super Thermo Magnum es la elección perfecta para quienes buscan un sistema de calefacción eficiente, ecológico y económico, que proporcione tanto calor ambiental como agua caliente para residencias o negocios.',
+A Salamandra-caldeira Super Thermo Magnum é a escolha perfeita para quem procura um sistema de aquecimento eficiente, ecológico e económico, que proporcione tanto calor ambiental como água quente para residências o negócios.',
         'ref' => '53745516',
 
 
-        'slug' => 'estufa-caldeira-super-thermo-magnum'
+        'slug' => 'estufa-caldeira-super-thermo-magnum',
+        'seo_title' => 'Salamandra-caldeira Super Thermo Magnum',
+        'seo_description' => 'Salamandra-caldeira Super Thermo Magnum. Caldeira a lenha de alto rendimento para aquecimento central e água quente. Envio grátis em Portugal Continental.'
     ],
     [
         'id' => 5517,
-        'title' => 'Estufa con Caldera de Esteatita Super Thermo Magnum',
+        'title' => 'Salamandra com Caldeira de Esteatite (pedra-sabão) Super Thermo Magnum',
 
 
         'hover_image' => 'wp-content/uploads/2025/10/cuisiniere-bouilleur-super-thermo-magnum-pierre-ollaire-1-1-480x480.webp',
@@ -880,52 +910,54 @@ La Estufa Caldera Super Thermo Magnum es la elección perfecta para quienes busc
 
         'in_stock' => true, 'color' => '',
         'short_description' => 'MBS Super Termo Magnum
-¡Caliente aún más su casa con esteatita!
-La gran cualidad de la esteatita es su capacidad de almacenar calor. Lo retiene para liberarlo incluso mucho tiempo después de que el fuego se haya apagado.
-¡Enciende hasta 10 radiadores!
-La estufa de leña con caldera MBS Super Termo Magnum posee una chimenea de vidrio muy grande. Con una potencia nominal de 16,3 kW, ofrece una excelente relación calidad-precio.',
-        'description' => 'Estufa con Caldera de Esteatita Super Thermo Magnum
-La Estufa con Caldera de Esteatita Super Thermo Magnum es la solución perfecta para quienes buscan un sistema de calefacción avanzado, eficiente y ecológico. Su construcción en esteatita, una piedra natural conocida por sus excelentes propiedades de retención y distribución de calor, permite que esta estufa ofrezca un rendimiento térmico excepcional y una combustión prolongada. Además, cuenta con un sistema de caldera integrado que calienta no solo el aire, sino que también proporciona agua caliente para calefacción central y uso doméstico.
-Con un diseño elegante y robusto, la Super Thermo Magnum es ideal para quienes desean una estufa de leña con caldera de alto rendimiento, garantizando confort y eficiencia en grandes espacios durante todo el invierno. Su tecnología avanzada asegura una combustión limpia, reduciendo las emisiones de CO₂ y maximizando la eficiencia energética.
+¡Caliente ainda mais a sua casa com esteatite (pedra-sabão)!
+A gran cualidad da esteatite (pedra-sabão) é o seu capacidade de armazenar calor. Lo retiene para libertá-lo mesmo muito tiempo depois do fogo se ter apagado.
+¡Enciende até 10 radiadores!
+A salamandra a lenha com caldeira MBS Super Termo Magnum posee uma chaminé de vidrio muito grande. Com uma potência nominal de 16,3 kW, oferece uma excelente relación qualidade-preço.',
+        'description' => 'Salamandra com Caldeira de Esteatite (pedra-sabão) Super Thermo Magnum
+A Salamandra com Caldeira de Esteatite (pedra-sabão) Super Thermo Magnum é a solução perfeita para quem procura um sistema de aquecimento avançado, eficiente e ecológico. O seu construção em esteatite (pedra-sabão), uma piedra natural conhecida por os seus excelentes propriedades de retenção e distribuição de calor, permite que esta salamandra ofereça um rendimento térmico excecional e uma combustão prolongada. Além disso, conta com um sistema de caldeira integrado que aquece não só o aire, mas também proporciona água quente para aquecimento central e uso doméstico.
+Com um design elegante e robusto, a Super Thermo Magnum é ideal para quem deseja uma salamandra a lenha com caldeira de alto rendimento, garantindo conforto e eficiência em grandes espaços durante todo o inverno. O seu tecnologia avançada assegura uma combustão limpa, reduzindo as emissões de CO₂ e maximizando a eficiência energética.
 
 Características:
 
-Construcción en esteatita, que mejora la retención y distribución del calor durante un largo período
+Construção em esteatite (pedra-sabão), que melhora a retenção e distribuição do calor durante um largo período
 
-Sistema de caldera integrado para calefacción central y agua caliente sanitaria
+Sistema de caldeira integrado para aquecimento central e água quente sanitária
 
-Alta eficiencia energética, optimizando el consumo de leña y reduciendo la necesidad de combustible adicional
+Alta eficiência energética, optimizando o consumo de lenha e reduzindo a necessidade de combustível adicional
 
-Bajas emisiones de CO₂, contribuyendo a un ambiente más limpio y sostenible
+Bajas emissões de CO₂, contribuindo para um ambiente mais limpo e sustentável
 
-Diseño robusto y elegante, que se adapta a cualquier estilo de decoración
+Design robusto e elegante, que se adapta a qualquer estilo de decoração
 
-Fácil mantenimiento, con acceso simplificado para limpieza y cuidado de la estufa
+Fácil manutenção, com acceso simplificado para limpeza e cuidado da salamandra
 
-Gran capacidad térmica, ideal para calentar grandes espacios o múltiples ambientes simultáneamente
+Grande capacidade térmica, ideal para aquecer grandes espaços o múltiples ambientes simultáneamente
 
-Beneficios:
+Benefícios:
 
-Confort térmico completo, proporcionando calefacción ambiental y agua caliente para uso doméstico
+Conforto térmico completo, proporcionando aquecimento ambiental e água quente para uso doméstico
 
-Ahorro de energía y combustible gracias a la alta eficiencia de la combustión y aprovechamiento del calor
+Poupança de energia e combustível graças à alta eficiência da combustão e aproveitamento do calor
 
-Solución ecológica y sostenible, con baja emisión y combustión limpia
+Solução ecológica e sustentável, com baixa emisión e combustão limpa
 
-Durabilidad excepcional debido a la construcción en esteatita, que mejora la eficiencia térmica y la resistencia al paso del tiempo
+Durabilidade excecional devido à construção em esteatite (pedra-sabão), que melhora a eficiência térmica e a resistência ao paso do tiempo
 
-Ideal para residencias grandes, ofreciendo calor constante y eficiente en toda la casa
+Ideal para residências grandes, oferecendo calor constante e eficiente em toda a casa
 
-Fácil uso y mantenimiento, con sistema intuitivo de control y fácil acceso para limpieza
+Fácil uso e manutenção, com sistema intuitivo de controlo e fácil acesso para limpeza
 
-La Estufa con Caldera de Esteatita Super Thermo Magnum es la elección ideal para quienes buscan una estufa de leña de alta calidad, eficiente, ecológica y capaz de proporcionar tanto calefacción ambiental como agua caliente para su hogar. La combinación de tecnología avanzada y materiales de alta calidad garantiza un rendimiento excepcional y una larga vida útil.',
+A Salamandra com Caldeira de Esteatite (pedra-sabão) Super Thermo Magnum é a escolha ideal para quem procura uma salamandra a lenha de alta qualidade, eficiente, ecológica e capaz de proporcionar tanto aquecimento ambiental como água quente para sua casa. A combinación de tecnologia avançada e materiais de alta qualidade garante um rendimento excecional e uma longa vida útil.',
         'ref' => '53745517',
 
-        'slug' => 'estufa-com-caldeira-de-esteatita-super-thermo-magnum'
+        'slug' => 'estufa-com-caldeira-de-esteatita-super-thermo-magnum',
+        'seo_title' => 'Salamandra com Caldeira de Esteatite (pedra-sabão) Super Thermo Magnum',
+        'seo_description' => 'Salamandra com Caldeira de Esteatite (pedra-sabão) Super Thermo Magnum. Caldeira a lenha de alto rendimento para aquecimento central e água quente. Envio grátis em Portugal Continental.'
     ],
     [
         'id' => 5526,
-        'title' => 'Estufa de Leña 3 Caras MBS Eva',
+        'title' => 'Salamandra a Lenha 3 Faces MBS Eva',
 
 
         'hover_image' => 'wp-content/uploads/2025/10/poele-a-bois-mbs-eva-3-faces-1-1-480x480.webp',
@@ -939,48 +971,50 @@ La Estufa con Caldera de Esteatita Super Thermo Magnum es la elección ideal par
         ],
 
         'in_stock' => true, 'color' => '',
-        'short_description' => 'Estufa de Leña Nórdica Esmaltada por 3 Lados
-La estufa de leña MBS, acristalada en tres lados, ofrece una vista panorámica del fuego, creando un ambiente cálido y acogedor en cualquier espacio. A pesar de su diseño elegante, mantiene una alta eficiencia del 76,9%, asegurando un rendimiento óptimo en la calefacción.
-Dimensiones: Conjunto: Ancho 555 mm x Fondo 605 mm x Alto 780 mm Chimenea: Ancho 500 mm x Fondo 400 mm x Alto 420 mm',
-        'description' => 'Estufa de Leña 3 Caras MBS Eva
-La Estufa de Leña 3 Caras MBS Eva es una estufa moderna y elegante que ofrece excelente eficiencia energética junto a un diseño espectacular. Su innovador formato de tres caras permite disfrutar del fuego desde múltiples ángulos, creando un ambiente acogedor y visualmente atractivo en el hogar. Es ideal para quienes buscan combinar alto rendimiento, estética y funcionalidad en una estufa de leña.
-Gracias a su tecnología avanzada de combustión, la MBS Eva optimiza el uso de la leña, garantizando una quema limpia y eficiente que reduce el consumo de combustible y las emisiones contaminantes. Su construcción robusta y duradera asegura una larga vida útil y un rendimiento constante, proporcionando calor eficaz para espacios medianos y grandes.
+        'short_description' => 'Salamandra a Lenha Nórdica Esmaltada por 3 Lados
+A salamandra a lenha MBS, acristalada em tres lados, oferece uma vista panorámica do fogo, criando um ambiente quente e acolhedor em qualquer espaço. A pesar do seu design elegante, mantém uma alta eficiência do 76,9%, assegurando um rendimento ótimo na aquecimento.
+Dimensões: Conjunto: Largura 555 mm x Profundidade 605 mm x Altura 780 mm Chaminé: Largura 500 mm x Profundidade 400 mm x Altura 420 mm',
+        'description' => 'Salamandra a Lenha 3 Faces MBS Eva
+A Salamandra a Lenha 3 Faces MBS Eva é uma salamandra moderna e elegante que oferece excelente eficiência energética junto a um design espectacular. O seu inovador formato de tres caras permite desfrutar do fogo desde múltiples ángulos, criando um ambiente acolhedor e visualmente atrativo no casa. É ideal para quem procura combinar alto rendimento, estética e funcionalidade em uma salamandra a lenha.
+Graças à sua tecnologia avançada de combustão, a MBS Eva otimiza o uso da lenha, garantindo uma queima limpa e eficiente que reduz o consumo de combustível e as emissões poluentes. O seu construção robusta e duradoura assegura uma longa vida útil e um rendimento constante, proporcionando calor eficaz para espaços médios e grandes.
 Características:
 
-Diseño de 3 caras para disfrutar del fuego desde diferentes ángulos y crear un ambiente acogedor
+Design de 3 faces para desfrutar do fogo desde diferentes ángulos e crear um ambiente acolhedor
 
-Alta eficiencia energética con sistema de combustión que maximiza el rendimiento de la leña
+Alta eficiência energética com sistema de combustão que maximiza o rendimento da lenha
 
-Materiales de alta calidad que aseguran durabilidad y resistencia
+Materiales de alta qualidade que asseguram durabilidade e resistência
 
-Bajas emisiones de CO2 gracias a su tecnología limpia de combustión
+Baixas emissões de CO2 graças a a sua tecnologia limpa de combustão
 
-Gran capacidad de calefacción para espacios medianos y grandes
+Grande capacidade de aquecimento para espaços médios e grandes
 
-Fácil mantenimiento con acceso cómodo para limpieza y control
+Fácil manutenção com acceso confortável para limpeza e controlo
 
-Beneficios:
+Benefícios:
 
-Uso eficiente de la leña que reduce el consumo y ahorra dinero
+Uso eficiente da lenha que reduz o consumo e ahorra dinero
 
-Diseño elegante y funcional que aporta un toque moderno a cualquier espacio
+Design elegante e funcional que aporta um toque moderno a qualquer espaço
 
-Confort térmico constante con distribución uniforme del calor
+Conforto térmico constante com distribuição uniforme do calor
 
-Ahorro a largo plazo gracias a su bajo consumo y alta eficiencia
+Poupança a longo prazo graças ao seu baixo consumo e alta eficiência
 
-Durabilidad garantizada por materiales de primera calidad
+Durabilidade garantizada por materiais de primera qualidade
 
-Fácil uso y mantenimiento con controles simples y acceso directo para limpieza
+Fácil uso e manutenção com controlos simples e acceso directo para limpeza
 
-La Estufa de Leña 3 Caras MBS Eva es la opción perfecta para quienes desean una estufa eficiente, económica y con un diseño innovador, que proporcione calefacción y un ambiente acogedor y atractivo en su hogar.',
+A Salamandra a Lenha 3 Faces MBS Eva é a opção perfeita para quem deseja uma salamandra eficiente, económica e com um design inovador, que proporcione aquecimento e um ambiente acolhedor e atrativo na sua casa.',
         'ref' => '53745526',
 
-        'slug' => 'estufa-de-lena-3-caras-mbs-eva'
+        'slug' => 'salamandra-a-lenha-3-faces-mbs-eva',
+        'seo_title' => 'Salamandra a Lenha 3 Faces MBS Eva',
+        'seo_description' => 'Salamandra a Lenha 3 Faces MBS Eva. Salamandra a lenha de alto rendimento, calor constante e baixo consumo. Envio grátis em Portugal Continental.'
     ],
     [
         'id' => 5530,
-        'title' => 'Estufa de Leña con Caldera MBS Thermo In',
+        'title' => 'Salamandra a Lenha com Caldeira MBS Thermo In',
 
 
         'hover_image' => 'wp-content/uploads/2025/10/poele-bouilleur-mbs-thermo-in-1-1-480x480.webp',
@@ -994,48 +1028,50 @@ La Estufa de Leña 3 Caras MBS Eva es la opción perfecta para quienes desean un
         ],
 
         'in_stock' => true, 'color' => '',
-        'short_description' => 'Estufa de Leña con Caldera MBS Thermo In
-¡Esta estufa de leña con tapa de esteatita ofrece una potencia térmica capaz de alimentar hasta 10 radiadores!
-Dimensiones: Conjunto: Ancho 540 mm x Fondo 590 mm x Alto 1000 mm Chimenea: Ancho 408 mm x Fondo 390 mm x Alto 320 mm',
-        'description' => 'Estufa de Leña con Caldera MBS Thermo In
-La Estufa de Leña con Caldera MBS Thermo In es la solución perfecta para quienes buscan una calefacción eficiente y ecológica, capaz de proporcionar calor tanto al ambiente como al sistema de calefacción central de su hogar. Con un diseño robusto y moderno, esta estufa integra una caldera de alta eficiencia, que aprovecha el calor generado por la combustión para calentar agua y distribuirla mediante radiadores o sistemas de suelo radiante.
-El avanzado sistema de combustión de la MBS Thermo In maximiza la eficiencia del combustible, reduciendo el consumo de leña y las emisiones de CO₂, convirtiéndola en una opción respetuosa con el medio ambiente y económica. Su construcción sólida asegura una larga vida útil y un rendimiento térmico constante, manteniendo su hogar cálido y confortable durante todo el invierno.
+        'short_description' => 'Salamandra a Lenha com Caldeira MBS Thermo In
+¡Esta salamandra a lenha com tapa de esteatite (pedra-sabão) oferece uma potência térmica capaz de alimentar até 10 radiadores!
+Dimensões: Conjunto: Largura 540 mm x Profundidade 590 mm x Altura 1000 mm Chaminé: Largura 408 mm x Profundidade 390 mm x Altura 320 mm',
+        'description' => 'Salamandra a Lenha com Caldeira MBS Thermo In
+A Salamandra a Lenha com Caldeira MBS Thermo In é a solução perfeita para quem procura um aquecimento eficiente e ecológica, capaz de proporcionar calor tanto ao ambiente como ao sistema de aquecimento central da sua casa. Com um design robusto e moderno, esta salamandra integra uma caldeira de alta eficiência, que aproveita o calor generado por a combustão para aquecer agua e distribuirla mediante radiadores o sistemas de piso radiante.
+O avançado sistema de combustão da MBS Thermo In maximiza a eficiência do combustível, reduzindo o consumo de lenha e as emissões de CO₂, tornando-a uma opção respeitadora do ambiente e económica. O seu construção sólida assegura uma longa vida útil e um rendimento térmico constante, mantendo a sua casa quente e confortável durante todo o inverno.
 Características:
 
-Sistema dual que combina calefacción por aire y calefacción central mediante la caldera integrada
+Sistema dual que combina aquecimento por aire e aquecimento central mediante a caldeira integrada
 
-Alta potencia térmica, ideal para calentar grandes espacios y suministrar agua caliente para radiadores o suelo radiante
+Alta potência térmica, ideal para aquecer grandes espaços e suministrar água quente para radiadores o piso radiante
 
-Tecnología avanzada de combustión que optimiza la quema de la leña, garantizando mayor eficiencia y menor consumo
+Tecnología avançada de combustão que optimiza a queima da lenha, garantindo maior eficiência e menor consumo
 
-Bajas emisiones de CO₂ gracias a su sistema de combustión limpio y eficiente
+Bajas emissões de CO₂ graças ao seu sistema de combustão limpo e eficiente
 
-Diseño robusto y moderno, fabricado con materiales de alta calidad para una larga durabilidad
+Design robusto e moderno, fabricado com materiais de alta qualidade para uma longa durabilidade
 
-Fácil mantenimiento, con acceso cómodo para la limpieza y el control tanto de la estufa como de la caldera
+Fácil manutenção, com acceso confortável para a limpeza e o controlo tanto da salamandra como da caldeira
 
-Beneficios:
+Benefícios:
 
-Eficiencia energética superior, con excelente rendimiento térmico para aire y agua, reduciendo el consumo de leña
+Eficiência energética superior, com excelente rendimento térmico para aire e agua, reduzindo o consumo de lenha
 
-Confort térmico constante, que proporciona calor uniforme y agua caliente para calefacción
+Conforto térmico constante, que proporciona calor uniforme e água quente para aquecimento
 
-Ecológica y económica, gracias a las bajas emisiones y a la optimización del uso del combustible natural
+Ecológica e económica, graças às baixas emissões e à optimización do uso do combustível natural
 
-Durabilidad garantizada por sus materiales robustos y diseño resistente
+Durabilidade garantizada por os seus materiais robustos e design resistente
 
-Estética atractiva y funcional, adaptable a cualquier estilo de hogar
+Estética atrativa e funcional, adaptável a qualquer estilo de casa
 
-Operación y mantenimiento sencillos, con controles intuitivos para un uso diario cómodo
+Operación e manutenção simples, com controlos intuitivos para um uso diário confortável
 
-La Estufa de Leña con Caldera MBS Thermo In es la opción ideal para quienes desean una solución integral de calefacción eficiente, ecológica y económica, que combine la comodidad de un hogar cálido con la provisión de agua caliente para calefacción central.',
+A Salamandra a Lenha com Caldeira MBS Thermo In é a opção ideal para quem deseja uma solução integral de aquecimento eficiente, ecológica e económica, que combine a comodidade de um casa quente com a fornecimento de água quente para aquecimento central.',
         'ref' => '53745530',
 
-        'slug' => 'estufa-de-lena-con-caldera-mbs-thermo-in'
+        'slug' => 'salamandra-a-lenha-com-caldeira-mbs-thermo-in',
+        'seo_title' => 'Salamandra a Lenha com Caldeira MBS Thermo In',
+        'seo_description' => 'Salamandra a Lenha com Caldeira MBS Thermo In. Caldeira a lenha de alto rendimento para aquecimento central e água quente. Envio grátis em Portugal Continental.'
     ],
     [
         'id' => 5524,
-        'title' => 'Estufa de leña Hunter 14B',
+        'title' => 'Salamandra a lenha Hunter 14B',
 
 
         'hover_image' => '',
@@ -1048,49 +1084,51 @@ La Estufa de Leña con Caldera MBS Thermo In es la opción ideal para quienes de
         ],
 
         'in_stock' => true, 'color' => '',
-        'short_description' => 'Estufa de leña con caldera Hunter 14B
-Esta estufa con caldera de doble pared tiene una potencia de 10 a 13 kW en hidráulica y 5 kW en radiación.
-Permite la conexión de hasta 7-8 radiadores
-Rendimiento 73,6%
+        'short_description' => 'Salamandra a lenha com caldeira Hunter 14B
+Esta salamandra com caldeira de doble pared tem uma potência de 10 a 13 kW em hidráulica e 5 kW em radiación.
+Permite a conexión de até 7-8 radiadores
+Rendimento 73,6%
 Para troncos de 50 cm
-Sistema de vidrio limpio
-Opción proporcionada: parrilla multicombustible
-Doble quema
+Sistema de vidrio limpo
+Opción proporcionada: parrilla multicombustível
+Doble queima
 Rejilla de fricción
 Peso: 170kg
 Puertas de doble acristalamiento
-Hecho en Inglaterra, muy buena calidad.
-2 años de garantía',
-        'description' => 'Estufa de Leña Hunter 14B
-La Estufa de Leña Hunter 14B es una opción excelente para quienes buscan una estufa potente y eficiente, diseñada para ofrecer un calor constante y confortable en su hogar. Con un diseño robusto y moderno, la Hunter 14B proporciona una excelente distribución del calor, lo que la convierte en la solución ideal para calentar espacios medianos y grandes.
-Su sistema de combustión avanzado maximiza la eficiencia de la leña, permitiendo una quema más limpia y reduciendo las emisiones. Esto no solo ayuda a cuidar el medio ambiente, sino que también mejora la rentabilidad de la estufa, ya que optimiza el uso de la madera, reduciendo la cantidad de combustible necesario.
-Fabricada con materiales de alta calidad, la Hunter 14B destaca por su durabilidad y resistencia. Además, su diseño elegante y compacto se adapta fácilmente a diferentes estilos de decoración, convirtiéndola en una pieza funcional y atractiva para cualquier hogar.
+Hecho em Inglaterra, muito buena qualidade.
+2 anos de garantia',
+        'description' => 'Salamandra a Lenha Hunter 14B
+A Salamandra a Lenha Hunter 14B é uma opção excelente para quem procura uma salamandra potente e eficiente, concebida para oferecer um calor constante e confortável na sua casa. Com um design robusto e moderno, a Hunter 14B proporciona uma excelente distribuição do calor, o que a torna na solução ideal para aquecer espaços médios e grandes.
+O seu sistema de combustão avançado maximiza a eficiência da lenha, permitindo uma queima mais limpa e reduzindo as emissões. Isto não só ajuda a cuidar o ambiente, mas também melhora a rentabilidade da salamandra, já que otimiza o uso da madeira, reduzindo a quantidade de combustível necessário.
+Fabricada com materiais de alta qualidade, a Hunter 14B destaca-se por a sua durabilidade e resistência. Além disso, o seu design elegante e compacto adapta-se facilmente a diferentes estilos de decoração, tornando-a uma peça funcional e atrativa para qualquer casa.
 Características:
 
-Potencia de calefacción: Ideal para calentar espacios medianos y grandes
-Sistema de combustión eficiente, que maximiza el rendimiento de la leña y reduce el consumo
-Diseño robusto y elegante, adaptándose a cualquier estilo de decoración
-Materiales de alta calidad, asegurando durabilidad y larga vida útil
-Bajas emisiones de CO2, contribuyendo a un ambiente más limpio y saludable
-Fácil mantenimiento, con un diseño accesible para la limpieza y control
+Potência de aquecimento: Ideal para aquecer espaços médios e grandes
+Sistema de combustão eficiente, que maximiza o rendimento da lenha e reduz o consumo
+Design robusto e elegante, adaptando-se a qualquer estilo de decoração
+Materiales de alta qualidade, assegurando durabilidade e longa vida útil
+Baixas emissões de CO2, contribuindo para um ambiente mais limpo e saludable
+Fácil manutenção, com um design acessível para a limpeza e controlo
 
-Beneficios:
+Benefícios:
 
-Eficiencia energética, con un bajo consumo de leña y una excelente distribución del calor
-Ecológica y respetuosa con el medio ambiente, gracias a su sistema de combustión limpio y bajo nivel de emisiones
-Diseño elegante y funcional, que combina estética y practicidad
-Durabilidad y resistencia, garantizando un rendimiento de largo plazo
-Confort constante, con una distribución de calor que mantiene su hogar cálido de manera eficiente
-Fácil de operar y mantener, con controles simples y accesibles
+Eficiência energética, com um baixo consumo de lenha e uma excelente distribuição do calor
+Ecológica e respeitadora do ambiente, graças ao seu sistema de combustão limpo e baixo nível de emissões
+Design elegante e funcional, que combina estética e praticidade
+Durabilidade e resistência, garantindo um rendimento de largo plazo
+Conforto constante, com uma distribuição de calor que mantém a sua casa quente de forma eficiente
+Fácil de operar e manter, com controlos simples e accesibles
 
-La Estufa de Leña Hunter 14B es la opción ideal para aquellos que buscan una estufa eficiente, económica y respetuosa con el medio ambiente, proporcionando un calor agradable y constante en su hogar.',
+A Salamandra a Lenha Hunter 14B é a opção ideal para quem procura uma salamandra eficiente, económico e respeitador do ambiente, proporcionando um calor agradável e constante na sua casa.',
         'ref' => '53745524',
 
-        'slug' => 'estufa-de-lena-hunter-14b'
+        'slug' => 'salamandra-a-lenha-hunter-14b',
+        'seo_title' => 'Salamandra a lenha Hunter 14B',
+        'seo_description' => 'Salamandra a lenha Hunter 14B. Salamandra a lenha de alto rendimento, calor constante e baixo consumo. Envio grátis em Portugal Continental.'
     ],
     [
         'id' => 5525,
-        'title' => 'Estufa de leña Hunter 80B',
+        'title' => 'Salamandra a lenha Hunter 80B',
 
 
         'hover_image' => '',
@@ -1103,48 +1141,50 @@ La Estufa de Leña Hunter 14B es la opción ideal para aquellos que buscan una e
         ],
 
         'in_stock' => true, 'color' => '',
-        'short_description' => 'Estufa de leña Hunter 80B
-Esta gran estufa con caldera de doble pared tiene una potencia de 12 a 16 kW en hidráulica y hasta 10 kW en radiación. Esto le permite conectar hasta 10-12 radiadores. La 80 B es la estufa de calefacción central más grande de Hunter Stoves. Esta estufa es especialmente adecuada para salones grandes.
+        'short_description' => 'Salamandra a lenha Hunter 80B
+Esta gran salamandra com caldeira de doble pared tem uma potência de 12 a 16 kW em hidráulica e até 10 kW em radiación. Isto lhe permite conectar até 10-12 radiadores. A 80 B é a salamandra de aquecimento central mais grande de Hunter Stoves. Esta salamandra é especialmente adequada para salones grandes.
 Características
-Rendimiento 71%
-Para troncos de hasta 60 cm.
-Sistema de vidrio limpio
-Opción proporcionada: parrilla multicombustible
-Doble quema
+Rendimento 71%
+Para troncos de até 60 cm.
+Sistema de vidrio limpo
+Opción proporcionada: parrilla multicombustível
+Doble queima
 Rejilla de fricción
 Peso: 220 kg
 Puertas dobles
-Hecho en Inglaterra, muy buena calidad.
-Garantía de dos años',
-        'description' => 'Estufa de Leña Hunter 80B
-La Estufa de Leña Hunter 80B es una estufa de alto rendimiento, perfecta para quienes buscan calentar su hogar de manera eficiente y económica. Su potente sistema de combustión y su diseño robusto permiten una excelente distribución del calor, asegurando un confort térmico constante en espacios grandes o medianos.
-Equipada con tecnología avanzada, la Hunter 80B optimiza el uso de la leña, garantizando una combustión más limpia y un bajo consumo de combustible, lo que la convierte en una opción respetuosa con el medio ambiente y económica a largo plazo. Además, su diseño elegante y moderno se integra perfectamente en cualquier tipo de decoración, aportando funcionalidad y estilo.
+Hecho em Inglaterra, muito buena qualidade.
+Garantia de dos anos',
+        'description' => 'Salamandra a Lenha Hunter 80B
+A Salamandra a Lenha Hunter 80B é uma salamandra de alto rendimento, perfeita para quem procura aquecer a sua casa de forma eficiente e económica. O seu potente sistema de combustão e o seu design robusto permitem uma excelente distribuição do calor, assegurando um conforto térmico constante em espaços grandes ou médios.
+Equipada com tecnologia avançada, a Hunter 80B otimiza o uso da lenha, garantindo uma combustão mais limpa e um baixo consumo de combustível, o que a torna em uma opção respeitadora do ambiente e económica a longo prazo. Além disso, o seu design elegante e moderno se integra perfeitamente em qualquer tipo de decoração, conferemdo funcionalidade e estilo.
 Características:
 
-Alta potencia de calefacción, ideal para espacios grandes y medianos
-Sistema de combustión eficiente, que reduce el consumo de leña y las emisiones
-Diseño elegante y robusto, fabricada con materiales de alta calidad para garantizar durabilidad y resistencia
-Bajas emisiones de CO2, contribuyendo a un entorno más limpio y ecológico
-Gran capacidad de calefacción, proporcionando calor constante durante largas horas
-Fácil mantenimiento, con acceso sencillo para su limpieza y control
+Alta potência de aquecimento, ideal para espaços grandes e médios
+Sistema de combustão eficiente, que reduz o consumo de lenha e as emissões
+Design elegante e robusto, fabricada com materiais de alta qualidade para garantir durabilidade e resistência
+Baixas emissões de CO2, contribuindo para um ambiente mais limpo e ecológico
+Grande capacidade de aquecimento, proporcionando calor constante durante largas horas
+Fácil manutenção, com acesso simples parao seu limpeza e controlo
 
-Beneficios:
+Benefícios:
 
-Eficiencia energética, gracias a su sistema de combustión optimizado que maximiza el rendimiento de la leña
-Confort térmico constante, manteniendo su hogar cálido y acogedor durante todo el día
-Respetuosa con el medio ambiente, debido a las bajas emisiones y la reducción de consumo de leña
-Diseño atractivo y funcional, que se adapta a diversos estilos de interior
-Durabilidad y resistencia, fabricada con materiales robustos para una larga vida útil
-Fácil de usar y mantener, con controles accesibles y de sencillo manejo
+Eficiência energética, graças ao seu sistema de combustão otimizado que maximiza o rendimento da lenha
+Conforto térmico constante, mantendo a sua casa quente e acolhedor durante todo o dia
+Respetuosa com o ambiente, devido às baixas emissões e a redução de consumo de lenha
+Design atrativo e funcional, que se adapta a diversos estilos de interior
+Durabilidade e resistência, fabricada com materiais robustos para uma longa vida útil
+Fácil de usar e manter, com controles accesibles e de simples manuseamento
 
-La Estufa de Leña Hunter 80B es la solución perfecta para quienes buscan una calefacción eficiente, ecológica y duradera, que proporcione un calor agradable y constante en su hogar o lugar de trabajo.',
+A Salamandra a Lenha Hunter 80B é a solução perfeita para quem procura um aquecimento eficiente, ecológica e duradoura, que proporcione um calor agradável e constante na sua casa o local de trabalho.',
         'ref' => '53745525',
 
-        'slug' => 'estufa-de-lena-hunter-80b'
+        'slug' => 'salamandra-a-lenha-hunter-80b',
+        'seo_title' => 'Salamandra a lenha Hunter 80B',
+        'seo_description' => 'Salamandra a lenha Hunter 80B. Salamandra a lenha de alto rendimento, calor constante e baixo consumo. Envio grátis em Portugal Continental.'
     ],
     [
         'id' => 5509,
-        'title' => 'Estufa de leña MBS Magnum',
+        'title' => 'Salamandra a lenha MBS Magnum',
 
 
         'hover_image' => '',
@@ -1157,56 +1197,58 @@ La Estufa de Leña Hunter 80B es la solución perfecta para quienes buscan una c
         ],
 
         'in_stock' => true, 'color' => '',
-        'short_description' => 'MBS Magnum: El cocinero tradicional
-Tiene una gran chimenea de cristal que permite ver las llamas en acción.
-Esta estufa está disponible en 3 colores (el precio es el mismo independientemente del color)
-Dimensiones de la estufa
-Conjunto: Ancho 1070 mm x Fondo 655 mm x Alto 850 mm
-Horno: Ancho 350 mm x Fondo 470 mm x Alto 270 mm
-Brasero grande: ancho 300 mm x profundidad 400 mm x altura 400 mm
+        'short_description' => 'MBS Magnum: O fogão tradicional
+Tem uma grande chaminé de vidro que permite ver as chamas em ação.
+Esta salamandra está disponível em 3 cores (o preço é o mesmo independentemente do cor)
+Dimensões da salamandra
+Conjunto: Largura 1070 mm x Profundidade 655 mm x Altura 850 mm
+Forno: Largura 350 mm x Profundidade 470 mm x Altura 270 mm
+Braseiro grande: largura 300 mm x profundidade 400 mm x altura 400 mm
 Características
-Peso aprox. 172 kilos
-Potencia 9,5 KW
-Rendimiento 76,9%
-Tamaño de troncos 40 cm máximo.
-chimenea de hierro fundido
-Ajuste del aire primario y del aire secundario.
-Elección de salidas de humo de 120 mm: trasera, superior (desplazamiento hacia la derecha)
-cenicero muy grande
-Pasamanos en la parte superior
-Placa superior de hierro fundido
-Carga superior o frontal
-Vaso de horno con termómetro incorporado
-Cumple y certificado por la norma europea EN 12815',
-        'description' => 'Estufa de Leña MBS Magnum
-La Estufa de Leña MBS Magnum es una estufa de alto rendimiento que combina eficiencia, robustez y diseño moderno. Con su potente sistema de combustión, la MBS Magnum está diseñada para ofrecer una calefacción excepcional en espacios grandes o medianos, asegurando que su hogar o lugar de trabajo se mantenga cálido y confortable durante todo el invierno.
-Gracias a su tecnología avanzada, la Estufa de Leña MBS Magnum optimiza el uso de la leña, lo que reduce el consumo de combustible y las emisiones, contribuyendo a un entorno más limpio y ecológico. Su estructura robusta y su diseño atractivo no solo garantizan un rendimiento de calefacción superior, sino que también aportan estilo a su espacio, integrándose perfectamente en cualquier tipo de decoración.
+Peso aprox. 172 quilos
+Potência 9,5 KW
+Rendimento 76,9%
+Tamanho de troncos 40 cm máximo.
+chaminé de ferro fundido
+Ajuste do ar primário e do ar secundário.
+Escolha de salidas de fumo de 120 mm: traseira, superior (deslocação para a direita)
+cinzeiro muito grande
+Corrimão na parte superior
+Placa superior de ferro fundido
+Carga superior ouu frontal
+Tabuleiro do forno com termómetro incorporado
+Cumpre e é certificado pela norma europeia EN 12815',
+        'description' => 'Salamandra a Lenha MBS Magnum
+A Salamandra a Lenha MBS Magnum é uma salamandra de alto rendimento que combina eficiência, robustez e design moderno. Com o seu potente sistema de combustão, a MBS Magnum está concebida para oferecer um aquecimento excecional em espaços grandes ou médios, assegurando que a sua casa o local de trabalho se mantenha quente e confortável durante todo o inverno.
+Graças à sua tecnologia avançada, a Salamandra a Lenha MBS Magnum otimiza o uso da lenha, o que reduz o consumo de combustível e as emissões, contribuindo para um ambiente mais limpo e ecológico. O seu estrutura robusta e o seu design atrativo não só garantem um rendimento de aquecimento superior, mas também conferem estilo ao seu espaço, integrando-se perfeitamente em qualquer tipo de decoração.
 Características:
 
-Potente sistema de combustión, que maximiza la eficiencia y reduce el consumo de leña
-Diseño moderno y elegante, que se adapta a todo tipo de ambientes
-Estructura robusta, fabricada con materiales de alta calidad para asegurar su durabilidad
-Gran capacidad de calefacción, ideal para calentar espacios medianos y grandes
-Bajas emisiones de CO2, gracias a su eficiente sistema de combustión
-Fácil mantenimiento, con un diseño accesible para la limpieza y control de la estufa
+Potente sistema de combustão, que maximiza a eficiência e reduz o consumo de lenha
+Design moderno e elegante, que se adapta a todo tipo de ambientes
+Estrutura robusta, fabricada com materiais de alta qualidade para assegurar a sua durabilidade
+Grande capacidade de aquecimento, ideal para aquecer espaços médios e grandes
+Baixas emissões de CO2, graças ao seu eficiente sistema de combustão
+Fácil manutenção, com um design acessível para a limpeza e controlo da salamandra
 
-Beneficios:
+Benefícios:
 
-Eficiencia energética superior, proporcionando calor constante con menos consumo de leña
-Ecológica y económica, debido a su bajo impacto ambiental y reducción de emisiones
-Durabilidad a largo plazo, gracias a su construcción de alta calidad
-Confort térmico constante, manteniendo su hogar o espacio cálido durante todo el día
-Diseño atractivo y funcional, que aporta un toque elegante a su hogar
-Fácil de operar y mantener, con controles intuitivos y sencillos para su uso diario
+Eficiência energética superior, proporcionando calor constante com menos consumo de lenha
+Ecológica e económica, devido ao seu baixo impacto ambiental e redução de emissões
+Durabilidade a longo prazo, graças a a sua construção de alta qualidade
+Conforto térmico constante, mantendo a sua casa o espaço quente durante todo o dia
+Design atrativo e funcional, que aporta um toque elegante a sua casa
+Fácil de operar e manter, com controlos intuitivos e simples parao seu uso diário
 
-Con la Estufa de Leña MBS Magnum, disfrutará de una calefacción eficiente, económica y respetuosa con el medio ambiente, manteniendo su hogar cálido y acogedor durante los meses más fríos del año.',
+Com a Salamandra a Lenha MBS Magnum, desfrutará de um aquecimento eficiente, económico e respeitador do ambiente, mantendo a sua casa quente e acolhedor durante os meses mais frios do ano.',
         'ref' => '53745509',
 
-        'slug' => 'estufa-de-lena-mbs-magnum'
+        'slug' => 'salamandra-a-lenha-mbs-magnum',
+        'seo_title' => 'Salamandra a lenha MBS Magnum',
+        'seo_description' => 'Salamandra a lenha MBS Magnum. Salamandra a lenha de alto rendimento, calor constante e baixo consumo. Envio grátis em Portugal Continental.'
     ],
     [
         'id' => 5513,
-        'title' => 'Estufa de leña MBS Magnum de esteatita',
+        'title' => 'Salamandra a lenha MBS Magnum de esteatite (pedra-sabão)',
 
 
         'hover_image' => '',
@@ -1219,57 +1261,59 @@ Con la Estufa de Leña MBS Magnum, disfrutará de una calefacción eficiente, ec
         ],
 
         'in_stock' => true, 'color' => '',
-        'short_description' => 'Estufa tradicional de esteatita
-Esta estufa está revestida con esteatita para retener el calor.
-Dimensiones de la estufa
-Conjunto: Ancho 1070 mm x Fondo 655 mm x Alto 850 mm
-Horno: Ancho 350 mm x Fondo 470 mm x Alto 270 mm
-Brasero grande: ancho 300 mm x profundidad 400 mm x altura 400 mm
+        'short_description' => 'Salamandra tradicional de esteatite (pedra-sabão)
+Esta salamandra está revestida com esteatite (pedra-sabão) para reter o calor.
+Dimensões da salamandra
+Conjunto: Largura 1070 mm x Profundidade 655 mm x Altura 850 mm
+Forno: Largura 350 mm x Profundidade 470 mm x Altura 270 mm
+Braseiro grande: largura 300 mm x profundidade 400 mm x altura 400 mm
 Características
-Tiene una gran chimenea de cristal.
+Tem uma grande chaminé de vidro.
 Peso aproximadamente 219 kg
-Potencia 9,5 KW
-Rendimiento 76,9%
-chimenea de hierro fundido
-Tamaño de troncos 40 cm máximo.
-Ajuste del aire primario y del aire secundario.
-Elección de salidas de humo de 120 mm: trasera o superior derecha
-cenicero muy grande
-Pasamanos en la parte superior
-Placa superior de hierro fundido
-Carga superior o frontal
-Vaso de horno con termómetro incorporado
-Cumple y certificado por la norma europea EN 12815
-Paga en 3 cuotas sin comisiones (bajo simple solicitud)',
-        'description' => 'Estufa de Leña MBS Magnum de Esteatita
-La Estufa de Leña MBS Magnum de Esteatita es una opción de calefacción de alto rendimiento que combina la eficiencia de una estufa de leña con las excepcionales propiedades térmicas de la esteatita. Fabricada con este material natural, esta estufa proporciona una distribución del calor uniforme y prolongada, maximizando la eficiencia de la combustión y reduciendo el consumo de leña.
-Gracias a su diseño robusto y moderno, la MBS Magnum de Esteatita no solo ofrece un rendimiento superior, sino que también garantiza un ambiente cálido y acogedor en su hogar. La esteatita es conocida por su capacidad de almacenar calor y liberarlo gradualmente, lo que asegura que la estufa mantenga una temperatura agradable durante varias horas incluso después de que el fuego se apaga.
+Potência 9,5 KW
+Rendimento 76,9%
+chaminé de ferro fundido
+Tamanho de troncos 40 cm máximo.
+Ajuste do ar primário e do ar secundário.
+Escolha de salidas de fumo de 120 mm: traseira ou superior direita
+cinzeiro muito grande
+Corrimão na parte superior
+Placa superior de ferro fundido
+Carga superior ouu frontal
+Tabuleiro do forno com termómetro incorporado
+Cumpre e é certificado pela norma europeia EN 12815
+Paga em 3 cuotas sem comisiones (baixo simples solicitud)',
+        'description' => 'Salamandra a Lenha MBS Magnum de Esteatite (pedra-sabão)
+A Salamandra a Lenha MBS Magnum de Esteatite (pedra-sabão) é uma opção de aquecimento de alto rendimento que combina a eficiência de uma salamandra a lenha com as excecionais propriedades térmicas da esteatite (pedra-sabão). Fabricada com este material natural, esta salamandra proporciona uma distribuição do calor uniforme e prolongada, maximizando a eficiência da combustão e reduzindo o consumo de lenha.
+Graças ao seu design robusto e moderno, a MBS Magnum de Esteatite (pedra-sabão) não só oferece um rendimento superior, mas também garante um ambiente quente e acolhedor na sua casa. A esteatite (pedra-sabão) é conhecida por o seu capacidade de armazenar calor e libertá-lo gradualmente, o que assegura que a salamandra mantenha uma temperatura agradável durante várias horas mesmo depois do fogo se apaga.
 Características:
 
-Fabricada con esteatita, un material natural de alta calidad con excelentes propiedades térmicas
-Distribución de calor uniforme y prolongada, que mantiene su hogar cálido durante más tiempo
-Alta eficiencia de combustión, lo que permite aprovechar al máximo la leña y reducir el consumo
-Bajas emisiones de CO2, contribuyendo a un entorno más limpio y respetuoso con el medio ambiente
-Diseño moderno y elegante, que se adapta perfectamente a diferentes estilos de decoración
-Fácil de mantener, con un acceso sencillo para la limpieza y el control del sistema de combustión
+Fabricada com esteatite (pedra-sabão), um material natural de alta qualidade com excelentes propriedades térmicas
+Distribución de calor uniforme e prolongada, que mantém a sua casa quente durante mais tiempo
+Alta eficiência de combustão, o que permite aproveitar ao máximo a lenha e reduzir o consumo
+Baixas emissões de CO2, contribuindo para um ambiente mais limpo e respetuoso com o ambiente
+Design moderno e elegante, que adapta-se perfeitamente a diferentes estilos de decoração
+Fácil de manter, com um acesso simples para a limpeza e o controlo do sistema de combustão
 
-Beneficios:
+Benefícios:
 
-Confort térmico constante, gracias a la capacidad de la esteatita de almacenar y liberar calor lentamente
-Eficiencia energética superior, reduciendo el consumo de leña y maximizando el rendimiento térmico
-Ecológica y sostenible, con bajas emisiones y un producto completamente natural
-Durabilidad y resistencia, fabricada con materiales de alta calidad que garantizan una larga vida útil
-Diseño elegante y funcional, que aporta calidez y estilo a su hogar
-Fácil de usar y mantener, con controles sencillos y un diseño intuitivo
+Conforto térmico constante, graças à capacidade da esteatite (pedra-sabão) de armazenar e liberar calor lentamente
+Eficiência energética superior, reduzindo o consumo de lenha e maximizando o rendimento térmico
+Ecológica e sustentável, com baixas emissões e um produto completamente natural
+Durabilidade e resistência, fabricada com materiais de alta qualidade que garantem uma longa vida útil
+Design elegante e funcional, que aporta calor e estilo a sua casa
+Fácil de usar e manter, com controles simples e um design intuitivo
 
-La Estufa de Leña MBS Magnum de Esteatita es la elección ideal para quienes buscan una solución de calefacción eficiente, duradera y respetuosa con el medio ambiente, que ofrezca una calefacción prolongada y constante para su hogar.',
+A Salamandra a Lenha MBS Magnum de Esteatite (pedra-sabão) é a escolha ideal para quem procura uma solução de aquecimento eficiente, duradoura e respeitadora do ambiente, que ofereça um aquecimento prolongada e constante para sua casa.',
         'ref' => '53745513',
 
-        'slug' => 'estufa-de-lena-mbs-magnum-de-esteatita'
+        'slug' => 'salamandra-a-lenha-mbs-magnum-de-esteatite',
+        'seo_title' => 'Salamandra a lenha MBS Magnum de esteatite (pedra-sabão)',
+        'seo_description' => 'Salamandra a lenha MBS Magnum de esteatite (pedra-sabão). Salamandra a lenha de alto rendimento, calor constante e baixo consumo. Envio grátis em Portugal Continental.'
     ],
     [
         'id' => 5531,
-        'title' => 'Estufa de Leña MBS Vesta',
+        'title' => 'Salamandra a Lenha MBS Vesta',
 
 
         'hover_image' => '',
@@ -1283,41 +1327,43 @@ La Estufa de Leña MBS Magnum de Esteatita es la elección ideal para quienes bu
         ],
 
         'in_stock' => true, 'color' => '',
-        'short_description' => 'Estufa de Leña MBS Vesta
-La Estufa de Leña MBS Vesta combina sencillez y eficiencia en un diseño compacto que calienta por convección y radiación, ideal para hogares que buscan confort térmico con bajo consumo.
-Dimensiones: General: Ancho 455 mm x Fondo 440 mm x Alto 890 mm Chimenea: Ancho 400 mm x Fondo 340 mm x Alto 280 mm',
-        'description' => 'Estufa de Leña MBS Vesta
-La Estufa de Leña MBS Vesta es una solución moderna y eficiente para calefacción en hogares. Diseñada con materiales resistentes y un sistema de combustión optimizado, esta estufa ofrece un rendimiento térmico alto y un diseño atractivo que se integra en cualquier espacio.
-Características principales:
+        'short_description' => 'Salamandra a Lenha MBS Vesta
+A Salamandra a Lenha MBS Vesta combina sencillez e eficiência em um design compacto que aquece por convección e radiación, ideal para casas que procuram conforto térmico com baixo consumo.
+Dimensões: General: Largura 455 mm x Profundidade 440 mm x Altura 890 mm Chaminé: Largura 400 mm x Profundidade 340 mm x Altura 280 mm',
+        'description' => 'Salamandra a Lenha MBS Vesta
+A Salamandra a Lenha MBS Vesta é uma solução moderna e eficiente para aquecimento em casas. Diseñada com materiais resistentes e um sistema de combustão otimizado, esta salamandra oferece um rendimento térmico alto e um design atrativo que se integra em qualquer espaço.
+Características principais:
 
-Potencia adecuada para calentar espacios medianos
+Potência adequada para aquecer espaços médios
 
-Diseño robusto y elegante, con acabado en acero
+Design robusto e elegante, com acabado em aço
 
-Cristal vitrocerámico resistente al calor que permite disfrutar de la visión del fuego
+Cristal vitrocerámico resistente ao calor que permite desfrutar da visión do fogo
 
-Fácil manejo y mantenimiento
+Fácil manuseamento e manutenção
 
-Compatible con leña de diferentes tamaños
+Compatible com lenha de diferentes tamanhos
 
-Beneficios:
+Benefícios:
 
-Alta eficiencia energética que reduce el consumo de combustible
+Alta eficiência energética que reduz o consumo de combustível
 
-Combustión limpia y bajas emisiones
+Combustão limpa e baixas emissões
 
-Calor constante y homogéneo para ambientes confortables
+Calor constante e homogéneo para ambientes confortáveis
 
-Ideal para estufas, chimeneas y espacios residenciales
+Ideal para salamandras, lareiras e espaços residenciais
 
-La Estufa de Leña MBS Vesta combina eficiencia, durabilidad y estilo para ofrecer una calefacción sostenible y agradable.',
+A Salamandra a Lenha MBS Vesta combina eficiência, durabilidade e estilo para oferecer um aquecimento sustentável e agradável.',
         'ref' => '53745531',
 
-        'slug' => 'estufa-de-lena-mbs-vesta'
+        'slug' => 'salamandra-a-lenha-mbs-vesta',
+        'seo_title' => 'Salamandra a Lenha MBS Vesta',
+        'seo_description' => 'Salamandra a Lenha MBS Vesta. Salamandra a lenha de alto rendimento, calor constante e baixo consumo. Envio grátis em Portugal Continental.'
     ],
     [
         'id' => 5511,
-        'title' => 'Estufa de leña Moravia 9103',
+        'title' => 'Salamandra a lenha Moravia 9103',
 
 
         'hover_image' => '',
@@ -1330,52 +1376,54 @@ La Estufa de Leña MBS Vesta combina eficiencia, durabilidad y estilo para ofrec
         ],
 
         'in_stock' => true, 'color' => '',
-        'short_description' => 'Dimensiones de la estufa:
-General: Ancho 810 mm x Profundidad 640 mm x Alto 850 mm
-Horno: Ancho 400 mm x Fondo 470 mm x Alto 294 mm
+        'short_description' => 'Dimensões da salamandra:
+General: Largura 810 mm x Profundidade 640 mm x Altura 850 mm
+Forno: Largura 400 mm x Profundidade 470 mm x Altura 294 mm
 Características:
-Posición de verano o invierno.
-Horno derecho o izquierdo
-Cumple con EN 12815 elegible para crédito fiscal.
-Potencia nominal 8,4 kW en calefacción
+Posición de verano o inverno.
+Forno derecho o izquierdo
+Cumple com EN 12815 elegible para crédito fiscal.
+Potência nominal 8,4 kW em aquecimento
 Peso: 140 kg
-Calienta hasta 277 m3
-combustible de madera
+Calienta até 277 m3
+combustível de madeira
 Maxi troncos L 35 cm
-Rendimiento 83,2%
-Salidas de humo traseras, superiores y laterales de 120 mm.
-chimenea de ladrillo refractario
-Rejilla de hierro fundido
-Cuerpo de acero de alta temperatura
-Horno con termómetro integrado',
-        'description' => 'Estufa de Leña Moravia 9103
-La Estufa de Leña Moravia 9103 es la elección perfecta para quienes buscan una solución de calefacción eficiente, económica y respetuosa con el medio ambiente. Con un diseño moderno y robusto, esta estufa de leña ofrece un excelente rendimiento térmico, ideal para calentar espacios medianos y grandes. Gracias a su tecnología avanzada de combustión, la Moravia 9103 asegura una quema limpia y eficiente, optimizando el uso de la leña y reduciendo el consumo.
-Su sistema de distribución de calor permite que el calor se distribuya de manera uniforme por todo el espacio, proporcionando una temperatura confortable y constante. Además, su diseño elegante y compacto se adapta perfectamente a diferentes estilos de interiores, brindando no solo funcionalidad, sino también un toque estético a su hogar.
+Rendimento 83,2%
+Salidas de fumo traseras, superiores e laterales de 120 mm.
+chaminé de ladrillo refractario
+Rejilla de ferro fundido
+Cuerpo de aço de alta temperatura
+Forno com termómetro integrado',
+        'description' => 'Salamandra a Lenha Moravia 9103
+A Salamandra a Lenha Moravia 9103 é a escolha perfeita para quem procura uma solução de aquecimento eficiente, económico e respeitador do ambiente. Com um design moderno e robusto, esta salamandra a lenha oferece um excelente rendimento térmico, ideal para aquecer espaços médios e grandes. Graças à sua tecnologia avançada de combustão, a Moravia 9103 assegura uma queima limpa e eficiente, optimizando o uso da lenha e reduzindo o consumo.
+O seu sistema de distribuição de calor permite que o calor se distribua de maneira uniforme por todo o espaço, proporcionando uma temperatura confortável e constante. Além disso, o seu design elegante e compacto adapta-se perfeitamente a diferentes estilos de interiores, proporcionando não só funcionalidade, mas sim também um toque estético a sua casa.
 Características:
 
-Potencia: Ideal para calentar espacios medianos y grandes
-Tecnología avanzada de combustión, que garantiza un alto rendimiento y baja emisión de CO2
-Diseño moderno y elegante, que se adapta a diferentes tipos de decoración
-Materiales de alta calidad, que aseguran durabilidad y resistencia
-Distribución de calor eficiente, asegurando una temperatura constante y confortable en toda la habitación
-Fácil mantenimiento, con acceso sencillo para la limpieza y el control de la estufa
+Potência: Ideal para aquecer espaços médios e grandes
+Tecnología avançada de combustão, que garante um alto rendimento e baixa emisión de CO2
+Design moderno e elegante, que se adapta a diferentes tipos de decoração
+Materiales de alta qualidade, que asseguram durabilidade e resistência
+Distribución de calor eficiente, assegurando uma temperatura constante e confortável em toda a divisão
+Fácil manutenção, com acesso simples para a limpeza e o controlo da salamandra
 
-Beneficios:
+Benefícios:
 
-Eficiencia energética, aprovechando al máximo la energía de la leña y reduciendo el consumo
-Ecológica y económica, gracias a su baja emisión de CO2 y su alta eficiencia en la quema
-Diseño compacto y elegante, que se integra perfectamente en cualquier tipo de hogar
-Confort constante, proporcionando calor de manera uniforme durante todo el día
-Durabilidad y resistencia, garantizando un largo ciclo de vida útil
+Eficiência energética, aproveitando ao máximo a energia da lenha e reduzindo o consumo
+Ecológica e económica, graças ao seu baixa emisión de CO2 e o seu alta eficiência na queima
+Design compacto e elegante, que se integra perfeitamente em qualquer tipo de casa
+Conforto constante, proporcionando calor de maneira uniforme durante todo o dia
+Durabilidade e resistência, garantindo um largo ciclo de vida útil
 
-Con la Estufa de Leña Moravia 9103, podrá disfrutar de una calefacción eficiente y ecológica, manteniendo su hogar cálido y confortable durante todo el invierno.',
+Com a Salamandra a Lenha Moravia 9103, poderá desfrutar de um aquecimento eficiente e ecológica, mantendo a sua casa quente e confortável durante todo o inverno.',
         'ref' => '53745511',
 
-        'slug' => 'estufa-de-lena-moravia-9103'
+        'slug' => 'salamandra-a-lenha-moravia-9103',
+        'seo_title' => 'Salamandra a lenha Moravia 9103',
+        'seo_description' => 'Salamandra a lenha Moravia 9103. Salamandra a lenha de alto rendimento, calor constante e baixo consumo. Envio grátis em Portugal Continental.'
     ],
     [
         'id' => 5533,
-        'title' => 'Estufa de Leña Olimp',
+        'title' => 'Salamandra a Lenha Olimp',
 
 
         'hover_image' => '',
@@ -1389,37 +1437,39 @@ Con la Estufa de Leña Moravia 9103, podrá disfrutar de una calefacción eficie
         ],
 
         'in_stock' => true, 'color' => '',
-        'short_description' => 'La Estufa de Leña Olimp es una solución eficiente y confiable para calefacción doméstica, diseñada para ofrecer un rendimiento óptimo y una combustión limpia. Con un diseño robusto y funcional, esta estufa es ideal para mantener tu hogar cálido durante los meses fríos, usando madera como fuente de energía renovable.',
-        'description' => 'Estufa de Leña Olimp
-La Estufa de Leña Olimp es una solución eficiente y confiable para calefacción doméstica, diseñada para ofrecer un rendimiento óptimo y una combustión limpia. Con un diseño robusto y funcional, esta estufa es ideal para mantener tu hogar cálido durante los meses fríos, usando madera como fuente de energía renovable.
-Características principales:
+        'short_description' => 'A Salamandra a Lenha Olimp é uma solução eficiente e fiável para aquecimento doméstica, concebida para oferecer um rendimento ótimo e uma combustão limpa. Com um design robusto e funcional, esta salamandra é ideal para manter tu casa quente durante os meses frios, usando madeira como fonte de energia renovável.',
+        'description' => 'Salamandra a Lenha Olimp
+A Salamandra a Lenha Olimp é uma solução eficiente e fiável para aquecimento doméstica, concebida para oferecer um rendimento ótimo e uma combustão limpa. Com um design robusto e funcional, esta salamandra é ideal para manter tu casa quente durante os meses frios, usando madeira como fonte de energia renovável.
+Características principais:
 
-Potencia adecuada para calefacción de espacios medianos
+Potência adequada para aquecimento de espaços médios
 
-Construcción resistente y duradera
+Construção resistente e duradoura
 
-Diseño clásico y funcional que se adapta a cualquier estancia
+Design clásico e funcional que se adapta a qualquer estancia
 
-Combustión eficiente para un mejor aprovechamiento de la leña
+Combustão eficiente para um melhor aproveitamento da lenha
 
-Fácil manejo y mantenimiento
+Fácil manuseamento e manutenção
 
-Beneficios:
+Benefícios:
 
-Calor constante y agradable para el hogar
+Calor constante e agradável para o casa
 
-Reducción de emisiones contaminantes gracias a una combustión optimizada
+Reducción de emissões poluentes graças a uma combustão optimizada
 
-Económica y ecológica, utilizando madera como combustible natural
+Económica e ecológica, utilizando madeira como combustível natural
 
-Perfecta para estufas, chimeneas y calderas de leña',
+Perfecta para salamandras, lareiras e caldeiras de lenha',
         'ref' => '53745533',
 
-        'slug' => 'estufa-de-lena-olimp'
+        'slug' => 'salamandra-a-lenha-olimp',
+        'seo_title' => 'Salamandra a Lenha Olimp',
+        'seo_description' => 'Salamandra a Lenha Olimp. Salamandra a lenha de alto rendimento, calor constante e baixo consumo. Envio grátis em Portugal Continental.'
     ],
     [
         'id' => 5528,
-        'title' => 'Estufa de Leña Olympia',
+        'title' => 'Salamandra a Lenha Olympia',
 
 
         'hover_image' => 'wp-content/uploads/2025/10/poele-cuisiniere-olympia-1-480x480.webp',
@@ -1433,49 +1483,51 @@ Perfecta para estufas, chimeneas y calderas de leña',
         ],
 
         'in_stock' => true, 'color' => '',
-        'short_description' => 'Dimensiones de la estufa: Total: Ancho 580 mm x Altura 1120 mm x Profundidad 650 mm. Horno: Ancho 270 mm x Altura 280 mm x Profundidad 425 mm
-Otras características: Tapa de hierro fundido para cocinar. Horno con termómetro. Cámara de vidrio para leña de 33 cm. Salida de humo trasera: 120 mm. Potencia: 12,2 kW. Rendimiento: 76,8%. Peso: 150 kilos. Combustible: madera y carbón. Colores: burdeos o beige/crema. Garantía de dos años. Pague esta estufa en 3 cuotas sin intereses, en el momento de la entrega.',
+        'short_description' => 'Dimensões da salamandra: Total: Largura 580 mm x Altura 1120 mm x Profundidade 650 mm. Forno: Largura 270 mm x Altura 280 mm x Profundidade 425 mm
+Otras características: Tapa de ferro fundido para cocinar. Forno com termómetro. Cámara de vidrio para lenha de 33 cm. Salida de fumo traseira: 120 mm. Potência: 12,2 kW. Rendimento: 76,8%. Peso: 150 quilos. Combustible: madeira e carvão. Cores: burdeos o beige/crema. Garantia de dos anos. Pague esta salamandra em 3 cuotas sem intereses, no momento da entrega.',
              'ref' => '53745528',
-             'description' => 'Estufa de Leña Olympia
-La Estufa de Leña Olympia es una estufa de alto rendimiento que combina eficiencia, diseño y durabilidad. Con su diseño elegante y robusto, la Olympia ofrece una excelente calefacción para su casa, creando un ambiente cálido y acogedor. Su sistema avanzado de combustión garantiza una quema eficiente de la leña, optimizando el uso del combustible y reduciendo las emisiones de CO2.
-Ideal para ambientes medianos y grandes, la Olympia asegura una distribución uniforme del calor por toda la habitación, manteniendo la temperatura constante durante largos períodos. Su construcción de alta calidad garantiza una larga vida útil, convirtiéndola en una opción económica y confiable para quienes buscan una estufa de leña eficiente y sostenible.
+             'description' => 'Salamandra a Lenha Olympia
+A Salamandra a Lenha Olympia é uma salamandra de alto rendimento que combina eficiência, design e durabilidade. Com o seu design elegante e robusto, a Olympia oferece uma excelente aquecimento para sua casa, criando um ambiente quente e acolhedor. O seu sistema avançado de combustão garante uma queima eficiente da lenha, optimizando o uso do combustível e reduzindo as emissões de CO2.
+Ideal para ambientes médios e grandes, a Olympia assegura uma distribuição uniforme do calor por toda a divisão, mantendo a temperatura constante durante largos períodos. O seu construção de alta qualidade garante uma longa vida útil, tornando-a uma opção económica e fiável para quem procura uma salamandra a lenha eficiente e sustentável.
 Características:
 
-Potente capacidad de calefacción, ideal para ambientes medianos y grandes
+Potente capacidade de aquecimento, ideal para ambientes médios e grandes
 
-Sistema de combustión eficiente, que maximiza el rendimiento de la leña y reduce el consumo
+Sistema de combustão eficiente, que maximiza o rendimento da lenha e reduz o consumo
 
-Diseño elegante y moderno, fabricada con materiales de alta calidad para garantizar resistencia y durabilidad
+Design elegante e moderno, fabricada com materiais de alta qualidade para garantir resistência e durabilidade
 
-Bajas emisiones de CO2, contribuyendo a un ambiente más limpio y saludable
+Baixas emissões de CO2, contribuindo para um ambiente mais limpo e saludable
 
-Gran capacidad de calefacción, proporcionando calor constante durante muchas horas
+Grande capacidade de aquecimento, proporcionando calor constante durante muitas horas
 
-Fácil mantenimiento, con acceso cómodo para limpieza y control de la estufa
+Fácil manutenção, com acceso confortável para limpeza e controlo da salamandra
 
-Beneficios:
+Benefícios:
 
-Eficiencia energética mejorada, utilizando la leña de forma más eficiente y reduciendo el consumo de combustible
+Eficiência energética melhorada, utilizando a lenha de forma mais eficiente e reduzindo o consumo de combustível
 
-Confort térmico constante, manteniendo su casa cálida y acogedora durante todo el día
+Conforto térmico constante, mantendo a sua casa quente e acolhedora durante todo o dia
 
-Ecológica y económica, gracias a su bajo consumo de leña y alta eficiencia
+Ecológica e económica, graças ao seu baixo consumo de lenha e alta eficiência
 
-Durabilidad y resistencia, fabricada con materiales robustos que garantizan una larga vida útil
+Durabilidade e resistência, fabricada com materiais robustos que garantem uma longa vida útil
 
-Diseño atractivo y funcional, que aporta estilo y calidez a su hogar
+Design atrativo e funcional, que aporta estilo e calor a sua casa
 
-Fácil de usar y mantener, con controles simples y accesibles
+Fácil de usar e manter, com controlos simples e accesibles
 
-La Estufa de Leña Olympia es la elección perfecta para quienes buscan una estufa eficiente, respetuosa con el medio ambiente y con un diseño que se integra perfectamente en cualquier ambiente.',
+A Salamandra a Lenha Olympia é a escolha perfeita para quem procura uma salamandra eficiente, respeitadora do ambiente e com um design que se integra perfeitamente em qualquer ambiente.',
 
 
 
-        'slug' => 'estufa-de-lena-olympia'
+        'slug' => 'salamandra-a-lenha-olympia',
+        'seo_title' => 'Salamandra a Lenha Olympia',
+        'seo_description' => 'Salamandra a Lenha Olympia. Salamandra a lenha de alto rendimento, calor constante e baixo consumo. Envio grátis em Portugal Continental.'
     ],
     [
         'id' => 5535,
-        'title' => 'Estufa de leña Thermo Vulkan Plus',
+        'title' => 'Salamandra a lenha Thermo Vulkan Plus',
 
 
         'hover_image' => '',
@@ -1489,52 +1541,54 @@ La Estufa de Leña Olympia es la elección perfecta para quienes buscan una estu
         ],
 
         'in_stock' => true, 'color' => '',
-        'short_description' => 'Estufa de leña hidro con horno.
-Magnífica estufa de diseño sencillo y eficiente, con su revestimiento de esteatita y amplio horno. Dispone de sistema de caldera para alimentar su red de calefacción.
-Dimensiones
-Conjunto: Ancho 650 mm x Fondo 580 mm x Alto 1170 mm
-Chimenea: Ancho 425 mm x Fondo 400 mm x Alto 290 mm
-Horno: Ancho 350 mm x Fondo 470 mm x Alto 270 mm
+        'short_description' => 'Salamandra a lenha hidro com forno.
+Magnífica salamandra de design simples e eficiente, com o seu revestimiento de esteatite (pedra-sabão) e amplio forno. Dispone de sistema de caldeira para alimentar o seu red de aquecimento.
+Dimensões
+Conjunto: Largura 650 mm x Profundidade 580 mm x Altura 1170 mm
+Chaminé: Largura 425 mm x Profundidade 400 mm x Altura 290 mm
+Forno: Largura 350 mm x Profundidade 470 mm x Altura 270 mm
 Características
-77,6% de rendimiento
-Potencia total: 18,2 Kw de los cuales 15 en hidráulica
-Volumen calentado: máx. 600m3
-Longitud del maletero: 40 cm.
+77,6% de rendimento
+Potência total: 18,2 Kw dos cuales 15 em hidráulica
+Volume calentado: máx. 600m3
+Comprimento do maletero: 40 cm.
 Humo comenzando arriba
-Diámetro de la boquilla: 150 mm',
+Diâmetro do bocal: 150 mm',
              'ref' => '53745535',
 
- 'description' => 'Estufa de Leña Thermo Vulkan Plus
-La Estufa de Leña Thermo Vulkan Plus es una estufa de alta gama que combina un diseño elegante con una excelente eficiencia energética. Ideal para quienes buscan una solución de calefacción integral, esta estufa proporciona no solo un ambiente cálido, sino también la posibilidad de calentar agua para calefacción central o uso doméstico, gracias a su sistema de caldera integrado.
-Con un rendimiento térmico superior y un sistema de combustión optimizado, la Thermo Vulkan Plus asegura una combustión limpia y eficaz, lo que reduce las emisiones y el consumo de leña. Su diseño robusto y moderno se adapta a cualquier espacio, brindando comodidad y estilo sin renunciar a la funcionalidad. Además, su capacidad de calefacción es ideal para hogares de tamaño medio a grande.
+ 'description' => 'Salamandra a Lenha Thermo Vulkan Plus
+A Salamandra a Lenha Thermo Vulkan Plus é uma salamandra de alta gama que combina um design elegante com uma excelente eficiência energética. Ideal para quem procura uma solução de aquecimento integral, esta salamandra proporciona não só um ambiente quente, mas sim também a possibilidade de aquecer agua para aquecimento central ou uso doméstico, graças ao seu sistema de caldeira integrado.
+Com um rendimento térmico superior e um sistema de combustão otimizado, a Thermo Vulkan Plus assegura uma combustão limpa e eficaz, o que reduz as emissões e o consumo de lenha. O seu design robusto e moderno se adapta a qualquer espaço, proporcionando comodidade e estilo sem renunciar à funcionalidade. Além disso, o seu capacidade de aquecimento é ideal para casas de tamanho médio a grande.
 Características:
 
-Sistema de caldera integrado, que permite calentar agua para calefacción central y agua caliente sanitaria
-Alta eficiencia energética, garantizando un aprovechamiento máximo de la energía generada por la combustión de la leña
-Diseño robusto y moderno, que se adapta a diferentes estilos de decoración
-Bajas emisiones de CO2, contribuyendo a un ambiente más limpio y ecológico
-Fácil mantenimiento y uso, con un sistema de limpieza sencillo y controles intuitivos
-Gran capacidad calorífica, que permite calentar grandes espacios de manera rápida y eficiente
-Construcción de acero de alta calidad, asegurando durabilidad y resistencia al paso del tiempo
+Sistema de caldeira integrado, que permite aquecer agua para aquecimento central e água quente sanitária
+Alta eficiência energética, garantindo um aproveitamento máximo da energia gerada por a combustão da lenha
+Design robusto e moderno, que se adapta a diferentes estilos de decoração
+Baixas emissões de CO2, contribuindo para um ambiente mais limpo e ecológico
+Fácil manutenção e uso, com um sistema de limpeza simples e controlos intuitivos
+Grande capacidade calorífica, que permite aquecer grandes espaços de maneira rápida e eficiente
+Construção de aço de alta qualidade, assegurando durabilidade e resistência ao paso do tiempo
 
-Beneficios:
+Benefícios:
 
-Ahorro en energía y combustible, gracias a su eficiente sistema de combustión y al aprovechamiento del calor
-Confort térmico constante, proporcionando un ambiente cálido y acogedor durante todo el día
-Solución ecológica, con bajas emisiones y un proceso de combustión limpio que respeta el medio ambiente
-Calefacción integral, gracias al sistema de caldera que calienta tanto el aire como el agua para calefacción y uso doméstico
-Durabilidad y fiabilidad, asegurada por los materiales de alta calidad utilizados en su fabricación
-Fácil de usar y mantener, con un diseño práctico que facilita su limpieza y el control de la estufa
+Poupança em energia e combustível, graças ao seu eficiente sistema de combustão e ao aproveitamento do calor
+Conforto térmico constante, proporcionando um ambiente quente e acolhedor durante todo o dia
+Solução ecológica, com baixas emissões e um processo de combustão limpo que respeita o ambiente
+Aquecimento integral, graças ao sistema de caldeira que aquece tanto o aire como o agua para aquecimento e uso doméstico
+Durabilidade e fiabilidad, asegurada por os materiais de alta qualidade utilizados no seu fabricación
+Fácil de usar e manter, com um design prático que facilita o seu limpeza e o controlo da salamandra
 
-La Estufa de Leña Thermo Vulkan Plus es la opción ideal para quienes buscan una estufa eficiente, ecológica y multifuncional que proporcione calor constante, además de la posibilidad de calentar agua para calefacción central y uso doméstico.',
+A Salamandra a Lenha Thermo Vulkan Plus é a opção ideal para quem procura uma salamandra eficiente, ecológica e multifuncional que proporcione calor constante, além da possibilidade de aquecer agua para aquecimento central e uso doméstico.',
 
 
 
-        'slug' => 'estufa-de-lena-thermo-vulkan-plus'
+        'slug' => 'salamandra-a-lenha-thermo-vulkan-plus',
+        'seo_title' => 'Salamandra a lenha Thermo Vulkan Plus',
+        'seo_description' => 'Salamandra a lenha Thermo Vulkan Plus. Salamandra a lenha de alto rendimento, calor constante e baixo consumo. Envio grátis em Portugal Continental.'
     ],
     [
         'id' => 5534,
-        'title' => 'Estufa de Leña con Caldera Thermo Vulcan de 18 kW',
+        'title' => 'Salamandra a Lenha com Caldeira Thermo Vulcan de 18 kW',
 
 
         'hover_image' => '',
@@ -1548,49 +1602,51 @@ La Estufa de Leña Thermo Vulkan Plus es la opción ideal para quienes buscan un
         ],
 
         'in_stock' => true, 'color' => '',
-        'short_description' => 'Estufa de Leña Thermo Vulkan con Caldera – Potencia y Diseño Sobrio
-Descubre la magnífica estufa Thermo Vulkan, equipada con un revestimiento de esteatita que le aporta un diseño elegante y eficiente, además de una autonomía destacada para un uso prolongado. Esta estufa cuenta con un sistema de caldera integrado, ideal para alimentar tu red de calefacción centralizada y mantener tu hogar cálido y confortable.
-Dimensiones: Conjunto: 650 mm (ancho) x 545 mm (fondo) x 807,5 mm (alto) Chimenea: 390 mm (ancho) x 400 mm (fondo) x 265 mm (alto) Características principales: Potencia total: 18,4 kW, de los cuales 13 kW son hidráulicos Volumen calentado: hasta 600 m³ Longitud máxima de la leña: 40 cm Salida de humos: superior Diámetro de la boquilla: 150 mm Rendimiento térmico: 77,1% Peso: 184 kg Combustibles compatibles: madera y carbón',
+        'short_description' => 'Salamandra a Lenha Thermo Vulkan com Caldeira – Potência e Design Sobrio
+Descubre a magnífica salamandra Thermo Vulkan, equipada com um revestimiento de esteatite (pedra-sabão) que lhe aporta um design elegante e eficiente, além de uma autonomía destacada para um uso prolongado. Esta salamandra conta com um sistema de caldeira integrado, ideal para alimentar tu red de aquecimento centralizado e manter tu casa quente e confortável.
+Dimensões: Conjunto: 650 mm (largura) x 545 mm (profundidade) x 807,5 mm (alto) Chaminé: 390 mm (largura) x 400 mm (profundidade) x 265 mm (alto) Características principais: Potência total: 18,4 kW, dos cuales 13 kW são hidráulicos Volume calentado: até 600 m³ Comprimento máximo da lenha: 40 cm Salida de humos: superior Diâmetro do bocal: 150 mm Rendimento térmico: 77,1% Peso: 184 kg Combustibles compatibles: madeira e carvão',
              'ref' => '53745534',
-             'description' => 'Estufa de Leña con Caldera Thermo Vulcan de 18 kW
-La Estufa de Leña con Caldera Thermo Vulcan de 18 kW es una solución eficiente y ecológica para calefacción doméstica. Diseñada para ofrecer un rendimiento térmico excepcional, esta estufa de leña con caldera tiene una potencia de 18 kW, lo que la convierte en una opción ideal para calentar tanto el espacio interior como el agua, proporcionando calor constante y eficiente en toda la vivienda. Con su sistema de caldera integrado, es perfecta para aquellos que buscan una calefacción centralizada y sostenible.
+             'description' => 'Salamandra a Lenha com Caldeira Thermo Vulcan de 18 kW
+A Salamandra a Lenha com Caldeira Thermo Vulcan de 18 kW é uma solução eficiente e ecológica para aquecimento doméstica. Concebida para oferecer um rendimento térmico excecional, esta salamandra a lenha com caldeira tem uma potência de 18 kW, o que a torna em uma opção ideal para aquecer tanto o espaço interior como o agua, proporcionando calor constante e eficiente em toda a habitação. Com o seu sistema de caldeira integrado, é perfeita para quem procura um aquecimento centralizado e sustentável.
 Características:
 
-Potencia de la caldera: 18 kW, adecuada para espacios de tamaño medio a grande.
+Potência da caldeira: 18 kW, adequada para espaços de tamanho médio a grande.
 
-Sistema combinado para calefacción de aire y agua.
+Sistema combinado para aquecimento de aire e agua.
 
-Alta eficiencia energética que optimiza el consumo de leña y reduce emisiones.
+Alta eficiência energética que optimiza o consumo de lenha e reduz emissões.
 
-Diseño robusto y elegante, adaptable a diversos estilos de hogar.
+Design robusto e elegante, adaptável a diversos estilos de casa.
 
-Fácil uso y mantenimiento, con acceso sencillo para limpieza y controles.
+Fácil uso e manutenção, com acesso simples para limpeza e controloes.
 
-Materiales duraderos que garantizan larga vida útil.
+Materiales duradouros que garantem longa vida útil.
 
-Compatible con sistemas de calefacción centralizada.
+Compatible com sistemas de aquecimento centralizada.
 
-Beneficios:
+Benefícios:
 
-Calefacción eficiente y económica, disminuyendo costos energéticos.
+Aquecimento eficiente e económica, disminuyendo custos energéticos.
 
-Respetuosa con el medio ambiente, utiliza madera como energía renovable.
+Respetuosa com o ambiente, utiliza madeira como energia renovável.
 
-Bajas emisiones de CO2, contribuyendo a un aire más limpio.
+Baixas emissões de CO2, contribuindo para um aire mais limpo.
 
-Comodidad y autonomía, con calefacción y agua caliente centralizada.
+Comodidad e autonomía, com aquecimento e água quente centralizada.
 
-Instalación y manejo sencillos para viviendas variadas.
+Instalación e manuseamento simples para habitaçãos variadas.
 
-Con la Estufa de Leña con Caldera Thermo Vulcan de 18 kW, podrá disfrutar de una calefacción eficaz, ecológica y económica para mantener su hogar cálido durante todo el invierno.',
+Com a Salamandra a Lenha com Caldeira Thermo Vulcan de 18 kW, poderá desfrutar de um aquecimento eficaz, ecológica e económica para manter a sua casa quente durante todo o inverno.',
 
 
 
-        'slug' => 'estufa-de-lenha-com-caldeira-thermo-vulcan-de-18-kw'
+        'slug' => 'estufa-de-lenha-com-caldeira-thermo-vulcan-de-18-kw',
+        'seo_title' => 'Salamandra a Lenha com Caldeira Thermo Vulcan de 18 kW',
+        'seo_description' => 'Salamandra a Lenha com Caldeira Thermo Vulcan de 18 kW. Caldeira a lenha de alto rendimento para aquecimento central e água quente. Envio grátis em Portugal Continental.'
     ],
     [
         'id' => 5515,
-        'title' => 'Estufa de Leña Moravia 9112',
+        'title' => 'Salamandra a Lenha Moravia 9112',
 
 
         'hover_image' => 'wp-content/uploads/2025/10/cuisiniere-a-bois-moravia-9112-ex-avec-bouilleur-1-1-480x480.webp',
@@ -1604,50 +1660,52 @@ Con la Estufa de Leña con Caldera Thermo Vulcan de 18 kW, podrá disfrutar de u
         ],
 
         'in_stock' => true, 'color' => '',
-        'short_description' => 'Estufa de Leña Moravia 9112
-Esta hermosa estufa de leña le permite ver las llamas gracias a su amplia cámara de combustión con vidrio panorámico. Dimensiones de la estufa: Conjunto: Ancho 924 mm x Profundidad 600 mm x Altura 850 mm. Horno: Ancho 300 mm x Profundidad 420 mm x Altura 250 mm. Chimenea: Ancho 220 mm x Profundidad 500 mm x Altura 370 mm',
+        'short_description' => 'Salamandra a Lenha Moravia 9112
+Esta hermosa salamandra a lenha lhe permite ver as chamas graças ao seu amplia câmara de combustão com vidrio panorámico. Dimensões da salamandra: Conjunto: Largura 924 mm x Profundidade 600 mm x Altura 850 mm. Forno: Largura 300 mm x Profundidade 420 mm x Altura 250 mm. Chaminé: Largura 220 mm x Profundidade 500 mm x Altura 370 mm',
              'ref' => '53745515',
-             'description' => 'Estufa de Leña Moravia 9112
-La Estufa de Leña Moravia 9112 es una opción de calefacción de alto rendimiento, diseñada para ofrecer confort térmico y eficiencia energética en su casa. Con un diseño elegante y moderno, esta estufa es perfecta para quienes buscan una solución económica, ecológica y eficaz. Su estructura robusta y tecnología avanzada de combustión garantizan un alto rendimiento y una larga durabilidad.
-La Moravia 9112 posee un sistema de combustión eficiente que optimiza el uso de la leña, reduciendo emisiones y maximizando el calor generado. Su capacidad para calentar rápidamente ambientes grandes la hace ideal para residencias de mediano a gran tamaño. Además, su fácil mantenimiento y limpieza permiten disfrutar de una calefacción constante sin complicaciones.
+             'description' => 'Salamandra a Lenha Moravia 9112
+A Salamandra a Lenha Moravia 9112 é uma opção de aquecimento de alto rendimento, concebida para oferecer conforto térmico e eficiência energética na sua casa. Com um design elegante e moderno, esta salamandra é perfeita para quem procura uma solução económica, ecológica e eficaz. O seu estrutura robusta e tecnologia avançada de combustão garantem um alto rendimento e uma longa durabilidade.
+A Moravia 9112 posee um sistema de combustão eficiente que otimiza o uso da lenha, reduzindo emissões e maximizando o calor generado. O seu capacidade para aquecer rápidamente ambientes grandes a faz ideal para residências de média a grande dimensão. Além disso, o seu fácil manutenção e limpeza permitem desfrutar de um aquecimento constante sem complicaciones.
 
 Características:
 
-Alta potencia térmica, adecuada para calentar grandes espacios con eficiencia
+Alta potência térmica, adequada para aquecer grandes espaços com eficiência
 
-Sistema avanzado de combustión, que maximiza el aprovechamiento de la leña y reduce el consumo de combustible
+Sistema avançado de combustão, que maximiza o aproveitamento da lenha e reduz o consumo de combustível
 
-Bajas emisiones de CO₂, contribuyendo a un ambiente más limpio y sostenible
+Bajas emissões de CO₂, contribuindo para um ambiente mais limpo e sustentável
 
-Diseño moderno y elegante, que se adapta a cualquier estilo de decoración
+Design moderno e elegante, que se adapta a qualquer estilo de decoração
 
-Fácil uso y mantenimiento, con sistema de limpieza simple y controles intuitivos
+Fácil uso e manutenção, com sistema de limpeza simples e controlos intuitivos
 
-Fabricada con materiales de alta calidad, garantizando una larga vida útil y resistencia al desgaste
+Fabricada com materiais de alta qualidade, garantindo uma longa vida útil e resistência ao desgaste
 
-Beneficios:
+Benefícios:
 
-Eficiencia energética superior, que permite aprovechar al máximo la leña, reduciendo el consumo y aumentando el rendimiento térmico
+Eficiência energética superior, que permite aproveitar ao máximo a lenha, reduzindo o consumo e aumentando o rendimento térmico
 
-Ahorro en los costos de calefacción, ya que la leña es una fuente económica de energía
+Poupança em os custos de aquecimento, já que a lenha é uma fuente económica de energia
 
-Calor constante y agradable, proporcionando confort térmico durante todo el día
+Calor constante e agradável, proporcionando conforto térmico durante todo o dia
 
-Solución ecológica y sostenible, con bajas emisiones de CO₂ y combustión limpia
+Solução ecológica e sustentável, com baixas emissões de CO₂ e combustão limpa
 
-Durabilidad y confiabilidad, con construcción robusta para años de uso sin problemas
+Durabilidade e confiabilidad, com construção robusta para anos de uso sem problemas
 
-Mantenimiento fácil, con diseño que facilita la limpieza y el cuidado
+Mantenimiento fácil, com design que facilita a limpeza e o cuidado
 
-La Estufa de Leña Moravia 9112 es la elección ideal para quienes buscan una estufa de leña de alta calidad, eficiente y respetuosa con el medio ambiente, capaz de proporcionar calor constante y confiable durante todo el invierno.',
+A Salamandra a Lenha Moravia 9112 é a escolha ideal para quem procura uma salamandra a lenha de alta qualidade, eficiente e respeitadora do ambiente, capaz de proporcionar calor constante e fiável durante todo o inverno.',
 
 
 
-        'slug' => 'estufa-de-lenha-moravia-9112'
+        'slug' => 'estufa-de-lenha-moravia-9112',
+        'seo_title' => 'Salamandra a Lenha Moravia 9112',
+        'seo_description' => 'Salamandra a Lenha Moravia 9112. Salamandra a lenha de alto rendimento, calor constante e baixo consumo. Envio grátis em Portugal Continental.'
     ],
     [
         'id' => 5629,
-        'title' => 'Excellent Pellets – Palet de 65 sacos de 15 kg',
+        'title' => 'Excellent Pellets – Palete de 65 sacos de 15 kg',
 
 
         'hover_image' => 'wp-content/uploads/2025/10/2-Pellet-Excellent-Pellets-Palette-de-65-sacs-de-15-kg-700x700-1-480x480.webp',
@@ -1661,46 +1719,48 @@ La Estufa de Leña Moravia 9112 es la elección ideal para quienes buscan una es
         ],
 
         'in_stock' => true, 'color' => '',
-        'short_description' => 'EXCELLENT PELLETS – Pellets de madera certificados
-Pellets de madera de alta calidad, certificados según las normas DIN Plus y EN Plus A1. Fabricados en Portugal, son un producto local, hecho con 100% madera resinosa y natural, sin aditivos.',
+        'short_description' => 'EXCELLENT PELLETS – Pellets de madeira certificados
+Pellets de madeira de alta qualidade, certificados segundo as normas DIN Plus e EN Plus A1. Fabricados em Portugal, são um produto local, feito com 100% madeira resinosa e natural, sem aditivos.',
              'ref' => '53745629',
-             'description' => 'Pellet Excellent Pellets – Palet de 65 sacos de 15 kg
-Los pellets Excellent Pellets son la elección ideal para una calefacción eficiente, ecológica y económica. Este palet con 65 sacos de 15 kg ofrece la cantidad perfecta para mantener su casa caliente durante toda la temporada. Producidos con madera de alta calidad, estos pellets garantizan una combustión eficiente, con bajo contenido de cenizas y elevado poder calorífico, siendo una excelente opción para estufas y calderas de biomasa.
+             'description' => 'Pellet Excellent Pellets – Palete de 65 sacos de 15 kg
+Os pellets Excellent Pellets são a escolha ideal para um aquecimento eficiente, ecológico e económico. Este palete com 65 sacos de 15 kg oferece a quantidade perfeita para manter a sua casa quente durante toda a temporada. Produzidos com madeira de alta qualidade, estes pellets garantem uma combustão eficiente, com baixo conteúdo de cinzas e elevado poder calorífico, siendo uma excelente opção para salamandras e caldeiras de biomassa.
 Características:
 
-Cantidad: 65 sacos de 15 kg por palet
+Quantidade: 65 sacos de 15 kg por palete
 
-Composición: 100% madera natural, sin aditivos ni productos químicos
+Composição: 100% madeira natural, sem aditivos nem produtos químicos
 
-Bajo contenido de humedad, garantizando una combustión limpia y eficiente
+Baixo teor de humidade, garantindo uma combustão limpa e eficiente
 
-Alto poder calorífico, para un calor constante y duradero
+Alto poder calorífico, para um calor constante e duradouro
 
-Bajo nivel de cenizas, facilitando la limpieza y mantenimiento
+Baixo nível de cinzas, facilitando a limpeza e manutenção
 
-Ideal para estufas, calderas y sistemas de calefacción a biomasa
+Ideal para salamandras, caldeiras e sistemas de aquecimento a biomassa
 
-Beneficios:
+Benefícios:
 
-Alta eficiencia energética que ayuda a reducir los costes de calefacción
+Alta eficiência energética que ajuda a reduzir os custos de aquecimento
 
-Ecológicos y sostenibles, fabricados con madera de fuentes renovables
+Ecológicos e sustentáveis, fabricados com madeira de fuentes renováveis
 
-Fácil de almacenar y manejar, gracias al formato en sacos de 15 kg
+Fácil de armazenar e manusear, graças ao formato em sacos de 15 kg
 
-Bajas emisiones de CO₂, respetando el medio ambiente
+Bajas emissões de CO₂, respeitando o ambiente
 
-Combustión limpia, con producción mínima de residuos y humo
+Combustão limpa, com produção mínima de resíduos e fumo
 
-Con los Excellent Pellets, tendrá una calefacción de alto rendimiento y bajo impacto ambiental, manteniendo su casa confortable durante todo el invierno.',
+Com os Excellent Pellets, terá um aquecimento de alto rendimento e baixo impacto ambiental, mantendo a sua casa confortável durante todo o inverno.',
 
 
 
-        'slug' => 'excellent-pellets-palete-com-65-sacos-de-15-kg'
+        'slug' => 'excellent-pellets-palete-com-65-sacos-de-15-kg',
+        'seo_title' => 'Excellent Pellets – Palete de 65 sacos de 15 kg',
+        'seo_description' => 'Excellent Pellets – Palete de 65 sacos de 15 kg. Pellets de alto poder calorífico e baixa cinza. Envio grátis em Portugal Continental.'
     ],
     [
         'id' => 5529,
-        'title' => 'Estufa de Leña de Esteatita Olymp',
+        'title' => 'Salamandra a Lenha de Esteatite (pedra-sabão) Olymp',
 
 
         'hover_image' => 'wp-content/uploads/2025/10/poele-bois-olymp-pierre-ollaire-1-1-480x480.webp',
@@ -1714,52 +1774,54 @@ Con los Excellent Pellets, tendrá una calefacción de alto rendimiento y bajo i
         ],
 
         'in_stock' => true, 'color' => '',
-        'short_description' => 'Estufa de Leña Esteatita Olímpica MBS
-La Estufa de Leña MBS Olymp, revestida en esteatita para una mayor inercia térmica, es capaz de calentar superficies de hasta 80 m² de manera eficiente y duradera. Su diseño robusto y funcional la convierte en una opción ideal para hogares que buscan confort térmico con un toque clásico y elegante.
-Dimensiones: Conjunto: Ancho 580 mm x Alto 850 mm x Fondo 650 mm Chimenea: Ancho 270 mm x Alto 310 mm x Fondo 350 mm',
+        'short_description' => 'Salamandra a Lenha Esteatite (pedra-sabão) Olímpica MBS
+A Salamandra a Lenha MBS Olymp, revestida em esteatite (pedra-sabão) para uma maior inercia térmica, é capaz de aquecer superficies de até 80 m² de forma eficiente e duradoura. O seu design robusto e funcional a converte em uma opção ideal para casas que procuram conforto térmico com um toque clásico e elegante.
+Dimensões: Conjunto: Largura 580 mm x Altura 850 mm x Profundidade 650 mm Chaminé: Largura 270 mm x Altura 310 mm x Profundidade 350 mm',
              'ref' => '53745529',
-             'description' => 'Estufa de Leña de Esteatita Olymp
-La Estufa de Leña de Esteatita Olymp es la elección perfecta para quienes buscan una calefacción eficiente, duradera y respetuosa con el medio ambiente. Fabricada con esteatita, un material natural reconocido por sus excepcionales propiedades térmicas, esta estufa ofrece una distribución uniforme y prolongada del calor, garantizando un confort térmico durante todo el día, incluso después de que el fuego se haya extinguido.
-Su diseño moderno y elegante se adapta con facilidad a cualquier estilo de decoración, mientras que su estructura de esteatita almacena y libera calor de manera gradual, optimizando la eficiencia energética y reduciendo el consumo de leña. Además, su avanzado sistema de combustión asegura una quema limpia y eficiente, minimizando las emisiones de CO2.
+             'description' => 'Salamandra a Lenha de Esteatite (pedra-sabão) Olymp
+A Salamandra a Lenha de Esteatite (pedra-sabão) Olymp é a escolha perfeita para quem procura um aquecimento eficiente, duradoura e respeitadora do ambiente. Fabricada com esteatite (pedra-sabão), um material natural reconocido por os seus excecionais propriedades térmicas, esta salamandra oferece uma distribuição uniforme e prolongada do calor, garantindo um conforto térmico durante todo o dia, mesmo depois do fogo se faia extinguido.
+O seu design moderno e elegante se adapta com facilidade a qualquer estilo de decoração, enquanto que a sua estrutura de esteatite (pedra-sabão) armazena e libera calor de forma gradual, optimizando a eficiência energética e reduzindo o consumo de lenha. Além disso, o seu avançado sistema de combustão assegura uma queima limpa e eficiente, minimizando as emissões de CO2.
 Características:
 
-Fabricada con esteatita, un material natural con alta capacidad térmica
+Fabricada com esteatite (pedra-sabão), um material natural com alta capacidade térmica
 
-Distribución uniforme del calor para una calefacción constante y agradable
+Distribución uniforme do calor para um aquecimento constante e agradável
 
-Alta eficiencia energética gracias a su capacidad de almacenamiento y liberación gradual del calor
+Alta eficiência energética graças ao seu capacidade de armazenamento e libertação gradual do calor
 
-Sistema de combustión optimizado que reduce consumo de leña y emisiones
+Sistema de combustão otimizado que reduz consumo de lenha e emissões
 
-Diseño moderno y elegante que se adapta a diversos estilos de interiores
+Design moderno e elegante que se adapta a diversos estilos de interiores
 
-Bajas emisiones de CO2, contribuyendo a un entorno más limpio y sostenible
+Baixas emissões de CO2, contribuindo para um ambiente mais limpo e sustentável
 
-Fácil mantenimiento con acceso sencillo para limpieza y control
+Fácil manutenção com acesso simples para limpeza e controlo
 
-Beneficios:
+Benefícios:
 
-Confort térmico prolongado gracias a la capacidad de la esteatita para almacenar y liberar calor lentamente
+Conforto térmico prolongado graças à capacidade da esteatite (pedra-sabão) para armazenar e liberar calor lentamente
 
-Mayor eficiencia energética, usando menos leña para mantener su hogar cálido por más tiempo
+Mayor eficiência energética, usando menos lenha para manter a sua casa quente por mais tiempo
 
-Ecológica y económica, con combustión limpia que minimiza emisiones
+Ecológica e económica, com combustão limpa que minimiza emissões
 
-Diseño atractivo y funcional que combina estética y alto rendimiento
+Design atrativo e funcional que combina estética e alto rendimento
 
-Durabilidad garantizada gracias a la robustez de la esteatita de alta calidad
+Durabilidade garantizada graças à robustez da esteatite (pedra-sabão) de alta qualidade
 
-Fácil operación y mantenimiento con controles accesibles y diseño intuitivo
+Fácil operação e manutenção com controles accesibles e design intuitivo
 
-La Estufa de Leña de Esteatita Olymp es la opción ideal para quienes desean una estufa eficiente, ecológica y con un diseño sofisticado, que ofrezca confort y ahorro energético en su hogar.',
+A Salamandra a Lenha de Esteatite (pedra-sabão) Olymp é a opção ideal para quem deseja uma salamandra eficiente, ecológica e com um design sofisticado, que ofereça conforto e poupança energético na sua casa.',
 
 
 
-        'slug' => 'fogao-a-lenha-de-pedra-sabao-olymp'
+        'slug' => 'fogao-a-lenha-de-pedra-sabao-olymp',
+        'seo_title' => 'Salamandra a Lenha de Esteatite (pedra-sabão) Olymp',
+        'seo_description' => 'Salamandra a Lenha de Esteatite (pedra-sabão) Olymp. Salamandra a lenha de alto rendimento, calor constante e baixo consumo. Envio grátis em Portugal Continental.'
     ],
     [
         'id' => 5532,
-        'title' => 'Fogão Olímpia en Piedra Sabão',
+        'title' => 'Fogão Olímpia em Piedra Sabão',
 
 
         'hover_image' => '',
@@ -1773,46 +1835,48 @@ La Estufa de Leña de Esteatita Olymp es la opción ideal para quienes desean un
         ],
 
         'in_stock' => true, 'color' => '',
-        'short_description' => 'Esteatita MBS Olympia
-La estufa de leña Esteatita MBS Olympia es perfecta para espacios pequeños, combinando eficiencia y funcionalidad con un diseño compacto y elegante.
-Dimensiones: Conjunto: Ancho 580 mm x Fondo 650 mm x Alto 1120 mm Horno: Ancho 270 mm x Fondo 425 mm x Alto 280 mm',
+        'short_description' => 'Esteatite (pedra-sabão) MBS Olympia
+A salamandra a lenha Esteatite (pedra-sabão) MBS Olympia é perfeita para espaços pequenos, combinando eficiência e funcionalidade com um design compacto e elegante.
+Dimensões: Conjunto: Largura 580 mm x Profundidade 650 mm x Altura 1120 mm Forno: Largura 270 mm x Profundidade 425 mm x Altura 280 mm',
              'ref' => '53745532',
-             'description' => 'Estufa Olympia en Esteatita
-La Estufa Olympia en Esteatita combina eficiencia, diseño y ecología para ofrecer una calefacción de alto rendimiento. Gracias a la esteatita, un material que almacena y distribuye el calor de forma prolongada y uniforme, esta estufa garantiza un ambiente cálido y confortable durante horas.
-Su diseño moderno y elegante se adapta a cualquier espacio, mientras que su avanzado sistema de combustión asegura un bajo consumo de leña y mínimas emisiones contaminantes, cuidando el medio ambiente.
+             'description' => 'Salamandra Olympia em Esteatite (pedra-sabão)
+A Salamandra Olympia em Esteatite (pedra-sabão) combina eficiência, design e ecología para oferecer um aquecimento de alto rendimento. Graças à esteatite (pedra-sabão), um material que armazena e distribui o calor de forma prolongada e uniforme, esta salamandra garante um ambiente quente e confortável durante horas.
+O seu design moderno e elegante se adapta a qualquer espaço, enquanto que o seu avançado sistema de combustão assegura um baixo consumo de lenha e mínimas emissões poluentes, cuidando o ambiente.
 Características:
 
-Fabricada en esteatita, para un calor duradero y uniforme
+Fabricada em esteatite (pedra-sabão), para um calor duradouro e uniforme
 
-Diseño elegante y funcional
+Design elegante e funcional
 
-Alta eficiencia energética y bajo consumo
+Alta eficiência energética e baixo consumo
 
-Sistema de combustión avanzado que reduce emisiones
+Sistema de combustão avançado que reduz emissões
 
-Fácil mantenimiento y limpieza
+Fácil manutenção e limpeza
 
-Beneficios:
+Benefícios:
 
-Calor constante incluso después de apagar el fuego
+Calor constante mesmo depois de apagar o fogo
 
-Ecológica y económica
+Ecológica e económica
 
-Contribuye a un ambiente más limpio con bajas emisiones de CO2
+Contribuye a um ambiente mais limpo com baixas emissões de CO2
 
-Material robusto y duradero
+Material robusto e duradouro
 
-Ideal para hogares modernos y confortables
+Ideal para casas modernos e confortáveis
 
-Con la Estufa Olympia en Esteatita, disfruta de una calefacción eficiente, sostenible y con estilo para mantener tu hogar cálido todo el invierno.',
+Com a Salamandra Olympia em Esteatite (pedra-sabão), disfruta de um aquecimento eficiente, sustentável e com estilo para manter tu casa quente todo o inverno.',
 
 
 
-        'slug' => 'fogao-olimpia-en-piedra-sabao'
+        'slug' => 'fogao-olimpia-en-piedra-sabao',
+        'seo_title' => 'Fogão Olímpia em Piedra Sabão',
+        'seo_description' => 'Fogão Olímpia em Piedra Sabão. Salamandra a lenha de alto rendimento, calor constante e baixo consumo. Envio grátis em Portugal Continental.'
     ],
     [
         'id' => 5630,
-        'title' => 'Green Energy Pellet – Palet de 65 sacos de 15 kg',
+        'title' => 'Green Energy Pellet – Palete de 65 sacos de 15 kg',
 
 
         'hover_image' => '',
@@ -1825,45 +1889,47 @@ Con la Estufa Olympia en Esteatita, disfruta de una calefacción eficiente, sost
         ],
 
         'in_stock' => true, 'color' => '',
-        'short_description' => 'Estos pellets, conforme a las normas DIN Plus y EN Plus, están compuestos por 70% de madera blanda y 30% de madera dura. Se fabrican en dos fábricas, en Holanda y en Bélgica. ¡El pellet ideal para presupuestos ajustados!',
+        'short_description' => 'Estes pellets, conforme às normas DIN Plus e EN Plus, estão compuestos por 70% de madeira macia e 30% de madeira dura. Se fabricam em dos fábricas, em Holanda e em Bélgica. ¡O pellet ideal para presupuestos ajustados!',
              'ref' => '53745630',
-             'description' => 'Green Energy Pellet – Palet de 65 sacos de 15 kg
-Los pellets Green Energy son una opción ecológica y eficiente para la calefacción de su casa. Este palet contiene 65 sacos de 15 kg cada uno, proporcionando una cantidad ideal para mantener su vivienda caliente durante un largo período. Fabricados con madera de alta calidad, estos pellets ofrecen un alto rendimiento calórico, bajo nivel de cenizas y una combustión limpia y respetuosa con el medio ambiente.
+             'description' => 'Green Energy Pellet – Palete de 65 sacos de 15 kg
+Os pellets Green Energy são uma opção ecológica e eficiente para a aquecimento da sua casa. Este palete contém 65 sacos de 15 kg cada um, proporcionando uma quantidade ideal para manter a sua habitação quente durante um largo período. Fabricados com madeira de alta qualidade, estes pellets oferecem um alto rendimento calórico, baixo teor de cinzas e uma combustão limpa e respeitadora do ambiente.
 Características:
 
-Cantidad: 65 sacos de 15 kg por palet
+Quantidade: 65 sacos de 15 kg por palete
 
-Composición: 100% madera natural y renovable
+Composição: 100% madeira natural e renovável
 
-Bajo contenido de humedad para garantizar una combustión eficiente
+Baixo teor de humidade para garantir uma combustão eficiente
 
-Alto poder calorífico para un mejor rendimiento térmico por peso
+Alto poder calorífico para um melhor rendimento térmico por peso
 
-Bajas emisiones y producción mínima de residuos durante la combustión
+Baixas emissões e produção mínima de resíduos durante a combustão
 
-Fácil de almacenar gracias a la presentación en sacos compactos
+Fácil de armazenar graças à apresentação em sacos compactos
 
-Beneficios:
+Benefícios:
 
-Eficiencia energética que ayuda a reducir los costes de calefacción
+Eficiência energética que ajuda a reduzir os custos de aquecimento
 
-Ecológicos y sostenibles, fabricados con madera proveniente de fuentes responsables
+Ecológicos e sustentáveis, fabricados com madeira proveniente de fontes responsáveis
 
-Bajo nivel de cenizas, facilitando la limpieza y mantenimiento
+Baixo nível de cinzas, facilitando a limpeza e manutenção
 
-Ideal para estufas y calderas de biomasa
+Ideal para salamandras e caldeiras de biomassa
 
-Fácil manejo y almacenamiento gracias al palet con 65 sacos
+Fácil manuseamento e armazenamento graças ao palete com 65 sacos
 
-Con los pellets Green Energy, podrá disfrutar de un ambiente cálido y confortable en su casa mientras contribuye a la protección del medio ambiente.',
+Com os pellets Green Energy, poderá desfrutar de um ambiente quente e confortável na sua casa enquanto contribui para a proteção do ambiente.',
 
 
 
-        'slug' => 'green-energy-pellet-palete-de-65-sacos-de-15-kg'
+        'slug' => 'green-energy-pellet-palete-de-65-sacos-de-15-kg',
+        'seo_title' => 'Green Energy Pellet – Palete de 65 sacos de 15 kg',
+        'seo_description' => 'Green Energy Pellet – Palete de 65 sacos de 15 kg. Pellets de alto poder calorífico e baixa cinza. Envio grátis em Portugal Continental.'
     ],
     [
         'id' => 5822,
-        'title' => 'LEÑA – 25 CM – ALTO RENDIMIENTO – 1,3 M3',
+        'title' => 'LENHA – 25 CM – ALTO RENDIMENTO – 1,3 M3',
 
 
         'hover_image' => '',
@@ -1876,37 +1942,39 @@ Con los pellets Green Energy, podrá disfrutar de un ambiente cálido y conforta
         ],
 
         'in_stock' => true, 'color' => '',
-        'short_description' => '1,3 m3 de palé de leña equivale a 2,10 esteros de madera en términos de poder calorífico*.
-*1,3 m3 de nuestros troncos paletizados de alto rendimiento consumen un 30% menos de combustible que la madera secada naturalmente durante 12 meses o con un 35% de humedad.
-El volumen aparente es de aproximadamente 1,60 esteros, pero equivale a 2,10 esteros en términos de poder calorífico.
-Producida a partir de maderas de frondosas (roble, carpe, haya y fresno), esta madera se seca en horno, está perfectamente hendida y tiene un contenido de humedad inferior al 20%.
-Madera limpia, bien hendida y descortezada, norma NF, 100% francesa.',
+        'short_description' => '1,3 m3 de palete de lenha equivale a 2,10 esteres de madeira em termos de poder calorífico*.
+*1,3 m3 de os nossos troncos paletizados de alto rendimento consomem um 30% menos de combustível que a madeira secada naturalmente durante 12 meses ou com um 35% de humidade.
+O volume aparente é de aproximadamente 1,60 esteres, mas equivale a 2,10 esteres em termos de poder calorífico.
+Produzida a partir de madeiras de folhosas (carvalho, carpinho, faia e freixo), esta madeira se seca em forno, está perfeitamente hendida e tem um teor de humidade inferior a 20%.
+Madeira limpa, bem hendida e descascada, norma NF, 100% francesa.',
              'ref' => '53745822',
-             'description' => 'Mezcla de madera dura secada en horno, ultra-seca, lista para arder de inmediato, debe almacenarse protegida de la humedad.
-Con esta mezcla de madera, es posible producir tanto llamas como brasas. Estos tipos de madera son ideales para la calefacción, tienen un elevado poder calorífico y arden lentamente.
-Los troncos se cortan con 25 cm de longitud y luego se almacenan en un palé, lo que facilita su transporte y garantiza el número de esteros encargados.
-Su tamaño reducido lo hace práctico para las personas con poco espacio de almacenamiento o para una pequeña hoguera ocasional.
-Esta madera extra-seca es un 30% más eficaz que la madera convencional (secada al 35% de humedad durante 12 meses). Esto garantiza el mejor rendimiento de su aparato de calefacción.
-Esta leña se fabrica en Francia, tiene certificación NF y es 100% natural.
-Se adapta perfectamente a las estufas de leña y a los recuperadores de calor para troncos de hasta 25 cm de longitud.
-Los diferentes tipos de madera:
-Maderas duras: roble, carpe, fresno y haya
-Maderas semiduras: castaño, acacia y árboles frutales
-Maderas blandas: chopo, arce, abedul, tilo y aliso
-Madera suave: pino, abeto
-Cuanto más dura es la madera, más calor libera y más lentamente arde.
-Como las maderas duras son difíciles de encender, es necesario utilizar astillas para ayudar a encender el fuego.
-El carpe, el roble, el fresno y el haya son los mejores en términos de rendimiento energético, pero la mayoría producirá más brasas que llamas.
-La sección transversal del 90% de los troncos se sitúa entre 5 y 15 cm. El resto de los troncos son mayores, con secciones transversales que varían entre 15 y 18 cm.
-Su fardo contiene trozos de madera más pequeños que pueden utilizarse para encender el fuego. Esta madera, que no pudo eliminarse por selección, se ofrece de regalo y no se contabiliza en el volumen.',
+             'description' => 'Mistura de madeira dura seca em estufa, ultra-seca, pronta a queimar de imediato, deve armazenar-se protegida da humidade.
+Com esta mistura de madeira, é posible producir tanto chamas como brasas. Estes tipos de madeira são ideais para a aquecimento, têm um elevado poder calorífico e arden lentamente.
+Os troncos cortam-se com 25 cm de comprimento e depois armazenam-se em um palete, o que facilita o seu transporte e garante o número de esteres encomendados.
+O seu tamanho reducido o faz prático para as personas com pouco espaço de armazenamento o para uma pequena hoguera ocasional.
+Esta madeira extra-seca é um 30% mais eficaz que a madeira convencional (secada ao 35% de humidade durante 12 meses). Isto garante o melhor rendimento do seu aparelho de aquecimento.
+Esta lenha é fabricada em França, tem certificação NF e é 100% natural.
+Se adapta perfeitamente às salamandras a lenha e aos recuperadores de calor para troncos de até 25 cm de comprimento.
+Os diferentes tipos de madeira:
+Madeiras duras: carvalho, carpinho, freixo e faia
+Madeiras semiduras: castaño, acacia e árboles frutales
+Madeiras macias: choupo, ácer, bétula, tília e amieiro
+Madeira suave: pino, abeto
+Cuanto mais dura é a madeira, mais calor libera e mais lentamente arde.
+Como as madeiras duras são difíciles de acender, é necessário utilizar astillas para ayudar a acender o fogo.
+O carpinho, o carvalho, o freixo e o faia são os melhores em termos de rendimento energético, mas a mayoría producirá mais brasas que chamas.
+A sección transversal do 90% dos troncos se sitúa entre 5 e 15 cm. O resto dos troncos são mayores, com secciones transversales que varían entre 15 e 18 cm.
+O seu fardo contém trozos de madeira mais pequenos que podem utilizarse para acender o fogo. Esta madeira, que no pudo eliminarse por selección, se oferece de regalo e no se contabiliza no volume.',
 
 
 
-        'slug' => 'lenha-25-cm-alto-rendimento-13-m3'
+        'slug' => 'lenha-25-cm-alto-rendimento-13-m3',
+        'seo_title' => 'LENHA – 25 CM – ALTO RENDIMENTO – 1,3 M3',
+        'seo_description' => 'LENHA – 25 CM – ALTO RENDIMENTO – 1,3 M3. Lenha seca pronta a queimar, entregue em palete. Envio grátis em Portugal Continental.'
     ],
     [
         'id' => 5817,
-        'title' => 'LEÑA – 30 CM – ALTO RENDIMIENTO – 2 M3',
+        'title' => 'LENHA – 30 CM – ALTO RENDIMENTO – 2 M3',
 
 
         'hover_image' => 'wp-content/uploads/2025/10/BOIS-DE-CHAUFFAGE-30-CM-ALTO-DESEMPENHO-2-M32-480x480.jpg',
@@ -1920,33 +1988,35 @@ Su fardo contiene trozos de madera más pequeños que pueden utilizarse para enc
         ],
 
         'in_stock' => true, 'color' => '',
-        'short_description' => 'Fardo de palés, troncos de madera 2m3 equivalen a 2,9 esteros de madera en términos de poder calorífico*.
-*2m3 de nuestros troncos paletizados de alto rendimiento consumen un 30% menos de combustible que la madera secada naturalmente durante 12 meses o con un 35% de humedad.
-El volumen aparente es de aproximadamente 2,24 esteros, pero equivale a 2,9 esteros en términos de poder calorífico.
-La leña en fardos de alto rendimiento está revolucionando la calefacción con leña. Se fabrica a partir de las especies de madera de frondosas más eficaces (roble, carpe, haya y fresno). Se corta y se seca en horno hasta alcanzar un contenido de humedad inferior al 20%.
-Madera limpia, bien hendida y parcialmente descortezada, certificada NF, 100% francesa.',
+        'short_description' => 'Fardo de paletes, troncos de madeira 2m3 equivalem a 2,9 esteres de madeira em termos de poder calorífico*.
+*2m3 de os nossos troncos paletizados de alto rendimento consomem um 30% menos de combustível que a madeira secada naturalmente durante 12 meses ou com um 35% de humidade.
+O volume aparente é de aproximadamente 2,24 esteres, mas equivale a 2,9 esteres em termos de poder calorífico.
+A lenha em fardos de alto rendimento está a revolucionar o aquecimento com lenha. Se fabrica a partir das espécies de madeira de folhosas mais eficazes (carvalho, carpinho, faia e freixo). Se corta e se seca em forno até atingir um teor de humidade inferior a 20%.
+Madeira limpa, bem hendida e parcialmente descascada, certificada NF, 100% francesa.',
              'ref' => '53745817',
-             'description' => 'Si busca una madera limpia, descortezada y fácil de manejar, esta es la madera ideal para usted.
-Troncos de 30 cm bien divididos, de sección transversal pequeña, ideales para pequeños aparatos de calefacción: estufas o recuperadores de calor.
-Madera de alto rendimiento para reducir las emisiones de partículas.
-Los troncos se almacenan sueltos en este palé, para que los tenga siempre a mano.
-Menos suciedad que con otros tipos de madera, porque la madera está parcialmente descortezada, lo que la hace menos polvorienta (tambor cepillado).
-Más fácil de manejar, disfrutará de un calor constante sin atascar su aparato.
-Madera dura ultra-seca lista para usar, NF, 100% francesa. (Grupo H1 G1)
-Los troncos de madera de alto rendimiento mejoran el uso de la leña.
-Gracias a especies de calidad como las frondosas (roble, carpe, haya, fresno).
-Los troncos están perfectamente divididos y secados en horno hasta un contenido de humedad del 20% o menos.
-Al ser ULTRA SECOS, obtendrá el máximo rendimiento de su aparato con un consumo un 30% inferior al de la leña secada naturalmente.
-La sección transversal del 90% de los troncos se sitúa entre 5 y 15 cm. El resto de los troncos son mayores, con secciones transversales de 15 a 18 cm.
-Su fardo contendrá trozos de madera más pequeños que pueden utilizarse para encender el fuego. Esta madera, que no pudo eliminarse por selección, se ofrece de regalo y no se contabiliza en el volumen.',
+             'description' => 'Se procura uma madeira limpa, descascada e fácil de manusear, esta é a madeira ideal para usted.
+Troncos de 30 cm bem divididos, de sección transversal pequena, ideais para pequenos aparelhos de aquecimento: salamandras ou recuperadores de calor.
+Madeira de alto rendimento para reduzir as emissões de partículas.
+Os troncos armazenam-se soltos em este palete, para que os tenha sempre à mão.
+Menos sujidade que com outros tipos de madeira, porque a madeira está parcialmente descascada, o que a faz menos polvorienta (tambor cepillado).
+Mais fácil de manusear, desfrutará de um calor constante sem atascar o seu aparelho.
+Madeira dura ultra-seca lista para usar, NF, 100% francesa. (Grupo H1 G1)
+Os troncos de madeira de alto rendimento melhoram o uso da lenha.
+Graças a espécies de qualidade como as folhosas (carvalho, carpinho, faia, freixo).
+Os troncos estão perfeitamente divididos e secos em salamandra até um teor de humidade do 20% o menos.
+Al ser ULTRA SECOS, obterá o máximo rendimento do seu aparelho com um consumo um 30% inferior a da lenha secada naturalmente.
+A sección transversal do 90% dos troncos se sitúa entre 5 e 15 cm. O resto dos troncos são mayores, com secciones transversales de 15 a 18 cm.
+O seu fardo conterá trozos de madeira mais pequenos que podem utilizarse para acender o fogo. Esta madeira, que no pudo eliminarse por selección, se oferece de regalo e no se contabiliza no volume.',
 
 
 
-        'slug' => 'lenha-30-cm-alto-desempenho-2-m3'
+        'slug' => 'lenha-30-cm-alto-desempenho-2-m3',
+        'seo_title' => 'LENHA – 30 CM – ALTO RENDIMENTO – 2 M3',
+        'seo_description' => 'LENHA – 30 CM – ALTO RENDIMENTO – 2 M3. Lenha seca pronta a queimar, entregue em palete. Envio grátis em Portugal Continental.'
     ],
     [
         'id' => 5821,
-        'title' => 'LEÑA – 30 CM – ALTO RENDIMIENTO – 1,3 M3',
+        'title' => 'LENHA – 30 CM – ALTO RENDIMENTO – 1,3 M3',
 
 
         'hover_image' => '',
@@ -1959,31 +2029,33 @@ Su fardo contendrá trozos de madera más pequeños que pueden utilizarse para e
         ],
 
         'in_stock' => true, 'color' => '',
-        'short_description' => '1,3 m3 de palé de leña equivalen a 1,9 esteros de madera en términos de poder calorífico*.
-*1,3 m3 de nuestros troncos paletizados de alto rendimiento consumen un 30% menos de combustible que la madera secada naturalmente durante 12 meses o con un 35% de humedad.
-El volumen aparente es de aproximadamente 1,45 esteros, pero equivale a 1,9 esteros en términos de poder calorífico.
-Madera limpia, bien dividida y descortezada, norma NF, 100% francesa.
-Los troncos de alto rendimiento están revolucionando la leña. Producida a partir de las mejores maderas de frondosas (roble, carpe, haya, fresno), esta madera se corta y se seca hasta alcanzar un contenido de humedad inferior al 20%.',
+        'short_description' => '1,3 m3 de palete de lenha equivalem a 1,9 esteres de madeira em termos de poder calorífico*.
+*1,3 m3 de os nossos troncos paletizados de alto rendimento consomem um 30% menos de combustível que a madeira secada naturalmente durante 12 meses ou com um 35% de humidade.
+O volume aparente é de aproximadamente 1,45 esteres, mas equivale a 1,9 esteres em termos de poder calorífico.
+Madeira limpa, bem dividida e descascada, norma NF, 100% francesa.
+Os troncos de alto rendimento estão a revolucionar a lenha. Produzida a partir das melhores madeiras de folhosas (carvalho, carpinho, faia, freixo), esta madeira se corta e se seca até atingir um teor de humidade inferior a 20%.',
              'ref' => '53745821',
-             'description' => 'Mezcla de maderas duras, secadas en horno, ultra-secas, listas para quemar, deben almacenarse en un lugar seco.
-El palé contiene varios tipos de madera de frondosas: fresno, haya, roble y carpe. Es ideal para obtener un buen equilibrio entre las brasas y las llamas.
-Estos son los mejores tipos de madera combinados en un único palé para un elevado poder calorífico y una buena combustión.
-Esta madera secada en horno consume un 30% menos de combustible que la madera convencional secada al 35% de humedad durante 12 meses, garantizando el máximo rendimiento del aparato de calefacción.
-La madera está dividida en troncos de 30 cm, un tamaño ideal para una pequeña salamandra o recuperador de calor.
-¿Especies de madera preferidas para calefacción?
-Existen diferentes tipos de madera que pueden utilizarse en su estufa de leña: haya, roble, carpe y fresno.
-Se trata de maderas duras, ideales para la calefacción porque tienen un elevado poder calorífico y los troncos producen buenas brasas y bonitas llamas.
-Algunas personas utilizan tipos de madera más ligeros, como el aliso. Pero consumen la madera mucho más rápido, porque estas maderas arden más deprisa y dan menos calor.
-La sección transversal del 90% de los troncos se sitúa entre 5 y 15 cm. El resto de los troncos son mayores, con secciones transversales que varían entre 15 y 18 cm.
-Su fardo contiene trozos de madera más pequeños que pueden utilizarse para encender el fuego. Esta madera, que no pudo eliminarse por selección, se ofrece de regalo y no se contabiliza en el volumen.',
+             'description' => 'Mistura de madeiras duras, secadas em forno, ultra-secas, listas para queimar, devem armazenar-se em um local seco.
+O palete contém vários tipos de madeira de folhosas: freixo, faia, carvalho e carpinho. É ideal para obter um bom equilíbrio entre as brasas e as chamas.
+Estes são os melhores tipos de madeira combinados em um único palete para um elevado poder calorífico e uma boa combustão.
+Esta madeira seca em estufa consume um 30% menos de combustível que a madeira convencional secada ao 35% de humidade durante 12 meses, garantindo o máximo rendimento do aparelho de aquecimento.
+A madeira está dividida em troncos de 30 cm, um tamanho ideal para uma pequena salamandra o recuperador de calor.
+¿Especies de madeira preferidas para aquecimento?
+Existen diferentes tipos de madeira que podem utilizarse na sua salamandra a lenha: faia, carvalho, carpinho e freixo.
+Se trata de madeiras duras, ideais para a aquecimento porque têm um elevado poder calorífico e os troncos produzem buenas brasas e bonitas chamas.
+Algumas personas utilizam tipos de madeira mais leves, como o amieiro. Mas consomem a madeira muito mais rápido, porque estas madeiras arden mais deprisa e dan menos calor.
+A sección transversal do 90% dos troncos se sitúa entre 5 e 15 cm. O resto dos troncos são mayores, com secciones transversales que varían entre 15 e 18 cm.
+O seu fardo contém trozos de madeira mais pequenos que podem utilizarse para acender o fogo. Esta madeira, que no pudo eliminarse por selección, se oferece de regalo e no se contabiliza no volume.',
 
 
 
-        'slug' => 'lenha-30-cm-alto-rendimento-13-m3'
+        'slug' => 'lenha-30-cm-alto-rendimento-13-m3',
+        'seo_title' => 'LENHA – 30 CM – ALTO RENDIMENTO – 1,3 M3',
+        'seo_description' => 'LENHA – 30 CM – ALTO RENDIMENTO – 1,3 M3. Lenha seca pronta a queimar, entregue em palete. Envio grátis em Portugal Continental.'
     ],
     [
         'id' => 5818,
-        'title' => 'LEÑA – 33 CM – MEZCLA DE MADERAS DURAS – PALÉ 2 M3 – 2,9 ESTEROS',
+        'title' => 'LENHA – 33 CM – MISTURA DE MADEIRAS DURAS – PALETE 2 M3 – 2,9 ESTERES',
 
 
         'hover_image' => '',
@@ -1996,24 +2068,26 @@ Su fardo contiene trozos de madera más pequeños que pueden utilizarse para enc
         ],
 
         'in_stock' => true, 'color' => '',
-        'short_description' => 'Leña 33 cm
-Palé de un solo uso (no retornable) de 2M3 o +/- 3 esteros de madera, en troncos hendidos de 33-35 cm, mezcla de maderas duras (fresno, haya, roble, carpe), secado natural.
-Este producto debe almacenarse en un lugar ventilado durante algunas semanas antes de usarse, ya que todavía necesita perder algo de humedad residual.',
+        'short_description' => 'Lenha 33 cm
+Palete de um só uso (no retornable) de 2M3 o +/- 3 esteres de madeira, em troncos hendidos de 33-35 cm, mistura de madeiras duras (freixo, faia, carvalho, carpinho), secagem natural.
+Este produto deve armazenar-se em um local ventilado durante algumas semanas antes de usarse, já que ainda necessita perder algo de humidade residual.',
              'ref' => '53745818',
-             'description' => 'Este palé de madera tiene aproximadamente 2 metros de altura, por lo que tendrá la garantía de obtener el número exacto de esteros que encargue.
-El palé contiene varias especies, exclusivamente de frondosas: 60% de fresno, 20% de haya y 20% de carpe. Esto es ideal para un buen equilibrio entre las brasas y las llamas vivas.
-La madera está dividida en troncos de 33-35 cm, el tamaño ideal para una estufa de leña o un pequeño recuperador.
-Maderas de frondosas blandas:
-– chopo, sauce, acacia, tilo…
-Estas maderas se encienden rápidamente con bonitas llamas, pero arden más rápido.',
+             'description' => 'Este palete de madeira tem aproximadamente 2 metros de altura, pelo que terá a garantia de obter o número exato de esteres que encomende.
+O palete contém várias espécies, exclusivamente de folhosas: 60% de freixo, 20% de faia e 20% de carpinho. Isto é ideal para um bom equilíbrio entre as brasas e as chamas vivas.
+A madeira está dividida em troncos de 33-35 cm, o tamanho ideal para uma salamandra a lenha o um pequeno recuperador.
+Madeiras de folhosas macias:
+– choupo, salgueiro, acacia, tília…
+Estas madeiras se encienden rápidamente com bonitas chamas, mas arden mais rápido.',
 
 
 
-        'slug' => 'lenha-33-cm-mistura-de-madeiras-duras-palete-2-m3-29-steres'
+        'slug' => 'lenha-33-cm-mistura-de-madeiras-duras-palete-2-m3-29-steres',
+        'seo_title' => 'LENHA – 33 CM – MISTURA DE MADEIRAS DURAS – PALETE 2 M3 – 2,9 ESTERES',
+        'seo_description' => 'LENHA – 33 CM – MISTURA DE MADEIRAS DURAS – PALETE 2 M3 – 2,9 ESTERES. Lenha seca pronta a queimar, entregue em palete. Envio grátis em Portugal Continental.'
     ],
     [
         'id' => 5823,
-        'title' => 'LEÑA – 40 CM – ALTO RENDIMIENTO – 1,3 M3',
+        'title' => 'LENHA – 40 CM – ALTO RENDIMENTO – 1,3 M3',
 
 
         'hover_image' => '',
@@ -2026,33 +2100,35 @@ Estas maderas se encienden rápidamente con bonitas llamas, pero arden más ráp
         ],
 
         'in_stock' => true, 'color' => '',
-        'short_description' => '1,3 m3 de palé de leña equivalen a 1,7 esteros de madera en términos de poder calorífico*.
-*1,3 m3 de nuestros troncos paletizados de alto rendimiento consumen un 30% menos de combustible que la madera secada naturalmente durante 12 meses o con un 35% de humedad.
-El volumen aparente es de aproximadamente 1,25 esteros, pero equivale a 1,7 esteros en términos de poder calorífico.
-Mezcla de maderas de frondosas (fresno, haya, roble y carpe), secadas en horno, humedad garantizada inferior al 20%.
-Madera limpia, bien hendida y descortezada, norma NF, 100% francesa.
-Estos troncos de alto rendimiento están revolucionando la calefacción con leña. Producida a partir de las especies de madera de frondosas más recomendadas (roble, carpe, haya, fresno), esta madera se hiende y se seca en horno hasta alcanzar un contenido de humedad inferior al 20%.',
+        'short_description' => '1,3 m3 de palete de lenha equivalem a 1,7 esteres de madeira em termos de poder calorífico*.
+*1,3 m3 de os nossos troncos paletizados de alto rendimento consomem um 30% menos de combustível que a madeira secada naturalmente durante 12 meses ou com um 35% de humidade.
+O volume aparente é de aproximadamente 1,25 esteres, mas equivale a 1,7 esteres em termos de poder calorífico.
+Mistura de madeiras de folhosas (freixo, faia, carvalho e carpinho), secadas em forno, humidade garantizada inferior a 20%.
+Madeira limpa, bem hendida e descascada, norma NF, 100% francesa.
+Estes troncos de alto rendimento estão a revolucionar o aquecimento com lenha. Produzida a partir das espécies de madeira de folhosas mais recomendadas (carvalho, carpinho, faia, freixo), esta madeira se hiende e se seca em forno até atingir um teor de humidade inferior a 20%.',
              'ref' => '53745823',
-             'description' => 'El palé contiene varios tipos de madera dura. Esto es ideal para lograr un buen equilibrio entre brasas y llamas vivas.
-Gracias a esta mezcla de maderas duras, se beneficiará de un calor elevado y de una combustión lenta para un menor consumo de combustible.
-La madera está bien dividida en troncos de 40 cm, limpios y descortezados, ideales para una chimenea o un insert grande.
-Esta madera extra-seca consume un 30% menos que la madera convencional (normalmente secada al 35% de humedad durante 12 meses), proporcionando a su aparato de calefacción el mejor rendimiento.
-¿Madera pesada o ligera?
-La madera ligera es fácil de encender pero se quema demasiado rápido (chopo, arce, tilo, aliso, etc.).
-La madera pesada es más difícil de encender, pero tiene un elevado poder calorífico y arde lentamente.
-Se recomienda encarecidamente evitar quemar maderas blandas en su estufa de leña, ya que obstruyen su sistema de calefacción, producen mucho humo y emiten chispas durante la combustión (chimenea abierta).
-Evite quemar maderas que se astillan, como el castaño y el plátano, ya que proyectan brasas y no deben utilizarse en chimeneas abiertas.
-Evite también las maderas que obstruyen, como las maderas blandas y las maderas demasiado húmedas, ya que producen demasiado humo y depositan resina en los conductos.
-La sección transversal del 90% de los troncos se sitúa entre 5 y 15 cm. El resto de los troncos son mayores, con secciones transversales que varían entre 15 y 18 cm.
-Su fardo contiene trozos de madera más pequeños que pueden utilizarse para encender el fuego. Esta madera, que no pudo eliminarse por selección, se ofrece de regalo y no se contabiliza en el volumen.',
+             'description' => 'O palete contém vários tipos de madeira dura. Isto é ideal para conseguir um bom equilíbrio entre brasas e chamas vivas.
+Graças a esta mistura de madeiras duras, se beneficiará de um calor elevado e de uma combustão lenta para um menor consumo de combustível.
+A madeira está bem dividida em troncos de 40 cm, limpos e descascados, ideais para uma chaminé o um insert grande.
+Esta madeira extra-seca consume um 30% menos que a madeira convencional (normalmente secada ao 35% de humidade durante 12 meses), proporcionando ao seu aparelho de aquecimento o melhor rendimento.
+¿Madeira pesada o leve?
+A madeira leve é fácil de acender mas se queima demasiado rápido (choupo, ácer, tília, amieiro, etc.).
+A madeira pesada é mais difícil de acender, mas tem um elevado poder calorífico e arde lentamente.
+Recomenda-se vivamente evitar queimar madeiras macias na sua salamandra a lenha, já que obstruem o seu sistema de aquecimento, produzem muito fumo e emiten chispas durante a combustão (chaminé aberta).
+Evite queimar madeiras que se astillan, como o castaño e o plátano, já que proyectan brasas e no devem utilizarse em lareiras abiertas.
+Evite também as madeiras que obstruem, como as madeiras macias e as madeiras demasiado húmidas, já que produzem demasiado fumo e depositan resina em os condutas.
+A sección transversal do 90% dos troncos se sitúa entre 5 e 15 cm. O resto dos troncos são mayores, com secciones transversales que varían entre 15 e 18 cm.
+O seu fardo contém trozos de madeira mais pequenos que podem utilizarse para acender o fogo. Esta madeira, que no pudo eliminarse por selección, se oferece de regalo e no se contabiliza no volume.',
 
 
 
-        'slug' => 'lenha-40-cm-alto-rendimento-13-m3'
+        'slug' => 'lenha-40-cm-alto-rendimento-13-m3',
+        'seo_title' => 'LENHA – 40 CM – ALTO RENDIMENTO – 1,3 M3',
+        'seo_description' => 'LENHA – 40 CM – ALTO RENDIMENTO – 1,3 M3. Lenha seca pronta a queimar, entregue em palete. Envio grátis em Portugal Continental.'
     ],
     [
         'id' => 5820,
-        'title' => 'LEÑA – 40 CM – ALTO RENDIMIENTO – 2 M3',
+        'title' => 'LENHA – 40 CM – ALTO RENDIMENTO – 2 M3',
 
 
         'hover_image' => '',
@@ -2065,38 +2141,40 @@ Su fardo contiene trozos de madera más pequeños que pueden utilizarse para enc
         ],
 
         'in_stock' => true, 'color' => '',
-        'short_description' => 'Fardo de palés, troncos de madera 2m3 equivalen a 2,4 esteros de madera en términos de poder calorífico*.
-*2m3 de nuestros troncos paletizados de alto rendimiento consumen un 30% menos de combustible que la madera secada naturalmente durante 12 meses o con un 35% de humedad.
-El volumen aparente es de aproximadamente 1,85 esteros, pero equivale a 2,4 esteros en términos de poder calorífico.
-Así, se calienta más con un menor volumen de madera.
-Los troncos de madera de alto rendimiento están revolucionando la calefacción con leña. Esta madera se fabrica a partir de los mejores tipos de madera de frondosas. Se hiende y se seca con un contenido de humedad inferior al 20%.
-Madera limpia, bien hendida y parcialmente descortezada, certificada NF, 100% francesa.',
+        'short_description' => 'Fardo de paletes, troncos de madeira 2m3 equivalem a 2,4 esteres de madeira em termos de poder calorífico*.
+*2m3 de os nossos troncos paletizados de alto rendimento consomem um 30% menos de combustível que a madeira secada naturalmente durante 12 meses ou com um 35% de humidade.
+O volume aparente é de aproximadamente 1,85 esteres, mas equivale a 2,4 esteres em termos de poder calorífico.
+Assim, se aquece mais com um menor volume de madeira.
+Os troncos de madeira de alto rendimento estão a revolucionar o aquecimento com lenha. Esta madeira é fabricada a partir dos melhores tipos de madeira de folhosas. Se hiende e se seca com um teor de humidade inferior a 20%.
+Madeira limpa, bem hendida e parcialmente descascada, certificada NF, 100% francesa.',
              'ref' => '53745820',
-             'description' => 'Si busca una madera limpia, descortezada y fácil de manejar, esta es la madera para usted.
-Madera dura, ultra-seca, bien dividida, de sección pequeña y limpia (Grupo H1 G1 y descortezada en tambor).
-Madera de alto rendimiento para reducir las emisiones de partículas.
-Fácil de usar, con troncos empaquetados a granel en palés.
-Encendido fácil y rápido y calor constante durante todo el fuego.
-Algunos consejos para el uso correcto de esta madera:
-Coloque uno o dos troncos en medio de la hoguera.
-Añada astillas y un iniciador de fuego.
-Encienda la hoguera con una cerilla en el encendedor de fuego.
-Todo lo que tiene que hacer es disfrutar de un buen fuego.
-Esta leña es fácil de encender gracias a sus bonitas secciones y a su contenido de humedad muy bajo.
-Producirá un calor elevado constante y una bonita llama en cuanto se encienda.
-Los troncos de alto rendimiento están parcialmente descortezados y sin polvo, lo que los hace limpios y fáciles de usar. Las especies utilizadas son el roble, el carpe, el haya y el fresno.
-Garantizan un bajo contenido de cenizas (hasta 3 veces menos que la madera natural estacionada).
-No tendrá que vaciar su cenicero con tanta frecuencia y el cristal no se oscurecerá tan rápido.
-La sección transversal del 90% de los troncos se sitúa entre 5 y 15 cm. El resto de los troncos son mayores, con secciones transversales que varían entre 15 y 18 cm.
-Su fardo contiene trozos de madera más pequeños que pueden utilizarse para encender el fuego. Esta madera, que no pudo eliminarse por selección, se ofrece de regalo y no se contabiliza en el volumen.',
+             'description' => 'Se procura uma madeira limpa, descascada e fácil de manusear, esta é a madeira para usted.
+Madeira dura, ultra-seca, bem dividida, de sección pequena e limpa (Grupo H1 G1 e descascada em tambor).
+Madeira de alto rendimento para reduzir as emissões de partículas.
+Fácil de usar, com troncos empaquetados a granel em paletes.
+Encendido fácil e rápido e calor constante durante todo o fogo.
+Algunos consejos para o uso correcto de esta madeira:
+Coloque uno o dos troncos em medio da hoguera.
+Añada astillas e um iniciador de fogo.
+Encienda a hoguera com uma cerilla no encendedor de fogo.
+Todo o que tem que hacer é desfrutar de um buen fogo.
+Esta lenha é fácil de acender graças a os seus bonitas secciones e ao seu teor de humidade muito baixo.
+Producirá um calor elevado constante e uma bonita llama em cuanto se encienda.
+Os troncos de alto rendimento estão parcialmente descascados e sem polvo, o que os faz limpos e fáceis de usar. As espécies utilizadas são o carvalho, o carpinho, o faia e o freixo.
+Garantizan um baixo conteúdo de cinzas (até 3 veces menos que a madeira natural estacionada).
+No terá que esvaziar o seu cinzeiro com tanta frequência e o cristal no se oscurecerá tão rápido.
+A sección transversal do 90% dos troncos se sitúa entre 5 e 15 cm. O resto dos troncos são mayores, com secciones transversales que varían entre 15 e 18 cm.
+O seu fardo contém trozos de madeira mais pequenos que podem utilizarse para acender o fogo. Esta madeira, que no pudo eliminarse por selección, se oferece de regalo e no se contabiliza no volume.',
 
 
 
-        'slug' => 'lenha-40-cm-alto-rendimento-2-m3'
+        'slug' => 'lenha-40-cm-alto-rendimento-2-m3',
+        'seo_title' => 'LENHA – 40 CM – ALTO RENDIMENTO – 2 M3',
+        'seo_description' => 'LENHA – 40 CM – ALTO RENDIMENTO – 2 M3. Lenha seca pronta a queimar, entregue em palete. Envio grátis em Portugal Continental.'
     ],
     [
         'id' => 5819,
-        'title' => 'LEÑA – 50 CM – MEZCLA DE MADERAS DURAS – PALÉ 2 M3 – 2,5 ESTEROS',
+        'title' => 'LENHA – 50 CM – MISTURA DE MADEIRAS DURAS – PALETE 2 M3 – 2,5 ESTERES',
 
 
         'hover_image' => '',
@@ -2109,31 +2187,33 @@ Su fardo contiene trozos de madera más pequeños que pueden utilizarse para enc
         ],
 
         'in_stock' => true, 'color' => '',
-        'short_description' => 'Leña 50 cm
-Palé no retornable de 2M3 o 2,5 esteros de madera, en troncos hendidos de 50-55 cm, una mezcla de maderas duras (fresno, haya y carpe), secadas naturalmente.
-Este producto debe almacenarse en un lugar ventilado durante algunas semanas antes de usarse, ya que todavía necesita perder algo de humedad residual.',
+        'short_description' => 'Lenha 50 cm
+Palete no retornable de 2M3 o 2,5 esteres de madeira, em troncos hendidos de 50-55 cm, uma mistura de madeiras duras (freixo, faia e carpinho), secadas naturalmente.
+Este produto deve armazenar-se em um local ventilado durante algumas semanas antes de usarse, já que ainda necessita perder algo de humidade residual.',
              'ref' => '53745819',
-             'description' => 'Estos troncos están divididos en longitudes de 50 cm, ideales para chimeneas y recuperadores de calor.
-No olvide que, para secar bien su leña, es necesario almacenarla en un lugar seco, ventilado y protegido de la humedad.
-El mejor lugar para guardar la leña es un cobertizo (abierto por delante y cerrado por los lados y arriba), para que el aire pueda pasar y la lluvia no pueda entrar.
-Esta madera es ideal para usarse en grandes chimeneas abiertas o cerradas.
-¿Cómo puedo reducir la contaminación?
-La técnica de encender el fuego desde arriba:
-Apilar los troncos, colocando los más grandes debajo y dejando un pequeño espacio entre cada uno, luego colocar las astillas encima. Los gases de combustión se eliminan en las llamas.
-Recargar la leña:
-En cuanto ya no haya llamas y las brasas sigan brillantes, no deje la puerta abierta durante mucho tiempo.
-El tubo de combustión:
-Debe estar en buen estado. Una buena corriente de aire es importante para una buena combustión.
-La limpieza de la chimenea:
-La chimenea debe limpiarse dos veces al año, una de ellas durante la temporada de calefacción.',
+             'description' => 'Estes troncos estão divididos em longitudes de 50 cm, ideais para lareiras e recuperadores de calor.
+No olvide que, para secar bno seu lenha, é necessário armazená-la em um local seco, ventilado e protegido da humidade.
+O melhor local para guardar a lenha é um cobertizo (abierto por à frente e fechado por os lados e arriba), para que o aire possa pasar e a lluvia no possa entrar.
+Esta madeira é ideal para usarse em grandes lareiras abiertas o cerradas.
+¿Cómo puedo reduzir a contaminación?
+A técnica de acender o fogo desde arriba:
+Empilhar os troncos, colocando os mais grandes por baixo e deixando um pequeno espaço entre cada um, depois colocar as astillas por cima. Os gases de combustão se eliminan em as chamas.
+Recargar a lenha:
+Em cuanto já no faia chamas e as brasas sigan brillantes, no deje a puerta abierta durante muito tiempo.
+O tubo de combustão:
+Debe estar em buen estado. Uma buena corrente de ar é importante para uma boa combustão.
+A limpeza da chaminé:
+A chaminé deve limpiarse dos veces ao ano, uma de ellas durante a temporada de aquecimento.',
 
 
 
-        'slug' => 'lenha-50-cm-mistura-de-madeiras-duras-palete-2-m3-25-steres'
+        'slug' => 'lenha-50-cm-mistura-de-madeiras-duras-palete-2-m3-25-steres',
+        'seo_title' => 'LENHA – 50 CM – MISTURA DE MADEIRAS DURAS – PALETE 2 M3 – 2,5 ESTERES',
+        'seo_description' => 'LENHA – 50 CM – MISTURA DE MADEIRAS DURAS – PALETE 2 M3 – 2,5 ESTERES. Lenha seca pronta a queimar, entregue em palete. Envio grátis em Portugal Continental.'
     ],
     [
         'id' => 5811,
-        'title' => 'LEÑA PARA CALEFACCIÓN – 40 CM – 2 M3 – 1,85 ESTEROS POR CAMIÓN COMPLETO',
+        'title' => 'LENHA PARA AQUECIMENTO – 40 CM – 2 M3 – 1,85 ESTERES POR CAMIÃO COMPLETO',
 
 
         'hover_image' => '',
@@ -2146,21 +2226,23 @@ La chimenea debe limpiarse dos veces al año, una de ellas durante la temporada 
         ],
 
         'in_stock' => true, 'color' => '',
-        'short_description' => 'La cantidad mínima de pedido para este producto es de 26.
-Palé de leña acondicionada en fardos a granel de 2000 dm3 o 1,85 esteros, en 40 cm.
-¡Compre nuestra leña por camión! La descarga del camión es responsabilidad del cliente (se necesita una carretilla elevadora).',
+        'short_description' => 'A quantidade mínima de encomenda para este produto é de 26.
+Palete de lenha acondicionada em fardos a granel de 2000 dm3 o 1,85 esteres, em 40 cm.
+¡Compre a nossa lenha por camião! A descarga do camião é responsabilidad do cliente (se necessita uma carretilla elevadora).',
              'ref' => '53745811',
-             'description' => 'Los troncos de madera de alto rendimiento están revolucionando la leña. Esta gama contiene las mejores maderas nobles (roble, carpe, fresno, haya).
-Esta madera secada en horno ofrece un ahorro del 30% respecto a la madera secada al 35%, garantizando el máximo rendimiento de su aparato de leña.
-Madera limpia, bien dividida y parcialmente descortezada, certificada NF, 100% francesa.',
+             'description' => 'Os troncos de madeira de alto rendimento estão a revolucionar a lenha. Esta gama contém as melhores madeiras nobres (carvalho, carpinho, freixo, faia).
+Esta madeira seca em estufa oferece um poupança do 30% relativamente à madeira secada ao 35%, garantindo o máximo rendimento do seu aparelho de lenha.
+Madeira limpa, bem dividida e parcialmente descascada, certificada NF, 100% francesa.',
 
 
 
-        'slug' => 'lenha-para-aquecimento-40-cm-2-m3-185-pes-por-camiao-completo'
+        'slug' => 'lenha-para-aquecimento-40-cm-2-m3-185-pes-por-camiao-completo',
+        'seo_title' => 'LENHA PARA AQUECIMENTO – 40 CM – 2 M3 – 1,85 ESTERES POR CAMIÃO COMPLETO',
+        'seo_description' => 'LENHA PARA AQUECIMENTO – 40 CM – 2 M3 – 1,85 ESTERES POR CAMIÃO COMPLETO. Venda a granel por camião completo, preço otimizado por volume. Envio grátis em Portugal Continental.'
     ],
     [
         'id' => 5816,
-        'title' => 'LEÑA – 25 CM – ALTO RENDIMIENTO – 2 M3',
+        'title' => 'LENHA – 25 CM – ALTO RENDIMENTO – 2 M3',
 
 
         'hover_image' => 'wp-content/uploads/2025/10/BOIS-DE-CHAUFFAGE-25-CM-ALTO-DESEMPENHO-2-M3-1-480x480.jpg',
@@ -2174,38 +2256,40 @@ Madera limpia, bien dividida y parcialmente descortezada, certificada NF, 100% f
         ],
 
         'in_stock' => true, 'color' => '',
-        'short_description' => 'Fardo de palés, troncos de madera 2m3 equivalen a 3,4 esteros de madera en términos de poder calorífico*.
-*2m3 de nuestros troncos paletizados de alto rendimiento consumen un 30% menos de combustible que la madera secada naturalmente durante 12 meses o con un 35% de humedad.
-El volumen aparente es de aproximadamente 2,60 esteros, pero equivale a 3,4 esteros en términos de poder calorífico.
-Madera limpia, bien dividida y parcialmente descortezada, certificada NF, 100% francesa.
-Los troncos de alto rendimiento están revolucionando la leña. Se fabrican a partir de las mejores maderas de frondosas (roble, carpe, haya, fresno), cortados y secados a menos del 20% de humedad.',
+        'short_description' => 'Fardo de paletes, troncos de madeira 2m3 equivalem a 3,4 esteres de madeira em termos de poder calorífico*.
+*2m3 de os nossos troncos paletizados de alto rendimento consomem um 30% menos de combustível que a madeira secada naturalmente durante 12 meses ou com um 35% de humidade.
+O volume aparente é de aproximadamente 2,60 esteres, mas equivale a 3,4 esteres em termos de poder calorífico.
+Madeira limpa, bem dividida e parcialmente descascada, certificada NF, 100% francesa.
+Os troncos de alto rendimento estão a revolucionar a lenha. Se fabricam a partir das melhores madeiras de folhosas (carvalho, carpinho, faia, freixo), cortados e secados a menos do 20% de humidade.',
              'ref' => '53745816',
-             'description' => 'Si busca una madera limpia, descortezada y fácil de manejar, esta es la madera ideal para usted.
-No es necesario dividir los troncos porque las secciones son pequeñas (5 a 15 cm).
-Madera dura, limpia (cepillada en un tambor de descortezado), ultra-seca con un contenido de humedad del 20% (Grupo H1 G1).
-Madera de alto rendimiento para reducir las emisiones de partículas.
-Gracias a los troncos sin polvo y sin suciedad, obtiene una combustión óptima sin obstruir su aparato.
-Producen de 2 a 3 veces menos cenizas que la madera con un contenido de humedad del 35%.
-Con su elevado poder calorífico, se inflama rápidamente y proporciona un calor constante durante todo el fuego.
-Esta madera está certificada NF, 100% francesa. Es controlada regularmente por el laboratorio CERIC.
-¿Qué madera elegir para la calefacción?
-Las maderas de frondosas son las maderas a utilizar para la calefacción:
-– roble, haya, fresno, carpe, abedul, aliso, castaño, olmo…
-Estas maderas son densas y liberan mucho calor, pero son difíciles de encender, por lo que se necesita un poco de leña fina para ayudar.
-Además, producen más brasas.
-Maderas duras blandas:
-– chopo, sauce, acacia, tilo…
-Estas maderas se encienden rápidamente con bonitas llamas, pero se apagan más rápido.
-La sección transversal del 90% de los troncos se sitúa entre 5 y 15 cm. El resto de los troncos son mayores, con secciones transversales de 15 a 18 cm.
-Su fardo contiene trozos de madera más pequeños que pueden utilizarse para encender el fuego. Esta madera, que no pudo eliminarse por selección, se ofrece de regalo y no se contabiliza en el volumen.',
+             'description' => 'Se procura uma madeira limpa, descascada e fácil de manusear, esta é a madeira ideal para usted.
+No é necessário dividir os troncos porque as secciones são pequenas (5 a 15 cm).
+Madeira dura, limpa (cepillada em um tambor de descortezado), ultra-seca com um teor de humidade do 20% (Grupo H1 G1).
+Madeira de alto rendimento para reduzir as emissões de partículas.
+Graças aos troncos sem polvo e sem sujidade, obtiene uma combustão ótima sem obstruir o seu aparelho.
+Producen de 2 a 3 veces menos cinzas que a madeira com um teor de humidade do 35%.
+Com o seu elevado poder calorífico, se inflama rápidamente e proporciona um calor constante durante todo o fogo.
+Esta madeira está certificada NF, 100% francesa. Es controlada regularmente por o laboratorio CERIC.
+¿Qué madeira elegir para a aquecimento?
+As madeiras de folhosas são as madeiras a utilizar para a aquecimento:
+– carvalho, faia, freixo, carpinho, bétula, amieiro, castaño, olmo…
+Estas madeiras são densas e liberan muito calor, mas são difíciles de acender, pelo que se necessita um pouco de lenha fina para ayudar.
+Além disso, produzem mais brasas.
+Madeiras duras macias:
+– choupo, salgueiro, acacia, tília…
+Estas madeiras se encienden rápidamente com bonitas chamas, mas se apagan mais rápido.
+A sección transversal do 90% dos troncos se sitúa entre 5 e 15 cm. O resto dos troncos são mayores, com secciones transversales de 15 a 18 cm.
+O seu fardo contém trozos de madeira mais pequenos que podem utilizarse para acender o fogo. Esta madeira, que no pudo eliminarse por selección, se oferece de regalo e no se contabiliza no volume.',
 
 
 
-        'slug' => 'madeira-de-fogo-25-cm-alto-desempenho-2-m3'
+        'slug' => 'madeira-de-fogo-25-cm-alto-desempenho-2-m3',
+        'seo_title' => 'LENHA – 25 CM – ALTO RENDIMENTO – 2 M3',
+        'seo_description' => 'LENHA – 25 CM – ALTO RENDIMENTO – 2 M3. Lenha seca pronta a queimar, entregue em palete. Envio grátis em Portugal Continental.'
     ],
     [
         'id' => 5806,
-        'title' => 'LEÑA – 40 CM – ALTO RENDIMIENTO – 1,3 M3 – 1,25 ESTEROS',
+        'title' => 'LENHA – 40 CM – ALTO RENDIMENTO – 1,3 M3 – 1,25 ESTERES',
 
 
         'hover_image' => 'wp-content/uploads/2025/10/BOIS-DE-CHAUFFAGE-40-CM-ALTO-DESEMPENHO-13-M3-125-PES-2-480x480.jpg',
@@ -2220,31 +2304,33 @@ Su fardo contiene trozos de madera más pequeños que pueden utilizarse para enc
         ],
 
         'in_stock' => true, 'color' => '',
-        'short_description' => 'Palé de leña empaquetada en fardos
-Volumen: 1300 dm3 o 1,25 esteros, en 40 cm.
-Mezcla de maderas de frondosas (fresno, haya, roble y carpe), secadas en horno, humedad garantizada inferior al 20%.
-Madera limpia, bien hendida y descortezada, norma NF, 100% francesa.
-Estos troncos de alto rendimiento están revolucionando la calefacción con leña. Producida a partir de las especies de madera de frondosas más recomendadas (roble, carpe, haya, fresno), esta madera se hiende y se seca en horno hasta alcanzar un contenido de humedad inferior al 20%. Esta madera extra-seca consume un 30% menos de combustible que la madera convencional (normalmente secada al 35% de humedad durante 12 meses), proporcionando a su aparato de calefacción el mejor rendimiento.',
+        'short_description' => 'Palete de lenha embalada em fardos
+Volume: 1300 dm3 o 1,25 esteres, em 40 cm.
+Mistura de madeiras de folhosas (freixo, faia, carvalho e carpinho), secadas em forno, humidade garantizada inferior a 20%.
+Madeira limpa, bem hendida e descascada, norma NF, 100% francesa.
+Estes troncos de alto rendimento estão a revolucionar o aquecimento com lenha. Produzida a partir das espécies de madeira de folhosas mais recomendadas (carvalho, carpinho, faia, freixo), esta madeira se hiende e se seca em forno até atingir um teor de humidade inferior a 20%. Esta madeira extra-seca consume um 30% menos de combustível que a madeira convencional (normalmente secada ao 35% de humidade durante 12 meses), proporcionando ao seu aparelho de aquecimento o melhor rendimento.',
              'ref' => '53745806',
-             'description' => 'El palé contiene varios tipos de madera dura. Esto es ideal para lograr un buen equilibrio entre brasas y llamas vivas.
-Gracias a esta mezcla de maderas duras, se beneficiará de un calor elevado y de una combustión lenta para un menor consumo de combustible.
-La madera está bien dividida en troncos de 40 cm, limpios y descortezados, ideales para una chimenea o un insert grande.
-¿Madera pesada o ligera?
-La madera ligera es fácil de encender pero se quema demasiado rápido (chopo, arce, tilo, aliso, etc.).
-La madera pesada es más difícil de encender, pero tiene un elevado poder calorífico y arde lentamente.
-Se recomienda encarecidamente evitar quemar maderas blandas en su estufa de leña, ya que obstruyen su sistema de calefacción, producen mucho humo y emiten chispas durante la combustión (chimenea abierta).
-Evite quemar maderas que se astillan, como el castaño y el plátano, ya que proyectan brasas y no deben utilizarse en chimeneas abiertas.
-Evite también las maderas que obstruyen, como las maderas blandas y las maderas demasiado húmedas, ya que producen demasiado humo y depositan resina en los conductos.
-La sección transversal del 90% de los troncos se sitúa entre 5 y 15 cm. El resto de los troncos son mayores, con secciones transversales que varían entre 15 y 18 cm.
-Su fardo contiene trozos de madera más pequeños que pueden utilizarse para encender el fuego. Esta madera, que no pudo eliminarse por selección, se ofrece de regalo y no se contabiliza en el volumen.',
+             'description' => 'O palete contém vários tipos de madeira dura. Isto é ideal para conseguir um bom equilíbrio entre brasas e chamas vivas.
+Graças a esta mistura de madeiras duras, se beneficiará de um calor elevado e de uma combustão lenta para um menor consumo de combustível.
+A madeira está bem dividida em troncos de 40 cm, limpos e descascados, ideais para uma chaminé o um insert grande.
+¿Madeira pesada o leve?
+A madeira leve é fácil de acender mas se queima demasiado rápido (choupo, ácer, tília, amieiro, etc.).
+A madeira pesada é mais difícil de acender, mas tem um elevado poder calorífico e arde lentamente.
+Recomenda-se vivamente evitar queimar madeiras macias na sua salamandra a lenha, já que obstruem o seu sistema de aquecimento, produzem muito fumo e emiten chispas durante a combustão (chaminé aberta).
+Evite queimar madeiras que se astillan, como o castaño e o plátano, já que proyectan brasas e no devem utilizarse em lareiras abiertas.
+Evite também as madeiras que obstruem, como as madeiras macias e as madeiras demasiado húmidas, já que produzem demasiado fumo e depositan resina em os condutas.
+A sección transversal do 90% dos troncos se sitúa entre 5 e 15 cm. O resto dos troncos são mayores, com secciones transversales que varían entre 15 e 18 cm.
+O seu fardo contém trozos de madeira mais pequenos que podem utilizarse para acender o fogo. Esta madeira, que no pudo eliminarse por selección, se oferece de regalo e no se contabiliza no volume.',
 
 
 
-        'slug' => 'madeira-de-fogo-40-cm-alto-desempenho-13-m3-125-pes'
+        'slug' => 'madeira-de-fogo-40-cm-alto-desempenho-13-m3-125-pes',
+        'seo_title' => 'LENHA – 40 CM – ALTO RENDIMENTO – 1,3 M3 – 1,25 ESTERES',
+        'seo_description' => 'LENHA – 40 CM – ALTO RENDIMENTO – 1,3 M3 – 1,25 ESTERES. Lenha seca pronta a queimar, entregue em palete. Envio grátis em Portugal Continental.'
     ],
     [
         'id' => 5638,
-        'title' => 'Madera Densificada – Madera Dura – 1 Tonelada por Palé',
+        'title' => 'Madeira Densificada – Madeira Dura – 1 Tonelada por Palete',
 
 
         'hover_image' => '',
@@ -2257,38 +2343,38 @@ Su fardo contiene trozos de madera más pequeños que pueden utilizarse para enc
         ],
 
         'in_stock' => true, 'color' => '',
-        'short_description' => 'Madera densificada, 100% madera noble (haya, chopo, roble y chopo), 100% natural, sin cola ni aditivos y 100% portuguesa. Vendida por palé con 117 paquetes de 5 varillas.',
+        'short_description' => 'Madeira densificada, 100% madeira nobre (faia, choupo, carvalho e choupo), 100% natural, sem cola nem aditivos e 100% portuguesa. Vendida por palete com 117 pacotes de 5 varas.',
              'ref' => '53745638',
-             'description' => 'Madera Densificada – Madera Dura – 1 Tonelada por Palé
-La Madera Densificada – Madera Dura es un combustible de alta calidad, ideal para estufas, chimeneas y calderas. Esta madera dura ha sido procesada y densificada para garantizar una combustión eficiente, duradera y limpia. Con alta densidad, estos troncos ofrecen un rendimiento térmico superior y una liberación constante de calor durante un largo período. Gracias a su bajo contenido de humedad, la madera proporciona una combustión más limpia, reduciendo las emisiones y la cantidad de cenizas producidas.
-Presentada en 1 tonelada por palé, esta opción es perfecta para quienes buscan un suministro eficiente y económico de combustible de calidad. La madera dura densificada es conocida por su larga duración en combustión y elevada eficiencia energética, convirtiéndose en una excelente elección para calentar grandes espacios y mantener un ambiente cálido durante todo el invierno.
+             'description' => 'Madeira Densificada – Madeira Dura – 1 Tonelada por Palete
+A Madeira Densificada – Madeira Dura é um combustível de alta qualidade, ideal para salamandras, lareiras e caldeiras. Esta madeira dura foi processada e densificada para garantir uma combustão eficiente, duradoura e limpa. Com alta densidade, estes troncos oferecem um rendimento térmico superior e uma libertação constante de calor durante um largo período. Graças ao seu baixo teor de humidade, a madeira proporciona uma combustão mais limpa, reduzindo as emissões e a quantidade de cinzas produzidas.
+Apresentada em 1 tonelada por palete, esta opção é perfeita para quem procura um fornecimento eficiente e económico de combustível de qualidade. A madeira dura densificada é conhecida por o seu larga duração em combustão e elevada eficiência energética, convertendo-se em uma excelente escolha para aquecer grandes espaços e manter um ambiente quente durante todo o inverno.
 Características:
 
-Madera dura densificada, garantizando alto poder calorífico y combustión prolongada
+Madeira dura densificada, garantindo alto poder calorífico e combustão prolongada
 
-Bajo contenido de humedad, que mejora la eficiencia de la combustión y reduce la cantidad de cenizas
+Baixo teor de humidade, que melhora a eficiência da combustão e reduz a quantidade de cinzas
 
-Tonelada por palé, presentación conveniente para almacenamiento y manejo
+Tonelada por palete, apresentação conveniente para armazenamento e manuseamento
 
-Ideal para estufas, chimeneas y calderas, perfecta para calentar grandes espacios
+Ideal para salamandras, lareiras e caldeiras, perfeita para aquecer grandes espaços
 
-Combustión limpia y eficiente, con bajas emisiones de CO2
+Combustão limpa e eficiente, com baixas emissões de CO2
 
-Beneficios:
+Benefícios:
 
-Mayor poder calorífico, proporcionando calor constante durante más tiempo
+Mayor poder calorífico, proporcionando calor constante durante mais tiempo
 
-Alta eficiencia energética, reduciendo el consumo y maximizando el rendimiento térmico
+Alta eficiência energética, reduzindo o consumo e maximizando o rendimento térmico
 
-Ahorro a largo plazo, ya que la madera densa tiene mayor duración en combustión
+Poupança a longo prazo, já que a madeira densa tem maior duração em combustão
 
-Ecológica y sostenible, con bajas emisiones y proceso de combustión limpio
+Ecológica e sustentável, com baixas emissões e processo de combustão limpo
 
-Fácil de manejar y almacenar, con formato que facilita el transporte y uso
+Fácil de manusear e armazenar, com formato que facilita o transporte e uso
 
-Ideal para calefacción prolongada, proporcionando un ambiente cálido y confortable
+Ideal para aquecimento prolongada, proporcionando um ambiente quente e confortável
 
-La Madera Densificada – Madera Dura es la elección perfecta para quienes buscan una solución de calefacción eficiente, ecológica y económica, garantizando calor constante durante todo el invierno.
+A Madeira Densificada – Madeira Dura é a escolha perfeita para quem procura uma solução de aquecimento eficiente, ecológica e económica, garantindo calor constante durante todo o inverno.
 
 
 
@@ -2296,11 +2382,13 @@ La Madera Densificada – Madera Dura es la elección perfecta para quienes busc
 
 
 
-        'slug' => 'madeira-densificada-madeira-dura-1-tonelada-por-palete'
+        'slug' => 'madeira-densificada-madeira-dura-1-tonelada-por-palete',
+        'seo_title' => 'Madeira Densificada – Madeira Dura – 1 Tonelada por Palete',
+        'seo_description' => 'Madeira Densificada – Madeira Dura – 1 Tonelada por Palete. Madeira densificada de combustão longa, seca e com muito pouca cinza. Envio grátis em Portugal Continental.'
     ],
     [
         'id' => 5639,
-        'title' => 'Madera Densificada – Madera Dura + Madera Blanda – 1/2 Palé de 480 kg',
+        'title' => 'Madeira Densificada – Madeira Dura + Madeira Macia – 1/2 Palete de 480 kg',
 
 
         'hover_image' => '',
@@ -2313,40 +2401,40 @@ La Madera Densificada – Madera Dura es la elección perfecta para quienes busc
         ],
 
         'in_stock' => true, 'color' => '',
-        'short_description' => 'Madera densificada de día, compuesta por 70% de virutas de haya, roble y fresno, y 30% de madera blanda proveniente de aserraderos locales, producida en Picardía a partir de bosques certificados PEFC. 100% natural, sin cola ni aditivos. Vendida en 48 lotes de 6 troncos.',
+        'short_description' => 'Madeira densificada de dia, composta por 70% de aparas de faia, carvalho e freixo, e 30% de madeira macia proveniente de serrações locais, produzida em Picardia a partir de bosques certificados PEFC. 100% natural, sem cola nem aditivos. Vendida em 48 lotes de 6 troncos.',
              'ref' => '53745639',
-             'description' => 'Madera Densificada – Madera Dura + Madera Blanda – 1/2 Palé de 480 kg
-La Madera Densificada – Madera Dura + Madera Blanda es una solución ideal para quienes buscan un combustible versátil, de alta calidad y eficiente para sus sistemas de calefacción. Este producto combina madera dura y blanda, proporcionando una combustión equilibrada, con una liberación constante de calor. La densificación de la madera mejora su rendimiento térmico y prolonga la duración de la combustión, permitiendo disfrutar de un ambiente cálido y acogedor durante más tiempo.
-Presentado en 1/2 palé de 480 kg, es fácil de manejar y almacenar, facilitando su uso en salamandras, chimeneas y calderas. La mezcla de madera dura y blanda asegura una combustión eficiente y limpia, con bajo contenido de humedad que reduce las emisiones y la cantidad de cenizas producidas.
+             'description' => 'Madeira Densificada – Madeira Dura + Madeira Macia – 1/2 Palete de 480 kg
+A Madeira Densificada – Madeira Dura + Madeira Macia é uma solução ideal para quem procura um combustível versátil, de alta qualidade e eficiente para os seus sistemas de aquecimento. Este produto combina madeira dura e macia, proporcionando uma combustão equilibrada, com uma libertação constante de calor. A densificação da madeira melhorao seu rendimento térmico e prolonga a duração da combustão, permitindo desfrutar de um ambiente quente e acolhedor durante mais tiempo.
+Apresentado em 1/2 palete de 480 kg, é fácil de manusear e armazenar, facilitando seu uso em salamandras, lareiras e caldeiras. A mistura de madeira dura e macia assegura uma combustão eficiente e limpa, com baixo teor de humidade que reduz as emissões e a quantidade de cinzas produzidas.
 Características:
 
-Combinación de madera dura y blanda, ofreciendo un equilibrio perfecto entre poder calorífico y eficiencia de combustión
+Combinación de madeira dura e macia, oferecendo um equilíbrio perfeito entre poder calorífico e eficiência de combustão
 
-Madera densificada, que mejora el rendimiento térmico y prolonga la duración del calor
+Madeira densificada, que melhora o rendimento térmico e prolonga a duração do calor
 
-Bajo contenido de humedad, para una combustión limpia y eficiente con menos residuos
+Baixo teor de humidade, para uma combustão limpa e eficiente com menos resíduos
 
-1/2 palé de 480 kg, ideal para almacenamiento y fácil manejo
+1/2 palete de 480 kg, ideal para armazenamento e fácil manuseamento
 
-Bajas emisiones de CO₂, contribuyendo a un ambiente más limpio y respetuoso con el medio ambiente
+Bajas emissões de CO₂, contribuindo para um ambiente mais limpo e respetuoso com o ambiente
 
-Ideal para salamandras, chimeneas y calderas, proporcionando calor constante durante el invierno
+Ideal para salamandras, lareiras e caldeiras, proporcionando calor constante durante o inverno
 
-Beneficios:
+Benefícios:
 
-Alta eficiencia energética, con mejor aprovechamiento del calor generado
+Alta eficiência energética, com melhor aproveitamento do calor generado
 
-Duración prolongada de la combustión, gracias a la densificación de la madera
+Duración prolongada da combustão, graças à densificação da madeira
 
-Ahorro de combustible, optimizando el rendimiento de la leña
+Poupança de combustível, optimizando o rendimento da lenha
 
-Ecológica y sostenible, con bajo impacto ambiental debido a las bajas emisiones
+Ecológica e sustentável, com baixo impacto ambiental devido às baixas emissões
 
-Facilidad de uso y almacenamiento, con formato cómodo y práctico
+Facilidad de uso e armazenamento, com formato confortável e prático
 
-Ideal para calefacción constante, proporcionando calor duradero y confortable en el hogar
+Ideal para aquecimento constante, proporcionando calor duradouro e confortável no casa
 
-La Madera Densificada – Madera Dura + Madera Blanda es la elección perfecta para quienes buscan una solución de calefacción de alto rendimiento, ecológica y eficiente, que permita disfrutar de un calor agradable durante todo el invierno.
+A Madeira Densificada – Madeira Dura + Madeira Macia é a escolha perfeita para quem procura uma solução de aquecimento de alto rendimento, ecológica e eficiente, que permita desfrutar de um calor agradável durante todo o inverno.
 
 
 
@@ -2354,11 +2442,13 @@ La Madera Densificada – Madera Dura + Madera Blanda es la elección perfecta p
 
 
 
-        'slug' => 'madeira-densificada-madeira-dura-madeira-macia-1-2-palete-de-480-kg'
+        'slug' => 'madeira-densificada-madeira-dura-madeira-macia-1-2-palete-de-480-kg',
+        'seo_title' => 'Madeira Densificada – Madeira Dura + Madeira Macia – 1/2 Palete de 480 kg',
+        'seo_description' => 'Madeira Densificada – Madeira Dura + Madeira Macia – 1/2 Palete de 480 kg. Madeira densificada de combustão longa, seca e com muito pouca cinza. Envio grátis em Portugal Continental.'
     ],
     [
         'id' => 5640,
-        'title' => 'Madera Densificada – Madera Dura + Madera Blanda – Palé de 960 kg',
+        'title' => 'Madeira Densificada – Madeira Dura + Madeira Macia – Palete de 960 kg',
 
 
         'hover_image' => '',
@@ -2371,49 +2461,51 @@ La Madera Densificada – Madera Dura + Madera Blanda es la elección perfecta p
         ],
 
         'in_stock' => true, 'color' => '',
-        'short_description' => 'Madera densificada del día, compuesta por 70% de virutas de haya, roble, fresno y 30% de madera blanda proveniente de aserraderos locales, producida en Picardía a partir de bosques certificados PEFC. 100% natural, sin cola ni aditivos. ¡Ayude a regenerar el bosque: 1 palé comprado = 10 árboles replantados! Vendida en 96 lotes de 6 varillas.',
+        'short_description' => 'Madeira densificada do dia, composta por 70% de aparas de faia, carvalho, freixo e 30% de madeira macia proveniente de serrações locais, produzida em Picardia a partir de bosques certificados PEFC. 100% natural, sem cola nem aditivos. ¡Ayuda regenerar o bosque: 1 palete comprado = 10 árboles replantados! Vendida em 96 lotes de 6 varas.',
              'ref' => '53745640',
-             'description' => 'Madera Densificada – Madera Dura + Madera Blanda – Palé de 960 kg
-La madera densificada de madera dura y madera blanda es una opción de calefacción de alta eficiencia, ideal para quienes buscan un combustible natural, sostenible y de alto rendimiento. Este palé de 960 kg combina lo mejor de los dos tipos de madera, ofreciendo una combustión óptima, con alto poder calorífico y bajo nivel de cenizas. Gracias a su proceso de densificación, la madera tiene un contenido de humedad muy bajo, lo que mejora la eficiencia de la combustión y reduce la producción de residuos.
+             'description' => 'Madeira Densificada – Madeira Dura + Madeira Macia – Palete de 960 kg
+A madeira densificada de madeira dura e madeira macia é uma opção de aquecimento de alta eficiência, ideal para quem procura um combustível natural, sustentável e de alto rendimento. Este palete de 960 kg combina o melhor dos dos tipos de madeira, oferecendo uma combustão ótima, com alto poder calorífico e baixo teor de cinzas. Graças ao seu processo de densificação, a madeira tem um teor de humidade muito baixo, o que melhora a eficiência da combustão e reduz a produção de resíduos.
 Características:
 
-Composición: Madera dura y madera blanda densificada
+Composição: Madeira dura e madeira macia densificada
 
-Cantidad: Palé de 960 kg de madera densificada
+Quantidade: Palete de 960 kg de madeira densificada
 
-Bajo contenido de humedad, garantizando una combustión eficiente y limpia
+Baixo teor de humidade, garantindo uma combustão eficiente e limpa
 
-Alto poder calorífico, proporcionando calor constante y duradero
+Alto poder calorífico, proporcionando calor constante e duradouro
 
-Bajo nivel de cenizas, facilitando la limpieza y mantenimiento
+Baixo nível de cinzas, facilitando a limpeza e manutenção
 
-Ideal para estufas, chimeneas y calderas
+Ideal para salamandras, lareiras e caldeiras
 
-Presentación en palé, facilitando el almacenamiento y manejo
+Apresentação em palete, facilitando o armazenamento e manuseamento
 
-Beneficios:
+Benefícios:
 
-Eficiencia energética, reduciendo los costes de calefacción
+Eficiência energética, reduzindo os custos de aquecimento
 
-Combinación de maderas duras y blandas, que ofrecen un rendimiento térmico excelente y uniforme
+Combinación de madeiras duras e macias, que oferecem um rendimento térmico excelente e uniforme
 
-Ecológica y sostenible, fabricada con madera proveniente de fuentes responsables
+Ecológica e sustentável, fabricada com madeira proveniente de fontes responsáveis
 
-Fácil de manejar y almacenar, gracias a la presentación en palé
+Fácil de manusear e armazenar, graças à apresentação em palete
 
-Bajas emisiones de CO2, respetando el medio ambiente
+Baixas emissões de CO2, respeitando o ambiente
 
-Combustión limpia, con producción mínima de residuos y humo
+Combustão limpa, com produção mínima de resíduos e fumo
 
-Con el palé de Madera Densificada – Madera Dura + Madera Blanda, podrá disfrutar de una calefacción eficiente, económica y respetuosa con el medio ambiente durante todo el invierno.',
+Com o palete de Madeira Densificada – Madeira Dura + Madeira Macia, poderá desfrutar de um aquecimento eficiente, económico e respeitador do ambiente durante todo o inverno.',
 
 
 
-        'slug' => 'madeira-densificada-madeira-dura-madeira-macia-palete-de-960-kg'
+        'slug' => 'madeira-densificada-madeira-dura-madeira-macia-palete-de-960-kg',
+        'seo_title' => 'Madeira Densificada – Madeira Dura + Madeira Macia – Palete de 960 kg',
+        'seo_description' => 'Madeira Densificada – Madeira Dura + Madeira Macia – Palete de 960 kg. Madeira densificada de combustão longa, seca e com muito pouca cinza. Envio grátis em Portugal Continental.'
     ],
     [
         'id' => 5641,
-        'title' => 'Madera Densificada – Madera Blanda – Palé de 960 kg',
+        'title' => 'Madeira Densificada – Madeira Macia – Palete de 960 kg',
 
 
         'hover_image' => '',
@@ -2426,48 +2518,50 @@ Con el palé de Madera Densificada – Madera Dura + Madera Blanda, podrá disfr
         ],
 
         'in_stock' => true, 'color' => '',
-        'short_description' => 'Palé de 96 lotes de 5 barras de madera densificada
-Palé compuesto por 96 lotes, cada uno con 5 barras de madera densificada, producidas a partir de una mezcla de maderas resinosas. Producto 100% natural, sin cola ni aditivos. Cada barra mide aproximadamente 30 cm de longitud y 9 cm de diámetro. Alto poder calorífico (> 5 kWh/kg). Índice de humedad inferior al 10%. Combustión eficiente y prolongada. Producto sostenible y ecológico. Ideal para chimeneas, salamandras y calderas, garantizando una calefacción potente y duradera.',
+        'short_description' => 'Palete de 96 lotes de 5 barras de madeira densificada
+Palete composto por 96 lotes, cada um com 5 barras de madeira densificada, produzidas a partir de uma mistura de madeiras resinosas. Producto 100% natural, sem cola nem aditivos. Cada barra mide aproximadamente 30 cm de comprimento e 9 cm de diâmetro. Alto poder calorífico (> 5 kWh/kg). Índice de humidade inferior a 10%. Combustão eficiente e prolongada. Producto sustentável e ecológico. Ideal para lareiras, salamandras e caldeiras, garantindo um aquecimento potente e duradoura.',
              'ref' => '53745641',
-             'description' => 'Madera Densificada – Madera Blanda – Palé de 960 kg
-La madera densificada es la elección ideal para quienes buscan una fuente de calefacción ecológica, eficiente y de alto rendimiento. Este palé de 960 kg de madera blanda densificada ofrece una combustión excelente, garantizando un calor constante y duradero. Es ideal para chimeneas, salamandras y calderas, destacándose por su bajo contenido de humedad, que reduce significativamente la producción de humo y cenizas, maximizando la eficiencia energética.
+             'description' => 'Madeira Densificada – Madeira Macia – Palete de 960 kg
+A madeira densificada é a escolha ideal para quem procura uma fonte de aquecimento ecológica, eficiente e de alto rendimento. Este palete de 960 kg de madeira macia densificada oferece uma combustão excelente, garantindo um calor constante e duradouro. É ideal para lareiras, salamandras e caldeiras, destacando-se por o seu baixo teor de humidade, que reduz significativamente a produção de fumo e cinzas, maximizando a eficiência energética.
 Características:
 
-Tipo de madera: Madera blanda densificada
+Tipo de madeira: Madeira macia densificada
 
-Cantidad: Palé de 960 kg
+Quantidade: Palete de 960 kg
 
-Bajo contenido de humedad, optimizando la combustión y reduciendo el humo
+Baixo teor de humidade, optimizando a combustão e reduzindo o fumo
 
-Elevado poder calorífico, proporcionando calor continuo y eficaz
+Elevado poder calorífico, proporcionando calor contínuo e eficaz
 
-Bajo nivel de cenizas, facilitando la limpieza y mantenimiento
+Baixo nível de cinzas, facilitando a limpeza e manutenção
 
-Ideal para chimeneas, salamandras y calderas
+Ideal para lareiras, salamandras e caldeiras
 
-Fácil de almacenar y manejar gracias al formato en palé
+Fácil de armazenar e manusear graças ao formato em palete
 
-Beneficios:
+Benefícios:
 
-Alta eficiencia energética, ayudando a reducir los costes de calefacción
+Alta eficiência energética, ajudando a reduzir os custos de aquecimento
 
-Producto ecológico y sostenible, proveniente de fuentes de madera responsables
+Producto ecológico e sustentável, proveniente de fuentes de madeira responsables
 
-Práctico y fácil de almacenar
+Prático e fácil de armazenar
 
-Bajas emisiones de CO₂, respetando el medio ambiente
+Bajas emissões de CO₂, respeitando o ambiente
 
-Combustión limpia, con producción mínima de residuos y humo
+Combustão limpa, com produção mínima de resíduos e fumo
 
-Con el palé de madera densificada – madera blanda, podrá disfrutar de una calefacción eficaz, económica y respetuosa con el medio ambiente durante todo el invierno.',
+Com o palete de madeira densificada – madeira macia, poderá desfrutar de um aquecimento eficaz, económica e respeitadora do ambiente durante todo o inverno.',
 
 
 
-        'slug' => 'madeira-densificada-madeira-macia-palete-de-960-kg'
+        'slug' => 'madeira-densificada-madeira-macia-palete-de-960-kg',
+        'seo_title' => 'Madeira Densificada – Madeira Macia – Palete de 960 kg',
+        'seo_description' => 'Madeira Densificada – Madeira Macia – Palete de 960 kg. Madeira densificada de combustão longa, seca e com muito pouca cinza. Envio grátis em Portugal Continental.'
     ],
     [
         'id' => 5637,
-        'title' => 'Madera Densificada – Troncos Nocturnos – 1/2 Palé de 480 kg',
+        'title' => 'Madeira Densificada – Troncos Noturnos – 1/2 Palete de 480 kg',
 
 
         'hover_image' => '',
@@ -2480,49 +2574,51 @@ Con el palé de madera densificada – madera blanda, podrá disfrutar de una ca
         ],
 
         'in_stock' => true, 'color' => '',
-        'short_description' => 'Madera Densificada de Larga Duración para la Noche – Mezcla de Maderas Duras (Haya, Fresno y Roble) + Miscanthus
-100% natural, sin cola ni aditivos. Vendida en 48 lotes de 6 varillas cada uno.',
+        'short_description' => 'Madeira Densificada de Larga Duración para a Noche – Mistura de Madeiras Duras (Faia, Fresno e Carvalho) + Miscanthus
+100% natural, sem cola nem aditivos. Vendida em 48 lotes de 6 varas cada um.',
              'ref' => '53745637',
-             'description' => 'Madera Densificada – Troncos Nocturnos – 1/2 Palé de 480 kg
-La Madera Densificada – Troncos Nocturnos es un combustible de alta calidad, ideal para chimeneas, estufas y calderas. Estos troncos se fabrican a partir de madera de primera calidad, procesada para obtener una densificación óptima que garantiza una combustión eficiente y prolongada. Son perfectos para quienes buscan una fuente de calor constante durante la noche, ya que liberan calor de forma gradual y continua, manteniendo el ambiente caliente durante más tiempo.
-Este producto viene en 1/2 palé de 480 kg, garantizando una cantidad suficiente para cubrir las necesidades de calefacción durante un largo período. Los troncos nocturnos tienen bajo contenido de humedad, lo que favorece una combustión limpia, reduce las emisiones de CO2 y minimiza la producción de cenizas. Además, son fáciles de almacenar y manejar, proporcionando comodidad y practicidad.
+             'description' => 'Madeira Densificada – Troncos Noturnos – 1/2 Palete de 480 kg
+A Madeira Densificada – Troncos Noturnos é um combustível de alta qualidade, ideal para lareiras, salamandras e caldeiras. Estes troncos se fabricam a partir de madeira de primera qualidade, processada para obter uma densificação ótima que garante uma combustão eficiente e prolongada. Son perfeitos para quem procura uma fuente de calor constante durante a noche, já que liberan calor de forma gradual e contínua, mantendo o ambiente quente durante mais tiempo.
+Este produto vem em 1/2 palete de 480 kg, garantindo uma quantidade suficiente para cobrir as necessidades de aquecimento durante um largo período. Os troncos noturnos têm baixo teor de humidade, o que favorece uma combustão limpa, reduz as emissões de CO2 e minimiza a produção de cinzas. Além disso, são fáceis de armazenar e manusear, proporcionando comodidade e praticidade.
 Características:
 
-Fabricados con madera densificada, asegurando mayor eficiencia y combustión prolongada
+Fabricados com madeira densificada, assegurando maior eficiência e combustão prolongada
 
-Bajo contenido de humedad para una combustión más limpia y eficiente
+Baixo teor de humidade para uma combustão mais limpa e eficiente
 
-Liberación gradual del calor, ideal para mantener la temperatura constante durante toda la noche
+Liberación gradual do calor, ideal para manter a temperatura constante durante toda a noche
 
-Bajas emisiones de CO2, contribuyendo a un ambiente más limpio y sostenible
+Baixas emissões de CO2, contribuindo para um ambiente mais limpo e sustentável
 
-Práctico formato de 1/2 palé con 480 kg, fácil de almacenar y manejar
+Prático formato de 1/2 palete com 480 kg, fácil de armazenar e manusear
 
-Ideal para chimeneas, estufas y calderas, ofreciendo calor constante y duradero
+Ideal para lareiras, salamandras e caldeiras, oferecendo calor constante e duradouro
 
-Beneficios:
+Benefícios:
 
-Alta eficiencia energética, con combustión de larga duración y mejor aprovechamiento de la madera
+Alta eficiência energética, com combustão de larga duração e melhor aproveitamento da madeira
 
-Confort térmico prolongado, manteniendo su casa caliente durante toda la noche con poca leña
+Conforto térmico prolongado, mantendo a sua casa quente durante toda a noche com pouca lenha
 
-Ecológica y sostenible, con bajo impacto ambiental gracias al bajo contenido de humedad y bajas emisiones
+Ecológica e sustentável, com baixo impacto ambiental graças ao baixo teor de humidade e baixas emissões
 
-Fácil manejo y almacenamiento, con formato práctico que facilita el uso
+Fácil manuseamento e armazenamento, com formato prático que facilita o uso
 
-Ahorro de combustible, ya que los troncos densificados proporcionan mayor duración del calor
+Poupança de combustível, já que os troncos densificados proporcionam maior duração do calor
 
-Producto limpio, con poca ceniza y residuos reducidos tras la combustión
+Producto limpo, com pouca cinza e resíduos reducidos tras a combustão
 
-La Madera Densificada – Troncos Nocturnos es la solución perfecta para quienes buscan una opción de calefacción eficiente, ecológica y duradera, garantizando calor constante durante la noche y reduciendo el consumo de leña.',
+A Madeira Densificada – Troncos Noturnos é a solução perfeita para quem procura uma opção de aquecimento eficiente, ecológica e duradoura, garantindo calor constante durante a noche e reduzindo o consumo de lenha.',
 
 
 
-        'slug' => 'madeira-densificada-troncos-nocturnos-1-2-palete-de-480-kg'
+        'slug' => 'madeira-densificada-troncos-nocturnos-1-2-palete-de-480-kg',
+        'seo_title' => 'Madeira Densificada – Troncos Noturnos – 1/2 Palete de 480 kg',
+        'seo_description' => 'Madeira Densificada – Troncos Noturnos – 1/2 Palete de 480 kg. Madeira densificada de combustão longa, seca e com muito pouca cinza. Envio grátis em Portugal Continental.'
     ],
     [
         'id' => 5809,
-        'title' => 'MADERA DENSIFICADA – PALÉ DE 96 PAQUETES DE 5 TRONCOS',
+        'title' => 'MADEIRA DENSIFICADA – PALETE DE 96 PACOTES DE 5 TRONCOS',
 
 
         'hover_image' => '',
@@ -2535,25 +2631,27 @@ La Madera Densificada – Troncos Nocturnos es la solución perfecta para quiene
         ],
 
         'in_stock' => true, 'color' => '',
-        'short_description' => 'Madera densificada de alta calidad.
-100% natural, sin cola ni aditivos, fabricada en Francia.
-96 paquetes de 5 troncos',
+        'short_description' => 'Madeira densificada de alta qualidade.
+100% natural, sem cola nem aditivos, fabricada em França.
+96 pacotes de 5 troncos',
              'ref' => '53745809',
-             'description' => 'Esta madera comprimida se fabrica en Francia a partir de serrín de madera 100% natural proveniente de los bosques franceses, para una calidad impecable.
-La madera no está tratada y no contiene cola, aditivos ni aglutinantes químicos. Cada tronco pesa aproximadamente 2 kg. Está compuesto por 50% de madera de frondosas (roble y haya) y 50% de maderas de frondosas diversas (G1/G2).
-Su poder calorífico es 3 veces superior al de los troncos de madera tradicionales. Un tronco proporciona un calor constante y arde durante 1 a 2 horas.
-La madera densificada es limpia y sin polvo, lo que reduce considerablemente la obstrucción de su estufa y la cantidad de cenizas.
-La madera densificada es un producto ecológico que resulta de la recuperación y el reciclaje de materias primas. Es económica: 1 palé de madera densificada equivale a 4 esteros de madera tradicional.
-Es fácil de almacenar (lejos de la humedad).
-Estos troncos pueden utilizarse en todos los aparatos de leña: insert o estufa.',
+             'description' => 'Esta madeira comprimida é fabricada em França a partir de serrín de madeira 100% natural proveniente dos bosques franceses, para uma qualidade impecable.
+A madeira no está tratada e no contém cola, aditivos nem aglutinantes químicos. Cada tronco pesa aproximadamente 2 kg. Está composto por 50% de madeira de folhosas (carvalho e faia) e 50% de madeiras de folhosas diversas (G1/G2).
+O seu poder calorífico é 3 veces superior a dos troncos de madeira tradicionales. Um tronco proporciona um calor constante e arde durante 1 a 2 horas.
+A madeira densificada é limpa e sem polvo, o que reduz considerablemente a obstrucción do seu salamandra e a quantidade de cinzas.
+A madeira densificada é um produto ecológico que resulta da recuperación e o reciclagem de matérias-primas. É económica: 1 palete de madeira densificada equivale a 4 esteres de madeira tradicional.
+Es fácil de armazenar (longe da humidade).
+Estes troncos podem utilizarse em todos os aparelhos de lenha: insert o salamandra.',
 
 
 
-        'slug' => 'madeira-densificada-palete-de-96-pacotes-de-5-toros'
+        'slug' => 'madeira-densificada-palete-de-96-pacotes-de-5-toros',
+        'seo_title' => 'MADEIRA DENSIFICADA – PALETE DE 96 PACOTES DE 5 TRONCOS',
+        'seo_description' => 'MADEIRA DENSIFICADA – PALETE DE 96 PACOTES DE 5 TRONCOS. Madeira densificada de combustão longa, seca e com muito pouca cinza. Envio grátis em Portugal Continental.'
     ],
     [
         'id' => 5810,
-        'title' => 'MADERA DENSIFICADA – CALIDAD SUPERIOR – PALÉ DE 80 CAJAS DE 6 TRONCOS',
+        'title' => 'MADEIRA DENSIFICADA – QUALIDADE SUPERIOR – PALETE DE 80 CAIXAS DE 6 TRONCOS',
 
 
         'hover_image' => 'wp-content/uploads/2025/10/MADEIRA-DENSIFICADA-QUALIDADE-SUPERIOR-PALETE-DE-80-CAIXAS-DE-6-TOROS2.jpg',
@@ -2571,32 +2669,34 @@ Estos troncos pueden utilizarse en todos los aparatos de leña: insert o estufa.
         ],
 
         'in_stock' => true, 'color' => '',
-        'short_description' => 'Madera densificada de día, 100% madera de frondosas (roble y haya)
-Fabricada en Francia.
-100% natural, sin cola ni aditivos.
-Vendida por palé de 80 cajas de 6 troncos.',
+        'short_description' => 'Madeira densificada de dia, 100% madeira de folhosas (carvalho e faia)
+Fabricada em França.
+100% natural, sem cola nem aditivos.
+Vendida por palete de 80 caixas de 6 troncos.',
              'ref' => '53745810',
-             'description' => 'Fabricados a partir de serrín de roble y haya, estos troncos tienen la mitad de la humedad de la madera convencional.
-Se trata de una madera densificada de calidad, 100% francesa, económica y ecológica.
-Gracias a su elevado poder calorífico, se garantiza un gran calor por menos.
-Para producir madera densificada de calidad, se necesita serrín o virutas de madera con un contenido de humedad de al menos el 14%.
-Al final del proceso de producción, los troncos se comprimen en caliente hasta alcanzar un contenido de humedad inferior al 9%, dando lugar a una madera ultra-seca y de alto rendimiento.
-Combustión casi total, reduciendo considerablemente las emisiones de partículas finas a la atmósfera.
-Reduce también la formación de hollín y alquitrán en su chimenea y, al final de la combustión, los troncos producen menos del 1% de cenizas.
-Fabricada a partir de madera reciclada, la madera densificada es un sustituto perfecto para los troncos tradicionales. Estos troncos son menos contaminantes y tienen un rendimiento energético elevado, con una duración de combustión de aproximadamente 2 horas.
-Porque nos preocupamos por el medio ambiente, los troncos de madera densificada se embalan en cartón reciclado y reciclable.
-La madera densificada es muy fácil de usar y el fuego prende rápidamente.
-Perfecta para todos los sistemas de combustión a leña.
-Si quiere un producto económico, limpio, ecológico, fácil y cómodo de usar, elija la leña densificada.
-Ecológica: porque es una madera 100% natural hecha de serrín reciclado, sin productos químicos, que respeta nuestros bosques limitando la tala de árboles para calefacción, preservando la calidad del aire que respiramos.
-Práctica: fácil de transportar y almacenar, sobre todo protegida de la humedad. Los troncos se embalan en cartón, lo que facilita su manejo sin ensuciarse. También pueden apilarse para ahorrar espacio.',
+             'description' => 'Fabricados a partir de serrín de carvalho e faia, estes troncos têm a mitad da humidade da madeira convencional.
+Se trata de uma madeira densificada de qualidade, 100% francesa, económica e ecológica.
+Graças ao seu elevado poder calorífico, se garante um gran calor por menos.
+Para producir madeira densificada de qualidade, se necessita serrín o aparas de madeira com um teor de humidade de ao menos o 14%.
+Al final do processo de produção, os troncos se comprimen em quente até atingir um teor de humidade inferior a 9%, dando local a uma madeira ultra-seca e de alto rendimento.
+Combustão quase total, reduzindo considerablemente as emissões de partículas finas à atmósfera.
+Reduce também a formación de hollín e alquitrán no seu chaminé e, ao final da combustão, os troncos produzem menos do 1% de cinzas.
+Fabricada a partir de madeira reciclada, a madeira densificada é um sustituto perfeito para os troncos tradicionales. Estes troncos são menos poluentes e têm um rendimento energético elevado, com uma duração de combustão de aproximadamente 2 horas.
+Porque nos preocupamos por o ambiente, os troncos de madeira densificada se embalan em cartón reciclado e reciclable.
+A madeira densificada é muito fácil de usar e o fogo prende rápidamente.
+Perfecta para todos os sistemas de combustão a lenha.
+Se quiere um produto económico, limpo, ecológico, fácil e confortável de usar, elija a lenha densificada.
+Ecológica: porque é uma madeira 100% natural feita de serrín reciclado, sem produtos químicos, que respeita os nossos bosques limitando a tala de árboles para aquecimento, preservando a qualidade do ar que respiramos.
+Práctica: fácil de transportar e armazenar, sobre todo protegida da humidade. Os troncos se embalan em cartón, o que facilita o seu manuseamento sem ensuciarse. Também podem apilarse para ahorrar espaço.',
 
 
-        'slug' => 'madeira-densificada-qualidade-superior-palete-de-80-caixas-de-6-toros'
+        'slug' => 'madeira-densificada-qualidade-superior-palete-de-80-caixas-de-6-toros',
+        'seo_title' => 'MADEIRA DENSIFICADA – QUALIDADE SUPERIOR – PALETE DE 80 CAIXAS DE 6 TRONCOS',
+        'seo_description' => 'MADEIRA DENSIFICADA – QUALIDADE SUPERIOR – PALETE DE 80 CAIXAS DE 6 TRONCOS. Madeira densificada de combustão longa, seca e com muito pouca cinza. Envio grátis em Portugal Continental.'
     ],
     [
         'id' => 5807,
-        'title' => 'MADERA DENSIFICADA – SIN ENVASE DE PLÁSTICO INDIVIDUAL – 1/2 PALÉ DE 480 KG',
+        'title' => 'MADEIRA DENSIFICADA – SEM EMBALAGEM DE PLÁSTICO INDIVIDUAL – 1/2 PALETE DE 480 KG',
 
 
         'hover_image' => '',
@@ -2609,28 +2709,30 @@ Práctica: fácil de transportar y almacenar, sobre todo protegida de la humedad
         ],
 
         'in_stock' => true, 'color' => '',
-        'short_description' => 'Madera densificada de día, fabricada a partir de una mezcla de madera 100% natural.
-Fabricada en Picardía a partir de bosques certificados PEFC.
-100% natural, sin cola ni aditivos.
-Vendida en 48 lotes de 10 kg o 44 lotes de 11 kg, según el almacén, con un peso total del palé de 480 kg.
-Fabricada en Francia (Picardía) a partir de bosques certificados PEFC.',
+        'short_description' => 'Madeira densificada de dia, fabricada a partir de uma mistura de madeira 100% natural.
+Fabricada em Picardia a partir de bosques certificados PEFC.
+100% natural, sem cola nem aditivos.
+Vendida em 48 lotes de 10 kg o 44 lotes de 11 kg, segundo o armazém, com um peso total do palete de 480 kg.
+Fabricada em França (Picardia) a partir de bosques certificados PEFC.',
              'ref' => '53745807',
-             'description' => 'La leña densificada es muy práctica en pequeños formatos para personas que no tienen mucho espacio de almacenamiento o que no consumen mucho.
-Leña limpia, económica y respetuosa con el medio ambiente: la madera densificada
-Madera ultra-seca con un contenido de humedad inferior al 8%.
-Alto poder calorífico, 3 a 4 veces superior al de la madera tradicional.
-Arde durante 1 hora y media a 2 horas y no obstruye, gracias a su bajo contenido de cenizas, inferior al 1,5%.
-Los troncos solo están flejados, lo que reduce considerablemente la cantidad de plástico excedente.
-Gracias a estos troncos, el calor es constante.
-ATENCIÓN: La madera densificada debe almacenarse en un lugar seco.',
+             'description' => 'A lenha densificada é muito prática em pequenos formatos para personas que no têm muito espaço de armazenamento o que no consomem muito.
+Lenha limpa, económica e respeitadora do ambiente: a madeira densificada
+Madeira ultra-seca com um teor de humidade inferior a 8%.
+Alto poder calorífico, 3 a 4 veces superior a da madeira tradicional.
+Arde durante 1 hora e media a 2 horas e no obstruye, graças ao seu baixo conteúdo de cinzas, inferior a 1,5%.
+Os troncos só estão flejados, o que reduz considerablemente a quantidade de plástico excedente.
+Graças a estes troncos, o calor é constante.
+ATENCIÓN: A madeira densificada deve armazenar-se em um local seco.',
 
 
 
-        'slug' => 'madeira-densificada-sem-embalagem-de-plastico-individual-1-2-palete-de-480-kg'
+        'slug' => 'madeira-densificada-sem-embalagem-de-plastico-individual-1-2-palete-de-480-kg',
+        'seo_title' => 'MADEIRA DENSIFICADA – SEM EMBALAGEM DE PLÁSTICO INDIVIDUAL – 1/2 PALETE DE 480 KG',
+        'seo_description' => 'MADEIRA DENSIFICADA – SEM EMBALAGEM DE PLÁSTICO INDIVIDUAL – 1/2 PALETE DE 480 KG. Madeira densificada de combustão longa, seca e com muito pouca cinza. Envio grátis em Portugal Continental.'
     ],
     [
         'id' => 5808,
-        'title' => 'MADERA DENSIFICADA – SIN ENVASE DE PLÁSTICO INDIVIDUAL – PALÉ DE 960 KG',
+        'title' => 'MADEIRA DENSIFICADA – SEM EMBALAGEM DE PLÁSTICO INDIVIDUAL – PALETE DE 960 KG',
 
 
         'hover_image' => '',
@@ -2643,28 +2745,30 @@ ATENCIÓN: La madera densificada debe almacenarse en un lugar seco.',
         ],
 
         'in_stock' => true, 'color' => '',
-        'short_description' => 'Madera densificada de día, fabricada a partir de una mezcla de maderas 100% naturales.
-Fabricada en Francia (Picardía) a partir de bosques certificados PEFC.
-100% natural, sin cola ni aditivos.
-Vendida en 96 lotes de 10 kg u 88 lotes de 11 kg, según el almacén, con un peso total del palé de 960 kg.',
+        'short_description' => 'Madeira densificada de dia, fabricada a partir de uma mistura de madeiras 100% naturais.
+Fabricada em França (Picardia) a partir de bosques certificados PEFC.
+100% natural, sem cola nem aditivos.
+Vendida em 96 lotes de 10 kg u 88 lotes de 11 kg, segundo o armazém, com um peso total do palete de 960 kg.',
              'ref' => '53745808',
-             'description' => 'Leña limpia, económica y respetuosa con el medio ambiente: madera densificada
-Madera ultra-seca con un contenido de humedad inferior al 8%.
-Alto poder calorífico, 3 a 4 veces superior al de la madera tradicional.
-En el caso de la leña tradicional, la madera blanda está fuertemente desaconsejada, ya que la savia se deposita en los conductos y la madera blanda arde rápidamente.
-La madera densificada, por el contrario, calienta más fuertemente y no obstruye los conductos porque es ultra-seca. No tiene savia, porque es serrín comprimido sin cola ni aditivos.
-Arde durante 1,5 a 2 horas y su bajo contenido de cenizas, inferior al 1,5%, evita la obstrucción de las chimeneas.
-Prácticamente sin plástico: los troncos solo están flejados para evitar un embalaje excesivo.
-Estos troncos le proporcionarán un calor constante y un confort estable y de calidad.
-Le recordamos que la madera densificada debe almacenarse en un lugar cerrado, protegida de la humedad.',
+             'description' => 'Lenha limpa, económica e respeitadora do ambiente: madeira densificada
+Madeira ultra-seca com um teor de humidade inferior a 8%.
+Alto poder calorífico, 3 a 4 veces superior a da madeira tradicional.
+Em o caso da lenha tradicional, a madeira macia está fuertemente desaconsejada, já que a seiva se deposita em os condutas e a madeira macia arde rápidamente.
+A madeira densificada, por o contrario, aquece mais fuertemente e no obstruye os condutas porque é ultra-seca. No tem seiva, porque é serrín comprimido sem cola nem aditivos.
+Arde durante 1,5 a 2 horas e o seu baixo conteúdo de cinzas, inferior a 1,5%, evita a obstrucción das lareiras.
+Prácticamente sem plástico: os troncos só estão flejados para evitar um embalagem excesivo.
+Estes troncos lhe proporcionarán um calor constante e um conforto estable e de qualidade.
+Le recordamos que a madeira densificada deve armazenar-se em um local fechado, protegida da humidade.',
 
 
 
-        'slug' => 'madeira-densificada-sem-embalagem-de-plastico-individual-palete-de-960-kg'
+        'slug' => 'madeira-densificada-sem-embalagem-de-plastico-individual-palete-de-960-kg',
+        'seo_title' => 'MADEIRA DENSIFICADA – SEM EMBALAGEM DE PLÁSTICO INDIVIDUAL – PALETE DE 960 KG',
+        'seo_description' => 'MADEIRA DENSIFICADA – SEM EMBALAGEM DE PLÁSTICO INDIVIDUAL – PALETE DE 960 KG. Madeira densificada de combustão longa, seca e com muito pouca cinza. Envio grátis em Portugal Continental.'
     ],
     [
         'id' => 5815,
-        'title' => 'TRONCOS DE CALEFACCIÓN – 33 CM – SECO – 1,7 M3 – 1,9 ESTEROS',
+        'title' => 'TRONCOS DE AQUECIMENTO – 33 CM – SECO – 1,7 M3 – 1,9 ESTERES',
 
 
         'hover_image' => '',
@@ -2677,32 +2781,34 @@ Le recordamos que la madera densificada debe almacenarse en un lugar cerrado, pr
         ],
 
         'in_stock' => true, 'color' => '',
-        'short_description' => 'Leña empaquetada en redes sobre palés
-Volumen: 1,7 m3 o 1,9 esteros, 30-33 cm.
-Madera ultra-seca, secada en horno, 100% francesa.',
+        'short_description' => 'Lenha embalada em redes sobre paletes
+Volume: 1,7 m3 o 1,9 esteres, 30-33 cm.
+Madeira ultra-seca, seca em estufa, 100% francesa.',
              'ref' => '53745815',
-             'description' => 'El palé está compuesto por una mezcla de maderas duras, por lo que puede obtener tanto llamas como brasas.
-Estas maderas son muy recomendadas para la calefacción y tienen un elevado poder calorífico para un calor constante y agradable en su casa.
-Los troncos se cortan con aproximadamente 30 cm y luego se almacenan en una red, lo que hace el transporte más limpio y práctico.
-Esta madera se fabrica en Francia y es 100% natural.
-El secado en horno tiene la ventaja de ser mucho más rápido. Además, este tipo de secado produce una madera más seca que el secado al aire libre.
-Se utilizan varios métodos:
-Vaporización: mantener la madera en un vaporizador, que la seca con vapor.
-Antes de esto, se retira la savia de la madera para protegerla de los parásitos.
-Secado de la madera en un secador especial de aire caliente y húmedo: este es el método más utilizado.
-El principio es simple: una corriente de aire caliente y húmedo pasa entre los troncos y absorbe la humedad de la madera en un espacio cerrado. De esta forma, la velocidad de evaporación se atenúa por la elevada humedad del aire caliente.
-El secado en horno permite mantener niveles de humedad de hasta el 10%.
-Este rendimiento es, sin embargo, más caro debido a las técnicas utilizadas. Pero las ventajas son un mejor control de los niveles de humedad y un secado más rápido.
-Este tipo de secado es una garantía de calidad, ya que la madera permanecerá limpia y también evitará el riesgo de proliferación de mohos y hongos, si se almacena adecuadamente en un lugar protegido de la humedad.
-Es ideal para salamandras y recuperadores de calor para troncos de hasta 33 cm de longitud.',
+             'description' => 'O palete é composto por uma mistura de madeiras duras, pelo que pode obter tanto chamas como brasas.
+Estas madeiras são muito recomendadas para a aquecimento e têm um elevado poder calorífico para um calor constante e agradável na sua casa.
+Os troncos cortam-se com aproximadamente 30 cm e depois armazenam-se em uma red, o que faz o transporte mais limpo e prático.
+Esta madeira é fabricada em França e é 100% natural.
+O secagem em salamandra tna vantagem de ser muito mais rápido. Além disso, este tipo de secagem produz uma madeira mais seca que o secagem ao ar livre.
+Se utilizam vários métodos:
+Vaporización: manter a madeira em um vaporizador, que a seca com vapor.
+Antes de isto, retira-se a seiva da madeira para protegê-a dos parasitas.
+Secado da madeira em um secador especial de ar quente e húmido: este é o método mais utilizado.
+O princípio é simples: uma corriente de ar quente e húmido passa entre os troncos e absorve a humidade da madeira em um espaço fechado. Desta forma, a velocidade de evaporação é atenuada por a elevada humidade do ar quente.
+O secagem em salamandra permite manter níveis de humidade de até 10%.
+Este rendimento é, no entanto, mais caro devido às técnicas utilizadas. Mas as vantagens são um melhor controloo dos níveis de humidade e um secagem mais rápido.
+Este tipo de secagem é uma garantia de qualidade, já que a madeira permanecerá limpa e também evitará o risco de proliferação de bolores e fungos, se for armazenada adequadamente em um local protegido da humidade.
+É ideal para salamandras e recuperadores de calor para troncos de até 33 cm de comprimento.',
 
 
 
-        'slug' => 'paineis-de-aquecimento-33-cm-sec-17-m3-19-pes'
+        'slug' => 'paineis-de-aquecimento-33-cm-sec-17-m3-19-pes',
+        'seo_title' => 'TRONCOS DE AQUECIMENTO – 33 CM – SECO – 1,7 M3 – 1,9 ESTERES',
+        'seo_description' => 'TRONCOS DE AQUECIMENTO – 33 CM – SECO – 1,7 M3 – 1,9 ESTERES. Lenha seca pronta a queimar, entregue em palete. Envio grátis em Portugal Continental.'
     ],
     [
         'id' => 5614,
-        'title' => 'Palé de Leña – 25 cm – 3 Estrellas',
+        'title' => 'Palete de Lenha – 25 cm – 3 Estrelas',
 
 
         'hover_image' => '',
@@ -2715,50 +2821,52 @@ Es ideal para salamandras y recuperadores de calor para troncos de hasta 33 cm d
         ],
 
         'in_stock' => true, 'color' => '',
-        'short_description' => 'Entrega en cualquier lugar de Portugal en 3 a 5 días.
-Los Troncos de Madera con Secado Garantizado Brazeco, con un contenido de humedad inferior al 10%, se producen a partir de las especies roble, carpe y haya. Provenientes de Francia, secos, partidos y descortezados, cuentan con certificación NF.
-Nuestros troncos de leña de 25 cm garantizan un rendimiento energético óptimo. Tienen la ventaja de ser prácticos de manejar y fáciles de almacenar, gracias al embalaje en palé.',
+        'short_description' => 'Entrega em qualquer local de Portugal em 3 a 5 dias.
+Os Troncos de Madeira com Secado Garantizado Brazeco, com um teor de humidade inferior a 10%, são produzidos a partir das espécies carvalho, carpinho e faia. Provenientes de França, secos, rachados e descascados, dispõem de certificação NF.
+Os nossos troncos de lenha de 25 cm garantem um rendimento energético ótimo. Têm a vantagem de ser práticos de manusear e fáceis de armazenar, graças ao embalagem em palete.',
              'ref' => 'Entrega em qualquer lugar de Portugal em 3 a 5 dias.
 Os Troncos de Madeira com Secagem Garantida Brazeco, com teor de humidade inferior a 10%, são produzidos a partir das espécies carvalho, carpe e faia. Provenientes da França, secos, partidos e descascados, possuem certificação NF.
 Nossos troncos de lenha de 25 cm garantem um desempenho energético ótimo. Têm a vantagem de serem práticos para manusear e fáceis de armazenar, graças à embalagem em palete.',
-             'description' => 'Palé de Leña – 25 cm – 3 Estrellas
-El Palé de Leña – 25 cm – 3 Estrellas es una excelente opción para quienes buscan un combustible de calidad para sus estufas, chimeneas y calderas. Este palé contiene madera de alta calidad cortada en 25 cm, ideal para adaptarse a la mayoría de los sistemas de calefacción. La madera se selecciona y procesa para garantizar una quema eficiente y duradera, con bajo nivel de humedad que permite una combustión limpia y con poco residuo.
-Con 3 estrellas de calidad, este palé ofrece un excelente rendimiento térmico y es perfecto para mantener su casa caliente durante los meses más fríos. La madera se seca cuidadosamente para asegurar una combustión óptima, proporcionando calor constante y prolongado.
+             'description' => 'Palete de Lenha – 25 cm – 3 Estrelas
+O Palete de Lenha – 25 cm – 3 Estrelas é uma excelente opção para quem procura um combustível de qualidade para os seus salamandras, lareiras e caldeiras. Este palete contém madeira de alta qualidade cortada em 25 cm, ideal para adaptarse à mayoría dos sistemas de aquecimento. A madeira se selecciona e procesa para garantir uma queima eficiente e duradoura, com baixo nível de humidade que permite uma combustão limpa e com pouco residuo.
+Com 3 estrelas de qualidade, este palete oferece um excelente rendimento térmico e é perfeito para manter a sua casa quente durante os meses mais frios. A madeira se seca cuidadosamente para assegurar uma combustão ótima, proporcionando calor constante e prolongado.
 Características:
 
-Tamaño de 25 cm, adecuado para la mayoría de estufas, chimeneas y calderas
+Tamanho de 25 cm, adequado para a mayoría de salamandras, lareiras e caldeiras
 
-Madera de calidad 3 estrellas, seleccionada y procesada para ofrecer alto rendimiento
+Madeira de qualidade 3 estrelas, selecionada e processada para oferecer alto rendimento
 
-Bajo contenido de humedad, garantizando una combustión eficiente y limpia
+Baixo teor de humidade, garantindo uma combustão eficiente e limpa
 
-Ideal para calefacción interior, proporcionando calor constante y agradable
+Ideal para aquecimento interior, proporcionando calor constante e agradável
 
-Bajo nivel de cenizas y residuos, facilitando el mantenimiento
+Baixo nível de cinzas e resíduos, facilitando o manutenção
 
-Palé práctico, fácil de almacenar y manejar
+Palete prático, fácil de armazenar e manusear
 
-Beneficios:
+Benefícios:
 
-Alto poder calorífico, garantizando un rendimiento eficiente y calor constante
+Alto poder calorífico, garantindo um rendimento eficiente e calor constante
 
-Ecológica y respetuosa con el medio ambiente, con una quema limpia que reduce las emisiones
+Ecológica e respeitadora do ambiente, com uma queima limpa que reduz as emissões
 
-Durabilidad y resistencia, asegurando un producto de larga vida útil
+Durabilidade e resistência, assegurando um produto de longa vida útil
 
-Fácil de usar y almacenar, con un formato de palé cómodo y manejable
+Fácil de usar e armazenar, com um formato de palete confortável e manejable
 
-Ahorro de combustible, ya que su baja humedad permite un máximo aprovechamiento de la leña
+Poupança de combustível, já que o seu baixa humidade permite um máximo aproveitamento da lenha
 
-El Palé de Leña – 25 cm – 3 Estrellas es la elección perfecta para quienes buscan un producto de calidad superior, eficiente y ambientalmente responsable para mantener su casa caliente y confortable durante todo el invierno.',
+O Palete de Lenha – 25 cm – 3 Estrelas é a escolha perfeita para quem procura um produto de qualidade superior, eficiente e ambientalmente responsable para manter a sua casa quente e confortável durante todo o inverno.',
 
 
 
-        'slug' => 'palete-de-lenha-25-cm-3-estrelas'
+        'slug' => 'palete-de-lenha-25-cm-3-estrelas',
+        'seo_title' => 'Palete de Lenha – 25 cm – 3 Estrelas',
+        'seo_description' => 'Palete de Lenha – 25 cm – 3 Estrelas. Lenha seca pronta a queimar, entregue em palete. Envio grátis em Portugal Continental.'
     ],
     [
         'id' => 5615,
-        'title' => 'Palé de Leña – 33 cm – 3 Esteros',
+        'title' => 'Palete de Lenha – 33 cm – 3 Esteres',
 
 
         'hover_image' => '',
@@ -2771,45 +2879,47 @@ El Palé de Leña – 25 cm – 3 Estrellas es la elección perfecta para quiene
         ],
 
         'in_stock' => true, 'color' => '',
-        'short_description' => 'Entrega en cualquier lugar de Portugal en 3 a 5 días.
-Los troncos de madera seca garantizada Brazeco, con menos del 10% de humedad, se producen a partir de las especies roble, carpe y haya. Provenientes de Francia, están secos, partidos y descortezados, y cuentan con certificación NF.
-Nuestros troncos de leña de 33 cm garantizan un rendimiento energético óptimo. Además, son prácticos de manejar y fáciles de almacenar gracias al embalaje en palé.',
+        'short_description' => 'Entrega em qualquer local de Portugal em 3 a 5 dias.
+Os troncos de madeira seca garantizada Brazeco, com menos do 10% de humidade, são produzidos a partir das espécies carvalho, carpinho e faia. Provenientes de França, estão secos, rachados e descascados, e dispõem de certificação NF.
+Os nossos troncos de lenha de 33 cm garantem um rendimento energético ótimo. Além disso, são práticos de manusear e fáceis de armazenar graças à embalagem em palete.',
              'ref' => '53745615',
-             'description' => 'Palé de Leña – 33 cm – 3 Esteros
-El Palé de Leña – 33 cm – 3 Esteros es la elección ideal para quienes buscan leña de alta calidad para calefacción. Con troncos de 33 cm de longitud y clasificación de 3 Esteros, esta leña ofrece un excelente rendimiento térmico, garantizando calor constante y duradero. Los troncos se seleccionan cuidadosamente, se secan y están listos para usar, asegurando una combustión eficiente y limpia en salamandras, chimeneas y calderas de leña.
+             'description' => 'Palete de Lenha – 33 cm – 3 Esteres
+O Palete de Lenha – 33 cm – 3 Esteres é a escolha ideal para quem procura lenha de alta qualidade para aquecimento. Com troncos de 33 cm de comprimento e clasificación de 3 Esteres, esta lenha oferece um excelente rendimento térmico, garantindo calor constante e duradouro. Os troncos se seleccionan cuidadosamente, se secan e estão listos para usar, assegurando uma combustão eficiente e limpa em salamandras, lareiras e caldeiras a lenha.
 Características:
 
-Tamaño de los troncos: 33 cm de longitud
+Tamanho dos troncos: 33 cm de comprimento
 
-Clasificación: 3 Esteros, garantizando alto rendimiento
+Clasificación: 3 Esteres, garantindo alto rendimento
 
-Secado natural, para una combustión eficiente y baja emisión de humo
+Secado natural, para uma combustão eficiente e baixa emisión de fumo
 
-Ideal para salamandras, chimeneas y calderas de leña
+Ideal para salamandras, lareiras e caldeiras a lenha
 
-Fácil de almacenar gracias a la presentación en palé
+Fácil de armazenar graças à apresentação em palete
 
-Beneficios:
+Benefícios:
 
-Alto poder calorífico, proporcionando calor constante durante más tiempo
+Alto poder calorífico, proporcionando calor constante durante mais tiempo
 
-Bajo contenido de humedad, mejorando la combustión y reduciendo el humo
+Baixo teor de humidade, melhoramdo a combustão e reduzindo o fumo
 
-Ecológica y natural, sin aditivos ni productos químicos
+Ecológica e natural, sem aditivos nem produtos químicos
 
-Fácil de manejar y adecuada para diversos sistemas de calefacción
+Fácil de manusear e adequada para diversos sistemas de aquecimento
 
-Excelente rendimiento con costo reducido, ideal para uso prolongado
+Excelente rendimento com custo reducido, ideal para uso prolongado
 
-Con el Palé de Leña – 33 cm – 3 Esteros, podrá disfrutar de una fuente de calor natural, eficiente y económica para su casa.',
+Com o Palete de Lenha – 33 cm – 3 Esteres, poderá desfrutar de uma fuente de calor natural, eficiente e económica para sua casa.',
 
 
 
-        'slug' => 'palete-de-lenha-33-cm-3-esteres'
+        'slug' => 'palete-de-lenha-33-cm-3-esteres',
+        'seo_title' => 'Palete de Lenha – 33 cm – 3 Esteres',
+        'seo_description' => 'Palete de Lenha – 33 cm – 3 Esteres. Lenha seca pronta a queimar, entregue em palete. Envio grátis em Portugal Continental.'
     ],
     [
         'id' => 5616,
-        'title' => 'Palé de Leña – 40 cm – 3 Esteros',
+        'title' => 'Palete de Lenha – 40 cm – 3 Esteres',
 
 
         'hover_image' => '',
@@ -2822,43 +2932,45 @@ Con el Palé de Leña – 33 cm – 3 Esteros, podrá disfrutar de una fuente de
         ],
 
         'in_stock' => true, 'color' => '',
-        'short_description' => 'Entrega en cualquier lugar de Portugal en 3 a 5 días. Los Troncos de Madera Secos Garantizados Brazeco, con un contenido de humedad inferior al 10%, se producen a partir de las especies roble, carpe y haya. De origen portugués, secos, partidos y descortezados, cuentan con certificación NF. Nuestros troncos de leña de 40 cm garantizan un rendimiento energético óptimo. Tienen la ventaja de ser prácticos de manejar y fáciles de almacenar gracias al embalaje en palé.',
+        'short_description' => 'Entrega em qualquer local de Portugal em 3 a 5 dias. Os Troncos de Madeira Secos Garantizados Brazeco, com um teor de humidade inferior a 10%, são produzidos a partir das espécies carvalho, carpinho e faia. De origen portugués, secos, rachados e descascados, dispõem de certificação NF. Os nossos troncos de lenha de 40 cm garantem um rendimento energético ótimo. Têm a vantagem de ser práticos de manusear e fáceis de armazenar graças à embalagem em palete.',
              'ref' => '53745616',
-             'description' => 'Palé de Leña – 40 cm – 3 Esteros
-El Palé de Leña – 40 cm – 3 Esteros es la opción perfecta para quienes buscan leña de alta calidad para calefacción. Con troncos de 40 cm de longitud y clasificación de 3 esteros, esta leña ofrece un excelente rendimiento térmico, proporcionando calor constante y duradero. Los troncos se seleccionan cuidadosamente y se secan, garantizando una combustión eficiente y limpia en salamandras, chimeneas y calderas de leña.
+             'description' => 'Palete de Lenha – 40 cm – 3 Esteres
+O Palete de Lenha – 40 cm – 3 Esteres é a opção perfeita para quem procura lenha de alta qualidade para aquecimento. Com troncos de 40 cm de comprimento e clasificación de 3 esteres, esta lenha oferece um excelente rendimento térmico, proporcionando calor constante e duradouro. Os troncos se seleccionan cuidadosamente e se secan, garantindo uma combustão eficiente e limpa em salamandras, lareiras e caldeiras a lenha.
 Características:
 
-Longitud de los troncos: 40 cm
+Comprimento dos troncos: 40 cm
 
-Clasificación: 3 esteros, garantizando alto rendimiento y calor duradero
+Clasificación: 3 esteres, garantindo alto rendimento e calor duradouro
 
-Secado natural, asegurando combustión eficiente y baja emisión de humo
+Secado natural, assegurando combustão eficiente e baixa emisión de fumo
 
-Ideal para salamandras, chimeneas y calderas de leña
+Ideal para salamandras, lareiras e caldeiras a lenha
 
-Fácil de almacenar y manejar gracias a la presentación en palé
+Fácil de armazenar e manusear graças à apresentação em palete
 
-Beneficios:
+Benefícios:
 
-Elevado poder calorífico, proporcionando calor constante durante más tiempo
+Elevado poder calorífico, proporcionando calor constante durante mais tiempo
 
-Bajo contenido de humedad, mejorando la combustión y reduciendo la emisión de humo
+Baixo teor de humidade, melhoramdo a combustão e reduzindo a emisión de fumo
 
-Ecológica y natural, sin productos químicos ni aditivos
+Ecológica e natural, sem produtos químicos nem aditivos
 
-Fácil de manejar y adecuada para diversos sistemas de calefacción
+Fácil de manusear e adequada para diversos sistemas de aquecimento
 
-Excelente rendimiento a bajo costo, ideal para uso prolongado
+Excelente rendimento a baixo custo, ideal para uso prolongado
 
-Con el Palé de Leña – 40 cm – 3 Esteros, disfrutará de una fuente de calor natural, eficiente y económica para su casa.',
+Com o Palete de Lenha – 40 cm – 3 Esteres, desfrutará de uma fuente de calor natural, eficiente e económica para sua casa.',
 
 
 
-        'slug' => 'palete-de-lenha-40-cm-3-esteres'
+        'slug' => 'palete-de-lenha-40-cm-3-esteres',
+        'seo_title' => 'Palete de Lenha – 40 cm – 3 Esteres',
+        'seo_description' => 'Palete de Lenha – 40 cm – 3 Esteres. Lenha seca pronta a queimar, entregue em palete. Envio grátis em Portugal Continental.'
     ],
     [
         'id' => 5617,
-        'title' => 'Palé de Leña – 45 cm – 3 Esteros',
+        'title' => 'Palete de Lenha – 45 cm – 3 Esteres',
 
 
         'hover_image' => '',
@@ -2871,45 +2983,47 @@ Con el Palé de Leña – 40 cm – 3 Esteros, disfrutará de una fuente de calo
         ],
 
         'in_stock' => true, 'color' => '',
-        'short_description' => 'Entrega en cualquier lugar de Portugal en 3 a 5 días.
-Los Troncos de Madera con Humedad Garantizada Brazeco, con menos del 10% de humedad, se producen a partir de las especies roble, carpe y haya. Provenientes de Francia, secos, partidos y descortezados, cuentan con certificación NF.
-Nuestros troncos de leña de 45 cm garantizan un rendimiento energético óptimo. Tienen la ventaja de ser prácticos de manejar y fáciles de almacenar gracias a su embalaje en palé.',
+        'short_description' => 'Entrega em qualquer local de Portugal em 3 a 5 dias.
+Os Troncos de Madeira com Humidade Garantizada Brazeco, com menos do 10% de humidade, são produzidos a partir das espécies carvalho, carpinho e faia. Provenientes de França, secos, rachados e descascados, dispõem de certificação NF.
+Os nossos troncos de lenha de 45 cm garantem um rendimento energético ótimo. Têm a vantagem de ser práticos de manusear e fáceis de armazenar graças ao seu embalagem em palete.',
              'ref' => '53745617',
-             'description' => 'Palé de Leña – 45 cm – 3 Esteros
-El Palé de Leña – 45 cm – 3 Esteros es la solución ideal para quienes buscan leña de alta calidad para calefacción. Con troncos de 45 cm de longitud y clasificación de 3 esteros, este producto garantiza un excelente rendimiento térmico, proporcionando calor constante y duradero. La leña se selecciona cuidadosamente y se seca naturalmente, lo que asegura una combustión eficiente y limpia, perfecta para salamandras, chimeneas y calderas de leña.
+             'description' => 'Palete de Lenha – 45 cm – 3 Esteres
+O Palete de Lenha – 45 cm – 3 Esteres é a solução ideal para quem procura lenha de alta qualidade para aquecimento. Com troncos de 45 cm de comprimento e clasificación de 3 esteres, este produto garante um excelente rendimento térmico, proporcionando calor constante e duradouro. A lenha se selecciona cuidadosamente e se seca naturalmente, o que assegura uma combustão eficiente e limpa, perfeita para salamandras, lareiras e caldeiras a lenha.
 Características:
 
-Longitud de los troncos: 45 cm
+Comprimento dos troncos: 45 cm
 
-Clasificación: 3 esteros, garantizando alto rendimiento térmico y calor constante
+Clasificación: 3 esteres, garantindo alto rendimento térmico e calor constante
 
-Secado natural, mejorando la combustión y reduciendo la emisión de humo
+Secado natural, melhoramdo a combustão e reduzindo a emisión de fumo
 
-Ideal para salamandras, chimeneas y calderas de leña
+Ideal para salamandras, lareiras e caldeiras a lenha
 
-Presentación en palé, facilitando el almacenamiento y manejo
+Apresentação em palete, facilitando o armazenamento e manuseamento
 
-Beneficios:
+Benefícios:
 
-Elevado poder calorífico, proporcionando calor constante durante más tiempo
+Elevado poder calorífico, proporcionando calor constante durante mais tiempo
 
-Bajo contenido de humedad, optimizando la combustión y reduciendo la cantidad de humo
+Baixo teor de humidade, optimizando a combustão e reduzindo a quantidade de fumo
 
-Ecológica y natural, sin aditivos ni productos químicos
+Ecológica e natural, sem aditivos nem produtos químicos
 
-Fácil de manejar y adecuada para varios sistemas de calefacción
+Fácil de manusear e adequada para vários sistemas de aquecimento
 
-Excelente rendimiento a un costo competitivo, ideal para uso prolongado
+Excelente rendimento a um custo competitivo, ideal para uso prolongado
 
-Con el Palé de Leña – 45 cm – 3 Esteros, podrá disfrutar de una fuente de calor natural, eficiente y económica para su casa.',
+Com o Palete de Lenha – 45 cm – 3 Esteres, poderá desfrutar de uma fuente de calor natural, eficiente e económica para sua casa.',
 
 
 
-        'slug' => 'palete-de-lenha-45-cm-3-esteres'
+        'slug' => 'palete-de-lenha-45-cm-3-esteres',
+        'seo_title' => 'Palete de Lenha – 45 cm – 3 Esteres',
+        'seo_description' => 'Palete de Lenha – 45 cm – 3 Esteres. Lenha seca pronta a queimar, entregue em palete. Envio grátis em Portugal Continental.'
     ],
     [
         'id' => 5812,
-        'title' => 'PALÉ DE LEÑA (1,7 M3) POR CAMIÓN',
+        'title' => 'PALETE DE LENHA (1,7 M3) POR CAMIÃO',
 
 
         'hover_image' => '',
@@ -2922,31 +3036,33 @@ Con el Palé de Leña – 45 cm – 3 Esteros, podrá disfrutar de una fuente de
         ],
 
         'in_stock' => true, 'color' => '',
-        'short_description' => 'La cantidad mínima de pedido para este producto es de 26.
-Leña a precios de mayorista. Palé de un solo uso (no retornable) de 1,7M3, en troncos de 33 cm y 50 cm.
-85% de madera de frondosas y 15% de castaño.
-Madera fabricada en Francia, secado natural.
-¡Compre nuestra leña por camión! La descarga del camión es responsabilidad del cliente (se necesita una carretilla elevadora).',
+        'short_description' => 'A quantidade mínima de encomenda para este produto é de 26.
+Lenha a precios de mayorista. Palete de um só uso (no retornable) de 1,7M3, em troncos de 33 cm e 50 cm.
+85% de madeira de folhosas e 15% de castaño.
+Madeira fabricada em França, secagem natural.
+¡Compre a nossa lenha por camião! A descarga do camião é responsabilidad do cliente (se necessita uma carretilla elevadora).',
              'ref' => '53745812',
-             'description' => 'Un camión completo está compuesto por:
-13 palés de madera de 30 cm de ancho
-13 palés de madera de 50 cm
-Esta distribución estándar puede modificarse a petición y puede implicar un cambio significativo en el precio.
-Este palé está compuesto por madera de frondosas, en troncos de 33 cm y 50 cm, secados naturalmente al aire libre y almacenados en el exterior de forma que permanezcan bien ventilados.
-La mezcla de maderas producirá llamas y brasas. Habrá troncos más finos para usar más fácilmente para encender y luego troncos más grandes para mantener el fuego encendido.
-Los troncos cortados en longitudes de 33 cm y 50 cm se almacenan en palés, garantizando el número de esteros encargados.
-Dado que la madera se cura naturalmente, es aconsejable encargarla durante la primavera/verano para asegurar que se seque correctamente y que esté suficientemente seca para el invierno.
-Almacenamiento correcto de la madera curada naturalmente:
-La madera curada naturalmente, como su nombre indica, debe almacenarse al aire libre para que se seque continuamente. La mejor manera de almacenarla es bajo un cobertizo de madera (con un tejado y cerrado por los lados), lejos de la lluvia, pero permitiendo el paso del viento.
-Un almacenamiento correcto evitará que la madera se vuelva negra o mohosa e impedirá la proliferación de hongos.',
+             'description' => 'Um camião completo é composto por:
+13 paletes de madeira de 30 cm de largura
+13 paletes de madeira de 50 cm
+Esta distribuição estándar pode modificarse a petición e pode implicar um cambio significativo no preço.
+Este palete é composto por madeira de folhosas, em troncos de 33 cm e 50 cm, secados naturalmente ao ar livre e armazenados no exterior de forma que permanezcan bem ventilados.
+A mistura de madeiras producirá chamas e brasas. Habrá troncos mais finos para usar mais fácilmente para acender e depois troncos mais grandes para manter o fogo encendido.
+Os troncos cortados em longitudes de 33 cm e 50 cm armazenam-se em paletes, garantindo o número de esteres encomendados.
+Dado que a madeira se cura naturalmente, é aconsejable encargarla durante a primavera/verano para assegurar que se seque correctamente e que esté suficientemente seca para o inverno.
+Almacenamiento correcto da madeira curada naturalmente:
+A madeira curada naturalmente, como seu nombre indica, deve armazenar-se ao ar livre para que se seque continuamente. A melhor maneira de armazená-la é baixo um cobertizo de madeira (com um tejado e fechado por os lados), longe da lluvia, mas permitindo o paso do viento.
+Um armazenamento correcto evitará que a madeira se vuelva negra o mohosa e impedirá a proliferação de hongos.',
 
 
 
-        'slug' => 'palete-de-lenha-17-m3-por-camiao'
+        'slug' => 'palete-de-lenha-17-m3-por-camiao',
+        'seo_title' => 'PALETE DE LENHA (1,7 M3) POR CAMIÃO',
+        'seo_description' => 'PALETE DE LENHA (1,7 M3) POR CAMIÃO. Venda a granel por camião completo, preço otimizado por volume. Envio grátis em Portugal Continental.'
     ],
     [
         'id' => 5814,
-        'title' => 'PALÉ DE PELLETS DIN PLUS (65 SACOS) POR CARGA DE CAMIÓN',
+        'title' => 'PALETE DE PELLETS DIN PLUS (65 SACOS) POR CARGA DE CAMIÃO',
 
 
         'hover_image' => '',
@@ -2959,26 +3075,28 @@ Un almacenamiento correcto evitará que la madera se vuelva negra o mohosa e imp
         ],
 
         'in_stock' => true, 'color' => '',
-        'short_description' => 'Pellets a precios de mayorista. Provenientes de Francia, Bélgica o Alemania, 100% madera blanda y con certificación DIN Plus.
-Alto poder calorífico y bajo contenido de cenizas y polvo.
-¡Compre nuestros pellets por camión! La descarga del camión es responsabilidad del cliente (se necesita una carretilla elevadora).',
+        'short_description' => 'Pellets a precios de mayorista. Provenientes de França, Bélgica o Alemania, 100% madeira macia e com certificación DIN Plus.
+Alto poder calorífico e baixo conteúdo de cinzas e polvo.
+¡Compre os nossos pellets por camião! A descarga do camião é responsabilidad do cliente (se necessita uma carretilla elevadora).',
              'ref' => '53745814',
-             'description' => 'Los pellets que entregamos por camión son perfectos para todas las marcas de salamandras de pellets, inserts y calderas.
-La marca entregada depende de su ubicación y de las existencias disponibles. No dude en contactar con nuestro servicio de atención al cliente para cualquier información adicional.
-Su calidad es muy elevada y, al elegir un pellet fabricado en Francia, está contribuyendo a la reducción de las emisiones de CO2.
-Con un bajo contenido de polvo y cenizas y un elevado poder calorífico, no obstruirá su sistema de calefacción y obtendrá un calor bueno y constante en su casa.
-Vendemos este tipo de pellets desde hace más de 10 años y nuestros clientes están completamente satisfechos.
+             'description' => 'Os pellets que entregamos por camião são perfeitos para todas as marcas de salamandras de pellets, inserts e caldeiras.
+A marca entregada depende do seu ubicación e das existencias disponívels. No dude em contactar com o nosso servicio de atención ao cliente para qualquer información adicional.
+O seu qualidade é muito elevada e, ao elegir um pellet fabricado em França, está contribuindo para a redução das emissões de CO2.
+Com um baixo conteúdo de polvo e cinzas e um elevado poder calorífico, no obstruirá o seu sistema de aquecimento e obterá um calor bueno e constante na sua casa.
+Vendemos este tipo de pellets desde faz mais de 10 anos e os nossos clientes estão completamente satisfechos.
 Almacenamiento de pellets:
-El lugar de almacenamiento debe ser seco y templado.
-Los sacos deben estar elevados del suelo sobre un palé y alejados de las paredes. Nunca deben entrar en contacto con la humedad, de lo contrario se volverán inutilizables.',
+O local de armazenamento deve ser seco e templado.
+Os sacos devem estar elevados do suelo sobre um palete e alejados das paredes. Nunca devem entrar em contacto com a humidade, do contrario se volverán inutilizables.',
 
 
 
-        'slug' => 'palete-de-pellets-din-plus-65-sacos-por-carga-de-camiao'
+        'slug' => 'palete-de-pellets-din-plus-65-sacos-por-carga-de-camiao',
+        'seo_title' => 'PALETE DE PELLETS DIN PLUS (65 SACOS) POR CARGA DE CAMIÃO',
+        'seo_description' => 'PALETE DE PELLETS DIN PLUS (65 SACOS) POR CARGA DE CAMIÃO. Pellets de alto poder calorífico e baixa cinza. Envio grátis em Portugal Continental.'
     ],
     [
         'id' => 5623,
-        'title' => 'Palé de Pellets MM ROYAL – 78 Sacos Plásticos',
+        'title' => 'Palete de Pellets MM ROYAL – 78 Sacos de Plástico',
 
 
         'hover_image' => 'wp-content/uploads/2025/10/63-large_default-700x700-1.webp',
@@ -2994,46 +3112,48 @@ Los sacos deben estar elevados del suelo sobre un palé y alejados de las parede
         ],
 
         'in_stock' => true, 'color' => '',
-        'short_description' => 'Pellets MM ROYAL – Palé con 78 Sacos de 15 kg (1170 kg)
-El palé de Pellets MM ROYAL, producido por la prestigiosa empresa Mayr-Melnhof (Austria), es sinónimo de calidad superior en la calefacción por biomasa. Con 78 sacos de plástico ultra resistentes de 15 kg cada uno, totaliza 1170 kg de pellets cuidadosamente acondicionados. Ideal para calderas, salamandras y chimeneas, ofrece una combustión eficiente, limpia y de alto rendimiento.',
+        'short_description' => 'Pellets MM ROYAL – Palete com 78 Sacos de 15 kg (1170 kg)
+O palete de Pellets MM ROYAL, producido por a prestigiosa empresa Mayr-Melnhof (Austria), é sinónimo de qualidade superior na aquecimento por biomassa. Com 78 sacos de plástico ultra resistentes de 15 kg cada um, totaliza 1170 kg de pellets cuidadosamente acondicionados. Ideal para caldeiras, salamandras e lareiras, oferece uma combustão eficiente, limpa e de alto rendimento.',
              'ref' => '53745623',
-             'description' => 'Palé de Pellets MM ROYAL – 78 Sacos Plásticos
-El palé de Pellets MM ROYAL ofrece una solución de calefacción de alto rendimiento, ecológica y práctica. Compuesto por 78 sacos plásticos resistentes, este palé proporciona una excelente autonomía para sistemas de calefacción por biomasa. Producidos con madera 100% natural, los pellets MM ROYAL garantizan una combustión eficiente, bajo contenido de cenizas y elevada durabilidad.
-Características principales:
+             'description' => 'Palete de Pellets MM ROYAL – 78 Sacos de Plástico
+O palete de Pellets MM ROYAL oferece uma solução de aquecimento de alto rendimento, ecológica e prática. Compuesto por 78 sacos de plástico resistentes, este palete proporciona uma excelente autonomía para sistemas de aquecimento a biomassa. Produzidos com madeira 100% natural, os pellets MM ROYAL garantem uma combustão eficiente, baixo conteúdo de cinzas e elevada durabilidade.
+Características principais:
 
-Cantidad: 78 sacos plásticos
+Quantidade: 78 sacos de plástico
 
-Composición: 100% madera natural
+Composição: 100% madeira natural
 
-Bajo contenido de humedad, optimizando la combustión
+Baixo teor de humidade, optimizando a combustão
 
-Alto poder calorífico, garantizando calor constante y prolongado
+Alto poder calorífico, garantindo calor constante e prolongado
 
-Bajo nivel de cenizas, facilitando el mantenimiento
+Baixo nível de cinzas, facilitando o manutenção
 
-Embalaje robusto, ideal para almacenamiento y transporte
+Embalaje robusto, ideal para armazenamento e transporte
 
-Ventajas:
+Vantagens:
 
-Excelente rendimiento térmico
+Excelente rendimento térmico
 
-Producto ecológico y sostenible
+Producto ecológico e sustentável
 
-Fácil de almacenar y manejar
+Fácil de armazenar e manusear
 
-Ideal para chimeneas, calderas y salamandras de pellets
+Ideal para lareiras, caldeiras e salamandras de pellets
 
-Combustión limpia, con bajas emisiones y menos residuos
+Combustão limpa, com baixas emissões e menos resíduos
 
-Con los Pellets MM ROYAL, disfrute de una calefacción eficiente, económica y respetuosa con el medio ambiente durante toda la temporada fría.',
+Com os Pellets MM ROYAL, desfrute de um aquecimento eficiente, económico e respeitador do ambiente durante toda a temporada fría.',
 
 
 
-        'slug' => 'palete-de-pellets-mm-royal-78-sacos-plasticos'
+        'slug' => 'palete-de-pellets-mm-royal-78-sacos-plasticos',
+        'seo_title' => 'Palete de Pellets MM ROYAL – 78 Sacos de Plástico',
+        'seo_description' => 'Palete de Pellets MM ROYAL – 78 Sacos de Plástico. Pellets de alto poder calorífico e baixa cinza. Envio grátis em Portugal Continental.'
     ],
     [
         'id' => 5624,
-        'title' => 'Palé de Pellets Proxima Star',
+        'title' => 'Palete de Pellets Proxima Star',
 
 
         'hover_image' => '',
@@ -3046,46 +3166,48 @@ Con los Pellets MM ROYAL, disfrute de una calefacción eficiente, económica y r
         ],
 
         'in_stock' => true, 'color' => '',
-        'short_description' => 'Pellets de Madera Prima – Palé con 66 sacos de 15 kg (990 kg)
-Los Pellets de Madera Prima, producidos en Bélgica, son una solución de calefacción de alta calidad, pensada para garantizar eficiencia, durabilidad y respeto por el medio ambiente. Este palé contiene 66 sacos de plástico ultra resistentes, de 15 kg cada uno, totalizando 990 kg de pellets cuidadosamente embalados para proteger el producto y facilitar el almacenamiento.',
+        'short_description' => 'Pellets de Madeira Prima – Palete com 66 sacos de 15 kg (990 kg)
+Os Pellets de Madeira Prima, produzidos em Bélgica, são uma solução de aquecimento de alta qualidade, pensada para garantir eficiência, durabilidade e respeto por o ambiente. Este palete contém 66 sacos de plástico ultra resistentes, de 15 kg cada um, totalizando 990 kg de pellets cuidadosamente embalados para proteger o produto e facilitar o armazenamento.',
              'ref' => '53745624',
-             'description' => 'Palé de Pellets Proxima Star
-El Palé de Pellets Proxima Star es la solución ideal para una calefacción eficiente y ecológica. Producidos con madera de alta calidad, estos pellets garantizan una combustión limpia, con bajo contenido de cenizas y excelente rendimiento térmico. Son perfectos para su uso en salamandras, calderas y chimeneas, asegurando un calor constante y duradero durante los meses más fríos.
+             'description' => 'Palete de Pellets Proxima Star
+O Palete de Pellets Proxima Star é a solução ideal para um aquecimento eficiente e ecológica. Produzidos com madeira de alta qualidade, estes pellets garantem uma combustão limpa, com baixo conteúdo de cinzas e excelente rendimento térmico. Son perfeitos parao seu uso em salamandras, caldeiras e lareiras, assegurando um calor constante e duradouro durante os meses mais frios.
 Características:
 
-Cantidad: Palé con varios sacos (cantidad exacta según el formato disponible)
+Quantidade: Palete com vários sacos (quantidade exacta segundo o formato disponível)
 
-Composición: 100% madera natural y renovable
+Composição: 100% madeira natural e renovável
 
-Bajo contenido de humedad, garantizando una combustión eficiente
+Baixo teor de humidade, garantindo uma combustão eficiente
 
-Alto poder calorífico, para una calefacción prolongada y constante
+Alto poder calorífico, para um aquecimento prolongada e constante
 
-Bajas emisiones y producción mínima de cenizas, facilitando el mantenimiento
+Baixas emissões e produção mínima de cinzas, facilitando o manutenção
 
-Ideal para salamandras, calderas y chimeneas
+Ideal para salamandras, caldeiras e lareiras
 
-Beneficios:
+Benefícios:
 
-Alta eficiencia energética, ayudando a reducir los costes de calefacción
+Alta eficiência energética, ajudando a reduzir os custos de aquecimento
 
-Producto ecológico y sostenible, proveniente de fuentes de madera responsables
+Producto ecológico e sustentável, proveniente de fuentes de madeira responsables
 
-Fácil de manejar y almacenar, gracias al formato compacto
+Fácil de manusear e armazenar, graças ao formato compacto
 
-Combustión limpia, con producción mínima de residuos
+Combustão limpa, com produção mínima de resíduos
 
-Excelente relación calidad-precio para calentar su casa de forma económica
+Excelente relación qualidade-preço para aquecer a sua casa de forma económica
 
-Con los Pellets Proxima Star, disfrute de una calefacción limpia, eficiente y accesible, contribuyendo al mismo tiempo a la preservación del medio ambiente.',
+Com os Pellets Proxima Star, desfrute de um aquecimento limpa, eficiente e acessível, contribuindo paral mesmo tiempo à preservação do ambiente.',
 
 
 
-        'slug' => 'palete-de-pellets-proxima-star'
+        'slug' => 'palete-de-pellets-proxima-star',
+        'seo_title' => 'Palete de Pellets Proxima Star',
+        'seo_description' => 'Palete de Pellets Proxima Star. Pellets de alto poder calorífico e baixa cinza. Envio grátis em Portugal Continental.'
     ],
     [
         'id' => 5813,
-        'title' => 'PALÉ EXTRA DE PELLETS (65 SACOS) POR CAMIÓN COMPLETO',
+        'title' => 'PALETE EXTRA DE PELLETS (65 SACOS) POR CAMIÃO COMPLETO',
 
 
         'hover_image' => '',
@@ -3098,26 +3220,28 @@ Con los Pellets Proxima Star, disfrute de una calefacción limpia, eficiente y a
         ],
 
         'in_stock' => true, 'color' => '',
-        'short_description' => 'La cantidad mínima de pedido para este producto es de 24.
-Pellets a precios de mayorista. 100% pellets de madera blanda con certificación EN Plus.
-Alto poder calorífico y bajo contenido de cenizas y polvo.
-¡Compre nuestros pellets por camión! La descarga del camión es responsabilidad del cliente (se necesita una carretilla elevadora).',
+        'short_description' => 'A quantidade mínima de encomenda para este produto é de 24.
+Pellets a precios de mayorista. 100% pellets de madeira macia com certificación EN Plus.
+Alto poder calorífico e baixo conteúdo de cinzas e polvo.
+¡Compre os nossos pellets por camião! A descarga do camião é responsabilidad do cliente (se necessita uma carretilla elevadora).',
              'ref' => '53745813',
-             'description' => 'Los pellets de madera que ofrecemos por camión son perfectos para compras en grupo, ayuntamientos locales y comités de empresa.
-Son adecuados para todas las marcas de salamandras, recuperadores y calderas de pellets.
-Estos pellets cumplen con la norma EN Plus, que es el equivalente europeo de la norma alemana DIN Plus. ¡La calidad es, por lo tanto, la misma!
-La marca entregada depende de su ubicación y de las existencias disponibles. No dude en contactar con nuestro servicio de atención al cliente para cualquier información adicional.
-Almacenamiento de los granulados:
-El lugar de almacenamiento debe ser seco y templado.
-Los sacos deben estar elevados del suelo sobre un palé y alejados de las paredes para protegerlos de la humedad.',
+             'description' => 'Os pellets de madeira que ofrecemos por camião são perfeitos para compras em grupo, ayuntamientos locales e comités de empresa.
+Son adecuados para todas as marcas de salamandras, recuperadores e caldeiras de pellets.
+Estes pellets cumplen com a norma EN Plus, que é o equivalente europeo da norma alemana DIN Plus. ¡A qualidade é, por isso, a mesma!
+A marca entregada depende do seu ubicación e das existencias disponívels. No dude em contactar com o nosso servicio de atención ao cliente para qualquer información adicional.
+Almacenamiento dos granulados:
+O local de armazenamento deve ser seco e templado.
+Os sacos devem estar elevados do suelo sobre um palete e alejados das paredes para protegerlos da humidade.',
 
 
 
-        'slug' => 'palete-extra-de-pellets-65-sacos-por-camiao-completo'
+        'slug' => 'palete-extra-de-pellets-65-sacos-por-camiao-completo',
+        'seo_title' => 'PALETE EXTRA DE PELLETS (65 SACOS) POR CAMIÃO COMPLETO',
+        'seo_description' => 'PALETE EXTRA DE PELLETS (65 SACOS) POR CAMIÃO COMPLETO. Pellets de alto poder calorífico e baixa cinza. Envio grátis em Portugal Continental.'
     ],
     [
         'id' => 5622,
-        'title' => 'Palé HELIOS – 65 sacos de 15 kg',
+        'title' => 'Palete HELIOS – 65 sacos de 15 kg',
 
 
         'hover_image' => '',
@@ -3130,41 +3254,43 @@ Los sacos deben estar elevados del suelo sobre un palé y alejados de las parede
         ],
 
         'in_stock' => true, 'color' => '',
-        'short_description' => 'Entrega en cualquier lugar de Portugal en 3 a 5 días. Los pellets de madera HELIOS están certificados por DIN Plus (norma alemana) y EN Plus A1 (norma europea) y son 100% resinosos.',
+        'short_description' => 'Entrega em qualquer local de Portugal em 3 a 5 dias. Os pellets de madeira HELIOS são certificados por DIN Plus (norma alemana) e EN Plus A1 (norma europeia) e são 100% resinosos.',
              'ref' => '53745622',
-             'description' => 'Palé HELIOS – 65 sacos de 15 kg
-El Palé HELIOS es una excelente opción para quienes buscan pellets de alta calidad, eficientes y ecológicos. Este palé con 65 sacos de 15 kg está compuesto por pellets producidos con madera 100% natural y renovable, diseñados para ofrecer una combustión limpia y eficiente. Gracias a su bajo contenido de humedad y elevado poder calorífico, los pellets HELIOS garantizan un rendimiento térmico excepcional, siendo ideales para salamandras, calderas y otros sistemas de calefacción por biomasa.
+             'description' => 'Palete HELIOS – 65 sacos de 15 kg
+O Palete HELIOS é uma excelente opção para quem procura pellets de alta qualidade, eficientes e ecológicos. Este palete com 65 sacos de 15 kg é composto por pellets produzidos com madeira 100% natural e renovável, concebidos para oferecer uma combustão limpa e eficiente. Graças ao seu baixo teor de humidade e elevado poder calorífico, os pellets HELIOS garantem um rendimento térmico excecional, siendo ideais para salamandras, caldeiras e outros sistemas de aquecimento a biomassa.
 Características:
 
-Cantidad: 65 sacos de 15 kg por palé
+Quantidade: 65 sacos de 15 kg por palete
 
-Composición: 100% madera natural y renovable
+Composição: 100% madeira natural e renovável
 
-Bajo contenido de humedad, asegurando una combustión eficiente y limpia
+Baixo teor de humidade, assegurando uma combustão eficiente e limpa
 
-Alto poder calorífico, proporcionando calor duradero y constante
+Alto poder calorífico, proporcionando calor duradouro e constante
 
-Bajo nivel de cenizas, facilitando la limpieza y mantenimiento
+Baixo nível de cinzas, facilitando a limpeza e manutenção
 
-Ideal para salamandras, calderas y sistemas de calefacción por biomasa
+Ideal para salamandras, caldeiras e sistemas de aquecimento a biomassa
 
-Beneficios:
+Benefícios:
 
-Eficiencia energética, ayudando a reducir los costes de calefacción
+Eficiência energética, ajudando a reduzir os custos de aquecimento
 
-Ecológicos y sostenibles, fabricados con madera proveniente de fuentes responsables
+Ecológicos e sustentáveis, fabricados com madeira proveniente de fontes responsáveis
 
-Fácil de almacenar y manejar, gracias a la presentación en sacos de 15 kg
+Fácil de armazenar e manusear, graças à apresentação em sacos de 15 kg
 
-Bajas emisiones de CO₂, respetando el medio ambiente
+Bajas emissões de CO₂, respeitando o ambiente
 
-Combustión limpia, con producción mínima de residuos y humo
+Combustão limpa, com produção mínima de resíduos e fumo
 
-Con el Palé HELIOS de 65 sacos de 15 kg, podrá disfrutar de una calefacción eficiente, económica y respetuosa con el medio ambiente durante todo el invierno.',
+Com o Palete HELIOS de 65 sacos de 15 kg, poderá desfrutar de um aquecimento eficiente, económico e respeitador do ambiente durante todo o inverno.',
 
 
 
-        'slug' => 'palete-helios-65-sacos-de-15-kg'
+        'slug' => 'palete-helios-65-sacos-de-15-kg',
+        'seo_title' => 'Palete HELIOS – 65 sacos de 15 kg',
+        'seo_description' => 'Palete HELIOS – 65 sacos de 15 kg. Pellets de alto poder calorífico e baixa cinza. Envio grátis em Portugal Continental.'
     ],
     [
         'id' => 5716,
@@ -3183,37 +3309,37 @@ Con el Palé HELIOS de 65 sacos de 15 kg, podrá disfrutar de una calefacción e
         ],
 
         'in_stock' => true, 'color' => '',
-        'short_description' => 'Diámetro: 6 u 8 mm. Humedad: < 10%. Contenido de cenizas: < 0,7%. Densidad aparente: > 600 kg/m³. Poder calorífico: 16,5 MJ/kg ≤ Q ≤ 19 MJ/kg',
+        'short_description' => 'Diâmetro: 6 u 8 mm. Humidade: < 10%. Contenido de cinzas: < 0,7%. Densidad aparente: > 600 kg/m³. Poder calorífico: 16,5 MJ/kg ≤ Q ≤ 19 MJ/kg',
              'ref' => '53745716',
              'description' => 'Pellets Palser 15 kg
-Los pellets Palser son una opción ecológica y eficiente para calefacción, ideales para estufas y calderas de biomasa. Con un tamaño uniforme y alta densidad, estos pellets se fabrican con materiales naturales y renovables, garantizando bajo contenido de humedad y alto poder calorífico. Cada saco de 15 kg ofrece una solución práctica y sostenible para mantener su casa caliente durante los meses más fríos del año. Además, su combustión limpia y bajo nivel de cenizas los convierten en una opción respetuosa con el medio ambiente.
+Os pellets Palser são uma opção ecológica e eficiente para aquecimento, ideais para salamandras e caldeiras de biomassa. Com um tamanho uniforme e alta densidade, estes pellets se fabricam com materiais naturais e renováveis, garantindo baixo teor de humidade e alto poder calorífico. Cada saco de 15 kg oferece uma solução prática e sustentável para manter a sua casa quente durante os meses mais frios do ano. Além disso, o seu combustão limpa e baixo teor de cinzas os converten em uma opção respeitadora do ambiente.
 Características:
 
 Peso: 15 kg por saco
 
-Alta eficiencia energética
+Alta eficiência energética
 
-Bajo nivel de cenizas
+Baixo nível de cinzas
 
-Fabricados a partir de madera natural y renovable
+Fabricados a partir de madeira natural e renovável
 
-Ideal para estufas y calderas de biomasa
+Ideal para salamandras e caldeiras de biomassa
 
-Beneficios:
+Benefícios:
 
-Calor duradero y constante
+Calor duradouro e constante
 
-Ecológicos y económicos
+Ecológicos e económicos
 
-Facilidad de almacenamiento y manejo
+Facilidad de armazenamento e manuseamento
 
 Especificaciones técnicas:
 
-Diámetro: 6 u 8 mm
+Diâmetro: 6 u 8 mm
 
-Humedad < 10%
+Humidade < 10%
 
-Contenido de cenizas < 0,7%
+Contenido de cinzas < 0,7%
 
 Densidad aparente > 600 kg/m³
 
@@ -3221,11 +3347,13 @@ Poder calorífico: 16,5 MJ/kg ≤ Q ≤ 19 MJ/kg',
 
 
 
-        'slug' => 'palser-pellet-15-kg'
+        'slug' => 'palser-pellet-15-kg',
+        'seo_title' => 'Palser Pellet 15 kg',
+        'seo_description' => 'Palser Pellet 15 kg. Pellets de alto poder calorífico e baixa cinza. Envio grátis em Portugal Continental.'
     ],
     [
         'id' => 5626,
-        'title' => 'Pellet Badger – Palé con 65 sacos de 15 kg',
+        'title' => 'Pellet Badger – Palete com 65 sacos de 15 kg',
 
 
         'hover_image' => 'wp-content/uploads/2025/10/11-Pellet-SunFire-Palette-de-70-sacs-de-15-kg-430x430-1.webp',
@@ -3240,45 +3368,47 @@ Poder calorífico: 16,5 MJ/kg ≤ Q ≤ 19 MJ/kg',
         ],
 
         'in_stock' => true, 'color' => '',
-        'short_description' => 'Pellets de madera BADGER, certificados DIN Plus y 100% resinosos. Disponibles en sacos, muy prácticos, con bastante papel reciclado en el embalaje. Nuestros pellets Badger tienen una sólida reputación y se venden desde hace muchos años con éxito.',
+        'short_description' => 'Pellets de madeira BADGER, certificados DIN Plus e 100% resinosos. Disponibles em sacos, muito práticos, com bastante papel reciclado no embalagem. Os nossos pellets Badger têm uma sólida reputación e se venden desde faz muitos anos com éxito.',
              'ref' => '53745626',
-             'description' => 'Pellet Badger – Palé con 65 sacos de 15 kg
-Los pellets Badger son una opción ideal para quienes buscan una calefacción eficiente y sostenible. Este palé con 65 sacos de 15 kg fue diseñado para ofrecer una combustión limpia y de alto rendimiento, garantizando calor constante durante los meses más fríos. Fabricados con madera de alta calidad, estos pellets tienen bajo contenido de humedad, permitiendo generar un elevado poder calorífico con mínima producción de cenizas. Son perfectos para estufas, calderas y otros sistemas de calefacción por biomasa.
+             'description' => 'Pellet Badger – Palete com 65 sacos de 15 kg
+Os pellets Badger são uma opção ideal para quem procura um aquecimento eficiente e sustentável. Este palete com 65 sacos de 15 kg fue concebido para oferecer uma combustão limpa e de alto rendimento, garantindo calor constante durante os meses mais frios. Fabricados com madeira de alta qualidade, estes pellets têm baixo teor de humidade, permitindo generar um elevado poder calorífico com mínima produção de cinzas. Son perfeitos para salamandras, caldeiras e outros sistemas de aquecimento a biomassa.
 Características:
 
-Cantidad: 65 sacos de 15 kg por palé
+Quantidade: 65 sacos de 15 kg por palete
 
-Composición: 100% madera natural y renovable
+Composição: 100% madeira natural e renovável
 
-Bajo contenido de humedad, garantizando una combustión eficiente y limpia
+Baixo teor de humidade, garantindo uma combustão eficiente e limpa
 
-Alto poder calorífico, para mantener su casa caliente de forma constante
+Alto poder calorífico, para manter a sua casa quente de forma constante
 
-Bajo nivel de cenizas, facilitando la limpieza y mantenimiento
+Baixo nível de cinzas, facilitando a limpeza e manutenção
 
-Ideal para estufas, calderas y sistemas de calefacción por biomasa
+Ideal para salamandras, caldeiras e sistemas de aquecimento a biomassa
 
-Beneficios:
+Benefícios:
 
-Eficiencia energética, ayudando a reducir los costes de calefacción
+Eficiência energética, ajudando a reduzir os custos de aquecimento
 
-Ecológicos y sostenibles, fabricados con madera proveniente de fuentes responsables
+Ecológicos e sustentáveis, fabricados com madeira proveniente de fontes responsáveis
 
-Fácil de almacenar y manejar, gracias al formato en sacos de 15 kg
+Fácil de armazenar e manusear, graças ao formato em sacos de 15 kg
 
-Bajas emisiones de CO2, respetando el medio ambiente
+Baixas emissões de CO2, respeitando o ambiente
 
-Combustión limpia, con producción mínima de residuos y humo
+Combustão limpa, com produção mínima de resíduos e fumo
 
-Con los pellets Badger, disfrutará de una calefacción eficiente, económica y respetuosa con el medio ambiente para su hogar.',
+Com os pellets Badger, desfrutará de um aquecimento eficiente, económico e respeitador do ambiente para sua casa.',
 
 
 
-        'slug' => 'pellet-badger-palete-com-65-sacos-de-15-kg'
+        'slug' => 'pellet-badger-palete-com-65-sacos-de-15-kg',
+        'seo_title' => 'Pellet Badger – Palete com 65 sacos de 15 kg',
+        'seo_description' => 'Pellet Badger – Palete com 65 sacos de 15 kg. Pellets de alto poder calorífico e baixa cinza. Envio grátis em Portugal Continental.'
     ],
     [
         'id' => 5799,
-        'title' => 'PELLET BEAR – PALÉ DE 65 SACOS DE 15 KG',
+        'title' => 'PELLET BEAR – PALETE DE 65 SACOS DE 15 KG',
 
 
         'hover_image' => '',
@@ -3291,23 +3421,25 @@ Con los pellets Badger, disfrutará de una calefacción eficiente, económica y 
         ],
 
         'in_stock' => true, 'color' => '',
-        'short_description' => 'Los granulados de madera BEAR están certificados EN Plus A1, la norma de calidad más utilizada en Europa.
-Son 100% de madera blanda y 100% naturales.',
+        'short_description' => 'Os granulados de madeira BEAR são certificados EN Plus A1, a norma de qualidade mais utilizada em Europa.
+Son 100% de madeira macia e 100% naturais.',
              'ref' => '53745799',
-             'description' => 'Los pellets de madera BEAR están certificados ENplus A1, la norma europea que garantiza el cumplimiento riguroso de las normas de calidad y que somete al fabricante a controles regulares, tanto en la fabricación como en el almacenamiento de los pellets.
-Estos pellets de madera son de calidad superior: 100% naturales, de alto rendimiento y respetuosos con el medio ambiente.
-Estos pellets son ideales para usarse en varios sistemas de calefacción de pellets de madera: salamandras, calderas y aparatos de pellets, sin obstruirlos.
-Son fabricados por una empresa dedicada a la producción de biocombustibles y comprometida con el medio ambiente.
-Tiene la garantía de un pellet económico y de alto rendimiento.
-Al elegir este pellet, está eligiendo calidad a un muy buen precio.',
+             'description' => 'Os pellets de madeira BEAR são certificados ENplus A1, a norma europeia que garante o cumplimiento riguroso das normas de qualidade e que somete ao fabricamte a controles regulares, tanto na fabricación como no armazenamento dos pellets.
+Estes pellets de madeira são de qualidade superior: 100% naturais, de alto rendimento e respetuosos com o ambiente.
+Estes pellets são ideais para usarse em vários sistemas de aquecimento de pellets de madeira: salamandras, caldeiras e aparelhos de pellets, sem obstruirlos.
+Son fabricados por uma empresa dedicada à produção de biocombustívels e comprometida com o ambiente.
+Tna garantia de um pellet económico e de alto rendimento.
+Al elegir este pellet, está eligiendo qualidada um muito buen preço.',
 
 
 
-        'slug' => 'pellet-bear-palete-de-65-sacos-de-15-kg'
+        'slug' => 'pellet-bear-palete-de-65-sacos-de-15-kg',
+        'seo_title' => 'PELLET BEAR – PALETE DE 65 SACOS DE 15 KG',
+        'seo_description' => 'PELLET BEAR – PALETE DE 65 SACOS DE 15 KG. Pellets de alto poder calorífico e baixa cinza. Envio grátis em Portugal Continental.'
     ],
     [
         'id' => 5627,
-        'title' => 'Pellet Bio Energy – Palé de 66 sacos de 15 kg',
+        'title' => 'Pellet Bio Energy – Palete de 66 sacos de 15 kg',
 
 
         'hover_image' => '',
@@ -3320,45 +3452,47 @@ Al elegir este pellet, está eligiendo calidad a un muy buen precio.',
         ],
 
         'in_stock' => true, 'color' => '',
-        'short_description' => 'Pellets de madera BIOENERGIE, certificados DIN Plus, EN Plus A1 y PEFC, 100% resinosos. Fabricados en Portugal, en un aserradero que respeta el medio ambiente. La prioridad es la calidad de los productos, naturales, con madera proveniente de bosques gestionados de forma sostenible.',
+        'short_description' => 'Pellets de madeira BIOENERGIE, certificados DIN Plus, EN Plus A1 e PEFC, 100% resinosos. Fabricados em Portugal, em um aserradero que respeita o ambiente. A prioridad é a qualidade dos produtos, naturais, com madeira proveniente de bosques gestionados de forma sustentável.',
              'ref' => '53745627',
-             'description' => 'Pellet Bio Energy – Palé de 66 sacos de 15 kg
-Los pellets Bio Energy son la opción ideal para quienes buscan una calefacción eficiente, económica y respetuosa con el medio ambiente. Este palé de 66 sacos de 15 kg está compuesto por pellets de madera de alta calidad, fabricados con materias primas renovables. Gracias a su bajo contenido de humedad y alto poder calorífico, estos pellets proporcionan una combustión eficiente y limpia, perfectos para estufas, calderas y sistemas de calefacción por biomasa.
+             'description' => 'Pellet Bio Energy – Palete de 66 sacos de 15 kg
+Os pellets Bio Energy são a opção ideal para quem procura um aquecimento eficiente, económico e respeitador do ambiente. Este palete de 66 sacos de 15 kg é composto por pellets de madeira de alta qualidade, fabricados com matérias-primas renováveis. Graças ao seu baixo teor de humidade e alto poder calorífico, estes pellets proporcionam uma combustão eficiente e limpa, perfeitos para salamandras, caldeiras e sistemas de aquecimento a biomassa.
 Características:
 
-Cantidad: 66 sacos de 15 kg por palé
+Quantidade: 66 sacos de 15 kg por palete
 
-Composición: 100% madera natural y renovable
+Composição: 100% madeira natural e renovável
 
-Bajo contenido de humedad, garantizando una combustión eficiente
+Baixo teor de humidade, garantindo uma combustão eficiente
 
-Alto poder calorífico, proporcionando calor duradero y constante
+Alto poder calorífico, proporcionando calor duradouro e constante
 
-Bajo nivel de cenizas, facilitando la limpieza y mantenimiento
+Baixo nível de cinzas, facilitando a limpeza e manutenção
 
-Ideal para estufas, calderas y sistemas de calefacción por biomasa
+Ideal para salamandras, caldeiras e sistemas de aquecimento a biomassa
 
-Beneficios:
+Benefícios:
 
-Eficiencia energética, ayudando a reducir los costes de calefacción
+Eficiência energética, ajudando a reduzir os custos de aquecimento
 
-Ecológicos y sostenibles, fabricados con madera proveniente de fuentes responsables
+Ecológicos e sustentáveis, fabricados com madeira proveniente de fontes responsáveis
 
-Fácil de almacenar y manejar, gracias a la presentación en sacos de 15 kg
+Fácil de armazenar e manusear, graças à apresentação em sacos de 15 kg
 
-Bajas emisiones de CO2, respetando el medio ambiente
+Baixas emissões de CO2, respeitando o ambiente
 
-Combustión limpia, con producción mínima de residuos y humo
+Combustão limpa, com produção mínima de resíduos e fumo
 
-Con los pellets Bio Energy, podrá disfrutar de una calefacción de alto rendimiento, eficiente y respetuosa con el medio ambiente para su casa.',
+Com os pellets Bio Energy, poderá desfrutar de um aquecimento de alto rendimento, eficiente e respeitadora do ambiente para sua casa.',
 
 
 
-        'slug' => 'pellet-bio-energy-palete-de-66-sacos-de-15-kg'
+        'slug' => 'pellet-bio-energy-palete-de-66-sacos-de-15-kg',
+        'seo_title' => 'Pellet Bio Energy – Palete de 66 sacos de 15 kg',
+        'seo_description' => 'Pellet Bio Energy – Palete de 66 sacos de 15 kg. Pellets de alto poder calorífico e baixa cinza. Envio grátis em Portugal Continental.'
     ],
     [
         'id' => 5628,
-        'title' => 'Pellet Din Pellets – Palé con 65 sacos de 15 kg',
+        'title' => 'Pellet Din Pellets – Palete com 65 sacos de 15 kg',
 
 
         'hover_image' => 'wp-content/uploads/2025/10/818oJAVwyJL._AC_SL1500_-700x639-1.webp',
@@ -3376,45 +3510,47 @@ Con los pellets Bio Energy, podrá disfrutar de una calefacción de alto rendimi
         ],
 
         'in_stock' => true, 'color' => '',
-        'short_description' => 'DIN PELLETS – Pellets de madera, certificados DIN Plus y 100% madera blanda. Fabricados en el norte de Portugal, para un producto de proximidad y de alta calidad.',
+        'short_description' => 'DIN PELLETS – Pellets de madeira, certificados DIN Plus e 100% madeira macia. Fabricados no norte de Portugal, para um produto de proximidade e de alta qualidade.',
              'ref' => 'DIN PELLETS – Pellets de madeira, certificados DIN Plus e 100% madeira macia.Fabricados no norte de Portugal, para um produto de proximidade e de alta qualidade.',
-             'description' => 'Pellet Din Pellets – Palé con 65 sacos de 15 kg
-Los Pellet Din Pellets son la opción perfecta para quienes buscan una calefacción eficiente, económica y ecológica. Este palé con 65 sacos de 15 kg está compuesto por pellets de alta calidad, fabricados con madera 100% natural y renovable. Con bajo contenido de humedad y elevado poder calorífico, estos pellets garantizan una combustión eficiente y limpia, ideal para salamandras, calderas y sistemas de calefacción por biomasa.
+             'description' => 'Pellet Din Pellets – Palete com 65 sacos de 15 kg
+Os Pellet Din Pellets são a opção perfeita para quem procura um aquecimento eficiente, económica e ecológica. Este palete com 65 sacos de 15 kg é composto por pellets de alta qualidade, fabricados com madeira 100% natural e renovável. Com baixo teor de humidade e elevado poder calorífico, estes pellets garantem uma combustão eficiente e limpa, ideal para salamandras, caldeiras e sistemas de aquecimento a biomassa.
 Características:
 
-Cantidad: 65 sacos de 15 kg por palé
+Quantidade: 65 sacos de 15 kg por palete
 
-Composición: 100% madera natural y renovable
+Composição: 100% madeira natural e renovável
 
-Bajo contenido de humedad, lo que asegura una combustión eficiente y limpia
+Baixo teor de humidade, o que assegura uma combustão eficiente e limpa
 
-Elevado poder calorífico, proporcionando un calor constante y duradero
+Elevado poder calorífico, proporcionando um calor constante e duradouro
 
-Bajo nivel de cenizas, facilitando la limpieza
+Baixo nível de cinzas, facilitando a limpeza
 
-Ideal para salamandras, calderas y sistemas de calefacción por biomasa
+Ideal para salamandras, caldeiras e sistemas de aquecimento a biomassa
 
-Beneficios:
+Benefícios:
 
-Eficiencia energética, reduciendo los costes de calefacción
+Eficiência energética, reduzindo os custos de aquecimento
 
-Ecológicos y sostenibles, producidos con madera de fuentes responsables
+Ecológicos e sustentáveis, produzidos com madeira de fontes responsáveis
 
-Fácil de almacenar y manejar, gracias al formato en sacos de 15 kg
+Fácil de armazenar e manusear, graças ao formato em sacos de 15 kg
 
-Bajas emisiones de CO2, respetando el medio ambiente
+Baixas emissões de CO2, respeitando o ambiente
 
-Combustión limpia, con producción mínima de residuos y humo
+Combustão limpa, com produção mínima de resíduos e fumo
 
-Con los Pellet Din Pellets, podrá disfrutar de una calefacción de alto rendimiento, eficiente y respetuosa con el medio ambiente durante todo el invierno.',
+Com os Pellet Din Pellets, poderá desfrutar de um aquecimento de alto rendimento, eficiente e respeitadora do ambiente durante todo o inverno.',
 
 
 
-        'slug' => 'pellet-din-pellets-palete-com-65-sacos-de-15-kg'
+        'slug' => 'pellet-din-pellets-palete-com-65-sacos-de-15-kg',
+        'seo_title' => 'Pellet Din Pellets – Palete com 65 sacos de 15 kg',
+        'seo_description' => 'Pellet Din Pellets – Palete com 65 sacos de 15 kg. Pellets de alto poder calorífico e baixa cinza. Envio grátis em Portugal Continental.'
     ],
     [
         'id' => 5801,
-        'title' => 'PELLET GOLD – PALÉ DE 65 SACOS DE 15 KG',
+        'title' => 'PELLET GOLD – PALETE DE 65 SACOS DE 15 KG',
 
 
         'hover_image' => 'wp-content/uploads/2025/10/PELLET-GOLD-PALETE-DE-65-SACOS-DE-15-KG4.jpg',
@@ -3430,32 +3566,34 @@ Con los Pellet Din Pellets, podrá disfrutar de una calefacción de alto rendimi
         ],
 
         'in_stock' => true, 'color' => '',
-        'short_description' => 'Los granulados Gold tienen la certificación EN plus A1, la norma más utilizada en Europa.
-Estos pellets de madera son 100% de madera blanda.',
+        'short_description' => 'Os granulados Gold têm a certificación EN plus A1, a norma mais utilizada em Europa.
+Estes pellets de madeira são 100% de madeira macia.',
              'ref' => '53745801',
-             'description' => 'El granulado Gold es un granulado PREMIUM con características de calidad superiores a las del granulado estandarizado DINplus y con un poder calorífico superior.
-Cumple con la clase de calidad más elevada de la norma EN Plus: clase A1.
-La norma EN Plus es el equivalente europeo de la norma alemana DIN Plus, por lo que la calidad de este producto es exactamente la misma.
-Estos pellets tienen un elevado poder calorífico, lo que garantiza una excelente eficiencia energética y, gracias a su bajo contenido de cenizas y polvo, una obstrucción mínima.
-El pellet se fabrica con 100% de serrín de madera blanda.
-Los pellets GOLD se fabrican de acuerdo con las normas más rigurosas en cuanto a la elección de la materia prima y la línea de producción.
-Los controles de calidad se realizan regularmente para garantizar el mantenimiento de las certificaciones.
-Estos parámetros de calidad más elevados están además validados por el certificado PCU Deutschland GmbH.
-Es frecuente pensar que los buenos pellets de madera deben ser de color claro.
-Los pellets de madera deben fabricarse a partir de serrín descortezado.
-El color del pellet depende también del tipo de madera utilizado en su fabricación.
-El nogal, el cerezo, el castaño o el roble tienen un color de madera mucho más oscuro que el pino o el abedul.
-También es común que el color de la madera varíe dentro de la misma especie.
-Por ejemplo, es difícil encontrar dos tablas exactamente del mismo color.
-El color de los pellets puede, por lo tanto, variar de un lote a otro sin afectar su calidad.',
+             'description' => 'O pellet Gold é um granulado PREMIUM com características de qualidade superiores às do pellet estandarizado DINplus e com um poder calorífico superior.
+Cumple com a clase de qualidade mais elevada da norma EN Plus: clase A1.
+A norma EN Plus é o equivalente europeo da norma alemana DIN Plus, pelo que a qualidade de este produto é exactamente a mesma.
+Estes pellets têm um elevado poder calorífico, o que garante uma excelente eficiência energética e, graças ao seu baixo conteúdo de cinzas e polvo, uma obstrucción mínima.
+O pellet é fabricada com 100% de serrín de madeira macia.
+Os pellets GOLD se fabricam de acuerdo com as normas mais rigurosas em cuanto à escolha da materia prima e a línea de produção.
+Os controles de qualidade se realizan regularmente para garantir o manutenção das certificaciones.
+Estes parámetros de qualidade mais elevados estão além disso validados por o certificado PCU Deutschland GmbH.
+Es frecuente pensar que os buenos pellets de madeira devem ser de cor claro.
+Os pellets de madeira devem fabricarse a partir de serrín descortezado.
+O cor do pellet depende também do tipo de madeira utilizado no seu fabricación.
+O nogal, o cerezo, o castaño o o carvalho têm um cor de madeira muito mais oscuro que o pino o o bétula.
+Também é común que o cor da madeira varíe dentro da mesma espécie.
+Por ejemplo, é difícil encontrar dos tablas exactamente do mesmo cor.
+O cor dos pellets pode, por isso, variar de um lote a outro sem afectar o seu qualidade.',
 
 
 
-        'slug' => 'pellet-gold-palete-de-65-sacos-de-15-kg'
+        'slug' => 'pellet-gold-palete-de-65-sacos-de-15-kg',
+        'seo_title' => 'PELLET GOLD – PALETE DE 65 SACOS DE 15 KG',
+        'seo_description' => 'PELLET GOLD – PALETE DE 65 SACOS DE 15 KG. Pellets de alto poder calorífico e baixa cinza. Envio grátis em Portugal Continental.'
     ],
     [
         'id' => 5631,
-        'title' => 'Pellet Limouzi – Palé con 66 sacos de 15 kg',
+        'title' => 'Pellet Limouzi – Palete com 66 sacos de 15 kg',
 
 
         'hover_image' => '',
@@ -3468,45 +3606,47 @@ El color de los pellets puede, por lo tanto, variar de un lote a otro sin afecta
         ],
 
         'in_stock' => true, 'color' => '',
-        'short_description' => 'Los pellets de madera LIMOUZI cuentan con dos certificaciones: DIN Plus y PEFC, siendo 100% provenientes de madera resinosa. Estos pellets de calidad se fabrican en Portugal, en la región de Limousin. Económicos, eficientes y 100% naturales.',
+        'short_description' => 'Os pellets de madeira LIMOUZI dispõem com dos certificaciones: DIN Plus e PEFC, siendo 100% provenientes de madeira resinosa. Estes pellets de qualidade se fabricam em Portugal, na região de Limousin. Económicos, eficientes e 100% naturais.',
              'ref' => '53745631',
-             'description' => 'Pellet Limouzi – Palé con 66 sacos de 15 kg
-Los Pellet Limouzi son ideales para quienes buscan una calefacción eficiente, ecológica y de alta calidad. Este palé con 66 sacos de 15 kg está compuesto por pellets producidos con madera 100% natural y renovable, diseñados para ofrecer una combustión limpia y eficiente. Con bajo contenido de humedad y elevado poder calorífico, estos pellets garantizan un rendimiento térmico excepcional, ideal para salamandras, calderas y otros sistemas de calefacción por biomasa.
+             'description' => 'Pellet Limouzi – Palete com 66 sacos de 15 kg
+Os Pellet Limouzi são ideais para quem procura um aquecimento eficiente, ecológica e de alta qualidade. Este palete com 66 sacos de 15 kg é composto por pellets produzidos com madeira 100% natural e renovável, concebidos para oferecer uma combustão limpa e eficiente. Com baixo teor de humidade e elevado poder calorífico, estes pellets garantem um rendimento térmico excecional, ideal para salamandras, caldeiras e outros sistemas de aquecimento a biomassa.
 Características:
 
-Cantidad: 66 sacos de 15 kg por palé
+Quantidade: 66 sacos de 15 kg por palete
 
-Composición: 100% madera natural y renovable
+Composição: 100% madeira natural e renovável
 
-Bajo contenido de humedad, garantizando una combustión limpia y eficiente
+Baixo teor de humidade, garantindo uma combustão limpa e eficiente
 
-Elevado poder calorífico, proporcionando calor constante y duradero
+Elevado poder calorífico, proporcionando calor constante e duradouro
 
-Bajo nivel de cenizas, facilitando la limpieza y mantenimiento
+Baixo nível de cinzas, facilitando a limpeza e manutenção
 
-Ideal para salamandras, calderas y sistemas de calefacción por biomasa
+Ideal para salamandras, caldeiras e sistemas de aquecimento a biomassa
 
-Beneficios:
+Benefícios:
 
-Eficiencia energética, reduciendo los costes de calefacción
+Eficiência energética, reduzindo os custos de aquecimento
 
-Ecológicos y sostenibles, producidos con madera proveniente de fuentes responsables
+Ecológicos e sustentáveis, produzidos com madeira proveniente de fontes responsáveis
 
-Fácil de almacenar y manejar, gracias a la presentación en sacos de 15 kg
+Fácil de armazenar e manusear, graças à apresentação em sacos de 15 kg
 
-Bajas emisiones de CO₂, respetando el medio ambiente
+Bajas emissões de CO₂, respeitando o ambiente
 
-Combustión limpia, con producción mínima de residuos y humo
+Combustão limpa, com produção mínima de resíduos e fumo
 
-Con los Pellet Limouzi, podrá disfrutar de una calefacción de alto rendimiento, eficiente y respetuosa con el medio ambiente para su casa.',
+Com os Pellet Limouzi, poderá desfrutar de um aquecimento de alto rendimento, eficiente e respeitadora do ambiente para sua casa.',
 
 
 
-        'slug' => 'pellet-limouzi-palete-com-66-sacos-de-15-kg'
+        'slug' => 'pellet-limouzi-palete-com-66-sacos-de-15-kg',
+        'seo_title' => 'Pellet Limouzi – Palete com 66 sacos de 15 kg',
+        'seo_description' => 'Pellet Limouzi – Palete com 66 sacos de 15 kg. Pellets de alto poder calorífico e baixa cinza. Envio grátis em Portugal Continental.'
     ],
     [
         'id' => 5804,
-        'title' => 'PELLET LIMOUZI – PALÉ DE 66 SACOS DE 15 KG',
+        'title' => 'PELLET LIMOUZI – PALETE DE 66 SACOS DE 15 KG',
 
 
         'hover_image' => '',
@@ -3519,26 +3659,28 @@ Con los Pellet Limouzi, podrá disfrutar de una calefacción de alto rendimiento
         ],
 
         'in_stock' => true, 'color' => '',
-        'short_description' => 'Los pellets de madera LIMOUZI tienen 2 certificaciones: DIN Plus y PEFC, y son 100% de madera blanda.
-Estos pellets de calidad se fabrican en Francia, en la región de Limousin.
-Económicos, eficaces y 100% naturales.',
+        'short_description' => 'Os pellets de madeira LIMOUZI têm 2 certificaciones: DIN Plus e PEFC, e são 100% de madeira macia.
+Estes pellets de qualidade se fabricam em França, na região de Limousin.
+Económicos, eficazes e 100% naturais.',
              'ref' => '53745804',
-             'description' => 'Estos pellets son de muy alta calidad gracias a la materia prima fresca y consistente de su propio aserradero.
-Con un bajo contenido de humedad (< 8%), los pellets LIMOUZI no obstruyen su estufa, insert o caldera.
-Gracias a un poder calorífico entre 4,6 y 5 kWh/kg, se beneficiará de una combustión lenta y completa, lo que reducirá su consumo.
-Los pellets LIMOUZI se fabrican a partir de 100% de serrín de madera blanda proveniente de bosques gestionados de forma sostenible, de ahí su certificación PEFC.
-Se realizan regularmente numerosos controles de calidad: calidad de las materias primas, proceso de secado, prensa, tamiz y refrigerador. Toda la cadena de producción.
-Están certificados DIN Plus y son 100% naturales, sin aditivos.
-Las pruebas se realizan 4 veces al día en el lugar y en el laboratorio, con trazabilidad del producto.
-Sacos de polietileno prácticos, reciclables, más resistentes y fáciles de vaciar.',
+             'description' => 'Estes pellets são de muito alta qualidade graças à materia prima fresca e consistente do seu propio aserradero.
+Com um baixo teor de humidade (< 8%), os pellets LIMOUZI no obstruem o seu salamandra, insert o caldeira.
+Graças a um poder calorífico entre 4,6 e 5 kWh/kg, se beneficiará de uma combustão lenta e completa, o que reduzirá o seu consumo.
+Os pellets LIMOUZI se fabricam a partir de 100% de serrín de madeira macia proveniente de bosques gestionados de forma sustentável, de ahí o seu certificación PEFC.
+Se realizan regularmente numerosos controles de qualidade: qualidade das matérias-primas, processo de secagem, prensa, tamiz e refrigerador. Toda a cadena de produção.
+Están certificados DIN Plus e são 100% naturais, sem aditivos.
+As pruebas se realizan 4 veces ao dia no local e no laboratorio, com trazabilidad do produto.
+Sacos de polietileno práticos, reciclables, mais resistentes e fáceis de esvaziar.',
 
 
 
-        'slug' => 'pellet-limouzi-palete-de-66-sacos-de-15-kg'
+        'slug' => 'pellet-limouzi-palete-de-66-sacos-de-15-kg',
+        'seo_title' => 'PELLET LIMOUZI – PALETE DE 66 SACOS DE 15 KG',
+        'seo_description' => 'PELLET LIMOUZI – PALETE DE 66 SACOS DE 15 KG. Pellets de alto poder calorífico e baixa cinza. Envio grátis em Portugal Continental.'
     ],
     [
         'id' => 5805,
-        'title' => 'PELLET NATURAL ENERGIE – PALÉ DE 65 SACOS DE 15 KG',
+        'title' => 'PELLET NATURAL ENERGIE – PALETE DE 65 SACOS DE 15 KG',
 
 
         'hover_image' => 'wp-content/uploads/2025/10/WeChatImage_20221115125434-100x100.webp',
@@ -3557,30 +3699,32 @@ Sacos de polietileno prácticos, reciclables, más resistentes y fáciles de vac
         'in_stock' => true, 'color' => '',
         'short_description' => '
 517.00 €
-El precio original era: 517.00 €.
+O preço original era: 517.00 €.
 405.00 €
-El precio actual es: 405.00 €.
-IVA incluido
+O preço actual é: 405.00 €.
+IVA incluído
 
-PELLET NATURAL ENERGIE – PALÉ DE 65 SACOS DE 15 KG
+PELLET NATURAL ENERGIE – PALETE DE 65 SACOS DE 15 KG
 0 comentarios de clientes
-Los pellets de madera NATURAL ENERGIE son DIN Plus y se fabrican en Francia, en la región de Puy-de-Dôme.
-Estos pellets se fabrican a partir de 100% de serrín de madera blanda proveniente de aserraderos locales.
-Fabricado en Francia.',
+Os pellets de madeira NATURAL ENERGIE são DIN Plus e se fabricam em França, na região de Puy-de-Dôme.
+Estes pellets se fabricam a partir de 100% de serrín de madeira macia proveniente de serrações locais.
+Fabricado em França.',
              'ref' => '53745805',
-             'description' => 'Los pellets de madera de la marca Natural Energie se fabrican a partir de madera blanda 100% natural, garantizando una fuente de energía económica y de alto rendimiento para su casa. Con un poder calorífico superior a 4,6 kWh/kg, estos pellets proporcionan un calor constante y confortable, ideal para mantener una temperatura agradable en su espacio habitacional.
-Este producto también se distingue por su bajo contenido de cenizas y polvo, lo que significa que genera menos residuos y obstrucciones en su estufa. Así, puede disfrutar de un excelente rendimiento energético sin tener que preocuparse por la limpieza frecuente de su aparato.
-Además de sus excelentes características de combustión, los pellets Natural Energie se producen de forma ecológica. La empresa que los fabrica está comprometida a reducir su huella de carbono, utilizando sacos de pellets que contienen 50% de plástico reciclado, contribuyendo así a la preservación del medio ambiente.
-Estos pellets también se fabrican con una densidad elevada y un contenido de agua reducido, lo que los hace aún más económicos y eficientes. Además, cumplen con las normas de calidad más rigurosas, incluida la etiqueta DINplus, garantizando su excelencia en términos de combustión.
-Optar por los pellets de madera premium de Natural Energie significa elegir una fuente de energía respetuosa con el medio ambiente, económica y eficiente. Con 66 sacos de pellets en cada embalaje, se beneficia de un suministro fiable de calor para su casa, contribuyendo a la protección del medio ambiente, sin aditivos químicos nocivos. Haga la elección correcta para su confort y para el planeta, eligiendo Natural Energie.',
+             'description' => 'Os pellets de madeira da marca Natural Energie se fabricam a partir de madeira macia 100% natural, garantindo uma fuente de energia económica e de alto rendimento para sua casa. Com um poder calorífico superior a 4,6 kWh/kg, estes pellets proporcionam um calor constante e confortável, ideal para manter uma temperatura agradável no seu espaço habitacional.
+Este produto também se distingue por o seu baixo conteúdo de cinzas e polvo, o que significa que genera menos resíduos e obstrucciones na sua salamandra. Assim, pode desfrutar de um excelente rendimento energético sem tener que preocuparse por a limpeza frecuente do seu aparelho.
+Além de os seus excelentes características de combustão, os pellets Natural Energie se produzem de forma ecológica. A empresa que os fabrica está comprometida a reduzir o seu pegada de carbono, utilizando sacos de pellets que contienen 50% de plástico reciclado, contribuindo parasí à preservação do ambiente.
+Estes pellets também se fabricam com uma densidade elevada e um conteúdo de agua reducido, o que os faz ainda mais económicos e eficientes. Além disso, cumplen com as normas de qualidade mais rigurosas, incluida a etiqueta DINplus, garantindo seu excelencia em termos de combustão.
+Optar por os pellets de madeira premium de Natural Energie significa elegir uma fuente de energia respeitadora do ambiente, económica e eficiente. Com 66 sacos de pellets em cada embalagem, se beneficia de um fornecimento fiável de calor para sua casa, contribuindo para a proteção do ambiente, sem aditivos químicos nocivos. Haga a escolha correcta parao seu conforto e para o planeta, eligiendo Natural Energie.',
 
 
 
-        'slug' => 'pellet-natural-energie-palete-de-65-sacos-de-15-kg'
+        'slug' => 'pellet-natural-energie-palete-de-65-sacos-de-15-kg',
+        'seo_title' => 'PELLET NATURAL ENERGIE – PALETE DE 65 SACOS DE 15 KG',
+        'seo_description' => 'PELLET NATURAL ENERGIE – PALETE DE 65 SACOS DE 15 KG. Pellets de alto poder calorífico e baixa cinza. Envio grátis em Portugal Continental.'
     ],
     [
         'id' => 5643,
-        'title' => 'PELLET NOVA LEÑA – 77 sacos de 15 kg',
+        'title' => 'PELLET NOVA LENHA – 77 sacos de 15 kg',
 
 
         'hover_image' => '',
@@ -3594,47 +3738,49 @@ Optar por los pellets de madera premium de Natural Energie significa elegir una 
         ],
 
         'in_stock' => true, 'color' => '',
-        'short_description' => 'CERTIFICADO A1 Plus. Composición: madera de pino 100% pura, prensada sin aditivos. Valor calórico: 4700 kcal/kg, 18 kJ/kg. Un palé contiene 77 sacos de 15 kg.',
+        'short_description' => 'CERTIFICADO A1 Plus. Composição: madeira de pino 100% pura, prensada sem aditivos. Valor calórico: 4700 kcal/kg, 18 kJ/kg. Um palete contém 77 sacos de 15 kg.',
              'ref' => '53745643',
-             'description' => 'PELLET NOVA LEÑA – 77 sacos de 15 kg
-Los pellets Nova Leña son la solución perfecta para una calefacción eficiente, ecológica y económica. Con 77 sacos de 15 kg cada uno, este paquete proporciona una cantidad suficiente para mantener su casa caliente durante un largo período. Fabricados con madera de alta calidad y sin aditivos, los pellets Nova Leña tienen bajo contenido de humedad y alto poder calorífico, garantizando una combustión eficiente y limpia.
+             'description' => 'PELLET NOVA LENHA – 77 sacos de 15 kg
+Os pellets Nova Lenha são a solução perfeita para um aquecimento eficiente, ecológico e económico. Com 77 sacos de 15 kg cada um, este paquete proporciona uma quantidade suficiente para manter a sua casa quente durante um largo período. Fabricados com madeira de alta qualidade e sem aditivos, os pellets Nova Lenha têm baixo teor de humidade e alto poder calorífico, garantindo uma combustão eficiente e limpa.
 Características:
 
-Cantidad: 77 sacos de 15 kg
+Quantidade: 77 sacos de 15 kg
 
-Composición: Madera natural sin aditivos
+Composição: Madeira natural sem aditivos
 
-Bajo contenido de humedad para una combustión más eficiente
+Baixo teor de humidade para uma combustão mais eficiente
 
-Alto poder calorífico para mayor duración del calor
+Alto poder calorífico para maior duração do calor
 
-Bajo nivel de cenizas para facilitar la limpieza
+Baixo nível de cinzas para facilitar a limpeza
 
-Ecológicos y sostenibles, fabricados con madera proveniente de fuentes renovables
+Ecológicos e sustentáveis, fabricados com madeira proveniente de fuentes renováveis
 
-Beneficios:
+Benefícios:
 
-Eficiencia energética que reduce los costes de calefacción
+Eficiência energética que reduz os custos de aquecimento
 
-Fácil almacenamiento gracias al embalaje en sacos de 15 kg
+Fácil armazenamento graças à embalagem em sacos de 15 kg
 
-Combustión limpia y ecológica, con bajas emisiones y residuos mínimos
+Combustão limpa e ecológica, com baixas emissões e resíduos mínimos
 
-Ideal para estufas y calderas de biomasa
+Ideal para salamandras e caldeiras de biomassa
 
-Con los pellets Nova Leña, disfrutará de una calefacción confiable y económica, mientras contribuye a la preservación del medio ambiente.
+Com os pellets Nova Lenha, desfrutará de um aquecimento fiável e económica, enquanto contribui para a preservação do ambiente.
 Certificado A1 Plus
-Composición: madera de pino 100% pura, prensada sin aditivos.
+Composição: madeira de pino 100% pura, prensada sem aditivos.
 Valor calórico: 4700 kcal/kg, 18 kJ/kg.
-Un palé contiene 77 sacos de 15 kg.',
+Um palete contém 77 sacos de 15 kg.',
 
 
 
-        'slug' => 'pellet-nova-lenha-77-sacos-de-15-kg'
+        'slug' => 'pellet-nova-lenha-77-sacos-de-15-kg',
+        'seo_title' => 'PELLET NOVA LENHA – 77 sacos de 15 kg',
+        'seo_description' => 'PELLET NOVA LENHA – 77 sacos de 15 kg. Pellets de alto poder calorífico e baixa cinza. Envio grátis em Portugal Continental.'
     ],
     [
         'id' => 5633,
-        'title' => 'Pellet Valboval – Palé de 65 sacos de 15 kg',
+        'title' => 'Pellet Valboval – Palete de 65 sacos de 15 kg',
 
 
         'hover_image' => '',
@@ -3647,45 +3793,47 @@ Un palé contiene 77 sacos de 15 kg.',
         ],
 
         'in_stock' => true, 'color' => '',
-        'short_description' => 'Pellet de madera VALBOVAL, 100% portugués, 100% madera blanda y certificado DIN Plus. Alto poder calorífico y bajo contenido de cenizas y polvo. Producto local de buena calidad y precio accesible.',
+        'short_description' => 'Pellet de madeira VALBOVAL, 100% portugués, 100% madeira macia e certificado DIN Plus. Alto poder calorífico e baixo conteúdo de cinzas e polvo. Producto local de buena qualidade e preço acessível.',
              'ref' => '53745633',
-             'description' => 'Pellet Valboval – Palé de 65 sacos de 15 kg
-Los pellets Valboval son la opción ideal para quienes buscan una calefacción eficiente, económica y respetuosa con el medio ambiente. Este palé de 65 sacos de 15 kg está compuesto por pellets de madera de alta calidad, fabricados con materia prima natural y renovable. Gracias a su bajo contenido de humedad y alto poder calorífico, estos pellets ofrecen una combustión eficiente, limpia y duradera, siendo perfectos para estufas, calderas y sistemas de calefacción por biomasa.
+             'description' => 'Pellet Valboval – Palete de 65 sacos de 15 kg
+Os pellets Valboval são a opção ideal para quem procura um aquecimento eficiente, económico e respeitador do ambiente. Este palete de 65 sacos de 15 kg é composto por pellets de madeira de alta qualidade, fabricados com materia prima natural e renovável. Graças ao seu baixo teor de humidade e alto poder calorífico, estes pellets oferecem uma combustão eficiente, limpa e duradoura, siendo perfeitos para salamandras, caldeiras e sistemas de aquecimento a biomassa.
 Características:
 
-Cantidad: 65 sacos de 15 kg por palé
+Quantidade: 65 sacos de 15 kg por palete
 
-Composición: 100% madera natural y renovable
+Composição: 100% madeira natural e renovável
 
-Bajo contenido de humedad, garantizando una combustión eficiente y sin residuos
+Baixo teor de humidade, garantindo uma combustão eficiente e sem resíduos
 
-Alto poder calorífico, proporcionando calor constante y duradero
+Alto poder calorífico, proporcionando calor constante e duradouro
 
-Bajo nivel de cenizas, facilitando la limpieza y mantenimiento
+Baixo nível de cinzas, facilitando a limpeza e manutenção
 
-Ideal para estufas, calderas y sistemas de calefacción por biomasa
+Ideal para salamandras, caldeiras e sistemas de aquecimento a biomassa
 
-Beneficios:
+Benefícios:
 
-Eficiencia energética, ayudando a reducir los costes de calefacción
+Eficiência energética, ajudando a reduzir os custos de aquecimento
 
-Ecológicos y sostenibles, fabricados con madera proveniente de fuentes responsables
+Ecológicos e sustentáveis, fabricados com madeira proveniente de fontes responsáveis
 
-Fácil de almacenar y manejar, gracias al embalaje en sacos de 15 kg
+Fácil de armazenar e manusear, graças à embalagem em sacos de 15 kg
 
-Bajas emisiones de CO2, respetando el medio ambiente
+Baixas emissões de CO2, respeitando o ambiente
 
-Combustión limpia, con producción mínima de residuos y humo
+Combustão limpa, com produção mínima de resíduos e fumo
 
-Con los pellets Valboval, podrá disfrutar de una calefacción eficiente y económica para su casa durante todo el invierno.',
+Com os pellets Valboval, poderá desfrutar de um aquecimento eficiente e económica para sua casa durante todo o inverno.',
 
 
 
-        'slug' => 'pellet-valboval-palete-de-65-sacos-de-15-kg'
+        'slug' => 'pellet-valboval-palete-de-65-sacos-de-15-kg',
+        'seo_title' => 'Pellet Valboval – Palete de 65 sacos de 15 kg',
+        'seo_description' => 'Pellet Valboval – Palete de 65 sacos de 15 kg. Pellets de alto poder calorífico e baixa cinza. Envio grátis em Portugal Continental.'
     ],
     [
         'id' => 5802,
-        'title' => 'PELLET VALBOVAL – PALÉ DE 65 SACOS DE 15 KG',
+        'title' => 'PELLET VALBOVAL – PALETE DE 65 SACOS DE 15 KG',
 
 
         'hover_image' => '',
@@ -3698,24 +3846,26 @@ Con los pellets Valboval, podrá disfrutar de una calefacción eficiente y econ�
         ],
 
         'in_stock' => true, 'color' => '',
-        'short_description' => 'Pellets de madera VALBOVAL, 100% franceses, 100% de madera blanda y certificados DIN Plus.
-Alto poder calorífico y bajo contenido de cenizas y polvo.
-Producto local de buena calidad a un precio bajo.
-Fabricado en Francia.',
+        'short_description' => 'Pellets de madeira VALBOVAL, 100% franceses, 100% de madeira macia e certificados DIN Plus.
+Alto poder calorífico e baixo conteúdo de cinzas e polvo.
+Producto local de buena qualidada um preço baixo.
+Fabricado em França.',
              'ref' => '53745802',
-             'description' => 'Los pellets VALBOVAL son uno de nuestros productos de gama alta, con una calidad que supera las exigencias de la norma DIN Plus.
-Con un bajo contenido de cenizas y polvo, no obstruye su salamandra, insert o caldera.
-Gracias a su elevado poder calorífico (5 kWh/kg), puede tener la certeza de un calor constante en su chimenea y de una subida rápida de la temperatura.
-Es ideal para todos los sistemas de calefacción de pellets.
-Este pellet se fabrica en Francia, por lo que, al comprarlo, está eligiendo un método de calefacción ecológico y económico, preservando su aparato.',
+             'description' => 'Os pellets VALBOVAL são uno de os nossos produtos de gama alta, com uma qualidade que supera as exigencias da norma DIN Plus.
+Com um baixo conteúdo de cinzas e polvo, no obstruye o seu salamandra, insert o caldeira.
+Graças ao seu elevado poder calorífico (5 kWh/kg), pode tener a certeza de um calor constante no seu chaminé e de uma subida rápida da temperatura.
+É ideal para todos os sistemas de aquecimento de pellets.
+Este pellet é fabricada em França, pelo que, ao comprarlo, está eligiendo um método de aquecimento ecológico e económico, preservando seu aparelho.',
 
 
 
-        'slug' => 'pellet-valboval-palete-de-65-sacos-de-15-kg-2'
+        'slug' => 'pellet-valboval-palete-de-65-sacos-de-15-kg-2',
+        'seo_title' => 'PELLET VALBOVAL – PALETE DE 65 SACOS DE 15 KG',
+        'seo_description' => 'PELLET VALBOVAL – PALETE DE 65 SACOS DE 15 KG. Pellets de alto poder calorífico e baixa cinza. Envio grátis em Portugal Continental.'
     ],
     [
         'id' => 5634,
-        'title' => 'Pellet Van Roje – Palé de 65 sacos',
+        'title' => 'Pellet Van Roje – Palete de 65 sacos',
 
 
         'hover_image' => '',
@@ -3728,41 +3878,43 @@ Este pellet se fabrica en Francia, por lo que, al comprarlo, está eligiendo un 
         ],
 
         'in_stock' => true, 'color' => '',
-        'short_description' => 'Pellets de madera VANROJE fabricados en un aserradero situado en Portugal, comprometido con el medio ambiente. Nuestro pellet TOP DE GAMA tiene alto poder calorífico y niveles muy bajos de cenizas, polvo y humedad. ¡Este pellet ha sido nuestro orgullo desde hace más de 10 años! Su calidad va mucho más allá de los estándares DIN Plus y EN Plus A1. La madera proviene de bosques gestionados de forma sostenible y está certificada PEFC.',
+        'short_description' => 'Pellets de madeira VANROJE fabricados em um aserradero situado em Portugal, comprometido com o ambiente. O nosso pellet TOP DE GAMA tem alto poder calorífico e níveis muito baixos de cinzas, polvo e humidade. ¡Este pellet foi o nosso orgullo desde faz mais de 10 anos! O seu qualidade vai muito mais allá dos estándares DIN Plus e EN Plus A1. A madeira proviene de bosques gestionados de forma sustentável e está certificada PEFC.',
              'ref' => '53745634',
-             'description' => 'Pellet Van Roje – Palé de 65 sacos
-Los pellets Van Roje son la opción ideal para quienes buscan una calefacción eficiente, económica y respetuosa con el medio ambiente. Este palé de 65 sacos está compuesto por pellets de madera de alta calidad, fabricados con materia prima natural y renovable. Con bajo contenido de humedad y alto poder calorífico, estos pellets ofrecen una combustión eficiente y limpia, perfectos para estufas, calderas y sistemas de calefacción por biomasa.
+             'description' => 'Pellet Van Roje – Palete de 65 sacos
+Os pellets Van Roje são a opção ideal para quem procura um aquecimento eficiente, económico e respeitador do ambiente. Este palete de 65 sacos é composto por pellets de madeira de alta qualidade, fabricados com materia prima natural e renovável. Com baixo teor de humidade e alto poder calorífico, estes pellets oferecem uma combustão eficiente e limpa, perfeitos para salamandras, caldeiras e sistemas de aquecimento a biomassa.
 Características:
 
-Cantidad: 65 sacos de pellets
+Quantidade: 65 sacos de pellets
 
-Composición: 100% madera natural y renovable
+Composição: 100% madeira natural e renovável
 
-Bajo contenido de humedad, garantizando una combustión eficiente y sin residuos
+Baixo teor de humidade, garantindo uma combustão eficiente e sem resíduos
 
-Alto poder calorífico, proporcionando calor constante y duradero
+Alto poder calorífico, proporcionando calor constante e duradouro
 
-Bajo nivel de cenizas, facilitando la limpieza y mantenimiento
+Baixo nível de cinzas, facilitando a limpeza e manutenção
 
-Ideal para estufas, calderas y sistemas de calefacción por biomasa
+Ideal para salamandras, caldeiras e sistemas de aquecimento a biomassa
 
-Beneficios:
+Benefícios:
 
-Eficiencia energética, ayudando a reducir los costes de calefacción
+Eficiência energética, ajudando a reduzir os custos de aquecimento
 
-Ecológicos y sostenibles, fabricados con madera proveniente de fuentes responsables
+Ecológicos e sustentáveis, fabricados com madeira proveniente de fontes responsáveis
 
-Fácil de almacenar y manejar, gracias a la presentación en sacos
+Fácil de armazenar e manusear, graças à apresentação em sacos
 
-Bajas emisiones de CO2, respetando el medio ambiente
+Baixas emissões de CO2, respeitando o ambiente
 
-Combustión limpia, con producción mínima de residuos y humo
+Combustão limpa, com produção mínima de resíduos e fumo
 
-Con los pellets Van Roje, podrá disfrutar de una calefacción eficiente y económica para su casa durante los meses más fríos.',
+Com os pellets Van Roje, poderá desfrutar de um aquecimento eficiente e económica para sua casa durante os meses mais frios.',
 
 
 
-        'slug' => 'pellet-van-roje-palete-de-65-sacos'
+        'slug' => 'pellet-van-roje-palete-de-65-sacos',
+        'seo_title' => 'Pellet Van Roje – Palete de 65 sacos',
+        'seo_description' => 'Pellet Van Roje – Palete de 65 sacos. Pellets de alto poder calorífico e baixa cinza. Envio grátis em Portugal Continental.'
     ],
     [
         'id' => 5636,
@@ -3780,49 +3932,51 @@ Con los pellets Van Roje, podrá disfrutar de una calefacción eficiente y econ�
 
 
         'in_stock' => true, 'color' => '',
-        'short_description' => 'Origen: 100% madera virgen. Dimensiones: 3,15 mm < Longitud < 40 mm. Cantidad: 15 kg por saco. Unidad de venta: 72 sacos por palé.
-Los pellets de madera Crépito® Pellets Premium son 100% naturales y provienen de la recuperación de coproductos de la industria de la madera. Su fabricación está garantizada sin adición de aditivos ni aglutinantes. Los pellets de madera Crépito® ofrecen un excelente rendimiento calorífico, obtenido mediante el control de calidad en tiempo real del proceso de fabricación y de las herramientas, garantizando así el máximo rendimiento de los equipos de calefacción de pellets.',
+        'short_description' => 'Origen: 100% madeira virgen. Dimensões: 3,15 mm < Comprimento < 40 mm. Quantidade: 15 kg por saco. Unidad de venta: 72 sacos por palete.
+Os pellets de madeira Crépito® Pellets Premium são 100% naturais e provienen da recuperación de coprodutos da industria da madeira. O seu fabricación está garantizada sem adición de aditivos nem aglutinantes. Os pellets de madeira Crépito® oferecem um excelente rendimento calorífico, obtenido mediante o controlo de qualidade em tiempo real do processo de fabricación e das herramientas, garantindo assim o máximo rendimento dos equipos de aquecimento de pellets.',
              'ref' => '53745636',
-             'description' => 'Pellets de Crema Premium
-Los Pellets de Crema Premium son la elección perfecta para quienes buscan una solución de calefacción de alta calidad, eficiente y ecológica. Fabricados con madera seleccionada de la mejor calidad, estos pellets tienen elevada densidad y alto poder calorífico, asegurando un rendimiento excepcional con un consumo mínimo de combustible. Su combustión limpia y eficiente minimiza las emisiones y reduce la cantidad de cenizas, facilitando el mantenimiento.
-Los Pellets de Crema Premium son ideales para salamandras, calderas y sistemas de calefacción que requieren un combustible de alta calidad para maximizar la eficiencia y prolongar la vida útil de los equipos. Gracias a su bajo contenido de humedad, ofrecen una combustión más eficiente y un calor constante durante más tiempo.
+             'description' => 'Pellets Crépito Premium
+Os Pellets Crépito Premium são a escolha perfeita para quem procura uma solução de aquecimento de alta qualidade, eficiente e ecológica. Fabricados com madeira selecionada da melhor qualidade, estes pellets têm elevada densidade e alto poder calorífico, assegurando um rendimento excecional com um consumo mínimo de combustível. O seu combustão limpa e eficiente minimiza as emissões e reduz a quantidade de cinzas, facilitando o manutenção.
+Os Pellets Crépito Premium são ideais para salamandras, caldeiras e sistemas de aquecimento que necessitam um combustível de alta qualidade para maximizar a eficiência e prolongar a vida útil dos equipos. Graças ao seu baixo teor de humidade, oferecem uma combustão mais eficiente e um calor constante durante mais tiempo.
 Características:
 
-Fabricados con madera de alta calidad, garantizando un producto natural y limpio
+Fabricados com madeira de alta qualidade, garantindo um produto natural e limpo
 
-Bajo contenido de humedad, permitiendo una combustión eficiente y alto rendimiento térmico
+Baixo teor de humidade, permitindo uma combustão eficiente e alto rendimento térmico
 
-Alto poder calorífico, asegurando calefacción constante y prolongada
+Alto poder calorífico, assegurando aquecimento constante e prolongada
 
-Bajas emisiones de CO₂ y cenizas mínimas, contribuyendo a un ambiente más limpio y mantenimiento facilitado
+Bajas emissões de CO₂ e cinzas mínimas, contribuindo para um ambiente mais limpo e manutenção facilitada
 
-Fácil almacenamiento y manejo, con sacos prácticos que facilitan el transporte y uso
+Fácil armazenamento e manuseamento, com sacos práticos que facilitan o transporte e uso
 
-Adecuados para salamandras y calderas, ideales para sistemas de calefacción doméstica y comercial
+Adecuados para salamandras e caldeiras, ideais para sistemas de aquecimento doméstica e comercial
 
-Beneficios:
+Benefícios:
 
-Eficiencia energética superior, proporcionando más calor con menos combustible
+Eficiência energética superior, proporcionando mais calor com menos combustível
 
-Bajo impacto ambiental, con emisiones reducidas y producto 100% natural
+Baixo impacto ambiental, com emissões reducidas e produto 100% natural
 
-Ahorro de combustible, gracias al alto rendimiento térmico
+Poupança de combustível, graças ao alto rendimento térmico
 
-Mayor confort térmico, con calefacción constante y duradera
+Mayor conforto térmico, com aquecimento constante e duradoura
 
-Fácil de usar y mantener, con bajo nivel de cenizas que facilita la limpieza
+Fácil de usar e manter, com baixo teor de cinzas que facilita a limpeza
 
-Ideal para salamandras y calderas, prolongando la vida útil de los equipos
+Ideal para salamandras e caldeiras, prolongando a vida útil dos equipos
 
-Los Pellets de Crema Premium son la opción perfecta para quienes buscan un producto de calidad, eficiente y respetuoso con el medio ambiente, asegurando el máximo rendimiento y una casa caliente durante todo el invierno.',
+Os Pellets Crépito Premium são a opção perfeita para quem procura um produto de qualidade, eficiente e respetuoso com o ambiente, assegurando o máximo rendimento e uma casa quente durante todo o inverno.',
 
 
 
-        'slug' => 'pellets-de-crema-premium'
+        'slug' => 'pellets-de-crema-premium',
+        'seo_title' => 'Pellets de crema premium',
+        'seo_description' => 'Pellets de crema premium. Pellets de alto poder calorífico e baixa cinza. Envio grátis em Portugal Continental.'
     ],
     [
         'id' => 5635,
-        'title' => 'Pellets de Energía Natural – Palé con 70 sacos de 15 kg',
+        'title' => 'Pellets de Energia Natural – Palete com 70 sacos de 15 kg',
 
 
         'hover_image' => '',
@@ -3836,49 +3990,51 @@ Los Pellets de Crema Premium son la opción perfecta para quienes buscan un prod
 
 
         'in_stock' => true, 'color' => '',
-        'short_description' => 'Los pellets de madera NATURAL ENERGIE cuentan con certificación DIN Plus y se fabrican en Francia, en la región de Puy-de-Dôme.
-Estos pellets se producen 100% a partir de serrín de madera blanda, proveniente de aserraderos locales.',
+        'short_description' => 'Os pellets de madeira NATURAL ENERGIE dispõem de certificação DIN Plus e se fabricam em França, na região de Puy-de-Dôme.
+Estes pellets se produzem 100% a partir de serrín de madeira macia, proveniente de serrações locais.',
              'ref' => '53745635',
-             'description' => 'Pellets de Energía Natural – Palé con 70 sacos de 15 kg
-Los Pellets de Energía Natural son una opción ideal para quienes buscan una solución ecológica y eficiente para la calefacción de su casa o negocio. Fabricados con madera de alta calidad, estos pellets son 100% naturales, sin aditivos ni productos químicos, lo que los convierte en una alternativa respetuosa con el medio ambiente y económicamente ventajosa.
-Cada palé con 70 sacos de 15 kg garantiza una gran cantidad de pellets, proporcionando una fuente de calor constante y prolongada para mantener su espacio caliente durante los meses más fríos. Con un alto poder calorífico y una combustión limpia, estos pellets aseguran una baja emisión de CO₂ y un rendimiento energético eficiente.
+             'description' => 'Pellets de Energia Natural – Palete com 70 sacos de 15 kg
+Os Pellets de Energia Natural são uma opção ideal para quem procura uma solução ecológica e eficiente para a aquecimento da sua casa o negócio. Fabricados com madeira de alta qualidade, estes pellets são 100% naturais, sem aditivos nem produtos químicos, o que os converte em uma alternativa respeitadora do ambiente e económicamente ventajosa.
+Cada palete com 70 sacos de 15 kg garante uma grande quantidade de pellets, proporcionando uma fuente de calor constante e prolongada para manter o seu espaço quente durante os meses mais frios. Com um alto poder calorífico e uma combustão limpa, estes pellets asseguram uma baixa emisión de CO₂ e um rendimento energético eficiente.
 Características:
 
-Composición 100% natural, fabricados exclusivamente con madera, sin aditivos ni productos químicos
+Composição 100% natural, fabricados exclusivamente com madeira, sem aditivos nem produtos químicos
 
-Alta densidad y elevado poder calorífico, garantizando calefacción rápida y eficiente
+Alta densidade e elevado poder calorífico, garantindo aquecimento rápida e eficiente
 
-Bajas emisiones de CO₂, contribuyendo a un ambiente más limpio y sostenible
+Bajas emissões de CO₂, contribuindo para um ambiente mais limpo e sustentável
 
-Fácil de almacenar y manejar, con embalaje práctico en sacos de 15 kg
+Fácil de armazenar e manusear, com embalagem prático em sacos de 15 kg
 
-Palé con 70 sacos, ideal para casas o negocios que necesitan gran cantidad de combustible
+Palete com 70 sacos, ideal para casas o negócios que necessitam gran quantidade de combustível
 
-Larga duración y alto rendimiento, asegurando calor constante durante períodos prolongados
+Larga duração e alto rendimento, assegurando calor constante durante períodos prolongados
 
-Beneficios:
+Benefícios:
 
-Ecológicos y sostenibles, producidos con materiales renovables y respetuosos con el medio ambiente
+Ecológicos e sustentáveis, produzidos com materiais renováveis e respetuosos com o ambiente
 
-Alta eficiencia energética, aprovechando al máximo cada saco y reduciendo el consumo
+Alta eficiência energética, aproveitando ao máximo cada saco e reduzindo o consumo
 
-Fáciles de almacenar y usar, con sacos bien embalados y de fácil manejo
+Fáciles de armazenar e usar, com sacos bem embalados e de fácil manuseamento
 
-Menos residuos y limpieza facilitada, gracias al bajo contenido de cenizas tras la combustión
+Menos resíduos e limpeza facilitada, graças ao baixo conteúdo de cinzas tras a combustão
 
-Rendimiento constante, garantizando una calefacción eficaz durante todo el invierno
+Rendimento constante, garantindo um aquecimento eficaz durante todo o inverno
 
-Prácticos y económicos, con opción de compra a granel que cubre las necesidades de calefacción durante un largo período
+Práticos e económicos, com opção de compra a granel que cubre as necessidades de aquecimento durante um largo período
 
-Los Pellets de Energía Natural son la elección perfecta para quienes buscan una alternativa de calefacción limpia, eficiente y económica, manteniendo su casa caliente y respetando el medio ambiente.',
+Os Pellets de Energia Natural são a escolha perfeita para quem procura uma alternativa de aquecimento limpa, eficiente e económica, mantendo a sua casa quente e respeitando o ambiente.',
 
 
 
-        'slug' => 'pellets-de-energia-natural-palete-com-70-sacos-de-15-kg'
+        'slug' => 'pellets-de-energia-natural-palete-com-70-sacos-de-15-kg',
+        'seo_title' => 'Pellets de Energia Natural – Palete com 70 sacos de 15 kg',
+        'seo_description' => 'Pellets de Energia Natural – Palete com 70 sacos de 15 kg. Pellets de alto poder calorífico e baixa cinza. Envio grátis em Portugal Continental.'
     ],
     [
         'id' => 5803,
-        'title' => 'PELLETS EXCELLENT PELLETS – PALÉ DE 65 SACOS DE 15 KG',
+        'title' => 'PELLETS EXCELLENT PELLETS – PALETE DE 65 SACOS DE 15 KG',
 
 
         'hover_image' => '',
@@ -3892,22 +4048,24 @@ Los Pellets de Energía Natural son la elección perfecta para quienes buscan un
 
 
         'in_stock' => true, 'color' => '',
-        'short_description' => 'Pellets de madera EXCELLENT PELLETS, certificados DIN Plus y EN Plus A1.
-Fabricado en Bélgica, un producto local, 100% madera blanda y natural.',
+        'short_description' => 'Pellets de madeira EXCELLENT PELLETS, certificados DIN Plus e EN Plus A1.
+Fabricado em Bélgica, um produto local, 100% madeira macia e natural.',
              'ref' => '53745803',
-             'description' => 'Se fabrican en un aserradero de grandes dimensiones, donde el serrín se utiliza directamente en el lugar para fabricar los pellets. El uso del serrín en circuito corto permite que se mantenga muy fresco.
-Estas materias primas se secan luego a baja temperatura (secador de banda). Este control de las materias primas resulta en un bajo contenido de cenizas y una elevada temperatura de deformación de las cenizas (evita la formación de escoria).
-La elevada dureza de los pellets debido al prensado de alta densidad, el bajo contenido de humedad y, por último, el tamizado realizado antes del llenado de cada saco hacen que el contenido de polvo a la salida de la fábrica sea muy bajo.
-Superan las normas de calidad más exigentes DIN Plus o EN Plus.
-Son ideales para todos los sistemas de calefacción de pellets de madera.',
+             'description' => 'Se fabricam em um aserradero de grandes dimensões, ondo serrín se utiliza directamente no local para fabricar os pellets. O uso do serrín em circuito corto permite que se mantenha muito fresco.
+Estas matérias-primas se secan depois a baixa temperatura (secador de banda). Este controlo das matérias-primas resulta em um baixo conteúdo de cinzas e uma elevada temperatura de deformación das cinzas (evita a formación de escoria).
+A elevada dureza dos pellets devido ao prensado de alta densidade, o baixo teor de humidade e, por último, o tamizado realizado antes do llenado de cada saco hacen que o conteúdo de polvo à salida da fábrica sea muito baixo.
+Superan as normas de qualidade mais exigentes DIN Plus o EN Plus.
+Son ideais para todos os sistemas de aquecimento de pellets de madeira.',
 
 
 
-        'slug' => 'pellets-excelentes-pellets-palete-de-65-sacos-de-15-kg'
+        'slug' => 'pellets-excelentes-pellets-palete-de-65-sacos-de-15-kg',
+        'seo_title' => 'PELLETS EXCELLENT PELLETS – PALETE DE 65 SACOS DE 15 KG',
+        'seo_description' => 'PELLETS EXCELLENT PELLETS – PALETE DE 65 SACOS DE 15 KG. Pellets de alto poder calorífico e baixa cinza. Envio grátis em Portugal Continental.'
     ],
     [
         'id' => 5798,
-        'title' => 'PELLETS NATURKRAFT – PALÉ DE 33 SACOS DE 15 KG',
+        'title' => 'PELLETS NATURKRAFT – PALETE DE 33 SACOS DE 15 KG',
 
 
         'hover_image' => '',
@@ -3921,19 +4079,21 @@ Son ideales para todos los sistemas de calefacción de pellets de madera.',
 
 
         'in_stock' => true, 'color' => '',
-        'short_description' => 'Pellets de madera NATURKRAFT, embalados en medios palés, certificados DIN Plus y EN Plus A1.
-Estos pellets se fabrican a partir de 100% madera blanda.',
+        'short_description' => 'Pellets de madeira NATURKRAFT, embalados em medios paletes, certificados DIN Plus e EN Plus A1.
+Estes pellets se fabricam a partir de 100% madeira macia.',
              'ref' => '53745798',
-             'description' => 'Este pellet es adecuado para todos los tipos de salamandras y calderas de pellets.
-Sus características técnicas permiten reducir la frecuencia de limpieza de la salamandra y no obstruyen el cristal, haciendo su uso más agradable.',
+             'description' => 'Este pellet é adequado para todos os tipos de salamandras e caldeiras de pellets.
+Os seus características técnicas permitem reduzir a frequência de limpeza da salamandra e no obstruem o cristal, haciendo seu uso mais agradável.',
 
 
 
-        'slug' => 'pellets-naturkraft-palete-de-33-sacos-de-15-kg'
+        'slug' => 'pellets-naturkraft-palete-de-33-sacos-de-15-kg',
+        'seo_title' => 'PELLETS NATURKRAFT – PALETE DE 33 SACOS DE 15 KG',
+        'seo_description' => 'PELLETS NATURKRAFT – PALETE DE 33 SACOS DE 15 KG. Pellets de alto poder calorífico e baixa cinza. Envio grátis em Portugal Continental.'
     ],
     [
         'id' => 5800,
-        'title' => 'PELLETS NATURKRAFT – PALÉ DE 66 SACOS DE 15 KG',
+        'title' => 'PELLETS NATURKRAFT – PALETE DE 66 SACOS DE 15 KG',
 
 
         'hover_image' => '',
@@ -3947,22 +4107,24 @@ Sus características técnicas permiten reducir la frecuencia de limpieza de la 
 
 
         'in_stock' => true, 'color' => '',
-        'short_description' => 'Pellets de madera NATURKRAFT, certificados DIN Plus y EN Plus A1.
-Estos pellets son 100% de madera blanda y de calidad muy elevada.',
+        'short_description' => 'Pellets de madeira NATURKRAFT, certificados DIN Plus e EN Plus A1.
+Estes pellets são 100% de madeira macia e de qualidade muito elevada.',
              'ref' => '53745800',
-             'description' => 'Los pellets NATURKRAFT son un producto de alta calidad, con doble certificación DIN Plus (norma alemana) y EN Plus (norma europea).
-Al elegir los pellets DIN Plus y EN Plus A1, puede tener la certeza de que está comprando un pellet que cumple con las rigurosas normas de fabricación y almacenamiento de combustible.
-La certificación EN Plus A1 responde a los mismos criterios que la DIN Plus, en cuanto a contenido de humedad (inferior al 10%), contenido de cenizas (inferior al 0,7%), densidad y longitud (inferior a 40 mm).
-Este granulado de madera es adecuado para todos los tipos de salamandras.
-Sus características técnicas permiten reducir la frecuencia de limpieza de la salamandra y no obstruyen el cristal.',
+             'description' => 'Os pellets NATURKRAFT são um produto de alta qualidade, com doble certificación DIN Plus (norma alemana) e EN Plus (norma europeia).
+Al elegir os pellets DIN Plus e EN Plus A1, pode tener a certeza de que está comprando um pellet que cumpre com as rigurosas normas de fabricación e armazenamento de combustível.
+A certificación EN Plus A1 responde aos mesmos criterios que a DIN Plus, em cuanto a teor de humidade (inferior a 10%), conteúdo de cinzas (inferior a 0,7%), densidade e comprimento (inferior a 40 mm).
+Este granulado de madeira é adequado para todos os tipos de salamandras.
+Os seus características técnicas permitem reduzir a frequência de limpeza da salamandra e no obstruem o cristal.',
 
 
 
-        'slug' => 'pellets-naturkraft-palete-de-66-sacos-de-15-kg'
+        'slug' => 'pellets-naturkraft-palete-de-66-sacos-de-15-kg',
+        'seo_title' => 'PELLETS NATURKRAFT – PALETE DE 66 SACOS DE 15 KG',
+        'seo_description' => 'PELLETS NATURKRAFT – PALETE DE 66 SACOS DE 15 KG. Pellets de alto poder calorífico e baixa cinza. Envio grátis em Portugal Continental.'
     ],
     [
         'id' => 5632,
-        'title' => 'Starforest Pellet – Palé de 70 sacos de 15 kg',
+        'title' => 'Starforest Pellet – Palete de 70 sacos de 15 kg',
 
 
         'hover_image' => '',
@@ -3976,45 +4138,47 @@ Sus características técnicas permiten reducir la frecuencia de limpieza de la 
 
 
         'in_stock' => true, 'color' => '',
-        'short_description' => 'Los pellets de madera STARFOREST están certificados por la norma DIN Plus y fabricados con 100% madera blanda. Se producen en la región de Champagne Ardenne y presentan un excelente poder calorífico.',
+        'short_description' => 'Os pellets de madeira STARFOREST são certificados pela norma DIN Plus e fabricados com 100% madeira macia. Se produzem na região de Champagne Ardenne e presentan um excelente poder calorífico.',
              'ref' => '53745632',
-             'description' => 'Starforest Pellet – Palé con 70 sacos de 15 kg
-Los Pellets Starforest son la solución perfecta para una calefacción eficiente y ecológica. Este palé contiene 70 sacos de 15 kg cada uno, proporcionando una cantidad ideal para mantener su casa caliente durante un largo período. Producidos a partir de madera de alta calidad, estos pellets ofrecen una combustión limpia, eficiente y respetuosa con el medio ambiente, con alto poder calorífico y bajo contenido de cenizas.
+             'description' => 'Starforest Pellet – Palete com 70 sacos de 15 kg
+Os Pellets Starforest são a solução perfeita para um aquecimento eficiente e ecológica. Este palete contém 70 sacos de 15 kg cada um, proporcionando uma quantidade ideal para manter a sua casa quente durante um largo período. Produzidos a partir de madeira de alta qualidade, estes pellets oferecem uma combustão limpa, eficiente e respeitadora do ambiente, com alto poder calorífico e baixo conteúdo de cinzas.
 Características:
 
-Cantidad: 70 sacos de 15 kg por palé
+Quantidade: 70 sacos de 15 kg por palete
 
-Composición: 100% madera natural de fuentes renovables
+Composição: 100% madeira natural de fuentes renováveis
 
-Bajo contenido de humedad, garantizando una combustión más eficiente
+Baixo teor de humidade, garantindo uma combustão mais eficiente
 
-Alto poder calorífico, para un calor duradero y constante
+Alto poder calorífico, para um calor duradouro e constante
 
-Bajo nivel de cenizas, facilitando el mantenimiento y la limpieza
+Baixo nível de cinzas, facilitando o manutenção e a limpeza
 
-Fácil almacenamiento gracias a la presentación en sacos compactos
+Fácil armazenamento graças à apresentação em sacos compactos
 
-Beneficios:
+Benefícios:
 
-Eficiencia energética para reducir los costes de calefacción
+Eficiência energética para reduzir os custos de aquecimento
 
-Ecológicos y sostenibles, producidos con madera de origen responsable
+Ecológicos e sustentáveis, produzidos com madeira de origen responsable
 
-Bajas emisiones de CO₂, contribuyendo a la protección del medio ambiente
+Bajas emissões de CO₂, contribuindo para a proteção do ambiente
 
-Ideal para estufas y calderas de biomasa
+Ideal para salamandras e caldeiras de biomassa
 
-Fácil manejo y almacenamiento con el palé de 70 sacos
+Fácil manuseamento e armazenamento com o palete de 70 sacos
 
-Con el Starforest Pellet, podrá disfrutar de una calefacción de alto rendimiento, manteniendo su casa caliente y acogedora mientras contribuye a la sostenibilidad.',
+Com o Starforest Pellet, poderá desfrutar de um aquecimento de alto rendimento, mantendo a sua casa quente e acolhedora enquanto contribui para a sostenibilidad.',
 
 
 
-        'slug' => 'starforest-pellet-palete-de-70-sacos-de-15-kg'
+        'slug' => 'starforest-pellet-palete-de-70-sacos-de-15-kg',
+        'seo_title' => 'Starforest Pellet – Palete de 70 sacos de 15 kg',
+        'seo_description' => 'Starforest Pellet – Palete de 70 sacos de 15 kg. Pellets de alto poder calorífico e baixa cinza. Envio grátis em Portugal Continental.'
     ],
     [
         'id' => 5618,
-        'title' => 'Troncos 50 cm: 4 palés – 2 de Roble Blanco + 2 de Haya/Carpe',
+        'title' => 'Troncos 50 cm: 4 paletes – 2 de Carvalho Branco + 2 de Faia/Carpinho',
 
 
         'hover_image' => '',
@@ -4028,43 +4192,45 @@ Con el Starforest Pellet, podrá disfrutar de una calefacción de alto rendimien
 
 
         'in_stock' => true, 'color' => '',
-        'short_description' => 'Entrega en cualquier lugar de Portugal en 3 a 5 días. Especies: Roble Blanco, Haya, Carpe. Origen: 100% madera francesa. Longitud: 50 cm. Cantidad: 12 esteros. Unidad de venta: 4 palés.',
+        'short_description' => 'Entrega em qualquer local de Portugal em 3 a 5 dias. Especies: Carvalho Branco, Faia, Carpinho. Origen: 100% madeira francesa. Comprimento: 50 cm. Quantidade: 12 esteres. Unidad de venta: 4 paletes.',
              'ref' => '53745618',
-             'description' => 'Troncos 50 cm: 4 Palés – 2 Roble Blanco + 2 Haya/Carpe
-Este palé de troncos de 50 cm es la opción perfecta para quienes buscan leña de alta calidad, ideal para salamandras, chimeneas y calderas. El palé incluye 4 palés con una mezcla de 2 palés de Roble Blanco y 2 palés de Haya/Carpe, dos maderas conocidas por su elevada densidad y combustión eficiente y duradera. Con troncos de 50 cm de longitud, este producto está preparado para ofrecer un calor prolongado y constante durante todo el invierno.
+             'description' => 'Troncos 50 cm: 4 Paletes – 2 Carvalho Branco + 2 Faia/Carpinho
+Este palete de troncos de 50 cm é a opção perfeita para quem procura lenha de alta qualidade, ideal para salamandras, lareiras e caldeiras. O palete incluye 4 paletes com uma mistura de 2 paletes de Carvalho Branco e 2 paletes de Faia/Carpinho, dos madeiras conhecidas por o seu elevada densidade e combustão eficiente e duradoura. Com troncos de 50 cm de comprimento, este produto está preparado para oferecer um calor prolongado e constante durante todo o inverno.
 Características:
 
-Cantidad: 4 palés (2 de Roble Blanco + 2 de Haya/Carpe)
+Quantidade: 4 paletes (2 de Carvalho Branco + 2 de Faia/Carpinho)
 
-Tamaño de los troncos: 50 cm de longitud, ideal para salamandras y chimeneas
+Tamanho dos troncos: 50 cm de comprimento, ideal para salamandras e lareiras
 
-Maderas: Mezcla de Roble Blanco y Haya/Carpe, conocidas por su alta densidad y calor duradero
+Madeiras: Mistura de Carvalho Branco e Faia/Carpinho, conhecidas por o seu alta densidade e calor duradouro
 
-Secado natural para una combustión más limpia y eficiente
+Secado natural para uma combustão mais limpa e eficiente
 
-Fácil de almacenar en palés compactos
+Fácil de armazenar em paletes compactos
 
-Beneficios:
+Benefícios:
 
-Elevado poder calorífico gracias a las maderas de alta densidad
+Elevado poder calorífico graças às madeiras de alta densidade
 
-Bajo contenido de humedad, garantizando una combustión eficiente y baja emisión de humo
+Baixo teor de humidade, garantindo uma combustão eficiente e baixa emisión de fumo
 
-Durabilidad y rendimiento prolongado, proporcionando calor constante durante más tiempo
+Durabilidade e rendimento prolongado, proporcionando calor constante durante mais tiempo
 
-Ideal para chimeneas, salamandras y calderas de leña
+Ideal para lareiras, salamandras e caldeiras de lenha
 
-Ecológica y natural, sin aditivos ni químicos
+Ecológica e natural, sem aditivos nem químicos
 
-Con los Troncos 50 cm: 4 Palés de Roble Blanco y Haya/Carpe, disfrutará de un ambiente cálido y acogedor mientras aprovecha el mejor rendimiento de la leña natural.',
+Com os Troncos 50 cm: 4 Paletes de Carvalho Branco e Faia/Carpinho, desfrutará de um ambiente quente e acolhedor enquanto aproveita o melhor rendimento da lenha natural.',
 
 
 
-        'slug' => 'toros-50-cm-4-paletes-2-de-carvalho-branco-2-de-faia-carpinho'
+        'slug' => 'toros-50-cm-4-paletes-2-de-carvalho-branco-2-de-faia-carpinho',
+        'seo_title' => 'Troncos 50 cm: 4 paletes – 2 de Carvalho Branco + 2 de Faia/Carpinho',
+        'seo_description' => 'Troncos 50 cm: 4 paletes – 2 de Carvalho Branco + 2 de Faia/Carpinho. Lenha seca pronta a queimar, entregue em palete. Envio grátis em Portugal Continental.'
     ],
     [
         'id' => 5620,
-        'title' => 'Troncos de Roble Blanco – 50 cm (2 Esteros)',
+        'title' => 'Troncos de Carvalho Branco – 50 cm (2 Esteres)',
 
 
         'hover_image' => '',
@@ -4078,43 +4244,45 @@ Con los Troncos 50 cm: 4 Palés de Roble Blanco y Haya/Carpe, disfrutará de un 
 
 
         'in_stock' => true, 'color' => '',
-        'short_description' => 'Entrega en cualquier lugar de Portugal en 3 a 5 días. Especie: Roble Blanco. Origen: 100% madera francesa. Longitud: 50 cm. Cantidad: 1,32 m³ por palé (2 esteros).',
+        'short_description' => 'Entrega em qualquer local de Portugal em 3 a 5 dias. Especie: Carvalho Branco. Origen: 100% madeira francesa. Comprimento: 50 cm. Quantidade: 1,32 m³ por palete (2 esteres).',
              'ref' => '53745620',
-             'description' => 'Troncos de Roble Blanco – 50 cm (2 Esteros)
-Los Troncos de Roble Blanco de 50 cm son ideales para quienes buscan leña de alta calidad para calefacción. Con una longitud de 50 cm y una cantidad de 2 esteros, estos troncos se seleccionan cuidadosamente para ofrecer una combustión eficiente, prolongada y con baja producción de humo. El roble blanco es una madera densa que proporciona calor constante y duradero, siendo perfecto para salamandras, chimeneas y calderas de leña.
+             'description' => 'Troncos de Carvalho Branco – 50 cm (2 Esteres)
+Os Troncos de Carvalho Branco de 50 cm são ideais para quem procura lenha de alta qualidade para aquecimento. Com uma comprimento de 50 cm e uma quantidade de 2 esteres, estes troncos se seleccionan cuidadosamente para oferecer uma combustão eficiente, prolongada e com baixa produção de fumo. O carvalho branco é uma madeira densa que proporciona calor constante e duradouro, siendo perfeito para salamandras, lareiras e caldeiras a lenha.
 Características:
 
-Tamaño: Troncos con 50 cm de longitud
+Tamanho: Troncos com 50 cm de comprimento
 
-Madera: Roble Blanco, conocido por su alta densidad y elevado poder calorífico
+Madeira: Carvalho Branco, conocido por o seu alta densidade e elevado poder calorífico
 
-Cantidad: 2 esteros, garantizando un rendimiento eficiente y de calidad
+Quantidade: 2 esteres, garantindo um rendimento eficiente e de qualidade
 
-Secado natural, asegurando una combustión limpia y baja emisión de humo
+Secado natural, assegurando uma combustão limpa e baixa emisión de fumo
 
-Ideal para salamandras, chimeneas y calderas de leña
+Ideal para salamandras, lareiras e caldeiras a lenha
 
-Beneficios:
+Benefícios:
 
-Elevado poder calorífico debido a la densidad del roble blanco
+Elevado poder calorífico devido à densidade do carvalho branco
 
-Bajo contenido de humedad, garantizando combustión eficiente y calor duradero
+Baixo teor de humidade, garantindo combustão eficiente e calor duradouro
 
-Bajas emisiones y producción mínima de residuos, ideal para un ambiente limpio
+Baixas emissões e produção mínima de resíduos, ideal para um ambiente limpo
 
-Durabilidad y rendimiento prolongado en la calefacción
+Durabilidade e rendimento prolongado na aquecimento
 
-Fácil de almacenar y manejar, con troncos listos para usar
+Fácil de armazenar e manusear, com troncos listos para usar
 
-Con los Troncos de Roble Blanco de 50 cm (2 esteros), tendrá una fuente de calor natural, ecológica y económica para mantener su casa caliente durante los meses fríos.',
+Com os Troncos de Carvalho Branco de 50 cm (2 esteres), terá uma fuente de calor natural, ecológica e económica para manter a sua casa quente durante os meses frios.',
 
 
 
-        'slug' => 'toros-de-carvalho-branco-50-cm-2-esteres'
+        'slug' => 'toros-de-carvalho-branco-50-cm-2-esteres',
+        'seo_title' => 'Troncos de Carvalho Branco – 50 cm (2 Esteres)',
+        'seo_description' => 'Troncos de Carvalho Branco – 50 cm (2 Esteres). Lenha seca pronta a queimar, entregue em palete. Envio grátis em Portugal Continental.'
     ],
     [
         'id' => 5619,
-        'title' => 'Troncos de 50 cm: 2 palés: 1 de roble blanco + 1 de haya/carpe',
+        'title' => 'Troncos de 50 cm: 2 paletes: 1 de carvalho branco + 1 de faia/carpinho',
 
 
         'hover_image' => '',
@@ -4128,43 +4296,45 @@ Con los Troncos de Roble Blanco de 50 cm (2 esteros), tendrá una fuente de calo
 
 
         'in_stock' => true, 'color' => '',
-        'short_description' => 'Entrega en cualquier lugar de Portugal en 3 a 5 días. Especies: roble blanco, haya, carpe. Origen: 100% madera portuguesa. Longitud: 50 cm. Cantidad: 6 ESTEROS (4,80 m³). Unidad de venta: 2 palés.',
+        'short_description' => 'Entrega em qualquer local de Portugal em 3 a 5 dias. Especies: carvalho branco, faia, carpinho. Origen: 100% madeira portuguesa. Comprimento: 50 cm. Quantidade: 6 ESTERES (4,80 m³). Unidad de venta: 2 paletes.',
              'ref' => '53745619',
-             'description' => 'Troncos de 50 cm: 2 Palés – 1 de Roble Blanco + 1 de Haya/Carpe
-Este conjunto de troncos de 50 cm incluye 2 palés de leña seleccionada, perfecta para mantener su casa caliente durante el invierno. Cada conjunto contiene 1 palé de roble blanco y 1 palé de haya/carpe, dos tipos de madera de alta calidad que ofrecen excelente rendimiento térmico. El roble blanco es conocido por su alto poder calorífico y larga duración, mientras que la haya y el carpe proporcionan una quema rápida y eficiente.
+             'description' => 'Troncos de 50 cm: 2 Paletes – 1 de Carvalho Branco + 1 de Faia/Carpinho
+Este conjunto de troncos de 50 cm incluye 2 paletes de lenha selecionada, perfeita para manter a sua casa quente durante o inverno. Cada conjuntamente contém 1 palete de carvalho branco e 1 palete de faia/carpinho, dos tipos de madeira de alta qualidade que oferecem excelente rendimento térmico. O carvalho branco é conocido por o seu alto poder calorífico e larga duração, enquanto que a faia e o carpinho proporcionam uma queima rápida e eficiente.
 Características:
 
-Tamaño de los troncos: 50 cm de longitud
+Tamanho dos troncos: 50 cm de comprimento
 
-Composición: 1 palé de roble blanco y 1 palé de haya/carpe
+Composição: 1 palete de carvalho branco e 1 palete de faia/carpinho
 
-Secado natural, garantizando una quema eficiente y limpia
+Secado natural, garantindo uma queima eficiente e limpa
 
-Ideal para estufas, chimeneas y calderas de leña
+Ideal para salamandras, lareiras e caldeiras de lenha
 
-Presentación en palé, facilitando el almacenamiento y manejo
+Apresentação em palete, facilitando o armazenamento e manuseamento
 
-Beneficios:
+Benefícios:
 
-Alto poder calorífico, garantizando calor duradero y constante
+Alto poder calorífico, garantindo calor duradouro e constante
 
-Bajo contenido de humedad, optimizando la combustión y reduciendo el humo
+Baixo teor de humidade, optimizando a combustão e reduzindo o fumo
 
-Ecológica y natural, sin productos químicos ni aditivos
+Ecológica e natural, sem produtos químicos nem aditivos
 
-Fácil de manejar y adecuada para diversos sistemas de calefacción
+Fácil de manusear e adequada para diversos sistemas de aquecimento
 
-Combinación de maderas de alta calidad, ofreciendo rendimiento óptimo para diferentes necesidades de calefacción
+Combinación de madeiras de alta qualidade, oferecendo rendimento ótimo para diferentes necessidades de aquecimento
 
-Con los troncos de 50 cm, podrá disfrutar de una fuente de calor eficiente y económica, perfecta para mantener su hogar caliente y confortable.',
+Com os troncos de 50 cm, poderá desfrutar de uma fuente de calor eficiente e económica, perfeita para manter a sua casa quente e confortável.',
 
 
 
-        'slug' => 'troncos-de-50-cm-2-paletes-1-de-carvalho-branco-1-de-faia-carpinheiro'
+        'slug' => 'troncos-de-50-cm-2-paletes-1-de-carvalho-branco-1-de-faia-carpinheiro',
+        'seo_title' => 'Troncos de 50 cm: 2 paletes: 1 de carvalho branco + 1 de faia/carpinho',
+        'seo_description' => 'Troncos de 50 cm: 2 paletes: 1 de carvalho branco + 1 de faia/carpinho. Lenha seca pronta a queimar, entregue em palete. Envio grátis em Portugal Continental.'
     ],
     [
         'id' => 5642,
-        'title' => 'Vimasol Pellet – Palé de 72 sacos',
+        'title' => 'Vimasol Pellet – Palete de 72 sacos',
 
 
         'hover_image' => 'wp-content/uploads/2025/10/image_1_720x_1_f6c2331e-6d81-4428-9f68-1cd87a681361-480x480.webp',
@@ -4179,45 +4349,47 @@ Con los troncos de 50 cm, podrá disfrutar de una fuente de calor eficiente y ec
         ],
 
         'in_stock' => true, 'color' => '',
-        'short_description' => 'Los pellets Vimasol son una opción eficiente, limpia y económica para calefacción. Este paquete contiene 72 sacos de pellets de alta calidad, fabricados con madera 100% natural y renovable. Gracias a su bajo contenido de humedad y alto poder calorífico, estos pellets garantizan una combustión limpia y eficiente, ideal para estufas, calderas y sistemas de calefacción por biomasa.',
+        'short_description' => 'Os pellets Vimasol são uma opção eficiente, limpa e económica para aquecimento. Este paquete contém 72 sacos de pellets de alta qualidade, fabricados com madeira 100% natural e renovável. Graças ao seu baixo teor de humidade e alto poder calorífico, estes pellets garantem uma combustão limpa e eficiente, ideal para salamandras, caldeiras e sistemas de aquecimento a biomassa.',
              'ref' => '53745642',
              'description' => 'Vimasol Pellet – 72 sacos
-Los pellets Vimasol son una opción eficiente, limpia y económica para calefacción. Este paquete contiene 72 sacos de pellets de alta calidad, fabricados con madera 100% natural y renovable. Gracias a su bajo contenido de humedad y alto poder calorífico, estos pellets garantizan una combustión limpia y eficiente, ideal para estufas, calderas y sistemas de calefacción por biomasa.
+Os pellets Vimasol são uma opção eficiente, limpa e económica para aquecimento. Este paquete contém 72 sacos de pellets de alta qualidade, fabricados com madeira 100% natural e renovável. Graças ao seu baixo teor de humidade e alto poder calorífico, estes pellets garantem uma combustão limpa e eficiente, ideal para salamandras, caldeiras e sistemas de aquecimento a biomassa.
 Características:
 
-Cantidad: 72 sacos de pellets
+Quantidade: 72 sacos de pellets
 
-Composición: 100% madera natural y renovable
+Composição: 100% madeira natural e renovável
 
-Bajo contenido de humedad, garantizando una combustión eficiente y sin residuos
+Baixo teor de humidade, garantindo uma combustão eficiente e sem resíduos
 
-Alto poder calorífico, proporcionando calor constante y duradero
+Alto poder calorífico, proporcionando calor constante e duradouro
 
-Bajo nivel de cenizas, facilitando la limpieza y mantenimiento
+Baixo nível de cinzas, facilitando a limpeza e manutenção
 
-Ideal para estufas, calderas y sistemas de calefacción por biomasa
+Ideal para salamandras, caldeiras e sistemas de aquecimento a biomassa
 
-Beneficios:
+Benefícios:
 
-Eficiencia energética, ayudando a reducir los costes de calefacción
+Eficiência energética, ajudando a reduzir os custos de aquecimento
 
-Ecológicos y sostenibles, fabricados con madera proveniente de fuentes responsables
+Ecológicos e sustentáveis, fabricados com madeira proveniente de fontes responsáveis
 
-Fácil almacenamiento y manejo, gracias a la presentación en sacos
+Fácil armazenamento e manuseamento, graças à apresentação em sacos
 
-Bajas emisiones de CO2, respetando el medio ambiente
+Baixas emissões de CO2, respeitando o ambiente
 
-Combustión limpia, con producción mínima de residuos y humo
+Combustão limpa, com produção mínima de resíduos e fumo
 
-Con los pellets Vimasol, podrá disfrutar de una calefacción eficiente y económica, ideal para mantener su casa caliente durante todo el invierno.',
+Com os pellets Vimasol, poderá desfrutar de um aquecimento eficiente e económica, ideal para manter a sua casa quente durante todo o inverno.',
 
 
 
-        'slug' => 'vimasol-pellet-palete-de-72-sacos'
+        'slug' => 'vimasol-pellet-palete-de-72-sacos',
+        'seo_title' => 'Vimasol Pellet – Palete de 72 sacos',
+        'seo_description' => 'Vimasol Pellet – Palete de 72 sacos. Pellets de alto poder calorífico e baixa cinza. Envio grátis em Portugal Continental.'
     ],
     [
         'id' => 5621,
-        'title' => 'WOODSTOCK Calidad Premium – Palé con 78 sacos de 15 kg',
+        'title' => 'WOODSTOCK Qualidade Premium – Palete com 78 sacos de 15 kg',
 
 
         'hover_image' => '',
@@ -4232,41 +4404,43 @@ Con los pellets Vimasol, podrá disfrutar de una calefacción eficiente y econó
 
 
         'in_stock' => true, 'color' => '',
-        'short_description' => 'Entrega en cualquier lugar de Portugal en 3 a 5 días.
-Estos pellets se fabrican en Francia y no contienen ningún elemento o sustancia química. El pellet mide 20 mm de longitud y 6 mm de diámetro, medidas bastante adecuadas. De hecho, un pellet suele medir entre 15 y 20 mm, con un diámetro máximo de 8 mm. Estos pellets WOODSTOCK de primera calidad se entregan en palés con 78 sacos. Cada saco pesa 15 kg. Este producto es adecuado para todos los aparatos de leña destinados a pellets (insert, salamandra o caldera).',
+        'short_description' => 'Entrega em qualquer local de Portugal em 3 a 5 dias.
+Estes pellets se fabricam em França e no contienen nenhum elemento o sustancia química. O pellet mide 20 mm de comprimento e 6 mm de diâmetro, medidas bastante adecuadas. De feito, um pellet suele medir entre 15 e 20 mm, com um diâmetro máximo de 8 mm. Estes pellets WOODSTOCK de primera qualidade se entregan em paletes com 78 sacos. Cada saco pesa 15 kg. Este produto é adequado para todos os aparelhos de lenha destinados a pellets (insert, salamandra o caldeira).',
              'ref' => '53745621',
-             'description' => 'WOODSTOCK Calidad Premium – Palé con 78 sacos de 15 kg
-Los pellets WOODSTOCK Calidad Premium son la opción ideal para quienes buscan una calefacción eficiente y ecológica. Este palé con 78 sacos de 15 kg ofrece la cantidad perfecta para mantener su casa caliente durante los meses más fríos. Fabricados con madera de la más alta calidad, estos pellets presentan bajo contenido de humedad, garantizando una combustión eficiente y limpia. Además, su elevado poder calorífico los convierte en una opción económica y sostenible para su salamandra o caldera de biomasa.
+             'description' => 'WOODSTOCK Qualidade Premium – Palete com 78 sacos de 15 kg
+Os pellets WOODSTOCK Qualidade Premium são a opção ideal para quem procura um aquecimento eficiente e ecológica. Este palete com 78 sacos de 15 kg oferece a quantidade perfeita para manter a sua casa quente durante os meses mais frios. Fabricados com madeira da mais alta qualidade, estes pellets presentan baixo teor de humidade, garantindo uma combustão eficiente e limpa. Além disso, o seu elevado poder calorífico os converte em uma opção económica e sustentável parao seu salamandra o caldeira de biomassa.
 Características:
 
-Cantidad: 78 sacos de 15 kg por palé
+Quantidade: 78 sacos de 15 kg por palete
 
-Composición: 100% madera natural y renovable
+Composição: 100% madeira natural e renovável
 
-Bajo contenido de humedad, garantizando una combustión más eficiente
+Baixo teor de humidade, garantindo uma combustão mais eficiente
 
-Alto poder calorífico, para un calor duradero y constante
+Alto poder calorífico, para um calor duradouro e constante
 
-Bajo nivel de cenizas, facilitando la limpieza
+Baixo nível de cinzas, facilitando a limpeza
 
-Ideal para salamandras y calderas de biomasa
+Ideal para salamandras e caldeiras de biomassa
 
-Beneficios:
+Benefícios:
 
-Eficiencia energética, ayudando a reducir los costes de calefacción
+Eficiência energética, ajudando a reduzir os custos de aquecimento
 
-Ecológicos y sostenibles, fabricados con madera proveniente de fuentes responsables
+Ecológicos e sustentáveis, fabricados com madeira proveniente de fontes responsáveis
 
-Fácil de almacenar y manejar gracias al formato en sacos de 15 kg
+Fácil de armazenar e manusear graças ao formato em sacos de 15 kg
 
-Bajas emisiones de CO₂, respetando el medio ambiente
+Bajas emissões de CO₂, respeitando o ambiente
 
-Combustión limpia, con baja producción de cenizas y residuos
+Combustão limpa, com baixa produção de cinzas e resíduos
 
-Con los pellets WOODSTOCK Calidad Premium, podrá disfrutar de un ambiente cálido y confortable en su casa, mientras contribuye a la protección del medio ambiente.',
+Com os pellets WOODSTOCK Qualidade Premium, poderá desfrutar de um ambiente quente e confortável na sua casa, enquanto contribui para a proteção do ambiente.',
 
 
 
-        'slug' => 'woodstock-qualidade-premium-palete-com-78-sacos-de-15-kg'
+        'slug' => 'woodstock-qualidade-premium-palete-com-78-sacos-de-15-kg',
+        'seo_title' => 'WOODSTOCK Qualidade Premium – Palete com 78 sacos de 15 kg',
+        'seo_description' => 'WOODSTOCK Qualidade Premium – Palete com 78 sacos de 15 kg. Pellets de alto poder calorífico e baixa cinza. Envio grátis em Portugal Continental.'
     ]
 ];

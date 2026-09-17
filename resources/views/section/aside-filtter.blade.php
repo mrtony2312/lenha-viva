@@ -19,8 +19,8 @@
                              class="woof_price3_search_container woof_container woof_price_filter  woof_fs_by_price ">
                             <div class="woof_container_overlay_item"></div>
                             <div class="woof_container_inner">
-                                <h4>Precio</h4>
-                                <label class="woof_wcga_label_hide" for="69492a7b6d507">Filtro de precio</label>
+                                <h4>Preço</h4>
+                                <label class="woof_wcga_label_hide" for="69492a7b6d507">Filtro de preço</label>
                                 <input class="woof_range_slider" id="69492a7b6d507"
                                        data-skin="round" data-taxes="1" data-min="110"
                                        data-max="2997"
@@ -41,7 +41,7 @@
                                        value="featured"
                                        {{ request('product_visibility') == 'featured' ? 'checked' : '' }}
                                        onchange="document.getElementById('filterForm').submit()"/>&nbsp;&nbsp;
-                                <label for="woof_checkbox_featured">Productos destacados</label><br/>
+                                <label for="woof_checkbox_featured">Produtos em destaque</label><br/>
                             </div>
                         </div>
 
@@ -54,7 +54,7 @@
                                        value="instock"
                                        {{ request('stock') == 'instock' ? 'checked' : '' }}
                                        onchange="document.getElementById('filterForm').submit()"/>&nbsp;&nbsp;
-                                <label for="woof_checkbox_instock">En stock</label><br/>
+                                <label for="woof_checkbox_instock">Em stock</label><br/>
                             </div>
                         </div>
                         <div data-css-class="woof_container_product_cat"
@@ -62,14 +62,14 @@
                             <div class="woof_container_overlay_item"></div>
                             <div class="woof_container_inner woof_container_inner_categories">
                                 <h4>
-                                    Categorías </h4>
+                                    Categorias </h4>
 
                                 <script type="text/javascript" id="woof-husky-js-extra">
                                     var woof_husky_txt = {
                                         "ajax_url": "#",
                                         "plugin_uri": "#",
                                         "loader": "/wp-content/plugins/woocommerce-products-filter/ext/by_text/assets/img/ajax-loader.gif",
-                                        "not_found": "Nothing found!", "prev": "Prev", "next": "Next", "site_link":
+                                        "not_found": "Nada encontrado!", "prev": "Anterior", "next": "Seguinte", "site_link":
                                             "/",
                                         "default_data": {
                                             "placeholder": "",
@@ -95,7 +95,7 @@
 
                                 <div class="woof_block_html_items">
                                     <ul class="woof_list woof_list_radio">
-                                        <!-- Option "Toutes les catégories" -->
+                                        <!-- Option "Todas as categorias" -->
                                         <li class="woof_term_all">
                                             <input type="radio" id="woof_cat_all"
                                                    class="woof_radio_term woof_radio_term_all"
@@ -103,7 +103,7 @@
                                                    name="product_cat" value=""
                                                    {{ !request('product_cat') ? 'checked' : '' }}
                                                    onchange="document.getElementById('filterForm').submit()"/>
-                                            <label class="woof_radio_label" for="woof_cat_all">Todas las categorías</label>
+                                            <label class="woof_radio_label" for="woof_cat_all">Todas as categorias</label>
                                             <a href="#" data-name="product_cat" data-term-id=""
                                                style="display: none;"
                                                class="woof_radio_term_reset woof_radio_term_reset_all"
@@ -112,7 +112,7 @@
                                                      src="{{ asset('wp-content/plugins/woocommerce-products-filter/img/delete.png') }}"
                                                      height="12" width="12" alt="Eliminar"/>
                                             </a>
-                                            <input type="hidden" value="Todas las categorías"
+                                            <input type="hidden" value="Todas as categorias"
                                                    data-anchor="woof_n_product_cat_all"/>
                                         </li>
 
@@ -219,7 +219,7 @@
                                 </script>
 
                                 <input type="hidden" name="woof_t_product_cat"
-                                       value="Categorías de producto"/>
+                                       value="Categorias de produto"/>
                                 <!-- for red button search nav panel -->
                             </div>
                         </div>
@@ -228,7 +228,7 @@
                             <div class="woof_container_overlay_item"></div>
                             <div class="woof_container_inner woof_container_inner_producttags">
                                 <h4>
-                                    Etiquetas de producto </h4>
+                                    Etiquetas de produto </h4>
 
                                 <div class="woof_block_html_items">
 
@@ -238,7 +238,7 @@
                                 </div>
 
                                 <input type="hidden" name="woof_t_product_tag"
-                                       value="Etiquetas de producto"/>
+                                       value="Etiquetas de produto"/>
                                 <!-- for red button search nav panel -->
                             </div>
                         </div>
@@ -247,13 +247,13 @@
                             <div class="woof_container_overlay_item"></div>
                             <div class="woof_container_inner woof_container_inner_productcolor">
                                 <h4>
-                                    Color del producto </h4>
+                                    Cor do produto </h4>
 
                                 <div class="woof_block_html_items">
                                     <ul class="woof_list woof_list_color " data-type="checkbox">
                                         <li class="woof_color_term_#000000 woof_color_term_37">
                                             <p class="woof_tooltip">
-                                                <label class="woof_wcga_label_hide" for="woof_tax_color_black">Negro</label>
+                                                <label class="woof_wcga_label_hide" for="woof_tax_color_black">Preto</label>
                                                 <input id="woof_tax_color_black" type="checkbox"
                                                        class="woof_color_term woof_color_term_37"
                                                        data-color="#000000" data-img=""
@@ -262,13 +262,13 @@
                                                        {{ in_array('black', request('pa_color', [])) ? 'checked' : '' }}
                                                        onchange="document.getElementById('filterForm').submit()"/>
                                             </p>
-                                            <input type="hidden" value="Negro"
+                                            <input type="hidden" value="Preto"
                                                    data-anchor="woof_n_pa_color_black"/>
                                         </li>
 
                                         <li class="woof_color_term_#000000 woof_color_term_39">
                                             <p class="woof_tooltip">
-                                                <label class="woof_wcga_label_hide" for="woof_tax_color_brown">Marrón</label>
+                                                <label class="woof_wcga_label_hide" for="woof_tax_color_brown">Castanho</label>
                                                 <input id="woof_tax_color_brown" type="checkbox"
                                                        class="woof_color_term woof_color_term_39"
                                                        data-color="#000000" data-img=""
@@ -277,7 +277,7 @@
                                                        {{ in_array('brown', request('pa_color', [])) ? 'checked' : '' }}
                                                        onchange="document.getElementById('filterForm').submit()"/>
                                             </p>
-                                            <input type="hidden" value="Marrón"
+                                            <input type="hidden" value="Castanho"
                                                    data-anchor="woof_n_pa_color_brown"/>
                                         </li>
 
@@ -300,7 +300,7 @@
                                 </div>
 
                                 <input type="hidden" name="woof_t_pa_color"
-                                       value="color del producto"/>
+                                       value="cor do produto"/>
                                 <!-- for red button search nav panel -->
                             </div>
                         </div>

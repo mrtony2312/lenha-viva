@@ -1,10 +1,10 @@
 @extends('layouts.app')
 
-@section('title', __('Política de pago'))
+@section('title', __('Política de pagamento'))
+@section('meta_description', 'Política de pagamento Naturalenha: transferência bancária, confirmação da encomenda, IVA incluído e ligação segura SSL.')
+@section('canonical', route('politicaDePagamento'))
 
 @push('styles')
-
-
 @endpush
 
 @section('content')
@@ -15,7 +15,7 @@
             <div class="container">
                 <div class="breadscrumb-inner">
                     <ol class="breadcrumb">
-                        <li><a href="{{ route('home') }}" class="active">Inicio</a> </li>
+                        <li><a href="{{ route('home') }}" class="active">Início</a> </li>
                         <li class="active">Página</li>
                     </ol>
                 </div>
@@ -23,7 +23,7 @@
         </section>
         <div class="title-not-breadcrumbs">
             <div class="container">
-                <h1 class="page-title">Política de pago</h1>
+                <h1 class="page-title">Política de pagamento</h1>
             </div>
         </div>
         <section id="main-container" class="container">
@@ -31,63 +31,40 @@
                 <div id="main-content" class="main-page col-12">
                     <div id="main" class="site-main">
 
-                        <p>1 – ALOJAMIENTO EN UNA PLATAFORMA SÓLIDA Y PROFESIONAL<br>El <a
-                                href="{{ route('home') }}">https://lenhaviva.com</a> está alojado en un servidor
-                            profesional mantenido por una empresa especializada. Los servidores también se actualizan
-                            con regularidad.</p>
+                        <p>A {{ config('company.legal_name') }} aceita o pagamento das encomendas efetuadas em <a href="{{ route('home') }}">{{ config('company.website') }}</a> por <strong>transferência bancária</strong>. Os preços apresentados no site estão em euros, com IVA incluído.</p>
 
+                        <h2>1. Método de pagamento</h2>
+                        <p>O único método de pagamento disponível no checkout é a transferência bancária. Não pedimos nem guardamos dados de cartão de crédito ou débito.</p>
+                        <p>Depois de confirmar a encomenda, recebe por e-mail os dados bancários (titular, IBAN e valor) e o número da encomenda. Indique o seu nome e o número da encomenda na descrição da transferência.</p>
+                        <p>Quaisquer comissões cobradas pelo banco do cliente são da responsabilidade do cliente. A encomenda só é preparada após a confirmação da receção do valor integral.</p>
 
+                        <h2>2. Momento em que o contrato se considera celebrado</h2>
+                        <p>A encomenda fica registada quando a submete no site. O contrato de compra considera-se concluído quando recebemos o pagamento integral. Se o pagamento não for recebido num prazo razoável, a encomenda pode ser cancelada.</p>
 
-                        <p>2 – USO DE UN CERTIFICADO SSL PARA PROTEGER SUS DATOS
-                            PERSONALES<br>opensea-container.com utiliza un certificado SSL para proteger la
-                            información transmitida entre usted y el sitio web. Con este certificado, la información se
-                            cifra y no puede ser interceptada.</p>
+                        <h2>3. Segurança da ligação</h2>
+                        <p>O site {{ config('company.website') }} utiliza uma ligação HTTPS com certificado SSL. Os dados que envia (morada, contacto e dados da encomenda) são transmitidos de forma cifrada. Um cadeado na barra de endereço do browser indica que a ligação é segura.</p>
 
+                        <h2>4. Alojamento</h2>
+                        <p>O website está alojado numa infraestrutura profissional, com atualizações regulares de segurança.</p>
 
+                        <h2>5. Faturação</h2>
+                        <p>A fatura é emitida em nome da {{ config('company.legal_name') }}, NIF {{ config('company.nif') }} (IVA {{ config('company.vat') }}). Se necessitar de fatura com NIF de empresa, indique-o nas notas da encomenda ou contacte-nos.</p>
 
-                        <p>Un candado (o icono equivalente) en la barra de direcciones de su navegador indica esto
-                            mismo, así como la S en la dirección del sitio: <a href="{{ route('home') }}">https://lenhaviva.com</a>
-                        </p>
+                        <p>Dúvidas: <a href="mailto:{{ config('company.email') }}">{{ config('company.email') }}</a> · <a href="tel:{{ config('company.phone_tel') }}">{{ config('company.phone') }}</a></p>
 
-
-
-                        <p>3 – RESPONSABILIDAD TOTAL POR EL PAGO Y SU PROCESAMIENTO POR EL BANCO (CONTROL Y
-                            CARGO EN CUENTAS BANCARIAS).</p>
-
-
-
-                        <p>4 – PAGO POR TRANSFERENCIA BANCARIA (INMEDIATA)</p>
-
-
-
-                        <p>El cliente deberá comprobar con su banco que el importe total del pedido se ha
-                            abonado en la cuenta facilitada por LENHA VIVA y que su nombre y número de pedido
-                            se han introducido correctamente en la transferencia.</p>
-
-
-
-                        <p>Cualquier comisión bancaria cobrada por el banco del cliente correrá por su cuenta.</p>
-
-
-
-                        <figure class="wp-block-image size-large is-resized"><a
-                                href="../wp-content/uploads/2025/10/er-01-1-scaled.png"><img loading="lazy"
-                                                                                             decoding="async" width="770" height="361"
-                                                                                             src="../wp-content/uploads/2025/10/er-01-1-770x361.png" alt=""
-                                                                                             class="wp-image-6024" style="width:272px;height:auto" /></a></figure>
-                    </div><!-- .site-main -->
-
-                </div><!-- .content-area -->
+                        <figure class="wp-block-image size-large is-resized lv-policy__logo">
+                            <img loading="lazy" decoding="async" width="342" height="160"
+                                src="{{ asset(config('company.logo')) }}"
+                                alt="{{ config('company.legal_name') }}" style="width:280px;height:auto" />
+                        </figure>
+                    </div>
+                </div>
             </div>
         </section>
-
     </div>
 
     @include('layouts.partials.footer.public')
 @endsection
 
 @push('scripts')
-
-
-
 @endpush

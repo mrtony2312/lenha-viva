@@ -14,8 +14,8 @@
                             <div class="elementor-icon-box-wrapper">
 
                                 <div class="elementor-icon-box-icon">
-                                    <a href="tel:+34683573516" class="elementor-icon" tabindex="-1"
-                                        aria-label="¿Necesitas ayuda? Whatsapp:">
+                                    <a href="tel:+351912026453" class="elementor-icon" tabindex="-1"
+                                        aria-label="Precisa de ajuda? Whatsapp:">
                                         <svg aria-hidden="true" class="e-font-icon-svg e-fab-whatsapp-square"
                                             viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
                                             <path
@@ -28,12 +28,12 @@
                                 <div class="elementor-icon-box-content">
 
                                     <h3 class="elementor-icon-box-title">
-                                        <a href="tel:+34 683 5735 16">
-                                            ¿Necesitas ayuda? Whatsapp: </a>
+                                        <a href="tel:+351912026453">
+                                            Precisa de ajuda? Whatsapp: </a>
                                     </h3>
 
                                     <p class="elementor-icon-box-description">
-                                        +34 683 5735 16 </p>
+                                        +351 912 026 453 </p>
 
                                 </div>
 
@@ -52,9 +52,9 @@
                                 <div class="header-logo">
 
                                     <a href="{{ route('home') }}">
-                                        <img width="150" height="150"
-                                            src="/wp-content/uploads/2022/01/er-01-scaled.png" class="header-logo-img"
-                                            alt="" decoding="async" /> </a>
+                                        <img width="280" height="72"
+                                            src="{{ asset(config('company.logo')) }}" class="header-logo-img"
+                                            alt="Naturalenha" decoding="async" /> </a>
                                 </div>
 
                             </div>
@@ -106,7 +106,7 @@
                                     <h3 class="heading-tbay-title style-1">
 
 
-                                        <span class="title">Información legal</span>
+                                        <span class="title">Informações legais</span>
 
 
                                     </h3>
@@ -115,25 +115,25 @@
                         </div>
                         <div class="elementor-element elementor-element-28eaac98 elementor-widget elementor-widget-text-editor"
                             data-id="28eaac98" data-element_type="widget" data-widget_type="text-editor.default">
-                            <p><strong>Dirección:</strong> Rua Da Graça Nr. 19 Corga 3550-243 PINDO Portugal</p>
+                            <p><strong>Endereço:</strong> Estrada Nacional 379/2, Rua da Figueira, n.º 1, Vale de Touros, 2950-436 Palmela, Setúbal, Portugal</p>
                         </div>
                         <div class="elementor-element elementor-element-4d89dafe elementor-widget elementor-widget-text-editor"
                             data-id="4d89dafe" data-element_type="widget" data-widget_type="text-editor.default">
                             <p><span style="color: #191919;"><strong>E-mail:</strong></span>
-                                contactlehnaviva@gmail.com </p>
+                                contacto@naturalenha.com </p>
                         </div>
                         <div class="elementor-element elementor-element-4cf5ce6 elementor-widget elementor-widget-text-editor"
                             data-id="4cf5ce6" data-element_type="widget" data-widget_type="text-editor.default">
-                            <p><span style="color: #191919;"><strong>Denominación: </strong></span>Lenha Viva,
-                                Unipessoal Lda</p>
+                            <p><span style="color: #191919;"><strong>Denominação: </strong></span>Naturalenha,
+                                Unipessoal, Lda</p>
                         </div>
                         <div class="elementor-element elementor-element-99b9b26 elementor-widget elementor-widget-text-editor"
                             data-id="99b9b26" data-element_type="widget" data-widget_type="text-editor.default">
-                            <p><strong>NIF:</strong> 516429655</p>
+                            <p><strong>NIF / NIPC:</strong> 508162599</p>
                         </div>
                         <div class="elementor-element elementor-element-4996a4d elementor-widget elementor-widget-text-editor"
                             data-id="4996a4d" data-element_type="widget" data-widget_type="text-editor.default">
-                            <p><strong>IVA:</strong> PT516429655</p>
+                            <p><strong>IVA:</strong> PT508162599</p>
                         </div>
                     </div>
                 </div>
@@ -148,7 +148,7 @@
                                     <h3 class="heading-tbay-title style-1">
 
 
-                                        <span class="title">Información legal</span>
+                                        <span class="title">Informações legais</span>
 
 
                                     </h3>
@@ -163,11 +163,11 @@
                                     <div class="menu-vertical-container">
                                         <ul id="our-company-RZxxE" class="menu-vertical nav">
                                             <li class="menu-item">
-                                                <a href="{{ route('sobre-nos') }}">Sobre nosotros</a>
+                                                <a href="{{ route('sobre-nos') }}">Sobre nós</a>
                                             </li>
 
                                             <li class="menu-item">
-                                                <a href="{{ route('loja') }}">Tienda</a>
+                                                <a href="{{ route('loja') }}">Loja</a>
                                             </li>
 
                                             <li class="menu-item">
@@ -176,6 +176,9 @@
 
                                             <li class="menu-item">
                                                 <a href="{{ route('contacto') }}">Contacto</a>
+                                            </li>
+                                            <li class="menu-item">
+                                                <a href="{{ route('mapa-do-site') }}">Mapa do site</a>
                                             </li>
                                         </ul>
                                     </div>
@@ -202,7 +205,7 @@
                                     <h3 class="heading-tbay-title style-1">
 
 
-                                        <span class="title">Categorías de productos</span>
+                                        <span class="title">Categorias de produtos</span>
 
 
                                     </h3>
@@ -222,7 +225,7 @@
                                                     <li
                                                         class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-5901">
                                                         <a
-                                                            href="{{ route('category', ['category' => $categorySlug]) }}">
+                                                            href="{{ \App\Support\CategoryLabels::route($categorySlug) }}">
                                                             {{ $categoryName }}
                                                         </a>
                                                     </li>
@@ -246,7 +249,7 @@
                                     <h3 class="heading-tbay-title style-1">
 
 
-                                        <span class="title">Nuestras políticas</span>
+                                        <span class="title">As nossas políticas</span>
 
 
                                     </h3>
@@ -262,19 +265,19 @@
                                         <ul id="nos-politiques-PFZ5t" class="menu-vertical nav">
                                             <li class="menu-item">
                                                 <a href="{{ route('politica-de-privacidade') }}">
-                                                    Política de privacidad
+                                                    Política de Privacidade
                                                 </a>
                                             </li>
 
                                             <li class="menu-item">
                                                 <a href="{{ route('condicoes-gerais-de-venda-cgv') }}">
-                                                    Condiciones generales de venta CGV
+                                                    Condições gerais de venda CGV
                                                 </a>
                                             </li>
 
                                             <li class="menu-item">
                                                 <a href="{{ route('termos-e-condicoes-gerais-de-utilizacao-tcg') }}">
-                                                    Términos y condiciones generales de uso TCG
+                                                    Termos e condições gerais de utilização TCG
                                                 </a>
                                             </li>
 
@@ -292,7 +295,12 @@
 
                                             <li class="menu-item">
                                                 <a href="{{ route('politicaDePagamento') }}">
-                                                    Política de pago
+                                                    Política de pagamento
+                                                </a>
+                                            </li>
+                                            <li class="menu-item">
+                                                <a href="{{ config('company.livro_reclamacoes') }}" target="_blank" rel="noopener">
+                                                    Livro de reclamações
                                                 </a>
                                             </li>
                                         </ul>
@@ -315,8 +323,8 @@
                     <div class="elementor-widget-wrap elementor-element-populated">
                         <div class="elementor-element elementor-element-429a145d elementor-widget elementor-widget-text-editor"
                             data-id="429a145d" data-element_type="widget" data-widget_type="text-editor.default">
-                            <p>Copyright © <strong><span style="color: #191919;">LENHA VIVA</span></strong>.
-                                Todos los derechos reservados.</p>
+                            <p>Copyright © <strong><span style="color: #191919;">NATURALENHA</span></strong>.
+                                Todos os direitos reservados.</p>
                         </div>
                     </div>
                 </div>
@@ -351,7 +359,7 @@
             <div class="chaty-channel-list" id="csaas-channels-0">
                 <div class="chaty-channel Whatsapp-channel-link" id="Whatsapp-0-channel" data-id="Whatsapp-0"
                     data-widget="0" data-channel="Whatsapp">
-                    <a href="https://wa.me/34683573516?text=Hola,%20me%20gustar%C3%ADa%20m%C3%A1s%20informaci%C3%B3n"
+                    <a href="https://wa.me/351912026453?text=Ol%C3%A1,%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es"
                         target="_blank" rel="nofollow noopener" aria-label="WhatsApp"
                         class="chaty-tooltip Whatsapp-channel chaty-link chaty-whatsapp-channel pos-left"
                         data-form="chaty-form-0-Whatsapp" data-hover="WhatsApp">
@@ -378,7 +386,7 @@
 
                 <div class="chaty-channel Email-channel-link" id="Email-0-channel" data-id="Email-0" data-widget="0"
                     data-channel="Email">
-                    <a href="mailto:contactlehnaviva@gmail.com?subject=Solicitud%20de%20informaci%C3%B3n&body=Hola%2C%0D%0A%0D%0AMe%20gustar%C3%ADa%20obtener%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20servicios%20o%20productos.%0D%0A%0D%0AAtentamente%2C"
+                    <a href="mailto:contacto@naturalenha.com?subject=Pedido%20de%20Informa%C3%A7%C3%A3o&body=Ol%C3%A1%2C%0D%0A%0D%0AGostaria%20de%20obter%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20vossos%20servi%C3%A7os%20ou%20produtos.%0D%0A%0D%0AAtenciosamente%2C"
                         target="_blank" rel="nofollow noopener" aria-label="Enviar email"
                         class="chaty-tooltip Email-channel chaty-link chaty-email-channel pos-left"
                         data-form="chaty-form-0-Email" data-hover="Enviar email">

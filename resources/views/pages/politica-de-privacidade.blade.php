@@ -1,6 +1,8 @@
 @extends('layouts.app')
 
-@section('title', __('Política de privacidad'))
+@section('title', __('Política de Privacidade'))
+@section('meta_description', 'Política de privacidade da Naturalenha: tratamento de dados pessoais, cookies, Google Analytics/Ads e direitos do utilizador (RGPD).')
+@section('canonical', route('politica-de-privacidade'))
 
 @push('styles')
 @endpush
@@ -12,7 +14,7 @@
             <div class="container">
                 <div class="breadscrumb-inner">
                     <ol class="breadcrumb">
-                        <li><a href="{{ route('home') }}" class="active">Inicio</a> </li>
+                        <li><a href="{{ route('home') }}" class="active">Início</a> </li>
                         <li class="active">Página</li>
                     </ol>
                 </div>
@@ -20,7 +22,7 @@
         </section>
         <div class="title-not-breadcrumbs">
             <div class="container">
-                <h1 class="page-title">Política de privacidad</h1>
+                <h1 class="page-title">Política de Privacidade</h1>
             </div>
         </div>
         <section id="main-container" class="container">
@@ -28,321 +30,84 @@
                 <div id="main-content" class="main-page col-12">
                     <div id="main" class="site-main">
 
-                        <p>POLÍTICA DE PRIVACIDAD Y PROTECCIÓN DE DATOS PERSONALES<br>Preámbulo</p>
-
-
-
-                        <p>LENHA VIVA se compromete a garantizar el tratamiento de los datos personales en su sitio web y en
-                            el contexto de sus actividades, de conformidad con el Reglamento General de Protección
-                            de Datos (RGPD) y la legislación italiana aplicable en materia de protección de datos. La
-                            presente Política de Privacidad se aplica al tratamiento de datos a través del sitio web de
-                            LENHA VIVA y en el contexto de las relaciones comerciales. Contiene información sobre las
-                            finalidades del tratamiento, las bases legales, los destinatarios de los datos, los periodos de
-                            conservación, las medidas de seguridad (descripción general), las eventuales transferencias de
-                            datos fuera de la Unión Europea o los procesos de decisión automatizados, la utilización y
-                            gestión de cookies, los derechos de los titulares de los datos y la forma de ejercerlos.</p>
-
-
-
-                        <p>¿Quién es responsable del tratamiento de los datos en este sitio web y en el contexto de las
-                            actividades de LENHA VIVA?</p>
-
-
-
-                        <p>La empresa matriz es LENHA VIVA Unipessoal Lda, una filial de LENHA VIVA, registrada
-                            con el número de identificación de <strong>IVA:</strong> PT516429655 </p>
-
-
-
-                        <p>LENHA VIVA</p>
-
-
-
-                        <p>De acuerdo con el artículo 4, apartado 1, del RGPD, los datos personales son cualquier información
-                            que identifique directa o indirectamente a una persona física. LENHA VIVA recopila
-                            datos personales a través de su sitio web (formularios de contacto, solicitudes de presupuesto),
-                            por teléfono, por correo electrónico y en el marco de interacciones de marketing directo. El suministro
-                            de datos personales a LENHA VIVA por parte de los titulares de los datos es voluntario, sujeto al
-                            consentimiento para el tratamiento y a la aceptación de la presente política de privacidad. Los
-                            datos recopilados son adecuados, pertinentes, necesarios y limitados al mínimo
-                            necesario. Esto incluye, en particular:</p>
-
-
-
-                        <p>Datos de identificación: nombre, apellido, dirección, correo electrónico, número de
-                            teléfono, número de identificación de IVA (para entidades comerciales).</p>
-
-
-
-                        <p>Datos de la empresa (para entidades comerciales): nombre de la empresa, dirección, sector de
-                            actividad.</p>
-
-
-
-                        <p>Datos del navegador: dirección IP, datos de localización aproximada (basados en IP), tipo
-                            de navegador, sistema operativo, páginas visitadas, duración de la visita, datos recopilados
-                            mediante cookies y tecnologías similares.</p>
-
-
-
-                        <p>¿Para qué finalidades se recopilan los datos?<br>Los datos personales recopilados se
-                            tratan para las siguientes finalidades:</p>
-
-
-
-                        <p>Responder a solicitudes de ofertas e información.</p>
-
-
-
-                        <p>Establecer y dar seguimiento a la relación comercial (gestión de pedidos, entregas,
-                            facturación, atención al cliente).</p>
-
-
-
-                        <p>Gestionar los métodos de pago y el cobro de deudas.</p>
-
-
-
-                        <p>Optimizar el sitio y mejorar la experiencia del usuario.</p>
-
-
-
-                        <p>Gestionar las actividades comerciales del sitio (sujeto a consentimiento).</p>
-
-
-
-                        <p>Responder a solicitudes relacionadas con el ejercicio de los derechos de los titulares de los
-                            datos al amparo del RGPD.</p>
-
-
-
-                        <p>Prevención y lucha contra el fraude.</p>
-
-
-
-                        <p>¿Cuál es la base legal para el tratamiento por parte de LENHA VIVA?</p>
-
-
-
-                        <p>El tratamiento de datos personales por parte de LENHA VIVA se basa en:</p>
-
-
-
-                        <p>Consentimiento: En todos los casos en que el usuario proporciona directamente sus datos
-                            personales (por ejemplo, para recibir ofertas de marketing). El consentimiento puede
-                            revocarse en cualquier momento.</p>
-
-
-
-                        <p>Ejecución de medidas contractuales o precontractuales: En relación con una solicitud de
-                            presupuesto y la relación comercial resultante.</p>
-
-
-
-                        <p>Obligación legal: En particular en lo relativo a la facturación y al ejercicio de derechos
-                            previstos en el RGPD.</p>
-
-
-
-                        <p>Interés legítimo de LENHA VIVA: Protección de documentos e información, mejora de los
-                            servicios y prevención del fraude.</p>
-
-
-
-                        <p>¿Quiénes son los destinatarios de los datos tratados por LENHA VIVA?</p>
-
-
-
-                        <p>Los datos personales se destinan principalmente a LENHA VIVA. Son procesados por los
-                            colaboradores de los distintos departamentos implicados en las consultas (ventas, atención al
-                            cliente, contabilidad). El tratamiento se realiza exclusivamente para las finalidades
-                            antes mencionadas. Los datos pueden, ocasionalmente, ser gestionados por encargados
-                            externos (por ejemplo, para alojamiento de sitios web, servicios de pago, entrega) y
-                            tratados de conformidad con el RGPD. Nunca se compartirán con terceros con
-                            fines comerciales sin consentimiento.</p>
-
-
-
-                        <p>¿Se transfieren los datos personales fuera de la Unión Europea?<br>Sí, los datos personales
-                            recopilados por LENHA VIVA pueden ser transferidos y almacenados en países fuera de la Unión
-                            Europea (UE) y del Espacio Económico Europeo (EEE). Estas transferencias pueden producirse en
-                            países que no ofrecen un nivel de protección de datos equivalente al ofrecido por la UE.
+                        <p>A {{ config('company.legal_name') }} trata os dados pessoais no website <a href="{{ route('home') }}">{{ config('company.website') }}</a> e nas relações comerciais em conformidade com o Regulamento (UE) 2016/679 (RGPD), a Lei n.º 58/2019 e a Lei n.º 41/2004 (comunicações eletrónicas / cookies).</p>
+                        <p>Última atualização: 29 de agosto de 2026. Não existem decisões automatizadas com efeitos jurídicos sobre as compras. A publicidade personalizada só ocorre se aceitar cookies de análise e publicidade.</p>
+
+                        <h2>1. Responsável pelo tratamento</h2>
+                        <p>
+                            {{ config('company.legal_name') }} — {{ config('company.legal_form') }}<br>
+                            NIF / NIPC: {{ config('company.nif') }} · IVA: {{ config('company.vat') }}<br>
+                            Morada: {{ config('company.address_line') }}<br>
+                            E-mail: <a href="mailto:{{ config('company.email') }}">{{ config('company.email') }}</a><br>
+                            Telefone / WhatsApp: <a href="tel:{{ config('company.phone_tel') }}">{{ config('company.phone') }}</a>
                         </p>
 
+                        <h2>2. Dados que recolhemos</h2>
+                        <p>Recolhemos apenas o necessário para a loja, as encomendas e o contacto:</p>
+                        <ul>
+                            <li>identificação e contacto: nome, morada, e-mail, telefone;</li>
+                            <li>dados da encomenda e de faturação, incluindo NIF quando o indicar;</li>
+                            <li>mensagens enviadas por e-mail, telefone, WhatsApp ou formulário de contacto;</li>
+                            <li>dados técnicos da visita: endereço IP, tipo de navegador, páginas visitadas, data e hora, e identificadores de cookies (análise e publicidade apenas com o seu consentimento).</li>
+                        </ul>
+                        <p>O fornecimento dos dados da encomenda é necessário para celebrar e executar o contrato. Sem esses dados não podemos processar a compra nem emitir fatura. O consentimento aplica-se aos cookies de análise/publicidade e a eventuais comunicações de marketing, não à encomenda em si.</p>
 
+                        <h2>3. Finalidades e bases legais</h2>
+                        <ul>
+                            <li><strong>Execução do contrato</strong> (art. 6.º, n.º 1, alínea b), do RGPD): gestão da encomenda, pagamento por transferência, entrega, apoio ao cliente e devoluções.</li>
+                            <li><strong>Obrigação legal</strong> (alínea c)): faturação, contabilidade e prazos legais de conservação (em regra 10 anos para documentos fiscais).</li>
+                            <li><strong>Interesse legítimo</strong> (alínea f)): segurança do site, prevenção de fraude e defesa de direitos em litígio.</li>
+                            <li><strong>Consentimento</strong> (alínea a) e Lei n.º 41/2004): cookies de análise e publicidade (Google Analytics e Google Ads) e, se for o caso, envio de comunicações comerciais. Pode retirar o consentimento a qualquer momento, sem afetar a licitude do tratamento anterior.</li>
+                        </ul>
 
-                        <p>Para dichas transferencias, LENHA VIVA implementa garantías adecuadas para asegurar
-                            un nivel adecuado de protección de datos, en particular mediante el uso de cláusulas
-                            contractuales tipo aprobadas por la Comisión Europea o de otros mecanismos de
-                            transferencia reconocidos como adecuados por el RGPD. Estas garantías contractuales
-                            obligan a los destinatarios de los datos a cumplir estrictas obligaciones de protección de datos,
-                            especialmente en lo relativo a la seguridad y confidencialidad de los datos.</p>
+                        <h2>4. Destinatários</h2>
+                        <p>Os dados são tratados pela {{ config('company.brand') }} e, quando necessário, por:</p>
+                        <ul>
+                            <li>prestador de alojamento do website;</li>
+                            <li>transportadoras contratadas para a entrega;</li>
+                            <li>Google Ireland Limited (Google Analytics e Google Ads), apenas se aceitar cookies de análise e publicidade.</li>
+                        </ul>
+                        <p>Não utilizamos prestadores de pagamento com cartão: o pagamento é feito por transferência bancária para a nossa conta. Não vendemos dados a terceiros para fins comerciais.</p>
 
+                        <h2>5. Transferências para fora da União Europeia</h2>
+                        <p>Se aceitar cookies de análise e publicidade, a Google pode tratar dados nos Estados Unidos (Google LLC). Essas transferências assentam no EU-US Data Privacy Framework e/ou nas cláusulas contratuais-tipo da Comissão Europeia. Sem o seu consentimento para esses cookies, não ativamos o armazenamento de análise nem de publicidade (Consent Mode).</p>
+                        <p>Não transferimos os dados da encomenda para fora da UE/EEE para além do que resulte desses serviços, se os tiver aceite.</p>
 
+                        <h2>6. Conservação</h2>
+                        <ul>
+                            <li>encomendas, faturas e dados fiscais: o tempo da relação comercial e, depois, o prazo legal (em regra 10 anos);</li>
+                            <li>pedidos de contacto sem encomenda: até 3 anos após o último contacto;</li>
+                            <li>exercício de direitos RGPD: o tempo necessário para responder (em regra até 1 mês);</li>
+                            <li>cookies de análise/publicidade: conforme a configuração da Google e até retirar o consentimento ou limpar o armazenamento local (<code>lv_cookie_consent</code>).</li>
+                        </ul>
 
-                        <p>Puede obtenerse más información sobre las medidas de seguridad adoptadas y los países a los que se
-                            transfieren los datos a través de la dirección contactlehnaviva@gmail.com
+                        <h2>7. Cookies</h2>
+                        <p>Utilizamos:</p>
+                        <ul>
+                            <li><strong>Cookies estritamente necessários:</strong> sessão e carrinho, indispensáveis ao funcionamento da loja. Não exigem consentimento.</li>
+                            <li><strong>Cookies de análise e publicidade:</strong> Google Analytics (<code>G-MX4HS3ZTPP</code>) e Google Ads (<code>AW-17798780713</code>), apenas se clicar em «Aceitar» no aviso de cookies. «Recusar» mantém-nos desativados.</li>
+                        </ul>
+                        <p>Não utilizamos cookies de funcionalidade autónomos (idioma ou região). Pode também bloquear cookies nas definições do navegador. O aviso reaparece se apagar os dados do site neste dispositivo.</p>
+
+                        <h2>8. Os seus direitos</h2>
+                        <p>Pode solicitar acesso, retificação, apagamento, limitação, portabilidade e oposição, e retirar o consentimento dos cookies. Para o exercício destes direitos:</p>
+                        <p>
+                            E-mail: <a href="mailto:{{ config('company.email') }}">{{ config('company.email') }}</a><br>
+                            Telefone / WhatsApp: <a href="tel:{{ config('company.phone_tel') }}">{{ config('company.phone') }}</a>
                         </p>
-
-
-
-                        <p>¿Cómo se protegen los datos personales tratados por LENHA VIVA?</p>
-
-
-
-                        <p>LENHA VIVA está comprometida con la protección de los datos personales que trata. Las medidas de
-                            seguridad más importantes son:</p>
-
-
-
-                        <p>Uso del protocolo HTTPS para proteger la comunicación en el sitio.</p>
-
-
-
-                        <p>Medidas de seguridad técnicas y organizativas para proteger los datos frente al acceso,
-                            divulgación, alteración y destrucción no autorizados.</p>
-
-
-
-                        <p>El acceso a los datos está restringido al personal autorizado.</p>
-
-
-
-                        <p>Los datos se eliminan a solicitud del titular de los datos o tras la finalización del
-                            periodo de conservación.</p>
-
-
-
-                        <p>¿Durante cuánto tiempo almacena LENHA VIVA los datos personales?</p>
-
-
-
-                        <p>Los datos personales recopilados se almacenan de la siguiente forma:</p>
-
-
-
-                        <p>Datos de clientes potenciales (prospects): 3 años a partir del último contacto.</p>
-
-
-
-                        <p>Datos del cliente: Durante la duración de la relación comercial y para cumplir las obligaciones
-                            legales (por ejemplo, 10 años para las facturas).</p>
-
-
-
-                        <p>Datos recopilados en el ejercicio de derechos: El tiempo necesario para tramitar la solicitud
-                            (máximo 1 mes, salvo excepciones justificadas).</p>
-
-
-
-                        <p>¿Este sitio web utiliza cookies?</p>
-
-
-
-                        <p>Sí, el sitio de LENHA VIVA utiliza cookies. Las cookies son pequeños archivos de texto
-                            almacenados en su dispositivo cuando visita nuestro sitio web. Utilizamos diferentes
-                            tipos de cookies:</p>
-
-
-
-                        <p>Cookies estrictamente necesarias: Estas cookies son esenciales para el funcionamiento del
-                            sitio y permiten utilizar funcionalidades básicas, como la navegación entre páginas y el
-                            acceso a áreas seguras. No recopilan ningún dato personal.</p>
-
-
-
-                        <p>Cookies de rendimiento/análisis: Estas cookies nos permiten medir y analizar el uso
-                            del sitio web, por ejemplo, contando el número de visitantes e identificando las páginas más
-                            populares. Esta información nos ayuda a mejorar el rendimiento del sitio y la experiencia
-                            del usuario. Por ejemplo, podemos utilizar Google Analytics. Estas cookies pueden
-                            recopilar datos anonimizados, como su dirección IP (parcialmente anonimizada).</p>
-
-
-
-                        <p>Cookies de funcionalidad: Estas cookies permiten que el sitio recuerde sus
-                            preferencias (por ejemplo, su idioma o región) y ofrezca funcionalidades mejoradas
-                            y personalizadas.</p>
-
-
-
-                        <p>Cookies de segmentación/publicidad: Estas cookies se utilizan para mostrarle
-                            anuncios más relevantes según sus intereses. También pueden utilizarse para
-                            limitar el número de anuncios que ve y medir la eficacia de las campañas publicitarias.</p>
-
-
-
-                        <p>Puede gestionar sus preferencias de cookies a través del banner de información sobre cookies
-                            que se muestra cuando visita nuestro sitio web por primera vez, o configurando los
-                            ajustes de su navegador.</p>
-
-
-
-                        <p>¿Cuáles son los derechos de los titulares de los datos en relación con el tratamiento de los datos por
-                            parte de LENHA VIVA?<br>De acuerdo con el RGPD, usted tiene los siguientes derechos:</p>
-
-
-
-                        <p>Derecho de acceso, rectificación, supresión y portabilidad de sus datos.</p>
-
-
-
-                        <p>Derecho a limitar el tratamiento de sus datos y a oponerse a dicho tratamiento.</p>
-
-
-
-                        <p>Derecho a revocar el consentimiento en cualquier momento.</p>
-
-
-
-                        <p>Derecho a presentar una reclamación ante la autoridad de control competente (Autoridad
-                            Italiana de Protección de Datos).</p>
-
-
-
-                        <p>¿Cómo puedo ejercer mis derechos al amparo del RGPD?</p>
-
-
-
-                        <p>Puede enviar sus consultas:</p>
-
-
-
-                        <p>Por correo electrónico: contactlehnaviva@gmail.com </p>
-
-
-
-                        <p>Adjunte una copia de su documento de identidad a cada solicitud.</p>
-
-
-
-                        <p>Contacto</p>
-
-
-
-                        <p>Si tiene alguna duda sobre esta política de privacidad, no dude en contactarnos:</p>
-
-
-
-                        <p>WhatsApp: +34 683 5735 16</p>
-
-
-
-                        <p>Correo electrónico: contactlehnaviva@gmail.com </p>
-
-
-
-                        <figure class="wp-block-image size-large is-resized"><a
-                                href="../wp-content/uploads/2025/10/er-01-1-scaled.png"><img loading="lazy" decoding="async"
-                                    width="770" height="361" src="../wp-content/uploads/2025/10/er-01-1-770x361.png"
-                                    alt="" class="wp-image-6024" style="width:262px;height:auto" /></a></figure>
-                    </div><!-- .site-main -->
-
-                </div><!-- .content-area -->
+                        <p>Só pediremos um comprovativo de identidade se for necessário confirmar que o pedido é feito pelo titular dos dados.</p>
+                        <p>Pode apresentar reclamação à Comissão Nacional de Proteção de Dados (CNPD): <a href="{{ config('company.cnpd') }}" target="_blank" rel="noopener">{{ config('company.cnpd') }}</a>.</p>
+
+                        <figure class="wp-block-image size-large is-resized lv-policy__logo">
+                            <img loading="lazy" decoding="async" width="342" height="160"
+                                src="{{ asset(config('company.logo')) }}"
+                                alt="{{ config('company.legal_name') }}" style="width:280px;height:auto" />
+                        </figure>
+                    </div>
+                </div>
             </div>
         </section>
-
     </div>
-
 
     @include('layouts.partials.footer.public')
 @endsection

@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Confirmación de tu pedido</title>
+    <title>Confirmação da sua encomenda</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -18,10 +18,24 @@
         }
 
         .header {
-            background: #2c3e50;
-            color: white;
-            padding: 20px;
+            background: #f7f4ef;
+            color: #1b3022;
+            padding: 24px 20px 16px;
             text-align: center;
+        }
+
+        .header img {
+            max-width: 260px;
+            height: auto;
+            display: block;
+            margin: 0 auto 12px;
+        }
+
+        .header h2 {
+            margin: 0;
+            font-size: 18px;
+            font-weight: 600;
+            color: #1b3022;
         }
 
         .content {
@@ -82,7 +96,7 @@
             margin-top: 30px;
         }
 
-        /* Styles pour le bouton WhatsApp */
+        /* Estilos do botão WhatsApp */
         .whatsapp-button {
             display: inline-block;
             background-color: #25D366;
@@ -124,46 +138,46 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1>Lenha Viva</h1>
-            <h2>Confirmación del pedido #{{ $order['order_number'] }}</h2>
+            <img src="{{ asset(config('company.logo')) }}" alt="Naturalenha" width="260">
+            <h2>Confirmação da encomenda #{{ $order['order_number'] }}</h2>
         </div>
 
         <div class="content">
-            <p>Hola {{ $order['customer']['first_name'] }},</p>
-            <p>¡Gracias por tu pedido! Aquí tienes los detalles:</p>
+            <p>Olá {{ $order['customer']['first_name'] }},</p>
+            <p>Obrigado pela sua encomenda! Aqui estão os detalhes:</p>
 
-            <!-- Bouton WhatsApp ajouté ici -->
+            <!-- Botão WhatsApp -->
             <div class="whatsapp-container">
-                <h3>📱 ¿Necesitas ayuda?</h3>
-                <p>¿Tienes alguna duda sobre tu pedido? ¡Contáctanos fácilmente por WhatsApp!</p>
-                <a href="https://wa.me/34683573516?text=¡Hola! Tengo una consulta sobre mi pedido #{{ $order['order_number'] }}"
+                <h3>📱 Precisa de ajuda?</h3>
+                <p>Tem alguma dúvida sobre a sua encomenda? Contacte-nos facilmente por WhatsApp!</p>
+                <a href="https://wa.me/351912026453?text=Olá! Tenho uma questão sobre a minha encomenda #{{ $order['order_number'] }}"
                     class="whatsapp-button" target="_blank">
                     <span class="whatsapp-icon">💬</span> Contactar por WhatsApp
                 </a>
                 <p style="margin-top: 10px; font-size: 14px; color: #666;">
-                    <strong>Número:</strong> +34 683 5735 16
+                    <strong>Número:</strong> +351 912 026 453
                 </p>
             </div>
 
             <div class="order-info">
-                <h3>📋 Información del pedido</h3>
-                <p><strong>Número de pedido:</strong> {{ $order['order_number'] }}</p>
-                <p><strong>Fecha del pedido:</strong> {{ $order['date'] }}</p>
-                <p><strong>Fecha completa:</strong> {{ $order['order_date'] }}</p>
-                <p><strong>Método de pago:</strong> {{ $order['payment_method'] }}</p>
-                <p><strong>Método de envío:</strong> {{ $order['shipping_method'] }}</p>
+                <h3>📋 Informação da encomenda</h3>
+                <p><strong>Número de encomenda:</strong> {{ $order['order_number'] }}</p>
+                <p><strong>Data da encomenda:</strong> {{ $order['date'] }}</p>
+                <p><strong>Data completa:</strong> {{ $order['order_date'] }}</p>
+                <p><strong>Método de pagamento:</strong> {{ $order['payment_method'] }}</p>
+                <p><strong>Método de envio:</strong> {{ $order['shipping_method'] }}</p>
                 @if (!empty($order['order_comments']))
-                    <p><strong>Observaciones:</strong> {{ $order['order_comments'] }}</p>
+                    <p><strong>Observações:</strong> {{ $order['order_comments'] }}</p>
                 @endif
             </div>
 
-            <h3 class="section-title">👤 Información del cliente</h3>
+            <h3 class="section-title">👤 Informação do cliente</h3>
             <div class="order-info">
                 <p><strong>Email:</strong> {{ $order['customer']['email'] }}</p>
-                <p><strong>Teléfono:</strong> {{ $order['customer']['phone'] ?: 'No proporcionado' }}</p>
+                <p><strong>Telemóvel:</strong> {{ $order['customer']['phone'] ?: 'Não indicado' }}</p>
             </div>
 
-            <h3 class="section-title">📍 Dirección de entrega</h3>
+            <h3 class="section-title">📍 Morada de entrega</h3>
             <div class="address-box">
                 <p><strong>{{ $order['customer']['first_name'] }} {{ $order['customer']['last_name'] }}</strong></p>
                 <p>{{ $order['customer']['address_1'] }}</p>
@@ -174,7 +188,7 @@
                 <p>{{ $order['customer']['country'] }}</p>
             </div>
 
-            <h3 class="section-title">🏢 Dirección de facturación</h3>
+            <h3 class="section-title">🏢 Morada de faturação</h3>
             <div class="address-box">
                 <p><strong>{{ $order['billing']['first_name'] }} {{ $order['billing']['last_name'] }}</strong></p>
                 <p>{{ $order['billing']['address_1'] }}</p>
@@ -184,24 +198,24 @@
                 <p>{{ $order['billing']['postcode'] }} {{ $order['billing']['city'] }}</p>
                 <p>{{ $order['billing']['country'] }}</p>
                 @if (!empty($order['billing']['phone']))
-                    <p><strong>Teléfono:</strong> {{ $order['billing']['phone'] }}</p>
+                    <p><strong>Telemóvel:</strong> {{ $order['billing']['phone'] }}</p>
                 @endif
             </div>
 
-            <h3 class="section-title">🛒 Productos pedidos</h3>
+            <h3 class="section-title">🛒 Produtos encomendados</h3>
             <table class="product-table">
                 <thead>
                     <tr>
-                        <th>Producto</th>
-                        <th>Cantidad</th>
-                        <th>Precio unitario</th>
+                        <th>Produto</th>
+                        <th>Quantidade</th>
+                        <th>Preço unitário</th>
                         <th>Total</th>
                     </tr>
                 </thead>
                 <tbody>
                     @foreach ($order['items'] as $item)
                         <tr>
-                            <td>{{ $item['title'] ?? ($item['name'] ?? 'Producto') }}</td>
+                            <td>{{ $item['title'] ?? ($item['name'] ?? 'Produto') }}</td>
                             <td>{{ $item['quantity'] }}</td>
                             <td>{{ number_format($item['price'], 3, ',', ' ') }} €</td>
                             <td>{{ number_format($item['price'] * $item['quantity'], 3, ',', ' ') }} €</td>
@@ -211,33 +225,33 @@
             </table>
 
             <div class="total">
-                <p><strong>Cantidad total de artículos:</strong> {{ $order['total_items'] }}</p>
-                <p><strong>Importe total:</strong> {{ $order['formatted_total_price'] }} €</p>
+                <p><strong>Quantidade total de artigos:</strong> {{ $order['total_items'] }}</p>
+                <p><strong>Valor total:</strong> {{ $order['formatted_total_price'] }} €</p>
             </div>
 
             @if (!empty($order['order_comments']))
                 <div class="order-info">
-                    <h3>📝 Observaciones del pedido</h3>
+                    <h3>📝 Observações da encomenda</h3>
                     <p>{{ $order['order_comments'] }}</p>
                 </div>
             @endif
 
-            <!-- Bouton WhatsApp répété avant la fermeture -->
+            <!-- Botão WhatsApp repetido antes do fecho -->
             <div style="text-align: center; margin: 30px 0;">
-                <a href="https://wa.me/34683573516?text=¡Hola! Tengo una consulta sobre mi pedido #{{ $order['order_number'] }}"
+                <a href="https://wa.me/351912026453?text=Olá! Tenho uma questão sobre a minha encomenda #{{ $order['order_number'] }}"
                     class="whatsapp-button" target="_blank">
                     <span class="whatsapp-icon">💬</span> Contactar por WhatsApp
                 </a>
             </div>
 
-            <p>Nos pondremos en contacto contigo en breve para confirmar los detalles de la entrega.</p>
-            <p>¡Gracias por elegir Lenha Viva!</p>
+            <p>Entraremos em contacto consigo em breve para confirmar os detalhes da entrega.</p>
+            <p>Obrigado por escolher a Naturalenha!</p>
         </div>
 
         <div class="footer">
-            <p>Lenha Viva &copy; {{ date('Y') }}</p>
-            <p>Si tienes alguna duda, contáctanos: contactlehnaviva@gmail.com</p>
-            <p><strong>WhatsApp:</strong> +34 683 5735 16</p>
+            <p>Naturalenha &copy; {{ date('Y') }}</p>
+            <p>Se tiver alguma dúvida, contacte-nos: contacto@naturalenha.com</p>
+            <p><strong>WhatsApp:</strong> +351 912 026 453</p>
         </div>
     </div>
 </body>

@@ -23,7 +23,7 @@ class HandleExpiredSession
 
                 return redirect()->route('carrinho')
                     ->with('session_expired', true)
-                    ->with('message', 'Votre session a expiré. Votre panier a été sauvegardé.');
+                    ->with('message', 'A sua sessão expirou. O seu carrinho foi guardado.');
             }
         }
 

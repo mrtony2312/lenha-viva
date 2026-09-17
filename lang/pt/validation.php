@@ -1,0 +1,111 @@
+<?php
+
+return [
+
+    'accepted' => 'O campo :attribute deve ser aceite.',
+    'active_url' => 'O campo :attribute não é um URL válido.',
+    'after' => 'O campo :attribute deve conter uma data posterior a :date.',
+    'alpha' => 'O campo :attribute só pode conter letras.',
+    'alpha_dash' => 'O campo :attribute só pode conter letras, números, hífenes e underscores.',
+    'alpha_num' => 'O campo :attribute só pode conter letras e números.',
+    'array' => 'O campo :attribute deve ser uma lista.',
+    'before' => 'O campo :attribute deve conter uma data anterior a :date.',
+    'between' => [
+        'array' => 'O campo :attribute deve conter entre :min e :max elementos.',
+        'file' => 'O campo :attribute deve ter entre :min e :max kilobytes.',
+        'numeric' => 'O campo :attribute deve estar entre :min e :max.',
+        'string' => 'O campo :attribute deve ter entre :min e :max caracteres.',
+    ],
+    'boolean' => 'O campo :attribute deve ser verdadeiro ou falso.',
+    'confirmed' => 'A confirmação do campo :attribute não coincide.',
+    'date' => 'O campo :attribute não é uma data válida.',
+    'declined' => 'O campo :attribute deve ser recusado.',
+    'different' => 'Os campos :attribute e :other devem ser diferentes.',
+    'digits' => 'O campo :attribute deve ter :digits dígitos.',
+    'digits_between' => 'O campo :attribute deve ter entre :min e :max dígitos.',
+    'email' => 'O campo :attribute deve ser um endereço de email válido.',
+    'ends_with' => 'O campo :attribute deve terminar com um dos seguintes valores: :values.',
+    'exists' => 'O valor selecionado para :attribute é inválido.',
+    'file' => 'O campo :attribute deve ser um ficheiro.',
+    'filled' => 'O campo :attribute deve ser preenchido.',
+    'gt' => [
+        'numeric' => 'O campo :attribute deve ser maior do que :value.',
+        'string' => 'O campo :attribute deve ter mais de :value caracteres.',
+    ],
+    'gte' => [
+        'numeric' => 'O campo :attribute deve ser maior ou igual a :value.',
+        'string' => 'O campo :attribute deve ter :value ou mais caracteres.',
+    ],
+    'image' => 'O campo :attribute deve ser uma imagem.',
+    'in' => 'O valor selecionado para :attribute é inválido.',
+    'integer' => 'O campo :attribute deve ser um número inteiro.',
+    'lt' => [
+        'numeric' => 'O campo :attribute deve ser menor do que :value.',
+        'string' => 'O campo :attribute deve ter menos de :value caracteres.',
+    ],
+    'lte' => [
+        'numeric' => 'O campo :attribute deve ser menor ou igual a :value.',
+        'string' => 'O campo :attribute não deve ter mais de :value caracteres.',
+    ],
+    'max' => [
+        'array' => 'O campo :attribute não deve conter mais de :max elementos.',
+        'file' => 'O campo :attribute não deve ter mais de :max kilobytes.',
+        'numeric' => 'O campo :attribute não deve ser superior a :max.',
+        'string' => 'O campo :attribute não deve ter mais de :max caracteres.',
+    ],
+    'min' => [
+        'array' => 'O campo :attribute deve conter pelo menos :min elementos.',
+        'file' => 'O campo :attribute deve ter pelo menos :min kilobytes.',
+        'numeric' => 'O campo :attribute deve ser pelo menos :min.',
+        'string' => 'O campo :attribute deve ter pelo menos :min caracteres.',
+    ],
+    'numeric' => 'O campo :attribute deve ser um número.',
+    'present' => 'O campo :attribute deve estar presente.',
+    'regex' => 'O formato do campo :attribute é inválido.',
+    'required' => 'O campo :attribute é obrigatório.',
+    'required_if' => 'O campo :attribute é obrigatório quando :other é :value.',
+    'required_with' => 'O campo :attribute é obrigatório quando :values está presente.',
+    'required_without' => 'O campo :attribute é obrigatório quando :values não está presente.',
+    'same' => 'Os campos :attribute e :other devem coincidir.',
+    'size' => [
+        'array' => 'O campo :attribute deve conter :size elementos.',
+        'file' => 'O campo :attribute deve ter :size kilobytes.',
+        'numeric' => 'O campo :attribute deve ser :size.',
+        'string' => 'O campo :attribute deve ter :size caracteres.',
+    ],
+    'starts_with' => 'O campo :attribute deve começar com um dos seguintes valores: :values.',
+    'string' => 'O campo :attribute deve ser texto.',
+    'unique' => 'O valor do campo :attribute já está a ser utilizado.',
+    'uploaded' => 'Não foi possível carregar o campo :attribute.',
+    'url' => 'O formato do campo :attribute é inválido.',
+
+    'custom' => [],
+
+    /*
+    | Checkout form fields. Keys match the request input names used by
+    | CheckoutController::store(), so errors read naturally in Portuguese.
+    */
+    'attributes' => [
+        'email' => 'email',
+        'order_notes' => 'notas da encomenda',
+        'shipping_method' => 'método de envio',
+        'payment_method' => 'método de pagamento',
+        'shipping-first_name' => 'nome próprio',
+        'shipping-last_name' => 'apelido',
+        'shipping-address_1' => 'morada',
+        'shipping-address_2' => 'complemento da morada',
+        'shipping-city' => 'localidade',
+        'shipping-postcode' => 'código postal',
+        'shipping-country' => 'país',
+        'shipping-phone' => 'telemóvel',
+        'billing-first_name' => 'nome próprio de faturação',
+        'billing-last_name' => 'apelido de faturação',
+        'billing-address_1' => 'morada de faturação',
+        'billing-address_2' => 'complemento da morada de faturação',
+        'billing-city' => 'localidade de faturação',
+        'billing-postcode' => 'código postal de faturação',
+        'billing-country' => 'país de faturação',
+        'billing-phone' => 'telemóvel de faturação',
+    ],
+
+];

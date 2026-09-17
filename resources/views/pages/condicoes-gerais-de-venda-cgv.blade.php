@@ -1,6 +1,8 @@
 @extends('layouts.app')
 
-@section('title', __('Condiciones generales de venta CGV'))
+@section('title', __('Condições gerais de venda CGV'))
+@section('meta_description', 'Condições gerais de venda da Naturalenha: encomendas, pagamentos, entregas em Portugal, livre resolução de 14 dias e garantia legal.')
+@section('canonical', route('condicoes-gerais-de-venda-cgv'))
 
 @push('styles')
 @endpush
@@ -13,7 +15,7 @@
             <div class="container">
                 <div class="breadscrumb-inner">
                     <ol class="breadcrumb">
-                        <li><a href="{{ route('home') }}" class="active">Inicio</a> </li>
+                        <li><a href="{{ route('home') }}" class="active">Início</a> </li>
                         <li class="active">Página</li>
                     </ol>
                 </div>
@@ -21,7 +23,7 @@
         </section>
         <div class="title-not-breadcrumbs">
             <div class="container">
-                <h1 class="page-title">Condiciones generales de venta CGV</h1>
+                <h1 class="page-title">Condições gerais de venda CGV</h1>
             </div>
         </div>
         <section id="main-container" class="container">
@@ -29,199 +31,56 @@
                 <div id="main-content" class="main-page col-12">
                     <div id="main" class="site-main">
 
-                        <h2 class="wp-block-heading">Preámbulo</h2>
+                        <h2>1. Preâmbulo</h2>
+                        <p>As presentes Condições Gerais de Venda (CGV) regem as vendas efetuadas no site <a href="{{ route('home') }}">{{ config('company.website') }}</a>, explorado pela {{ config('company.legal_name') }}, e definem os direitos e obrigações das partes na venda online de lenha, pellets de madeira, madeira densificada e equipamentos de aquecimento a consumidores em Portugal.</p>
+                        <p>Ao confirmar a encomenda, o cliente declara ter lido e aceite estas CGV.</p>
 
-
-
-                        <p>Las presentes Condiciones Generales de Venta (en adelante &#8220;CGV&#8221;) rigen las
-                            ventas realizadas en el sitio <a href="{{ route('home') }}">https://lenhaviva.com</a>, operado
-                            por LENHA VIVA, y definen los derechos y obligaciones de las partes en la venta online de
-                            joyas y accesorios.</p>
-
-
-
-                        <p>Al realizar un pedido, el cliente reconoce haber leído y aceptado estas CGV sin reservas.
+                        <h2>2. Identificação do vendedor</h2>
+                        <p>
+                            {{ config('company.legal_name') }} — {{ config('company.legal_form') }}<br>
+                            NIF / NIPC: {{ config('company.nif') }} · IVA: {{ config('company.vat') }}<br>
+                            Morada: {{ config('company.address_line') }}<br>
+                            E-mail: <a href="mailto:{{ config('company.email') }}">{{ config('company.email') }}</a><br>
+                            Telefone / WhatsApp: <a href="tel:{{ config('company.phone_tel') }}">{{ config('company.phone') }}</a>
                         </p>
 
+                        <h2>3. Produtos</h2>
+                        <p>Os produtos são descritos no catálogo com a maior precisão possível. As fotografias são ilustrativas e podem diferir ligeiramente da realidade (lote, ecrã ou embalagem). As características relevantes (dimensões, peso, potência, quantidade) constam da ficha de produto.</p>
 
+                        <h2>4. Preços</h2>
+                        <p>Os preços apresentados estão em euros, com IVA incluído. O envio é gratuito em Portugal Continental. Os envios para os Açores e a Madeira são feitos sob consulta e o respetivo custo é comunicado antes da confirmação do pagamento, conforme a <a href="{{ route('politicaDeEntrega') }}">política de entrega</a>.</p>
+                        <p>A {{ config('company.brand') }} pode alterar os preços a qualquer momento; aplica-se o preço em vigor no momento em que a encomenda é submetida.</p>
 
-                        <ol start="2" class="wp-block-list">
-                            <li>Información Legal</li>
-                        </ol>
+                        <h2>5. Encomenda</h2>
+                        <p>O cliente seleciona os produtos, indica a morada de entrega em Portugal e confirma o processo de compra. A encomenda fica registada após a submissão. Só é preparada depois da receção do pagamento integral por transferência bancária.</p>
+                        <p>A {{ config('company.brand') }} pode recusar ou cancelar uma encomenda em caso de erro manifesto de preço, falta de stock, suspeita de fraude ou morada de entrega fora das zonas servidas.</p>
 
+                        <h2>6. Pagamento</h2>
+                        <p>O método de pagamento aceite é a transferência bancária. Os dados bancários são enviados por e-mail após a encomenda. Não pedimos dados de cartão. Pormenores na <a href="{{ route('politicaDePagamento') }}">política de pagamento</a>.</p>
 
+                        <h2>7. Entrega</h2>
+                        <p>As entregas são efetuadas em Portugal. Portugal Continental: envio gratuito, prazo habitual de 3 a 5 dias úteis após a confirmação do pagamento. Açores e Madeira: sob consulta. Os prazos são indicativos. Em caso de atraso superior a 30 dias após a data prevista, o consumidor pode resolver o contrato e obter o reembolso das quantias pagas, nos termos da lei.</p>
+                        <p>A entrega de paletes é feita a pé de camião. Consulte a <a href="{{ route('politicaDeEntrega') }}">política de entrega</a>.</p>
 
-                        <p>Nombre: Lenha Viva, Unipessoal Lda</p>
+                        <h2>8. Direito de livre resolução</h2>
+                        <p>Nos termos do Decreto-Lei n.º 24/2014, o consumidor tem 14 dias a contar da receção dos bens para resolver o contrato, sem necessidade de justificação. Na livre resolução, os custos de devolução dos bens são da responsabilidade do consumidor, salvo se o produto estiver com defeito ou não corresponder à encomenda. O procedimento, as exclusões (bens personalizados, pellets ou lenha abertos/utilizados, equipamentos instalados ou usados) e o modelo de declaração constam da <a href="{{ route('politicaDeReembolso') }}">política de reembolso</a>.</p>
 
+                        <h2>9. Garantia legal de conformidade</h2>
+                        <p>Os bens de consumo beneficiam da garantia legal de conformidade prevista no Decreto-Lei n.º 84/2021 (em regra, 3 anos a contar da entrega, para bens novos). Em caso de falta de conformidade, o consumidor tem direito à reposição da conformidade (reparação ou substituição), à redução do preço ou à resolução do contrato, nos termos da lei.</p>
 
+                        <h2>10. Responsabilidade</h2>
+                        <p>A {{ config('company.brand') }} não responde por danos decorrentes de utilização indevida do produto ou em desconformidade com as instruções. Os atrasos causados por força maior (condições meteorológicas extremas, greves de transportadores, restrições de acesso) são comunicados ao cliente.</p>
 
-                        <p><strong>NIF:</strong> 516429655</p>
+                        <h2>11. Apoio ao cliente e reclamações</h2>
+                        <p>Contacto: <a href="mailto:{{ config('company.email') }}">{{ config('company.email') }}</a> · <a href="tel:{{ config('company.phone_tel') }}">{{ config('company.phone') }}</a> · <a href="{{ route('contacto') }}">formulário de contacto</a>.</p>
+                        <p>Livro de Reclamações Eletrónico: <a href="{{ config('company.livro_reclamacoes') }}" target="_blank" rel="noopener">{{ config('company.livro_reclamacoes') }}</a></p>
 
-
-
-                        <p><strong>IVA:</strong> PT516429655</p>
-
-
-
-                        <p>Dirección: Rua Da Graça Nr. 19 Corga 3550-243 PINDO Portugal</p>
-
-
-
-                        <p>Correo electrónico: contactlehnaviva@gmail.com </p>
-
-
-
-                        <ol start="3" class="wp-block-list">
-                            <li>Productos</li>
-                        </ol>
-
-
-
-                        <p>Los productos ofrecidos a la venta se describen y presentan con la mayor precisión
-                            posible. Las fotografías son meramente informativas y pueden diferir ligeramente de la
-                            realidad debido a la configuración de la pantalla o a los lotes de producción.</p>
-
-
-
-                        <ol start="4" class="wp-block-list">
-                            <li>Precios</li>
-                        </ol>
-
-
-
-                        <p>Los precios que figuran en el sitio están expresados en euros, con todos los impuestos
-                            incluidos (IVA incluido), excluyendo los gastos de envío.<br>LENHA VIVA se reserva el
-                            derecho de modificar sus precios en cualquier momento, si bien los productos se
-                            facturarán con base en los precios vigentes en el momento del pedido.</p>
-
-
-
-                        <p>5.º Pedido</p>
-
-
-
-                        <p>El cliente realiza su pedido seleccionando los productos y confirmando el proceso de
-                            compra en línea.<br>El pedido solo se considerará finalizado tras la recepción del pago
-                            íntegro.<br>LENHA VIVA se reserva el derecho de rechazar o cancelar cualquier
-                            pedido en caso de disputa de pago o sospecha de fraude.</p>
-
-
-
-                        <p>6.º Pago</p>
-
-
-
-                        <p>Los métodos de pago aceptados se especifican en el sitio (transferencia bancaria,
-                            etc.).<br>Las transacciones están protegidas por un sistema de cifrado para proteger la
-                            información bancaria del cliente.</p>
-
-
-
-                        <ol start="7" class="wp-block-list">
-                            <li>Entrega</li>
-                        </ol>
-
-
-
-                        <p>Las entregas se realizan en Portugal e internacionalmente (según las zonas atendidas).
-                        </p>
-
-
-
-                        <p>Los plazos de entrega se ofrecen únicamente a título informativo y pueden variar según
-                            el destino.</p>
-
-
-
-                        <p>En caso de retraso superior a 30 días, el cliente podrá cancelar su pedido y
-                            solicitar el reembolso.</p>
-
-
-
-                        <p>Los gastos de entrega se indican en la confirmación del pedido.</p>
-
-
-
-                        <p>8.º Derecho de Desistimiento</p>
-
-
-
-                        <p>De acuerdo con el Artículo L. 221-18 del Código del Consumidor de Portugal, el cliente
-                            dispone de 14 días desde la recepción del pedido para ejercer el derecho de
-                            desistimiento, sin necesidad de justificación.</p>
-
-
-
-                        <p>Determinados productos no son aptos para el derecho de desistimiento, entre ellos:</p>
-
-
-
-                        <p>Joyas personalizadas o grabadas,</p>
-
-
-
-                        <p>Productos que hayan sido utilizados por motivos de higiene.</p>
-
-
-
-                        <p>En caso de desistimiento, el cliente deberá devolver el producto, a su costa, en
-                            perfectas condiciones y en su embalaje original.</p>
-
-
-
-                        <ol start="9" class="wp-block-list">
-                            <li>Garantías</li>
-                        </ol>
-
-
-
-                        <p>Todos los productos están cubiertos por la garantía legal de conformidad (artículos
-                            L. 217-3 y siguientes del Código del Consumidor portugués) y por la garantía frente a
-                            vicios ocultos (artículos 1641 y siguientes del Código Civil portugués).</p>
-
-
-
-                        <p>En caso de detectar un defecto, el cliente deberá notificarlo a LENHA VIVA lo antes
-                            posible para gestionar el cambio, la reparación o el reembolso.</p>
-
-
-
-                        <ol start="10" class="wp-block-list">
-                            <li>Responsabilidad</li>
-                        </ol>
-
-
-
-                        <p>LENHA VIVA no se hace responsable de los daños derivados de un uso indebido del
-                            producto o de un uso no conforme con su finalidad prevista.<br>La
-                            empresa no se hace responsable de los retrasos en la entrega por motivos de fuerza mayor.</p>
-
-
-
-                        <ol start="11" class="wp-block-list">
-                            <li>Atención al Cliente</li>
-                        </ol>
-
-
-
-                        <p>Para cualquier duda o reclamación, el cliente puede ponerse en contacto con el servicio
-                            de atención al cliente a través de la siguiente dirección:<br>📧 contactlehnaviva@gmail.com </p>
-
-
-
-                        <p>12.º Ley Aplicable y Jurisdicción</p>
-
-
-
-                        <p>Estas Condiciones Generales se rigen por la legislación portuguesa. En caso de litigio, y
-                            en ausencia de una solución amistosa, los tribunales competentes serán los de la
-                            jurisdicción del Tribunal da Relação de Lisboa (Portugal).</p>
-                    </div><!-- .site-main -->
-
-                </div><!-- .content-area -->
+                        <h2>12. Lei aplicável e litígios</h2>
+                        <p>Estas CGV são regidas pela lei portuguesa. Em caso de litígio de consumo, o consumidor pode recorrer a uma entidade de RAL nos termos da Lei n.º 144/2015. A {{ config('company.legal_name') }} não está, neste momento, aderente a uma entidade de RAL específica. Lista das entidades: <a href="{{ config('company.ral_list') }}" target="_blank" rel="noopener">consumidor.gov.pt</a>. Plataforma europeia de RLL: <a href="{{ config('company.odr') }}" target="_blank" rel="noopener">{{ config('company.odr') }}</a>. Subsidiariamente, são competentes os tribunais portugueses, sem prejuízo das regras de competência em matéria de consumidores.</p>
+                    </div>
+                </div>
             </div>
         </section>
-
     </div>
 
     @include('layouts.partials.footer.public')

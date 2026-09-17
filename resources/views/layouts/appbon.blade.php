@@ -5,7 +5,7 @@ voici la strucuture de ma page selon toi quelle sont les lient qui ne serve a ri
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Lenha Viva &#8211; Compre a sua lenha, pellets de madeira e fogão a lenha com a Lenha Viva</title>
+    <title>Naturalenha &#8211; Compre a sua lenha, pellets de madeira e fogão a lenha com a Naturalenha</title>
     <meta name='robots' content='max-image-preview:large' />
 
     <link rel='stylesheet' id='easy-autocomplete-css'

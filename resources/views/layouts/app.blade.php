@@ -1,18 +1,116 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="pt-PT">
 
 <head>
     <meta charset="UTF-8" />
 
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>
-        {{ trim(View::yieldContent('title') . ' | ' . config('app.name')) }}
-    </title>
+    @php
+        $seoTitle = trim($__env->yieldContent('title'));
+        // Past ~60 characters Google truncates the tag, so the brand suffix is dropped.
+        $seoFullTitle = match (true) {
+            $seoTitle === '' => config('app.name').' — Pellets, lenha e aquecimento ao domicílio',
+            mb_strlen($seoTitle) > 47 => $seoTitle,
+            default => $seoTitle.' | '.config('app.name'),
+        };
+        $seoDescription = trim($__env->yieldContent('meta_description'))
+            ?: 'Naturalenha: pellets de madeira, lenha e equipamentos de aquecimento com envio grátis em Portugal Continental. Pagamento seguro por transferência bancária.';
+        $seoCanonical = trim($__env->yieldContent('canonical')) ?: url()->current();
+        $seoCanonical = strtok($seoCanonical, '?') ?: $seoCanonical;
+        if (! \App\Support\Seo::isThinListingQuery()) {
+            $seoPage = (int) request('page', 1);
+            if ($seoPage > 1) {
+                $seoCanonical .= '?page='.$seoPage;
+            }
+        }
+        $seoOgImage = trim($__env->yieldContent('og_image')) ?: asset(config('company.logo'));
+        $seoRobots = \App\Support\Seo::robots(trim($__env->yieldContent('meta_robots')));
+        $seoOgType = trim($__env->yieldContent('og_type')) ?: 'website';
+        $seoIndexable = ! str_contains(strtolower($seoRobots), 'noindex');
+        $seoJsonFlags = JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT;
+        $orgAddress = [
+            '@type' => 'PostalAddress',
+            'streetAddress' => trim(config('company.address.line_1').', '.config('company.address.line_2')),
+            'addressLocality' => config('company.address.city'),
+            'addressRegion' => config('company.address.district'),
+            'postalCode' => config('company.address.postcode'),
+            'addressCountry' => 'PT',
+        ];
+        $orgSchema = [
+            '@context' => 'https://schema.org',
+            '@type' => ['Organization', 'LocalBusiness'],
+            '@id' => config('company.website').'#organization',
+            'name' => config('company.legal_name'),
+            'legalName' => config('company.legal_name'),
+            'url' => config('company.website'),
+            'logo' => asset(config('company.logo')),
+            'image' => asset(config('company.logo')),
+            'email' => config('company.email'),
+            'telephone' => config('company.phone'),
+            'vatID' => config('company.vat'),
+            'taxID' => config('company.nif'),
+            'address' => $orgAddress,
+            'areaServed' => [
+                '@type' => 'Country',
+                'name' => 'Portugal',
+            ],
+            'contactPoint' => [
+                '@type' => 'ContactPoint',
+                'telephone' => config('company.phone'),
+                'email' => config('company.email'),
+                'contactType' => 'customer service',
+                'availableLanguage' => ['Portuguese'],
+                'areaServed' => 'PT',
+            ],
+        ];
+        $graph = [$orgSchema];
+        if (request()->routeIs('home')) {
+            $graph[] = [
+                '@type' => 'WebSite',
+                '@id' => config('company.website').'#website',
+                'url' => config('company.website'),
+                'name' => config('company.brand'),
+                'inLanguage' => 'pt-PT',
+                'publisher' => ['@id' => config('company.website').'#organization'],
+                'potentialAction' => [
+                    '@type' => 'SearchAction',
+                    'target' => [
+                        '@type' => 'EntryPoint',
+                        'urlTemplate' => route('loja').'?s={search_term_string}',
+                    ],
+                    'query-input' => 'required name=search_term_string',
+                ],
+            ];
+        }
+        $seoGraph = ['@context' => 'https://schema.org', '@graph' => $graph];
+    @endphp
+    <title>{{ $seoFullTitle }}</title>
+    <meta name="description" content="{{ $seoDescription }}">
+    <meta name="robots" content="{{ $seoRobots }}">
+    <meta name="author" content="{{ config('company.legal_name') }}">
+    <meta name="theme-color" content="#1b3022">
+    <link rel="canonical" href="{{ $seoCanonical }}">
+    @if($seoIndexable)
+        <link rel="alternate" hreflang="pt-PT" href="{{ $seoCanonical }}">
+        <link rel="alternate" hreflang="x-default" href="{{ $seoCanonical }}">
+    @endif
+    <meta property="og:locale" content="pt_PT">
+    <meta property="og:type" content="{{ $seoOgType }}">
+    <meta property="og:site_name" content="{{ config('app.name') }}">
+    <meta property="og:title" content="{{ $seoFullTitle }}">
+    <meta property="og:description" content="{{ $seoDescription }}">
+    <meta property="og:url" content="{{ $seoCanonical }}">
+    <meta property="og:image" content="{{ $seoOgImage }}">
+    <meta property="og:image:alt" content="{{ trim($__env->yieldContent('og_image_alt')) ?: config('company.legal_name') }}">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ $seoFullTitle }}">
+    <meta name="twitter:description" content="{{ $seoDescription }}">
+    <meta name="twitter:image" content="{{ $seoOgImage }}">
+    <script type="application/ld+json">{!! json_encode($seoGraph, $seoJsonFlags) !!}</script>
 
-    <link rel="icon" type="image/png" href="{{ asset('/wp-content/uploads/2022/01/er-01-scaled.png') }}" sizes="96x96">
-    <link rel="icon" type="image/svg+xml" href="{{ asset('/wp-content/uploads/2022/01/er-01-scaled.png') }}">
-    <link rel="shortcut icon" href="{{ asset('/wp-content/uploads/2022/01/er-01-scaled.png') }} ">
+    <link rel="icon" type="image/png" href="{{ asset(config('company.logo')) }}" sizes="96x96">
+    <link rel="shortcut icon" href="{{ asset(config('company.logo')) }}">
 
 
     <script type="text/javascript"
@@ -181,19 +279,36 @@
 <script>
   gtag('event', 'conversion', {'send_to': 'AW-17798780713/RgASCMbum9obEKmuj6dC'});
 </script>
+
+    @stack('head')
 </head>
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-MX4HS3ZTPP"></script>
+<!-- Google tag (gtag.js) + Consent Mode v2 -->
 <script>
     window.dataLayer = window.dataLayer || [];
-
-    function gtag() {
-        dataLayer.push(arguments);
-    }
+    function gtag() { dataLayer.push(arguments); }
+    gtag('consent', 'default', {
+        ad_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied',
+        analytics_storage: 'denied'
+    });
+    try {
+        if (localStorage.getItem('lv_cookie_consent') === 'granted') {
+            gtag('consent', 'update', {
+                ad_storage: 'granted',
+                ad_user_data: 'granted',
+                ad_personalization: 'granted',
+                analytics_storage: 'granted'
+            });
+        }
+    } catch (e) {}
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MX4HS3ZTPP"></script>
+<script>
     gtag('js', new Date());
-
     gtag('config', 'G-MX4HS3ZTPP');
+    gtag('config', 'AW-17798780713');
 </script>
 
 <body>
@@ -408,7 +523,7 @@
                                 <div class="mini_cart_inner">
                                     <div class="mcart-border">
                                         <div class="alert alert-danger m-2">
-                                            Error al cargar el carrito
+                                            Erro ao carregar o carrinho
                                         </div>
                                     </div>
                                 </div>
@@ -494,7 +609,7 @@
                     e.preventDefault();
                     e.stopPropagation();
 
-                    if (!confirm('¿Seguro que quieres eliminar este artículo del carrito?')) {
+                    if (!confirm('Tem a certeza de que quer remover este artigo do carrinho?')) {
                         return;
                     }
 
@@ -516,12 +631,12 @@
                                     updateAllMiniCarts();
                                     // Mettre à jour le compteur
                                     updateCartCount(response);
-                                    showNotification('Artículo eliminado del carrito',
+                                    showNotification('Artigo removido do carrinho',
                                         'success');
                                 }
                             },
                             error: function() {
-                                showNotification('Error de conexión', 'error');
+                                showNotification('Erro de conexão', 'error');
                                 itemElement.show();
                             }
                         });
@@ -610,7 +725,7 @@
                             updateCartCount(response);
                             // Mettre à jour tous les mini-paniers
                             updateAllMiniCarts();
-                            showNotification('Cantidad actualizada', 'success');
+                            showNotification('Quantidade atualizada', 'success');
 
                             // Si on est sur la page du panier, recharger
                             if (window.location.pathname === '/carrinho') {
@@ -619,12 +734,12 @@
                                 }, 500);
                             }
                         } else {
-                            showNotification('Error al actualizar la cantidad', 'error');
+                            showNotification('Erro ao atualizar a quantidade', 'error');
                             updateAllMiniCarts(); // Recharger pour resynchroniser
                         }
                     },
                     error: function() {
-                        showNotification('Error de conexión', 'error');
+                        showNotification('Erro de conexão', 'error');
                         updateAllMiniCarts(); // Recharger pour resynchroniser
                     }
                 });
@@ -640,7 +755,7 @@
 
                  if (!productId) {
                      console.error('ERROR: Product ID manquant sur le bouton');
-                     showNotification('Erreur: ID produit manquant', 'error');
+                     showNotification('Erro: ID do produto em falta', 'error');
                      return;
                  }
 
@@ -651,7 +766,7 @@
                  var originalText = button.find('.title-cart').text();
 
                  // État de chargement
-                 button.html('<span class="title-cart">Chargement...</span>');
+                 button.html('<span class="title-cart">A carregar...</span>');
                  button.prop('disabled', true).addClass('loading');
 
                  // Envoyer la requête
@@ -671,10 +786,10 @@
                              // Succès
                              updateCartCount(response);
                              updateAllMiniCarts(); // Mettre à jour TOUS les mini-paniers
-                             showNotification(response.message || 'Produit ajouté au panier!', 'success');
+                             showNotification(response.message || 'Produto adicionado ao carrinho!', 'success');
 
                              // Animation de succès
-                             button.html('<span class="title-cart">✓ Ajouté!</span>');
+                             button.html('<span class="title-cart">✓ Adicionado!</span>');
                              button.removeClass('loading').addClass('success');
 
                              // Restaurer après 2 secondes
@@ -687,7 +802,7 @@
                              // Erreur du serveur
                              var errorMsg = response && response.message
                                  ? response.message
-                                 : 'Erreur lors de l\'ajout au panier';
+                                 : 'Erro ao adicionar ao carrinho';
 
                              showNotification(errorMsg, 'error');
                              button.html(originalHtml);
@@ -697,13 +812,13 @@
                      error: function (xhr, status, error) {
                          console.error('AJAX ERROR:', status, error);
 
-                         var errorMsg = 'Erreur de connexion';
+                         var errorMsg = 'Erro de conexão';
                          if (xhr.responseJSON && xhr.responseJSON.message) {
                              errorMsg = xhr.responseJSON.message;
                          } else if (xhr.status === 0) {
-                             errorMsg = 'Pas de connexion internet';
+                             errorMsg = 'Sem ligação à Internet';
                          } else if (xhr.status === 500) {
-                             errorMsg = 'Erreur serveur';
+                             errorMsg = 'Erro do servidor';
                          }
 
                          showNotification(errorMsg, 'error');
@@ -872,7 +987,7 @@
                 var productId = button.data('product-id');
 
                 if (!productId) {
-                    showNotification('ID de producto no válido', 'error');
+                    showNotification('ID do produto inválido', 'error');
                     return;
                 }
 
@@ -923,11 +1038,11 @@
                             }
                         } else {
                             showNotification(response.message ||
-                                'Error al añadir el producto al carrito', 'error');
+                                'Erro ao adicionar o produto ao carrinho', 'error');
                         }
                     },
                     error: function(xhr) {
-                        showNotification('Error de conexión', 'error');
+                        showNotification('Erro de conexão', 'error');
                         console.error('AJAX Error:', xhr.responseText);
                     }
                 });
@@ -977,14 +1092,14 @@
                     success: function(response) {
                         if (response.success) {
                             updateCartDisplay(response);
-                            showNotification('Cantidad actualizada');
+                            showNotification('Quantidade atualizada');
                         } else {
-                            showNotification('Error al actualizar la cantidad', 'error');
+                            showNotification('Erro ao atualizar a quantidade', 'error');
                             window.location.reload();
                         }
                     },
                     error: function() {
-                        showNotification('Error de conexión', 'error');
+                        showNotification('Erro de conexão', 'error');
                         window.location.reload();
                     }
                 });
@@ -992,7 +1107,7 @@
 
             // Supprimer un article
             $(document).on('click', '.remove-item', function() {
-                if (!confirm('¿Seguro que quieres eliminar este artículo del carrito?')) {
+                if (!confirm('Tem a certeza de que quer remover este artigo do carrinho?')) {
                     return;
                 }
 
@@ -1015,11 +1130,11 @@
                                     row.remove();
                                     updateCartDisplay(response);
                                 }
-                                showNotification('Artículo eliminado del carrito');
+                                showNotification('Artigo removido do carrinho');
                             }
                         },
                         error: function() {
-                            showNotification('Error de conexión', 'error');
+                            showNotification('Erro de conexão', 'error');
                             row.show();
                         }
                     });
@@ -1038,7 +1153,7 @@
                         }
                     },
                     error: function() {
-                        console.log('No se ha podido cargar el carrito');
+                        console.log('Não foi possível carregar o carrinho');
                     }
                 });
             }
@@ -1095,18 +1210,18 @@
                             button.classList.add('wishlist-added');
                             button.querySelector('svg').setAttribute('fill', 'red');
                             button.querySelector('.yith-wcwl-add-to-wishlist-button__label').textContent =
-                                'En la lista';
+                                'Na lista';
 
                             // Mettre à jour le compteur si présent
                             updateWishlistCount(data.count);
 
                             // Afficher une notification
-                            showNotification('Producto añadido a la lista de deseos', 'success');
+                            showNotification('Produto adicionado à lista de desejos', 'success');
                         }
                     })
                     .catch(error => {
                         console.error('Error:', error);
-                        showNotification('Se ha producido un error', 'error');
+                        showNotification('Ocorreu um erro', 'error');
                     });
             }
 
@@ -1128,7 +1243,7 @@
                             button.classList.remove('wishlist-added');
                             button.querySelector('svg').setAttribute('fill', 'none');
                             button.querySelector('.yith-wcwl-add-to-wishlist-button__label').textContent =
-                                'Añadir a la lista de deseos';
+                                'Adicionar à lista de desejos';
 
                             // Mettre à jour le compteur si présent
                             updateWishlistCount(data.count);
@@ -1146,12 +1261,12 @@
                                 }
                             }
 
-                            showNotification('Producto eliminado de la lista de deseos', 'success');
+                            showNotification('Produto removido da lista de desejos', 'success');
                         }
                     })
                     .catch(error => {
                         console.error('Error:', error);
-                        showNotification('Se ha producido un error', 'error');
+                        showNotification('Ocorreu um erro', 'error');
                     });
             }
 
@@ -1217,6 +1332,48 @@
         });
     </script>
     @stack('scripts')
+
+    <div id="lv-cookie-banner" class="lv-cookie" hidden role="dialog" aria-labelledby="lv-cookie-title" aria-live="polite">
+        <p id="lv-cookie-title" class="lv-cookie__text">
+            Utilizamos cookies necessários à loja (carrinho e sessão) e, com o seu consentimento, cookies de análise e publicidade (Google Analytics e Google Ads).
+            Consulte a <a href="{{ route('politica-de-privacidade') }}">política de privacidade</a>.
+        </p>
+        <div class="lv-cookie__actions">
+            <button type="button" class="lv-cookie__btn lv-cookie__btn--ghost" data-cookie-consent="denied">Recusar</button>
+            <button type="button" class="lv-cookie__btn" data-cookie-consent="granted">Aceitar</button>
+        </div>
+    </div>
+    <script>
+        (function () {
+            var key = 'lv_cookie_consent';
+            var banner = document.getElementById('lv-cookie-banner');
+            if (!banner) return;
+            var stored = null;
+            try { stored = localStorage.getItem(key); } catch (e) {}
+            function apply(value) {
+                if (typeof gtag === 'function') {
+                    var granted = value === 'granted';
+                    gtag('consent', 'update', {
+                        ad_storage: granted ? 'granted' : 'denied',
+                        ad_user_data: granted ? 'granted' : 'denied',
+                        ad_personalization: granted ? 'granted' : 'denied',
+                        analytics_storage: granted ? 'granted' : 'denied'
+                    });
+                }
+            }
+            if (!stored) {
+                banner.hidden = false;
+            }
+            banner.addEventListener('click', function (event) {
+                var btn = event.target.closest('[data-cookie-consent]');
+                if (!btn) return;
+                var value = btn.getAttribute('data-cookie-consent');
+                try { localStorage.setItem(key, value); } catch (e) {}
+                apply(value);
+                banner.hidden = true;
+            });
+        })();
+    </script>
 
 </body>
 

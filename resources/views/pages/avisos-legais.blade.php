@@ -1,6 +1,8 @@
 @extends('layouts.app')
 
-@section('title', __('Avisos legales'))
+@section('title', __('Avisos legais'))
+@section('meta_description', 'Avisos legais da Naturalenha, Unipessoal, Lda: identificação da empresa, NIF 508162599, morada em Palmela e dados de contacto.')
+@section('canonical', route('avisos-legais'))
 
 @push('styles')
 @endpush
@@ -12,7 +14,7 @@
             <div class="container">
                 <div class="breadscrumb-inner">
                     <ol class="breadcrumb">
-                        <li><a href="{{ route('home') }}" class="active">Inicio</a> </li>
+                        <li><a href="{{ route('home') }}" class="active">Início</a> </li>
                         <li class="active">Página</li>
                     </ol>
                 </div>
@@ -20,7 +22,7 @@
         </section>
         <div class="title-not-breadcrumbs">
             <div class="container">
-                <h1 class="page-title">Avisos legales</h1>
+                <h1 class="page-title">Avisos legais</h1>
             </div>
         </div>
         <section id="main-container" class="container">
@@ -28,109 +30,67 @@
                 <div id="main-content" class="main-page col-12">
                     <div id="main" class="site-main">
 
-                        <p>Divulgación de acuerdo con la Sección 5 de la Ley de Comercio Electrónico</p>
+                        <p>Informação societária e de identificação do prestador da sociedade da informação, nos termos do Decreto-Lei n.º 7/2004, de 7 de janeiro (comércio eletrónico), e da legislação comercial portuguesa aplicável.</p>
 
+                        <h2>Identificação da empresa</h2>
 
-
-                        <p>Lenha Viva, Unipessoal Lda<br>Mayorista de Madera<br><strong>Dirección:</strong> Rua Da
-                            Graça Nr. 19 Corga 3550-243 PINDO Portugal</p>
-
-
-
-                        <p><strong>Correo electrónico:</strong> contactlehnaviva@gmail.com <br>WhatsApp: +34 683 5735 16</p>
-
-
-
-                        <p><strong>NIF:</strong> 516429655</p>
-
-
-
-                        <p><strong>IVA:</strong> PT516429655</p>
-
-
-
-                        <p>La empresa <strong>LENHA VIVA UNIPESSOAL LDA</strong> es una Sociedad Limitada
-                            Unipersonal, <strong>constituida</strong> el <strong>miércoles, 28 de
-                                abril de 2021</strong>, con domicilio social en el municipio de PENALVA DO CASTELO.<br>Objeto
-                            Comercial: Comercio, explotación forestal<br>Rama Profesional: Comercio de madera<br>
+                        <p>
+                            <strong>{{ config('company.legal_name') }}</strong><br>
+                            {{ config('company.legal_form') }}<br>
+                            {{ config('company.activity') }}
                         </p>
 
+                        <p>
+                            <strong>Sede / morada:</strong> {{ config('company.address_line') }}<br>
+                            <strong>E-mail:</strong> <a href="mailto:{{ config('company.email') }}">{{ config('company.email') }}</a><br>
+                            <strong>Telefone / WhatsApp:</strong> <a href="tel:{{ config('company.phone_tel') }}">{{ config('company.phone') }}</a><br>
+                            <strong>NIF / NIPC:</strong> {{ config('company.nif') }}<br>
+                            <strong>IVA:</strong> {{ config('company.vat') }}<br>
+                            <strong>Data de constituição:</strong> {{ config('company.incorporated_at') }}<br>
+                            <strong>Capital social:</strong> {{ config('company.share_capital') }}<br>
+                            <strong>CAE principal:</strong> {{ config('company.cae') }}
+                        </p>
 
+                        <p>O website <a href="{{ route('home') }}">{{ config('company.website') }}</a> é explorado pela {{ config('company.legal_name') }}.</p>
 
-                        <p>El contenido de estas páginas ha sido elaborado con el máximo cuidado. No obstante, no
-                            asumimos responsabilidad alguna por la exactitud, integridad o actualidad de este contenido.</p>
+                        <h2>Contacto</h2>
 
+                        <p>Para informações sobre produtos, encomendas ou reclamações:</p>
+                        <p>
+                            E-mail: <a href="mailto:{{ config('company.email') }}">{{ config('company.email') }}</a><br>
+                            Telefone / WhatsApp: <a href="tel:{{ config('company.phone_tel') }}">{{ config('company.phone') }}</a><br>
+                            Formulário: <a href="{{ route('contacto') }}">página de contacto</a>
+                        </p>
 
+                        <h2>Livro de reclamações</h2>
+                        <p>Nos termos da legislação portuguesa, pode apresentar uma reclamação através do Livro de Reclamações Eletrónico:</p>
+                        <p><a href="{{ config('company.livro_reclamacoes') }}" target="_blank" rel="noopener">{{ config('company.livro_reclamacoes') }}</a></p>
 
-                        <p>Derechos de Autor</p>
+                        <h2>Resolução alternativa de litígios</h2>
+                        <p>Em caso de litígio de consumo, o consumidor pode recorrer a uma entidade de Resolução Alternativa de Litígios (RAL), nos termos da Lei n.º 144/2015. A {{ config('company.legal_name') }} não está, neste momento, aderente a uma entidade de RAL específica. A lista das entidades de RAL disponíveis em Portugal encontra-se em:</p>
+                        <p><a href="{{ config('company.ral_list') }}" target="_blank" rel="noopener">{{ config('company.ral_list') }}</a></p>
+                        <p>Pode também utilizar a plataforma europeia de resolução de litígios em linha:</p>
+                        <p><a href="{{ config('company.odr') }}" target="_blank" rel="noopener">{{ config('company.odr') }}</a></p>
 
+                        <h2>Conteúdo do site</h2>
+                        <p>O conteúdo destas páginas foi elaborado com o máximo cuidado. Sem prejuízo dos direitos legais do consumidor, a {{ config('company.brand') }} não garante que todas as informações estejam permanentemente isentas de imprecisões ou de desatualização pontual, e reserva-se o direito de as corrigir.</p>
 
+                        <h2>Propriedade intelectual</h2>
+                        <p>Todo o conteúdo deste site (textos, imagens, gráficos, logótipos e demais elementos) está protegido pelas leis de propriedade intelectual e pertence à {{ config('company.legal_name') }}, salvo indicação em contrário. Qualquer reprodução, modificação, publicação ou adaptação, total ou parcial, exige autorização prévia por escrito.</p>
 
-                        <p>El contenido de este sitio (texto e imágenes) se pone a disposición de los internautas
-                            exclusivamente para su uso privado. Cualquier uso comercial del contenido requiere la
-                            autorización por escrito de Lenha Viva, Unipessoal Lda. El operador de este sitio se
-                            reserva el derecho exclusivo de utilización del texto y de las imágenes. Quedan
-                            excluidas las imágenes no modificadas y libres de derechos.</p>
+                        <h2>Hiperligações</h2>
+                        <p>O site pode conter hiperligações para sites de terceiros. A {{ config('company.brand') }} não controla esses sites e não assume responsabilidade pelo respetivo conteúdo ou políticas de privacidade.</p>
 
-
-
-                        <p>Propiedad Intelectual:</p>
-
-
-
-                        <p>Todo el contenido de este sitio, incluyendo, entre otros, textos, imágenes, gráficos,
-                            logotipos, vídeos y todos los demás elementos que contiene, está protegido por las leyes
-                            de propiedad intelectual y pertenece exclusivamente a LENHA VIVA, salvo indicación en
-                            contrario.</p>
-
-
-
-                        <p>Cualquier reproducción, representación, modificación, publicación o adaptación de la
-                            totalidad o parte de los elementos del sitio, por cualquier medio o procedimiento, está
-                            prohibida sin la autorización previa por escrito de LENHA VIVA. Cualquier uso no
-                            autorizado del sitio o de sus elementos constituye una infracción y será perseguido de
-                            acuerdo con la legislación aplicable.</p>
-
-
-
-                        <p>Hiperenlaces:</p>
-
-
-
-                        <p>El sitio puede contener hiperenlaces a sitios de terceros. LENHA VIVA no tiene ningún
-                            control sobre estos sitios y declina cualquier responsabilidad por su contenido y
-                            políticas de privacidad.</p>
-
-
-
-                        <p>Datos de contacto:</p>
-
-
-
-                        <p>Dirección postal: LENHA VIVA Niederlassung im Lenha Viva, Unipessoal Lda</p>
-
-
-
-                        <p>Correo electrónico: contactlehnaviva@gmail.com </p>
-
-
-
-                        <p>WhatsApp: +34 683 5735 16</p>
-
-
-
-                        <figure class="wp-block-image size-large is-resized"><a
-                                href="../wp-content/uploads/2025/10/er-01-1-scaled.png"><img loading="lazy" decoding="async"
-                                    width="770" height="361" src="../wp-content/uploads/2025/10/er-01-1-770x361.png"
-                                    alt="" class="wp-image-6024" style="width:273px;height:auto" /></a></figure>
-                    </div><!-- .site-main -->
-
-                </div><!-- .content-area -->
+                        <figure class="wp-block-image size-large is-resized lv-policy__logo">
+                            <img loading="lazy" decoding="async" width="342" height="160"
+                                src="{{ asset(config('company.logo')) }}"
+                                alt="{{ config('company.legal_name') }}" style="width:280px;height:auto" />
+                        </figure>
+                    </div>
+                </div>
             </div>
         </section>
-
     </div>
-
 
     @include('layouts.partials.footer.public')
 @endsection

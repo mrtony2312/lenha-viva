@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Nouvelle Commande Reçue</title>
+    <title>Nova Encomenda Recebida</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -91,34 +91,34 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1>⚠️ NOUVELLE COMMANDE REÇUE</h1>
-            <h2>Commande #{{ $order['order_number'] }}</h2>
+            <h1>⚠️ NOVA ENCOMENDA RECEBIDA</h1>
+            <h2>Encomenda #{{ $order['order_number'] }}</h2>
         </div>
 
         <div class="content">
-            <p class="urgent">Une nouvelle commande a été reçue sur le site Lenha Viva !</p>
+            <p class="urgent">Foi recebida uma nova encomenda no site Naturalenha!</p>
 
             <div class="order-info">
-                <h3>📋 Détails de la Commande</h3>
-                <p><strong>Numéro de Commande :</strong> {{ $order['order_number'] }}</p>
-                <p><strong>Date de la Commande :</strong> {{ $order['date'] }}</p>
-                <p><strong>Date et Heure :</strong> {{ $order['order_date'] }}</p>
-                <p><strong>Méthode de Paiement :</strong> {{ $order['payment_method'] }}</p>
-                <p><strong>Méthode de Livraison :</strong> {{ $order['shipping_method'] }}</p>
-                <p><strong>Quantité Totale d'Articles :</strong> {{ $order['total_items'] }}</p>
-                <p><strong>Montant Total :</strong> {{ $order['formatted_total_price'] }} €</p>
+                <h3>📋 Detalhes da Encomenda</h3>
+                <p><strong>Número da Encomenda:</strong> {{ $order['order_number'] }}</p>
+                <p><strong>Data da Encomenda:</strong> {{ $order['date'] }}</p>
+                <p><strong>Data e Hora:</strong> {{ $order['order_date'] }}</p>
+                <p><strong>Método de Pagamento:</strong> {{ $order['payment_method'] }}</p>
+                <p><strong>Método de Envio:</strong> {{ $order['shipping_method'] }}</p>
+                <p><strong>Quantidade Total de Artigos:</strong> {{ $order['total_items'] }}</p>
+                <p><strong>Valor Total:</strong> {{ $order['formatted_total_price'] }} €</p>
                 @if (!empty($order['order_comments']))
-                    <p><strong>Remarques du Client :</strong> {{ $order['order_comments'] }}</p>
+                    <p><strong>Observações do Cliente:</strong> {{ $order['order_comments'] }}</p>
                 @endif
             </div>
 
-            <h3 class="section-title">👤 Informations du Client</h3>
+            <h3 class="section-title">👤 Informações do Cliente</h3>
             <div class="order-info">
-                <p><strong>Email :</strong> {{ $order['customer']['email'] }}</p>
-                <p><strong>Téléphone :</strong> {{ $order['customer']['phone'] ?: 'Non fourni' }}</p>
+                <p><strong>Email:</strong> {{ $order['customer']['email'] }}</p>
+                <p><strong>Telemóvel:</strong> {{ $order['customer']['phone'] ?: 'Não indicado' }}</p>
             </div>
 
-            <h3 class="section-title">📍 Adresse de Livraison</h3>
+            <h3 class="section-title">📍 Morada de Entrega</h3>
             <div class="address-box">
                 <p><strong>{{ $order['customer']['first_name'] }} {{ $order['customer']['last_name'] }}</strong></p>
                 <p>{{ $order['customer']['address_1'] }}</p>
@@ -129,7 +129,7 @@
                 <p>{{ $order['customer']['country'] }}</p>
             </div>
 
-            <h3 class="section-title">🏢 Adresse de Facturation</h3>
+            <h3 class="section-title">🏢 Morada de Faturação</h3>
             <div class="billing-box">
                 <p><strong>{{ $order['billing']['first_name'] }} {{ $order['billing']['last_name'] }}</strong></p>
                 <p>{{ $order['billing']['address_1'] }}</p>
@@ -139,24 +139,24 @@
                 <p>{{ $order['billing']['postcode'] }} {{ $order['billing']['city'] }}</p>
                 <p>{{ $order['billing']['country'] }}</p>
                 @if (!empty($order['billing']['phone']))
-                    <p><strong>Téléphone (Facturation) :</strong> {{ $order['billing']['phone'] }}</p>
+                    <p><strong>Telemóvel (Faturação):</strong> {{ $order['billing']['phone'] }}</p>
                 @endif
             </div>
 
-            <h3 class="section-title">🛒 Produits Commandés</h3>
+            <h3 class="section-title">🛒 Produtos Encomendados</h3>
             <table class="product-table">
                 <thead>
                     <tr>
-                        <th>Produit</th>
-                        <th>Quantité</th>
-                        <th>Prix Unitaire</th>
+                        <th>Produto</th>
+                        <th>Quantidade</th>
+                        <th>Preço Unitário</th>
                         <th>Total</th>
                     </tr>
                 </thead>
                 <tbody>
                     @foreach ($order['items'] as $item)
                         <tr>
-                            <td>{{ $item['title'] ?? ($item['name'] ?? 'Produit') }}</td>
+                            <td>{{ $item['title'] ?? ($item['name'] ?? 'Produto') }}</td>
                             <td>{{ $item['quantity'] }}</td>
                             <td>{{ number_format($item['price'], 3, ',', ' ') }} €</td>
                             <td>{{ number_format($item['price'] * $item['quantity'], 3, ',', ' ') }} €</td>
@@ -165,37 +165,37 @@
                 </tbody>
                 <tfoot>
                     <tr>
-                        <td colspan="3" style="text-align: right;"><strong>Total :</strong></td>
+                        <td colspan="3" style="text-align: right;"><strong>Total:</strong></td>
                         <td><strong>{{ $order['formatted_total_price'] }} €</strong></td>
                     </tr>
                 </tfoot>
             </table>
 
             <div class="order-info urgent">
-                <h3>📞 Action Requise</h3>
-                <p>Contactez le client pour confirmer la commande et planifier la livraison.</p>
+                <h3>📞 Ação Necessária</h3>
+                <p>Contacte o cliente para confirmar a encomenda e agendar a entrega.</p>
 
-                <p><strong>Informations de Contact :</strong></p>
+                <p><strong>Dados de Contacto:</strong></p>
                 <ul>
-                    <li><strong>Email :</strong> {{ $order['customer']['email'] }}</li>
-                    <li><strong>Téléphone (Livraison) :</strong> {{ $order['customer']['phone'] ?: 'Non disponible' }}
+                    <li><strong>Email:</strong> {{ $order['customer']['email'] }}</li>
+                    <li><strong>Telemóvel (Entrega):</strong> {{ $order['customer']['phone'] ?: 'Não disponível' }}
                     </li>
                     @if (!empty($order['billing']['phone']) && $order['billing']['phone'] != $order['customer']['phone'])
-                        <li><strong>Téléphone (Facturation) :</strong> {{ $order['billing']['phone'] }}</li>
+                        <li><strong>Telemóvel (Faturação):</strong> {{ $order['billing']['phone'] }}</li>
                     @endif
                 </ul>
 
-                <p><strong>Méthode de Paiement :</strong> {{ $order['payment_method'] }}</p>
-                <p><strong>Méthode de Livraison :</strong> {{ $order['shipping_method'] }}</p>
+                <p><strong>Método de Pagamento:</strong> {{ $order['payment_method'] }}</p>
+                <p><strong>Método de Envio:</strong> {{ $order['shipping_method'] }}</p>
             </div>
 
             <div class="order-info">
-                <h3>📝 Récapitulatif de la Commande</h3>
-                <p><strong>ID de la Commande :</strong> {{ $order['order_number'] }}</p>
-                <p><strong>Client :</strong> {{ $order['customer']['first_name'] }}
+                <h3>📝 Resumo da Encomenda</h3>
+                <p><strong>ID da Encomenda:</strong> {{ $order['order_number'] }}</p>
+                <p><strong>Cliente:</strong> {{ $order['customer']['first_name'] }}
                     {{ $order['customer']['last_name'] }}</p>
-                <p><strong>Montant Total :</strong> {{ $order['formatted_total_price'] }} €</p>
-                <p><strong>Date :</strong> {{ $order['order_date'] }}</p>
+                <p><strong>Valor Total:</strong> {{ $order['formatted_total_price'] }} €</p>
+                <p><strong>Data:</strong> {{ $order['order_date'] }}</p>
             </div>
         </div>
     </div>

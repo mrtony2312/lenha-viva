@@ -1,6 +1,8 @@
 @extends('layouts.app')
 
-@section('title', __('Lista de deseos'))
+@section('title', __('Lista de desejos'))
+@section('meta_robots', 'noindex, nofollow')
+@section('canonical', route('lista-de-desejos'))
 
 @push('styles')
     <link rel='stylesheet' id='wc-blocks-style-css'
@@ -21,7 +23,7 @@
     <div id="tbay-main-content" class="mm-page mm-slideout mt-5">
         <div class="title-not-breadcrumbs">
             <div class="container">
-                <h1 class="page-title">Lista de deseos</h1>
+                <h1 class="page-title">Lista de desejos</h1>
             </div>
         </div>
 
@@ -37,13 +39,13 @@
                                     <tr>
                                         <th class="product-thumbnail"></th>
                                         <th class="product-name">
-                                            <span class="nobr">Nombre del producto</span>
+                                            <span class="nobr">Nome do produto</span>
                                         </th>
                                         <th class="product-price">
-                                            <span class="nobr">Precio unitario</span>
+                                            <span class="nobr">Preço unitário</span>
                                         </th>
                                         <th class="product-stock-status">
-                                            <span class="nobr">Estado del stock</span>
+                                            <span class="nobr">Estado do stock</span>
                                         </th>
                                         <th class="product-add-to-cart"></th>
                                         <th class="product-remove"></th>
@@ -83,19 +85,19 @@
                                                         {{ $product['price'] }}&nbsp;<span class="woocommerce-Price-currencySymbol">€</span>
                                                     </span>
                                                 @endif
-                                                <small class="woocommerce-price-suffix">IVA incluido</small>
+                                                <small class="woocommerce-price-suffix">IVA incluído</small>
                                             </td>
                                             <td class="product-stock-status">
-                                                <span class="wishlist-in-stock">En stock</span>
+                                                <span class="wishlist-in-stock">Em stock</span>
                                             </td>
                                             <td class="product-add-to-cart">
                                                 <div class="group-buttons">
-                                                    <div class="add-cart" title="Añadir">
+                                                    <div class="add-cart" title="Adicionar">
                                                         <a href="javascript:void(0);"
                                                            data-product-id="{{ $product['id'] ?? '' }}"
                                                            class="wp-block-button__link add_to_cart_button ajax_add_to_cart"
-                                                           aria-label="Añadir al carrito: &ldquo;{{ $product['title'] ?? 'Producto' }}&rdquo;">
-                                                            <span class="title-cart">Añadir</span>
+                                                           aria-label="Adicionar ao carrinho: &ldquo;{{ $product['title'] ?? 'Produto' }}&rdquo;">
+                                                            <span class="title-cart">Adicionar</span>
                                                             <i class="tb-icon tb-icon-bag-2"></i>
                                                         </a>
                                                     </div>
@@ -105,8 +107,8 @@
                                                 <a href="#"
                                                    class="remove_from_wishlist"
                                                    data-product-id="{{ $product['id'] }}"
-                                                   title="Eliminar este producto">
-                                                    Eliminar
+                                                   title="Remover este produto">
+                                                    Remover
                                                 </a>
                                             </td>
                                         </tr>
@@ -119,13 +121,13 @@
                                     <tr>
                                         <th class="product-thumbnail"></th>
                                         <th class="product-name">
-                                            <span class="nobr">Nombre del producto</span>
+                                            <span class="nobr">Nome do produto</span>
                                         </th>
                                         <th class="product-price">
-                                            <span class="nobr">Precio unitario</span>
+                                            <span class="nobr">Preço unitário</span>
                                         </th>
                                         <th class="product-stock-status">
-                                            <span class="nobr">Estado del stock</span>
+                                            <span class="nobr">Estado do stock</span>
                                         </th>
                                         <th class="product-add-to-cart"></th>
                                         <th class="product-remove"></th>
@@ -136,10 +138,10 @@
                                         <td colspan="6" class="wishlist-empty text-center py-5">
                                             <div class="empty-wishlist-message">
                                                 <i class="fa fa-heart" style="font-size: 48px; color: #ccc; margin-bottom: 20px;"></i>
-                                                <h3>No se ha añadido ningún producto a la lista de deseos</h3>
-                                                <p class="mt-3">Tu lista de deseos está vacía. Vuelve a la tienda para añadir productos.</p>
+                                                <h3>Nenhum produto adicionado à lista de desejos</h3>
+                                                <p class="mt-3">A sua lista de desejos está vazia. Volte à loja para adicionar produtos.</p>
                                                 <a href="{{ route('loja') }}" class="btn btn-primary mt-4">
-                                                    <i class="fa fa-shopping-bag me-2"></i>Seguir comprando
+                                                    <i class="fa fa-shopping-bag me-2"></i>Continuar a comprar
                                                 </a>
                                             </div>
                                         </td>
@@ -211,16 +213,16 @@
                                 element.style.display = data.count > 0 ? 'inline-block' : 'none';
                             });
 
-                            alert(data.message || 'Producto eliminado de la lista de deseos');
+                            alert(data.message || 'Produto removido da lista de desejos');
                         } else {
-                            alert(data.message || 'Error al eliminar el producto');
+                            alert(data.message || 'Erro ao remover o produto');
                         }
                     })
                     .catch(error => {
                         console.error('Error:', error);
                         buttonElement.innerHTML = originalHtml;
                         buttonElement.style.pointerEvents = 'auto';
-                        alert('Error de conexión con el servidor');
+                        alert('Erro de ligação ao servidor');
                     });
             }
 
@@ -232,10 +234,10 @@
                             <td colspan="6" class="wishlist-empty text-center py-5">
                                 <div class="empty-wishlist-message">
                                     <i class="fa fa-heart" style="font-size: 48px; color: #ccc; margin-bottom: 20px;"></i>
-                                    <h3>No se ha añadido ningún producto a la lista de deseos</h3>
-                                    <p class="mt-3">Tu lista de deseos está vacía. Vuelve a la tienda para añadir productos.</p>
+                                    <h3>Nenhum produto adicionado à lista de desejos</h3>
+                                    <p class="mt-3">A sua lista de desejos está vazia. Volte à loja para adicionar produtos.</p>
                                     <a href="/" class="btn btn-primary mt-4">
-                                        <i class="fa fa-shopping-bag me-2"></i>Seguir comprando
+                                        <i class="fa fa-shopping-bag me-2"></i>Continuar a comprar
                                     </a>
                                 </div>
                             </td>

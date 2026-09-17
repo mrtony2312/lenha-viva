@@ -24,7 +24,7 @@ class CheckoutController extends Controller
         $cart = session()->get('cart', []);
 
         if (empty($cart)) {
-            return redirect()->route('carrinho')->with('error', 'Tu carrito está vacío.');
+            return redirect()->route('carrinho')->with('error', 'O seu carrinho está vazio.');
         }
 
         // Calculer les totaux
@@ -39,13 +39,15 @@ class CheckoutController extends Controller
             $totalPrice += ($itemPrice * $itemQuantity);
         }
 
+        $checkoutCountries = collect($this->pays)->only(['PT'])->all();
+
         return view('checkout', [
             'cart' => $cart,
             'totalItems' => $totalItems,
             'totalPrice' => $totalPrice,
-            'formattedTotalPrice' => number_format($totalPrice, 3, ',', ' '),
+            'formattedTotalPrice' => number_format($totalPrice, 2, ',', ' '),
             'isEmpty' => empty($cart),
-            'pays' => $this->pays,
+            'pays' => $checkoutCountries,
         ]);
     }
 
@@ -71,8 +73,9 @@ class CheckoutController extends Controller
             'shipping_method' => 'required|string|max:255',
             'payment_method' => 'required|string|max:255',
             'order_notes' => 'nullable|string|max:1000',
+            'terms_checkbox' => 'accepted',
             'email' => 'required|email',
-            'shipping-country' => 'required|string|max:100',
+            'shipping-country' => 'required|string|in:PT',
             'shipping-first_name' => 'required|string|max:255',
             'shipping-last_name' => 'required|string|max:255',
             'shipping-address_1' => 'required|string|max:500',
@@ -81,7 +84,7 @@ class CheckoutController extends Controller
             'shipping-postcode' => 'required|string|max:20',
             'shipping-phone' => 'nullable|string|max:20',
 
-            'billing-country' => 'required|string|max:100',
+            'billing-country' => 'required|string|in:PT',
             'billing-first_name' => 'required|string|max:255',
             'billing-last_name' => 'required|string|max:255',
             'billing-address_1' => 'required|string|max:500',
@@ -89,13 +92,17 @@ class CheckoutController extends Controller
             'billing-city' => 'required|string|max:255',
             'billing-postcode' => 'required|string|max:20',
             'billing-phone' => 'nullable|string|max:20',
+        ], [
+            'terms_checkbox.accepted' => 'Deve aceitar as condições gerais de venda e a política de privacidade.',
+            'shipping-country.in' => 'As entregas são feitas apenas em Portugal.',
+            'billing-country.in' => 'A faturação deve ser em Portugal.',
         ]);
 
         // Récupérer le panier
         $cart = session()->get('cart', []);
 
         if (empty($cart)) {
-            return redirect()->route('carrinho')->with('error', 'Tu carrito está vacío.');
+            return redirect()->route('carrinho')->with('error', 'O seu carrinho está vazio.');
         }
 
         // Calculer les totaux
@@ -118,7 +125,7 @@ class CheckoutController extends Controller
             'order_number' => $orderNumber,
             'date' => now()->format('F d, Y'),
             'shipping_method' => $validated['shipping_method'],
-            'payment_method' => 'Transferencia bancaria',
+            'payment_method' => 'Transferência bancária',
             'customer' => [
                 'email' => $validated['email'],
                 'first_name' => $validated['shipping-first_name'],
@@ -143,7 +150,7 @@ class CheckoutController extends Controller
             'items' => $cart,
             'total_items' => $totalItems,
             'total_price' => $totalPrice,
-            'formatted_total_price' => number_format($totalPrice, 3, ',', ' '),
+            'formatted_total_price' => number_format($totalPrice, 2, ',', ' '),
             'order_comments' => $validated['order_notes'] ?? '',
             'order_date' => now()->format('Y-m-d H:i:s'),
         ];
@@ -153,7 +160,7 @@ class CheckoutController extends Controller
             Mail::to($validated['email'])->send(new OrderConfirmation($orderData));
 
             // Envoyer la notification à l'admin
-            $adminEmail = config('mail.admin_email', 'contactlehnaviva@gmail.com');
+            $adminEmail = config('mail.admin_email', 'contacto@naturalenha.com');
             if ($adminEmail) {
                 Mail::to($adminEmail)->send(new AdminOrderNotification($orderData));
             }
@@ -167,13 +174,13 @@ class CheckoutController extends Controller
             // Rediriger vers la page de confirmation
             return redirect()->route('checkout.confirmation')->with([
                 'order_data' => $orderData,
-                'success' => '¡Tu pedido se ha recibido correctamente!',
+                'success' => 'A sua encomenda foi recebida com sucesso!',
             ]);
 
         } catch (\Exception $e) {
             \Log::error('Erro no checkout: '.$e->getMessage());
 
-            return back()->with('error', 'Se ha producido un error al procesar tu pedido. Por favor, inténtalo de nuevo.')->withInput();
+            return back()->with('error', 'Ocorreu um erro ao processar a sua encomenda. Por favor, tente novamente.')->withInput();
         }
     }
 

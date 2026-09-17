@@ -1,6 +1,31 @@
 @extends('layouts.app')
 
-@section('title', __($categoryName))
+@php
+    $catPage = (int) request('page', 1);
+@endphp
+@section('title', $categorySeo['title'].($catPage > 1 ? ' — página '.$catPage : ''))
+@section('meta_description', $categorySeo['description'])
+@section('canonical', route('category', ['category' => request()->route('category')]))
+
+@push('head')
+    <script type="application/ld+json">{!! json_encode([
+        '@context' => 'https://schema.org',
+        '@type' => 'BreadcrumbList',
+        'itemListElement' => [
+            ['@type' => 'ListItem', 'position' => 1, 'name' => 'Início', 'item' => route('home')],
+            ['@type' => 'ListItem', 'position' => 2, 'name' => 'Loja', 'item' => route('loja')],
+            ['@type' => 'ListItem', 'position' => 3, 'name' => ($categorySeo['h1'] ?? $categoryName), 'item' => route('category', ['category' => request()->route('category')])],
+        ],
+    ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT) !!}</script>
+    <script type="application/ld+json">{!! json_encode([
+        '@context' => 'https://schema.org',
+        '@type' => 'CollectionPage',
+        'name' => $categorySeo['h1'] ?? $categoryName,
+        'description' => $categorySeo['description'],
+        'url' => route('category', ['category' => request()->route('category')]),
+        'isPartOf' => ['@id' => route('home').'#website'],
+    ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT) !!}</script>
+@endpush
 
 @push('styles')
     <style>
@@ -72,7 +97,7 @@
                     <div class="container ">
                         <div class="breadscrumb-inner">
                             <ol class="tbay-woocommerce-breadcrumb breadcrumb">
-                                <li><a href="{{ route('home') }}">Inicio</a></li>
+                                <li><a href="{{ route('home') }}">Início</a></li>
                                 <li>{{ $categoryName }}</li>
                             </ol>
                         </div>
@@ -99,10 +124,10 @@
 
                             <p class="woocommerce-result-count" role="alert" aria-relevant="all">
                                 @if ($totalProducts > 0)
-                                    Mostrando {{ $start }}&ndash;{{ $end }} de {{ $totalProducts }}
+                                    A mostrar {{ $start }}&ndash;{{ $end }} de {{ $totalProducts }}
                                     resultados
                                 @else
-                                    No se han encontrado resultados
+                                    Nenhum resultado encontrado
                                 @endif
                             </p>
                             <div class="filter-btn-wrapper d-xl-none">
@@ -114,22 +139,22 @@
                             <div class="tbay-ordering" style="display: flex; align-items: center; gap: 10px;">
                                 <span style="white-space: nowrap;">Ordenar por:</span>
                                 <form class="woocommerce-ordering" id="woof_form" method="get" style="margin: 0;">
-                                    <select name="orderby" class="orderby" aria-label="Orden de la tienda"
+                                    <select name="orderby" class="orderby" aria-label="Ordem da loja"
                                         onchange="document.getElementById('woof_form').submit()"
                                         style="border: none; background: transparent; cursor: pointer; padding: 0; margin: 0; font: inherit; color: inherit;">
                                         <option value="menu_order"
                                             {{ request('orderby', 'menu_order') == 'menu_order' ? 'selected' : '' }}>
-                                            Orden predeterminado
+                                            Ordenação padrão
                                         </option>
                                         <option value="title" {{ request('orderby') == 'title' ? 'selected' : '' }}>
-                                            Ordenar por nombre
+                                            Ordenar por nome
                                         </option>
                                         <option value="price" {{ request('orderby') == 'price' ? 'selected' : '' }}>
-                                            Ordenar por precio: menor a mayor
+                                            Ordenar por preço: menor para maior
                                         </option>
                                         <option value="price-desc"
                                             {{ request('orderby') == 'price-desc' ? 'selected' : '' }}>
-                                            Ordenar por precio: mayor a menor
+                                            Ordenar por preço: maior para menor
                                         </option>
                                     </select>
                                 </form>
@@ -138,7 +163,7 @@
                                 <a href="javascript:void(0);" id="display-mode-list" class="display-mode-btn list "
                                     title="Lista"><i class="tb-icon tb-icon-task-square"></i></a>
                                 <a href="javascript:void(0);" id="display-mode-grid" class="display-mode-btn active"
-                                    title="Cuadrícula"><i class="tb-icon tb-icon-grid-2"></i></a>
+                                    title="Grelha"><i class="tb-icon tb-icon-grid-2"></i></a>
                             </div>
 
                         </div>
@@ -151,7 +176,10 @@
 
                         <div id="main" class="archive-shop col-12 col-xl-9 content col-12">
                             <header class="woocommerce-products-header">
-                                <h1 class="woocommerce-products-header__title page-title">{{ $categoryName }}</h1>
+                                <h1 class="woocommerce-products-header__title page-title">{{ $categorySeo['h1'] ?? $categoryName }}</h1>
+                                @if (! empty($categorySeo['intro']))
+                                    <p class="lv-seo-intro">{{ $categorySeo['intro'] }}</p>
+                                @endif
                             </header>
 
                             <div class="display-products products products-grid">
@@ -164,7 +192,7 @@
 
                             <div style="margin-bottom: 50px">
                                 @if ($lojaProducts->hasPages())
-                                    <div class="tbay-pagination woocommerce-pagination" aria-label="Paginación de productos">
+                                    <div class="tbay-pagination woocommerce-pagination" aria-label="Paginação de produtos">
                                         {{ $lojaProducts->appends(request()->except('page'))->links('vendor.pagination.custom') }}
                                     </div>
                                 @endif
@@ -206,17 +234,17 @@
         var woof_ajaxurl = "{{ asset('wp-admin/admin-ajax.html') }}";
 
         var woof_lang = {
-            'orderby': "orderby",
-            'date': "date",
-            'perpage': "per page",
-            'pricerange': "price range",
-            'menu_order': "menu order",
-            'popularity': "popularity",
-            'rating': "rating",
-            'price': "price low to high",
-            'price-desc': "price high to low",
-            'clear_all': "Clear All",
-            'list_opener': "Сhild list opener",
+            'orderby': "ordenar por",
+            'date': "data",
+            'perpage': "por página",
+            'pricerange': "intervalo de preços",
+            'menu_order': "ordenação padrão",
+            'popularity': "popularidade",
+            'rating': "avaliação",
+            'price': "preço: menor para maior",
+            'price-desc': "preço: maior para menor",
+            'clear_all': "Limpar tudo",
+            'list_opener': "Abrir lista de subcategorias",
         };
 
         if (typeof woof_lang_custom == 'undefined') {
@@ -237,11 +265,11 @@
         var woof_select_type = 'chosen';
 
         var woof_current_values = '[]';
-        var woof_lang_loading = "Loading ...";
+        var woof_lang_loading = "A carregar ...";
 
-        var woof_lang_show_products_filter = "show products filter";
-        var woof_lang_hide_products_filter = "hide products filter";
-        var woof_lang_pricerange = "price range";
+        var woof_lang_show_products_filter = "mostrar filtro de produtos";
+        var woof_lang_hide_products_filter = "ocultar filtro de produtos";
+        var woof_lang_pricerange = "intervalo de preços";
 
         var woof_use_beauty_scroll = 1;
 

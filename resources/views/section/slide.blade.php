@@ -3,25 +3,25 @@
         <div class="slide active" style="background-image:url({{ asset('wp-content/uploads/2025/10/678998765434567806.webp') }});">
             <div class="overlay"></div>
             <div class="content">
-                <h1 style="color:white" >Leña densificada</h1>
-                <p>El confort de los troncos comprimidos, ¡entregados en tu puerta!</p>
-                <a href="#" class=" btn-1" >TIENDA</a>
+                <h1 style="color:white">Pellets, lenha e aquecimento ao domicílio</h1>
+                <p>O conforto dos toros comprimidos, entregues à sua porta!</p>
+                <a href="{{ route('loja') }}" class=" btn-1">LOJA</a>
             </div>
         </div>
         <div class="slide" style="background-image:url({{ asset('wp-content/uploads/2025/10/holzpellets-rekord-flamme.webp') }});">
             <div class="overlay"></div>
             <div class="content">
-                <h1 style="color:white">Pellets de madera certificados</h1>
-                <p>¡Somos el socio ideal!</p>
-                <a href="#" class="btn-1">TIENDA</a>
+                <h2 style="color:white">Pellets de madeira certificados</h2>
+                <p>Somos o parceiro ideal!</p>
+                <a href="{{ route('loja') }}" class="btn-1">LOJA</a>
             </div>
         </div>
         <div class="slide" style="background-image:url({{ asset('wp-content/uploads/2025/10/fire-with-burning-firewood-smoldering-coals-dark_124507-21228.jpg') }});">
             <div class="overlay"></div>
             <div class="content">
-                <h1 style="color:white">Comprar leña ecológica</h1>
-                <p>Leña cuidadosamente seleccionada para ti</p>
-                <a href="#" class="btn-3">TIENDA</a>
+                <h2 style="color:white">Lenha ecológica selecionada</h2>
+                <p>Lenha cuidadosamente selecionada para si</p>
+                <a href="{{ route('loja') }}" class="btn-3">LOJA</a>
             </div>
         </div>
 
@@ -58,7 +58,7 @@
             for(let i = 0; i < total; i++) {
                 const dot = document.createElement('div');
                 dot.className = `dot ${i === 0 ? 'active' : ''}`;
-                dot.setAttribute('aria-label', `Ir a la diapositiva ${i + 1}`);
+                dot.setAttribute('aria-label', `Ir para o slide ${i + 1}`);
                 dot.addEventListener('click', () => {
                     if(i !== index && !isTransitioning) goToSlide(i);
                 });

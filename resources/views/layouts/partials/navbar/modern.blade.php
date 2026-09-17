@@ -22,8 +22,8 @@
 <header class="lv-navbar" id="lv-navbar">
     <div class="lv-navbar__topbar">
         <div class="lv-container lv-navbar__topbar-inner">
-            <span class="lv-navbar__topbar-item">🚚 Envio grátis para Espanha e Europa</span>
-            <a href="tel:+34683573516" class="lv-navbar__topbar-item lv-navbar__topbar-link">📞 +34 683 5735 16</a>
+            <span class="lv-navbar__topbar-item">Envio grátis em Portugal Continental</span>
+            <a href="tel:+351912026453" class="lv-navbar__topbar-item lv-navbar__topbar-link">📞 +351 912 026 453</a>
         </div>
     </div>
 
@@ -35,9 +35,8 @@
             </button>
 
             <a href="{{ route('home') }}" class="lv-navbar__logo">
-                <img src="{{ asset('wp-content/uploads/2022/01/er-01-scaled.png') }}" alt="Lenha Viva" width="44"
-                    height="44" loading="eager">
-                <span>Lenha Viva</span>
+                <img src="{{ asset(config('company.logo')) }}" alt="Naturalenha" width="220"
+                    height="56" loading="eager">
             </a>
 
             <nav class="lv-navbar__nav">
@@ -66,7 +65,7 @@
                     <div class="dropdown-menu lv-navbar__dropdown-menu">
                         @forelse($lvCategories as $categorySlug => $categoryData)
                             <a class="dropdown-item lv-navbar__dropdown-item"
-                                href="{{ route('category', ['category' => $categorySlug]) }}">
+                                href="{{ \App\Support\CategoryLabels::route($categorySlug) }}">
                                 <span>{{ $categoryData['name'] }}</span>
                                 <span class="lv-navbar__dropdown-count">{{ $categoryData['count'] }}</span>
                             </a>
@@ -156,9 +155,8 @@
 <div class="offcanvas offcanvas-start lv-drawer" tabindex="-1" id="lvMobileMenu" aria-labelledby="lvMobileMenuLabel">
     <div class="offcanvas-header lv-drawer__header">
         <a href="{{ route('home') }}" class="lv-navbar__logo" id="lvMobileMenuLabel">
-            <img src="{{ asset('wp-content/uploads/2022/01/er-01-scaled.png') }}" alt="Lenha Viva" width="38"
-                height="38">
-            <span>Lenha Viva</span>
+            <img src="{{ asset(config('company.logo')) }}" alt="Naturalenha" width="180"
+                height="46">
         </a>
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Fechar"></button>
     </div>
@@ -192,7 +190,7 @@
         <div class="lv-mobile-categories">
             <h3>Categorias</h3>
             @forelse($lvCategories as $categorySlug => $categoryData)
-                <a href="{{ route('category', ['category' => $categorySlug]) }}">
+                <a href="{{ \App\Support\CategoryLabels::route($categorySlug) }}">
                     <span>{{ $categoryData['name'] }}</span>
                     <span class="lv-navbar__dropdown-count">{{ $categoryData['count'] }}</span>
                 </a>

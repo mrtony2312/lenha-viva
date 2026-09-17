@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('title', __('Finalização de compra'))
+@section('meta_robots', 'noindex, nofollow')
 
 @push('styles')
     <link rel='stylesheet' id='wc-blocks-style-checkout-css'
@@ -85,7 +86,7 @@
                                                                     </path>
                                                                 </svg><span
                                                                     class="wc-block-components-checkbox__label">Criar uma
-                                                                    conta com Lenha Viva</span></label></div>
+                                                                    conta com Naturalenha</span></label></div>
                                                     </div>
                                                 </div>
                                             </div>

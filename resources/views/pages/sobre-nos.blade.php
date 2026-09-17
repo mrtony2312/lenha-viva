@@ -1,6 +1,8 @@
 @extends('layouts.app')
 
-@section('title', __('Sobre nosotros'))
+@section('title', __('Sobre nós'))
+@section('meta_description', 'Conheça a Naturalenha, em Palmela: pellets, lenha e equipamentos de aquecimento com envio grátis em Portugal Continental.')
+@section('canonical', route('sobre-nos'))
 
 @push('styles')
 
@@ -16,9 +18,9 @@
                 alt="breadcrumb">
             <div class="container">
                 <div class="breadscrumb-inner">
-                    <h1 class="page-title">Sobre nosotros</h1>
+                    <h1 class="page-title">Sobre nós</h1>
                     <ol class="breadcrumb">
-                        <li><a href="{{ route('home') }}" class="active">Inicio</a> </li>
+                        <li><a href="{{ route('home') }}" class="active">Início</a> </li>
                         <li class="active">Página</li>
                     </ol>
                 </div>
@@ -42,7 +44,7 @@
                                                  data-widget_type="image.default">
                                                 <img loading="lazy" decoding="async" width="660" height="440"
                                                      src="../wp-content/uploads/2025/10/765424359870807616-693x462.jpg"
-                                                     class="attachment-large size-large wp-image-6058" alt="" />
+                                                     class="attachment-large size-large wp-image-6058" alt="Armazém Naturalenha em Palmela" />
                                             </div>
                                         </div>
                                     </div>
@@ -59,7 +61,7 @@
 
 
 
-                                                            <span class="title">LENHA VIVA</span>
+                                                            <span class="title">NATURALENHA</span>
 
 
 
@@ -72,13 +74,12 @@
                                             <div class="elementor-element elementor-element-5363a05 elementor-widget elementor-widget-text-editor"
                                                  data-id="5363a05" data-element_type="widget"
                                                  data-widget_type="text-editor.default">
-                                                <p>LENHA VIVA es un mayorista a nivel europeo, especializado en
-                                                    Biomasa, Granulados de Producción Agrícola y Soluciones de
-                                                    Bioenergía para uso doméstico, industrial y animal.</p>
-                                                <p>Con acuerdos de producción con las principales fábricas de varios
-                                                    países, ofrecemos el suministro inmediato y programado de
-                                                    Pellets, Carbón Vegetal y Biomasa de diversos tipos, con
-                                                    entrega en toda Europa.</p>
+                                                <p>A NATURALENHA é uma empresa portuguesa de exploração florestal,
+                                                    especializada na produção e venda de lenha e derivados, incluindo
+                                                    o transporte, e na venda a retalho ao cliente final.</p>
+                                                <p>A partir da nossa sede em Palmela, distrito de Setúbal,
+                                                    disponibilizamos pellets, lenha, madeira densificada e equipamentos
+                                                    de aquecimento, com entrega em Portugal (envio gratuito em Portugal Continental).</p>
                                             </div>
                                         </div>
                                     </div>
@@ -131,7 +132,7 @@
 
 
 
-                                                            <span class="title">LENHA VIVA</span>
+                                                            <span class="title">NATURALENHA</span>
 
 
 
@@ -144,15 +145,15 @@
                                             <div class="elementor-element elementor-element-7696931 elementor-widget elementor-widget-text-editor"
                                                  data-id="7696931" data-element_type="widget"
                                                  data-widget_type="text-editor.default">
-                                                <p>En el actual período de fuerte desregulación en el suministro de
-                                                    Energía, como resultado del aumento exponencial de la demanda debido
-                                                    al incremento de los precios del gas y la electricidad y al bloqueo de las
-                                                    importaciones de países productores, LENHA VIVA se presenta
-                                                    como una solución diferenciadora para el suministro de Productos
-                                                    de Biomasa y Energía.</p>
-                                                <p>LENHA VIVA cuenta con centros de distribución ubicados en Francia y
-                                                    Portugal, realizándose la comercialización en toda Europa
-                                                    desde ambos países.</p>
+                                                <p>No período atual de forte desregulação no abastecimento de
+                                                    Energia, em resultado do aumento exponencial da procura devido
+                                                    ao aumento dos preços do gás e da eletricidade e do bloqueio das
+                                                    importações de países produtores, a NATURALENHA apresenta-se
+                                                    como uma solução diferenciadora para o abastecimento de Produtos
+                                                    de Biomassa e Energia.</p>
+                                                <p>A NATURALENHA opera a partir de Palmela, distrito de Setúbal,
+                                                    e assegura a comercialização de lenha e derivados junto do
+                                                    cliente final em Portugal.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -181,7 +182,7 @@
 
 
 
-                                                            <span class="title">Disponible con LENHA VIVA</span>
+                                                            <span class="title">Disponível com NATURALENHA</span>
 
 
 
@@ -193,14 +194,14 @@
                                             <div class="elementor-element elementor-element-e8ba1df elementor-widget elementor-widget-text-editor"
                                                  data-id="e8ba1df" data-element_type="widget"
                                                  data-widget_type="text-editor.default">
-                                                <p>PELLETS DE MADERA ENplus A1<br />Están fabricados a base de
-                                                    madera de pino, lo que garantiza una elevada calidad de combustión y
-                                                    un poder calorífico superior, siendo ideales para la calefacción
-                                                    doméstica en chimeneas, estufas, recuperadores y calderas.
+                                                <p>PELLETS DE MADEIRA ENplus A1<br />São fabricados à base de
+                                                    madeira de pinho, garantindo uma elevada qualidade na queima e
+                                                    um poder calorífico superior, sendo o ideal para o aquecimento
+                                                    doméstico em lareiras, salamandras, recuperadores e caldeiras.
                                                 </p>
-                                                <p>BRIQUETAS DE MADERA DE HAYA<br />Las briquetas se producen a
-                                                    partir de madera de haya, obtenida de residuos de la industria
-                                                    del mueble. Ideales para hornos, chimeneas, estufas y
+                                                <p>BRIQUETES DE MADEIRA DE FAIA<br />Os Briquetes são produzidos à
+                                                    base de madeira de Faia, obtidos a partir de resíduos da indústria
+                                                    de mobiliário. Ideais para fornos, lareiras, salamandras e
                                                     recuperadores.</p>
                                             </div>
                                         </div>
@@ -242,7 +243,7 @@
 
 
 
-                                                            <span class="title">LENHA VIVA</span>
+                                                            <span class="title">NATURALENHA</span>
 
 
 
@@ -259,24 +260,24 @@
                                                      data-id="14f9aff" data-element_type="widget"
                                                      data-widget_type="text-editor.default">
                                                     <div class="elementor-widget-container">
-                                                        <p><strong>La calidad de nuestros combustibles es nuestra
-                                                                garantía de confianza.</strong></p>
+                                                        <p><strong>A qualidade dos nossos combustíveis é a nossa
+                                                                garantia de confiança.</strong></p>
                                                     </div>
                                                 </div>
                                                 <div class="elementor-element elementor-element-1199289 elementor-widget elementor-widget-text-editor"
                                                      data-id="1199289" data-element_type="widget"
                                                      data-widget_type="text-editor.default">
                                                     <div class="elementor-widget-container">
-                                                        <p>Los tipos de leña que ofrecemos están compuestos
-                                                            esencialmente por maderas nobles de roble, haya,
-                                                            roble y fresno.</p>
-                                                        <p>Todos nuestros productos se secan en un secadero natural o
-                                                            en un horno, lo que garantiza una mejor combustión.</p>
-                                                        <p>Toda nuestra madera está seca, por lo que podemos entregar
-                                                            madera lista para arder durante todo el año.</p>
-                                                        <p>Nuestros pellets de madera son 100% de madera blanda,
-                                                            sin aglutinantes ni aditivos.<br />Están aprobados por
-                                                            DIN Plus, EN Plus o PEFC.</p>
+                                                        <p>Os tipos de lenha que propomos são essencialmente
+                                                            constituídos por madeiras nobres de carvalho, faia
+                                                            e freixo.</p>
+                                                        <p>Todos os nossos produtos são secos numa estufa natural ou
+                                                            num forno, o que garante uma melhor combustão.</p>
+                                                        <p>Toda a nossa madeira é seca, pelo que podemos entregar
+                                                            madeira pronta a arder durante todo o ano.</p>
+                                                        <p>Os nossos pellets de madeira são 100% de madeira macia,
+                                                            sem aglutinantes nem aditivos.<br />São aprovados pela
+                                                            DIN Plus, EN Plus ou PEFC.</p>
                                                     </div>
                                                 </div>
                                             </div>

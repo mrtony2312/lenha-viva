@@ -3,106 +3,113 @@
 use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\FeedController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\SitemapController;
 use App\Http\Controllers\WishlistController;
+use App\Support\CategoryLabels;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/',[App\Http\Controllers\HomeController::class,'index'])->name('home');
+/*
+|--------------------------------------------------------------------------
+| Public Portuguese URLs
+|--------------------------------------------------------------------------
+*/
 
+Route::get('/', [HomeController::class, 'index'])->name('home');
 
-Route::get('/loja',[App\Http\Controllers\HomeController::class,'loja'])->name('loja');
-Route::get('/carrinho',[App\Http\Controllers\HomeController::class,'carrinho'])->name('carrinho');
-Route::get('/lista-de-desejos',[App\Http\Controllers\HomeController::class,'listaDeDesejos'])->name('lista-de-desejos');
+Route::get('/loja', [HomeController::class, 'loja'])->name('loja');
+Route::get('/carrinho', [HomeController::class, 'carrinho'])->name('carrinho');
+Route::get('/lista-de-desejos', [HomeController::class, 'listaDeDesejos'])->name('lista-de-desejos');
 
-//Route::get('/contacto',[App\Http\Controllers\HomeController::class,'contacto'])->name('contacto');
-//Route::get('/finalizacao-de-compra',[App\Http\Controllers\HomeController::class,'finalizacaoDeCompra'])->name('finalizacao-de-compra');
-//Route::get('finalizacao-de-compra/order-received',[App\Http\Controllers\HomeController::class,'orderReceived'])->name('order-received');
-
-
-Route::get('/product/{slug}', [HomeController::class, 'show'])->name('product.show');
-Route::get('/category/product-category/{category}', [HomeController::class, 'category'])->name('category');
-//Route::get('/lista-desejos/adicionar/{productId}', [HomeController::class, 'addToWishlist'])->name('wishlist.add');
-
-
-
-Route::get('/debug/products', [HomeController::class, 'debugProducts']);
+Route::get('/produto/vista-rapida/{id}', [HomeController::class, 'quickView'])->name('product.quickview');
+Route::get('/produto/{slug}', [HomeController::class, 'show'])->name('product.show');
+Route::get('/categoria/{category}', [HomeController::class, 'category'])->name('category');
 
 Route::get('/feed/google-merchant.xml', [FeedController::class, 'googleMerchant'])->name('feed.google-merchant');
+Route::get('/sitemap.xml', [SitemapController::class, 'index'])->name('sitemap');
+Route::get('/robots.txt', [SitemapController::class, 'robots'])->name('robots');
 
-Route::get('/sobre-nos',[App\Http\Controllers\HomeController::class,'sobreNos'])->name('sobre-nos');
-Route::get('/avisos-legais',[App\Http\Controllers\HomeController::class,'avisosLegais'])->name('avisos-legais');
-Route::get('/contacto',[App\Http\Controllers\HomeController::class,'contacto'])->name('contacto');
-Route::get('/politica-de-privacidade',[App\Http\Controllers\HomeController::class,'politicaDePrivacidade'])->name('politica-de-privacidade');
-Route::get('/condicoes-gerais-de-venda-cgv',[App\Http\Controllers\HomeController::class,'condicoesGeraisGeVendaCgv'])->name('condicoes-gerais-de-venda-cgv');
-Route::get('/termos-e-condicoes-gerais-de-utilizacao-tcg',[App\Http\Controllers\HomeController::class,'termosCondicoesGeraisDeUtilizacaoTcg'])->name('termos-e-condicoes-gerais-de-utilizacao-tcg');
-Route::get('/politica-de-entrega',[App\Http\Controllers\HomeController::class,'politicaDeEntrega'])->name('politicaDeEntrega');
-Route::get('/politica-de-reembolso',[App\Http\Controllers\HomeController::class,'politicaDeReembolso'])->name('politicaDeReembolso');
-Route::get('/politica-de-pagamento',[App\Http\Controllers\HomeController::class,'politicaDePagamento'])->name('politicaDePagamento');
-
-
+Route::get('/sobre-nos', [HomeController::class, 'sobreNos'])->name('sobre-nos');
+Route::get('/avisos-legais', [HomeController::class, 'avisosLegais'])->name('avisos-legais');
+Route::get('/contacto', [HomeController::class, 'contacto'])->name('contacto');
+Route::get('/politica-de-privacidade', [HomeController::class, 'politicaDePrivacidade'])->name('politica-de-privacidade');
+Route::get('/condicoes-gerais-de-venda', [HomeController::class, 'condicoesGeraisGeVendaCgv'])->name('condicoes-gerais-de-venda-cgv');
+Route::get('/termos-e-condicoes-de-utilizacao', [HomeController::class, 'termosCondicoesGeraisDeUtilizacaoTcg'])->name('termos-e-condicoes-gerais-de-utilizacao-tcg');
+Route::get('/politica-de-entrega', [HomeController::class, 'politicaDeEntrega'])->name('politicaDeEntrega');
+Route::get('/politica-de-reembolso', [HomeController::class, 'politicaDeReembolso'])->name('politicaDeReembolso');
+Route::get('/politica-de-pagamento', [HomeController::class, 'politicaDePagamento'])->name('politicaDePagamento');
+Route::get('/mapa-do-site', [HomeController::class, 'mapaDoSite'])->name('mapa-do-site');
 
 Route::post('/checkout', [CheckoutController::class, 'store'])->name('checkout.store');
 
-
-
-
 Route::post('/carrinho/adicionar', [HomeController::class, 'addToCart'])->name('cart.add');
 Route::get('/carrinho/conteudo', [HomeController::class, 'getCartContent'])->name('cart.content');
-
 Route::post('/carrinho/atualizar', [HomeController::class, 'updateCart'])->name('cart.update');
 Route::post('/carrinho/remover', [HomeController::class, 'removeFromCart'])->name('cart.remove');
 Route::post('/carrinho/limpar', [HomeController::class, 'clearCart'])->name('cart.clear');
-
 Route::get('/carrinho/mini-cart-html', [HomeController::class, 'getMiniCartHtml'])->name('cart.mini.html');
 
-
-
-
-// Checkout routes
 Route::get('/finalizacao-de-compra', [CheckoutController::class, 'show'])->name('checkout');
 Route::get('/finalizacao-de-compra/confirmacao', [CheckoutController::class, 'confirmation'])->name('checkout.confirmation');
-
-
 
 Route::prefix('lista-desejos')->group(function () {
     Route::get('/', [WishlistController::class, 'index'])->name('wishlist.index');
     Route::post('/adicionar', [WishlistController::class, 'add'])->name('wishlist.add');
     Route::post('/remover', [WishlistController::class, 'remove'])->name('wishlist.remove');
-  //  Route::get('/contador', [WishlistController::class, 'getCount'])->name('wishlist.count');
 });
 
-
-Route::get('/product/quick-view/{id}', [App\Http\Controllers\HomeController::class, 'quickView'])->name('product.quickview');
-
-
-// Ajoutez cette ligne dans vos routes
-Route::get('/refresh-csrf-token', function() {
+Route::get('/refresh-csrf-token', function () {
     return response()->json([
-        'token' => csrf_token()
+        'token' => csrf_token(),
     ]);
 })->middleware('web')->name('refresh');
 
-Route::get('/debug/session', function () {
-    echo '<h1>Session Debug</h1>';
+/*
+|--------------------------------------------------------------------------
+| 301 redirects — old Spanish / English paths → Portuguese
+|--------------------------------------------------------------------------
+*/
 
-    echo '<h2>Toutes les données de session :</h2>';
-    echo '<pre>';
-    print_r(session()->all());
-    echo '</pre>';
+$permanentRedirects = [
+    '/tienda' => '/loja',
+    '/carrito' => '/carrinho',
+    '/lista-de-deseos' => '/lista-de-desejos',
+    '/lista-deseos' => '/lista-desejos',
+    '/sobre-nosotros' => '/sobre-nos',
+    '/avisos-legales' => '/avisos-legais',
+    '/politica-de-privacidad' => '/politica-de-privacidade',
+    '/condiciones-generales-de-venta' => '/condicoes-gerais-de-venda',
+    '/condicoes-gerais-de-venda-cgv' => '/condicoes-gerais-de-venda',
+    '/terminos-y-condiciones-de-uso' => '/termos-e-condicoes-de-utilizacao',
+    '/termos-e-condicoes-gerais-de-utilizacao-tcg' => '/termos-e-condicoes-de-utilizacao',
+    '/politica-de-pago' => '/politica-de-pagamento',
+    '/finalizacion-de-compra' => '/finalizacao-de-compra',
+    '/finalizacion-de-compra/confirmacion' => '/finalizacao-de-compra/confirmacao',
+];
 
-    echo '<h2>Panier :</h2>';
-    echo '<pre>';
-    print_r(session('cart', []));
-    echo '</pre>';
+foreach ($permanentRedirects as $from => $to) {
+    Route::permanentRedirect($from, $to);
+}
 
-    echo '<h2>Infos session :</h2>';
-    echo '<ul>';
-    echo '<li>Session ID: ' . session()->getId() . '</li>';
-    echo '<li>CSRF Token: ' . csrf_token() . '</li>';
-    echo '<li>Durée de vie: ' . config('session.lifetime') . ' minutes</li>';
-    echo '</ul>';
+Route::permanentRedirect('/producto/vista-rapida/{id}', '/produto/vista-rapida/{id}');
+Route::permanentRedirect('/product/quick-view/{id}', '/produto/vista-rapida/{id}');
+Route::permanentRedirect('/producto/{slug}', '/produto/{slug}');
+Route::permanentRedirect('/product/{slug}', '/produto/{slug}');
 
-    echo '<h2>Cookies :</h2>';
-    echo '<pre>';
-    print_r($_COOKIE);
-    echo '</pre>';
+Route::get('/category/product-category/{category}', function (string $category) {
+    $internal = CategoryLabels::fromUrlSlug($category) ?? $category;
+
+    return redirect('/categoria/'.CategoryLabels::urlSlug($internal), 301);
 });
+
+/*
+| Legacy Spanish AJAX endpoints. A POST body does not survive a redirect, so
+| these keep pointing at the same controller actions instead.
+*/
+Route::post('/carrito/anadir', [HomeController::class, 'addToCart']);
+Route::get('/carrito/contenido', [HomeController::class, 'getCartContent']);
+Route::post('/carrito/actualizar', [HomeController::class, 'updateCart']);
+Route::post('/carrito/eliminar', [HomeController::class, 'removeFromCart']);
+Route::post('/carrito/vaciar', [HomeController::class, 'clearCart']);
+Route::get('/carrito/mini-carrito-html', [HomeController::class, 'getMiniCartHtml']);
+Route::post('/lista-deseos/anadir', [WishlistController::class, 'add']);
+Route::post('/lista-deseos/eliminar', [WishlistController::class, 'remove']);

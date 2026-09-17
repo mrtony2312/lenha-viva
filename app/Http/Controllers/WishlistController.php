@@ -37,21 +37,21 @@ class WishlistController extends Controller
 
                 return response()->json([
                     'success' => true,
-                    'message' => 'Produit ajouté à la liste de souhaits',
+                    'message' => 'Produto adicionado à lista de desejos',
                     'count' => count($wishlist)
                 ]);
             }
 
             return response()->json([
                 'success' => false,
-                'message' => 'Produit déjà dans la liste de souhaits',
+                'message' => 'O produto já está na lista de desejos',
                 'count' => count($wishlist)
             ]);
 
         } catch (\Exception $e) {
             return response()->json([
                 'success' => false,
-                'message' => 'Erreur: ' . $e->getMessage()
+                'message' => 'Erro: ' . $e->getMessage()
             ], 500);
         }
     }
@@ -72,20 +72,20 @@ class WishlistController extends Controller
 
                 return response()->json([
                     'success' => true,
-                    'message' => 'Produit retiré de la liste de souhaits',
+                    'message' => 'Produto removido da lista de desejos',
                     'count' => count($wishlist)
                 ]);
             }
 
             return response()->json([
                 'success' => false,
-                'message' => 'Produit non trouvé dans la liste de souhaits'
+                'message' => 'Produto não encontrado na lista de desejos'
             ]);
 
         } catch (\Exception $e) {
             return response()->json([
                 'success' => false,
-                'message' => 'Erreur: ' . $e->getMessage()
+                'message' => 'Erro: ' . $e->getMessage()
             ], 500);
         }
     }

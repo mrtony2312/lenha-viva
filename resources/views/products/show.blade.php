@@ -1,201 +1,367 @@
 @extends('layouts.app')
 
-@section('title', __($product['title'] . ' - ' . $product['category']))
+@php
+    $seoPrice = number_format((float) str_replace(',', '', $product['price']), 2, '.', '');
+    $seoImages = collect($product['images'] ?? [])->filter()->map(fn ($image) => asset($image))->values();
+    $seoCategoryLabel = \App\Support\CategoryLabels::label($product['category']);
+    // Duplicate listings point at the primary product so Google indexes a single URL.
+    $seoCanonical = route('product.show', ['slug' => $product['canonical_slug'] ?? $product['slug']]);
+    $seoPlainDescription = \Illuminate\Support\Str::limit(
+        trim(preg_replace('/\s+/', ' ', strip_tags($product['description'] ?? ($product['short_description'] ?? $product['title'])))),
+        500,
+    );
+
+    $seoProductSchema = [
+        '@context' => 'https://schema.org',
+        '@type' => 'Product',
+        'name' => $product['title'],
+        'description' => $seoPlainDescription,
+        'image' => $seoImages->all(),
+        'sku' => (string) ($product['ref'] ?? $product['id']),
+        'mpn' => (string) $product['id'],
+        'brand' => [
+            '@type' => 'Brand',
+            'name' => config('company.brand'),
+        ],
+        'category' => $seoCategoryLabel,
+    ];
+
+    // A product without a price would otherwise be published as a 0 € offer.
+    if ((float) $seoPrice > 0) {
+        $seoProductSchema['offers'] = [
+            '@type' => 'Offer',
+            'url' => $seoCanonical,
+            'price' => $seoPrice,
+            'priceCurrency' => 'EUR',
+            'availability' => $product['in_stock'] ? 'https://schema.org/InStock' : 'https://schema.org/OutOfStock',
+            'itemCondition' => 'https://schema.org/NewCondition',
+            'seller' => [
+                '@type' => 'Organization',
+                'name' => config('company.legal_name'),
+                'url' => route('home'),
+            ],
+            'shippingDetails' => [
+                '@type' => 'OfferShippingDetails',
+                'shippingRate' => [
+                    '@type' => 'MonetaryAmount',
+                    'value' => '0',
+                    'currency' => 'EUR',
+                ],
+                'shippingDestination' => [
+                    ['@type' => 'DefinedRegion', 'addressCountry' => 'PT'],
+                ],
+            ],
+            'hasMerchantReturnPolicy' => [
+                '@type' => 'MerchantReturnPolicy',
+                'applicableCountry' => ['PT'],
+                'returnPolicyCategory' => 'https://schema.org/MerchantReturnFiniteReturnWindow',
+                'merchantReturnDays' => 14,
+                'returnMethod' => 'https://schema.org/ReturnByMail',
+                'returnFees' => 'https://schema.org/ReturnShippingFees',
+                'merchantReturnLink' => route('politicaDeReembolso'),
+            ],
+        ];
+    }
+
+    $seoBreadcrumbSchema = [
+        '@context' => 'https://schema.org',
+        '@type' => 'BreadcrumbList',
+        'itemListElement' => [
+            ['@type' => 'ListItem', 'position' => 1, 'name' => 'Início', 'item' => route('home')],
+            ['@type' => 'ListItem', 'position' => 2, 'name' => 'Loja', 'item' => route('loja')],
+            ['@type' => 'ListItem', 'position' => 3, 'name' => $seoCategoryLabel, 'item' => \App\Support\CategoryLabels::route($product['category'])],
+            ['@type' => 'ListItem', 'position' => 4, 'name' => $product['title'], 'item' => $seoCanonical],
+        ],
+    ];
+
+    $seoJsonFlags = JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT;
+
+    $priceNum = (float) str_replace(',', '', $product['price'] ?? 0);
+    $oldPriceNum = (float) str_replace(',', '', $product['old_price'] ?? 0);
+    $hasDiscount = $oldPriceNum > $priceNum && $priceNum > 0;
+    $discountPct = $hasDiscount ? (int) round((($oldPriceNum - $priceNum) / $oldPriceNum) * 100) : 0;
+    $inWishlist = in_array($product['id'], array_keys(Session::get('wishlist', [])));
+    $galleryImages = collect($product['images'] ?? [])->filter()->values();
+    if (! empty($product['hover_image']) && ! $galleryImages->contains($product['hover_image'])) {
+        $galleryImages->push($product['hover_image']);
+    }
+    $galleryImages = $galleryImages->values();
+    $mainImage = $galleryImages->first();
+@endphp
+
+@section('title', $product['seo_title'] ?? $product['title'])
+@section('meta_description', $product['seo_description'] ?? \Illuminate\Support\Str::limit(trim(preg_replace('/\s+/', ' ', strip_tags($product['short_description'] ?? ($product['description'] ?? $product['title'])))), 155))
+@section('og_type', 'product')
+@section('canonical', $seoCanonical)
+@section('og_image', $seoImages->first() ?? asset($product['hover_image'] ?: config('company.logo')))
+@section('og_image_alt', $product['title'])
+
+@push('head')
+    @if((float) $seoPrice > 0)
+        <meta property="product:price:amount" content="{{ $seoPrice }}">
+        <meta property="product:price:currency" content="EUR">
+    @endif
+    <meta property="product:availability" content="{{ $product['in_stock'] ? 'in stock' : 'out of stock' }}">
+    <script type="application/ld+json">{!! json_encode($seoProductSchema, $seoJsonFlags) !!}</script>
+    <script type="application/ld+json">{!! json_encode($seoBreadcrumbSchema, $seoJsonFlags) !!}</script>
+@endpush
 
 @section('content')
     @include('layouts.partials.navbar.public-show')
 
     <div class="lv-product">
-        <div class="lv-container">
-
-            <div class="lv-product__breadcrumb">
-                <a href="{{ route('home') }}">Inicio</a>
-                &rsaquo;
-                <a href="{{ route('category', ['category' => $product['category']]) }}">{{ \App\Support\CategoryLabels::label($product['category']) }}</a>
-                @if($prevProduct || $nextProduct)
-                    <span style="float:right;">
-                        @if($prevProduct)
-                            <a href="{{ route('product.show', $prevProduct['slug']) }}">&laquo; Anterior</a>
-                        @endif
-                        @if($prevProduct && $nextProduct) &nbsp;|&nbsp; @endif
-                        @if($nextProduct)
-                            <a href="{{ route('product.show', $nextProduct['slug']) }}">Siguiente &raquo;</a>
-                        @endif
-                    </span>
-                @endif
+        <nav class="lv-product__crumbbar" aria-label="Navegação estrutural">
+            <div class="lv-container">
+                <ol class="lv-product__crumbs">
+                    <li><a href="{{ route('home') }}">Início</a></li>
+                    <li aria-hidden="true" class="lv-product__crumb-dot"></li>
+                    <li><a href="{{ route('loja') }}">Loja</a></li>
+                    <li aria-hidden="true" class="lv-product__crumb-dot"></li>
+                    <li><a href="{{ \App\Support\CategoryLabels::route($product['category']) }}">{{ $seoCategoryLabel }}</a></li>
+                    <li aria-hidden="true" class="lv-product__crumb-dot"></li>
+                    <li aria-current="page">{{ $product['title'] }}</li>
+                </ol>
             </div>
+        </nav>
 
-            <div class="lv-product__layout">
+        <section class="lv-product__single">
+            <div class="lv-container">
+                <div class="lv-product__layout">
+                    <div class="lv-gallery {{ $galleryImages->count() > 1 ? 'lv-gallery--thumbs' : '' }}">
+                        @if($galleryImages->count() > 1)
+                            <div class="lv-gallery__thumbs" role="list">
+                                @foreach($galleryImages as $index => $image)
+                                    <button type="button"
+                                        class="lv-gallery__thumb {{ $index === 0 ? 'is-active' : '' }}"
+                                        data-src="{{ asset($image) }}"
+                                        aria-label="Ver imagem {{ $index + 1 }} de {{ $galleryImages->count() }}">
+                                        <img src="{{ asset($image) }}" alt="" width="100" height="100" loading="lazy">
+                                    </button>
+                                @endforeach
+                            </div>
+                        @endif
 
-                {{-- Gallery --}}
-                <div class="lv-gallery">
-                    <div class="lv-gallery__main">
-                        @if(count($product['images']) > 1)
-                            <button type="button" class="lv-gallery__arrow lv-gallery__arrow--prev" aria-label="Imagen anterior">
-                                <i class="tb-icon tb-icon-angle-left"></i>
-                            </button>
-                        @endif
-                        <img id="lv-gallery-main-img" src="{{ asset($product['images'][0]) }}" alt="{{ $product['title'] }}">
-                        @if(count($product['images']) > 1)
-                            <button type="button" class="lv-gallery__arrow lv-gallery__arrow--next" aria-label="Imagen siguiente">
-                                <i class="tb-icon tb-icon-angle-right"></i>
-                            </button>
-                        @endif
-                    </div>
-                    @if(count($product['images']) > 1)
-                        <div class="lv-gallery__thumbs">
-                            @foreach($product['images'] as $index => $image)
-                                <button type="button" class="lv-gallery__thumb {{ $index === 0 ? 'is-active' : '' }}" data-src="{{ asset($image) }}">
-                                    <img src="{{ asset($image) }}" alt="{{ $product['title'] }} - {{ $index + 1 }}">
+                        <div class="lv-gallery__main">
+                            @if($galleryImages->count() > 1)
+                                <button type="button" class="lv-gallery__arrow lv-gallery__arrow--prev" aria-label="Imagem anterior">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+                                    </svg>
                                 </button>
-                            @endforeach
+                            @endif
+                            <img id="lv-gallery-main-img"
+                                src="{{ asset($mainImage) }}"
+                                alt="{{ $product['title'] }}"
+                                width="640"
+                                height="640">
+                            @if($galleryImages->count() > 1)
+                                <button type="button" class="lv-gallery__arrow lv-gallery__arrow--next" aria-label="Imagem seguinte">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                                    </svg>
+                                </button>
+                            @endif
                         </div>
-                    @endif
-                </div>
+                    </div>
 
-                {{-- Info panel --}}
-                <div class="lv-product__info">
-                    <h1 class="lv-product__title">{{ $product['title'] }}</h1>
+                    <div class="lv-product__info">
+                        <p class="lv-product__badge">{{ $seoCategoryLabel }}</p>
+                        <h1 class="lv-product__title">{{ $product['title'] }}</h1>
 
-                    <div class="lv-product__price-row">
-                        @if($product['old_price'] && floatval(str_replace(',', '', $product['old_price'])) > floatval(str_replace(',', '', $product['price'])))
-                            <span class="lv-product__price-old">{{ $product['old_price'] }} €</span>
+                        <div class="lv-product__price-row">
+                            <span class="lv-product__price {{ $hasDiscount ? 'lv-product__price--sale' : '' }}">{{ $product['price'] }} €</span>
+                            @if($hasDiscount)
+                                <span class="lv-product__price-old">{{ $product['old_price'] }} €</span>
+                                <span class="lv-product__sale">{{ $discountPct }}% Off</span>
+                            @endif
+                            <span class="lv-product__price-note">IVA incluído</span>
+                        </div>
+
+                        <p class="lv-product__shipping">
+                            <a href="{{ route('politicaDeEntrega') }}">Envio</a>
+                            grátis em Portugal Continental, calculado no checkout.
+                        </p>
+
+                        @if(!empty($product['short_description']))
+                            <p class="lv-product__desc">{!! nl2br(e($product['short_description'])) !!}</p>
                         @endif
-                        <span class="lv-product__price">{{ $product['price'] }} €</span>
-                        <span class="lv-product__price-note">(IVA incluido)</span>
-                    </div>
 
-                    <div class="lv-product__stock {{ $product['in_stock'] ? 'lv-product__stock--in' : 'lv-product__stock--out' }}">
-                        <i class="tb-icon {{ $product['in_stock'] ? 'tb-icon-check-circle' : 'tb-icon-close-01' }}"></i>
-                        {{ $product['in_stock'] ? 'En stock - Listo para enviar' : 'Agotado' }}
-                    </div>
-
-                    <ul class="lv-product__benefits">
-                        <li><i class="tb-icon tb-icon-check-circle"></i> Envío gratis a España y Europa</li>
-                        <li><i class="tb-icon tb-icon-check-circle"></i> Pago seguro por transferencia bancaria</li>
-                        <li><i class="tb-icon tb-icon-check-circle"></i> Devolución en un plazo de 14 días</li>
-                    </ul>
-
-                    @if(!empty($product['short_description']))
-                        <p class="lv-product__desc">{{ $product['short_description'] }}</p>
-                    @endif
-
-                    <form class="cart" action="{{ route('cart.add') }}" method="post" enctype="multipart/form-data">
-                        @csrf
-                        <input type="hidden" name="product_id" value="{{ $product['id'] }}">
-
-                        <div class="lv-product__actions">
-                            <div class="lv-product__qty">
-                                <label class="screen-reader-text" for="quantity_{{ $product['id'] }}">Cantidad de {{ $product['title'] }}</label>
-                                <div class="quantity-selector" style="display:flex; align-items:stretch; width:100%;">
-                                    <button type="button" class="quantity-m">&minus;</button>
-                                    <input type="number" id="quantity_{{ $product['id'] }}" class="quantity-add" value="1" aria-label="Cantidad del producto">
-                                    <button type="button" class="quantity-p">&plus;</button>
-                                </div>
-                            </div>
-
-                            <a href="javascript:void(0);" name="add-to-cart"
-                               data-product-id="{{ $product['id'] ?? '' }}"
-                               aria-label="Añadir al carrito: &ldquo;{{ $product['title'] ?? 'Producto' }}&rdquo;"
-                               class="lv-btn lv-btn--primary lv-product__cta single_add_to_cart_button ajax_add_to_cart {{ !$product['in_stock'] ? 'disabled' : '' }}"
-                               {{ !$product['in_stock'] ? 'disabled' : '' }}>
-                                {{ $product['in_stock'] ? 'Añadir al carrito' : 'Agotado' }}
-                            </a>
-
-                            <button type="button"
-                               class="lv-product__wishlist-btn wishlist-button {{ in_array($product['id'], array_keys(Session::get('wishlist', []))) ? 'wishlist-added' : '' }}"
-                               data-product-id="{{ $product['id'] }}"
-                               data-product-title="{{ $product['title'] }}"
-                               data-product-price="{{ $product['price'] }}"
-                               data-product-image="{{ asset($product['images'][0]) }}"
-                               data-product-slug="{{ $product['slug'] }}"
-                               aria-label="Añadir a la lista de deseos">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="{{ in_array($product['id'], array_keys(Session::get('wishlist', []))) ? 'currentColor' : 'none' }}" stroke="currentColor" stroke-width="1.5">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"></path>
-                                </svg>
-                                <span class="yith-wcwl-add-to-wishlist-button__label screen-reader-text">{{ in_array($product['id'], array_keys(Session::get('wishlist', []))) ? 'En la lista' : 'Añadir a la lista de deseos' }}</span>
-                            </button>
-                        </div>
-                    </form>
-
-                    @if($product['in_stock'])
-                        <a href="javascript:void(0);" class="lv-btn lv-btn--ghost lv-product__buy-now" id="lv-buy-now">Comprar ahora</a>
-                    @endif
-
-                    <div class="lv-product__meta">
-                        <span><strong>REF:</strong> {{ $product['ref'] }}</span>
-                        <span><strong>Categoría:</strong> <a href="{{ route('category', ['category' => $product['category']]) }}">{{ \App\Support\CategoryLabels::label($product['category']) }}</a></span>
                         @if(!empty($product['color']))
-                            <span><strong>Color:</strong> {{ $product['color'] }}</span>
+                            <div class="lv-product__variant">
+                                <p class="lv-product__variant-label">
+                                    <span>Cor:</span> {{ $product['color'] }}
+                                </p>
+                            </div>
                         @endif
+
+                        <form class="lv-product__buy cart" action="{{ route('cart.add') }}" method="post">
+                            @csrf
+                            <input type="hidden" name="product_id" value="{{ $product['id'] }}">
+
+                            <div class="lv-product__qty-row" id="lv-product-atc">
+                                <div class="lv-product__qty quantity-selector">
+                                    <label class="screen-reader-text" for="quantity_{{ $product['id'] }}">Quantidade de {{ $product['title'] }}</label>
+                                    <button type="button" class="quantity-m" aria-label="Diminuir quantidade">&minus;</button>
+                                    <input type="number" id="quantity_{{ $product['id'] }}" class="quantity-add" name="quantity" value="1" min="1" inputmode="numeric" aria-label="Quantidade do produto">
+                                    <button type="button" class="quantity-p" aria-label="Aumentar quantidade">&plus;</button>
+                                </div>
+
+                                <a href="javascript:void(0);"
+                                   data-product-id="{{ $product['id'] }}"
+                                   aria-label="Adicionar ao carrinho: {{ $product['title'] }}"
+                                   class="lv-product__atc single_add_to_cart_button ajax_add_to_cart {{ ! $product['in_stock'] ? 'is-disabled' : '' }}"
+                                   @if(! $product['in_stock']) aria-disabled="true" @endif>
+                                    {{ $product['in_stock'] ? 'Adicionar ao carrinho' : 'Esgotado' }}
+                                </a>
+
+                                <button type="button"
+                                   class="lv-product__wishlist-btn wishlist-button {{ $inWishlist ? 'wishlist-added' : '' }}"
+                                   data-product-id="{{ $product['id'] }}"
+                                   data-product-title="{{ $product['title'] }}"
+                                   data-product-price="{{ $product['price'] }}"
+                                   data-product-image="{{ asset($mainImage) }}"
+                                   data-product-slug="{{ $product['slug'] }}"
+                                   aria-label="{{ $inWishlist ? 'Na lista de desejos' : 'Adicionar à lista de desejos' }}">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="{{ $inWishlist ? 'currentColor' : 'none' }}" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"></path>
+                                    </svg>
+                                </button>
+                            </div>
+
+                            @if($product['in_stock'])
+                                <a href="javascript:void(0);" class="lv-product__buynow" id="lv-buy-now">Comprar agora</a>
+                            @endif
+                        </form>
+
+                        <div class="lv-product__delivery">
+                            <div class="lv-product__delivery-item">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+                                    <rect x="1" y="7" width="15" height="10" rx="1.5"/>
+                                    <path d="M16 10h4l3 3v4h-7"/>
+                                    <circle cx="6.5" cy="18.5" r="1.5"/>
+                                    <circle cx="18.5" cy="18.5" r="1.5"/>
+                                </svg>
+                                <p>Prazo de entrega estimado: <strong>3–5 dias úteis</strong></p>
+                            </div>
+                            <span class="lv-product__delivery-sep" aria-hidden="true"></span>
+                            <div class="lv-product__delivery-item">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+                                    <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                                    <path d="M3.3 7 12 12l8.7-5M12 22V12"/>
+                                </svg>
+                                <p><strong>Envio grátis</strong> em todas as encomendas para Portugal Continental</p>
+                            </div>
+                        </div>
+
+                        <div class="lv-product__pickup {{ $product['in_stock'] ? 'is-in' : 'is-out' }}">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                @if($product['in_stock'])
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/>
+                                @else
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="m9.75 9.75 4.5 4.5m0-4.5-4.5 4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/>
+                                @endif
+                            </svg>
+                            <div>
+                                <p>
+                                    @if($product['in_stock'])
+                                        <strong>Em stock — pronto a enviar</strong> a partir de {{ config('company.address.city') }}.
+                                    @else
+                                        <strong>Esgotado de momento.</strong> Contacte-nos para disponibilidade.
+                                    @endif
+                                </p>
+                                <a href="{{ route('contacto') }}">Ver informações da loja</a>
+                            </div>
+                        </div>
+
+                        <div class="lv-product-acc">
+                            @if(!empty($product['description']))
+                                <details class="lv-product-acc__item">
+                                    <summary class="lv-product-acc__summary">
+                                        <span>Descrição</span>
+                                        <span class="lv-product-acc__icon" aria-hidden="true"></span>
+                                    </summary>
+                                    <div class="lv-product-acc__body">
+                                        {!! nl2br(e($product['description'])) !!}
+                                    </div>
+                                </details>
+                            @endif
+
+                            <details class="lv-product-acc__item">
+                                <summary class="lv-product-acc__summary">
+                                    <span>Especificações</span>
+                                    <span class="lv-product-acc__icon" aria-hidden="true"></span>
+                                </summary>
+                                <div class="lv-product-acc__body">
+                                    <ul class="lv-product-acc__list">
+                                        <li>Referência: {{ $product['ref'] }}</li>
+                                        <li>Categoria: {{ $seoCategoryLabel }}</li>
+                                        @if(!empty($product['color']))
+                                            <li>Cor: {{ $product['color'] }}</li>
+                                        @endif
+                                        <li>Disponibilidade: {{ $product['in_stock'] ? 'Em stock' : 'Esgotado' }}</li>
+                                        <li>IVA incluído no preço apresentado</li>
+                                    </ul>
+                                </div>
+                            </details>
+
+                            <details class="lv-product-acc__item">
+                                <summary class="lv-product-acc__summary">
+                                    <span>Política de devolução</span>
+                                    <span class="lv-product-acc__icon" aria-hidden="true"></span>
+                                </summary>
+                                <div class="lv-product-acc__body">
+                                    <p>Tem 14 dias para exercer o direito de livre resolução, nos termos da lei.</p>
+                                    <ul class="lv-product-acc__list">
+                                        <li>Prazo: 14 dias após a entrega</li>
+                                        <li>Os artigos devem estar por abrir, sem uso e em condições de revenda</li>
+                                        <li>O envio em Portugal Continental é gratuito; o reenvio de devolução pode ter custos, salvo falta de conformidade</li>
+                                    </ul>
+                                    <p><a href="{{ route('politicaDeReembolso') }}">Ler a política de reembolso</a></p>
+                                </div>
+                            </details>
+                        </div>
                     </div>
                 </div>
             </div>
+        </section>
 
-            {{-- Specs table --}}
-            <div class="lv-product__section">
-                <h2 class="lv-product__section-title">Especificaciones técnicas</h2>
-                <div class="lv-product__section-rule"></div>
-                <table class="lv-specs">
-                    <tr>
-                        <th>Referencia</th>
-                        <td>{{ $product['ref'] }}</td>
-                    </tr>
-                    <tr>
-                        <th>Categoría</th>
-                        <td>{{ \App\Support\CategoryLabels::label($product['category']) }}</td>
-                    </tr>
-                    @if(!empty($product['color']))
-                        <tr>
-                            <th>Color</th>
-                            <td>{{ $product['color'] }}</td>
-                        </tr>
-                    @endif
-                    <tr>
-                        <th>Disponibilidad</th>
-                        <td>{{ $product['in_stock'] ? 'En stock' : 'Agotado' }}</td>
-                    </tr>
-                </table>
-            </div>
-
-            {{-- Full description --}}
-            @if(!empty($product['description']))
-                <div class="lv-product__description">
-                    {!! nl2br(e($product['description'])) !!}
-                </div>
-            @endif
-
-            {{-- Related products --}}
-            @if($relatedProducts->count() > 0)
-                <div class="lv-related">
-                    <h2 class="lv-related__title">Productos relacionados</h2>
-                    <div class="products-grid">
+        @if($relatedProducts->count() > 0)
+            <section class="lv-related" aria-labelledby="lv-related-title">
+                <div class="lv-container">
+                    <h2 id="lv-related-title" class="lv-related__title">As pessoas também compraram</h2>
+                    <div class="lv-product-grid">
                         @foreach($relatedProducts as $relatedProduct)
-                            <div class="item">
-                                <figure>
-                                    <a href="{{ route('product.show', $relatedProduct['slug']) }}">
-                                        <img src="{{ asset($relatedProduct['images'][0]) }}" alt="{{ $relatedProduct['title'] ?? '' }}" loading="lazy">
-                                    </a>
-                                </figure>
-                                <div class="caption">
-                                    <span class="price">
-                                        @if (!empty($relatedProduct['old_price']) && (float) str_replace(',', '', $relatedProduct['old_price']) > (float) str_replace(',', '', $relatedProduct['price']))
-                                            <del aria-hidden="true">{{ $relatedProduct['old_price'] }}&nbsp;&euro;</del>
-                                        @endif
-                                        {{ $relatedProduct['price'] }}&nbsp;&euro;
-                                    </span>
-                                    <h3 class="name">
-                                        <a href="{{ route('product.show', $relatedProduct['slug']) }}">{{ $relatedProduct['title'] }}</a>
-                                    </h3>
-                                </div>
-                            </div>
+                            <x-product-card :product="$relatedProduct" />
                         @endforeach
                     </div>
                 </div>
-            @endif
-
-        </div>
+            </section>
+        @endif
     </div>
+
+    @if($product['in_stock'])
+        <div class="lv-product-sticky" id="lv-product-sticky" hidden>
+            <div class="lv-container lv-product-sticky__inner">
+                <div class="lv-product-sticky__product">
+                    <img src="{{ asset($mainImage) }}" alt="" width="56" height="56">
+                    <p>{{ $product['title'] }}</p>
+                </div>
+                <div class="lv-product-sticky__actions">
+                    <div class="lv-product__qty quantity-selector lv-product__qty--sticky">
+                        <button type="button" class="quantity-m" aria-label="Diminuir quantidade">&minus;</button>
+                        <input type="number" class="quantity-add" id="quantity_sticky_{{ $product['id'] }}" value="1" min="1" inputmode="numeric" aria-label="Quantidade do produto">
+                        <button type="button" class="quantity-p" aria-label="Aumentar quantidade">&plus;</button>
+                    </div>
+                    <a href="javascript:void(0);"
+                       data-product-id="{{ $product['id'] }}"
+                       class="lv-product-sticky__atc ajax_add_to_cart"
+                       aria-label="Adicionar ao carrinho: {{ $product['title'] }}">
+                        Adicionar ao carrinho
+                    </a>
+                </div>
+            </div>
+        </div>
+    @endif
 
     @include('layouts.partials.footer.public')
 @endsection
@@ -203,62 +369,74 @@
 @push('scripts')
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            // Quantity selector
-            const selector = document.querySelector('.quantity-selector');
-            if (selector) {
-                const input = selector.querySelector('.quantity-add');
-                const minusBtn = selector.querySelector('.quantity-m');
-                const plusBtn = selector.querySelector('.quantity-p');
+            const qtyInputs = Array.from(document.querySelectorAll('.lv-product .quantity-add, .lv-product-sticky .quantity-add'));
 
-                plusBtn.addEventListener('click', function () {
-                    let value = parseInt(input.value, 10) || 1;
-                    input.value = value + 1;
-                });
+            function clampQty(value) {
+                const n = parseInt(value, 10);
+                return isNaN(n) || n < 1 ? 1 : n;
+            }
 
-                minusBtn.addEventListener('click', function () {
-                    let value = parseInt(input.value, 10) || 1;
-                    input.value = value > 1 ? value - 1 : 1;
-                });
-
-                input.addEventListener('input', function () {
-                    let value = parseInt(input.value, 10);
-                    if (isNaN(value) || value < 1) {
-                        input.value = 1;
-                    }
+            function syncQty(source) {
+                const value = clampQty(source.value);
+                qtyInputs.forEach(function (input) {
+                    input.value = value;
                 });
             }
 
-            // Gallery: thumbnail click + prev/next arrows
+            document.querySelectorAll('.quantity-selector').forEach(function (selector) {
+                const input = selector.querySelector('.quantity-add');
+                const minusBtn = selector.querySelector('.quantity-m');
+                const plusBtn = selector.querySelector('.quantity-p');
+                if (!input) return;
+
+                plusBtn?.addEventListener('click', function () {
+                    input.value = clampQty(input.value) + 1;
+                    syncQty(input);
+                });
+
+                minusBtn?.addEventListener('click', function () {
+                    input.value = Math.max(1, clampQty(input.value) - 1);
+                    syncQty(input);
+                });
+
+                input.addEventListener('input', function () {
+                    syncQty(input);
+                });
+            });
+
             const mainImg = document.getElementById('lv-gallery-main-img');
             const thumbs = document.querySelectorAll('.lv-gallery__thumb');
             let currentIndex = 0;
 
             function setActiveImage(index) {
-                if (!thumbs.length) return;
+                if (!thumbs.length || !mainImg) return;
                 index = (index + thumbs.length) % thumbs.length;
                 currentIndex = index;
                 const thumb = thumbs[index];
                 mainImg.src = thumb.dataset.src;
-                thumbs.forEach(t => t.classList.remove('is-active'));
+                thumbs.forEach(function (t) { t.classList.remove('is-active'); });
                 thumb.classList.add('is-active');
             }
 
-            thumbs.forEach((thumb, index) => {
-                thumb.addEventListener('click', () => setActiveImage(index));
+            thumbs.forEach(function (thumb, index) {
+                thumb.addEventListener('click', function () { setActiveImage(index); });
             });
 
-            const prevArrow = document.querySelector('.lv-gallery__arrow--prev');
-            const nextArrow = document.querySelector('.lv-gallery__arrow--next');
-            if (prevArrow) prevArrow.addEventListener('click', () => setActiveImage(currentIndex - 1));
-            if (nextArrow) nextArrow.addEventListener('click', () => setActiveImage(currentIndex + 1));
+            document.querySelector('.lv-gallery__arrow--prev')?.addEventListener('click', function () {
+                setActiveImage(currentIndex - 1);
+            });
+            document.querySelector('.lv-gallery__arrow--next')?.addEventListener('click', function () {
+                setActiveImage(currentIndex + 1);
+            });
 
-            // Buy now: add to cart then redirect to checkout
             const buyNowBtn = document.getElementById('lv-buy-now');
             if (buyNowBtn) {
                 buyNowBtn.addEventListener('click', function () {
                     const csrfToken = document.querySelector('meta[name="csrf-token"]')?.getAttribute('content');
                     const quantity = document.querySelector('.quantity-add')?.value || 1;
-                    buyNowBtn.textContent = 'Procesando...';
+                    const originalLabel = buyNowBtn.textContent;
+                    buyNowBtn.textContent = 'A processar...';
+                    buyNowBtn.setAttribute('aria-busy', 'true');
 
                     fetch("{{ route('cart.add') }}", {
                         method: 'POST',
@@ -272,20 +450,34 @@
                             quantity: quantity
                         })
                     })
-                        .then(response => response.json())
-                        .then(data => {
+                        .then(function (response) { return response.json(); })
+                        .then(function (data) {
                             if (data.success) {
                                 window.location.href = "{{ route('checkout') }}";
                             } else {
-                                buyNowBtn.textContent = 'Comprar ahora';
-                                alert(data.message || 'No se ha podido añadir el producto al carrito.');
+                                buyNowBtn.textContent = originalLabel;
+                                buyNowBtn.removeAttribute('aria-busy');
+                                alert(data.message || 'Não foi possível adicionar o produto ao carrinho.');
                             }
                         })
-                        .catch(() => {
-                            buyNowBtn.textContent = 'Comprar ahora';
-                            alert('Error de conexión.');
+                        .catch(function () {
+                            buyNowBtn.textContent = originalLabel;
+                            buyNowBtn.removeAttribute('aria-busy');
+                            alert('Erro de ligação.');
                         });
                 });
+            }
+
+            const atcAnchor = document.getElementById('lv-product-atc');
+            const stickyBar = document.getElementById('lv-product-sticky');
+            if (atcAnchor && stickyBar && 'IntersectionObserver' in window) {
+                stickyBar.hidden = false;
+                const observer = new IntersectionObserver(function (entries) {
+                    entries.forEach(function (entry) {
+                        stickyBar.classList.toggle('is-visible', !entry.isIntersecting);
+                    });
+                }, { threshold: 0.15 });
+                observer.observe(atcAnchor);
             }
         });
     </script>

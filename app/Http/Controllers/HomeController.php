@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Repositories\LojaProduct;
+use App\Support\CategoryLabels;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -10,43 +11,94 @@ class HomeController extends Controller
 
     public function index()
     {
-        $pelletProducts = LojaProduct::query()
-            ->applyFilters(['category' => 'pellets-de-madeira'])
-            ->paginate(16);
+        $all = collect(config('loja_products', []));
 
-        $lenhaProducts = LojaProduct::query()
-            ->applyFilters(['category' => 'lenha'])
-            ->paginate(12);
+        $homeCategories = collect(CategoryLabels::all())->map(function ($label, $key) use ($all) {
+            $items = $all->where('category', $key)->values();
+            $first = $items->first();
+            $from = $items
+                ->map(fn ($product) => (float) str_replace(',', '', $product['price'] ?? 0))
+                ->filter(fn ($price) => $price > 0)
+                ->min();
 
-        $chefProducts = LojaProduct::query()
-            ->applyFilters(['category' => 'chef-de-madeira'])
-            ->paginate(12);
+            return [
+                'key' => $key,
+                'label' => $label,
+                'url' => CategoryLabels::route($key),
+                'count' => $items->count(),
+                'image' => $first['images'][0] ?? config('company.logo'),
+                'from' => $from ?: null,
+            ];
+        })->filter(fn ($category) => $category['count'] > 0)->values();
 
-        $compactadaProducts = LojaProduct::query()
-            ->applyFilters(['category' => 'madeira-compactada'])
-            ->paginate(12);
+        $byKey = $homeCategories->keyBy('key');
 
-        $caldeiraProducts = LojaProduct::query()
-            ->applyFilters(['category' => 'caldeira-de-lenha'])
-            ->paginate(4);
+        $collections = collect([
+            [
+                'title' => 'Pellets de madeira',
+                'desc' => 'Paletes e sacos para salamandras e caldeiras.',
+                'url' => CategoryLabels::route('pellets-de-madeira'),
+                'image' => 'wp-content/uploads/2025/10/paletes-pellets-sacos.jpg',
+                'image_position' => 'center 40%',
+                'from' => data_get($byKey, 'pellets-de-madeira.from'),
+            ],
+            [
+                'title' => 'Lenha seca',
+                'desc' => 'Lenha em palete, toros e madeira densificada.',
+                'url' => CategoryLabels::route('madeira-de-fogo'),
+                'image' => 'wp-content/uploads/2025/10/678998765434567806.webp',
+                'image_position' => '80% 40%',
+                'from' => data_get($byKey, 'madeira-de-fogo.from') ?? data_get($byKey, 'lenha.from'),
+            ],
+            [
+                'title' => 'Fogões e salamandras',
+                'desc' => 'Aquecimento a lenha para a sua casa.',
+                'url' => CategoryLabels::route('chef-de-madeira'),
+                'image' => 'wp-content/uploads/2025/10/fogao-sala-interior.jpg',
+                'image_position' => 'center 35%',
+                'from' => data_get($byKey, 'chef-de-madeira.from') ?? data_get($byKey, 'fogao-a-lenha.from'),
+            ],
+        ]);
 
+        $onSale = $all->filter(function ($product) {
+            $old = (float) str_replace(',', '', $product['old_price'] ?? 0);
+            $price = (float) str_replace(',', '', $product['price'] ?? 0);
 
-        $granelProducts = LojaProduct::query()
-            ->applyFilters(['category' => 'a-granel'])
-            ->paginate(4);
+            return $old > $price && $price > 0;
+        })->values();
 
-        $madeiraFogoProducts = LojaProduct::query()
-            ->applyFilters(['category' => 'madeira-de-fogo'])
-            ->paginate(8);
+        $dealProducts = $onSale
+            ->groupBy('category')
+            ->flatMap(fn ($group) => $group->take(2))
+            ->values();
+
+        if ($dealProducts->count() < 8) {
+            $dealProducts = $dealProducts->concat($onSale)->unique('id')->values();
+        }
+
+        $dealProducts = $dealProducts->take(8);
+
+        $featuredProducts = $all->where('category', 'pellets-de-madeira')->values();
+        if ($featuredProducts->count() < 8) {
+            $featuredProducts = $featuredProducts
+                ->concat($all->where('category', '!=', 'pellets-de-madeira')->values())
+                ->unique('id')
+                ->values();
+        }
+        $featuredProducts = $featuredProducts->take(8);
+
+        if ($dealProducts->isEmpty()) {
+            $dealProducts = $featuredProducts;
+        }
+
+        $promoProducts = $dealProducts->take(4);
 
         return view('home', compact(
-            'pelletProducts',
-            'lenhaProducts',
-            'chefProducts',
-            'compactadaProducts',
-            'caldeiraProducts',
-            'granelProducts',
-            'madeiraFogoProducts'
+            'homeCategories',
+            'collections',
+            'dealProducts',
+            'featuredProducts',
+            'promoProducts',
         ));
     }
 
@@ -59,7 +111,7 @@ class HomeController extends Controller
         if (!$product) {
             return response()->json([
                 'success' => false,
-                'message' => 'Producto no encontrado'
+                'message' => 'Produto não encontrado'
             ], 404);
         }
 
@@ -172,8 +224,14 @@ class HomeController extends Controller
 
 
 
-        // Si le produit n'existe pas, rediriger vers la page d'accueil
+        // Slugs were translated back to Portuguese: keep the old ones alive with a 301.
         if (!$product) {
+            $newSlug = config('product_slug_redirects')[$slug] ?? null;
+
+            if ($newSlug) {
+                return redirect()->route('product.show', ['slug' => $newSlug], 301);
+            }
+
             abort(404);
         }
 
@@ -230,8 +288,20 @@ class HomeController extends Controller
      */
     public function category($category)
     {
+        $internal = \App\Support\CategoryLabels::fromUrlSlug($category);
+
+        if (! $internal) {
+            abort(404);
+        }
+
+        // Canonical Portuguese slug if an old internal key was used on the new path
+        $canonical = \App\Support\CategoryLabels::urlSlug($internal);
+        if ($canonical !== $category) {
+            return redirect()->route('category', ['category' => $canonical], 301);
+        }
+
         $filters = [
-            'category' => $category ?? request('product_cat'),
+            'category' => $internal,
             'min_price' => (float) request('min_price', 110),
             'max_price' => (float) request('max_price', 2997),
             'in_stock' => request('stock') == '0' ? true : false,
@@ -264,9 +334,10 @@ class HomeController extends Controller
             's' => $filters['search']
         ];
 
-        $categoryName = \App\Support\CategoryLabels::label($category);
+        $categoryName = \App\Support\CategoryLabels::label($internal);
+        $categorySeo = \App\Support\Seo::category($internal);
 
-        return view('category', compact('lojaProducts', 'filters', 'currentFilters','categoryName'));
+        return view('category', compact('lojaProducts', 'filters', 'currentFilters', 'categoryName', 'categorySeo'));
     }
 
     public function addToCart(Request $request)
@@ -279,7 +350,7 @@ class HomeController extends Controller
             if (!$productId) {
                 return response()->json([
                     'success' => false,
-                    'message' => 'Falta el ID del producto.'
+                    'message' => 'Falta o ID do produto.'
                 ], 400);
             }
 
@@ -295,7 +366,7 @@ class HomeController extends Controller
             if ($allProducts->isEmpty()) {
                 return response()->json([
                     'success' => false,
-                    'message' => 'No hay ningún producto disponible.'
+                    'message' => 'Não há nenhum produto disponível.'
                 ], 404);
             }
 
@@ -311,7 +382,7 @@ class HomeController extends Controller
             if (!$product) {
                 return response()->json([
                     'success' => false,
-                    'message' => 'Producto no encontrado con ID: ' . $productId
+                    'message' => 'Produto não encontrado com o ID: ' . $productId
                 ], 404);
             }
 
@@ -321,7 +392,7 @@ class HomeController extends Controller
             // Préparer les données du produit
             $productData = [
                 'id' => $productId,
-                'title' => $product['title'] ?? 'Producto sin nombre',
+                'title' => $product['title'] ?? 'Produto sem nome',
                 'price' => $price,
                 'quantity' => $quantity,
                 'image' => $product['images'][0] ?? ($product['image'] ?? null),
@@ -359,7 +430,7 @@ class HomeController extends Controller
 
             return response()->json([
                 'success' => true,
-                'message' => '¡Producto añadido al carrito!',
+                'message' => 'Produto adicionado ao carrinho!',
                 'cart' => $cart,
                 'totalItems' => $totalItems,
                 'totalPrice' => number_format($totalPrice, 2, '.', ''),
@@ -372,7 +443,7 @@ class HomeController extends Controller
 
             return response()->json([
                 'success' => false,
-                'message' => 'Se ha producido un error al añadir el producto al carrito.'
+                'message' => 'Ocorreu um erro ao adicionar o produto ao carrinho.'
             ], 500);
         }
     }
@@ -469,7 +540,7 @@ class HomeController extends Controller
                 ]);
             }
 
-            return response()->json(['success' => false, 'message' => 'Producto no encontrado'], 404);
+            return response()->json(['success' => false, 'message' => 'Produto não encontrado'], 404);
 
         } catch (\Exception $e) {
             \Log::error('Erreur updateCart: ' . $e->getMessage());
@@ -500,7 +571,7 @@ class HomeController extends Controller
 
                 return response()->json([
                     'success' => true,
-                    'message' => 'Producto eliminado del carrito',
+                    'message' => 'Produto removido do carrinho',
                     'cart' => $cart,
                     'totalItems' => $totalItems,
                     'totalPrice' => $totalPrice,
@@ -508,7 +579,7 @@ class HomeController extends Controller
                 ]);
             }
 
-            return response()->json(['success' => false, 'message' => 'Producto no encontrado'], 404);
+            return response()->json(['success' => false, 'message' => 'Produto não encontrado'], 404);
 
         } catch (\Exception $e) {
             \Log::error('Erreur removeFromCart: ' . $e->getMessage());
@@ -553,7 +624,7 @@ class HomeController extends Controller
         $product = $allProducts->firstWhere('id', $productId);
 
         if (!$product) {
-            return redirect()->back()->with('error', 'Producto no encontrado.');
+            return redirect()->back()->with('error', 'Produto não encontrado.');
         }
 
         // Logique pour ajouter à la liste de souhaits
@@ -563,10 +634,10 @@ class HomeController extends Controller
             $wishlist[] = $productId;
             session()->put('wishlist', $wishlist);
 
-            return redirect()->back()->with('success', '¡Producto añadido a tu lista de deseos!');
+            return redirect()->back()->with('success', 'Produto adicionado à sua lista de desejos!');
         }
 
-        return redirect()->back()->with('info', 'El producto ya está en tu lista de deseos.');
+        return redirect()->back()->with('info', 'O produto já está na sua lista de desejos.');
     }
 
 
@@ -597,10 +668,10 @@ class HomeController extends Controller
                 $desktopHtml = '
             <div class="mcart-border">
                 <ul class="cart_empty">
-                    <li><span>Tu carrito está vacío</span></li>
+                    <li><span>O seu carrinho está vazio</span></li>
                     <li class="total">
                         <a class="button wc-continue" href="' . route('loja') . '">
-                            Seguir comprando
+                            Continuar a comprar
                             <i class="tb-icon tb-icon-angle-right"></i>
                         </a>
                     </li>
@@ -612,10 +683,10 @@ class HomeController extends Controller
                 $mobileHtml = '
             <div class="mcart-border">
                 <ul class="cart_empty">
-                    <li><span>Tu carrito está vacío</span></li>
+                    <li><span>O seu carrinho está vazio</span></li>
                     <li class="total">
                         <a class="button wc-continue" href="' . route('loja') . '">
-                            Seguir comprando
+                            Continuar a comprar
                             <i class="tb-icon tb-icon-angle-right"></i>
                         </a>
                     </li>
@@ -639,19 +710,19 @@ class HomeController extends Controller
                             <img width="100" height="100"
                                  src="' . (!empty($item['image']) ? asset($item['image']) : 'https://via.placeholder.com/100') . '"
                                  class="attachment-woocommerce_gallery_thumbnail size-woocommerce_gallery_thumbnail"
-                                 alt="' . htmlspecialchars($item['title'] ?? 'Producto') . '"
+                                 alt="' . htmlspecialchars($item['title'] ?? 'Produto') . '"
                                  decoding="async">
                         </a>
                     </div>
                     <div class="product-details">
                         <a class="product-name" href="' . route('product.show', ['slug' => $item['slug'] ?? '']) . '">
-                            <span>' . htmlspecialchars($item['title'] ?? 'Producto') . '</span>
+                            <span>' . htmlspecialchars($item['title'] ?? 'Produto') . '</span>
                         </a>
                         <div class="group">
                             <div class="quantity-wrap">
                                 <div class="quantity">
                                     <label class="screen-reader-text" for="quantity_desktop_' . $productId . '">
-                                        Cantidad de ' . htmlspecialchars($item['title'] ?? 'Producto') . '
+                                        Quantidade de ' . htmlspecialchars($item['title'] ?? 'Produto') . '
                                     </label>
                                     <span class="box">
                                         <div class="quantity-selector">
@@ -660,7 +731,7 @@ class HomeController extends Controller
                                             <input type="number" class="quantity-input"
                                                data-product-id="' . $productId . '"
                                                value="' . $itemQuantity . '"
-                                                aria-label="Cantidad del producto"
+                                                aria-label="Quantidade do produto"
                                               >
 
                                             <button type="button" class="quantity-plus" data-product-id="' . $productId . '">＋
@@ -678,7 +749,7 @@ class HomeController extends Controller
                            class="remove mini-cart-remove"
                            data-product-id="' . $productId . '"
                            data-cart-type="desktop"
-                           aria-label="Eliminar ' . htmlspecialchars($item['title'] ?? 'Producto') . ' del carrito">
+                           aria-label="Remover ' . htmlspecialchars($item['title'] ?? 'Produto') . ' do carrinho">
                             <i class="tb-icon tb-icon-trash"></i>
                         </a>
                     </div>
@@ -697,7 +768,7 @@ class HomeController extends Controller
                         </span>
                     </p>
                     <p class="buttons">
-                        <a href="' . route('carrinho') . '" class="button view-cart">Ver carrito</a>
+                        <a href="' . route('carrinho') . '" class="button view-cart">Ver carrinho</a>
                         <a href="'. route('checkout'). '" class="button checkout">Finalizar compra</a>
                     </p>
                 </div>
@@ -720,19 +791,19 @@ class HomeController extends Controller
                             <img width="100" height="100"
                                  src="' . (!empty($item['image']) ? asset($item['image']) : 'https://via.placeholder.com/100') . '"
                                  class="attachment-woocommerce_gallery_thumbnail size-woocommerce_gallery_thumbnail"
-                                 alt="' . htmlspecialchars($item['title'] ?? 'Producto') . '"
+                                 alt="' . htmlspecialchars($item['title'] ?? 'Produto') . '"
                                  decoding="async">
                         </a>
                     </div>
                     <div class="product-details">
                         <a class="product-name" href="' . route('product.show', ['slug' => $item['slug'] ?? '']) . '">
-                            <span>' . htmlspecialchars($item['title'] ?? 'Producto') . '</span>
+                            <span>' . htmlspecialchars($item['title'] ?? 'Produto') . '</span>
                         </a>
                         <div class="group">
                             <div class="quantity-wrap">
                                 <div class="quantity">
                                     <label class="screen-reader-text" for="quantity_mobile_' . $productId . '">
-                                        Cantidad de ' . htmlspecialchars($item['title'] ?? 'Producto') . '
+                                        Quantidade de ' . htmlspecialchars($item['title'] ?? 'Produto') . '
                                     </label>
                                     <span class="box">
                                          <div class="quantity-selector">
@@ -741,7 +812,7 @@ class HomeController extends Controller
                                             <input type="number" class="quantity-input"
                                                data-product-id="' . $productId . '"
                                                value="' . $itemQuantity . '"
-                                                aria-label="Cantidad del producto"
+                                                aria-label="Quantidade do produto"
                                               >
 
                                             <button type="button" class="quantity-plus" data-product-id="' . $productId . '">＋
@@ -759,7 +830,7 @@ class HomeController extends Controller
                            class="remove mini-cart-remove"
                            data-product-id="' . $productId . '"
                            data-cart-type="mobile"
-                           aria-label="Eliminar ' . htmlspecialchars($item['title'] ?? 'Producto') . ' del carrito">
+                           aria-label="Remover ' . htmlspecialchars($item['title'] ?? 'Produto') . ' do carrinho">
                             <i class="tb-icon tb-icon-trash"></i>
                         </a>
                     </div>
@@ -778,7 +849,7 @@ class HomeController extends Controller
                         </span>
                     </p>
                     <p class="buttons">
-                        <a href="' . route('carrinho') . '" class="button view-cart">Ver carrito</a>
+                        <a href="' . route('carrinho') . '" class="button view-cart">Ver carrinho</a>
                         <a href="'. route('checkout'). '" class="button checkout">Finalizar compra</a>
                     </p>
                 </div>
@@ -870,6 +941,18 @@ class HomeController extends Controller
     {
         return view('pages.politica-de-pagamento');
     }
+
+    public function mapaDoSite()
+    {
+        $products = collect(config('loja_products', []))
+            ->filter(fn ($p) => ! empty($p['slug']))
+            ->unique(fn ($p) => $p['canonical_slug'] ?? $p['slug'])
+            ->sortBy('title')
+            ->values();
+
+        return view('pages.mapa-do-site', compact('products'));
+    }
+
     public function finalizacaoDeCompra()
     {
         return view('finalizacao-de-compra');

@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('title', __('500'))
+@section('meta_robots', 'noindex, follow')
 
 @section('content')
     @include('layouts.partials.navbar.public')
@@ -13,13 +14,13 @@
                     </div>
                     <section class="error-404 col-md-6">
 
-                        <h1 class="title-404">¡VAYA!</h1>
-                        <h2 class="subtitle-404">Error 500: Error interno del servidor</h2>
+                        <h1 class="title-404">OPS!</h1>
+                        <h2 class="subtitle-404">Erro 500: Erro interno do servidor</h2>
 
                         <div class="maia-content-404">
-                            <p class="sub-title">Lo sentimos, se ha producido un error inesperado. Por
-                                favor, vuelve a la <a href="{{ route('home') }}" class="back">página de inicio</a> o
-                                inténtalo de nuevo más tarde.</p>
+                            <p class="sub-title">Lamentamos, ocorreu um erro inesperado. Por
+                                favor, volte à <a href="{{ route('home') }}" class="back">página inicial</a> ou
+                                tente novamente mais tarde.</p>
                         </div>
                     </section>
                 </div>

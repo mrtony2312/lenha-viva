@@ -176,12 +176,6 @@
                                                     </div>
                                                     <div class="media-body">
                                                         <h2 class="product_title entry-title">${product.title}</h2>
-                                                        <div class="woocommerce-product-rating">
-                                                            <div class="star-rating"></div>
-                                                            <a href="#reviews" class="woocommerce-review-link">
-                                                                <span class="count">0</span> comentarios de clientes
-                                                            </a>
-                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -193,7 +187,7 @@
                                                                 <bdi>${product.old_price}&nbsp;<span class="woocommerce-Price-currencySymbol">€</span></bdi>
                                                             </span>
                                                         </del>
-                                                        <span class="screen-reader-text">El precio original era: ${product.old_price}&nbsp;€.</span>
+                                                        <span class="screen-reader-text">O preço original era: ${product.old_price}&nbsp;€.</span>
                                                     ` : ''}
                                                     <ins aria-hidden="true">
                                                         <span class="woocommerce-Price-amount amount">
@@ -201,11 +195,11 @@
                                                         </span>
                                                     </ins>
                                                     ${product.old_price ? `
-                                                        <span class="screen-reader-text">El precio actual es: ${product.price}&nbsp;€.</span>
+                                                        <span class="screen-reader-text">O preço atual é: ${product.price}&nbsp;€.</span>
                                                     ` : ''}
-                                                    <small class="woocommerce-price-suffix">IVA incluido</small>
+                                                    <small class="woocommerce-price-suffix">IVA incluído</small>
                                                 </p>
-                                                <a id="sticky-custom-add-to-cart" href="javascript:void(0);" data-product-id="${product.id}">Añadir</a>
+                                                <a id="sticky-custom-add-to-cart" href="javascript:void(0);" data-product-id="${product.id}">Adicionar</a>
                                             </div>
                                         </div>
                                     </div>
@@ -215,7 +209,7 @@
                                     <div class="row">
                                         <div class="image-mains col-lg-6">
                                             ${product.old_price ? `
-                                                <span class="onsale"><span class="saled">Oferta</span></span>
+                                                <span class="onsale"><span class="saled">Promoção</span></span>
                                             ` : ''}
 
                                             <div class="woocommerce-product-gallery woocommerce-product-gallery--with-images woocommerce-product-gallery--columns-4 images has-gallery"
@@ -240,7 +234,7 @@
                                                 </div>
 
                                                 <div class="details-btn-wrapper">
-                                                    <a class="view-details-btn" href="/product/${product.slug}">Ver detalles</a>
+                                                    <a class="view-details-btn" href="/produto/${product.slug}">Ver detalhes</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -255,7 +249,7 @@
                                                                     <bdi>${product.old_price}&nbsp;<span class="woocommerce-Price-currencySymbol">€</span></bdi>
                                                                 </span>
                                                             </del>
-                                                            <span class="screen-reader-text">El precio original era: ${product.old_price}&nbsp;€.</span>
+                                                            <span class="screen-reader-text">O preço original era: ${product.old_price}&nbsp;€.</span>
                                                         ` : ''}
                                                         <ins aria-hidden="true">
                                                             <span class="woocommerce-Price-amount amount">
@@ -263,25 +257,19 @@
                                                             </span>
                                                         </ins>
                                                         ${product.old_price ? `
-                                                            <span class="screen-reader-text">El precio actual es: ${product.price}&nbsp;€.</span>
+                                                            <span class="screen-reader-text">O preço atual é: ${product.price}&nbsp;€.</span>
                                                         ` : ''}
-                                                        <small class="woocommerce-price-suffix">IVA incluido</small>
+                                                        <small class="woocommerce-price-suffix">IVA incluído</small>
                                                     </p>
-                                                    <h1 class="product_title entry-title">${product.title}</h1>
-                                                    <div class="woocommerce-product-rating">
-                                                        <div class="star-rating"></div>
-                                                        <a href="#reviews" class="woocommerce-review-link">
-                                                            <span class="count">0</span> comentarios de clientes
-                                                        </a>
-                                                    </div>
+                                                    <h2 class="product_title entry-title">${product.title}</h2>
                                                 </div>
 
                                                 ${truncatedDescription ? `
                                                     <div class="woocommerce-product-details__short-description">
                                                         <p>${truncatedDescription}</p>
                                                         ${product.description && product.description.length > 400 ? `
-                                                            <a href="/products/${product.slug}" class="read-more-link" style="color: #F55F1E; font-weight: 500; text-decoration: none;">
-                                                                Leer más...
+                                                            <a href="/produto/${product.slug}" class="read-more-link" style="color: #F55F1E; font-weight: 500; text-decoration: none;">
+                                                                Ler mais...
                                                             </a>
                                                         ` : ''}
                                                     </div>
@@ -304,7 +292,7 @@
                                                                                     <bdi>${product.old_price}&nbsp;<span class="woocommerce-Price-currencySymbol">€</span></bdi>
                                                                                 </span>
                                                                             </del>
-                                                                            <span class="screen-reader-text">El precio original era: ${product.old_price}&nbsp;€.</span>
+                                                                            <span class="screen-reader-text">O preço original era: ${product.old_price}&nbsp;€.</span>
                                                                         ` : ''}
                                                                         <ins aria-hidden="true">
                                                                             <span class="woocommerce-Price-amount amount">
@@ -312,9 +300,9 @@
                                                                             </span>
                                                                         </ins>
                                                                         ${product.old_price ? `
-                                                                            <span class="screen-reader-text">El precio actual es: ${product.price}&nbsp;€.</span>
+                                                                            <span class="screen-reader-text">O preço atual é: ${product.price}&nbsp;€.</span>
                                                                         ` : ''}
-                                                                        <small class="woocommerce-price-suffix">IVA incluido</small>
+                                                                        <small class="woocommerce-price-suffix">IVA incluído</small>
                                                                     </p>
                                                                 </div>
                                                             </div>
@@ -328,7 +316,7 @@
                                                                     </button>
                                                                     <input type="number" class="quantity-add"
                                                                            value="1"
-                                                                           aria-label="Cantidad del producto">
+                                                                           aria-label="Quantidade do produto">
                                                                     <button type="button" class="quantity-p">＋
                                                                     </button>
                                                                 </div>
@@ -337,12 +325,12 @@
                                                         <a href="javascript:void(0);"
                                                          data-product-id="${product.id}"
                                                                 class="single_add_to_cart_button button alt add-to-cart-quickview ajax_add_to_cart"
-                                                                 aria-label="Añadir al carrito: &ldquo;${product.title}&rdquo;">
-                                                            Añadir
+                                                                 aria-label="Adicionar ao carrinho: &ldquo;${product.title}&rdquo;">
+                                                            Adicionar
                                                         </a>
 
                                                         <a class="tbay-buy-now button buy-now-quickview" href="{{ route('carrinho') }}">
-                                                            Comprar ahora
+                                                            Comprar agora
                                                         </a>
                                                         <input type="hidden" value="0" name="maia_buy_now">
 
@@ -359,7 +347,7 @@
                                                         <span class="sku_wrapper">REF: <span class="sku">${product.ref}</span></span>
                                                     ` : ''}
                                                     ${product.category ? `
-                                                        <span class="posted_in">Categoría:
+                                                        <span class="posted_in">Categoria:
                                                             <a href="#" rel="tag">${product.category.toUpperCase()}</a>
                                                         </span>
                                                     ` : ''}
@@ -373,7 +361,7 @@
                                                                     <div class="elementor-element elementor-element-7114f96 elementor-align-center elementor-widget elementor-widget-button" data-id="7114f96" data-element_type="widget" data-widget_type="button.default">
                                                                         <a class="elementor-button elementor-size-sm" role="button">
                                                                             <span class="elementor-button-content-wrapper">
-                                                                                <span class="elementor-button-text">Pago SEGURO garantizado</span>
+                                                                                <span class="elementor-button-text">Pagamento SEGURO garantido</span>
                                                                             </span>
                                                                         </a>
                                                                     </div>
@@ -385,10 +373,10 @@
                                                                                         <div class="elementor-icon-box-wrapper">
                                                                                             <div class="elementor-icon-box-content">
                                                                                                 <h3 class="elementor-icon-box-title">
-                                                                                                    <span>Envío</span>
+                                                                                                    <span>Envio</span>
                                                                                                 </h3>
                                                                                                 <p class="elementor-icon-box-description">
-                                                                                                    🚚 Entrega gratuita: 3 a 5 días laborables
+                                                                                                    🚚 Entrega gratuita: 3 a 5 dias úteis
                                                                                                 </p>
                                                                                             </div>
                                                                                         </div>
@@ -404,7 +392,7 @@
                                                                                                     <span>100%</span>
                                                                                                 </h3>
                                                                                                 <p class="elementor-icon-box-description">
-                                                                                                    🔒 Pago 100% seguro
+                                                                                                    🔒 Pagamento 100% seguro
                                                                                                 </p>
                                                                                             </div>
                                                                                         </div>
@@ -417,10 +405,10 @@
                                                                                         <div class="elementor-icon-box-wrapper">
                                                                                             <div class="elementor-icon-box-content">
                                                                                                 <h3 class="elementor-icon-box-title">
-                                                                                                    <span>Pedido seguro</span>
+                                                                                                    <span>Encomenda segura</span>
                                                                                                 </h3>
                                                                                                 <p class="elementor-icon-box-description">
-                                                                                                    📦 Producto en stock
+                                                                                                    📦 Produto em stock
                                                                                                 </p>
                                                                                             </div>
                                                                                         </div>
@@ -441,7 +429,7 @@
                             </div>
                         </div>
                     </div>
-                    <button title="Close (Esc)" type="button" class="mfp-close" style="position: absolute; top: 20px; right: 20px; z-index: 1000; background: white; border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 10px rgba(0,0,0,0.2);">
+                    <button title="Fechar (Esc)" type="button" class="mfp-close" style="position: absolute; top: 20px; right: 20px; z-index: 1000; background: white; border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 10px rgba(0,0,0,0.2);">
                         <i class="tb-icon tb-icon-close-01"></i>
                     </button>
                 </div>
@@ -595,7 +583,7 @@
                             }
                         } catch (error) {
                             console.error('Error:', error);
-                            alert('Erro de conexão');
+                            alert('Erro de ligação');
                         }
                     }
                 });
