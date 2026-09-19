@@ -717,7 +717,7 @@
                                                 <a title="Salamandra a Lenha Moravia 9112 EX com Caldeira" href="#"
                                                     class="product-image">
                                                     <img width="480" height="480"
-                                                        src="../wp-content/uploads/2025/10/cuisiniere-a-bois-moravia-9112-ex-avec-bouilleur-1-1-1-480x480.webp"
+                                                        src="{{ asset('wp-content/uploads/2025/10/cuisiniere-a-bois-moravia-9112-ex-avec-bouilleur-1-1-1-480x480.webp') }}"
                                                         class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
                                                         alt="Salamandra a Lenha Moravia 9112 EX com Caldeira"
                                                         decoding="async" /> </a>
