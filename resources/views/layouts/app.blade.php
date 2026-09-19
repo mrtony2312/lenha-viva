@@ -291,7 +291,8 @@
         ad_storage: 'denied',
         ad_user_data: 'denied',
         ad_personalization: 'denied',
-        analytics_storage: 'denied'
+        analytics_storage: 'denied',
+        wait_for_update: 500
     });
     try {
         if (localStorage.getItem('lv_cookie_consent') === 'granted') {
@@ -333,8 +334,6 @@
     </script>
     <script type="text/javascript" src="{{ asset('wp-content/themes/maia/js/jquery.autocomplete.min8a54.js') }}"
         id="jquery-autocomplete-js"></script>
-    <script type="text/javascript" src="{{ asset('wp-content/themes/maia/js/jquery.countdowntimer.minf945.js') }}"
-        id="jquery-countdowntimer-js"></script>
     <script type="text/javascript" src="{{ asset('wp-content/themes/maia/js/jquery.magnific-popup.minf488.js') }}"
         id="jquery-magnific-popup-js"></script>
     <script type="text/javascript"

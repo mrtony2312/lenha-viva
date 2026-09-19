@@ -207,7 +207,7 @@
                                             <h3>Envio padrão — Portugal Continental</h3>
                                             <span class="lv-ship-option__price">Grátis</span>
                                         </div>
-                                        <p>Palete entregue à porta do camião. Prazo habitual: 3 a 5 dias úteis após a confirmação do pagamento. Açores e Madeira: <a href="{{ route('politicaDeEntrega') }}">sob consulta</a>.</p>
+                                        <p>Palete entregue à porta do camião. Prazo habitual: 3 a 5 dias úteis após a confirmação do pagamento. O envio gratuito aplica-se apenas a Portugal Continental. Açores e Madeira: <a href="{{ route('politicaDeEntrega') }}">sob consulta</a> (não estão incluídos no envio grátis automático).</p>
                                         <a class="lv-ship-option__link" href="{{ route('politicaDeEntrega') }}">Ver política de entrega</a>
                                     </div>
                                 </div>
@@ -423,7 +423,7 @@
                                         <span>{{ $formattedTotalPrice }} €</span>
                                     </div>
                                     <div class="lv-summary-totals__row">
-                                        <span>Envio</span>
+                                        <span>Envio (Portugal Continental)</span>
                                         <span class="lv-summary-totals__free">Grátis</span>
                                     </div>
                                     <div class="lv-summary-totals__row lv-summary-totals__row--total">

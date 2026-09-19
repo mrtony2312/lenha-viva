@@ -195,14 +195,14 @@
                             <span class="lv-product__price {{ $hasDiscount ? 'lv-product__price--sale' : '' }}">{{ $product['price'] }} €</span>
                             @if($hasDiscount)
                                 <span class="lv-product__price-old">{{ $product['old_price'] }} €</span>
-                                <span class="lv-product__sale">{{ $discountPct }}% Off</span>
+                                <span class="lv-product__sale">-{{ $discountPct }}%</span>
                             @endif
                             <span class="lv-product__price-note">IVA incluído</span>
                         </div>
 
                         <p class="lv-product__shipping">
                             <a href="{{ route('politicaDeEntrega') }}">Envio</a>
-                            grátis em Portugal Continental, calculado no checkout.
+                            grátis em Portugal Continental (após confirmação do pagamento). Açores e Madeira sob consulta.
                         </p>
 
                         @if(!empty($product['short_description']))
@@ -264,7 +264,7 @@
                                     <circle cx="6.5" cy="18.5" r="1.5"/>
                                     <circle cx="18.5" cy="18.5" r="1.5"/>
                                 </svg>
-                                <p>Prazo de entrega estimado: <strong>3–5 dias úteis</strong></p>
+                                <p>Prazo habitual: <strong>3–5 dias úteis após a confirmação do pagamento</strong> (Portugal Continental)</p>
                             </div>
                             <span class="lv-product__delivery-sep" aria-hidden="true"></span>
                             <div class="lv-product__delivery-item">
@@ -272,7 +272,7 @@
                                     <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
                                     <path d="M3.3 7 12 12l8.7-5M12 22V12"/>
                                 </svg>
-                                <p><strong>Envio grátis</strong> em todas as encomendas para Portugal Continental</p>
+                                <p><strong>Envio grátis</strong> em Portugal Continental. Açores e Madeira: <a href="{{ route('politicaDeEntrega') }}">sob consulta</a>.</p>
                             </div>
                         </div>
 
@@ -287,7 +287,7 @@
                             <div>
                                 <p>
                                     @if($product['in_stock'])
-                                        <strong>Em stock — pronto a enviar</strong> a partir de {{ config('company.address.city') }}.
+                                        <strong>Em stock</strong> em {{ config('company.address.city') }}. A expedição inicia-se após a confirmação do pagamento por transferência.
                                     @else
                                         <strong>Esgotado de momento.</strong> Contacte-nos para disponibilidade.
                                     @endif

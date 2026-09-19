@@ -235,10 +235,17 @@ class HomeController extends Controller
             abort(404);
         }
 
+        // Do not present a product without a price as a buyable offer.
+        $sellablePrice = $this->cleanPrice($product['price'] ?? 0);
+        if ($sellablePrice <= 0) {
+            abort(404);
+        }
+
         // Récupérer les produits de la même catégorie (pour la section "Produits liés")
         $relatedProducts = $allProducts
             ->where('category', $product['category'])
             ->where('id', '!=', $product['id'])
+            ->filter(fn ($p) => $this->cleanPrice($p['price'] ?? 0) > 0)
             ->take(4);
 
         // Récupérer les produits précédent et suivant
@@ -386,8 +393,22 @@ class HomeController extends Controller
                 ], 404);
             }
 
+            if (empty($product['in_stock'])) {
+                return response()->json([
+                    'success' => false,
+                    'message' => 'Este produto está esgotado.',
+                ], 422);
+            }
+
             // Nettoyer et valider le prix
             $price = $this->cleanPrice($product['price'] ?? 0);
+
+            if ($price <= 0) {
+                return response()->json([
+                    'success' => false,
+                    'message' => 'Este produto não está disponível para compra online.',
+                ], 422);
+            }
 
             // Préparer les données du produit
             $productData = [
@@ -945,7 +966,15 @@ class HomeController extends Controller
     public function mapaDoSite()
     {
         $products = collect(config('loja_products', []))
-            ->filter(fn ($p) => ! empty($p['slug']))
+            ->filter(function ($p) {
+                if (empty($p['slug'])) {
+                    return false;
+                }
+
+                $price = (float) str_replace([',', ' '], '', (string) ($p['price'] ?? 0));
+
+                return $price > 0;
+            })
             ->unique(fn ($p) => $p['canonical_slug'] ?? $p['slug'])
             ->sortBy('title')
             ->values();

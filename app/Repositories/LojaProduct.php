@@ -13,7 +13,13 @@ class LojaProduct
 
     public function __construct()
     {
-        $this->items =  collect(config('loja_products'));
+        // Products without a sellable price must not appear as buyable offers
+        // (Google Merchant "unavailable / misleading offers" risk).
+        $this->items = collect(config('loja_products'))->filter(function ($item) {
+            $price = (float) str_replace([',', ' '], '', (string) ($item['price'] ?? 0));
+
+            return $price > 0 && ! empty($item['slug']);
+        })->values();
     }
 
     public static function query(): self
@@ -104,8 +110,12 @@ class LojaProduct
             // Filtre pour produits en vedette
         }
 
-        if (!empty($filters['stock']) && $filters['stock'] == 'instock') {
-            // Filtre pour produits en stock
+        if (! empty($filters['stock']) && $filters['stock'] === 'instock') {
+            $this->items = $this->items->where('in_stock', true);
+        }
+
+        if (! empty($filters['stock']) && in_array($filters['stock'], ['outofstock', 'out_of_stock'], true)) {
+            $this->items = $this->items->where('in_stock', false);
         }
 
         if (!empty($filters['pa_color'])) {

@@ -85,9 +85,44 @@ class MerchantCatalog
 
     public static function eligibleProducts(): Collection
     {
-        return collect(config('loja_products', []))
+        $products = collect(config('loja_products', []))
             ->filter(fn (array $product) => self::isEligible($product))
             ->values();
+
+        return self::preferUniquePrimaryImages($products);
+    }
+
+    /**
+     * Prefer a distinct primary image per offer when galleries allow it.
+     * Shared hero photos across different SKUs trigger Merchant image issues.
+     *
+     * @param  Collection<int, array<string, mixed>>  $products
+     * @return Collection<int, array<string, mixed>>
+     */
+    private static function preferUniquePrimaryImages(Collection $products): Collection
+    {
+        $claimed = [];
+
+        return $products->map(function (array $product) use (&$claimed) {
+            $images = self::images($product);
+            if ($images === []) {
+                return $product;
+            }
+
+            $chosen = $images[0];
+            foreach ($images as $candidate) {
+                if (! isset($claimed[$candidate])) {
+                    $chosen = $candidate;
+                    break;
+                }
+            }
+
+            $claimed[$chosen] = true;
+            $rest = array_values(array_filter($images, fn (string $image) => $image !== $chosen));
+            $product['merchant_images'] = array_merge([$chosen], $rest);
+
+            return $product;
+        })->values();
     }
 
     public static function isEligible(array $product): bool
@@ -175,7 +210,7 @@ class MerchantCatalog
             $attributes['price'] = self::money($price);
         }
 
-        if ($mpn !== '') {
+        if ($mpn !== '' && mb_strlen($mpn) <= 70 && ! preg_match('/\s{2,}/', $mpn) && ! str_contains($mpn, "\n")) {
             $attributes['mpn'] = $mpn;
         }
 
@@ -240,6 +275,10 @@ class MerchantCatalog
      */
     public static function images(array $product): array
     {
+        if (! empty($product['merchant_images']) && is_array($product['merchant_images'])) {
+            return array_values(array_filter($product['merchant_images']));
+        }
+
         $images = array_values(array_filter($product['images'] ?? []));
         $hover = trim((string) ($product['hover_image'] ?? ''));
 

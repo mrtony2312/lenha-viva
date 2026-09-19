@@ -113,7 +113,7 @@
                             <tr>
                                 <th scope="row">Formalidades aduaneiras</th>
                                 <td data-label="Portugal Continental">Não (envio nacional)</td>
-                                <td data-label="Açores e Madeira">Não (território nacional)</td>
+                                <td data-label="Açores e Madeira">Não (mesmo território aduaneiro)</td>
                             </tr>
                         </tbody>
                     </table>
@@ -239,7 +239,8 @@
                 <p>
                     Quando a encomenda sair do armazém, enviamos-lhe um e-mail com o número
                     de seguimento. Guarde essa mensagem até ter recebido a mercadoria.
-                    O serviço cobre todo o território nacional e a ligação de seguimento funciona em qualquer região.
+                    O envio gratuito automático cobre Portugal Continental. Para Açores e Madeira,
+                    o seguimento é enviado da mesma forma após confirmação do orçamento e do pagamento.
                 </p>
             </section>
 

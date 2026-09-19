@@ -36,7 +36,15 @@ class SitemapController extends Controller
             ]);
 
         $products = collect(config('loja_products', []))
-            ->filter(fn ($p) => ! empty($p['slug']))
+            ->filter(function ($p) {
+                if (empty($p['slug'])) {
+                    return false;
+                }
+
+                $price = (float) str_replace([',', ' '], '', (string) ($p['price'] ?? 0));
+
+                return $price > 0;
+            })
             ->map(fn ($p) => [
                 'loc' => route('product.show', ['slug' => $p['canonical_slug'] ?? $p['slug']]),
                 'priority' => '0.7',

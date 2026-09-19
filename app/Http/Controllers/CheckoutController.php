@@ -27,6 +27,14 @@ class CheckoutController extends Controller
             return redirect()->route('carrinho')->with('error', 'O seu carrinho está vazio.');
         }
 
+        $unavailable = $this->unavailableCartItems($cart);
+        if ($unavailable !== []) {
+            return redirect()->route('carrinho')->with(
+                'error',
+                'Um ou mais produtos do carrinho já não estão disponíveis. Atualize o carrinho e tente novamente.'
+            );
+        }
+
         // Calculer les totaux
         $totalItems = 0;
         $totalPrice = 0.00;
@@ -103,6 +111,14 @@ class CheckoutController extends Controller
 
         if (empty($cart)) {
             return redirect()->route('carrinho')->with('error', 'O seu carrinho está vazio.');
+        }
+
+        $unavailable = $this->unavailableCartItems($cart);
+        if ($unavailable !== []) {
+            return redirect()->route('carrinho')->with(
+                'error',
+                'Um ou mais produtos do carrinho já não estão disponíveis. Atualize o carrinho e tente novamente.'
+            );
         }
 
         // Calculer les totaux
@@ -182,6 +198,25 @@ class CheckoutController extends Controller
 
             return back()->with('error', 'Ocorreu um erro ao processar a sua encomenda. Por favor, tente novamente.')->withInput();
         }
+    }
+
+    /**
+     * @param  array<int|string, array<string, mixed>>  $cart
+     * @return list<int|string>
+     */
+    private function unavailableCartItems(array $cart): array
+    {
+        $catalog = collect(config('loja_products', []))->keyBy('id');
+        $unavailable = [];
+
+        foreach ($cart as $productId => $item) {
+            $live = $catalog->get((int) $productId) ?? $catalog->get((string) $productId);
+            if (! $live || empty($live['in_stock']) || $this->cleanPrice($live['price'] ?? 0) <= 0) {
+                $unavailable[] = $productId;
+            }
+        }
+
+        return $unavailable;
     }
 
     private function cleanPrice($price)
