@@ -58,6 +58,7 @@ class FeedController extends Controller
         $item->addChild('g:brand', htmlspecialchars($attr['brand']), $ns);
         $item->addChild('g:adult', ! empty($attr['adult']) ? 'yes' : 'no', $ns);
         $item->addChild('g:google_product_category', htmlspecialchars($attr['googleProductCategory']), $ns);
+        $item->addChild('g:ships_from_country', htmlspecialchars($attr['shipsFromCountry'] ?? 'PT'), $ns);
 
         foreach ($attr['productTypes'] ?? [] as $type) {
             $item->addChild('g:product_type', htmlspecialchars($type), $ns);
@@ -70,6 +71,10 @@ class FeedController extends Controller
 
         if (! empty($attr['mpn'])) {
             $item->addChild('g:mpn', htmlspecialchars($attr['mpn']), $ns);
+        }
+
+        if (! empty($attr['color'])) {
+            $item->addChild('g:color', htmlspecialchars($attr['color']), $ns);
         }
 
         if (array_key_exists('identifierExists', $attr) && $attr['identifierExists'] === false) {

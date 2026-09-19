@@ -12,8 +12,8 @@ use Illuminate\Support\Collection;
 class MerchantCatalog
 {
     /**
-     * Manufacturer names that appear in titles. Google requires the maker's
-     * brand, not the store name, when the product is a third-party brand.
+     * Manufacturer names that appear in titles / short descriptions.
+     * Google requires the maker's brand, not the store name, for branded goods.
      *
      * @var list<string>
      */
@@ -38,14 +38,35 @@ class MerchantCatalog
         'Vulcan',
         'Olimpia',
         'Olympia',
+        'Olímpia',
         'Olimp',
+        'Olymp',
         'Temy',
         'MBS',
+        'Vimasol',
+        'Super Thermo Magnum',
+        'Thermo Magnum',
+        'Solid',
+        'Sólida',
+        'Maciça',
     ];
 
     /**
-     * Google product taxonomy paths (English). IDs are accepted too, but paths
-     * are easier to review in Merchant Center diagnostics.
+     * Normalize Portuguese marketing spellings to the manufacturer brand Google expects.
+     *
+     * @var array<string, string>
+     */
+    private const BRAND_ALIASES = [
+        'Sólida' => 'Solid',
+        'Maciça' => 'Solid',
+        'Olímpia' => 'Olympia',
+        'Olimpia' => 'Olympia',
+        'Olimp' => 'Olymp',
+        'Vulcan' => 'Vulkan',
+    ];
+
+    /**
+     * Google product taxonomy paths (English).
      *
      * @var array<string, string>
      */
@@ -114,6 +135,7 @@ class MerchantCatalog
         $brand = self::brand($product);
         $hasManufacturerBrand = strcasecmp($brand, (string) config('company.brand', 'Naturalenha')) !== 0;
         $mpn = trim((string) ($product['ref'] ?? ''));
+        $color = trim((string) ($product['color'] ?? ''));
 
         $attributes = [
             'title' => self::truncate((string) ($product['title'] ?? ''), 150),
@@ -129,6 +151,7 @@ class MerchantCatalog
             'productTypes' => array_values(array_filter([
                 CategoryLabels::label($product['category'] ?? null),
             ])),
+            'shipsFromCountry' => (string) config('merchant.target_country', 'PT'),
             'shipping' => [[
                 'country' => (string) config('merchant.target_country', 'PT'),
                 'service' => 'Portugal Continental',
@@ -156,6 +179,10 @@ class MerchantCatalog
             $attributes['mpn'] = $mpn;
         }
 
+        if ($color !== '') {
+            $attributes['color'] = self::truncate($color, 100);
+        }
+
         // Branded goods need brand + GTIN or MPN. Generic firewood/pellets
         // without a maker code may declare that no identifier exists.
         if (! $hasManufacturerBrand && $mpn === '') {
@@ -172,16 +199,37 @@ class MerchantCatalog
 
     public static function brand(array $product): string
     {
-        $title = (string) ($product['title'] ?? '');
+        $haystack = trim(
+            (string) ($product['title'] ?? '').' '.
+            (string) ($product['short_description'] ?? '')
+        );
         $store = (string) config('company.brand', 'Naturalenha');
+
+        // Compact form catches "termomagnum" / "ThermoMagnum" without spaces.
+        $compact = mb_strtolower((string) preg_replace('/[\s\-]+/u', '', $haystack.' '.(string) ($product['description'] ?? '')));
+        if (str_contains($compact, 'superthermomagnum')) {
+            return 'Super Thermo Magnum';
+        }
+        if (str_contains($compact, 'thermomagnum') || str_contains($compact, 'termomagnum')) {
+            return 'Thermo Magnum';
+        }
 
         $brands = self::MANUFACTURER_BRANDS;
         usort($brands, fn (string $a, string $b) => mb_strlen($b) <=> mb_strlen($a));
 
         foreach ($brands as $maker) {
-            if (stripos($title, $maker) !== false) {
-                return $maker;
+            if (preg_match('/\b'.preg_quote($maker, '/').'\b/iu', $haystack)) {
+                return self::BRAND_ALIASES[$maker] ?? $maker;
             }
+        }
+
+        // Descriptions often say "modelo Solid 40 kW" without putting Solid in the title.
+        if (preg_match('/\bSolid\b/iu', (string) ($product['description'] ?? ''))) {
+            return 'Solid';
+        }
+
+        if (preg_match('/\bVimasol\b/iu', $haystack.' '.(string) ($product['description'] ?? ''))) {
+            return 'Vimasol';
         }
 
         return $store;
@@ -199,7 +247,94 @@ class MerchantCatalog
             $images[] = $hover;
         }
 
-        return $images;
+        $resolved = [];
+        foreach ($images as $image) {
+            $best = self::bestAvailableImage((string) $image);
+            if ($best !== '' && ! in_array($best, $resolved, true)) {
+                $resolved[] = $best;
+            }
+        }
+
+        if (count($resolved) < 2) {
+            return $resolved;
+        }
+
+        // Put the strongest Merchant-ready image first (≥ 500×500 preferred).
+        usort($resolved, function (string $a, string $b) {
+            return self::imageScore($b) <=> self::imageScore($a);
+        });
+
+        return $resolved;
+    }
+
+    private static function imageScore(string $path): int
+    {
+        $absolute = public_path($path);
+        if (! is_file($absolute)) {
+            return -1;
+        }
+
+        $size = @getimagesize($absolute);
+        if ($size === false) {
+            return 0;
+        }
+
+        [$width, $height] = $size;
+        $meets500 = ($width >= 500 && $height >= 500) ? 1_000_000_000 : 0;
+
+        return $meets500 + ($width * $height);
+    }
+
+    /**
+     * Prefer the largest on-disk variant (≥ 500×500 when available).
+     * WordPress stores catalog thumbs as *-480x480.*; full files usually exist without the suffix.
+     */
+    public static function bestAvailableImage(string $path): string
+    {
+        $path = ltrim(str_replace('\\', '/', $path), '/');
+        if ($path === '') {
+            return '';
+        }
+
+        $candidates = [$path];
+
+        // Strip every trailing "-{w}x{h}" WordPress size token.
+        $withoutSizes = $path;
+        while (preg_match('/-\d+x\d+(?=\.[a-z0-9]+$)/i', $withoutSizes)) {
+            $withoutSizes = preg_replace('/-\d+x\d+(?=\.[a-z0-9]+$)/i', '', $withoutSizes, 1);
+            $candidates[] = $withoutSizes;
+        }
+
+        // Also try dropping a trailing "-1" / "-2" duplicate marker after size strip.
+        if (preg_match('/^(.+)-\d+(\.[a-z0-9]+)$/i', $withoutSizes, $m)) {
+            $candidates[] = $m[1].$m[2];
+        }
+
+        $bestPath = $path;
+        $bestScore = -1;
+
+        foreach (array_unique($candidates) as $candidate) {
+            $absolute = public_path($candidate);
+            if (! is_file($absolute)) {
+                continue;
+            }
+
+            $size = @getimagesize($absolute);
+            if ($size === false) {
+                continue;
+            }
+
+            [$width, $height] = $size;
+            $meets500 = ($width >= 500 && $height >= 500) ? 1_000_000_000 : 0;
+            $score = $meets500 + ($width * $height);
+
+            if ($score > $bestScore) {
+                $bestScore = $score;
+                $bestPath = $candidate;
+            }
+        }
+
+        return $bestPath;
     }
 
     public static function cleanPrice(mixed $price): float

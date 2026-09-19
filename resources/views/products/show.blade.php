@@ -1,13 +1,18 @@
 @extends('layouts.app')
 
 @php
-    $seoPrice = number_format((float) str_replace(',', '', $product['price']), 2, '.', '');
-    $seoImages = collect($product['images'] ?? [])->filter()->map(fn ($image) => asset($image))->values();
+    $seoPriceNum = \App\Support\MerchantCatalog::cleanPrice($product['price'] ?? 0);
+    $seoPrice = number_format($seoPriceNum, 2, '.', '');
+    $seoImages = collect(\App\Support\MerchantCatalog::images($product))
+        ->map(fn ($image) => asset($image))
+        ->values();
     $seoCategoryLabel = \App\Support\CategoryLabels::label($product['category']);
+    $seoBrand = \App\Support\MerchantCatalog::brand($product);
+    $seoSku = trim((string) ($product['ref'] ?? ''));
     // Duplicate listings point at the primary product so Google indexes a single URL.
     $seoCanonical = route('product.show', ['slug' => $product['canonical_slug'] ?? $product['slug']]);
     $seoPlainDescription = \Illuminate\Support\Str::limit(
-        trim(preg_replace('/\s+/', ' ', strip_tags($product['description'] ?? ($product['short_description'] ?? $product['title'])))),
+        \App\Support\MerchantCatalog::plainText((string) ($product['description'] ?? ($product['short_description'] ?? $product['title']))),
         500,
     );
 
@@ -17,28 +22,31 @@
         'name' => $product['title'],
         'description' => $seoPlainDescription,
         'image' => $seoImages->all(),
-        'sku' => (string) ($product['ref'] ?? $product['id']),
-        'mpn' => (string) $product['id'],
+        'sku' => $seoSku !== '' ? $seoSku : (string) $product['id'],
         'brand' => [
             '@type' => 'Brand',
-            'name' => config('company.brand'),
+            'name' => $seoBrand,
         ],
         'category' => $seoCategoryLabel,
     ];
 
+    if ($seoSku !== '') {
+        $seoProductSchema['mpn'] = $seoSku;
+    }
+
     // A product without a price would otherwise be published as a 0 € offer.
-    if ((float) $seoPrice > 0) {
+    if ($seoPriceNum > 0) {
         $seoProductSchema['offers'] = [
             '@type' => 'Offer',
             'url' => $seoCanonical,
             'price' => $seoPrice,
             'priceCurrency' => 'EUR',
-            'availability' => $product['in_stock'] ? 'https://schema.org/InStock' : 'https://schema.org/OutOfStock',
+            'availability' => ! empty($product['in_stock']) ? 'https://schema.org/InStock' : 'https://schema.org/OutOfStock',
             'itemCondition' => 'https://schema.org/NewCondition',
             'seller' => [
                 '@type' => 'Organization',
                 'name' => config('company.legal_name'),
-                'url' => route('home'),
+                'url' => config('company.website'),
             ],
             'shippingDetails' => [
                 '@type' => 'OfferShippingDetails',
@@ -49,6 +57,21 @@
                 ],
                 'shippingDestination' => [
                     ['@type' => 'DefinedRegion', 'addressCountry' => 'PT'],
+                ],
+                'deliveryTime' => [
+                    '@type' => 'ShippingDeliveryTime',
+                    'handlingTime' => [
+                        '@type' => 'QuantitativeValue',
+                        'minValue' => (int) config('merchant.min_handling_time', 1),
+                        'maxValue' => (int) config('merchant.max_handling_time', 2),
+                        'unitCode' => 'DAY',
+                    ],
+                    'transitTime' => [
+                        '@type' => 'QuantitativeValue',
+                        'minValue' => (int) config('merchant.min_transit_time', 3),
+                        'maxValue' => (int) config('merchant.max_transit_time', 5),
+                        'unitCode' => 'DAY',
+                    ],
                 ],
             ],
             'hasMerchantReturnPolicy' => [
