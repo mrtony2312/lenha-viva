@@ -32,6 +32,16 @@ return [
     'odr' => 'https://ec.europa.eu/consumers/odr',
     'ral_list' => 'https://www.consumidor.gov.pt/parceiros/sistema-de-defesa-do-consumidor/entidades-de-resolucao-alternativa-de-litigios-de-consumo',
     'logo' => 'images/logo-naturalenha.png',
+    /*
+    | Sales territory — must match checkout, shipping policy and Merchant feed.
+    | Never advertise or enable Google Shopping for countries outside this list.
+    */
+    'sales_countries' => ['PT'],
+    'sales_territory' => 'Portugal Continental',
+    'sales_territory_note' => 'Vendemos e enviamos apenas para Portugal Continental. Não enviamos para Espanha nem para outros países.',
+    'payment_methods' => ['Transferência bancária'],
+    'currency' => 'EUR',
+    'reseller_disclaimer' => 'A Naturalenha atua como retalhista independente. As marcas dos produtos (fabricantes) são indicadas nas fichas; não somos o fabricante salvo indicação expressa.',
     'topbar_messages' => [
         [
             'text' => 'Envio grátis em Portugal Continental',
@@ -48,6 +58,10 @@ return [
         [
             'text' => '14 dias para devolver',
             'route' => 'politicaDeReembolso',
+        ],
+        [
+            'text' => 'Vendas apenas em Portugal — sem envio para Espanha',
+            'route' => 'politicaDeEntrega',
         ],
     ],
 

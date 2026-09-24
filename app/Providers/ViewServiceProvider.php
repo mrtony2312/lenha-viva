@@ -17,20 +17,8 @@ class ViewServiceProvider extends ServiceProvider
     public function boot(): void
     {
         View::composer('*', function ($view) {
-            $categories = [];
-
-            if (config()->has('loja_products')) {
-                $allProducts = collect(config('loja_products'));
-                $categories = $allProducts
-                    ->pluck('category')
-                    ->unique()
-                    ->filter()
-                    ->mapWithKeys(function ($category) {
-                        return [$category => CategoryLabels::label($category)];
-                    })
-                    ->sort()
-                    ->toArray();
-            }
+            $categories = CategoryLabels::forNavigation(false);
+            $navCategories = CategoryLabels::forNavigation(true);
 
             $topbarMessages = collect(config('company.topbar_messages', []))
                 ->map(function ($item) {
@@ -56,6 +44,7 @@ class ViewServiceProvider extends ServiceProvider
                 ->all();
 
             $view->with('categories', $categories);
+            $view->with('navCategories', $navCategories);
             $view->with('topbarMessages', $topbarMessages);
         });
     }

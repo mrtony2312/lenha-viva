@@ -172,23 +172,30 @@ class MerchantCatalog
         $mpn = trim((string) ($product['ref'] ?? ''));
         $color = trim((string) ($product['color'] ?? ''));
 
+        $description = self::truncate(self::plainText((string) ($product['description'] ?? ($product['short_description'] ?? ''))), 4500);
+        $complianceNote = trim((string) config('company.sales_territory_note', ''));
+        if ($complianceNote !== '' && ! str_contains(mb_strtolower($description), 'espanha')) {
+            $description = self::truncate(trim($description.' '.$complianceNote), 5000);
+        }
+
         $attributes = [
             'title' => self::truncate((string) ($product['title'] ?? ''), 150),
-            'description' => self::truncate(self::plainText((string) ($product['description'] ?? ($product['short_description'] ?? ''))), 5000),
+            'description' => $description,
             'link' => route('product.show', ['slug' => $product['canonical_slug'] ?? $product['slug']]),
             'imageLink' => asset($images[0]),
             'availability' => ! empty($product['in_stock']) ? 'IN_STOCK' : 'OUT_OF_STOCK',
             'condition' => 'NEW',
             'brand' => $brand,
             'adult' => false,
-            'googleProductCategory' => self::GOOGLE_CATEGORIES[$product['category'] ?? '']
+            'googleProductCategory' => self::GOOGLE_CATEGORIES[CategoryLabels::normalizeInternal($product['category'] ?? null) ?? '']
+                ?? self::GOOGLE_CATEGORIES[$product['category'] ?? '']
                 ?? self::GOOGLE_CATEGORIES['uncategorized'],
             'productTypes' => array_values(array_filter([
-                CategoryLabels::label($product['category'] ?? null),
+                CategoryLabels::label(CategoryLabels::normalizeInternal($product['category'] ?? null) ?? ($product['category'] ?? null)),
             ])),
-            'shipsFromCountry' => (string) config('merchant.target_country', 'PT'),
+            'shipsFromCountry' => 'PT',
             'shipping' => [[
-                'country' => (string) config('merchant.target_country', 'PT'),
+                'country' => 'PT',
                 'service' => 'Portugal Continental',
                 'price' => self::money(0),
                 'minHandlingTime' => (string) config('merchant.min_handling_time', 1),
@@ -196,6 +203,13 @@ class MerchantCatalog
                 'minTransitTime' => (string) config('merchant.min_transit_time', 3),
                 'maxTransitTime' => (string) config('merchant.max_transit_time', 5),
             ]],
+            'returnPolicyLabel' => (string) config('merchant.return_policy_label', 'portugal-14-dias'),
+            'shoppingAdsExcludedCountries' => array_values(array_filter(
+                array_map('strtoupper', (array) config('merchant.excluded_ads_countries', ['ES']))
+            )),
+            'freeListingExcludedCountries' => array_values(array_filter(
+                array_map('strtoupper', (array) config('merchant.excluded_ads_countries', ['ES']))
+            )),
         ];
 
         $extraImages = array_slice(array_values(array_diff($images, [$images[0]])), 0, 10);

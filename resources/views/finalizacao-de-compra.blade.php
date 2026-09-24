@@ -362,9 +362,6 @@
                                                                                 <option value="SI"
                                                                                     data-alternate-values="[Eslovénia]">
                                                                                     Eslovénia</option>
-                                                                                <option value="ES"
-                                                                                    data-alternate-values="[Espanha]">
-                                                                                    Espanha</option>
                                                                                 <option value="US"
                                                                                     data-alternate-values="[Estados Unidos (US)]">
                                                                                     Estados Unidos (US)</option>
@@ -1398,11 +1395,6 @@
                                                     <option value="Portugal"
                                                         {{ old('country') == 'Portugal' ? 'selected' : '' }}>Portugal
                                                     </option>
-                                                    <option value="Espanha"
-                                                        {{ old('country') == 'Espanha' ? 'selected' : '' }}>Espanha
-                                                    </option>
-                                                    <option value="França"
-                                                        {{ old('country') == 'França' ? 'selected' : '' }}>França</option>
                                                 </select>
                                                 @error('country')
                                                     <span

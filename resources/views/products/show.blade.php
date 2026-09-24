@@ -158,7 +158,7 @@
                                         class="lv-gallery__thumb {{ $index === 0 ? 'is-active' : '' }}"
                                         data-src="{{ asset($image) }}"
                                         aria-label="Ver imagem {{ $index + 1 }} de {{ $galleryImages->count() }}">
-                                        <img src="{{ asset($image) }}" alt="" width="100" height="100" loading="lazy">
+                                        <img src="{{ asset($image) }}" alt="{{ $product['title'] }} — imagem {{ $index + 1 }}" width="100" height="100" loading="lazy">
                                     </button>
                                 @endforeach
                             </div>
@@ -203,6 +203,12 @@
                         <p class="lv-product__shipping">
                             <a href="{{ route('politicaDeEntrega') }}">Envio</a>
                             grátis em Portugal Continental (após confirmação do pagamento). Açores e Madeira sob consulta.
+                            <strong>Não enviamos para Espanha nem para outros países.</strong>
+                        </p>
+                        <p class="lv-product__payment-note">
+                            Pagamento por <a href="{{ route('politicaDePagamento') }}">transferência bancária</a>
+                            · <a href="{{ route('politicaDeReembolso') }}">14 dias para devolver</a>
+                            · Vendedor: {{ config('company.legal_name') }} (NIF {{ config('company.nif') }})
                         </p>
 
                         @if(!empty($product['short_description']))
@@ -366,7 +372,7 @@
         <div class="lv-product-sticky" id="lv-product-sticky" hidden>
             <div class="lv-container lv-product-sticky__inner">
                 <div class="lv-product-sticky__product">
-                    <img src="{{ asset($mainImage) }}" alt="" width="56" height="56">
+                    <img src="{{ asset($mainImage) }}" alt="{{ $product['title'] }}" width="56" height="56">
                     <p>{{ $product['title'] }}</p>
                 </div>
                 <div class="lv-product-sticky__actions">

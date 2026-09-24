@@ -14,7 +14,8 @@ class HomeController extends Controller
         $all = collect(config('loja_products', []));
 
         $homeCategories = collect(CategoryLabels::all())->map(function ($label, $key) use ($all) {
-            $items = $all->where('category', $key)->values();
+            $keys = CategoryLabels::productKeysFor($key);
+            $items = $all->filter(fn ($product) => in_array($product['category'] ?? null, $keys, true))->values();
             $first = $items->first();
             $from = $items
                 ->map(fn ($product) => (float) str_replace(',', '', $product['price'] ?? 0))
@@ -78,10 +79,11 @@ class HomeController extends Controller
 
         $dealProducts = $dealProducts->take(8);
 
-        $featuredProducts = $all->where('category', 'pellets-de-madeira')->values();
+        $pelletKeys = CategoryLabels::productKeysFor('pellets-de-madeira');
+        $featuredProducts = $all->filter(fn ($p) => in_array($p['category'] ?? null, $pelletKeys, true))->values();
         if ($featuredProducts->count() < 8) {
             $featuredProducts = $featuredProducts
-                ->concat($all->where('category', '!=', 'pellets-de-madeira')->values())
+                ->concat($all->filter(fn ($p) => ! in_array($p['category'] ?? null, $pelletKeys, true))->values())
                 ->unique('id')
                 ->values();
         }
@@ -242,8 +244,11 @@ class HomeController extends Controller
         }
 
         // Récupérer les produits de la même catégorie (pour la section "Produits liés")
+        $relatedKeys = CategoryLabels::productKeysFor(
+            CategoryLabels::normalizeInternal($product['category'] ?? null) ?? (string) ($product['category'] ?? '')
+        );
         $relatedProducts = $allProducts
-            ->where('category', $product['category'])
+            ->filter(fn ($p) => in_array($p['category'] ?? null, $relatedKeys, true))
             ->where('id', '!=', $product['id'])
             ->filter(fn ($p) => $this->cleanPrice($p['price'] ?? 0) > 0)
             ->take(4);

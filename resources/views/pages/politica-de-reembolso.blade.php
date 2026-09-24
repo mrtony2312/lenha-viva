@@ -32,6 +32,7 @@
                     <div id="main" class="site-main">
 
                         <p>Esta política descreve como a {{ config('company.legal_name') }} trata devoluções e reembolsos das compras feitas em <a href="{{ route('home') }}">{{ config('company.website') }}</a>. Aplica-se a consumidores em Portugal e complementa as <a href="{{ route('condicoes-gerais-de-venda-cgv') }}">Condições gerais de venda</a>.</p>
+                        <p><strong>{{ config('company.sales_territory_note') }}</strong></p>
 
                         <h2>1. Direito de livre resolução (14 dias)</h2>
                         <p>Nos termos do Decreto-Lei n.º 24/2014, o consumidor dispõe de <strong>14 dias</strong> a contar da receção dos produtos para resolver o contrato, sem indicação de motivo e sem incorrer em custos para além dos previstos na lei (em regra, os custos de devolução).</p>

@@ -480,35 +480,7 @@
                                 <div class="tbay-element tbay-element-search-form">
                                     <div class="tbay-search-form">
                                         @php
-                                            // Récupérer les catégories avec leur nombre de produits
-                                            $categories = [];
-
-                                            if (config()->has('loja_products')) {
-                                                $allProducts = collect(config('loja_products'));
-
-                                                // Compter les produits par catégorie
-                                                $categoryCounts = $allProducts->groupBy('category')->map->count();
-
-                                                // Créer le tableau des catégories avec leur nom formaté et leur compte
-                                                $categories = $allProducts
-                                                    ->pluck('category')
-                                                    ->unique()
-                                                    ->mapWithKeys(function ($categorySlug) use ($categoryCounts) {
-                                                        $categoryName = strtoupper(
-                                                            str_replace('-', ' ', $categorySlug),
-                                                        );
-                                                        $count = $categoryCounts[$categorySlug] ?? 0;
-
-                                                        return [
-                                                            $categorySlug => [
-                                                                'name' => $categoryName,
-                                                                'count' => $count,
-                                                            ],
-                                                        ];
-                                                    })
-                                                    ->sortBy('name')
-                                                    ->toArray();
-                                            }
+                                            $searchCategories = $navCategories ?? \App\Support\CategoryLabels::forNavigation(true);
                                         @endphp
 
                                         <form action="{{ route('loja') }}" method="get"
@@ -525,7 +497,7 @@
                                                                 Todas as categorias
                                                             </option>
 
-                                                            @foreach ($categories as $categorySlug => $categoryData)
+                                                            @foreach ($searchCategories as $categorySlug => $categoryData)
                                                                 <option class="level-0" value="{{ $categorySlug }}"
                                                                     {{ request('product_cat') == $categorySlug ? 'selected' : '' }}>
                                                                     {{ $categoryData['name'] }}&nbsp;&nbsp;({{ $categoryData['count'] }})

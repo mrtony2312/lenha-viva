@@ -61,7 +61,7 @@
                         <img
                             class="lv-home-hero__content-bg"
                             src="{{ asset($heroPanelImage) }}"
-                            alt=""
+                            alt="Lenha empilhada Naturalenha"
                             width="736"
                             height="981"
                             decoding="async"
@@ -83,7 +83,7 @@
                                     <div class="lv-home-cls__media">
                                         <img
                                             src="{{ asset($collection['image']) }}"
-                                            alt=""
+                                            alt="{{ $collection['title'] }}"
                                             width="604"
                                             height="342"
                                             loading="lazy"
@@ -127,7 +127,7 @@
                                 <span class="lv-home-cat__image">
                                     <img
                                         src="{{ asset($category['image']) }}"
-                                        alt=""
+                                        alt="{{ $category['label'] }}"
                                         width="180"
                                         height="180"
                                         loading="lazy"
@@ -264,6 +264,15 @@
                         <div>
                             <p class="lv-home-trust__title">14 dias para devolver</p>
                             <p class="lv-home-trust__text">Nos termos da lei, produtos não instalados.</p>
+                        </div>
+                    </li>
+                    <li class="lv-home-trust__item">
+                        <span class="lv-home-trust__icon" aria-hidden="true">
+                            <i class="tb-icon tb-icon-location"></i>
+                        </span>
+                        <div>
+                            <p class="lv-home-trust__title">Só Portugal</p>
+                            <p class="lv-home-trust__text">Não enviamos para Espanha nem para outros países.</p>
                         </div>
                     </li>
                 </ul>

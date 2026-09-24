@@ -1,22 +1,5 @@
 @php
-    $lvCategories = [];
-    if (config()->has('loja_products')) {
-        $lvAllProducts = collect(config('loja_products'));
-        $lvCategoryCounts = $lvAllProducts->groupBy('category')->map->count();
-        $lvCategories = $lvAllProducts
-            ->pluck('category')
-            ->unique()
-            ->mapWithKeys(function ($slug) use ($lvCategoryCounts) {
-                return [
-                    $slug => [
-                        'name' => ucwords(str_replace('-', ' ', $slug)),
-                        'count' => $lvCategoryCounts[$slug] ?? 0,
-                    ],
-                ];
-            })
-            ->sortBy('name')
-            ->toArray();
-    }
+    $lvCategories = $navCategories ?? \App\Support\CategoryLabels::forNavigation(true);
 @endphp
 
 <header class="lv-navbar" id="lv-navbar">

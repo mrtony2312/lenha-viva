@@ -16,15 +16,20 @@
                     </svg>
                     Pagamento seguro
                 </p>
-                <p class="lv-checkout__secure-hint">Transferência bancária · Envio grátis em Portugal Continental</p>
+                <p class="lv-checkout__secure-hint">Transferência bancária · Envio apenas para Portugal Continental · Não enviamos para Espanha</p>
             </div>
         </div>
 
         <div class="lv-container lv-checkout__body">
             <header class="lv-checkout__intro">
                 <h1 class="lv-checkout__intro-title">Pagamento</h1>
-                <p class="lv-checkout__intro-lead">Finalize a sua encomenda com segurança. O envio é feito após a confirmação do pagamento.</p>
+                <p class="lv-checkout__intro-lead">Finalize a sua encomenda com segurança. O envio é feito após a confirmação do pagamento por transferência bancária. As vendas destinam-se exclusivamente a Portugal Continental.</p>
             </header>
+
+            <aside class="lv-checkout__territory" role="note">
+                <p><strong>Território de venda:</strong> {{ config('company.sales_territory_note') }}</p>
+                <p>Vendedor: {{ config('company.legal_name') }} · NIF {{ config('company.nif') }} · {{ config('company.address_line') }} · <a href="mailto:{{ config('company.email') }}">{{ config('company.email') }}</a> · <a href="tel:{{ config('company.phone_tel') }}">{{ config('company.phone') }}</a></p>
+            </aside>
 
             @if (session('success'))
                 <div class="lv-alert lv-alert--success" role="status">{{ session('success') }}</div>

@@ -56,7 +56,7 @@ class CategoryLabels
             return '';
         }
 
-        $internal = self::fromUrlSlug($slug) ?? $slug;
+        $internal = self::normalizeInternal($slug) ?? $slug;
 
         return self::$labels[$internal] ?? ucwords(str_replace('-', ' ', $internal));
     }
@@ -79,6 +79,75 @@ class CategoryLabels
             ?? (self::$retired[$urlSlug] ?? null);
     }
 
+    /**
+     * Resolve any product/URL category key to the canonical internal slug.
+     * Merges retired duplicates (e.g. uncategorized → madeira-de-fogo).
+     */
+    public static function normalizeInternal(?string $slug): ?string
+    {
+        if ($slug === null || $slug === '') {
+            return null;
+        }
+
+        if (isset(self::$labels[$slug])) {
+            return $slug;
+        }
+
+        $resolved = self::fromUrlSlug($slug);
+
+        return ($resolved !== null && isset(self::$labels[$resolved])) ? $resolved : null;
+    }
+
+    /**
+     * Product `category` keys that belong to a canonical internal slug
+     * (including retired aliases still stored on products).
+     *
+     * @return list<string>
+     */
+    public static function productKeysFor(string $internal): array
+    {
+        $keys = [$internal];
+
+        foreach (self::$retired as $alias => $target) {
+            if ($target === $internal) {
+                $keys[] = $alias;
+            }
+        }
+
+        return array_values(array_unique($keys));
+    }
+
+    /**
+     * Categories for nav/footer/search: unique Portuguese labels, no Woo leftovers.
+     *
+     * @return array<string, string|array{name: string, count: int}>
+     */
+    public static function forNavigation(bool $withCounts = false): array
+    {
+        $counts = [];
+
+        foreach (config('loja_products', []) as $product) {
+            $internal = self::normalizeInternal($product['category'] ?? null);
+            if ($internal === null) {
+                continue;
+            }
+            $counts[$internal] = ($counts[$internal] ?? 0) + 1;
+        }
+
+        $out = [];
+        foreach (self::$labels as $internal => $label) {
+            $count = $counts[$internal] ?? 0;
+            if ($count === 0) {
+                continue;
+            }
+            $out[$internal] = $withCounts
+                ? ['name' => $label, 'count' => $count]
+                : $label;
+        }
+
+        return $out;
+    }
+
     public static function all(): array
     {
         return self::$labels;
@@ -91,6 +160,8 @@ class CategoryLabels
 
     public static function route(string $internal): string
     {
+        $internal = self::normalizeInternal($internal) ?? $internal;
+
         return route('category', ['category' => self::urlSlug($internal)]);
     }
 }

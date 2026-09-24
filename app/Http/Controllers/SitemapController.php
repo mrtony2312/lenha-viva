@@ -3,12 +3,50 @@
 namespace App\Http\Controllers;
 
 use App\Support\CategoryLabels;
+use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\Log;
 
 class SitemapController extends Controller
 {
     public function index()
     {
-        $base = rtrim(config('app.url'), '/');
+        try {
+            $xml = Cache::remember('seo.sitemap.xml.v2', now()->addMinutes(30), function () {
+                return $this->buildSitemapXml();
+            });
+        } catch (\Throwable $e) {
+            Log::error('Sitemap generation failed', [
+                'message' => $e->getMessage(),
+                'file' => $e->getFile(),
+                'line' => $e->getLine(),
+            ]);
+
+            Cache::forget('seo.sitemap.xml.v2');
+
+            abort(500, 'Sitemap temporarily unavailable');
+        }
+
+        return response($xml, 200, [
+            'Content-Type' => 'application/xml; charset=UTF-8',
+            'Cache-Control' => 'public, max-age=1800',
+        ]);
+    }
+
+    public function robots()
+    {
+        $body = view('robots', [
+            'sitemap' => route('sitemap'),
+        ])->render();
+
+        return response($body, 200, [
+            'Content-Type' => 'text/plain; charset=UTF-8',
+            'Cache-Control' => 'public, max-age=3600',
+        ]);
+    }
+
+    private function buildSitemapXml(): string
+    {
+        $base = rtrim((string) config('app.url'), '/');
         $now = now()->toAtomString();
 
         $static = [
@@ -61,19 +99,10 @@ class SitemapController extends Controller
             'base' => $base,
         ])->render();
 
-        return response($xml, 200, [
-            'Content-Type' => 'application/xml; charset=UTF-8',
-        ]);
-    }
+        if (trim($xml) === '') {
+            throw new \RuntimeException('Empty sitemap XML');
+        }
 
-    public function robots()
-    {
-        $body = view('robots', [
-            'sitemap' => route('sitemap'),
-        ])->render();
-
-        return response($body, 200, [
-            'Content-Type' => 'text/plain; charset=UTF-8',
-        ]);
+        return $xml;
     }
 }

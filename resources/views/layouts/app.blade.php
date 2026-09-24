@@ -55,6 +55,9 @@
                 '@type' => 'Country',
                 'name' => 'Portugal',
             ],
+            'currenciesAccepted' => 'EUR',
+            'paymentAccepted' => implode(', ', config('company.payment_methods', ['Transferência bancária'])),
+            'priceRange' => '€€',
             'contactPoint' => [
                 '@type' => 'ContactPoint',
                 'telephone' => config('company.phone'),
@@ -62,6 +65,15 @@
                 'contactType' => 'customer service',
                 'availableLanguage' => ['Portuguese'],
                 'areaServed' => 'PT',
+            ],
+            'hasMerchantReturnPolicy' => [
+                '@type' => 'MerchantReturnPolicy',
+                'applicableCountry' => 'PT',
+                'returnPolicyCategory' => 'https://schema.org/MerchantReturnFiniteReturnWindow',
+                'merchantReturnDays' => 14,
+                'returnMethod' => 'https://schema.org/ReturnByMail',
+                'returnFees' => 'https://schema.org/ReturnShippingFees',
+                'url' => route('politicaDeReembolso'),
             ],
         ];
         $graph = [$orgSchema];

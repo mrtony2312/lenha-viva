@@ -690,6 +690,19 @@
     margin: 0;
     padding: 0;
     list-style: none;
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+    .lv-home-trust {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1100px) {
+    .lv-home-trust {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
 
 .lv-home-trust__item {
@@ -725,12 +738,6 @@
     font-size: 14px;
     line-height: 1.5;
     color: var(--lv-ink-soft);
-}
-
-@media (min-width: 768px) {
-    .lv-home-trust {
-        grid-template-columns: repeat(3, 1fr);
-    }
 }
 
 @media (prefers-reduced-motion: reduce) {

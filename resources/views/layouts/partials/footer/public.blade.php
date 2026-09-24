@@ -187,11 +187,15 @@
                             </div>
 
                         </div>
-                        <div class="elementor-element elementor-element-3b979dd elementor-widget elementor-widget-image"
-                            data-id="3b979dd" data-element_type="widget" data-widget_type="image.default">
-                            <img width="503" height="170"
-                                src="/wp-content/uploads/2022/01/Enplus-e-ISO9001-cor-1.png"
-                                class="attachment-large size-large wp-image-6038" alt="" />
+                        <div class="elementor-element elementor-element-3b979dd elementor-widget elementor-widget-text-editor"
+                            data-id="3b979dd" data-element_type="widget" data-widget_type="text-editor.default">
+                            <div class="lv-trust-badges" role="group" aria-label="Informação da loja">
+                                <p class="lv-trust-badges__item"><strong>SSL / HTTPS</strong> — ligação segura</p>
+                                <p class="lv-trust-badges__item"><strong>NIF {{ config('company.nif') }}</strong> — {{ config('company.legal_name') }}</p>
+                                <p class="lv-trust-badges__item"><strong>14 dias</strong> — <a href="{{ route('politicaDeReembolso') }}">livre resolução</a></p>
+                                <p class="lv-trust-badges__item"><strong>Só Portugal</strong> — sem envio para Espanha</p>
+                                <p class="lv-trust-badges__note">{{ config('company.reseller_disclaimer') }}</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -336,7 +340,7 @@
                             data-id="07a93f0" data-element_type="widget" data-widget_type="image.default">
                             <img width="184" height="30"
                                 src="/wp-content/uploads/2022/01/payment_methods_icons.png"
-                                class="attachment-full size-full wp-image-5493" alt="" />
+                                class="attachment-full size-full wp-image-5493" alt="Métodos de pagamento aceites" />
                         </div>
                     </div>
                 </div>

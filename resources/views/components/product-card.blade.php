@@ -14,7 +14,7 @@
                 alt="{{ $product['title'] }}" decoding="async">
             @if (!empty($product['hover_image']))
                 <img loading="lazy" width="480" height="480" src="{{ asset($product['hover_image']) }}"
-                    class="image-hover" alt="" decoding="async">
+                    class="image-hover" alt="{{ $product['title'] }}" decoding="async">
             @endif
         </div>
         @if ($hasDiscount)

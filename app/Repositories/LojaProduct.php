@@ -2,6 +2,7 @@
 
 namespace App\Repositories;
 
+use App\Support\CategoryLabels;
 use Illuminate\Support\Collection;
 use Illuminate\Pagination\LengthAwarePaginator;
 use Illuminate\Support\Str;
@@ -87,10 +88,15 @@ class LojaProduct
     // NOUVELLE MÉTHODE POUR LE FILTRAGE AVANCÉ
     public function applyFilters(array $filters = []): self
     {
-        // Filtre par catégorie
+        // Filtre par catégorie (inclut alias retirés: uncategorized, pellets-de-madeira-e-pellets…)
         if (isset($filters['category']) && $filters['category']) {
-            $this->items = $this->items->where('category', $filters['category']);
+            $internal = CategoryLabels::normalizeInternal((string) $filters['category'])
+                ?? (string) $filters['category'];
+            $keys = CategoryLabels::productKeysFor($internal);
 
+            $this->items = $this->items->filter(
+                fn ($item) => in_array($item['category'] ?? null, $keys, true)
+            );
         }
 
         // Filtre par prix

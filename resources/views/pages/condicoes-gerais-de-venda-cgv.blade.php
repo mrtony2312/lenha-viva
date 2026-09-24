@@ -33,6 +33,8 @@
 
                         <h2>1. Preâmbulo</h2>
                         <p>As presentes Condições Gerais de Venda (CGV) regem as vendas efetuadas no site <a href="{{ route('home') }}">{{ config('company.website') }}</a>, explorado pela {{ config('company.legal_name') }}, e definem os direitos e obrigações das partes na venda online de lenha, pellets de madeira, madeira densificada e equipamentos de aquecimento a consumidores em Portugal.</p>
+                        <p><strong>{{ config('company.sales_territory_note') }}</strong> Não aceitamos encomendas com morada de entrega em Espanha nem noutros países.</p>
+                        <p>{{ config('company.reseller_disclaimer') }}</p>
                         <p>Ao confirmar a encomenda, o cliente declara ter lido e aceite estas CGV.</p>
 
                         <h2>2. Identificação do vendedor</h2>

@@ -30,6 +30,10 @@
                     transferência bancária. Expedimos a partir do nosso armazém em Portugal.
                     Os Açores e a Madeira são servidos sob consulta.
                 </p>
+                <p class="lv-policy__lead lv-policy__lead--warn">
+                    <strong>{{ config('company.sales_territory_note') }}</strong>
+                    O checkout aceita apenas moradas em Portugal (código de país PT).
+                </p>
                 <ul class="lv-policy__highlights">
                     <li>
                         <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2">

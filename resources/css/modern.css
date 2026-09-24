@@ -989,6 +989,52 @@
     color: rgba(241, 236, 231, 0.78);
 }
 
+.lv-checkout__territory {
+    margin: 0 0 20px;
+    padding: 14px 16px;
+    border: 1px solid rgba(27, 48, 34, 0.14);
+    border-radius: 10px;
+    background: #f7f5f1;
+    font-size: 14px;
+    line-height: 1.45;
+}
+
+.lv-checkout__territory p {
+    margin: 0 0 8px;
+}
+
+.lv-checkout__territory p:last-child {
+    margin-bottom: 0;
+}
+
+.lv-product__payment-note {
+    margin: 8px 0 0;
+    font-size: 13px;
+    line-height: 1.45;
+    color: #4a5248;
+}
+
+.lv-trust-badges {
+    margin: 12px 0 0;
+    padding: 14px 16px;
+    border: 1px solid rgba(25, 25, 25, 0.12);
+    border-radius: 8px;
+    background: #faf9f7;
+}
+
+.lv-trust-badges__item {
+    margin: 0 0 6px;
+    font-size: 13px;
+    color: #191919;
+}
+
+.lv-trust-badges__note {
+    margin: 10px 0 0;
+    font-size: 12px;
+    line-height: 1.4;
+    color: #555;
+}
+
 .lv-checkout__body {
     padding-top: 28px;
 }

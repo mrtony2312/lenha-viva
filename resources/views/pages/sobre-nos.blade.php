@@ -91,7 +91,7 @@
                                                  data-widget_type="image.default">
                                                 <img loading="lazy" decoding="async" width="462" height="462"
                                                      src="../wp-content/uploads/2025/10/765424359870807608-462x462.jpg"
-                                                     class="attachment-large size-large wp-image-6059" alt="" />
+                                                     class="attachment-large size-large wp-image-6059" alt="Produção e armazenamento de lenha Naturalenha" />
                                             </div>
                                         </div>
                                     </div>
@@ -115,7 +115,7 @@
                                                  data-widget_type="image.default">
                                                 <img loading="lazy" decoding="async" width="1248" height="832"
                                                      src="../wp-content/uploads/2025/10/765424359870807615.jpg"
-                                                     class="attachment-full size-full wp-image-5970" alt="" />
+                                                     class="attachment-full size-full wp-image-5970" alt="Armazém Naturalenha em Palmela" />
                                             </div>
                                         </div>
                                     </div>
@@ -214,7 +214,7 @@
                                                  data-widget_type="image.default">
                                                 <img loading="lazy" decoding="async" width="1280" height="800"
                                                      src="../wp-content/uploads/2025/10/765424359870807618.jpg"
-                                                     class="attachment-full size-full wp-image-6060" alt="" />
+                                                     class="attachment-full size-full wp-image-6060" alt="Equipamentos e stock Naturalenha" />
                                             </div>
                                         </div>
                                     </div>
