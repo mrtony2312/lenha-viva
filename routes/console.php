@@ -12,4 +12,3 @@ Schedule::command('merchant:sync')
     ->dailyAt('06:15')
     ->when(fn () => filled(config('merchant.account_id')) && filled(config('merchant.data_source_id')))
     ->withoutOverlapping();
-

@@ -65,24 +65,6 @@ class MerchantCatalog
         'Vulcan' => 'Vulkan',
     ];
 
-    /**
-     * Google product taxonomy paths (English).
-     *
-     * @var array<string, string>
-     */
-    private const GOOGLE_CATEGORIES = [
-        'pellets-de-madeira' => 'Home & Garden > Fireplace & Wood Stove Accessories > Firewood & Fuel',
-        'pellets-de-madeira-e-pellets' => 'Home & Garden > Fireplace & Wood Stove Accessories > Firewood & Fuel',
-        'madeira-de-fogo' => 'Home & Garden > Fireplace & Wood Stove Accessories > Firewood & Fuel',
-        'lenha' => 'Home & Garden > Fireplace & Wood Stove Accessories > Firewood & Fuel',
-        'madeira-compactada' => 'Home & Garden > Fireplace & Wood Stove Accessories > Firewood & Fuel',
-        'a-granel' => 'Home & Garden > Fireplace & Wood Stove Accessories > Firewood & Fuel',
-        'uncategorized' => 'Home & Garden > Fireplace & Wood Stove Accessories > Firewood & Fuel',
-        'chef-de-madeira' => 'Home & Garden > Kitchen & Dining > Kitchen Appliances > Ranges, Cooktops & Ovens > Stoves',
-        'fogao-a-lenha' => 'Home & Garden > Household Appliances > Climate Control Appliances > Heating, Ventilation & Air Conditioning > Household Heaters',
-        'caldeira-de-lenha' => 'Home & Garden > Household Appliances > Climate Control Appliances > Heating, Ventilation & Air Conditioning > Boilers',
-    ];
-
     public static function eligibleProducts(): Collection
     {
         $products = collect(config('loja_products', []))
@@ -187,13 +169,10 @@ class MerchantCatalog
             'condition' => 'NEW',
             'brand' => $brand,
             'adult' => false,
-            'googleProductCategory' => self::GOOGLE_CATEGORIES[CategoryLabels::normalizeInternal($product['category'] ?? null) ?? '']
-                ?? self::GOOGLE_CATEGORIES[$product['category'] ?? '']
-                ?? self::GOOGLE_CATEGORIES['uncategorized'],
+            'googleProductCategory' => self::googleProductCategory($product),
             'productTypes' => array_values(array_filter([
                 CategoryLabels::label(CategoryLabels::normalizeInternal($product['category'] ?? null) ?? ($product['category'] ?? null)),
             ])),
-            'shipsFromCountry' => 'PT',
             'shipping' => [[
                 'country' => 'PT',
                 'service' => 'Portugal Continental',
@@ -205,9 +184,6 @@ class MerchantCatalog
             ]],
             'returnPolicyLabel' => (string) config('merchant.return_policy_label', 'portugal-14-dias'),
             'shoppingAdsExcludedCountries' => array_values(array_filter(
-                array_map('strtoupper', (array) config('merchant.excluded_ads_countries', ['ES']))
-            )),
-            'freeListingExcludedCountries' => array_values(array_filter(
                 array_map('strtoupper', (array) config('merchant.excluded_ads_countries', ['ES']))
             )),
         ];
@@ -243,7 +219,26 @@ class MerchantCatalog
 
     public static function offerId(array $product): string
     {
-        return 'lv-'.$product['id'];
+        // Stable catalogue id — never random. MPN/ref is sent separately as mpn.
+        return 'lv-'.(int) ($product['id'] ?? 0);
+    }
+
+    public static function googleProductCategory(array $product): string
+    {
+        $map = (array) config('merchant_categories.map', []);
+        $default = (string) config(
+            'merchant_categories.default',
+            'Home & Garden > Fireplace & Wood Stove Accessories > Firewood & Fuel'
+        );
+
+        $internal = CategoryLabels::normalizeInternal($product['category'] ?? null)
+            ?? ($product['category'] ?? null);
+
+        if (is_string($internal) && isset($map[$internal])) {
+            return (string) $map[$internal];
+        }
+
+        return $default;
     }
 
     public static function brand(array $product): string

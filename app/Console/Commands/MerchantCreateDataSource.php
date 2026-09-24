@@ -3,6 +3,7 @@
 namespace App\Console\Commands;
 
 use App\Services\GoogleMerchantClient;
+use App\Services\GoogleMerchantService;
 use Illuminate\Console\Command;
 use Throwable;
 
@@ -10,21 +11,22 @@ class MerchantCreateDataSource extends Command
 {
     protected $signature = 'merchant:datasource
         {--name=Naturalenha API : Display name in Merchant Center}
-        {--list : List existing data sources instead of creating one}';
+        {--list : List existing data sources}
+        {--ensure : Reuse existing primary API source or create once}';
 
-    protected $description = 'Create or list a Google Merchant API primary product data source';
+    protected $description = 'Create, list or ensure a Google Merchant API primary product data source';
 
-    public function handle(GoogleMerchantClient $merchant): int
+    public function handle(GoogleMerchantClient $client, GoogleMerchantService $merchant): int
     {
-        if (! $merchant->configured()) {
-            $this->error('Set GOOGLE_MERCHANT_ACCOUNT_ID and place the service-account JSON at GOOGLE_MERCHANT_CREDENTIALS.');
+        if (! $client->configured()) {
+            $this->error('Set GOOGLE_MERCHANT_ACCOUNT_ID and OAuth (GOOGLE_CLIENT_ID/SECRET/REFRESH_TOKEN) or service-account JSON.');
 
             return self::FAILURE;
         }
 
         try {
             if ($this->option('list')) {
-                $payload = $merchant->listDataSources();
+                $payload = $client->listDataSources();
                 $rows = collect($payload['dataSources'] ?? [])->map(function (array $source) {
                     $name = (string) ($source['name'] ?? '');
                     $id = preg_replace('#^.*/dataSources/#', '', $name);
@@ -45,7 +47,16 @@ class MerchantCreateDataSource extends Command
                 return self::SUCCESS;
             }
 
-            $created = $merchant->createPrimaryDataSource((string) $this->option('name'));
+            if ($this->option('ensure') || filled(config('merchant.data_source_id'))) {
+                $result = $merchant->ensureDataSource((string) $this->option('name'));
+                $this->info(($result['created'] ? 'Created' : 'Reusing').': '.$result['name']);
+                $this->line('Add/confirm in .env:');
+                $this->line('GOOGLE_MERCHANT_DATA_SOURCE_ID='.$result['id']);
+
+                return self::SUCCESS;
+            }
+
+            $created = $client->createPrimaryDataSource((string) $this->option('name'));
             $name = (string) ($created['name'] ?? '');
             $id = preg_replace('#^.*/dataSources/#', '', $name);
 

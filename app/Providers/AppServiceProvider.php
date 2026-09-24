@@ -2,6 +2,9 @@
 
 namespace App\Providers;
 
+use App\Events\CatalogProductChanged;
+use App\Listeners\QueueGoogleMerchantSync;
+use Illuminate\Support\Facades\Event;
 use Illuminate\Support\Facades\URL;
 use Illuminate\Support\ServiceProvider;
 
@@ -29,5 +32,7 @@ class AppServiceProvider extends ServiceProvider
                 URL::forceScheme($scheme);
             }
         }
+
+        Event::listen(CatalogProductChanged::class, QueueGoogleMerchantSync::class);
     }
 }
