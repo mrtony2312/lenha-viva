@@ -39,6 +39,19 @@ return [
     'return_policy_label' => env('GOOGLE_MERCHANT_RETURN_POLICY_LABEL', 'portugal-14-dias'),
     'return_policy_url' => null,
 
+    /*
+    | Public HTTPS origin used in the RSS feed (links + images).
+    | Must be the live shop — Google rejects localhost.
+    */
+    'public_base_url' => env('GOOGLE_MERCHANT_PUBLIC_URL', env('APP_URL', 'https://naturalenha.com')),
+
+    /*
+    | Scheduled XML feed URL to register in Merchant Center (primary data source).
+    | Prefer this over OAuth API for stability (no token expiry → no silent wipe).
+    */
+    'feed_url' => env('GOOGLE_MERCHANT_FEED_URL', 'https://naturalenha.com/feed/google-merchant.xml'),
+    'feed_min_items_warn' => (int) env('GOOGLE_MERCHANT_FEED_MIN_ITEMS', 50),
+
     'min_handling_time' => (int) env('GOOGLE_MERCHANT_MIN_HANDLING', 1),
     'max_handling_time' => (int) env('GOOGLE_MERCHANT_MAX_HANDLING', 2),
     'min_transit_time' => (int) env('GOOGLE_MERCHANT_MIN_TRANSIT', 3),
