@@ -14,6 +14,7 @@ class CheckoutConfirmationMobileTest extends TestCase
     public function test_confirmation_page_has_responsive_styles_and_portuguese_file_picker(): void
     {
         SiteSetting::setValue('bank_iban', 'PT50018900060642601000555');
+        SiteSetting::setValue('bank_account_holder', 'MARIA NEVES ALVES MAIA');
 
         $order = Order::create([
             'reference' => 'NE-MOBILE01',
@@ -43,7 +44,9 @@ class CheckoutConfirmationMobileTest extends TestCase
         $this->assertStringContainsString('lang="pt"', $html);
         $this->assertStringContainsString('Escolher ficheiro', $html);
         $this->assertStringContainsString('Nenhum ficheiro selecionado', $html);
-        $this->assertStringContainsString('@media', $html);
-        $this->assertStringContainsString('max-width: 720px', $html);
+        $this->assertStringContainsString('Enviar comprovativo', $html);
+        $this->assertStringContainsString('MARIA NEVES ALVES MAIA', $html);
+        $this->assertStringContainsString('lv-order-progress', $html);
+        $this->assertStringContainsString('@media', file_get_contents(resource_path('css/modern.css')));
     }
 }

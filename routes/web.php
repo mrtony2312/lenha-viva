@@ -53,6 +53,9 @@ Route::get('/carrinho/mini-cart-html', [HomeController::class, 'getMiniCartHtml'
 Route::get('/finalizacao-de-compra', [CheckoutController::class, 'show'])->name('checkout');
 Route::get('/finalizacao-de-compra/confirmacao/{order:reference}', [CheckoutController::class, 'confirmation'])->name('checkout.confirmation');
 Route::post('/finalizacao-de-compra/confirmacao/{order:reference}/comprovativo', [CheckoutController::class, 'uploadPaymentProof'])->name('checkout.payment-proof');
+Route::get('/finalizacao-de-compra/sucesso/{order:reference}', [CheckoutController::class, 'success'])->name('checkout.success');
+Route::get('/finalizacao-de-compra/sucesso/{order:reference}/recibo', [CheckoutController::class, 'downloadReceipt'])->name('checkout.receipt');
+Route::get('/finalizacao-de-compra/sucesso/{order:reference}/comprovativo', [CheckoutController::class, 'downloadPaymentProof'])->name('checkout.proof.download');
 
 Route::permanentRedirect('/finalizacao-de-compra/confirmacao', '/loja');
 

@@ -2022,6 +2022,329 @@
     background: #686868;
 }
 
+/* ============ ORDER CONFIRMATION / SUCCESS (Omniva-inspired) ============ */
+
+.lv-order-flow {
+    background: #f7f7f7;
+    padding-bottom: 24px;
+}
+
+.lv-order-hero {
+    padding: 40px 0 12px;
+    text-align: center;
+}
+
+.lv-order-hero__inner {
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+.lv-order-hero__icon {
+    display: inline-flex;
+    color: var(--lv-brand, #1b3022);
+    margin-bottom: 12px;
+}
+
+.lv-order-hero__icon--success {
+    color: #1e7a34;
+}
+
+.lv-order-hero__title {
+    margin: 0 0 10px;
+    font-family: var(--lv-font-display, Georgia, serif);
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    color: #1a1a1a;
+}
+
+.lv-order-hero__lead {
+    margin: 0;
+    color: #686868;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.lv-order-flow__body {
+    padding: 12px 20px 40px;
+}
+
+.lv-order-progress {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    margin: 0 0 24px;
+    padding: 18px 16px;
+    background: #fff;
+    border: 1px solid #ebebeb;
+    border-radius: 16px;
+}
+
+@media (min-width: 768px) {
+    .lv-order-progress {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 8px;
+        padding: 22px 20px;
+    }
+}
+
+.lv-order-progress__item {
+    text-align: center;
+}
+
+.lv-order-progress__label {
+    display: block;
+    font-size: 12px;
+    color: #686868;
+    margin-bottom: 4px;
+    font-weight: 500;
+}
+
+.lv-order-progress__value {
+    display: block;
+    font-size: 15px;
+    font-weight: 600;
+    color: #1a1a1a;
+    word-break: break-word;
+}
+
+.lv-order-layout {
+    display: grid;
+    gap: 24px;
+}
+
+@media (min-width: 992px) {
+    .lv-order-layout {
+        grid-template-columns: minmax(0, 1.7fr) minmax(280px, 1fr);
+        align-items: start;
+    }
+}
+
+.lv-order-card {
+    background: #fff;
+    border: 1px solid #ebebeb;
+    border-radius: 16px;
+    padding: 22px 18px;
+    margin-bottom: 16px;
+}
+
+.lv-order-card h2 {
+    margin: 0 0 8px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.lv-order-card__hint {
+    margin: 0 0 14px;
+    color: #686868;
+    font-size: 14px;
+    line-height: 1.45;
+}
+
+.lv-order-bank {
+    background: #faf8f5;
+}
+
+.lv-order-address {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.55;
+}
+
+.lv-order-summary {
+    position: sticky;
+    top: 96px;
+}
+
+.lv-order-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+@media (min-width: 576px) {
+    .lv-order-actions {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .lv-order-actions .tf-btn {
+        flex: 1 1 auto;
+        min-width: 180px;
+    }
+}
+
+.lv-omniva-checkout .tf-btn--outline {
+    background: #fff;
+    color: var(--lv-brand, #1b3022);
+    border: 1px solid #d5d5d5;
+}
+
+.lv-omniva-checkout .tf-btn--outline:hover,
+.lv-omniva-checkout .tf-btn--outline:focus-visible {
+    background: #f5f5f5;
+    color: var(--lv-brand, #1b3022);
+}
+
+.lv-order-timeline {
+    list-style: none;
+    margin: 0 0 24px;
+    padding: 20px 18px;
+    background: #fff;
+    border: 1px solid #ebebeb;
+    border-radius: 16px;
+    display: grid;
+    gap: 14px;
+}
+
+@media (min-width: 768px) {
+    .lv-order-timeline {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 12px;
+    }
+}
+
+.lv-order-timeline__item {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    color: #686868;
+    font-size: 13px;
+}
+
+.lv-order-timeline__item strong {
+    display: block;
+    color: #1a1a1a;
+    font-size: 14px;
+    margin-bottom: 2px;
+}
+
+.lv-order-timeline__item span:last-child {
+    display: block;
+}
+
+.lv-order-timeline__dot {
+    width: 12px;
+    height: 12px;
+    margin-top: 4px;
+    border-radius: 50%;
+    border: 2px solid #cfcfcf;
+    background: #fff;
+    flex-shrink: 0;
+}
+
+.lv-order-timeline__item.is-done .lv-order-timeline__dot,
+.lv-order-timeline__item.is-current .lv-order-timeline__dot {
+    border-color: var(--lv-brand, #1b3022);
+    background: var(--lv-brand, #1b3022);
+}
+
+.lv-order-timeline__item.is-current strong {
+    color: var(--lv-brand, #1b3022);
+}
+
+.lv-order-proof .lv-proof-label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.lv-order-proof .lv-proof-picker {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 16px;
+    border: 1px dashed #c9c0b4;
+    border-radius: 10px;
+    background: #fff;
+    cursor: pointer;
+    transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.lv-order-proof .lv-proof-picker:hover,
+.lv-order-proof .lv-proof-picker:focus-within {
+    border-color: var(--lv-brand, #1b3022);
+    background: #fbfaf8;
+}
+
+.lv-order-proof .lv-proof-picker.is-invalid {
+    border-color: #dc3545;
+}
+
+.lv-order-proof .lv-proof-input {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+}
+
+.lv-order-proof .lv-proof-btn {
+    pointer-events: none;
+    border-radius: 6px;
+    padding: 10px 16px;
+    background: var(--lv-brand, #1b3022);
+    color: #fff;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.lv-order-proof .lv-proof-name {
+    pointer-events: none;
+    color: #686868;
+    font-size: 14px;
+    word-break: break-all;
+}
+
+.lv-order-proof .lv-proof-submit {
+    margin-top: 16px;
+    min-height: 52px;
+    font-size: 15px;
+}
+
+.lv-order-proof .lv-proof-submit:disabled {
+    opacity: 0.7;
+    cursor: wait;
+}
+
+.lv-order-flow .lv-field-error {
+    color: #8a1f11;
+    margin-top: 6px;
+    font-size: 0.9rem;
+}
+
+.lv-order-flow .lv-break {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+
+.lv-order-flow .lv-bank-details {
+    margin: 0;
+    display: grid;
+    gap: 12px;
+}
+
+.lv-order-flow .lv-bank-details > div {
+    display: grid;
+    gap: 2px;
+}
+
+.lv-order-flow .lv-bank-details dt {
+    margin: 0;
+    font-size: 0.75rem;
+    color: #686868;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.lv-order-flow .lv-bank-details dd {
+    margin: 0;
+    font-size: 1rem;
+}
+
 .lv-related {
     padding: 32px 0 48px;
     background: #f7f7f7;

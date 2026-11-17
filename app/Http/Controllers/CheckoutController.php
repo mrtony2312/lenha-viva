@@ -17,6 +17,8 @@ use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 use Illuminate\View\View;
+use Symfony\Component\HttpFoundation\BinaryFileResponse;
+use Symfony\Component\HttpFoundation\StreamedResponse;
 
 class CheckoutController extends Controller
 {
@@ -66,15 +68,62 @@ class CheckoutController extends Controller
         ]);
     }
 
-    public function confirmation(Order $order): View
+    public function confirmation(Order $order): View|RedirectResponse
     {
         $order->load('items');
+
+        if (filled($order->payment_proof_path)) {
+            return redirect()->route('checkout.success', $order->reference);
+        }
 
         return view('checkout.confirmation', [
             'order' => $order,
             'bank' => SiteSetting::bankAccount(),
             'relatedProducts' => $this->relatedProductsForOrder($order),
         ]);
+    }
+
+    public function success(Order $order): View|RedirectResponse
+    {
+        $order->load('items');
+
+        if (! filled($order->payment_proof_path)) {
+            return redirect()->route('checkout.confirmation', $order->reference);
+        }
+
+        return view('checkout.success', [
+            'order' => $order,
+            'bank' => SiteSetting::bankAccount(),
+            'relatedProducts' => $this->relatedProductsForOrder($order),
+        ]);
+    }
+
+    public function downloadReceipt(Order $order): StreamedResponse
+    {
+        $order->load('items');
+        $bank = SiteSetting::bankAccount();
+        $filename = 'recibo-'.$order->reference.'.html';
+        $html = view('checkout.receipt', compact('order', 'bank'))->render();
+
+        return response()->streamDownload(static function () use ($html) {
+            echo $html;
+        }, $filename, [
+            'Content-Type' => 'text/html; charset=UTF-8',
+        ]);
+    }
+
+    public function downloadPaymentProof(Order $order): BinaryFileResponse|RedirectResponse
+    {
+        if (! filled($order->payment_proof_path) || ! Storage::disk('local')->exists($order->payment_proof_path)) {
+            return redirect()
+                ->route('checkout.success', $order->reference)
+                ->with('error', 'O comprovativo ainda não está disponível.');
+        }
+
+        $extension = pathinfo($order->payment_proof_path, PATHINFO_EXTENSION) ?: 'bin';
+        $downloadName = 'comprovativo-'.$order->reference.'.'.$extension;
+
+        return Storage::disk('local')->download($order->payment_proof_path, $downloadName);
     }
 
     /**
@@ -241,6 +290,7 @@ class CheckoutController extends Controller
 
         $order->update([
             'payment_proof_path' => $proofPath,
+            'status' => $order->status === 'pending' ? 'processing' : $order->status,
         ]);
 
         if (is_string($previousPath) && $previousPath !== '' && $previousPath !== $proofPath) {
@@ -260,8 +310,8 @@ class CheckoutController extends Controller
         }
 
         return redirect()
-            ->route('checkout.confirmation', $order->reference)
-            ->with('status', 'O seu comprovativo de transferência foi enviado com sucesso.');
+            ->route('checkout.success', $order->reference)
+            ->with('status', 'O seu comprovativo foi enviado. Aguardamos a validação do pagamento.');
     }
 
     private function sendOrderMails(Order $order): void

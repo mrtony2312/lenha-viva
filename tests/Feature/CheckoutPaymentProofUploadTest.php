@@ -48,10 +48,24 @@ class CheckoutPaymentProofUploadTest extends TestCase
             'payment_proof' => $file,
         ]);
 
-        $response->assertRedirect(route('checkout.confirmation', $order->reference));
+        $response->assertRedirect(route('checkout.success', $order->reference));
         $order->refresh();
         $this->assertNotNull($order->payment_proof_path);
+        $this->assertSame('processing', $order->status);
         Storage::disk('local')->assertExists($order->payment_proof_path);
         Mail::assertSent(PaymentProofSubmittedMail::class);
+
+        $this->get(route('checkout.success', $order->reference))
+            ->assertOk()
+            ->assertSee('Encomenda registada com sucesso', false)
+            ->assertSee('Descarregar recibo', false)
+            ->assertSee('Continuar a comprar', false);
+
+        $this->get(route('checkout.receipt', $order->reference))
+            ->assertOk()
+            ->assertHeader('content-disposition');
+
+        $this->get(route('checkout.confirmation', $order->reference))
+            ->assertRedirect(route('checkout.success', $order->reference));
     }
 }
