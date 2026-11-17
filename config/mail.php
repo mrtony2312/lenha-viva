@@ -115,4 +115,9 @@ return [
         'name' => env('MAIL_FROM_NAME', 'Naturalenha'),
     ],
 
+    'admin' => [
+        'address' => env('MAIL_ADMIN_ADDRESS', env('MAIL_FROM_ADDRESS', 'contacto@naturalenha.com')),
+        'name' => env('MAIL_ADMIN_NAME', 'Naturalenha Admin'),
+    ],
+
 ];

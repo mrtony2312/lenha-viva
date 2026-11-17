@@ -4,9 +4,17 @@ namespace App\Http\Controllers;
 
 use App\Mail\AdminOrderNotification;
 use App\Mail\OrderConfirmation;
+use App\Mail\PaymentProofSubmittedMail;
+use App\Models\Order;
+use App\Models\OrderItem;
+use App\Models\SiteSetting;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Mail;
-use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
+use Illuminate\View\View;
 
 class CheckoutController extends Controller
 {
@@ -14,9 +22,7 @@ class CheckoutController extends Controller
 
     public function __construct()
     {
-
         $this->pays = config('countries');
-
     }
 
     public function show()
@@ -35,7 +41,6 @@ class CheckoutController extends Controller
             );
         }
 
-        // Calculer les totaux
         $totalItems = 0;
         $totalPrice = 0.00;
 
@@ -59,27 +64,21 @@ class CheckoutController extends Controller
         ]);
     }
 
-    public function confirmation()
+    public function confirmation(Order $order): View
     {
-        $order = session()->get('last_order');
-
-        if (! $order) {
-            return redirect()->route('home');
-        }
+        $order->load('items');
 
         return view('checkout.confirmation', [
             'order' => $order,
+            'bank' => SiteSetting::bankAccount(),
         ]);
     }
 
-    public function store(Request $request)
+    public function store(Request $request): RedirectResponse
     {
-
-//        dd($request);
-        // Valider les données du formulaire
         $validated = $request->validate([
             'shipping_method' => 'required|string|max:255',
-            'payment_method' => 'required|string|max:255',
+            'payment_method' => 'required|string|in:bacs',
             'order_notes' => 'nullable|string|max:1000',
             'terms_checkbox' => 'accepted',
             'email' => 'required|email',
@@ -91,7 +90,6 @@ class CheckoutController extends Controller
             'shipping-city' => 'required|string|max:255',
             'shipping-postcode' => 'required|string|max:20',
             'shipping-phone' => 'nullable|string|max:20',
-
             'billing-country' => 'required|string|in:PT',
             'billing-first_name' => 'required|string|max:255',
             'billing-last_name' => 'required|string|max:255',
@@ -102,11 +100,11 @@ class CheckoutController extends Controller
             'billing-phone' => 'nullable|string|max:20',
         ], [
             'terms_checkbox.accepted' => 'Deve aceitar as condições gerais de venda e a política de privacidade.',
+            'payment_method.in' => 'Apenas transferência bancária está disponível.',
             'shipping-country.in' => 'As entregas são feitas apenas em Portugal.',
             'billing-country.in' => 'A faturação deve ser em Portugal.',
         ]);
 
-        // Récupérer le panier
         $cart = session()->get('cart', []);
 
         if (empty($cart)) {
@@ -121,82 +119,127 @@ class CheckoutController extends Controller
             );
         }
 
-        // Calculer les totaux
         $totalItems = 0;
         $totalPrice = 0.00;
 
         foreach ($cart as $item) {
             $itemQuantity = (int) ($item['quantity'] ?? 0);
             $itemPrice = $this->cleanPrice($item['price'] ?? 0);
-
             $totalItems += $itemQuantity;
             $totalPrice += ($itemPrice * $itemQuantity);
         }
 
-        // Générer un numéro de commande
-        $orderNumber = rand(1000, 9999);
-
-        // Préparer les données de la commande avec les données du formulaire
-        $orderData = [
-            'order_number' => $orderNumber,
-            'date' => now()->format('F d, Y'),
+        $order = Order::create([
+            'reference' => 'NE-'.strtoupper(Str::random(8)),
+            'status' => 'pending',
+            'payment_method' => 'bacs',
             'shipping_method' => $validated['shipping_method'],
-            'payment_method' => 'Transferência bancária',
-            'customer' => [
-                'email' => $validated['email'],
-                'first_name' => $validated['shipping-first_name'],
-                'last_name' => $validated['shipping-last_name'],
-                'address_1' => $validated['shipping-address_1'],
-                'address_2' => $validated['shipping-address_2'] ?? '',
-                'city' => $validated['shipping-city'],
-                'postcode' => $validated['shipping-postcode'],
-                'country' => $validated['shipping-country'],
-                'phone' => $validated['shipping-phone'] ?? '',
-            ],
-            'billing' => [
-                'first_name' => $validated['billing-first_name'],
-                'last_name' => $validated['billing-last_name'],
-                'address_1' => $validated['billing-address_1'],
-                'address_2' => $validated['billing-address_2'] ?? '',
-                'city' => $validated['billing-city'],
-                'postcode' => $validated['billing-postcode'],
-                'country' => $validated['billing-country'],
-                'phone' => $validated['billing-phone'] ?? '',
-            ],
-            'items' => $cart,
-            'total_items' => $totalItems,
-            'total_price' => $totalPrice,
-            'formatted_total_price' => number_format($totalPrice, 2, ',', ' '),
-            'order_comments' => $validated['order_notes'] ?? '',
-            'order_date' => now()->format('Y-m-d H:i:s'),
-        ];
+            'email' => $validated['email'],
+            'shipping_first_name' => $validated['shipping-first_name'],
+            'shipping_last_name' => $validated['shipping-last_name'],
+            'shipping_address_1' => $validated['shipping-address_1'],
+            'shipping_address_2' => $validated['shipping-address_2'] ?? null,
+            'shipping_city' => $validated['shipping-city'],
+            'shipping_postcode' => $validated['shipping-postcode'],
+            'shipping_country' => $validated['shipping-country'],
+            'shipping_phone' => $validated['shipping-phone'] ?? null,
+            'billing_first_name' => $validated['billing-first_name'],
+            'billing_last_name' => $validated['billing-last_name'],
+            'billing_address_1' => $validated['billing-address_1'],
+            'billing_address_2' => $validated['billing-address_2'] ?? null,
+            'billing_city' => $validated['billing-city'],
+            'billing_postcode' => $validated['billing-postcode'],
+            'billing_country' => $validated['billing-country'],
+            'billing_phone' => $validated['billing-phone'] ?? null,
+            'notes' => $validated['order_notes'] ?? null,
+            'subtotal' => $totalPrice,
+            'shipping' => 0,
+            'total' => $totalPrice,
+            'currency' => 'EUR',
+        ]);
+
+        foreach ($cart as $productId => $item) {
+            $price = $this->cleanPrice($item['price'] ?? 0);
+            $qty = (int) ($item['quantity'] ?? 0);
+
+            OrderItem::create([
+                'order_id' => $order->id,
+                'product_id' => is_numeric($productId) ? (int) $productId : ($item['id'] ?? null),
+                'name' => (string) ($item['title'] ?? $item['name'] ?? 'Produto'),
+                'slug' => $item['slug'] ?? null,
+                'price' => $price,
+                'quantity' => $qty,
+                'line_total' => $price * $qty,
+            ]);
+        }
+
+        session()->forget('cart');
+        $order->load('items');
+        $this->sendOrderMails($order);
+
+        return redirect()->route('checkout.confirmation', $order->reference)
+            ->with('success', 'A sua encomenda foi recebida com sucesso!');
+    }
+
+    public function uploadPaymentProof(Request $request, Order $order): RedirectResponse
+    {
+        $data = $request->validate([
+            'payment_proof' => ['required', 'file', 'mimes:jpg,jpeg,png,pdf,webp', 'max:8192'],
+        ], [
+            'payment_proof.required' => 'Selecione o comprovativo de transferência.',
+            'payment_proof.file' => 'O comprovativo deve ser um ficheiro.',
+            'payment_proof.mimes' => 'Formatos permitidos: JPG, PNG, WEBP ou PDF.',
+            'payment_proof.max' => 'O ficheiro pode ter no máximo 8 MB.',
+        ]);
+
+        $previousPath = $order->payment_proof_path;
+        $proofPath = $data['payment_proof']->store('payment-proofs', 'local');
+
+        $order->update([
+            'payment_proof_path' => $proofPath,
+        ]);
+
+        if (is_string($previousPath) && $previousPath !== '' && $previousPath !== $proofPath) {
+            Storage::disk('local')->delete($previousPath);
+        }
+
+        $order->refresh()->load('items');
 
         try {
-            // Envoyer l'email de confirmation au client
-            Mail::to($validated['email'])->send(new OrderConfirmation($orderData));
-
-            // Envoyer la notification à l'admin
-            $adminEmail = config('mail.admin_email', 'contacto@naturalenha.com');
-            if ($adminEmail) {
-                Mail::to($adminEmail)->send(new AdminOrderNotification($orderData));
-            }
-
-            // Sauvegarder la commande dans la session et localStorage
-            session()->put('last_order', $orderData);
-
-            // Vider le panier après la commande
-            session()->forget('cart');
-
-            // Rediriger vers la page de confirmation
-            return redirect()->route('checkout.confirmation')->with([
-                'order_data' => $orderData,
-                'success' => 'A sua encomenda foi recebida com sucesso!',
+            Mail::to(config('mail.admin.address'), config('mail.admin.name'))
+                ->send(new PaymentProofSubmittedMail($order));
+        } catch (\Throwable $e) {
+            Log::error('Email de comprovativo ao admin falhou', [
+                'order' => $order->reference,
+                'error' => $e->getMessage(),
             ]);
+        }
 
-        } catch (\Exception $e) {
-            \Log::error('Erro no checkout: '.$e->getMessage());
+        return redirect()
+            ->route('checkout.confirmation', $order->reference)
+            ->with('status', 'O seu comprovativo de transferência foi enviado com sucesso.');
+    }
 
-            return back()->with('error', 'Ocorreu um erro ao processar a sua encomenda. Por favor, tente novamente.')->withInput();
+    private function sendOrderMails(Order $order): void
+    {
+        try {
+            Mail::to($order->email, $order->full_name)
+                ->send(new OrderConfirmation($order));
+        } catch (\Throwable $e) {
+            Log::error('Email de confirmação ao cliente falhou', [
+                'order' => $order->reference,
+                'error' => $e->getMessage(),
+            ]);
+        }
+
+        try {
+            Mail::to(config('mail.admin.address'), config('mail.admin.name'))
+                ->send(new AdminOrderNotification($order));
+        } catch (\Throwable $e) {
+            Log::error('Email de nova encomenda ao admin falhou', [
+                'order' => $order->reference,
+                'error' => $e->getMessage(),
+            ]);
         }
     }
 
@@ -219,25 +262,23 @@ class CheckoutController extends Controller
         return $unavailable;
     }
 
-    private function cleanPrice($price)
+    private function cleanPrice($price): float
     {
         if (is_numeric($price)) {
             return (float) $price;
         }
 
         if (empty($price)) {
-            return 0.000;
+            return 0.0;
         }
 
         if (is_string($price)) {
-            // Price strings use ',' as a thousands separator and '.' as the decimal separator
-            // (e.g. "2,499.00"). Strip the thousands separator before casting.
             $price = str_replace(',', '', $price);
             $price = preg_replace('/[^\d.]/', '', $price);
 
             return (float) $price;
         }
 
-        return 0.000;
+        return 0.0;
     }
 }

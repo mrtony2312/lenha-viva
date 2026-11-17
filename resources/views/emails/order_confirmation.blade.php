@@ -1,259 +1,92 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="pt">
 <head>
     <meta charset="utf-8">
     <title>Confirmação da sua encomenda</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-        }
-
-        .container {
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        .header {
-            background: #f7f4ef;
-            color: #1b3022;
-            padding: 24px 20px 16px;
-            text-align: center;
-        }
-
-        .header img {
-            max-width: 260px;
-            height: auto;
-            display: block;
-            margin: 0 auto 12px;
-        }
-
-        .header h2 {
-            margin: 0;
-            font-size: 18px;
-            font-weight: 600;
-            color: #1b3022;
-        }
-
-        .content {
-            padding: 30px;
-            background: #f9f9f9;
-        }
-
-        .order-info {
-            background: white;
-            padding: 20px;
-            border-radius: 5px;
-            margin-bottom: 20px;
-        }
-
-        .address-box {
-            background: #f8f9fa;
-            padding: 15px;
-            border-left: 4px solid #2c3e50;
-            margin: 10px 0;
-        }
-
-        .product-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-        }
-
-        .product-table th,
-        .product-table td {
-            border: 1px solid #ddd;
-            padding: 10px;
-            text-align: left;
-        }
-
-        .product-table th {
-            background: #f5f5f5;
-        }
-
-        .total {
-            font-size: 18px;
-            font-weight: bold;
-            color: #2c3e50;
-            margin-top: 20px;
-        }
-
-        .footer {
-            text-align: center;
-            margin-top: 30px;
-            padding: 20px;
-            color: #666;
-            font-size: 12px;
-        }
-
-        .section-title {
-            color: #2c3e50;
-            border-bottom: 2px solid #eee;
-            padding-bottom: 10px;
-            margin-top: 30px;
-        }
-
-        /* Estilos do botão WhatsApp */
-        .whatsapp-button {
-            display: inline-block;
-            background-color: #25D366;
-            color: white;
-            text-decoration: none;
-            padding: 15px 25px;
-            border-radius: 50px;
-            font-weight: bold;
-            font-size: 16px;
-            margin: 20px 0;
-            text-align: center;
-            transition: background-color 0.3s ease;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-
-        .whatsapp-button:hover {
-            background-color: #1DA851;
-            text-decoration: none;
-            color: white;
-        }
-
-        .whatsapp-icon {
-            vertical-align: middle;
-            margin-right: 10px;
-            font-size: 20px;
-        }
-
-        .whatsapp-container {
-            text-align: center;
-            margin: 30px 0;
-            padding: 20px;
-            background: white;
-            border-radius: 10px;
-            border: 2px solid #25D366;
-        }
+        body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+        .container { max-width: 600px; margin: 0 auto; padding: 20px; }
+        .header { background: #f7f4ef; color: #1b3022; padding: 24px 20px 16px; text-align: center; }
+        .header h2 { margin: 0; font-size: 18px; }
+        .content { padding: 24px; background: #f9f9f9; }
+        .box { background: #fff; padding: 16px; border-radius: 6px; margin-bottom: 16px; }
+        .bank { border-left: 4px solid #1b3022; }
+        table { width: 100%; border-collapse: collapse; margin: 12px 0; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background: #f5f5f5; }
+        .footer { text-align: center; margin-top: 24px; color: #666; font-size: 12px; }
     </style>
 </head>
-
 <body>
-    <div class="container">
-        <div class="header">
-            <img src="{{ asset(config('company.logo')) }}" alt="Naturalenha" width="260">
-            <h2>Confirmação da encomenda #{{ $order['order_number'] }}</h2>
-        </div>
-
-        <div class="content">
-            <p>Olá {{ $order['customer']['first_name'] }},</p>
-            <p>Obrigado pela sua encomenda! Aqui estão os detalhes:</p>
-
-            <!-- Botão WhatsApp -->
-            <div class="whatsapp-container">
-                <h3>📱 Precisa de ajuda?</h3>
-                <p>Tem alguma dúvida sobre a sua encomenda? Contacte-nos facilmente por WhatsApp!</p>
-                <a href="https://wa.me/351912026453?text=Olá! Tenho uma questão sobre a minha encomenda #{{ $order['order_number'] }}"
-                    class="whatsapp-button" target="_blank">
-                    <span class="whatsapp-icon">💬</span> Contactar por WhatsApp
-                </a>
-                <p style="margin-top: 10px; font-size: 14px; color: #666;">
-                    <strong>Número:</strong> +351 912 026 453
-                </p>
-            </div>
-
-            <div class="order-info">
-                <h3>📋 Informação da encomenda</h3>
-                <p><strong>Número de encomenda:</strong> {{ $order['order_number'] }}</p>
-                <p><strong>Data da encomenda:</strong> {{ $order['date'] }}</p>
-                <p><strong>Data completa:</strong> {{ $order['order_date'] }}</p>
-                <p><strong>Método de pagamento:</strong> {{ $order['payment_method'] }}</p>
-                <p><strong>Método de envio:</strong> {{ $order['shipping_method'] }}</p>
-                @if (!empty($order['order_comments']))
-                    <p><strong>Observações:</strong> {{ $order['order_comments'] }}</p>
-                @endif
-            </div>
-
-            <h3 class="section-title">👤 Informação do cliente</h3>
-            <div class="order-info">
-                <p><strong>Email:</strong> {{ $order['customer']['email'] }}</p>
-                <p><strong>Telemóvel:</strong> {{ $order['customer']['phone'] ?: 'Não indicado' }}</p>
-            </div>
-
-            <h3 class="section-title">📍 Morada de entrega</h3>
-            <div class="address-box">
-                <p><strong>{{ $order['customer']['first_name'] }} {{ $order['customer']['last_name'] }}</strong></p>
-                <p>{{ $order['customer']['address_1'] }}</p>
-                @if (!empty($order['customer']['address_2']))
-                    <p>{{ $order['customer']['address_2'] }}</p>
-                @endif
-                <p>{{ $order['customer']['postcode'] }} {{ $order['customer']['city'] }}</p>
-                <p>{{ $order['customer']['country'] }}</p>
-            </div>
-
-            <h3 class="section-title">🏢 Morada de faturação</h3>
-            <div class="address-box">
-                <p><strong>{{ $order['billing']['first_name'] }} {{ $order['billing']['last_name'] }}</strong></p>
-                <p>{{ $order['billing']['address_1'] }}</p>
-                @if (!empty($order['billing']['address_2']))
-                    <p>{{ $order['billing']['address_2'] }}</p>
-                @endif
-                <p>{{ $order['billing']['postcode'] }} {{ $order['billing']['city'] }}</p>
-                <p>{{ $order['billing']['country'] }}</p>
-                @if (!empty($order['billing']['phone']))
-                    <p><strong>Telemóvel:</strong> {{ $order['billing']['phone'] }}</p>
-                @endif
-            </div>
-
-            <h3 class="section-title">🛒 Produtos encomendados</h3>
-            <table class="product-table">
-                <thead>
-                    <tr>
-                        <th>Produto</th>
-                        <th>Quantidade</th>
-                        <th>Preço unitário</th>
-                        <th>Total</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach ($order['items'] as $item)
-                        <tr>
-                            <td>{{ $item['title'] ?? ($item['name'] ?? 'Produto') }}</td>
-                            <td>{{ $item['quantity'] }}</td>
-                            <td>{{ number_format($item['price'], 3, ',', ' ') }} €</td>
-                            <td>{{ number_format($item['price'] * $item['quantity'], 3, ',', ' ') }} €</td>
-                        </tr>
-                    @endforeach
-                </tbody>
-            </table>
-
-            <div class="total">
-                <p><strong>Quantidade total de artigos:</strong> {{ $order['total_items'] }}</p>
-                <p><strong>Valor total:</strong> {{ $order['formatted_total_price'] }} €</p>
-            </div>
-
-            @if (!empty($order['order_comments']))
-                <div class="order-info">
-                    <h3>📝 Observações da encomenda</h3>
-                    <p>{{ $order['order_comments'] }}</p>
-                </div>
-            @endif
-
-            <!-- Botão WhatsApp repetido antes do fecho -->
-            <div style="text-align: center; margin: 30px 0;">
-                <a href="https://wa.me/351912026453?text=Olá! Tenho uma questão sobre a minha encomenda #{{ $order['order_number'] }}"
-                    class="whatsapp-button" target="_blank">
-                    <span class="whatsapp-icon">💬</span> Contactar por WhatsApp
-                </a>
-            </div>
-
-            <p>Entraremos em contacto consigo em breve para confirmar os detalhes da entrega.</p>
-            <p>Obrigado por escolher a Naturalenha!</p>
-        </div>
-
-        <div class="footer">
-            <p>Naturalenha &copy; {{ date('Y') }}</p>
-            <p>Se tiver alguma dúvida, contacte-nos: contacto@naturalenha.com</p>
-            <p><strong>WhatsApp:</strong> +351 912 026 453</p>
-        </div>
+<div class="container">
+    <div class="header">
+        <h2>Confirmação da encomenda {{ $order->reference }}</h2>
     </div>
-</body>
+    <div class="content">
+        <p>Olá {{ $order->shipping_first_name }},</p>
+        <p>Obrigado pela sua encomenda. O pagamento é por <strong>transferência bancária</strong>. O envio inicia-se após a confirmação do pagamento.</p>
 
+        <div class="box bank">
+            <h3>Dados bancários</h3>
+            <p><strong>Titular:</strong> {{ $bank['account_holder'] ?: '—' }}</p>
+            @if ($bank['bank_name'])
+                <p><strong>Banco:</strong> {{ $bank['bank_name'] }}</p>
+            @endif
+            <p><strong>IBAN:</strong> {{ format_iban($bank['iban']) ?: '—' }}</p>
+            @if ($bank['bic'])
+                <p><strong>BIC:</strong> {{ $bank['bic'] }}</p>
+            @endif
+            <p><strong>Montante:</strong> {{ format_eur($order->total) }}</p>
+            <p><strong>Referência / descritivo:</strong> {{ $order->reference }}</p>
+            @if ($bank['note'])
+                <p>{{ $bank['note'] }}</p>
+            @endif
+            <p>Após a transferência, pode enviar o comprovativo na página de confirmação da encomenda.</p>
+        </div>
+
+        <div class="box">
+            <p><strong>Referência:</strong> {{ $order->reference }}</p>
+            <p><strong>Data:</strong> {{ $order->created_at?->format('d/m/Y H:i') }}</p>
+            <p><strong>Email:</strong> {{ $order->email }}</p>
+            <p><strong>Pagamento:</strong> {{ $order->paymentMethodLabel() }}</p>
+        </div>
+
+        <h3>Produtos</h3>
+        <table>
+            <thead>
+            <tr>
+                <th>Produto</th>
+                <th>Qtd</th>
+                <th>Total</th>
+            </tr>
+            </thead>
+            <tbody>
+            @foreach ($order->items as $item)
+                <tr>
+                    <td>{{ $item->name }}</td>
+                    <td>{{ $item->quantity }}</td>
+                    <td>{{ format_eur($item->line_total) }}</td>
+                </tr>
+            @endforeach
+            </tbody>
+        </table>
+        <p><strong>Total:</strong> {{ format_eur($order->total) }}</p>
+
+        <h3>Morada de envio</h3>
+        <div class="box">
+            <p>{{ $order->shipping_first_name }} {{ $order->shipping_last_name }}</p>
+            <p>{{ $order->shipping_address_1 }}</p>
+            @if ($order->shipping_address_2)<p>{{ $order->shipping_address_2 }}</p>@endif
+            <p>{{ $order->shipping_postcode }} {{ $order->shipping_city }}</p>
+            <p>{{ $order->shipping_country }}</p>
+        </div>
+
+        <p>Obrigado por escolher a Naturalenha.</p>
+    </div>
+    <div class="footer">
+        <p>{{ config('company.legal_name') }} · NIF {{ config('company.nif') }}</p>
+        <p>{{ config('company.email') }} · {{ config('company.phone') }}</p>
+    </div>
+</div>
+</body>
 </html>

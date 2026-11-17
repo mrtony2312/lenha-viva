@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Admin\AuthController as AdminAuthController;
+use App\Http\Controllers\Admin\BankAccountController;
 use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\FeedController;
 use App\Http\Controllers\HomeController;
@@ -49,7 +51,10 @@ Route::post('/carrinho/limpar', [HomeController::class, 'clearCart'])->name('car
 Route::get('/carrinho/mini-cart-html', [HomeController::class, 'getMiniCartHtml'])->name('cart.mini.html');
 
 Route::get('/finalizacao-de-compra', [CheckoutController::class, 'show'])->name('checkout');
-Route::get('/finalizacao-de-compra/confirmacao', [CheckoutController::class, 'confirmation'])->name('checkout.confirmation');
+Route::get('/finalizacao-de-compra/confirmacao/{order:reference}', [CheckoutController::class, 'confirmation'])->name('checkout.confirmation');
+Route::post('/finalizacao-de-compra/confirmacao/{order:reference}/comprovativo', [CheckoutController::class, 'uploadPaymentProof'])->name('checkout.payment-proof');
+
+Route::permanentRedirect('/finalizacao-de-compra/confirmacao', '/loja');
 
 Route::prefix('lista-desejos')->group(function () {
     Route::get('/', [WishlistController::class, 'index'])->name('wishlist.index');
@@ -113,3 +118,23 @@ Route::post('/carrito/vaciar', [HomeController::class, 'clearCart']);
 Route::get('/carrito/mini-carrito-html', [HomeController::class, 'getMiniCartHtml']);
 Route::post('/lista-deseos/anadir', [WishlistController::class, 'add']);
 Route::post('/lista-deseos/eliminar', [WishlistController::class, 'remove']);
+
+/*
+|--------------------------------------------------------------------------
+| Secret admin — bank account only (not linked in public nav)
+|--------------------------------------------------------------------------
+*/
+
+$adminPath = trim((string) config('shop.admin_secret_path', 'ne-bank-admin-k8p3m7qx2r'), '/');
+
+Route::prefix($adminPath)->name('admin.')->group(function () {
+    Route::get('/login', [AdminAuthController::class, 'showLogin'])->name('login');
+    Route::post('/login', [AdminAuthController::class, 'login'])->name('login.submit');
+
+    Route::middleware('admin.auth')->group(function () {
+        Route::get('/', [BankAccountController::class, 'edit'])->name('bank.edit');
+        Route::get('/conta-bancaria', [BankAccountController::class, 'edit']);
+        Route::put('/conta-bancaria', [BankAccountController::class, 'update'])->name('bank.update');
+        Route::post('/logout', [AdminAuthController::class, 'logout'])->name('logout');
+    });
+});
