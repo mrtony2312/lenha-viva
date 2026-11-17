@@ -8,8 +8,10 @@ use App\Mail\PaymentProofSubmittedMail;
 use App\Models\Order;
 use App\Models\OrderItem;
 use App\Models\SiteSetting;
+use App\Support\CategoryLabels;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Storage;
@@ -71,7 +73,49 @@ class CheckoutController extends Controller
         return view('checkout.confirmation', [
             'order' => $order,
             'bank' => SiteSetting::bankAccount(),
+            'relatedProducts' => $this->relatedProductsForOrder($order),
         ]);
+    }
+
+    /**
+     * Products from the same categories as the ordered items (Omniva-style related block).
+     *
+     * @return Collection<int, array<string, mixed>>
+     */
+    private function relatedProductsForOrder(Order $order): Collection
+    {
+        $catalog = collect(config('loja_products'));
+        $orderedSlugs = $order->items->pluck('slug')->filter()->all();
+        $orderedIds = $order->items->pluck('product_id')->filter()->all();
+
+        $categoryKeys = $catalog
+            ->filter(function (array $product) use ($orderedSlugs, $orderedIds) {
+                $slugMatch = in_array($product['slug'] ?? null, $orderedSlugs, true);
+                $idMatch = in_array($product['id'] ?? null, $orderedIds, true);
+
+                return $slugMatch || $idMatch;
+            })
+            ->flatMap(function (array $product) {
+                $internal = CategoryLabels::normalizeInternal($product['category'] ?? null)
+                    ?? (string) ($product['category'] ?? '');
+
+                return CategoryLabels::productKeysFor($internal);
+            })
+            ->unique()
+            ->values()
+            ->all();
+
+        if ($categoryKeys === []) {
+            return collect();
+        }
+
+        return $catalog
+            ->filter(fn (array $p) => in_array($p['category'] ?? null, $categoryKeys, true))
+            ->reject(fn (array $p) => in_array($p['slug'] ?? null, $orderedSlugs, true)
+                || in_array($p['id'] ?? null, $orderedIds, true))
+            ->filter(fn (array $p) => $this->cleanPrice($p['price'] ?? 0) > 0)
+            ->take(8)
+            ->values();
     }
 
     public function store(Request $request): RedirectResponse

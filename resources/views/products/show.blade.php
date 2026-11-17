@@ -357,7 +357,8 @@
         @if($relatedProducts->count() > 0)
             <section class="lv-related" aria-labelledby="lv-related-title">
                 <div class="lv-container">
-                    <h2 id="lv-related-title" class="lv-related__title">As pessoas também compraram</h2>
+                    <h2 id="lv-related-title" class="lv-related__title">Produtos semelhantes</h2>
+                    <p class="lv-related__lead">Da mesma categoria</p>
                     <div class="lv-product-grid">
                         @foreach($relatedProducts as $relatedProduct)
                             <x-product-card :product="$relatedProduct" />

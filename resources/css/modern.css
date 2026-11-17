@@ -2023,7 +2023,8 @@
 }
 
 .lv-related {
-    padding: 24px 0 16px;
+    padding: 32px 0 48px;
+    background: #f7f7f7;
 }
 
 .lv-related__title {
@@ -2032,7 +2033,14 @@
     font-size: clamp(24px, 3vw, 32px);
     color: var(--lv-ink);
     text-align: center;
+    margin: 0 0 8px;
+}
+
+.lv-related__lead {
     margin: 0 0 32px;
+    text-align: center;
+    color: #686868;
+    font-size: 14px;
 }
 
 .lv-product-sticky {

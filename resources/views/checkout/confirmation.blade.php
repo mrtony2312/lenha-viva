@@ -129,6 +129,20 @@
                 </div>
             </div>
         </section>
+
+        @if (isset($relatedProducts) && $relatedProducts->count() > 0)
+            <section class="lv-related" aria-labelledby="lv-related-title">
+                <div class="lv-container">
+                    <h2 id="lv-related-title" class="lv-related__title">Produtos semelhantes</h2>
+                    <p class="lv-related__lead">Da mesma categoria da sua encomenda</p>
+                    <div class="lv-product-grid">
+                        @foreach ($relatedProducts as $relatedProduct)
+                            <x-product-card :product="$relatedProduct" />
+                        @endforeach
+                    </div>
+                </div>
+            </section>
+        @endif
     </div>
 
     @include('layouts.partials.footer.public')
