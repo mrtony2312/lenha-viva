@@ -23,54 +23,39 @@
                 @endif
 
                 <div class="lv-confirmation__card">
-                    <ul class="lv-confirmation__lines">
-                        @foreach ($order->items as $item)
-                            <li>
-                                <span>{{ $item->name }} × {{ $item->quantity }}</span>
-                                <span>{{ format_eur($item->line_total) }}</span>
-                            </li>
-                        @endforeach
-                        <li>
-                            <span>Subtotal</span>
-                            <span>{{ format_eur($order->subtotal) }}</span>
-                        </li>
-                        <li>
-                            <span>Envio</span>
-                            <span>Grátis (Portugal Continental)</span>
-                        </li>
-                        <li class="lv-confirmation__total">
-                            <span>Total</span>
-                            <span>{{ format_eur($order->total) }}</span>
-                        </li>
-                        <li class="lv-confirmation__muted">
-                            <span>Pagamento</span>
-                            <span>{{ $order->paymentMethodLabel() }}</span>
-                        </li>
-                    </ul>
-
-                    <div class="lv-confirmation__block">
-                        <strong>Morada de envio</strong>
-                        <p>
-                            {{ $order->shipping_first_name }} {{ $order->shipping_last_name }}<br>
-                            {{ $order->shipping_address_1 }}@if($order->shipping_address_2), {{ $order->shipping_address_2 }}@endif<br>
-                            {{ $order->shipping_postcode }} {{ $order->shipping_city }}<br>
-                            {{ $order->shipping_country }}
-                        </p>
-                    </div>
-
-                    <div class="lv-confirmation__block lv-confirmation__bank">
+                    <div class="lv-confirmation__block lv-confirmation__bank lv-confirmation__bank--first">
                         <h2>Pague agora por transferência bancária</h2>
-                        <p class="lv-confirmation__hint">Transfira o valor total para a conta abaixo. O envio inicia-se após a confirmação do pagamento.</p>
-                        <p>Titular: <strong>{{ $bank['account_holder'] ?: '—' }}</strong></p>
-                        @if ($bank['bank_name'])
-                            <p>Banco: {{ $bank['bank_name'] }}</p>
-                        @endif
-                        <p class="lv-break">IBAN: <strong>{{ format_iban($bank['iban']) ?: '—' }}</strong></p>
-                        @if ($bank['bic'])
-                            <p>BIC: <strong>{{ $bank['bic'] }}</strong></p>
-                        @endif
-                        <p>Montante: <strong>{{ format_eur($order->total) }}</strong></p>
-                        <p>Referência / descritivo: <strong>{{ $order->reference }}</strong></p>
+                        <p class="lv-confirmation__hint">Transfira imediatamente o valor total para a conta abaixo. O envio inicia-se após a confirmação do pagamento.</p>
+                        <dl class="lv-bank-details">
+                            <div>
+                                <dt>Titular</dt>
+                                <dd><strong>{{ $bank['account_holder'] ?: '—' }}</strong></dd>
+                            </div>
+                            @if ($bank['bank_name'])
+                                <div>
+                                    <dt>Banco</dt>
+                                    <dd>{{ $bank['bank_name'] }}</dd>
+                                </div>
+                            @endif
+                            <div>
+                                <dt>IBAN</dt>
+                                <dd class="lv-break"><strong>{{ format_iban($bank['iban']) ?: '—' }}</strong></dd>
+                            </div>
+                            @if ($bank['bic'])
+                                <div>
+                                    <dt>BIC</dt>
+                                    <dd><strong>{{ $bank['bic'] }}</strong></dd>
+                                </div>
+                            @endif
+                            <div>
+                                <dt>Montante</dt>
+                                <dd><strong>{{ format_eur($order->total) }}</strong></dd>
+                            </div>
+                            <div>
+                                <dt>Referência / descritivo</dt>
+                                <dd><strong>{{ $order->reference }}</strong></dd>
+                            </div>
+                        </dl>
                         @if ($bank['note'])
                             <p class="lv-confirmation__hint">{{ $bank['note'] }}</p>
                         @endif
@@ -99,6 +84,44 @@
                             <button type="submit" class="lv-btn lv-btn--primary lv-proof-submit">Enviar</button>
                         </form>
                     </div>
+
+                    <div class="lv-confirmation__block">
+                        <strong>Resumo da encomenda</strong>
+                        <ul class="lv-confirmation__lines">
+                            @foreach ($order->items as $item)
+                                <li>
+                                    <span>{{ $item->name }} × {{ $item->quantity }}</span>
+                                    <span>{{ format_eur($item->line_total) }}</span>
+                                </li>
+                            @endforeach
+                            <li>
+                                <span>Subtotal</span>
+                                <span>{{ format_eur($order->subtotal) }}</span>
+                            </li>
+                            <li>
+                                <span>Envio</span>
+                                <span>Grátis (Portugal Continental)</span>
+                            </li>
+                            <li class="lv-confirmation__total">
+                                <span>Total</span>
+                                <span>{{ format_eur($order->total) }}</span>
+                            </li>
+                            <li class="lv-confirmation__muted">
+                                <span>Pagamento</span>
+                                <span>{{ $order->paymentMethodLabel() }}</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="lv-confirmation__block">
+                        <strong>Morada de envio</strong>
+                        <p>
+                            {{ $order->shipping_first_name }} {{ $order->shipping_last_name }}<br>
+                            {{ $order->shipping_address_1 }}@if($order->shipping_address_2), {{ $order->shipping_address_2 }}@endif<br>
+                            {{ $order->shipping_postcode }} {{ $order->shipping_city }}<br>
+                            {{ $order->shipping_country }}
+                        </p>
+                    </div>
                 </div>
 
                 <div class="lv-confirmation__cta">
@@ -123,8 +146,14 @@
         .lv-confirmation__total { font-weight: 700; padding-top: 8px; border-top: 1px solid #e5e0d8; }
         .lv-confirmation__muted { font-size: .85rem; opacity: .85; }
         .lv-confirmation__block { margin-top: 16px; padding-top: 16px; border-top: 1px solid #e5e0d8; }
+        .lv-confirmation__bank--first { margin-top: 0; padding-top: 0; border-top: 0; }
         .lv-confirmation__block h2 { margin: 0 0 8px; font-size: 1.05rem; }
         .lv-confirmation__hint { margin: 0 0 10px; color: #666; font-size: .9rem; }
+        .lv-bank-details { margin: 0; display: grid; gap: 10px; }
+        .lv-bank-details > div { display: grid; gap: 2px; }
+        .lv-bank-details dt { margin: 0; font-size: .8rem; color: #666; text-transform: uppercase; letter-spacing: .04em; }
+        .lv-bank-details dd { margin: 0; font-size: 1rem; }
+        .lv-confirmation__bank { background: #f7f5f1; border-radius: 10px; padding: 16px; border: 1px solid #e5e0d8; }
         .lv-proof-label { display: block; font-weight: 600; margin-bottom: 8px; }
         .lv-proof-picker { position: relative; display: flex; flex-wrap: wrap; align-items: center; gap: 10px; padding: 10px 12px; border: 1px solid #d5c9b8; border-radius: 8px; background: #fff; cursor: pointer; }
         .lv-proof-picker.is-invalid { border-color: #dc3545; }

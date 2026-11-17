@@ -7,30 +7,26 @@
 @section('content')
     @include('layouts.partials.navbar.public-show')
 
-    <div id="tbay-main-content" class="mm-page mm-slideout lv-checkout">
-        <div class="lv-checkout__secure-bar">
-            <div class="lv-container lv-checkout__secure-bar-inner">
-                <p class="lv-checkout__secure-badge">
-                    <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" fill="currentColor">
-                        <path d="M12 1 3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/>
-                    </svg>
-                    Pagamento seguro
-                </p>
-                <p class="lv-checkout__secure-hint">Transferência bancária · Envio apenas para Portugal Continental · Não enviamos para Espanha</p>
+    <div id="tbay-main-content" class="mm-page mm-slideout lv-checkout lv-omniva-checkout">
+        <div class="tf-page-title-2">
+            <div class="lv-container">
+                <div class="tf-page-title-2__content">
+                    <ul class="breadcrumb">
+                        <li><a href="{{ route('home') }}" class="link-underline">Início</a></li>
+                        <li aria-hidden="true">/</li>
+                        <li><a href="{{ route('carrinho') }}" class="link-underline">Carrinho</a></li>
+                        <li aria-hidden="true">/</li>
+                        <li aria-current="page">Checkout</li>
+                    </ul>
+                    <h1 class="tf-page-title-2__heading">Finalizar compra</h1>
+                    <p class="tf-page-title-2__lead">
+                        Transferência bancária · Envio apenas para Portugal Continental
+                    </p>
+                </div>
             </div>
         </div>
 
-        <div class="lv-container lv-checkout__body">
-            <header class="lv-checkout__intro">
-                <h1 class="lv-checkout__intro-title">Pagamento</h1>
-                <p class="lv-checkout__intro-lead">Finalize a sua encomenda com segurança. O envio é feito após a confirmação do pagamento por transferência bancária. As vendas destinam-se exclusivamente a Portugal Continental.</p>
-            </header>
-
-            <aside class="lv-checkout__territory" role="note">
-                <p><strong>Território de venda:</strong> {{ config('company.sales_territory_note') }}</p>
-                <p>Vendedor: {{ config('company.legal_name') }} · NIF {{ config('company.nif') }} · {{ config('company.address_line') }} · <a href="mailto:{{ config('company.email') }}">{{ config('company.email') }}</a> · <a href="tel:{{ config('company.phone_tel') }}">{{ config('company.phone') }}</a></p>
-            </aside>
-
+        <div class="lv-container flat-spacing-checkout">
             @if (session('success'))
                 <div class="lv-alert lv-alert--success" role="status">{{ session('success') }}</div>
             @endif
@@ -54,431 +50,317 @@
                 <div class="lv-checkout__empty">
                     <h2>O seu carrinho está vazio</h2>
                     <p>Adicione produtos ao carrinho antes de finalizar a compra.</p>
-                    <a href="{{ route('home') }}" class="lv-btn lv-btn--primary">Continuar a comprar</a>
+                    <a href="{{ route('home') }}" class="tf-btn animate-btn">Continuar a comprar</a>
                 </div>
             @else
                 <form method="POST" action="{{ route('checkout.store') }}" id="checkout-form"
-                    class="lv-checkout__grid" aria-label="Finalizar compra">
+                    class="row gy-30 checkout-layout" aria-label="Finalizar compra">
                     @csrf
 
                     <input type="hidden" name="shipping_method" id="shipping_method" value="free_shipping:3">
                     <input type="hidden" name="payment_method" id="payment_method" value="bacs">
                     <input type="hidden" name="order_notes" id="order_notes">
 
-                    <div class="lv-checkout__main">
-                        {{-- 1. Contact --}}
-                        <section class="lv-card lv-checkout-card" id="contact-fields" aria-labelledby="checkout-contact-title">
-                            <h2 id="checkout-contact-title" class="lv-card__title">
-                                <span class="lv-step-num" aria-hidden="true">1</span>
-                                Informação de contacto
-                            </h2>
-                            <p class="lv-card__desc">Utilizaremos este email para lhe enviar a confirmação e o seguimento da encomenda.</p>
-                            <div class="lv-field">
-                                <label for="email">Endereço de email</label>
-                                <input type="email" id="email" name="email" autocomplete="email"
-                                    placeholder="o.seu@email.com"
-                                    class="lv-input @error('email') is-invalid @enderror"
-                                    value="{{ old('email') }}"
-                                    @error('email') aria-describedby="email-error" @enderror required>
-                                @error('email')
-                                    <span class="lv-field-error" id="email-error">{{ $message }}</span>
-                                @enderror
-                            </div>
-                            <p class="lv-card__note">Está a finalizar a encomenda como convidado.</p>
-                        </section>
-
-                        {{-- 2. Shipping --}}
-                        <section class="lv-card lv-checkout-card" id="shipping-fields" aria-labelledby="checkout-shipping-title">
-                            <h2 id="checkout-shipping-title" class="lv-card__title">
-                                <span class="lv-step-num" aria-hidden="true">2</span>
-                                Morada de envio
-                            </h2>
-                            <p class="lv-card__desc">Indique onde deseja receber a palete ou o equipamento.</p>
-
-                            <div class="lv-field-grid">
-                                <div class="lv-field lv-field--full">
-                                    <label for="shipping-country">País/Região</label>
-                                    <select id="shipping-country" name="shipping-country" autocomplete="country"
-                                        class="lv-input lv-select @error('shipping-country') is-invalid @enderror"
-                                        @error('shipping-country') aria-describedby="shipping-country-error" @enderror
-                                        required>
-                                        <option value="" disabled>Selecione um país/região</option>
-                                        @foreach ($pays as $code => $nom)
-                                            <option value="{{ $code }}"
-                                                {{ old('shipping-country', 'PT') == $code ? 'selected' : '' }}>
-                                                {{ $code === 'ES' ? 'Espanha' : ($code === 'PT' ? 'Portugal' : $nom) }}
-                                            </option>
-                                        @endforeach
-                                    </select>
-                                    @error('shipping-country')
-                                        <span class="lv-field-error" id="shipping-country-error">{{ $message }}</span>
-                                    @enderror
-                                </div>
-
-                                <div class="lv-field">
-                                    <label for="shipping-first_name">Nome próprio</label>
-                                    <input type="text" id="shipping-first_name" name="shipping-first_name"
-                                        autocomplete="given-name"
-                                        class="lv-input @error('shipping-first_name') is-invalid @enderror"
-                                        value="{{ old('shipping-first_name') }}"
-                                        @error('shipping-first_name') aria-describedby="shipping-first_name-error" @enderror required>
-                                    @error('shipping-first_name')
-                                        <span class="lv-field-error" id="shipping-first_name-error">{{ $message }}</span>
-                                    @enderror
-                                </div>
-
-                                <div class="lv-field">
-                                    <label for="shipping-last_name">Apelido</label>
-                                    <input type="text" id="shipping-last_name" name="shipping-last_name"
-                                        autocomplete="family-name"
-                                        class="lv-input @error('shipping-last_name') is-invalid @enderror"
-                                        value="{{ old('shipping-last_name') }}"
-                                        @error('shipping-last_name') aria-describedby="shipping-last_name-error" @enderror required>
-                                    @error('shipping-last_name')
-                                        <span class="lv-field-error" id="shipping-last_name-error">{{ $message }}</span>
-                                    @enderror
-                                </div>
-
-                                <div class="lv-field lv-field--full">
-                                    <label for="shipping-address_1">Morada</label>
-                                    <input type="text" id="shipping-address_1" name="shipping-address_1"
-                                        autocomplete="address-line1"
-                                        placeholder="Rua, número…"
-                                        class="lv-input @error('shipping-address_1') is-invalid @enderror"
-                                        value="{{ old('shipping-address_1') }}"
-                                        @error('shipping-address_1') aria-describedby="shipping-address_1-error" @enderror required>
-                                    @error('shipping-address_1')
-                                        <span class="lv-field-error" id="shipping-address_1-error">{{ $message }}</span>
-                                    @enderror
-                                </div>
-
-                                <div class="lv-field lv-field--full">
-                                    <label for="shipping-address_2">Morada (linha 2, opcional)</label>
-                                    <input type="text" id="shipping-address_2" name="shipping-address_2"
-                                        autocomplete="address-line2" class="lv-input"
-                                        value="{{ old('shipping-address_2') }}">
-                                </div>
-
-                                <div class="lv-field">
-                                    <label for="shipping-postcode">Código postal</label>
-                                    <input type="text" id="shipping-postcode" name="shipping-postcode"
-                                        autocomplete="postal-code"
-                                        class="lv-input @error('shipping-postcode') is-invalid @enderror"
-                                        value="{{ old('shipping-postcode') }}"
-                                        @error('shipping-postcode') aria-describedby="shipping-postcode-error" @enderror required>
-                                    @error('shipping-postcode')
-                                        <span class="lv-field-error" id="shipping-postcode-error">{{ $message }}</span>
-                                    @enderror
-                                </div>
-
-                                <div class="lv-field">
-                                    <label for="shipping-city">Localidade</label>
-                                    <input type="text" id="shipping-city" name="shipping-city"
-                                        autocomplete="address-level2"
-                                        class="lv-input @error('shipping-city') is-invalid @enderror"
-                                        value="{{ old('shipping-city') }}"
-                                        @error('shipping-city') aria-describedby="shipping-city-error" @enderror required>
-                                    @error('shipping-city')
-                                        <span class="lv-field-error" id="shipping-city-error">{{ $message }}</span>
-                                    @enderror
-                                </div>
-
-                                <div class="lv-field lv-field--full">
-                                    <label for="shipping-phone">Telemóvel (recomendado para a entrega)</label>
-                                    <input type="tel" id="shipping-phone" name="shipping-phone" autocomplete="tel"
-                                        class="lv-input" value="{{ old('shipping-phone') }}">
-                                </div>
-                            </div>
-                        </section>
-
-                        {{-- 3. Shipping method --}}
-                        <section class="lv-card lv-checkout-card" aria-labelledby="checkout-method-title">
-                            <h2 id="checkout-method-title" class="lv-card__title">
-                                <span class="lv-step-num" aria-hidden="true">3</span>
-                                Modo de envio
-                            </h2>
-                            <div class="lv-ship-options" role="list">
-                                <div class="lv-ship-option lv-ship-option--selected" role="listitem">
-                                    <div class="lv-ship-option__icon" aria-hidden="true">
-                                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.75">
-                                            <rect x="1" y="7" width="13" height="10" rx="1"/>
-                                            <path d="M14 10h4l3 3v4h-7"/>
-                                            <circle cx="6" cy="18" r="2"/>
-                                            <circle cx="18" cy="18" r="2"/>
-                                        </svg>
-                                    </div>
-                                    <div class="lv-ship-option__body">
-                                        <div class="lv-ship-option__head">
-                                            <h3>Envio padrão — Portugal Continental</h3>
-                                            <span class="lv-ship-option__price">Grátis</span>
+                    <div class="col-lg-8">
+                        <div class="tf-checkout-cart-main">
+                            {{-- Contact + shipping in one form block --}}
+                            <div class="box-ip-checkout" id="shipping-fields">
+                                <h6 class="title">Checkout</h6>
+                                <div class="form-content gap-15" id="contact-fields">
+                                    <div class="tf-grid-layout gap-16 sm-col-2">
+                                        <div class="tf-field style-2">
+                                            <input class="tf-field-input tf-input @error('shipping-first_name') is-invalid @enderror"
+                                                id="shipping-first_name" name="shipping-first_name" type="text"
+                                                autocomplete="given-name" placeholder=" "
+                                                value="{{ old('shipping-first_name') }}" required>
+                                            <label class="tf-field-label" for="shipping-first_name">Nome próprio</label>
                                         </div>
-                                        <p>Palete entregue à porta do camião. Prazo habitual: 3 a 5 dias úteis após a confirmação do pagamento. O envio gratuito aplica-se apenas a Portugal Continental. Açores e Madeira: <a href="{{ route('politicaDeEntrega') }}">sob consulta</a> (não estão incluídos no envio grátis automático).</p>
-                                        <a class="lv-ship-option__link" href="{{ route('politicaDeEntrega') }}">Ver política de entrega</a>
+                                        <div class="tf-field style-2">
+                                            <input class="tf-field-input tf-input @error('shipping-last_name') is-invalid @enderror"
+                                                id="shipping-last_name" name="shipping-last_name" type="text"
+                                                autocomplete="family-name" placeholder=" "
+                                                value="{{ old('shipping-last_name') }}" required>
+                                            <label class="tf-field-label" for="shipping-last_name">Apelido</label>
+                                        </div>
                                     </div>
+
+                                    <fieldset class="tf-field style-2">
+                                        <input class="tf-field-input tf-input @error('email') is-invalid @enderror"
+                                            id="email" name="email" type="email" autocomplete="email"
+                                            placeholder=" " value="{{ old('email') }}" required>
+                                        <label class="tf-field-label" for="email">Endereço de email</label>
+                                    </fieldset>
+                                    @error('email')
+                                        <span class="lv-field-error">{{ $message }}</span>
+                                    @enderror
+
+                                    <fieldset class="tf-field style-2 tf-field--select">
+                                        <select id="shipping-country" name="shipping-country" autocomplete="country"
+                                            class="tf-field-input tf-input tf-select @error('shipping-country') is-invalid @enderror"
+                                            required>
+                                            <option value="" disabled {{ old('shipping-country') ? '' : '' }}>País/Região</option>
+                                            @foreach ($pays as $code => $nom)
+                                                <option value="{{ $code }}"
+                                                    {{ old('shipping-country', 'PT') == $code ? 'selected' : '' }}>
+                                                    {{ $code === 'ES' ? 'Espanha' : ($code === 'PT' ? 'Portugal' : $nom) }}
+                                                </option>
+                                            @endforeach
+                                        </select>
+                                        <label class="tf-field-label is-floated" for="shipping-country">País/Região</label>
+                                    </fieldset>
+
+                                    <fieldset class="tf-field style-2">
+                                        <input class="tf-field-input tf-input @error('shipping-address_1') is-invalid @enderror"
+                                            id="shipping-address_1" name="shipping-address_1" type="text"
+                                            autocomplete="address-line1" placeholder=" "
+                                            value="{{ old('shipping-address_1') }}" required>
+                                        <label class="tf-field-label" for="shipping-address_1">Morada</label>
+                                    </fieldset>
+
+                                    <fieldset class="tf-field style-2">
+                                        <input class="tf-field-input tf-input" id="shipping-address_2"
+                                            name="shipping-address_2" type="text" autocomplete="address-line2"
+                                            placeholder=" " value="{{ old('shipping-address_2') }}">
+                                        <label class="tf-field-label" for="shipping-address_2">Apartamento, andar… (opcional)</label>
+                                    </fieldset>
+
+                                    <div class="tf-grid-layout gap-16 sm-col-2">
+                                        <fieldset class="tf-field style-2">
+                                            <input class="tf-field-input tf-input @error('shipping-city') is-invalid @enderror"
+                                                id="shipping-city" name="shipping-city" type="text"
+                                                autocomplete="address-level2" placeholder=" "
+                                                value="{{ old('shipping-city') }}" required>
+                                            <label class="tf-field-label" for="shipping-city">Localidade</label>
+                                        </fieldset>
+                                        <fieldset class="tf-field style-2">
+                                            <input class="tf-field-input tf-input @error('shipping-postcode') is-invalid @enderror"
+                                                id="shipping-postcode" name="shipping-postcode" type="text"
+                                                autocomplete="postal-code" placeholder=" "
+                                                value="{{ old('shipping-postcode') }}" required>
+                                            <label class="tf-field-label" for="shipping-postcode">Código postal</label>
+                                        </fieldset>
+                                    </div>
+
+                                    <fieldset class="tf-field style-2">
+                                        <input class="tf-field-input tf-input" id="shipping-phone" name="shipping-phone"
+                                            type="tel" autocomplete="tel" placeholder=" "
+                                            value="{{ old('shipping-phone') }}">
+                                        <label class="tf-field-label" for="shipping-phone">Telemóvel (recomendado)</label>
+                                    </fieldset>
                                 </div>
                             </div>
-                        </section>
 
-                        {{-- 4. Billing --}}
-                        <section class="lv-card lv-checkout-card" id="billing-fields" aria-labelledby="checkout-billing-title">
-                            <h2 id="checkout-billing-title" class="lv-card__title">
-                                <span class="lv-step-num" aria-hidden="true">4</span>
-                                Morada de faturação
-                            </h2>
+                            {{-- Shipping method --}}
+                            <div class="box-ip-shipping">
+                                <h6 class="title">Modo de envio</h6>
+                                <fieldset class="mb-0">
+                                    <label for="freeship" class="check-ship">
+                                        <input type="radio" id="freeship" class="tf-check-rounded style-small"
+                                            name="checkshipping" checked>
+                                        <span class="text text-caption">
+                                            <span>Envio padrão — Portugal Continental (3 a 5 dias úteis após pagamento)</span>
+                                            <span class="price">Grátis</span>
+                                        </span>
+                                    </label>
+                                </fieldset>
+                                <p class="box-hint mt-12">
+                                    Palete entregue à porta do camião.
+                                    <a href="{{ route('politicaDeEntrega') }}" class="link-underline">Ver política de entrega</a>
+                                </p>
+                            </div>
 
-                            <label class="lv-checkbox">
-                                <input type="checkbox" id="same-address-checkbox" checked>
-                                <span>Usar a mesma morada para a faturação</span>
-                            </label>
+                            {{-- Billing --}}
+                            <div class="box-ip-checkout" id="billing-fields">
+                                <h6 class="title">Morada de faturação</h6>
+                                <div class="checkbox-wrap gap-8 mb-16">
+                                    <input type="checkbox" class="tf-check" id="same-address-checkbox" checked>
+                                    <label for="same-address-checkbox" class="text-caption">
+                                        Usar a mesma morada para a faturação
+                                    </label>
+                                </div>
 
-                            <div class="lv-field-grid" id="billing-address-wrapper" hidden>
-                                <div class="lv-field lv-field--full">
-                                    <label for="billing-country">País/Região</label>
-                                    <select id="billing-country" name="billing-country" autocomplete="country"
-                                        class="lv-input lv-select @error('billing-country') is-invalid @enderror"
-                                        @error('billing-country') aria-describedby="billing-country-error" @enderror>
-                                        <option value="" disabled {{ old('billing-country') ? '' : 'selected' }}>
-                                            Selecione um país/região</option>
-                                        @foreach ($pays as $code => $nom)
-                                            <option value="{{ $code }}"
-                                                {{ old('billing-country') == $code ? 'selected' : '' }}>
-                                                {{ $code === 'ES' ? 'Espanha' : ($code === 'PT' ? 'Portugal' : $nom) }}
+                                <div class="form-content gap-15" id="billing-address-wrapper" hidden>
+                                    <div class="tf-grid-layout gap-16 sm-col-2">
+                                        <div class="tf-field style-2">
+                                            <input class="tf-field-input tf-input" id="billing-first_name"
+                                                name="billing-first_name" type="text" autocomplete="given-name"
+                                                placeholder=" " value="{{ old('billing-first_name') }}">
+                                            <label class="tf-field-label" for="billing-first_name">Nome próprio</label>
+                                        </div>
+                                        <div class="tf-field style-2">
+                                            <input class="tf-field-input tf-input" id="billing-last_name"
+                                                name="billing-last_name" type="text" autocomplete="family-name"
+                                                placeholder=" " value="{{ old('billing-last_name') }}">
+                                            <label class="tf-field-label" for="billing-last_name">Apelido</label>
+                                        </div>
+                                    </div>
+
+                                    <fieldset class="tf-field style-2 tf-field--select">
+                                        <select id="billing-country" name="billing-country" autocomplete="country"
+                                            class="tf-field-input tf-input tf-select">
+                                            <option value="" disabled {{ old('billing-country') ? '' : 'selected' }}>
+                                                País/Região
                                             </option>
-                                        @endforeach
-                                    </select>
-                                    @error('billing-country')
-                                        <span class="lv-field-error" id="billing-country-error">{{ $message }}</span>
-                                    @enderror
-                                </div>
+                                            @foreach ($pays as $code => $nom)
+                                                <option value="{{ $code }}"
+                                                    {{ old('billing-country') == $code ? 'selected' : '' }}>
+                                                    {{ $code === 'ES' ? 'Espanha' : ($code === 'PT' ? 'Portugal' : $nom) }}
+                                                </option>
+                                            @endforeach
+                                        </select>
+                                        <label class="tf-field-label is-floated" for="billing-country">País/Região</label>
+                                    </fieldset>
 
-                                <div class="lv-field">
-                                    <label for="billing-first_name">Nome próprio</label>
-                                    <input type="text" id="billing-first_name" name="billing-first_name"
-                                        autocomplete="given-name"
-                                        class="lv-input @error('billing-first_name') is-invalid @enderror"
-                                        value="{{ old('billing-first_name') }}"
-                                        @error('billing-first_name') aria-describedby="billing-first_name-error" @enderror>
-                                    @error('billing-first_name')
-                                        <span class="lv-field-error" id="billing-first_name-error">{{ $message }}</span>
-                                    @enderror
-                                </div>
+                                    <fieldset class="tf-field style-2">
+                                        <input class="tf-field-input tf-input" id="billing-address_1"
+                                            name="billing-address_1" type="text" autocomplete="address-line1"
+                                            placeholder=" " value="{{ old('billing-address_1') }}">
+                                        <label class="tf-field-label" for="billing-address_1">Morada</label>
+                                    </fieldset>
 
-                                <div class="lv-field">
-                                    <label for="billing-last_name">Apelido</label>
-                                    <input type="text" id="billing-last_name" name="billing-last_name"
-                                        autocomplete="family-name"
-                                        class="lv-input @error('billing-last_name') is-invalid @enderror"
-                                        value="{{ old('billing-last_name') }}"
-                                        @error('billing-last_name') aria-describedby="billing-last_name-error" @enderror>
-                                    @error('billing-last_name')
-                                        <span class="lv-field-error" id="billing-last_name-error">{{ $message }}</span>
-                                    @enderror
-                                </div>
+                                    <fieldset class="tf-field style-2">
+                                        <input class="tf-field-input tf-input" id="billing-address_2"
+                                            name="billing-address_2" type="text" autocomplete="address-line2"
+                                            placeholder=" " value="{{ old('billing-address_2') }}">
+                                        <label class="tf-field-label" for="billing-address_2">Apartamento, andar… (opcional)</label>
+                                    </fieldset>
 
-                                <div class="lv-field lv-field--full">
-                                    <label for="billing-address_1">Morada</label>
-                                    <input type="text" id="billing-address_1" name="billing-address_1"
-                                        autocomplete="address-line1"
-                                        class="lv-input @error('billing-address_1') is-invalid @enderror"
-                                        value="{{ old('billing-address_1') }}"
-                                        @error('billing-address_1') aria-describedby="billing-address_1-error" @enderror>
-                                    @error('billing-address_1')
-                                        <span class="lv-field-error" id="billing-address_1-error">{{ $message }}</span>
-                                    @enderror
-                                </div>
+                                    <div class="tf-grid-layout gap-16 sm-col-2">
+                                        <fieldset class="tf-field style-2">
+                                            <input class="tf-field-input tf-input" id="billing-city"
+                                                name="billing-city" type="text" autocomplete="address-level2"
+                                                placeholder=" " value="{{ old('billing-city') }}">
+                                            <label class="tf-field-label" for="billing-city">Localidade</label>
+                                        </fieldset>
+                                        <fieldset class="tf-field style-2">
+                                            <input class="tf-field-input tf-input" id="billing-postcode"
+                                                name="billing-postcode" type="text" autocomplete="postal-code"
+                                                placeholder=" " value="{{ old('billing-postcode') }}">
+                                            <label class="tf-field-label" for="billing-postcode">Código postal</label>
+                                        </fieldset>
+                                    </div>
 
-                                <div class="lv-field lv-field--full">
-                                    <label for="billing-address_2">Morada (linha 2, opcional)</label>
-                                    <input type="text" id="billing-address_2" name="billing-address_2"
-                                        autocomplete="address-line2" class="lv-input"
-                                        value="{{ old('billing-address_2') }}">
-                                </div>
-
-                                <div class="lv-field">
-                                    <label for="billing-postcode">Código postal</label>
-                                    <input type="text" id="billing-postcode" name="billing-postcode"
-                                        autocomplete="postal-code"
-                                        class="lv-input @error('billing-postcode') is-invalid @enderror"
-                                        value="{{ old('billing-postcode') }}"
-                                        @error('billing-postcode') aria-describedby="billing-postcode-error" @enderror>
-                                    @error('billing-postcode')
-                                        <span class="lv-field-error" id="billing-postcode-error">{{ $message }}</span>
-                                    @enderror
-                                </div>
-
-                                <div class="lv-field">
-                                    <label for="billing-city">Localidade</label>
-                                    <input type="text" id="billing-city" name="billing-city"
-                                        autocomplete="address-level2"
-                                        class="lv-input @error('billing-city') is-invalid @enderror"
-                                        value="{{ old('billing-city') }}"
-                                        @error('billing-city') aria-describedby="billing-city-error" @enderror>
-                                    @error('billing-city')
-                                        <span class="lv-field-error" id="billing-city-error">{{ $message }}</span>
-                                    @enderror
-                                </div>
-
-                                <div class="lv-field lv-field--full">
-                                    <label for="billing-phone">Telemóvel (opcional)</label>
-                                    <input type="tel" id="billing-phone" name="billing-phone" autocomplete="tel"
-                                        class="lv-input" value="{{ old('billing-phone') }}">
+                                    <fieldset class="tf-field style-2">
+                                        <input class="tf-field-input tf-input" id="billing-phone"
+                                            name="billing-phone" type="tel" autocomplete="tel"
+                                            placeholder=" " value="{{ old('billing-phone') }}">
+                                        <label class="tf-field-label" for="billing-phone">Telemóvel (opcional)</label>
+                                    </fieldset>
                                 </div>
                             </div>
-                        </section>
 
-                        {{-- 5. Payment --}}
-                        <section class="lv-card lv-checkout-card" aria-labelledby="checkout-payment-title">
-                            <h2 id="checkout-payment-title" class="lv-card__title">
-                                <span class="lv-step-num" aria-hidden="true">5</span>
-                                Pagamento
-                            </h2>
-
-                            <div class="lv-pay-method lv-pay-method--selected">
-                                <div class="lv-pay-method__head">
-                                    <span class="lv-pay-method__radio" aria-hidden="true"></span>
-                                    <strong>Transferência bancária</strong>
+                            {{-- Payment --}}
+                            <div class="box-ip-payment">
+                                <div class="title">
+                                    <h6 class="mb-4">Pagamento</h6>
+                                    <p class="text-caption cl-text-4">Todas as transações são seguras e encriptadas.</p>
                                 </div>
-                                <p>
+                                <fieldset class="mb-12">
+                                    <label for="bank-transfer" class="check-payment">
+                                        <input type="radio" id="bank-transfer" class="tf-check-rounded style-small"
+                                            name="payment-ui" value="bacs" checked>
+                                        <span class="text-payment text-caption">Transferência bancária</span>
+                                    </label>
+                                </fieldset>
+                                <p class="text-caption cl-text-4 mb-16">
                                     Efetue o pagamento a partir da sua conta bancária. Indique o seu nome e o número
                                     da encomenda na descrição. A encomenda é preparada assim que recebermos os fundos.
+                                    Receberá os dados bancários por email e na página de confirmação.
+                                    <a href="{{ route('politicaDePagamento') }}" class="link-underline">Política de pagamento</a>
                                 </p>
-                                <p class="lv-pay-method__note">
-                                    Receberá os dados bancários por email depois de confirmar a encomenda.
-                                    Consulte também a
-                                    <a href="{{ route('politicaDePagamento') }}">política de pagamento</a>.
-                                </p>
-                            </div>
 
-                            <div class="lv-secure-note">
-                                <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="currentColor">
-                                    <path d="M12 1 3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/>
-                                </svg>
-                                <div>
-                                    <p class="lv-secure-note__title">Ligação segura SSL</p>
-                                    <p>Os seus dados são transmitidos de forma cifrada. Não pedimos nem guardamos dados de cartão.</p>
+                                <div class="checkbox-wrap gap-8 mb-16">
+                                    <input type="checkbox" class="tf-check" id="add-note-checkbox">
+                                    <label for="add-note-checkbox" class="text-caption">
+                                        Adicionar uma nota à encomenda (acessos, horário…)
+                                    </label>
+                                </div>
+                                <fieldset class="tf-field style-2 area" id="order-notes-wrap" hidden>
+                                    <textarea id="order-notes-textarea" class="tf-field-input tf-input" rows="3"
+                                        placeholder=" ">{{ old('order_notes') }}</textarea>
+                                    <label class="tf-field-label" for="order-notes-textarea">Notas de entrega</label>
+                                </fieldset>
+
+                                <div class="checkbox-wrap gap-8 mt-16">
+                                    <input type="checkbox" class="tf-check" id="terms-checkbox" name="terms_checkbox"
+                                        value="1" {{ old('terms_checkbox') ? 'checked' : '' }} required>
+                                    <label for="terms-checkbox" class="text-caption">
+                                        Ao continuar, aceito as
+                                        <a href="{{ route('condicoes-gerais-de-venda-cgv') }}" target="_blank" rel="noopener" class="link-underline">condições gerais de venda</a>
+                                        e a
+                                        <a href="{{ route('politica-de-privacidade') }}" target="_blank" rel="noopener" class="link-underline">política de privacidade</a>.
+                                    </label>
+                                </div>
+                                @error('terms_checkbox')
+                                    <span class="lv-field-error">{{ $message }}</span>
+                                @enderror
+
+                                <p class="text-caption cl-text-main mt-16">
+                                    Os seus dados pessoais serão utilizados para processar a encomenda e melhorar a sua
+                                    experiência, conforme a nossa
+                                    <a href="{{ route('politica-de-privacidade') }}" class="link-underline">política de privacidade</a>.
+                                </p>
+
+                                <div class="btn-order checkout-submit">
+                                    <button type="submit" id="submit-order" class="tf-btn animate-btn size3 rounded-6 w-100">
+                                        <span class="lv-btn__text">Finalizar compra · {{ $formattedTotalPrice }} €</span>
+                                    </button>
+                                    <a href="{{ route('carrinho') }}" class="tf-btn-line back-cart">Voltar ao carrinho</a>
                                 </div>
                             </div>
-                        </section>
-
-                        {{-- Notes + terms --}}
-                        <section class="lv-card lv-checkout-card">
-                            <label class="lv-checkbox">
-                                <input type="checkbox" id="add-note-checkbox">
-                                <span>Adicionar uma nota à encomenda (acessos, horário…)</span>
-                            </label>
-                            <textarea id="order-notes-textarea" class="lv-textarea" hidden rows="3"
-                                placeholder="Notas sobre a entrega (centro histórico, condomínio, etc.).">{{ old('order_notes') }}</textarea>
-                        </section>
-
-                        <section class="lv-card lv-checkout-card">
-                            <label class="lv-checkbox">
-                                <input type="checkbox" id="terms-checkbox" name="terms_checkbox" value="1"
-                                    {{ old('terms_checkbox') ? 'checked' : '' }}>
-                                <span>
-                                    Ao continuar, aceito as
-                                    <a href="{{ route('condicoes-gerais-de-venda-cgv') }}" target="_blank" rel="noopener">condições gerais de venda</a>
-                                    e a
-                                    <a href="{{ route('politica-de-privacidade') }}" target="_blank" rel="noopener">política de privacidade</a>.
-                                </span>
-                            </label>
-                            @error('terms')
-                                <span class="lv-field-error">{{ $message }}</span>
-                            @enderror
-                        </section>
+                        </div>
                     </div>
 
-                    <aside class="lv-checkout__summary">
-                        <div class="lv-summary-panel">
-                            <div class="lv-summary-panel__head">
-                                <h2>Resumo da encomenda</h2>
-                            </div>
-
-                            <ul class="lv-summary-items">
-                                @foreach ($cart as $productId => $item)
-                                    @php
-                                        $rawPrice = is_string($item['price'] ?? null)
-                                            ? (float) str_replace([',', ' '], '', $item['price'])
-                                            : (float) ($item['price'] ?? 0);
-                                        $itemQuantity = (int) ($item['quantity'] ?? 0);
-                                        $itemTotal = $rawPrice * $itemQuantity;
-                                    @endphp
-                                    <li class="lv-summary-item">
-                                        <div class="lv-summary-item__image">
-                                            @if (!empty($item['image']))
-                                                <img src="{{ asset($item['image']) }}"
-                                                    alt="{{ $item['title'] }}" width="72" height="72" loading="lazy">
-                                            @endif
-                                            <span class="lv-summary-item__qty">{{ $itemQuantity }}</span>
-                                        </div>
-                                        <div class="lv-summary-item__body">
-                                            <p class="lv-summary-item__title">{{ $item['title'] }}</p>
-                                            <p class="lv-summary-item__desc">IVA incluído</p>
-                                        </div>
-                                        <div class="lv-summary-item__total">
-                                            {{ number_format($itemTotal, 2, ',', ' ') }} €
-                                        </div>
+                    <div class="col-lg-4">
+                        <div class="tf-page-cart-sidebar sticky-top">
+                            <div class="cart-box order-box">
+                                <h6 class="title cl-text-main">No seu carrinho</h6>
+                                <ul class="list-order-product">
+                                    @foreach ($cart as $productId => $item)
+                                        @php
+                                            $rawPrice = is_string($item['price'] ?? null)
+                                                ? (float) str_replace([',', ' '], '', $item['price'])
+                                                : (float) ($item['price'] ?? 0);
+                                            $itemQuantity = (int) ($item['quantity'] ?? 0);
+                                            $itemTotal = $rawPrice * $itemQuantity;
+                                        @endphp
+                                        <li class="order-item">
+                                            <figure class="img-product">
+                                                @if (!empty($item['image']))
+                                                    <img src="{{ asset($item['image']) }}"
+                                                        alt="{{ $item['title'] }}" width="72" height="94" loading="lazy">
+                                                @endif
+                                                <span class="quantity">{{ $itemQuantity }}</span>
+                                            </figure>
+                                            <div class="content">
+                                                <div class="info">
+                                                    <p class="name text-caption fw-medium cl-text-main">{{ $item['title'] }}</p>
+                                                    <span class="variant text-extra-small fw-medium">IVA incluído</span>
+                                                </div>
+                                                <span class="price text-caption fw-medium">
+                                                    {{ number_format($itemTotal, 2, ',', ' ') }} €
+                                                </span>
+                                            </div>
+                                        </li>
+                                    @endforeach
+                                </ul>
+                                <ul class="list-total cl-text-main">
+                                    <li class="total-item text-caption d-flex justify-content-between">
+                                        <span>Subtotal:</span>
+                                        <span class="price-sub fw-medium">{{ $formattedTotalPrice }} €</span>
                                     </li>
-                                @endforeach
-                            </ul>
-
-                            <div class="lv-summary-panel__foot">
-                                <div class="lv-summary-totals">
-                                    <div class="lv-summary-totals__row">
-                                        <span>Subtotal</span>
-                                        <span>{{ $formattedTotalPrice }} €</span>
-                                    </div>
-                                    <div class="lv-summary-totals__row">
-                                        <span>Envio (Portugal Continental)</span>
-                                        <span class="lv-summary-totals__free">Grátis</span>
-                                    </div>
-                                    <div class="lv-summary-totals__row lv-summary-totals__row--total">
-                                        <span>Total</span>
-                                        <span class="lv-summary-totals__amount">
-                                            <span class="lv-summary-totals__currency">EUR</span>
-                                            {{ $formattedTotalPrice }} €
-                                        </span>
-                                    </div>
-                                </div>
-
-                                <button type="submit" id="submit-order" class="lv-btn lv-btn--primary lv-btn--block lv-btn--checkout">
-                                    <span class="lv-btn__text">Confirmar encomenda · {{ $formattedTotalPrice }} €</span>
-                                    <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="currentColor">
-                                        <path d="M12 1 3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/>
-                                    </svg>
-                                </button>
-                                <a href="{{ route('carrinho') }}" class="lv-btn lv-btn--ghost lv-btn--block">Voltar ao carrinho</a>
-                                <p class="lv-summary-legal">
-                                    Ao confirmar, aceita as nossas
-                                    <a href="{{ route('condicoes-gerais-de-venda-cgv') }}" target="_blank" rel="noopener">CGV</a>.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="lv-trust-badges">
-                            <div class="lv-trust-badge">
-                                <span class="lv-trust-badge__icon" aria-hidden="true">
-                                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75">
-                                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                                    </svg>
-                                </span>
-                                <div>
-                                    <p class="lv-trust-badge__title">Envio grátis</p>
-                                    <p>Para todo o Portugal continental.</p>
-                                </div>
-                            </div>
-                            <div class="lv-trust-badge">
-                                <span class="lv-trust-badge__icon" aria-hidden="true">
-                                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75">
-                                        <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
-                                    </svg>
-                                </span>
-                                <div>
-                                    <p class="lv-trust-badge__title">Paletes à porta do camião</p>
-                                    <p>Logística profissional para pellets e lenha.</p>
+                                    <li class="total-item text-caption d-flex justify-content-between">
+                                        <span>Envio (PT Continental):</span>
+                                        <span class="price-ship fw-medium">Grátis</span>
+                                    </li>
+                                </ul>
+                                <div class="subtotal h6 d-flex justify-content-between cl-text-main">
+                                    <span>Total:</span>
+                                    <span class="total-price-order">{{ $formattedTotalPrice }} €</span>
                                 </div>
                             </div>
                         </div>
-                    </aside>
+                    </div>
                 </form>
             @endif
         </div>
@@ -498,6 +380,7 @@
             const $sameAddress = $('#same-address-checkbox');
             const $billingWrapper = $('#billing-address-wrapper');
             const $addNote = $('#add-note-checkbox');
+            const $notesWrap = $('#order-notes-wrap');
             const $notesTextarea = $('#order-notes-textarea');
             const $submitBtn = $('#submit-order');
             const defaultSubmitText = $submitBtn.find('.lv-btn__text').text();
@@ -523,17 +406,18 @@
 
             $addNote.on('change', function() {
                 if ($addNote.is(':checked')) {
-                    $notesTextarea.prop('hidden', false).slideDown(150).trigger('focus');
+                    $notesWrap.prop('hidden', false).slideDown(150);
+                    $notesTextarea.trigger('focus');
                 } else {
-                    $notesTextarea.slideUp(150, function() {
-                        $notesTextarea.prop('hidden', true);
+                    $notesWrap.slideUp(150, function() {
+                        $notesWrap.prop('hidden', true);
                     });
                 }
             });
 
             if ($notesTextarea.val().trim() !== '') {
                 $addNote.prop('checked', true);
-                $notesTextarea.prop('hidden', false).show();
+                $notesWrap.prop('hidden', false).show();
             }
 
             $form.on('submit', function(e) {
@@ -561,7 +445,7 @@
                     if ($el.length && !$el.val().trim()) {
                         isValid = false;
                         $el.addClass('is-invalid');
-                        $el.closest('.lv-field').append(
+                        $el.closest('.tf-field').append(
                             '<span class="lv-field-error js-client">Este campo é obrigatório</span>');
                     }
                 });
@@ -570,8 +454,8 @@
                 if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
                     isValid = false;
                     $('#email').addClass('is-invalid');
-                    if (!$('#email').closest('.lv-field').find('.lv-field-error').length) {
-                        $('#email').closest('.lv-field').append(
+                    if (!$('#email').closest('.tf-field').find('.lv-field-error').length) {
+                        $('#email').closest('.tf-field').append(
                             '<span class="lv-field-error js-client">Introduza um email válido</span>');
                     }
                 }
@@ -579,8 +463,8 @@
                 if (!$('#terms-checkbox').is(':checked')) {
                     isValid = false;
                     $('#terms-checkbox').addClass('is-invalid');
-                    if (!$('#terms-checkbox').closest('.lv-checkbox').next('.lv-field-error').length) {
-                        $('#terms-checkbox').closest('.lv-checkbox').after(
+                    if (!$('#terms-checkbox').closest('.checkbox-wrap').next('.lv-field-error').length) {
+                        $('#terms-checkbox').closest('.checkbox-wrap').after(
                             '<span class="lv-field-error js-client">Tem de aceitar as condições</span>'
                         );
                     }
